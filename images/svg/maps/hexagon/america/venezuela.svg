@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.35 267.80" width="360.35" height="267.80" role="img" aria-labelledby="venezuela-title venezuela-desc">
+  <title id="venezuela-title">Venezuela hex map</title>
+  <desc id="venezuela-desc">Hexagon map with 25 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.25; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.14 7.95; }
+    .label { fill: #52525b; font: 600 9.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="NE">
+    <title>Nueva Esparta</title>
+    <polygon class="tile inset" points="329.44,47.73 352.40,60.99 352.40,87.50 329.44,100.76 306.47,87.50 306.47,60.99" aria-label="Nueva Esparta"/>
+    <text class="label" x="329.44" y="74.24">NE</text>
+  </g>
+  <g class="state" data-state="DA">
+    <title>Delta Amacuro</title>
+    <polygon class="tile" points="306.47,167.05 329.44,180.30 329.44,206.82 306.47,220.08 283.51,206.82 283.51,180.30" aria-label="Delta Amacuro"/>
+    <text class="label" x="306.47" y="193.56">DA</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Monagas</title>
+    <polygon class="tile" points="283.51,127.27 306.47,140.53 306.47,167.05 283.51,180.30 260.55,167.05 260.55,140.53" aria-label="Monagas"/>
+    <text class="label" x="283.51" y="153.79">MO</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Bolívar</title>
+    <polygon class="tile" points="283.51,206.82 306.47,220.08 306.47,246.59 283.51,259.85 260.55,246.59 260.55,220.08" aria-label="Bolívar"/>
+    <text class="label" x="283.51" y="233.34">BO</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>Sucre</title>
+    <polygon class="tile" points="260.55,87.50 283.51,100.76 283.51,127.27 260.55,140.53 237.58,127.27 237.58,100.76" aria-label="Sucre"/>
+    <text class="label" x="260.55" y="114.02">SU</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Anzoátegui</title>
+    <polygon class="tile" points="260.55,167.05 283.51,180.30 283.51,206.82 260.55,220.08 237.58,206.82 237.58,180.30" aria-label="Anzoátegui"/>
+    <text class="label" x="260.55" y="193.56">AN</text>
+  </g>
+  <g class="state" data-state="DP">
+    <title>Dependencias Federales</title>
+    <polygon class="tile inset" points="260.55,7.95 283.51,21.21 283.51,47.73 260.55,60.99 237.58,47.73 237.58,21.21" aria-label="Dependencias Federales"/>
+    <text class="label" x="260.55" y="34.47">DP</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Miranda</title>
+    <polygon class="tile" points="237.58,127.27 260.55,140.53 260.55,167.05 237.58,180.30 214.62,167.05 214.62,140.53" aria-label="Miranda"/>
+    <text class="label" x="237.58" y="153.79">MI</text>
+  </g>
+  <g class="state" data-state="AM">
+    <title>Amazonas</title>
+    <polygon class="tile" points="237.58,206.82 260.55,220.08 260.55,246.59 237.58,259.85 214.62,246.59 214.62,220.08" aria-label="Amazonas"/>
+    <text class="label" x="237.58" y="233.34">AM</text>
+  </g>
+  <g class="state" data-state="VAR">
+    <title>Vargas</title>
+    <polygon class="tile" points="214.62,87.50 237.58,100.76 237.58,127.27 214.62,140.53 191.66,127.27 191.66,100.76" aria-label="Vargas"/>
+    <text class="label" x="214.62" y="114.02">VAR</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Guárico</title>
+    <polygon class="tile" points="214.62,167.05 237.58,180.30 237.58,206.82 214.62,220.08 191.66,206.82 191.66,180.30" aria-label="Guárico"/>
+    <text class="label" x="214.62" y="193.56">GU</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Aragua</title>
+    <polygon class="tile" points="191.66,127.27 214.62,140.53 214.62,167.05 191.66,180.30 168.70,167.05 168.70,140.53" aria-label="Aragua"/>
+    <text class="label" x="191.66" y="153.79">AR</text>
+  </g>
+  <g class="state" data-state="DF">
+    <title>Distrito Capital</title>
+    <polygon class="tile" points="168.70,87.50 191.66,100.76 191.66,127.27 168.70,140.53 145.73,127.27 145.73,100.76" aria-label="Distrito Capital"/>
+    <text class="label" x="168.70" y="114.02">DF</text>
+  </g>
+  <g class="state" data-state="CA">
+    <title>Carabobo</title>
+    <polygon class="tile" points="168.70,167.05 191.66,180.30 191.66,206.82 168.70,220.08 145.73,206.82 145.73,180.30" aria-label="Carabobo"/>
+    <text class="label" x="168.70" y="193.56">CA</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Cojedes</title>
+    <polygon class="tile" points="145.73,127.27 168.70,140.53 168.70,167.05 145.73,180.30 122.77,167.05 122.77,140.53" aria-label="Cojedes"/>
+    <text class="label" x="145.73" y="153.79">CO</text>
+  </g>
+  <g class="state" data-state="AP">
+    <title>Apure</title>
+    <polygon class="tile" points="145.73,206.82 168.70,220.08 168.70,246.59 145.73,259.85 122.77,246.59 122.77,220.08" aria-label="Apure"/>
+    <text class="label" x="145.73" y="233.34">AP</text>
+  </g>
+  <g class="state" data-state="YA">
+    <title>Yaracuy</title>
+    <polygon class="tile" points="122.77,87.50 145.73,100.76 145.73,127.27 122.77,140.53 99.81,127.27 99.81,100.76" aria-label="Yaracuy"/>
+    <text class="label" x="122.77" y="114.02">YA</text>
+  </g>
+  <g class="state" data-state="PO">
+    <title>Portuguesa</title>
+    <polygon class="tile" points="122.77,167.05 145.73,180.30 145.73,206.82 122.77,220.08 99.81,206.82 99.81,180.30" aria-label="Portuguesa"/>
+    <text class="label" x="122.77" y="193.56">PO</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Lara</title>
+    <polygon class="tile" points="99.81,127.27 122.77,140.53 122.77,167.05 99.81,180.30 76.84,167.05 76.84,140.53" aria-label="Lara"/>
+    <text class="label" x="99.81" y="153.79">LA</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Barinas</title>
+    <polygon class="tile" points="99.81,206.82 122.77,220.08 122.77,246.59 99.81,259.85 76.84,246.59 76.84,220.08" aria-label="Barinas"/>
+    <text class="label" x="99.81" y="233.34">BA</text>
+  </g>
+  <g class="state" data-state="FA">
+    <title>Falcón</title>
+    <polygon class="tile" points="76.84,87.50 99.81,100.76 99.81,127.27 76.84,140.53 53.88,127.27 53.88,100.76" aria-label="Falcón"/>
+    <text class="label" x="76.84" y="114.02">FA</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Trujillo</title>
+    <polygon class="tile" points="76.84,167.05 99.81,180.30 99.81,206.82 76.84,220.08 53.88,206.82 53.88,180.30" aria-label="Trujillo"/>
+    <text class="label" x="76.84" y="193.56">TR</text>
+  </g>
+  <g class="state" data-state="ZU">
+    <title>Zulia</title>
+    <polygon class="tile" points="53.88,127.27 76.84,140.53 76.84,167.05 53.88,180.30 30.92,167.05 30.92,140.53" aria-label="Zulia"/>
+    <text class="label" x="53.88" y="153.79">ZU</text>
+  </g>
+  <g class="state" data-state="ME">
+    <title>Mérida</title>
+    <polygon class="tile" points="53.88,206.82 76.84,220.08 76.84,246.59 53.88,259.85 30.92,246.59 30.92,220.08" aria-label="Mérida"/>
+    <text class="label" x="53.88" y="233.34">ME</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Táchira</title>
+    <polygon class="tile" points="30.92,167.05 53.88,180.30 53.88,206.82 30.92,220.08 7.95,206.82 7.95,180.30" aria-label="Táchira"/>
+    <text class="label" x="30.92" y="193.56">TA</text>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 190.40" width="314.85" height="190.40" role="img" aria-labelledby="samoa-title samoa-desc">
+  <title id="samoa-title">Samoa hex map</title>
+  <desc id="samoa-desc">Hexagon map with 11 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="AT">
+    <title>Atua</title>
+    <polygon class="tile" points="275.20,112.20 304.65,129.20 304.65,163.20 275.20,180.20 245.76,163.20 245.76,129.20" aria-label="Atua"/>
+    <text class="label" x="275.20" y="146.20">AT</text>
+  </g>
+  <g class="state" data-state="VF">
+    <title>Va'a-o-Fonoti</title>
+    <polygon class="tile" points="245.76,61.20 275.20,78.20 275.20,112.20 245.76,129.20 216.31,112.20 216.31,78.20" aria-label="Va'a-o-Fonoti"/>
+    <text class="label" x="245.76" y="95.20">VF</text>
+  </g>
+  <g class="state" data-state="TU">
+    <title>Tuamasaga</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Tuamasaga"/>
+    <text class="label" x="216.31" y="146.20">TU</text>
+  </g>
+  <g class="state" data-state="AA">
+    <title>A'ana</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="A'ana"/>
+    <text class="label" x="186.87" y="95.20">AA</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Aiga-i-le-Tai</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Aiga-i-le-Tai"/>
+    <text class="label" x="157.42" y="44.20">AL</text>
+  </g>
+  <g class="state" data-state="GE">
+    <title>Gaga'emauga</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Gaga'emauga"/>
+    <text class="label" x="157.42" y="146.20">GE</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Palauli</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Palauli"/>
+    <text class="label" x="127.98" y="95.20">PA</text>
+  </g>
+  <g class="state" data-state="GI">
+    <title>Gaga'ifomauga</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Gaga'ifomauga"/>
+    <text class="label" x="98.53" y="44.20">GI</text>
+  </g>
+  <g class="state" data-state="FA">
+    <title>Fa'asaleleaga</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Fa'asaleleaga"/>
+    <text class="label" x="98.53" y="146.20">FA</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Satupa'itea</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Satupa'itea"/>
+    <text class="label" x="69.09" y="95.20">SA</text>
+  </g>
+  <g class="state" data-state="VS">
+    <title>Vaisigano</title>
+    <polygon class="tile" points="39.64,10.20 69.09,27.20 69.09,61.20 39.64,78.20 10.20,61.20 10.20,27.20" aria-label="Vaisigano"/>
+    <text class="label" x="39.64" y="44.20">VS</text>
+  </g>
+</svg>

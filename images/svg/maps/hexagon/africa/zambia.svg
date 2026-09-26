@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.96 241.40" width="255.96" height="241.40" role="img" aria-labelledby="zambia-title zambia-desc">
+  <title id="zambia-title">Zambia hex map</title>
+  <desc id="zambia-desc">Hexagon map with 10 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="LP">
+    <title>Luapula</title>
+    <polygon class="tile" points="216.31,61.20 245.76,78.20 245.76,112.20 216.31,129.20 186.87,112.20 186.87,78.20" aria-label="Luapula"/>
+    <text class="label" x="216.31" y="95.20">LP</text>
+  </g>
+  <g class="state" data-state="NOR">
+    <title>Northern</title>
+    <polygon class="tile" points="186.87,10.20 216.31,27.20 216.31,61.20 186.87,78.20 157.42,61.20 157.42,27.20" aria-label="Northern"/>
+    <text class="label" x="186.87" y="44.20">NOR</text>
+  </g>
+  <g class="state" data-state="EA">
+    <title>Eastern</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Eastern"/>
+    <text class="label" x="186.87" y="146.20">EA</text>
+  </g>
+  <g class="state" data-state="NO">
+    <title>Muchinga</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Muchinga"/>
+    <text class="label" x="157.42" y="95.20">NO</text>
+  </g>
+  <g class="state" data-state="LS">
+    <title>Lusaka</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Lusaka"/>
+    <text class="label" x="157.42" y="197.20">LS</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Central</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Central"/>
+    <text class="label" x="127.98" y="146.20">CE</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Copperbelt</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Copperbelt"/>
+    <text class="label" x="98.53" y="95.20">CO</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Southern</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Southern"/>
+    <text class="label" x="98.53" y="197.20">SO</text>
+  </g>
+  <g class="state" data-state="NW">
+    <title>North-Western</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="North-Western"/>
+    <text class="label" x="69.09" y="146.20">NW</text>
+  </g>
+  <g class="state" data-state="WE">
+    <title>Western</title>
+    <polygon class="tile" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Western"/>
+    <text class="label" x="39.64" y="197.20">WE</text>
+  </g>
+</svg>

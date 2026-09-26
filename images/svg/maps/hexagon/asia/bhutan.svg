@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 231.05" width="357.71" height="231.05" role="img" aria-labelledby="bhutan-title bhutan-desc">
+  <title id="bhutan-title">Bhutan hex map</title>
+  <desc id="bhutan-desc">Hexagon map with 20 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="TA">
+    <title>Tashigang</title>
+    <polygon class="tile" points="319.76,107.39 347.94,123.66 347.94,156.20 319.76,172.47 291.58,156.20 291.58,123.66" aria-label="Tashigang"/>
+    <text class="label" x="319.76" y="139.93">TA</text>
+  </g>
+  <g class="state" data-state="TY">
+    <title>Tashi Yangtse</title>
+    <polygon class="tile" points="291.58,58.57 319.76,74.85 319.76,107.39 291.58,123.66 263.40,107.39 263.40,74.85" aria-label="Tashi Yangtse"/>
+    <text class="label" x="291.58" y="91.12">TY</text>
+  </g>
+  <g class="state" data-state="SJ">
+    <title>Samdrup Jongkhar</title>
+    <polygon class="tile" points="291.58,156.20 319.76,172.47 319.76,205.01 291.58,221.28 263.40,205.01 263.40,172.47" aria-label="Samdrup Jongkhar"/>
+    <text class="label" x="291.58" y="188.74">SJ</text>
+  </g>
+  <g class="state" data-state="LH">
+    <title>Lhuntshi</title>
+    <polygon class="tile" points="263.40,9.76 291.58,26.03 291.58,58.57 263.40,74.85 235.22,58.57 235.22,26.03" aria-label="Lhuntshi"/>
+    <text class="label" x="263.40" y="42.30">LH</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Mongar</title>
+    <polygon class="tile" points="263.40,107.39 291.58,123.66 291.58,156.20 263.40,172.47 235.22,156.20 235.22,123.66" aria-label="Mongar"/>
+    <text class="label" x="263.40" y="139.93">MO</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Tongsa</title>
+    <polygon class="tile" points="235.22,58.57 263.40,74.85 263.40,107.39 235.22,123.66 207.04,107.39 207.04,74.85" aria-label="Tongsa"/>
+    <text class="label" x="235.22" y="91.12">TO</text>
+  </g>
+  <g class="state" data-state="PM">
+    <title>Pemagatsel</title>
+    <polygon class="tile" points="235.22,156.20 263.40,172.47 263.40,205.01 235.22,221.28 207.04,205.01 207.04,172.47" aria-label="Pemagatsel"/>
+    <text class="label" x="235.22" y="188.74">PM</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Bumthang</title>
+    <polygon class="tile" points="207.04,9.76 235.22,26.03 235.22,58.57 207.04,74.85 178.85,58.57 178.85,26.03" aria-label="Bumthang"/>
+    <text class="label" x="207.04" y="42.30">BU</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>Shemgang</title>
+    <polygon class="tile" points="207.04,107.39 235.22,123.66 235.22,156.20 207.04,172.47 178.85,156.20 178.85,123.66" aria-label="Shemgang"/>
+    <text class="label" x="207.04" y="139.93">SG</text>
+  </g>
+  <g class="state" data-state="WP">
+    <title>Wangdi Phodrang</title>
+    <polygon class="tile" points="178.85,58.57 207.04,74.85 207.04,107.39 178.85,123.66 150.67,107.39 150.67,74.85" aria-label="Wangdi Phodrang"/>
+    <text class="label" x="178.85" y="91.12">WP</text>
+  </g>
+  <g class="state" data-state="GE">
+    <title>Geylegphug</title>
+    <polygon class="tile" points="178.85,156.20 207.04,172.47 207.04,205.01 178.85,221.28 150.67,205.01 150.67,172.47" aria-label="Geylegphug"/>
+    <text class="label" x="178.85" y="188.74">GE</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Gasa</title>
+    <polygon class="tile" points="150.67,9.76 178.85,26.03 178.85,58.57 150.67,74.85 122.49,58.57 122.49,26.03" aria-label="Gasa"/>
+    <text class="label" x="150.67" y="42.30">GA</text>
+  </g>
+  <g class="state" data-state="DA">
+    <title>Daga</title>
+    <polygon class="tile" points="150.67,107.39 178.85,123.66 178.85,156.20 150.67,172.47 122.49,156.20 122.49,123.66" aria-label="Daga"/>
+    <text class="label" x="150.67" y="139.93">DA</text>
+  </g>
+  <g class="state" data-state="TM">
+    <title>Thimphu</title>
+    <polygon class="tile" points="122.49,58.57 150.67,74.85 150.67,107.39 122.49,123.66 94.31,107.39 94.31,74.85" aria-label="Thimphu"/>
+    <text class="label" x="122.49" y="91.12">TM</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Chirang</title>
+    <polygon class="tile" points="122.49,156.20 150.67,172.47 150.67,205.01 122.49,221.28 94.31,205.01 94.31,172.47" aria-label="Chirang"/>
+    <text class="label" x="122.49" y="188.74">CR</text>
+  </g>
+  <g class="state" data-state="PN">
+    <title>Punakha</title>
+    <polygon class="tile" points="94.31,9.76 122.49,26.03 122.49,58.57 94.31,74.85 66.13,58.57 66.13,26.03" aria-label="Punakha"/>
+    <text class="label" x="94.31" y="42.30">PN</text>
+  </g>
+  <g class="state" data-state="CK">
+    <title>Chhukha</title>
+    <polygon class="tile" points="94.31,107.39 122.49,123.66 122.49,156.20 94.31,172.47 66.13,156.20 66.13,123.66" aria-label="Chhukha"/>
+    <text class="label" x="94.31" y="139.93">CK</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Paro</title>
+    <polygon class="tile" points="66.13,58.57 94.31,74.85 94.31,107.39 66.13,123.66 37.94,107.39 37.94,74.85" aria-label="Paro"/>
+    <text class="label" x="66.13" y="91.12">PR</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Samchi</title>
+    <polygon class="tile" points="66.13,156.20 94.31,172.47 94.31,205.01 66.13,221.28 37.94,205.01 37.94,172.47" aria-label="Samchi"/>
+    <text class="label" x="66.13" y="188.74">SM</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Ha</title>
+    <polygon class="tile" points="37.94,107.39 66.13,123.66 66.13,156.20 37.94,172.47 9.76,156.20 9.76,123.66" aria-label="Ha"/>
+    <text class="label" x="37.94" y="139.93">HA</text>
+  </g>
+</svg>

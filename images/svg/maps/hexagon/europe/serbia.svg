@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.29 445.40" width="344.29" height="445.40" role="img" aria-labelledby="serbia-title serbia-desc">
+  <title id="serbia-title">Serbia hex map</title>
+  <desc id="serbia-desc">Hexagon map with 25 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="PI">
+    <title>Pirotski</title>
+    <polygon class="tile" points="304.65,316.20 334.09,333.20 334.09,367.20 304.65,384.20 275.20,367.20 275.20,333.20" aria-label="Pirotski"/>
+    <text class="label" x="304.65" y="350.20">PI</text>
+  </g>
+  <g class="state" data-state="ZJ">
+    <title>Zajecarski</title>
+    <polygon class="tile" points="275.20,265.20 304.65,282.20 304.65,316.20 275.20,333.20 245.76,316.20 245.76,282.20" aria-label="Zajecarski"/>
+    <text class="label" x="275.20" y="299.20">ZJ</text>
+  </g>
+  <g class="state" data-state="PC">
+    <title>Pcinjski</title>
+    <polygon class="tile" points="275.20,367.20 304.65,384.20 304.65,418.20 275.20,435.20 245.76,418.20 245.76,384.20" aria-label="Pcinjski"/>
+    <text class="label" x="275.20" y="401.20">PC</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Borski</title>
+    <polygon class="tile" points="245.76,214.20 275.20,231.20 275.20,265.20 245.76,282.20 216.31,265.20 216.31,231.20" aria-label="Borski"/>
+    <text class="label" x="245.76" y="248.20">BO</text>
+  </g>
+  <g class="state" data-state="NS">
+    <title>Nišavski</title>
+    <polygon class="tile" points="245.76,316.20 275.20,333.20 275.20,367.20 245.76,384.20 216.31,367.20 216.31,333.20" aria-label="Nišavski"/>
+    <text class="label" x="245.76" y="350.20">NS</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Branicevski</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="Branicevski"/>
+    <text class="label" x="216.31" y="197.20">BR</text>
+  </g>
+  <g class="state" data-state="RN">
+    <title>Pomoravski</title>
+    <polygon class="tile" points="216.31,265.20 245.76,282.20 245.76,316.20 216.31,333.20 186.87,316.20 186.87,282.20" aria-label="Pomoravski"/>
+    <text class="label" x="216.31" y="299.20">RN</text>
+  </g>
+  <g class="state" data-state="JA">
+    <title>Jablanicki</title>
+    <polygon class="tile" points="216.31,367.20 245.76,384.20 245.76,418.20 216.31,435.20 186.87,418.20 186.87,384.20" aria-label="Jablanicki"/>
+    <text class="label" x="216.31" y="401.20">JA</text>
+  </g>
+  <g class="state" data-state="JN">
+    <title>Južno-Banatski</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Južno-Banatski"/>
+    <text class="label" x="186.87" y="146.20">JN</text>
+  </g>
+  <g class="state" data-state="PM">
+    <title>Pomoravski</title>
+    <polygon class="tile" points="186.87,214.20 216.31,231.20 216.31,265.20 186.87,282.20 157.42,265.20 157.42,231.20" aria-label="Pomoravski"/>
+    <text class="label" x="186.87" y="248.20">PM</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Toplicki</title>
+    <polygon class="tile" points="186.87,316.20 216.31,333.20 216.31,367.20 186.87,384.20 157.42,367.20 157.42,333.20" aria-label="Toplicki"/>
+    <text class="label" x="186.87" y="350.20">TO</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Srednje-Banatski</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Srednje-Banatski"/>
+    <text class="label" x="157.42" y="95.20">SD</text>
+  </g>
+  <g class="state" data-state="PD">
+    <title>Podunavski</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Podunavski"/>
+    <text class="label" x="157.42" y="197.20">PD</text>
+  </g>
+  <g class="state" data-state="RS">
+    <title>Raški</title>
+    <polygon class="tile" points="157.42,265.20 186.87,282.20 186.87,316.20 157.42,333.20 127.98,316.20 127.98,282.20" aria-label="Raški"/>
+    <text class="label" x="157.42" y="299.20">RS</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Sremski</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Sremski"/>
+    <text class="label" x="127.98" y="146.20">SM</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>Šumadijski</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Šumadijski"/>
+    <text class="label" x="127.98" y="248.20">SU</text>
+  </g>
+  <g class="state" data-state="ZL">
+    <title>Zlatiborski</title>
+    <polygon class="tile" points="127.98,316.20 157.42,333.20 157.42,367.20 127.98,384.20 98.53,367.20 98.53,333.20" aria-label="Zlatiborski"/>
+    <text class="label" x="127.98" y="350.20">ZL</text>
+  </g>
+  <g class="state" data-state="SN">
+    <title>Severno-Banatski</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Severno-Banatski"/>
+    <text class="label" x="98.53" y="95.20">SN</text>
+  </g>
+  <g class="state" data-state="BG">
+    <title>Grad Beograd</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Grad Beograd"/>
+    <text class="label" x="98.53" y="197.20">BG</text>
+  </g>
+  <g class="state" data-state="MR">
+    <title>Moravicki</title>
+    <polygon class="tile" points="98.53,265.20 127.98,282.20 127.98,316.20 98.53,333.20 69.09,316.20 69.09,282.20" aria-label="Moravicki"/>
+    <text class="label" x="98.53" y="299.20">MR</text>
+  </g>
+  <g class="state" data-state="SC">
+    <title>Severno-Backi</title>
+    <polygon class="tile" points="69.09,10.20 98.53,27.20 98.53,61.20 69.09,78.20 39.64,61.20 39.64,27.20" aria-label="Severno-Backi"/>
+    <text class="label" x="69.09" y="44.20">SC</text>
+  </g>
+  <g class="state" data-state="JC">
+    <title>Južno-Backi</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Južno-Backi"/>
+    <text class="label" x="69.09" y="146.20">JC</text>
+  </g>
+  <g class="state" data-state="KB">
+    <title>Kolubarski</title>
+    <polygon class="tile" points="69.09,214.20 98.53,231.20 98.53,265.20 69.09,282.20 39.64,265.20 39.64,231.20" aria-label="Kolubarski"/>
+    <text class="label" x="69.09" y="248.20">KB</text>
+  </g>
+  <g class="state" data-state="ZC">
+    <title>Zapadno-Backi</title>
+    <polygon class="tile" points="39.64,61.20 69.09,78.20 69.09,112.20 39.64,129.20 10.20,112.20 10.20,78.20" aria-label="Zapadno-Backi"/>
+    <text class="label" x="39.64" y="95.20">ZC</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Macvanski</title>
+    <polygon class="tile" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Macvanski"/>
+    <text class="label" x="39.64" y="197.20">MA</text>
+  </g>
+</svg>

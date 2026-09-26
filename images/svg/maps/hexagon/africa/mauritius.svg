@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 377.48" width="357.71" height="377.48" role="img" aria-labelledby="mauritius-title mauritius-desc">
+  <title id="mauritius-title">Mauritius hex map</title>
+  <desc id="mauritius-desc">Hexagon map with 16 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="RO">
+    <title>Rodrigues</title>
+    <polygon class="tile inset" points="319.76,205.01 347.94,221.28 347.94,253.82 319.76,270.09 291.58,253.82 291.58,221.28" aria-label="Rodrigues"/>
+    <text class="label" x="319.76" y="237.55">RO</text>
+  </g>
+  <g class="state" data-state="FL">
+    <title>Flacq</title>
+    <polygon class="tile" points="207.04,205.01 235.22,221.28 235.22,253.82 207.04,270.09 178.85,253.82 178.85,221.28" aria-label="Flacq"/>
+    <text class="label" x="207.04" y="237.55">FL</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Pamplemousses</title>
+    <polygon class="tile" points="178.85,156.20 207.04,172.47 207.04,205.01 178.85,221.28 150.67,205.01 150.67,172.47" aria-label="Pamplemousses"/>
+    <text class="label" x="178.85" y="188.74">PA</text>
+  </g>
+  <g class="state" data-state="GP">
+    <title>Grand Port</title>
+    <polygon class="tile" points="178.85,253.82 207.04,270.09 207.04,302.64 178.85,318.91 150.67,302.64 150.67,270.09" aria-label="Grand Port"/>
+    <text class="label" x="178.85" y="286.37">GP</text>
+  </g>
+  <g class="state" data-state="RR">
+    <title>Rivière du Rempart</title>
+    <polygon class="tile" points="150.67,107.39 178.85,123.66 178.85,156.20 150.67,172.47 122.49,156.20 122.49,123.66" aria-label="Rivière du Rempart"/>
+    <text class="label" x="150.67" y="139.93">RR</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Moka</title>
+    <polygon class="tile" points="150.67,205.01 178.85,221.28 178.85,253.82 150.67,270.09 122.49,253.82 122.49,221.28" aria-label="Moka"/>
+    <text class="label" x="150.67" y="237.55">MO</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Savanne</title>
+    <polygon class="tile" points="150.67,302.64 178.85,318.91 178.85,351.45 150.67,367.72 122.49,351.45 122.49,318.91" aria-label="Savanne"/>
+    <text class="label" x="150.67" y="335.18">SA</text>
+  </g>
+  <g class="state" data-state="PLA">
+    <title>Port Louis</title>
+    <polygon class="tile" points="122.49,156.20 150.67,172.47 150.67,205.01 122.49,221.28 94.31,205.01 94.31,172.47" aria-label="Port Louis"/>
+    <text class="label" x="122.49" y="188.74">PLA</text>
+  </g>
+  <g class="state" data-state="PW">
+    <title>Plaines Wilhems</title>
+    <polygon class="tile" points="122.49,253.82 150.67,270.09 150.67,302.64 122.49,318.91 94.31,302.64 94.31,270.09" aria-label="Plaines Wilhems"/>
+    <text class="label" x="122.49" y="286.37">PW</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Port Louis city</title>
+    <polygon class="tile" points="94.31,107.39 122.49,123.66 122.49,156.20 94.31,172.47 66.13,156.20 66.13,123.66" aria-label="Port Louis city"/>
+    <text class="label" x="94.31" y="139.93">PL</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Rivière Noire</title>
+    <polygon class="tile" points="94.31,205.01 122.49,221.28 122.49,253.82 94.31,270.09 66.13,253.82 66.13,221.28" aria-label="Rivière Noire"/>
+    <text class="label" x="94.31" y="237.55">BL</text>
+  </g>
+  <g class="state" data-state="CU">
+    <title>Curepipe</title>
+    <polygon class="tile" points="94.31,302.64 122.49,318.91 122.49,351.45 94.31,367.72 66.13,351.45 66.13,318.91" aria-label="Curepipe"/>
+    <text class="label" x="94.31" y="335.18">CU</text>
+  </g>
+  <g class="state" data-state="AG">
+    <title>Agaléga</title>
+    <polygon class="tile inset" points="94.31,9.76 122.49,26.03 122.49,58.57 94.31,74.85 66.13,58.57 66.13,26.03" aria-label="Agaléga"/>
+    <text class="label" x="94.31" y="42.30">AG</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Beau Bassin-Rose Hill</title>
+    <polygon class="tile" points="66.13,156.20 94.31,172.47 94.31,205.01 66.13,221.28 37.94,205.01 37.94,172.47" aria-label="Beau Bassin-Rose Hill"/>
+    <text class="label" x="66.13" y="188.74">BR</text>
+  </g>
+  <g class="state" data-state="VP">
+    <title>Vacoas-Phoenix</title>
+    <polygon class="tile" points="66.13,253.82 94.31,270.09 94.31,302.64 66.13,318.91 37.94,302.64 37.94,270.09" aria-label="Vacoas-Phoenix"/>
+    <text class="label" x="66.13" y="286.37">VP</text>
+  </g>
+  <g class="state" data-state="QB">
+    <title>Quatre Bornes</title>
+    <polygon class="tile" points="37.94,205.01 66.13,221.28 66.13,253.82 37.94,270.09 9.76,253.82 9.76,221.28" aria-label="Quatre Bornes"/>
+    <text class="label" x="37.94" y="237.55">QB</text>
+  </g>
+</svg>

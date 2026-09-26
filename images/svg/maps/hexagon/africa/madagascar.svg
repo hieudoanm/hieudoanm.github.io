@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.96 496.40" width="255.96" height="496.40" role="img" aria-labelledby="madagascar-title madagascar-desc">
+  <title id="madagascar-title">Madagascar hex map</title>
+  <desc id="madagascar-desc">Hexagon map with 22 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SAV">
+    <title>Sava</title>
+    <polygon class="tile" points="216.31,61.20 245.76,78.20 245.76,112.20 216.31,129.20 186.87,112.20 186.87,78.20" aria-label="Sava"/>
+    <text class="label" x="216.31" y="95.20">SAV</text>
+  </g>
+  <g class="state" data-state="AS">
+    <title>Diana</title>
+    <polygon class="tile" points="186.87,10.20 216.31,27.20 216.31,61.20 186.87,78.20 157.42,61.20 157.42,27.20" aria-label="Diana"/>
+    <text class="label" x="186.87" y="44.20">AS</text>
+  </g>
+  <g class="state" data-state="TM">
+    <title>Analanjirofo</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Analanjirofo"/>
+    <text class="label" x="186.87" y="146.20">TM</text>
+  </g>
+  <g class="state" data-state="ATS">
+    <title>Atsinanana</title>
+    <polygon class="tile" points="186.87,214.20 216.31,231.20 216.31,265.20 186.87,282.20 157.42,265.20 157.42,231.20" aria-label="Atsinanana"/>
+    <text class="label" x="186.87" y="248.20">ATS</text>
+  </g>
+  <g class="state" data-state="FI">
+    <title>Vatovavy-Fitovinany</title>
+    <polygon class="tile" points="186.87,316.20 216.31,333.20 216.31,367.20 186.87,384.20 157.42,367.20 157.42,333.20" aria-label="Vatovavy-Fitovinany"/>
+    <text class="label" x="186.87" y="350.20">FI</text>
+  </g>
+  <g class="state" data-state="SOF">
+    <title>Sofia</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Sofia"/>
+    <text class="label" x="157.42" y="95.20">SOF</text>
+  </g>
+  <g class="state" data-state="AMA">
+    <title>Alaotra-Mangoro</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Alaotra-Mangoro"/>
+    <text class="label" x="157.42" y="197.20">AMA</text>
+  </g>
+  <g class="state" data-state="AM">
+    <title>Amoron'i Mania</title>
+    <polygon class="tile" points="157.42,265.20 186.87,282.20 186.87,316.20 157.42,333.20 127.98,316.20 127.98,282.20" aria-label="Amoron'i Mania"/>
+    <text class="label" x="157.42" y="299.20">AM</text>
+  </g>
+  <g class="state" data-state="AA">
+    <title>Atsimo-Atsinanana</title>
+    <polygon class="tile" points="157.42,367.20 186.87,384.20 186.87,418.20 157.42,435.20 127.98,418.20 127.98,384.20" aria-label="Atsimo-Atsinanana"/>
+    <text class="label" x="157.42" y="401.20">AA</text>
+  </g>
+  <g class="state" data-state="BET">
+    <title>Betsiboka</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Betsiboka"/>
+    <text class="label" x="127.98" y="146.20">BET</text>
+  </g>
+  <g class="state" data-state="VAK">
+    <title>Vakinankaratra</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Vakinankaratra"/>
+    <text class="label" x="127.98" y="248.20">VAK</text>
+  </g>
+  <g class="state" data-state="HM">
+    <title>Haute Matsiatra</title>
+    <polygon class="tile" points="127.98,316.20 157.42,333.20 157.42,367.20 127.98,384.20 98.53,367.20 98.53,333.20" aria-label="Haute Matsiatra"/>
+    <text class="label" x="127.98" y="350.20">HM</text>
+  </g>
+  <g class="state" data-state="AV">
+    <title>Analamanga</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Analamanga"/>
+    <text class="label" x="98.53" y="197.20">AV</text>
+  </g>
+  <g class="state" data-state="MEN">
+    <title>Menabe</title>
+    <polygon class="tile" points="98.53,265.20 127.98,282.20 127.98,316.20 98.53,333.20 69.09,316.20 69.09,282.20" aria-label="Menabe"/>
+    <text class="label" x="98.53" y="299.20">MEN</text>
+  </g>
+  <g class="state" data-state="TL">
+    <title>Anosy</title>
+    <polygon class="tile" points="98.53,367.20 127.98,384.20 127.98,418.20 98.53,435.20 69.09,418.20 69.09,384.20" aria-label="Anosy"/>
+    <text class="label" x="98.53" y="401.20">TL</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Boeny</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Boeny"/>
+    <text class="label" x="69.09" y="146.20">MA</text>
+  </g>
+  <g class="state" data-state="BON">
+    <title>Bongolava</title>
+    <polygon class="tile" points="69.09,214.20 98.53,231.20 98.53,265.20 69.09,282.20 39.64,265.20 39.64,231.20" aria-label="Bongolava"/>
+    <text class="label" x="69.09" y="248.20">BON</text>
+  </g>
+  <g class="state" data-state="IHO">
+    <title>Ihorombe</title>
+    <polygon class="tile" points="69.09,316.20 98.53,333.20 98.53,367.20 69.09,384.20 39.64,367.20 39.64,333.20" aria-label="Ihorombe"/>
+    <text class="label" x="69.09" y="350.20">IHO</text>
+  </g>
+  <g class="state" data-state="AND">
+    <title>Androy</title>
+    <polygon class="tile" points="69.09,418.20 98.53,435.20 98.53,469.20 69.09,486.20 39.64,469.20 39.64,435.20" aria-label="Androy"/>
+    <text class="label" x="69.09" y="452.20">AND</text>
+  </g>
+  <g class="state" data-state="ITA">
+    <title>Itasy</title>
+    <polygon class="tile" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Itasy"/>
+    <text class="label" x="39.64" y="197.20">ITA</text>
+  </g>
+  <g class="state" data-state="MEL">
+    <title>Melaky</title>
+    <polygon class="tile" points="39.64,265.20 69.09,282.20 69.09,316.20 39.64,333.20 10.20,316.20 10.20,282.20" aria-label="Melaky"/>
+    <text class="label" x="39.64" y="299.20">MEL</text>
+  </g>
+  <g class="state" data-state="AAA">
+    <title>Atsimo-Andrefana</title>
+    <polygon class="tile" points="39.64,367.20 69.09,384.20 69.09,418.20 39.64,435.20 10.20,418.20 10.20,384.20" aria-label="Atsimo-Andrefana"/>
+    <text class="label" x="39.64" y="401.20">AAA</text>
+  </g>
+</svg>

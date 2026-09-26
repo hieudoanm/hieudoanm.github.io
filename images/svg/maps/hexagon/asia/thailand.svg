@@ -1,0 +1,396 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.63 663.20" width="361.63" height="663.20" role="img" aria-labelledby="thailand-title thailand-desc">
+  <title id="thailand-title">Thailand hex map</title>
+  <desc id="thailand-desc">Hexagon map with 77 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.01; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 9.91 7.08; }
+    .label { fill: #52525b; font: 600 8.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="MD">
+    <title>Mukdahan</title>
+    <polygon class="tile" points="334.11,148.69 354.55,160.49 354.55,184.09 334.11,195.89 313.67,184.09 313.67,160.49" aria-label="Mukdahan"/>
+    <text class="label" x="334.11" y="172.29">MD</text>
+  </g>
+  <g class="state" data-state="UR">
+    <title>Ubon Ratchathani</title>
+    <polygon class="tile" points="334.11,219.49 354.55,231.30 354.55,254.90 334.11,266.70 313.67,254.90 313.67,231.30" aria-label="Ubon Ratchathani"/>
+    <text class="label" x="334.11" y="243.10">UR</text>
+  </g>
+  <g class="state" data-state="NF">
+    <title>Nakhon Phanom</title>
+    <polygon class="tile" points="313.67,113.29 334.11,125.09 334.11,148.69 313.67,160.49 293.23,148.69 293.23,125.09" aria-label="Nakhon Phanom"/>
+    <text class="label" x="313.67" y="136.89">NF</text>
+  </g>
+  <g class="state" data-state="AC">
+    <title>Amnat Charoen</title>
+    <polygon class="tile" points="313.67,184.09 334.11,195.89 334.11,219.49 313.67,231.30 293.23,219.49 293.23,195.89" aria-label="Amnat Charoen"/>
+    <text class="label" x="313.67" y="207.69">AC</text>
+  </g>
+  <g class="state" data-state="SI">
+    <title>Si Sa Ket</title>
+    <polygon class="tile" points="313.67,254.90 334.11,266.70 334.11,290.30 313.67,302.10 293.23,290.30 293.23,266.70" aria-label="Si Sa Ket"/>
+    <text class="label" x="313.67" y="278.50">SI</text>
+  </g>
+  <g class="state" data-state="NK">
+    <title>Bueng Kan</title>
+    <polygon class="tile" points="293.23,77.89 313.67,89.69 313.67,113.29 293.23,125.09 272.79,113.29 272.79,89.69" aria-label="Bueng Kan"/>
+    <text class="label" x="293.23" y="101.49">NK</text>
+  </g>
+  <g class="state" data-state="KL">
+    <title>Kalasin</title>
+    <polygon class="tile" points="293.23,148.69 313.67,160.49 313.67,184.09 293.23,195.89 272.79,184.09 272.79,160.49" aria-label="Kalasin"/>
+    <text class="label" x="293.23" y="172.29">KL</text>
+  </g>
+  <g class="state" data-state="YS">
+    <title>Yasothon</title>
+    <polygon class="tile" points="293.23,219.49 313.67,231.30 313.67,254.90 293.23,266.70 272.79,254.90 272.79,231.30" aria-label="Yasothon"/>
+    <text class="label" x="293.23" y="243.10">YS</text>
+  </g>
+  <g class="state" data-state="SN">
+    <title>Sakon Nakhon</title>
+    <polygon class="tile" points="272.79,113.29 293.23,125.09 293.23,148.69 272.79,160.49 252.36,148.69 252.36,125.09" aria-label="Sakon Nakhon"/>
+    <text class="label" x="272.79" y="136.89">SN</text>
+  </g>
+  <g class="state" data-state="RE">
+    <title>Roi Et</title>
+    <polygon class="tile" points="272.79,184.09 293.23,195.89 293.23,219.49 272.79,231.30 252.36,219.49 252.36,195.89" aria-label="Roi Et"/>
+    <text class="label" x="272.79" y="207.69">RE</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>Surin</title>
+    <polygon class="tile" points="272.79,254.90 293.23,266.70 293.23,290.30 272.79,302.10 252.36,290.30 252.36,266.70" aria-label="Surin"/>
+    <text class="label" x="272.79" y="278.50">SU</text>
+  </g>
+  <g class="state" data-state="NKA">
+    <title>Nong Khai</title>
+    <polygon class="tile" points="252.36,77.89 272.79,89.69 272.79,113.29 252.36,125.09 231.92,113.29 231.92,89.69" aria-label="Nong Khai"/>
+    <text class="label" x="252.36" y="101.49">NKA</text>
+  </g>
+  <g class="state" data-state="MS">
+    <title>Maha Sarakham</title>
+    <polygon class="tile" points="252.36,148.69 272.79,160.49 272.79,184.09 252.36,195.89 231.92,184.09 231.92,160.49" aria-label="Maha Sarakham"/>
+    <text class="label" x="252.36" y="172.29">MS</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Buri Ram</title>
+    <polygon class="tile" points="252.36,219.49 272.79,231.30 272.79,254.90 252.36,266.70 231.92,254.90 231.92,231.30" aria-label="Buri Ram"/>
+    <text class="label" x="252.36" y="243.10">BR</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Sa Kaeo</title>
+    <polygon class="tile" points="252.36,290.30 272.79,302.10 272.79,325.70 252.36,337.50 231.92,325.70 231.92,302.10" aria-label="Sa Kaeo"/>
+    <text class="label" x="252.36" y="313.90">SK</text>
+  </g>
+  <g class="state" data-state="RY">
+    <title>Rayong</title>
+    <polygon class="tile" points="252.36,361.10 272.79,372.90 272.79,396.51 252.36,408.31 231.92,396.51 231.92,372.90" aria-label="Rayong"/>
+    <text class="label" x="252.36" y="384.71">RY</text>
+  </g>
+  <g class="state" data-state="UN">
+    <title>Udon Thani</title>
+    <polygon class="tile" points="231.92,113.29 252.36,125.09 252.36,148.69 231.92,160.49 211.48,148.69 211.48,125.09" aria-label="Udon Thani"/>
+    <text class="label" x="231.92" y="136.89">UN</text>
+  </g>
+  <g class="state" data-state="KK">
+    <title>Khon Kaen</title>
+    <polygon class="tile" points="231.92,184.09 252.36,195.89 252.36,219.49 231.92,231.30 211.48,219.49 211.48,195.89" aria-label="Khon Kaen"/>
+    <text class="label" x="231.92" y="207.69">KK</text>
+  </g>
+  <g class="state" data-state="PB">
+    <title>Prachin Buri</title>
+    <polygon class="tile" points="231.92,254.90 252.36,266.70 252.36,290.30 231.92,302.10 211.48,290.30 211.48,266.70" aria-label="Prachin Buri"/>
+    <text class="label" x="231.92" y="278.50">PB</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Chanthaburi</title>
+    <polygon class="tile" points="231.92,325.70 252.36,337.50 252.36,361.10 231.92,372.90 211.48,361.10 211.48,337.50" aria-label="Chanthaburi"/>
+    <text class="label" x="231.92" y="349.30">CT</text>
+  </g>
+  <g class="state" data-state="NB">
+    <title>Nong Bua Lam Phu</title>
+    <polygon class="tile" points="211.48,148.69 231.92,160.49 231.92,184.09 211.48,195.89 191.04,184.09 191.04,160.49" aria-label="Nong Bua Lam Phu"/>
+    <text class="label" x="211.48" y="172.29">NB</text>
+  </g>
+  <g class="state" data-state="NR">
+    <title>Nakhon Ratchasima</title>
+    <polygon class="tile" points="211.48,219.49 231.92,231.30 231.92,254.90 211.48,266.70 191.04,254.90 191.04,231.30" aria-label="Nakhon Ratchasima"/>
+    <text class="label" x="211.48" y="243.10">NR</text>
+  </g>
+  <g class="state" data-state="NN">
+    <title>Nakhon Nayok</title>
+    <polygon class="tile" points="211.48,290.30 231.92,302.10 231.92,325.70 211.48,337.50 191.04,325.70 191.04,302.10" aria-label="Nakhon Nayok"/>
+    <text class="label" x="211.48" y="313.90">NN</text>
+  </g>
+  <g class="state" data-state="CB">
+    <title>Chon Buri</title>
+    <polygon class="tile" points="211.48,361.10 231.92,372.90 231.92,396.51 211.48,408.31 191.04,396.51 191.04,372.90" aria-label="Chon Buri"/>
+    <text class="label" x="211.48" y="384.71">CB</text>
+  </g>
+  <g class="state" data-state="PI">
+    <title>Pattani</title>
+    <polygon class="tile" points="211.48,573.52 231.92,585.32 231.92,608.92 211.48,620.72 191.04,608.92 191.04,585.32" aria-label="Pattani"/>
+    <text class="label" x="211.48" y="597.12">PI</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>Loei</title>
+    <polygon class="tile" points="191.04,113.29 211.48,125.09 211.48,148.69 191.04,160.49 170.60,148.69 170.60,125.09" aria-label="Loei"/>
+    <text class="label" x="191.04" y="136.89">LE</text>
+  </g>
+  <g class="state" data-state="CY">
+    <title>Chaiyaphum</title>
+    <polygon class="tile" points="191.04,184.09 211.48,195.89 211.48,219.49 191.04,231.30 170.60,219.49 170.60,195.89" aria-label="Chaiyaphum"/>
+    <text class="label" x="191.04" y="207.69">CY</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Saraburi</title>
+    <polygon class="tile" points="191.04,254.90 211.48,266.70 211.48,290.30 191.04,302.10 170.60,290.30 170.60,266.70" aria-label="Saraburi"/>
+    <text class="label" x="191.04" y="278.50">SR</text>
+  </g>
+  <g class="state" data-state="CC">
+    <title>Chachoengsao</title>
+    <polygon class="tile" points="191.04,325.70 211.48,337.50 211.48,361.10 191.04,372.90 170.60,361.10 170.60,337.50" aria-label="Chachoengsao"/>
+    <text class="label" x="191.04" y="349.30">CC</text>
+  </g>
+  <g class="state" data-state="NW">
+    <title>Narathiwat</title>
+    <polygon class="tile" points="191.04,608.92 211.48,620.72 211.48,644.32 191.04,656.12 170.60,644.32 170.60,620.72" aria-label="Narathiwat"/>
+    <text class="label" x="191.04" y="632.52">NW</text>
+  </g>
+  <g class="state" data-state="UD">
+    <title>Uttaradit</title>
+    <polygon class="tile" points="170.60,77.89 191.04,89.69 191.04,113.29 170.60,125.09 150.16,113.29 150.16,89.69" aria-label="Uttaradit"/>
+    <text class="label" x="170.60" y="101.49">UD</text>
+  </g>
+  <g class="state" data-state="PH">
+    <title>Phetchabun</title>
+    <polygon class="tile" points="170.60,148.69 191.04,160.49 191.04,184.09 170.60,195.89 150.16,184.09 150.16,160.49" aria-label="Phetchabun"/>
+    <text class="label" x="170.60" y="172.29">PH</text>
+  </g>
+  <g class="state" data-state="LB">
+    <title>Lop Buri</title>
+    <polygon class="tile" points="170.60,219.49 191.04,231.30 191.04,254.90 170.60,266.70 150.16,254.90 150.16,231.30" aria-label="Lop Buri"/>
+    <text class="label" x="170.60" y="243.10">LB</text>
+  </g>
+  <g class="state" data-state="PT">
+    <title>Pathum Thani</title>
+    <polygon class="tile" points="170.60,290.30 191.04,302.10 191.04,325.70 170.60,337.50 150.16,325.70 150.16,302.10" aria-label="Pathum Thani"/>
+    <text class="label" x="170.60" y="313.90">PT</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>Songkhla</title>
+    <polygon class="tile" points="170.60,573.52 191.04,585.32 191.04,608.92 170.60,620.72 150.16,608.92 150.16,585.32" aria-label="Songkhla"/>
+    <text class="label" x="170.60" y="597.12">SG</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Nan</title>
+    <polygon class="tile" points="150.16,42.48 170.60,54.28 170.60,77.89 150.16,89.69 129.72,77.89 129.72,54.28" aria-label="Nan"/>
+    <text class="label" x="150.16" y="66.08">NA</text>
+  </g>
+  <g class="state" data-state="PS">
+    <title>Phitsanulok</title>
+    <polygon class="tile" points="150.16,113.29 170.60,125.09 170.60,148.69 150.16,160.49 129.72,148.69 129.72,125.09" aria-label="Phitsanulok"/>
+    <text class="label" x="150.16" y="136.89">PS</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Sing Buri</title>
+    <polygon class="tile" points="150.16,184.09 170.60,195.89 170.60,219.49 150.16,231.30 129.72,219.49 129.72,195.89" aria-label="Sing Buri"/>
+    <text class="label" x="150.16" y="207.69">SB</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Phra Nakhon Si Ayutthaya</title>
+    <polygon class="tile" points="150.16,254.90 170.60,266.70 170.60,290.30 150.16,302.10 129.72,290.30 129.72,266.70" aria-label="Phra Nakhon Si Ayutthaya"/>
+    <text class="label" x="150.16" y="278.50">PA</text>
+  </g>
+  <g class="state" data-state="SP">
+    <title>Samut Prakan</title>
+    <polygon class="tile" points="150.16,325.70 170.60,337.50 170.60,361.10 150.16,372.90 129.72,361.10 129.72,337.50" aria-label="Samut Prakan"/>
+    <text class="label" x="150.16" y="349.30">SP</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Phatthalung</title>
+    <polygon class="tile" points="150.16,538.12 170.60,549.92 170.60,573.52 150.16,585.32 129.72,573.52 129.72,549.92" aria-label="Phatthalung"/>
+    <text class="label" x="150.16" y="561.72">PL</text>
+  </g>
+  <g class="state" data-state="YL">
+    <title>Yala</title>
+    <polygon class="tile" points="150.16,608.92 170.60,620.72 170.60,644.32 150.16,656.12 129.72,644.32 129.72,620.72" aria-label="Yala"/>
+    <text class="label" x="150.16" y="632.52">YL</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Chiang Rai</title>
+    <polygon class="tile" points="129.72,7.08 150.16,18.88 150.16,42.48 129.72,54.28 109.28,42.48 109.28,18.88" aria-label="Chiang Rai"/>
+    <text class="label" x="129.72" y="30.68">CR</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Phrae</title>
+    <polygon class="tile" points="129.72,77.89 150.16,89.69 150.16,113.29 129.72,125.09 109.28,113.29 109.28,89.69" aria-label="Phrae"/>
+    <text class="label" x="129.72" y="101.49">PR</text>
+  </g>
+  <g class="state" data-state="PC">
+    <title>Phichit</title>
+    <polygon class="tile" points="129.72,148.69 150.16,160.49 150.16,184.09 129.72,195.89 109.28,184.09 109.28,160.49" aria-label="Phichit"/>
+    <text class="label" x="129.72" y="172.29">PC</text>
+  </g>
+  <g class="state" data-state="AT">
+    <title>Ang Thong</title>
+    <polygon class="tile" points="129.72,219.49 150.16,231.30 150.16,254.90 129.72,266.70 109.28,254.90 109.28,231.30" aria-label="Ang Thong"/>
+    <text class="label" x="129.72" y="243.10">AT</text>
+  </g>
+  <g class="state" data-state="NO">
+    <title>Nonthaburi</title>
+    <polygon class="tile" points="129.72,290.30 150.16,302.10 150.16,325.70 129.72,337.50 109.28,325.70 109.28,302.10" aria-label="Nonthaburi"/>
+    <text class="label" x="129.72" y="313.90">NO</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Samut Sakhon</title>
+    <polygon class="tile" points="129.72,361.10 150.16,372.90 150.16,396.51 129.72,408.31 109.28,396.51 109.28,372.90" aria-label="Samut Sakhon"/>
+    <text class="label" x="129.72" y="384.71">SS</text>
+  </g>
+  <g class="state" data-state="NT">
+    <title>Nakhon Si Thammarat</title>
+    <polygon class="tile" points="129.72,502.71 150.16,514.51 150.16,538.12 129.72,549.92 109.28,538.12 109.28,514.51" aria-label="Nakhon Si Thammarat"/>
+    <text class="label" x="129.72" y="526.32">NT</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Satun</title>
+    <polygon class="tile" points="129.72,573.52 150.16,585.32 150.16,608.92 129.72,620.72 109.28,608.92 109.28,585.32" aria-label="Satun"/>
+    <text class="label" x="129.72" y="597.12">SA</text>
+  </g>
+  <g class="state" data-state="PY">
+    <title>Phayao</title>
+    <polygon class="tile" points="109.28,42.48 129.72,54.28 129.72,77.89 109.28,89.69 88.84,77.89 88.84,54.28" aria-label="Phayao"/>
+    <text class="label" x="109.28" y="66.08">PY</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Sukhothai</title>
+    <polygon class="tile" points="109.28,113.29 129.72,125.09 129.72,148.69 109.28,160.49 88.84,148.69 88.84,125.09" aria-label="Sukhothai"/>
+    <text class="label" x="109.28" y="136.89">SO</text>
+  </g>
+  <g class="state" data-state="NS">
+    <title>Nakhon Sawan</title>
+    <polygon class="tile" points="109.28,184.09 129.72,195.89 129.72,219.49 109.28,231.30 88.84,219.49 88.84,195.89" aria-label="Nakhon Sawan"/>
+    <text class="label" x="109.28" y="207.69">NS</text>
+  </g>
+  <g class="state" data-state="SH">
+    <title>Suphan Buri</title>
+    <polygon class="tile" points="109.28,254.90 129.72,266.70 129.72,290.30 109.28,302.10 88.84,290.30 88.84,266.70" aria-label="Suphan Buri"/>
+    <text class="label" x="109.28" y="278.50">SH</text>
+  </g>
+  <g class="state" data-state="BM">
+    <title>Bangkok Metropolis</title>
+    <polygon class="tile" points="109.28,325.70 129.72,337.50 129.72,361.10 109.28,372.90 88.84,361.10 88.84,337.50" aria-label="Bangkok Metropolis"/>
+    <text class="label" x="109.28" y="349.30">BM</text>
+  </g>
+  <g class="state" data-state="RT">
+    <title>Ratchaburi</title>
+    <polygon class="tile" points="109.28,396.51 129.72,408.31 129.72,431.91 109.28,443.71 88.84,431.91 88.84,408.31" aria-label="Ratchaburi"/>
+    <text class="label" x="109.28" y="420.11">RT</text>
+  </g>
+  <g class="state" data-state="CP">
+    <title>Chumphon</title>
+    <polygon class="tile" points="109.28,467.31 129.72,479.11 129.72,502.71 109.28,514.51 88.84,502.71 88.84,479.11" aria-label="Chumphon"/>
+    <text class="label" x="109.28" y="490.91">CP</text>
+  </g>
+  <g class="state" data-state="TG">
+    <title>Trang</title>
+    <polygon class="tile" points="109.28,538.12 129.72,549.92 129.72,573.52 109.28,585.32 88.84,573.52 88.84,549.92" aria-label="Trang"/>
+    <text class="label" x="109.28" y="561.72">TG</text>
+  </g>
+  <g class="state" data-state="LG">
+    <title>Lampang</title>
+    <polygon class="tile" points="88.84,77.89 109.28,89.69 109.28,113.29 88.84,125.09 68.40,113.29 68.40,89.69" aria-label="Lampang"/>
+    <text class="label" x="88.84" y="101.49">LG</text>
+  </g>
+  <g class="state" data-state="KP">
+    <title>Kamphaeng Phet</title>
+    <polygon class="tile" points="88.84,148.69 109.28,160.49 109.28,184.09 88.84,195.89 68.40,184.09 68.40,160.49" aria-label="Kamphaeng Phet"/>
+    <text class="label" x="88.84" y="172.29">KP</text>
+  </g>
+  <g class="state" data-state="UT">
+    <title>Uthai Thani</title>
+    <polygon class="tile" points="88.84,219.49 109.28,231.30 109.28,254.90 88.84,266.70 68.40,254.90 68.40,231.30" aria-label="Uthai Thani"/>
+    <text class="label" x="88.84" y="243.10">UT</text>
+  </g>
+  <g class="state" data-state="NP">
+    <title>Nakhon Pathom</title>
+    <polygon class="tile" points="88.84,290.30 109.28,302.10 109.28,325.70 88.84,337.50 68.40,325.70 68.40,302.10" aria-label="Nakhon Pathom"/>
+    <text class="label" x="88.84" y="313.90">NP</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Samut Songkhram</title>
+    <polygon class="tile" points="88.84,361.10 109.28,372.90 109.28,396.51 88.84,408.31 68.40,396.51 68.40,372.90" aria-label="Samut Songkhram"/>
+    <text class="label" x="88.84" y="384.71">SM</text>
+  </g>
+  <g class="state" data-state="PK">
+    <title>Prachuap Khiri Khan</title>
+    <polygon class="tile" points="88.84,431.91 109.28,443.71 109.28,467.31 88.84,479.11 68.40,467.31 68.40,443.71" aria-label="Prachuap Khiri Khan"/>
+    <text class="label" x="88.84" y="455.51">PK</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Surat Thani</title>
+    <polygon class="tile" points="88.84,502.71 109.28,514.51 109.28,538.12 88.84,549.92 68.40,538.12 68.40,514.51" aria-label="Surat Thani"/>
+    <text class="label" x="88.84" y="526.32">ST</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Chiang Mai</title>
+    <polygon class="tile" points="68.40,42.48 88.84,54.28 88.84,77.89 68.40,89.69 47.96,77.89 47.96,54.28" aria-label="Chiang Mai"/>
+    <text class="label" x="68.40" y="66.08">CM</text>
+  </g>
+  <g class="state" data-state="TK">
+    <title>Tak</title>
+    <polygon class="tile" points="68.40,113.29 88.84,125.09 88.84,148.69 68.40,160.49 47.96,148.69 47.96,125.09" aria-label="Tak"/>
+    <text class="label" x="68.40" y="136.89">TK</text>
+  </g>
+  <g class="state" data-state="CN">
+    <title>Chai Nat</title>
+    <polygon class="tile" points="68.40,184.09 88.84,195.89 88.84,219.49 68.40,231.30 47.96,219.49 47.96,195.89" aria-label="Chai Nat"/>
+    <text class="label" x="68.40" y="207.69">CN</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>Kanchanaburi</title>
+    <polygon class="tile" points="68.40,254.90 88.84,266.70 88.84,290.30 68.40,302.10 47.96,290.30 47.96,266.70" aria-label="Kanchanaburi"/>
+    <text class="label" x="68.40" y="278.50">KN</text>
+  </g>
+  <g class="state" data-state="PE">
+    <title>Phetchaburi</title>
+    <polygon class="tile" points="68.40,396.51 88.84,408.31 88.84,431.91 68.40,443.71 47.96,431.91 47.96,408.31" aria-label="Phetchaburi"/>
+    <text class="label" x="68.40" y="420.11">PE</text>
+  </g>
+  <g class="state" data-state="RN">
+    <title>Ranong</title>
+    <polygon class="tile" points="68.40,467.31 88.84,479.11 88.84,502.71 68.40,514.51 47.96,502.71 47.96,479.11" aria-label="Ranong"/>
+    <text class="label" x="68.40" y="490.91">RN</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Krabi</title>
+    <polygon class="tile" points="68.40,538.12 88.84,549.92 88.84,573.52 68.40,585.32 47.96,573.52 47.96,549.92" aria-label="Krabi"/>
+    <text class="label" x="68.40" y="561.72">KR</text>
+  </g>
+  <g class="state" data-state="LN">
+    <title>Lamphun</title>
+    <polygon class="tile" points="47.96,77.89 68.40,89.69 68.40,113.29 47.96,125.09 27.52,113.29 27.52,89.69" aria-label="Lamphun"/>
+    <text class="label" x="47.96" y="101.49">LN</text>
+  </g>
+  <g class="state" data-state="MH">
+    <title>Mae Hong Son</title>
+    <polygon class="tile" points="47.96,148.69 68.40,160.49 68.40,184.09 47.96,195.89 27.52,184.09 27.52,160.49" aria-label="Mae Hong Son"/>
+    <text class="label" x="47.96" y="172.29">MH</text>
+  </g>
+  <g class="state" data-state="TT">
+    <title>Trat</title>
+    <polygon class="tile" points="47.96,431.91 68.40,443.71 68.40,467.31 47.96,479.11 27.52,467.31 27.52,443.71" aria-label="Trat"/>
+    <text class="label" x="47.96" y="455.51">TT</text>
+  </g>
+  <g class="state" data-state="PG">
+    <title>Phangnga</title>
+    <polygon class="tile" points="47.96,502.71 68.40,514.51 68.40,538.12 47.96,549.92 27.52,538.12 27.52,514.51" aria-label="Phangnga"/>
+    <text class="label" x="47.96" y="526.32">PG</text>
+  </g>
+  <g class="state" data-state="PU">
+    <title>Phuket</title>
+    <polygon class="tile inset" points="27.52,608.92 47.96,620.72 47.96,644.32 27.52,656.12 7.08,644.32 7.08,620.72" aria-label="Phuket"/>
+    <text class="label" x="27.52" y="632.52">PU</text>
+  </g>
+</svg>

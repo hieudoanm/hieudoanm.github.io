@@ -1,0 +1,516 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364.51 376.71" width="364.51" height="376.71" role="img" aria-labelledby="france-title france-desc">
+  <title id="france-title">France hex map</title>
+  <desc id="france-desc">Hexagon map with 101 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.45; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 7.16 5.11; }
+    .label { fill: #52525b; font: 600 5.80px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="HC">
+    <title>Haute-Corse</title>
+    <polygon class="tile inset" points="344.64,286.37 359.40,294.89 359.40,311.93 344.64,320.46 329.88,311.93 329.88,294.89" aria-label="Haute-Corse"/>
+    <text class="label" x="344.64" y="303.41">HC</text>
+  </g>
+  <g class="state" data-state="HR">
+    <title>Haute-Rhin</title>
+    <polygon class="tile" points="315.11,81.82 329.88,90.34 329.88,107.39 315.11,115.91 300.35,107.39 300.35,90.34" aria-label="Haute-Rhin"/>
+    <text class="label" x="315.11" y="98.86">HR</text>
+  </g>
+  <g class="state" data-state="AM">
+    <title>Alpes-Maritimes</title>
+    <polygon class="tile" points="315.11,235.23 329.88,243.75 329.88,260.80 315.11,269.32 300.35,260.80 300.35,243.75" aria-label="Alpes-Maritimes"/>
+    <text class="label" x="315.11" y="252.27">AM</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Bas-Rhin</title>
+    <polygon class="tile" points="300.35,56.25 315.11,64.77 315.11,81.82 300.35,90.34 285.59,81.82 285.59,64.77" aria-label="Bas-Rhin"/>
+    <text class="label" x="300.35" y="73.30">BR</text>
+  </g>
+  <g class="state" data-state="TDB">
+    <title>Territoire de Belfort</title>
+    <polygon class="tile" points="300.35,107.39 315.11,115.91 315.11,132.96 300.35,141.48 285.59,132.96 285.59,115.91" aria-label="Territoire de Belfort"/>
+    <text class="label" x="300.35" y="124.43">TDB</text>
+  </g>
+  <g class="state" data-state="HS">
+    <title>Haute-Savoie</title>
+    <polygon class="tile" points="300.35,158.52 315.11,167.05 315.11,184.09 300.35,192.62 285.59,184.09 285.59,167.05" aria-label="Haute-Savoie"/>
+    <text class="label" x="300.35" y="175.57">HS</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Hautes-Alpes</title>
+    <polygon class="tile" points="300.35,209.66 315.11,218.18 315.11,235.23 300.35,243.75 285.59,235.23 285.59,218.18" aria-label="Hautes-Alpes"/>
+    <text class="label" x="300.35" y="226.71">HA</text>
+  </g>
+  <g class="state" data-state="CDS">
+    <title>Corse-du-Sud</title>
+    <polygon class="tile inset" points="300.35,311.93 315.11,320.46 315.11,337.50 300.35,346.03 285.59,337.50 285.59,320.46" aria-label="Corse-du-Sud"/>
+    <text class="label" x="300.35" y="328.98">CDS</text>
+  </g>
+  <g class="state" data-state="MOS">
+    <title>Moselle</title>
+    <polygon class="tile" points="285.59,30.68 300.35,39.20 300.35,56.25 285.59,64.77 270.83,56.25 270.83,39.20" aria-label="Moselle"/>
+    <text class="label" x="285.59" y="47.73">MOS</text>
+  </g>
+  <g class="state" data-state="VOS">
+    <title>Vosges</title>
+    <polygon class="tile" points="285.59,81.82 300.35,90.34 300.35,107.39 285.59,115.91 270.83,107.39 270.83,90.34" aria-label="Vosges"/>
+    <text class="label" x="285.59" y="98.86">VOS</text>
+  </g>
+  <g class="state" data-state="DOU">
+    <title>Doubs</title>
+    <polygon class="tile" points="285.59,132.96 300.35,141.48 300.35,158.52 285.59,167.05 270.83,158.52 270.83,141.48" aria-label="Doubs"/>
+    <text class="label" x="285.59" y="150.00">DOU</text>
+  </g>
+  <g class="state" data-state="SAV">
+    <title>Savoie</title>
+    <polygon class="tile" points="285.59,184.09 300.35,192.62 300.35,209.66 285.59,218.18 270.83,209.66 270.83,192.62" aria-label="Savoie"/>
+    <text class="label" x="285.59" y="201.14">SAV</text>
+  </g>
+  <g class="state" data-state="ADHP">
+    <title>Alpes-de-Haute-Provence</title>
+    <polygon class="tile" points="285.59,235.23 300.35,243.75 300.35,260.80 285.59,269.32 270.83,260.80 270.83,243.75" aria-label="Alpes-de-Haute-Provence"/>
+    <text class="label" x="285.59" y="252.27">ADHP</text>
+  </g>
+  <g class="state" data-state="MEM">
+    <title>Meurthe-et-Moselle</title>
+    <polygon class="tile" points="270.83,56.25 285.59,64.77 285.59,81.82 270.83,90.34 256.07,81.82 256.07,64.77" aria-label="Meurthe-et-Moselle"/>
+    <text class="label" x="270.83" y="73.30">MEM</text>
+  </g>
+  <g class="state" data-state="HSA">
+    <title>Haute-Saône</title>
+    <polygon class="tile" points="270.83,107.39 285.59,115.91 285.59,132.96 270.83,141.48 256.07,132.96 256.07,115.91" aria-label="Haute-Saône"/>
+    <text class="label" x="270.83" y="124.43">HSA</text>
+  </g>
+  <g class="state" data-state="AIN">
+    <title>Ain</title>
+    <polygon class="tile" points="270.83,158.52 285.59,167.05 285.59,184.09 270.83,192.62 256.07,184.09 256.07,167.05" aria-label="Ain"/>
+    <text class="label" x="270.83" y="175.57">AIN</text>
+  </g>
+  <g class="state" data-state="DRM">
+    <title>Drôme</title>
+    <polygon class="tile" points="270.83,209.66 285.59,218.18 285.59,235.23 270.83,243.75 256.07,235.23 256.07,218.18" aria-label="Drôme"/>
+    <text class="label" x="270.83" y="226.71">DRM</text>
+  </g>
+  <g class="state" data-state="VAR">
+    <title>Var</title>
+    <polygon class="tile" points="270.83,260.80 285.59,269.32 285.59,286.37 270.83,294.89 256.07,286.37 256.07,269.32" aria-label="Var"/>
+    <text class="label" x="270.83" y="277.84">VAR</text>
+  </g>
+  <g class="state" data-state="MEU">
+    <title>Meuse</title>
+    <polygon class="tile" points="256.07,30.68 270.83,39.20 270.83,56.25 256.07,64.77 241.30,56.25 241.30,39.20" aria-label="Meuse"/>
+    <text class="label" x="256.07" y="47.73">MEU</text>
+  </g>
+  <g class="state" data-state="HM">
+    <title>Haute-Marne</title>
+    <polygon class="tile" points="256.07,81.82 270.83,90.34 270.83,107.39 256.07,115.91 241.30,107.39 241.30,90.34" aria-label="Haute-Marne"/>
+    <text class="label" x="256.07" y="98.86">HM</text>
+  </g>
+  <g class="state" data-state="JUR">
+    <title>Jura</title>
+    <polygon class="tile" points="256.07,132.96 270.83,141.48 270.83,158.52 256.07,167.05 241.30,158.52 241.30,141.48" aria-label="Jura"/>
+    <text class="label" x="256.07" y="150.00">JUR</text>
+  </g>
+  <g class="state" data-state="ISR">
+    <title>Isère</title>
+    <polygon class="tile" points="256.07,184.09 270.83,192.62 270.83,209.66 256.07,218.18 241.30,209.66 241.30,192.62" aria-label="Isère"/>
+    <text class="label" x="256.07" y="201.14">ISR</text>
+  </g>
+  <g class="state" data-state="VAU">
+    <title>Vaucluse</title>
+    <polygon class="tile" points="256.07,235.23 270.83,243.75 270.83,260.80 256.07,269.32 241.30,260.80 241.30,243.75" aria-label="Vaucluse"/>
+    <text class="label" x="256.07" y="252.27">VAU</text>
+  </g>
+  <g class="state" data-state="ARD">
+    <title>Ardennes</title>
+    <polygon class="tile" points="241.30,5.11 256.07,13.64 256.07,30.68 241.30,39.20 226.54,30.68 226.54,13.64" aria-label="Ardennes"/>
+    <text class="label" x="241.30" y="22.16">ARD</text>
+  </g>
+  <g class="state" data-state="MAR">
+    <title>Marne</title>
+    <polygon class="tile" points="241.30,56.25 256.07,64.77 256.07,81.82 241.30,90.34 226.54,81.82 226.54,64.77" aria-label="Marne"/>
+    <text class="label" x="241.30" y="73.30">MAR</text>
+  </g>
+  <g class="state" data-state="CDA">
+    <title>Côte-d'Or</title>
+    <polygon class="tile" points="241.30,107.39 256.07,115.91 256.07,132.96 241.30,141.48 226.54,132.96 226.54,115.91" aria-label="Côte-d'Or"/>
+    <text class="label" x="241.30" y="124.43">CDA</text>
+  </g>
+  <g class="state" data-state="RHN">
+    <title>Rhône</title>
+    <polygon class="tile" points="241.30,158.52 256.07,167.05 256.07,184.09 241.30,192.62 226.54,184.09 226.54,167.05" aria-label="Rhône"/>
+    <text class="label" x="241.30" y="175.57">RHN</text>
+  </g>
+  <g class="state" data-state="ARDA">
+    <title>Ardèche</title>
+    <polygon class="tile" points="241.30,209.66 256.07,218.18 256.07,235.23 241.30,243.75 226.54,235.23 226.54,218.18" aria-label="Ardèche"/>
+    <text class="label" x="241.30" y="226.71">ARDA</text>
+  </g>
+  <g class="state" data-state="BDR">
+    <title>Bouches-du-Rhône</title>
+    <polygon class="tile" points="241.30,260.80 256.07,269.32 256.07,286.37 241.30,294.89 226.54,286.37 226.54,269.32" aria-label="Bouches-du-Rhône"/>
+    <text class="label" x="241.30" y="277.84">BDR</text>
+  </g>
+  <g class="state" data-state="YT">
+    <title>Mayotte</title>
+    <polygon class="tile inset" points="241.30,311.93 256.07,320.46 256.07,337.50 241.30,346.03 226.54,337.50 226.54,320.46" aria-label="Mayotte"/>
+    <text class="label" x="241.30" y="328.98">YT</text>
+  </g>
+  <g class="state" data-state="AIS">
+    <title>Aisne</title>
+    <polygon class="tile" points="226.54,30.68 241.30,39.20 241.30,56.25 226.54,64.77 211.78,56.25 211.78,39.20" aria-label="Aisne"/>
+    <text class="label" x="226.54" y="47.73">AIS</text>
+  </g>
+  <g class="state" data-state="AUB">
+    <title>Aube</title>
+    <polygon class="tile" points="226.54,81.82 241.30,90.34 241.30,107.39 226.54,115.91 211.78,107.39 211.78,90.34" aria-label="Aube"/>
+    <text class="label" x="226.54" y="98.86">AUB</text>
+  </g>
+  <g class="state" data-state="SEL">
+    <title>Saône-et-Loire</title>
+    <polygon class="tile" points="226.54,132.96 241.30,141.48 241.30,158.52 226.54,167.05 211.78,158.52 211.78,141.48" aria-label="Saône-et-Loire"/>
+    <text class="label" x="226.54" y="150.00">SEL</text>
+  </g>
+  <g class="state" data-state="LOI">
+    <title>Loire</title>
+    <polygon class="tile" points="226.54,184.09 241.30,192.62 241.30,209.66 226.54,218.18 211.78,209.66 211.78,192.62" aria-label="Loire"/>
+    <text class="label" x="226.54" y="201.14">LOI</text>
+  </g>
+  <g class="state" data-state="GAR">
+    <title>Gard</title>
+    <polygon class="tile" points="226.54,235.23 241.30,243.75 241.30,260.80 226.54,269.32 211.78,260.80 211.78,243.75" aria-label="Gard"/>
+    <text class="label" x="226.54" y="252.27">GAR</text>
+  </g>
+  <g class="state" data-state="NOR">
+    <title>Nord</title>
+    <polygon class="tile" points="211.78,5.11 226.54,13.64 226.54,30.68 211.78,39.20 197.02,30.68 197.02,13.64" aria-label="Nord"/>
+    <text class="label" x="211.78" y="22.16">NOR</text>
+  </g>
+  <g class="state" data-state="OIS">
+    <title>Oise</title>
+    <polygon class="tile" points="211.78,56.25 226.54,64.77 226.54,81.82 211.78,90.34 197.02,81.82 197.02,64.77" aria-label="Oise"/>
+    <text class="label" x="211.78" y="73.30">OIS</text>
+  </g>
+  <g class="state" data-state="YON">
+    <title>Yonne</title>
+    <polygon class="tile" points="211.78,107.39 226.54,115.91 226.54,132.96 211.78,141.48 197.02,132.96 197.02,115.91" aria-label="Yonne"/>
+    <text class="label" x="211.78" y="124.43">YON</text>
+  </g>
+  <g class="state" data-state="ALL">
+    <title>Allier</title>
+    <polygon class="tile" points="211.78,158.52 226.54,167.05 226.54,184.09 211.78,192.62 197.02,184.09 197.02,167.05" aria-label="Allier"/>
+    <text class="label" x="211.78" y="175.57">ALL</text>
+  </g>
+  <g class="state" data-state="HL">
+    <title>Haute-Loire</title>
+    <polygon class="tile" points="211.78,209.66 226.54,218.18 226.54,235.23 211.78,243.75 197.02,235.23 197.02,218.18" aria-label="Haute-Loire"/>
+    <text class="label" x="211.78" y="226.71">HL</text>
+  </g>
+  <g class="state" data-state="HRA">
+    <title>Hérault</title>
+    <polygon class="tile" points="211.78,260.80 226.54,269.32 226.54,286.37 211.78,294.89 197.02,286.37 197.02,269.32" aria-label="Hérault"/>
+    <text class="label" x="211.78" y="277.84">HRA</text>
+  </g>
+  <g class="state" data-state="SOM">
+    <title>Somme</title>
+    <polygon class="tile" points="197.02,30.68 211.78,39.20 211.78,56.25 197.02,64.77 182.26,56.25 182.26,39.20" aria-label="Somme"/>
+    <text class="label" x="197.02" y="47.73">SOM</text>
+  </g>
+  <g class="state" data-state="SEM">
+    <title>Seien-et-Marne</title>
+    <polygon class="tile" points="197.02,81.82 211.78,90.34 211.78,107.39 197.02,115.91 182.26,107.39 182.26,90.34" aria-label="Seien-et-Marne"/>
+    <text class="label" x="197.02" y="98.86">SEM</text>
+  </g>
+  <g class="state" data-state="NIV">
+    <title>Nièvre</title>
+    <polygon class="tile" points="197.02,132.96 211.78,141.48 211.78,158.52 197.02,167.05 182.26,158.52 182.26,141.48" aria-label="Nièvre"/>
+    <text class="label" x="197.02" y="150.00">NIV</text>
+  </g>
+  <g class="state" data-state="PDD">
+    <title>Puy-de-Dôme</title>
+    <polygon class="tile" points="197.02,184.09 211.78,192.62 211.78,209.66 197.02,218.18 182.26,209.66 182.26,192.62" aria-label="Puy-de-Dôme"/>
+    <text class="label" x="197.02" y="201.14">PDD</text>
+  </g>
+  <g class="state" data-state="LOZ">
+    <title>Lozère</title>
+    <polygon class="tile" points="197.02,235.23 211.78,243.75 211.78,260.80 197.02,269.32 182.26,260.80 182.26,243.75" aria-label="Lozère"/>
+    <text class="label" x="197.02" y="252.27">LOZ</text>
+  </g>
+  <g class="state" data-state="PO">
+    <title>Pyrénées-Orientales</title>
+    <polygon class="tile" points="197.02,286.37 211.78,294.89 211.78,311.93 197.02,320.46 182.26,311.93 182.26,294.89" aria-label="Pyrénées-Orientales"/>
+    <text class="label" x="197.02" y="303.41">PO</text>
+  </g>
+  <g class="state" data-state="RE">
+    <title>La Réunion</title>
+    <polygon class="tile inset" points="197.02,337.50 211.78,346.03 211.78,363.07 197.02,371.59 182.26,363.07 182.26,346.03" aria-label="La Réunion"/>
+    <text class="label" x="197.02" y="354.55">RE</text>
+  </g>
+  <g class="state" data-state="PDC">
+    <title>Pas-de-Calais</title>
+    <polygon class="tile" points="182.26,5.11 197.02,13.64 197.02,30.68 182.26,39.20 167.49,30.68 167.49,13.64" aria-label="Pas-de-Calais"/>
+    <text class="label" x="182.26" y="22.16">PDC</text>
+  </g>
+  <g class="state" data-state="VDM">
+    <title>Val-de-Marne</title>
+    <polygon class="tile" points="182.26,56.25 197.02,64.77 197.02,81.82 182.26,90.34 167.49,81.82 167.49,64.77" aria-label="Val-de-Marne"/>
+    <text class="label" x="182.26" y="73.30">VDM</text>
+  </g>
+  <g class="state" data-state="LOIA">
+    <title>Loiret</title>
+    <polygon class="tile" points="182.26,107.39 197.02,115.91 197.02,132.96 182.26,141.48 167.49,132.96 167.49,115.91" aria-label="Loiret"/>
+    <text class="label" x="182.26" y="124.43">LOIA</text>
+  </g>
+  <g class="state" data-state="CRE">
+    <title>Creuse</title>
+    <polygon class="tile" points="182.26,158.52 197.02,167.05 197.02,184.09 182.26,192.62 167.49,184.09 167.49,167.05" aria-label="Creuse"/>
+    <text class="label" x="182.26" y="175.57">CRE</text>
+  </g>
+  <g class="state" data-state="CAN">
+    <title>Cantal</title>
+    <polygon class="tile" points="182.26,209.66 197.02,218.18 197.02,235.23 182.26,243.75 167.49,235.23 167.49,218.18" aria-label="Cantal"/>
+    <text class="label" x="182.26" y="226.71">CAN</text>
+  </g>
+  <g class="state" data-state="TAR">
+    <title>Tarn</title>
+    <polygon class="tile" points="182.26,260.80 197.02,269.32 197.02,286.37 182.26,294.89 167.49,286.37 167.49,269.32" aria-label="Tarn"/>
+    <text class="label" x="182.26" y="277.84">TAR</text>
+  </g>
+  <g class="state" data-state="PAR">
+    <title>Paris</title>
+    <polygon class="tile" points="167.49,30.68 182.26,39.20 182.26,56.25 167.49,64.77 152.73,56.25 152.73,39.20" aria-label="Paris"/>
+    <text class="label" x="167.49" y="47.73">PAR</text>
+  </g>
+  <g class="state" data-state="ESS">
+    <title>Essonne</title>
+    <polygon class="tile" points="167.49,81.82 182.26,90.34 182.26,107.39 167.49,115.91 152.73,107.39 152.73,90.34" aria-label="Essonne"/>
+    <text class="label" x="167.49" y="98.86">ESS</text>
+  </g>
+  <g class="state" data-state="CHE">
+    <title>Cher</title>
+    <polygon class="tile" points="167.49,132.96 182.26,141.48 182.26,158.52 167.49,167.05 152.73,158.52 152.73,141.48" aria-label="Cher"/>
+    <text class="label" x="167.49" y="150.00">CHE</text>
+  </g>
+  <g class="state" data-state="COR">
+    <title>Corrèze</title>
+    <polygon class="tile" points="167.49,184.09 182.26,192.62 182.26,209.66 167.49,218.18 152.73,209.66 152.73,192.62" aria-label="Corrèze"/>
+    <text class="label" x="167.49" y="201.14">COR</text>
+  </g>
+  <g class="state" data-state="AVE">
+    <title>Aveyron</title>
+    <polygon class="tile" points="167.49,235.23 182.26,243.75 182.26,260.80 167.49,269.32 152.73,260.80 152.73,243.75" aria-label="Aveyron"/>
+    <text class="label" x="167.49" y="252.27">AVE</text>
+  </g>
+  <g class="state" data-state="AUD">
+    <title>Aude</title>
+    <polygon class="tile" points="167.49,286.37 182.26,294.89 182.26,311.93 167.49,320.46 152.73,311.93 152.73,294.89" aria-label="Aude"/>
+    <text class="label" x="167.49" y="303.41">AUD</text>
+  </g>
+  <g class="state" data-state="SSD">
+    <title>Seine-Saint-Denis</title>
+    <polygon class="tile" points="152.73,5.11 167.49,13.64 167.49,30.68 152.73,39.20 137.97,30.68 137.97,13.64" aria-label="Seine-Saint-Denis"/>
+    <text class="label" x="152.73" y="22.16">SSD</text>
+  </g>
+  <g class="state" data-state="HDS">
+    <title>Hauts-de-Seine</title>
+    <polygon class="tile" points="152.73,56.25 167.49,64.77 167.49,81.82 152.73,90.34 137.97,81.82 137.97,64.77" aria-label="Hauts-de-Seine"/>
+    <text class="label" x="152.73" y="73.30">HDS</text>
+  </g>
+  <g class="state" data-state="LEC">
+    <title>Loir-et-Cher</title>
+    <polygon class="tile" points="152.73,107.39 167.49,115.91 167.49,132.96 152.73,141.48 137.97,132.96 137.97,115.91" aria-label="Loir-et-Cher"/>
+    <text class="label" x="152.73" y="124.43">LEC</text>
+  </g>
+  <g class="state" data-state="IND">
+    <title>Indre</title>
+    <polygon class="tile" points="152.73,158.52 167.49,167.05 167.49,184.09 152.73,192.62 137.97,184.09 137.97,167.05" aria-label="Indre"/>
+    <text class="label" x="152.73" y="175.57">IND</text>
+  </g>
+  <g class="state" data-state="LOT">
+    <title>Lot</title>
+    <polygon class="tile" points="152.73,209.66 167.49,218.18 167.49,235.23 152.73,243.75 137.97,235.23 137.97,218.18" aria-label="Lot"/>
+    <text class="label" x="152.73" y="226.71">LOT</text>
+  </g>
+  <g class="state" data-state="HG">
+    <title>Haute-Garonne</title>
+    <polygon class="tile" points="152.73,260.80 167.49,269.32 167.49,286.37 152.73,294.89 137.97,286.37 137.97,269.32" aria-label="Haute-Garonne"/>
+    <text class="label" x="152.73" y="277.84">HG</text>
+  </g>
+  <g class="state" data-state="VD">
+    <title>Val-d'Oise</title>
+    <polygon class="tile" points="137.97,30.68 152.73,39.20 152.73,56.25 137.97,64.77 123.21,56.25 123.21,39.20" aria-label="Val-d'Oise"/>
+    <text class="label" x="137.97" y="47.73">VD</text>
+  </g>
+  <g class="state" data-state="EEL">
+    <title>Eure-et-Loir</title>
+    <polygon class="tile" points="137.97,81.82 152.73,90.34 152.73,107.39 137.97,115.91 123.21,107.39 123.21,90.34" aria-label="Eure-et-Loir"/>
+    <text class="label" x="137.97" y="98.86">EEL</text>
+  </g>
+  <g class="state" data-state="IEL">
+    <title>Indre-et-Loire</title>
+    <polygon class="tile" points="137.97,132.96 152.73,141.48 152.73,158.52 137.97,167.05 123.21,158.52 123.21,141.48" aria-label="Indre-et-Loire"/>
+    <text class="label" x="137.97" y="150.00">IEL</text>
+  </g>
+  <g class="state" data-state="HV">
+    <title>Haute-Vienne</title>
+    <polygon class="tile" points="137.97,184.09 152.73,192.62 152.73,209.66 137.97,218.18 123.21,209.66 123.21,192.62" aria-label="Haute-Vienne"/>
+    <text class="label" x="137.97" y="201.14">HV</text>
+  </g>
+  <g class="state" data-state="TEG">
+    <title>Tarn-et-Garonne</title>
+    <polygon class="tile" points="137.97,235.23 152.73,243.75 152.73,260.80 137.97,269.32 123.21,260.80 123.21,243.75" aria-label="Tarn-et-Garonne"/>
+    <text class="label" x="137.97" y="252.27">TEG</text>
+  </g>
+  <g class="state" data-state="ARI">
+    <title>Ariège</title>
+    <polygon class="tile" points="137.97,286.37 152.73,294.89 152.73,311.93 137.97,320.46 123.21,311.93 123.21,294.89" aria-label="Ariège"/>
+    <text class="label" x="137.97" y="303.41">ARI</text>
+  </g>
+  <g class="state" data-state="YVE">
+    <title>Yvelines</title>
+    <polygon class="tile" points="123.21,56.25 137.97,64.77 137.97,81.82 123.21,90.34 108.45,81.82 108.45,64.77" aria-label="Yvelines"/>
+    <text class="label" x="123.21" y="73.30">YVE</text>
+  </g>
+  <g class="state" data-state="SAR">
+    <title>Sarthe</title>
+    <polygon class="tile" points="123.21,107.39 137.97,115.91 137.97,132.96 123.21,141.48 108.45,132.96 108.45,115.91" aria-label="Sarthe"/>
+    <text class="label" x="123.21" y="124.43">SAR</text>
+  </g>
+  <g class="state" data-state="VIE">
+    <title>Vienne</title>
+    <polygon class="tile" points="123.21,158.52 137.97,167.05 137.97,184.09 123.21,192.62 108.45,184.09 108.45,167.05" aria-label="Vienne"/>
+    <text class="label" x="123.21" y="175.57">VIE</text>
+  </g>
+  <g class="state" data-state="DOR">
+    <title>Dordogne</title>
+    <polygon class="tile" points="123.21,209.66 137.97,218.18 137.97,235.23 123.21,243.75 108.45,235.23 108.45,218.18" aria-label="Dordogne"/>
+    <text class="label" x="123.21" y="226.71">DOR</text>
+  </g>
+  <g class="state" data-state="GER">
+    <title>Gers</title>
+    <polygon class="tile" points="123.21,260.80 137.97,269.32 137.97,286.37 123.21,294.89 108.45,286.37 108.45,269.32" aria-label="Gers"/>
+    <text class="label" x="123.21" y="277.84">GER</text>
+  </g>
+  <g class="state" data-state="EUR">
+    <title>Eure</title>
+    <polygon class="tile" points="108.45,30.68 123.21,39.20 123.21,56.25 108.45,64.77 93.69,56.25 93.69,39.20" aria-label="Eure"/>
+    <text class="label" x="108.45" y="47.73">EUR</text>
+  </g>
+  <g class="state" data-state="ORN">
+    <title>Orne</title>
+    <polygon class="tile" points="108.45,81.82 123.21,90.34 123.21,107.39 108.45,115.91 93.69,107.39 93.69,90.34" aria-label="Orne"/>
+    <text class="label" x="108.45" y="98.86">ORN</text>
+  </g>
+  <g class="state" data-state="DS">
+    <title>Deux-Sèvres</title>
+    <polygon class="tile" points="108.45,132.96 123.21,141.48 123.21,158.52 108.45,167.05 93.69,158.52 93.69,141.48" aria-label="Deux-Sèvres"/>
+    <text class="label" x="108.45" y="150.00">DS</text>
+  </g>
+  <g class="state" data-state="CHA">
+    <title>Charente</title>
+    <polygon class="tile" points="108.45,184.09 123.21,192.62 123.21,209.66 108.45,218.18 93.69,209.66 93.69,192.62" aria-label="Charente"/>
+    <text class="label" x="108.45" y="201.14">CHA</text>
+  </g>
+  <g class="state" data-state="LEG">
+    <title>Lot-et-Garonne</title>
+    <polygon class="tile" points="108.45,235.23 123.21,243.75 123.21,260.80 108.45,269.32 93.69,260.80 93.69,243.75" aria-label="Lot-et-Garonne"/>
+    <text class="label" x="108.45" y="252.27">LEG</text>
+  </g>
+  <g class="state" data-state="HP">
+    <title>Hautes-Pyrénées</title>
+    <polygon class="tile" points="108.45,286.37 123.21,294.89 123.21,311.93 108.45,320.46 93.69,311.93 93.69,294.89" aria-label="Hautes-Pyrénées"/>
+    <text class="label" x="108.45" y="303.41">HP</text>
+  </g>
+  <g class="state" data-state="CAL">
+    <title>Calvados</title>
+    <polygon class="tile" points="93.69,56.25 108.45,64.77 108.45,81.82 93.69,90.34 78.92,81.82 78.92,64.77" aria-label="Calvados"/>
+    <text class="label" x="93.69" y="73.30">CAL</text>
+  </g>
+  <g class="state" data-state="MEL">
+    <title>Maine-et-Loire</title>
+    <polygon class="tile" points="93.69,107.39 108.45,115.91 108.45,132.96 93.69,141.48 78.92,132.96 78.92,115.91" aria-label="Maine-et-Loire"/>
+    <text class="label" x="93.69" y="124.43">MEL</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Charente-Maritime</title>
+    <polygon class="tile" points="93.69,158.52 108.45,167.05 108.45,184.09 93.69,192.62 78.92,184.09 78.92,167.05" aria-label="Charente-Maritime"/>
+    <text class="label" x="93.69" y="175.57">CM</text>
+  </g>
+  <g class="state" data-state="GIR">
+    <title>Gironde</title>
+    <polygon class="tile" points="93.69,209.66 108.45,218.18 108.45,235.23 93.69,243.75 78.92,235.23 78.92,218.18" aria-label="Gironde"/>
+    <text class="label" x="93.69" y="226.71">GIR</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Pyrénées-Atlantiques</title>
+    <polygon class="tile" points="93.69,260.80 108.45,269.32 108.45,286.37 93.69,294.89 78.92,286.37 78.92,269.32" aria-label="Pyrénées-Atlantiques"/>
+    <text class="label" x="93.69" y="277.84">PA</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Seine-Maritime</title>
+    <polygon class="tile" points="78.92,30.68 93.69,39.20 93.69,56.25 78.92,64.77 64.16,56.25 64.16,39.20" aria-label="Seine-Maritime"/>
+    <text class="label" x="78.92" y="47.73">SM</text>
+  </g>
+  <g class="state" data-state="MAY">
+    <title>Mayenne</title>
+    <polygon class="tile" points="78.92,81.82 93.69,90.34 93.69,107.39 78.92,115.91 64.16,107.39 64.16,90.34" aria-label="Mayenne"/>
+    <text class="label" x="78.92" y="98.86">MAY</text>
+  </g>
+  <g class="state" data-state="VEN">
+    <title>Vendée</title>
+    <polygon class="tile" points="78.92,132.96 93.69,141.48 93.69,158.52 78.92,167.05 64.16,158.52 64.16,141.48" aria-label="Vendée"/>
+    <text class="label" x="78.92" y="150.00">VEN</text>
+  </g>
+  <g class="state" data-state="LAN">
+    <title>Landes</title>
+    <polygon class="tile" points="78.92,235.23 93.69,243.75 93.69,260.80 78.92,269.32 64.16,260.80 64.16,243.75" aria-label="Landes"/>
+    <text class="label" x="78.92" y="252.27">LAN</text>
+  </g>
+  <g class="state" data-state="MAN">
+    <title>Manche</title>
+    <polygon class="tile" points="64.16,56.25 78.92,64.77 78.92,81.82 64.16,90.34 49.40,81.82 49.40,64.77" aria-label="Manche"/>
+    <text class="label" x="64.16" y="73.30">MAN</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Loire-Atlantique</title>
+    <polygon class="tile" points="64.16,107.39 78.92,115.91 78.92,132.96 64.16,141.48 49.40,132.96 49.40,115.91" aria-label="Loire-Atlantique"/>
+    <text class="label" x="64.16" y="124.43">LA</text>
+  </g>
+  <g class="state" data-state="GF">
+    <title>Guyane française</title>
+    <polygon class="tile inset" points="64.16,311.93 78.92,320.46 78.92,337.50 64.16,346.03 49.40,337.50 49.40,320.46" aria-label="Guyane française"/>
+    <text class="label" x="64.16" y="328.98">GF</text>
+  </g>
+  <g class="state" data-state="IEV">
+    <title>Ille-et-Vilaine</title>
+    <polygon class="tile" points="49.40,81.82 64.16,90.34 64.16,107.39 49.40,115.91 34.64,107.39 34.64,90.34" aria-label="Ille-et-Vilaine"/>
+    <text class="label" x="49.40" y="98.86">IEV</text>
+  </g>
+  <g class="state" data-state="CD">
+    <title>Côtes-d'Armor</title>
+    <polygon class="tile" points="34.64,56.25 49.40,64.77 49.40,81.82 34.64,90.34 19.88,81.82 19.88,64.77" aria-label="Côtes-d'Armor"/>
+    <text class="label" x="34.64" y="73.30">CD</text>
+  </g>
+  <g class="state" data-state="MOR">
+    <title>Morbihan</title>
+    <polygon class="tile" points="34.64,107.39 49.40,115.91 49.40,132.96 34.64,141.48 19.88,132.96 19.88,115.91" aria-label="Morbihan"/>
+    <text class="label" x="34.64" y="124.43">MOR</text>
+  </g>
+  <g class="state" data-state="GP">
+    <title>Guadeloupe</title>
+    <polygon class="tile inset" points="34.64,260.80 49.40,269.32 49.40,286.37 34.64,294.89 19.88,286.37 19.88,269.32" aria-label="Guadeloupe"/>
+    <text class="label" x="34.64" y="277.84">GP</text>
+  </g>
+  <g class="state" data-state="MQ">
+    <title>Martinique</title>
+    <polygon class="tile inset" points="34.64,209.66 49.40,218.18 49.40,235.23 34.64,243.75 19.88,235.23 19.88,218.18" aria-label="Martinique"/>
+    <text class="label" x="34.64" y="226.71">MQ</text>
+  </g>
+  <g class="state" data-state="FIN">
+    <title>Finistère</title>
+    <polygon class="tile" points="19.88,81.82 34.64,90.34 34.64,107.39 19.88,115.91 5.11,107.39 5.11,90.34" aria-label="Finistère"/>
+    <text class="label" x="19.88" y="98.86">FIN</text>
+  </g>
+</svg>

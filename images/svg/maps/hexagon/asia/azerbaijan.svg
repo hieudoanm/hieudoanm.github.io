@@ -1,0 +1,401 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364.80 313.14" width="364.80" height="313.14" role="img" aria-labelledby="azerbaijan-title azerbaijan-desc">
+  <title id="azerbaijan-title">Azerbaijan hex map</title>
+  <desc id="azerbaijan-desc">Hexagon map with 78 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.39; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 6.89 4.92; }
+    .label { fill: #52525b; font: 600 5.57px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="BA">
+    <title>Bakı</title>
+    <polygon class="tile" points="345.68,127.88 359.88,136.08 359.88,152.47 345.68,160.67 331.48,152.47 331.48,136.08" aria-label="Bakı"/>
+    <text class="label" x="345.68" y="144.28">BA</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Sumqayıt</title>
+    <polygon class="tile" points="331.48,103.29 345.68,111.49 345.68,127.88 331.48,136.08 317.28,127.88 317.28,111.49" aria-label="Sumqayıt"/>
+    <text class="label" x="331.48" y="119.68">SM</text>
+  </g>
+  <g class="state" data-state="XIZ">
+    <title>Xizı</title>
+    <polygon class="tile" points="317.28,78.70 331.48,86.89 331.48,103.29 317.28,111.49 303.09,103.29 303.09,86.89" aria-label="Xizı"/>
+    <text class="label" x="317.28" y="95.09">XIZ</text>
+  </g>
+  <g class="state" data-state="ABS">
+    <title>Abşeron</title>
+    <polygon class="tile" points="317.28,127.88 331.48,136.08 331.48,152.47 317.28,160.67 303.09,152.47 303.09,136.08" aria-label="Abşeron"/>
+    <text class="label" x="317.28" y="144.28">ABS</text>
+  </g>
+  <g class="state" data-state="NE">
+    <title>Lankaran</title>
+    <polygon class="tile" points="317.28,177.07 331.48,185.26 331.48,201.66 317.28,209.86 303.09,201.66 303.09,185.26" aria-label="Lankaran"/>
+    <text class="label" x="317.28" y="193.46">NE</text>
+  </g>
+  <g class="state" data-state="SIY">
+    <title>Siyəzən</title>
+    <polygon class="tile" points="303.09,54.10 317.28,62.30 317.28,78.70 303.09,86.89 288.89,78.70 288.89,62.30" aria-label="Siyəzən"/>
+    <text class="label" x="303.09" y="70.50">SIY</text>
+  </g>
+  <g class="state" data-state="QOB">
+    <title>Qobustan</title>
+    <polygon class="tile" points="303.09,103.29 317.28,111.49 317.28,127.88 303.09,136.08 288.89,127.88 288.89,111.49" aria-label="Qobustan"/>
+    <text class="label" x="303.09" y="119.68">QOB</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Shirvan</title>
+    <polygon class="tile" points="303.09,152.47 317.28,160.67 317.28,177.07 303.09,185.26 288.89,177.07 288.89,160.67" aria-label="Shirvan"/>
+    <text class="label" x="303.09" y="168.87">SR</text>
+  </g>
+  <g class="state" data-state="NEF">
+    <title>Neftçala</title>
+    <polygon class="tile" points="303.09,201.66 317.28,209.86 317.28,226.25 303.09,234.45 288.89,226.25 288.89,209.86" aria-label="Neftçala"/>
+    <text class="label" x="303.09" y="218.05">NEF</text>
+  </g>
+  <g class="state" data-state="XAC">
+    <title>Xaçmaz</title>
+    <polygon class="tile" points="288.89,29.51 303.09,37.71 303.09,54.10 288.89,62.30 274.69,54.10 274.69,37.71" aria-label="Xaçmaz"/>
+    <text class="label" x="288.89" y="45.91">XAC</text>
+  </g>
+  <g class="state" data-state="SMI">
+    <title>Şamaxı</title>
+    <polygon class="tile" points="288.89,78.70 303.09,86.89 303.09,103.29 288.89,111.49 274.69,103.29 274.69,86.89" aria-label="Şamaxı"/>
+    <text class="label" x="288.89" y="95.09">SMI</text>
+  </g>
+  <g class="state" data-state="HAC">
+    <title>Hajigabul</title>
+    <polygon class="tile" points="288.89,127.88 303.09,136.08 303.09,152.47 288.89,160.67 274.69,152.47 274.69,136.08" aria-label="Hajigabul"/>
+    <text class="label" x="288.89" y="144.28">HAC</text>
+  </g>
+  <g class="state" data-state="SAL">
+    <title>Salyan</title>
+    <polygon class="tile" points="288.89,177.07 303.09,185.26 303.09,201.66 288.89,209.86 274.69,201.66 274.69,185.26" aria-label="Salyan"/>
+    <text class="label" x="288.89" y="193.46">SAL</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Lankaran</title>
+    <polygon class="tile" points="288.89,226.25 303.09,234.45 303.09,250.84 288.89,259.04 274.69,250.84 274.69,234.45" aria-label="Lankaran"/>
+    <text class="label" x="288.89" y="242.65">LA</text>
+  </g>
+  <g class="state" data-state="SBN">
+    <title>Dəvəçi</title>
+    <polygon class="tile" points="274.69,54.10 288.89,62.30 288.89,78.70 274.69,86.89 260.49,78.70 260.49,62.30" aria-label="Dəvəçi"/>
+    <text class="label" x="274.69" y="70.50">SBN</text>
+  </g>
+  <g class="state" data-state="AGU">
+    <title>Ağsu</title>
+    <polygon class="tile" points="274.69,103.29 288.89,111.49 288.89,127.88 274.69,136.08 260.49,127.88 260.49,111.49" aria-label="Ağsu"/>
+    <text class="label" x="274.69" y="119.68">AGU</text>
+  </g>
+  <g class="state" data-state="SAB">
+    <title>Sabirabad</title>
+    <polygon class="tile" points="274.69,152.47 288.89,160.67 288.89,177.07 274.69,185.26 260.49,177.07 260.49,160.67" aria-label="Sabirabad"/>
+    <text class="label" x="274.69" y="168.87">SAB</text>
+  </g>
+  <g class="state" data-state="MAS">
+    <title>Masallı</title>
+    <polygon class="tile" points="274.69,201.66 288.89,209.86 288.89,226.25 274.69,234.45 260.49,226.25 260.49,209.86" aria-label="Masallı"/>
+    <text class="label" x="274.69" y="218.05">MAS</text>
+  </g>
+  <g class="state" data-state="AST">
+    <title>Astara</title>
+    <polygon class="tile" points="274.69,250.84 288.89,259.04 288.89,275.44 274.69,283.63 260.49,275.44 260.49,259.04" aria-label="Astara"/>
+    <text class="label" x="274.69" y="267.24">AST</text>
+  </g>
+  <g class="state" data-state="QUS">
+    <title>Qusar</title>
+    <polygon class="tile" points="260.49,29.51 274.69,37.71 274.69,54.10 260.49,62.30 246.29,54.10 246.29,37.71" aria-label="Qusar"/>
+    <text class="label" x="260.49" y="45.91">QUS</text>
+  </g>
+  <g class="state" data-state="ISM">
+    <title>İsmayıllı</title>
+    <polygon class="tile" points="260.49,78.70 274.69,86.89 274.69,103.29 260.49,111.49 246.29,103.29 246.29,86.89" aria-label="İsmayıllı"/>
+    <text class="label" x="260.49" y="95.09">ISM</text>
+  </g>
+  <g class="state" data-state="KUR">
+    <title>Kürdəmir</title>
+    <polygon class="tile" points="260.49,127.88 274.69,136.08 274.69,152.47 260.49,160.67 246.29,152.47 246.29,136.08" aria-label="Kürdəmir"/>
+    <text class="label" x="260.49" y="144.28">KUR</text>
+  </g>
+  <g class="state" data-state="BIL">
+    <title>Biləsuvar</title>
+    <polygon class="tile" points="260.49,177.07 274.69,185.26 274.69,201.66 260.49,209.86 246.29,201.66 246.29,185.26" aria-label="Biləsuvar"/>
+    <text class="label" x="260.49" y="193.46">BIL</text>
+  </g>
+  <g class="state" data-state="YAR">
+    <title>Yardımlı</title>
+    <polygon class="tile" points="260.49,226.25 274.69,234.45 274.69,250.84 260.49,259.04 246.29,250.84 246.29,234.45" aria-label="Yardımlı"/>
+    <text class="label" x="260.49" y="242.65">YAR</text>
+  </g>
+  <g class="state" data-state="QBA">
+    <title>Quba</title>
+    <polygon class="tile" points="246.29,54.10 260.49,62.30 260.49,78.70 246.29,86.89 232.09,78.70 232.09,62.30" aria-label="Quba"/>
+    <text class="label" x="246.29" y="70.50">QBA</text>
+  </g>
+  <g class="state" data-state="GOY">
+    <title>Göyçay</title>
+    <polygon class="tile" points="246.29,103.29 260.49,111.49 260.49,127.88 246.29,136.08 232.09,127.88 232.09,111.49" aria-label="Göyçay"/>
+    <text class="label" x="246.29" y="119.68">GOY</text>
+  </g>
+  <g class="state" data-state="SAT">
+    <title>Saatlı</title>
+    <polygon class="tile" points="246.29,152.47 260.49,160.67 260.49,177.07 246.29,185.26 232.09,177.07 232.09,160.67" aria-label="Saatlı"/>
+    <text class="label" x="246.29" y="168.87">SAT</text>
+  </g>
+  <g class="state" data-state="CAL">
+    <title>Cəlilabad</title>
+    <polygon class="tile" points="246.29,201.66 260.49,209.86 260.49,226.25 246.29,234.45 232.09,226.25 232.09,209.86" aria-label="Cəlilabad"/>
+    <text class="label" x="246.29" y="218.05">CAL</text>
+  </g>
+  <g class="state" data-state="LER">
+    <title>Lerik</title>
+    <polygon class="tile" points="246.29,250.84 260.49,259.04 260.49,275.44 246.29,283.63 232.09,275.44 232.09,259.04" aria-label="Lerik"/>
+    <text class="label" x="246.29" y="267.24">LER</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Şəki</title>
+    <polygon class="tile" points="232.09,29.51 246.29,37.71 246.29,54.10 232.09,62.30 217.90,54.10 217.90,37.71" aria-label="Şəki"/>
+    <text class="label" x="232.09" y="45.91">SK</text>
+  </g>
+  <g class="state" data-state="QAB">
+    <title>Qəbələ</title>
+    <polygon class="tile" points="232.09,78.70 246.29,86.89 246.29,103.29 232.09,111.49 217.90,103.29 217.90,86.89" aria-label="Qəbələ"/>
+    <text class="label" x="232.09" y="95.09">QAB</text>
+  </g>
+  <g class="state" data-state="UCA">
+    <title>Ucar</title>
+    <polygon class="tile" points="232.09,127.88 246.29,136.08 246.29,152.47 232.09,160.67 217.90,152.47 217.90,136.08" aria-label="Ucar"/>
+    <text class="label" x="232.09" y="144.28">UCA</text>
+  </g>
+  <g class="state" data-state="IMI">
+    <title>İmişli</title>
+    <polygon class="tile" points="232.09,177.07 246.29,185.26 246.29,201.66 232.09,209.86 217.90,201.66 217.90,185.26" aria-label="İmişli"/>
+    <text class="label" x="232.09" y="193.46">IMI</text>
+  </g>
+  <g class="state" data-state="OGU">
+    <title>Oğuz</title>
+    <polygon class="tile" points="217.90,54.10 232.09,62.30 232.09,78.70 217.90,86.89 203.70,78.70 203.70,62.30" aria-label="Oğuz"/>
+    <text class="label" x="217.90" y="70.50">OGU</text>
+  </g>
+  <g class="state" data-state="AGS">
+    <title>Ağdaş</title>
+    <polygon class="tile" points="217.90,103.29 232.09,111.49 232.09,127.88 217.90,136.08 203.70,127.88 203.70,111.49" aria-label="Ağdaş"/>
+    <text class="label" x="217.90" y="119.68">AGS</text>
+  </g>
+  <g class="state" data-state="XA">
+    <title>Stepanakert</title>
+    <polygon class="tile" points="217.90,152.47 232.09,160.67 232.09,177.07 217.90,185.26 203.70,177.07 203.70,160.67" aria-label="Stepanakert"/>
+    <text class="label" x="217.90" y="168.87">XA</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Şəki</title>
+    <polygon class="tile" points="203.70,78.70 217.90,86.89 217.90,103.29 203.70,111.49 189.50,103.29 189.50,86.89" aria-label="Şəki"/>
+    <text class="label" x="203.70" y="95.09">SA</text>
+  </g>
+  <g class="state" data-state="ZAR">
+    <title>Zərdab</title>
+    <polygon class="tile" points="203.70,127.88 217.90,136.08 217.90,152.47 203.70,160.67 189.50,152.47 189.50,136.08" aria-label="Zərdab"/>
+    <text class="label" x="203.70" y="144.28">ZAR</text>
+  </g>
+  <g class="state" data-state="BEY">
+    <title>Beyləqan</title>
+    <polygon class="tile" points="203.70,177.07 217.90,185.26 217.90,201.66 203.70,209.86 189.50,201.66 189.50,185.26" aria-label="Beyləqan"/>
+    <text class="label" x="203.70" y="193.46">BEY</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Mingəçevir</title>
+    <polygon class="tile" points="189.50,54.10 203.70,62.30 203.70,78.70 189.50,86.89 175.30,78.70 175.30,62.30" aria-label="Mingəçevir"/>
+    <text class="label" x="189.50" y="70.50">MI</text>
+  </g>
+  <g class="state" data-state="YV">
+    <title>Yevlakh</title>
+    <polygon class="tile" points="189.50,103.29 203.70,111.49 203.70,127.88 189.50,136.08 175.30,127.88 175.30,111.49" aria-label="Yevlakh"/>
+    <text class="label" x="189.50" y="119.68">YV</text>
+  </g>
+  <g class="state" data-state="AGC">
+    <title>Ağcabədi</title>
+    <polygon class="tile" points="189.50,152.47 203.70,160.67 203.70,177.07 189.50,185.26 175.30,177.07 175.30,160.67" aria-label="Ağcabədi"/>
+    <text class="label" x="189.50" y="168.87">AGC</text>
+  </g>
+  <g class="state" data-state="FUZ">
+    <title>Füzuli</title>
+    <polygon class="tile" points="189.50,201.66 203.70,209.86 203.70,226.25 189.50,234.45 175.30,226.25 175.30,209.86" aria-label="Füzuli"/>
+    <text class="label" x="189.50" y="218.05">FUZ</text>
+  </g>
+  <g class="state" data-state="ZAQ">
+    <title>Zaqatala</title>
+    <polygon class="tile" points="175.30,29.51 189.50,37.71 189.50,54.10 175.30,62.30 161.10,54.10 161.10,37.71" aria-label="Zaqatala"/>
+    <text class="label" x="175.30" y="45.91">ZAQ</text>
+  </g>
+  <g class="state" data-state="YEV">
+    <title>Yevlakh Rayon</title>
+    <polygon class="tile" points="175.30,78.70 189.50,86.89 189.50,103.29 175.30,111.49 161.10,103.29 161.10,86.89" aria-label="Yevlakh Rayon"/>
+    <text class="label" x="175.30" y="95.09">YEV</text>
+  </g>
+  <g class="state" data-state="BAR">
+    <title>Bərdə</title>
+    <polygon class="tile" points="175.30,127.88 189.50,136.08 189.50,152.47 175.30,160.67 161.10,152.47 161.10,136.08" aria-label="Bərdə"/>
+    <text class="label" x="175.30" y="144.28">BAR</text>
+  </g>
+  <g class="state" data-state="XVD">
+    <title>Xocavənd</title>
+    <polygon class="tile" points="175.30,177.07 189.50,185.26 189.50,201.66 175.30,209.86 161.10,201.66 161.10,185.26" aria-label="Xocavənd"/>
+    <text class="label" x="175.30" y="193.46">XVD</text>
+  </g>
+  <g class="state" data-state="CAB">
+    <title>Cəbrayıl</title>
+    <polygon class="tile" points="175.30,226.25 189.50,234.45 189.50,250.84 175.30,259.04 161.10,250.84 161.10,234.45" aria-label="Cəbrayıl"/>
+    <text class="label" x="175.30" y="242.65">CAB</text>
+  </g>
+  <g class="state" data-state="QAX">
+    <title>Qax</title>
+    <polygon class="tile" points="161.10,54.10 175.30,62.30 175.30,78.70 161.10,86.89 146.90,78.70 146.90,62.30" aria-label="Qax"/>
+    <text class="label" x="161.10" y="70.50">QAX</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Naftalan</title>
+    <polygon class="tile" points="161.10,103.29 175.30,111.49 175.30,127.88 161.10,136.08 146.90,127.88 146.90,111.49" aria-label="Naftalan"/>
+    <text class="label" x="161.10" y="119.68">NA</text>
+  </g>
+  <g class="state" data-state="AGM">
+    <title>Ağdam</title>
+    <polygon class="tile" points="161.10,152.47 175.30,160.67 175.30,177.07 161.10,185.26 146.90,177.07 146.90,160.67" aria-label="Ağdam"/>
+    <text class="label" x="161.10" y="168.87">AGM</text>
+  </g>
+  <g class="state" data-state="QBI">
+    <title>Qubadli</title>
+    <polygon class="tile" points="161.10,201.66 175.30,209.86 175.30,226.25 161.10,234.45 146.90,226.25 146.90,209.86" aria-label="Qubadli"/>
+    <text class="label" x="161.10" y="218.05">QBI</text>
+  </g>
+  <g class="state" data-state="BAL">
+    <title>Balakən</title>
+    <polygon class="tile" points="146.90,29.51 161.10,37.71 161.10,54.10 146.90,62.30 132.70,54.10 132.70,37.71" aria-label="Balakən"/>
+    <text class="label" x="146.90" y="45.91">BAL</text>
+  </g>
+  <g class="state" data-state="GOR">
+    <title>Goranboy</title>
+    <polygon class="tile" points="146.90,78.70 161.10,86.89 161.10,103.29 146.90,111.49 132.70,103.29 132.70,86.89" aria-label="Goranboy"/>
+    <text class="label" x="146.90" y="95.09">GOR</text>
+  </g>
+  <g class="state" data-state="TAR">
+    <title>Tərtər</title>
+    <polygon class="tile" points="146.90,127.88 161.10,136.08 161.10,152.47 146.90,160.67 132.70,152.47 132.70,136.08" aria-label="Tərtər"/>
+    <text class="label" x="146.90" y="144.28">TAR</text>
+  </g>
+  <g class="state" data-state="SUS">
+    <title>Şuşa</title>
+    <polygon class="tile" points="146.90,177.07 161.10,185.26 161.10,201.66 146.90,209.86 132.70,201.66 132.70,185.26" aria-label="Şuşa"/>
+    <text class="label" x="146.90" y="193.46">SUS</text>
+  </g>
+  <g class="state" data-state="ZAN">
+    <title>Zəngilan</title>
+    <polygon class="tile" points="146.90,226.25 161.10,234.45 161.10,250.84 146.90,259.04 132.70,250.84 132.70,234.45" aria-label="Zəngilan"/>
+    <text class="label" x="146.90" y="242.65">ZAN</text>
+  </g>
+  <g class="state" data-state="ORD">
+    <title>Ordubad</title>
+    <polygon class="tile inset" points="146.90,275.44 161.10,283.63 161.10,300.03 146.90,308.23 132.70,300.03 132.70,283.63" aria-label="Ordubad"/>
+    <text class="label" x="146.90" y="291.83">ORD</text>
+  </g>
+  <g class="state" data-state="SMX">
+    <title>Samux</title>
+    <polygon class="tile" points="132.70,54.10 146.90,62.30 146.90,78.70 132.70,86.89 118.51,78.70 118.51,62.30" aria-label="Samux"/>
+    <text class="label" x="132.70" y="70.50">SMX</text>
+  </g>
+  <g class="state" data-state="GAD">
+    <title>Gədəbəy</title>
+    <polygon class="tile" points="132.70,103.29 146.90,111.49 146.90,127.88 132.70,136.08 118.51,127.88 118.51,111.49" aria-label="Gədəbəy"/>
+    <text class="label" x="132.70" y="119.68">GAD</text>
+  </g>
+  <g class="state" data-state="XCI">
+    <title>Xocalı</title>
+    <polygon class="tile" points="132.70,152.47 146.90,160.67 146.90,177.07 132.70,185.26 118.51,177.07 118.51,160.67" aria-label="Xocalı"/>
+    <text class="label" x="132.70" y="168.87">XCI</text>
+  </g>
+  <g class="state" data-state="LAN">
+    <title>Lankaran</title>
+    <polygon class="tile" points="132.70,201.66 146.90,209.86 146.90,226.25 132.70,234.45 118.51,226.25 118.51,209.86" aria-label="Lankaran"/>
+    <text class="label" x="132.70" y="218.05">LAN</text>
+  </g>
+  <g class="state" data-state="SKR">
+    <title>Şəmkir</title>
+    <polygon class="tile" points="118.51,78.70 132.70,86.89 132.70,103.29 118.51,111.49 104.31,103.29 104.31,86.89" aria-label="Şəmkir"/>
+    <text class="label" x="118.51" y="95.09">SKR</text>
+  </g>
+  <g class="state" data-state="KAL">
+    <title>Kəlbəcər</title>
+    <polygon class="tile" points="118.51,127.88 132.70,136.08 132.70,152.47 118.51,160.67 104.31,152.47 104.31,136.08" aria-label="Kəlbəcər"/>
+    <text class="label" x="118.51" y="144.28">KAL</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>Şuşa</title>
+    <polygon class="tile" points="118.51,177.07 132.70,185.26 132.70,201.66 118.51,209.86 104.31,201.66 104.31,185.26" aria-label="Şuşa"/>
+    <text class="label" x="118.51" y="193.46">SU</text>
+  </g>
+  <g class="state" data-state="TOV">
+    <title>Tovuz</title>
+    <polygon class="tile" points="104.31,54.10 118.51,62.30 118.51,78.70 104.31,86.89 90.11,78.70 90.11,62.30" aria-label="Tovuz"/>
+    <text class="label" x="104.31" y="70.50">TOV</text>
+  </g>
+  <g class="state" data-state="DAS">
+    <title>Daşkəsən</title>
+    <polygon class="tile" points="104.31,103.29 118.51,111.49 118.51,127.88 104.31,136.08 90.11,127.88 90.11,111.49" aria-label="Daşkəsən"/>
+    <text class="label" x="104.31" y="119.68">DAS</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Gəncə</title>
+    <polygon class="tile" points="104.31,152.47 118.51,160.67 118.51,177.07 104.31,185.26 90.11,177.07 90.11,160.67" aria-label="Gəncə"/>
+    <text class="label" x="104.31" y="168.87">GA</text>
+  </g>
+  <g class="state" data-state="CUL">
+    <title>Culfa</title>
+    <polygon class="tile inset" points="104.31,250.84 118.51,259.04 118.51,275.44 104.31,283.63 90.11,275.44 90.11,259.04" aria-label="Culfa"/>
+    <text class="label" x="104.31" y="267.24">CUL</text>
+  </g>
+  <g class="state" data-state="SAD">
+    <title>Sədərək</title>
+    <polygon class="tile inset" points="104.31,4.92 118.51,13.12 118.51,29.51 104.31,37.71 90.11,29.51 90.11,13.12" aria-label="Sədərək"/>
+    <text class="label" x="104.31" y="21.31">SAD</text>
+  </g>
+  <g class="state" data-state="AGA">
+    <title>Ağstafa</title>
+    <polygon class="tile" points="90.11,78.70 104.31,86.89 104.31,103.29 90.11,111.49 75.91,103.29 75.91,86.89" aria-label="Ağstafa"/>
+    <text class="label" x="90.11" y="95.09">AGA</text>
+  </g>
+  <g class="state" data-state="GYG">
+    <title>Xanlar</title>
+    <polygon class="tile" points="90.11,127.88 104.31,136.08 104.31,152.47 90.11,160.67 75.91,152.47 75.91,136.08" aria-label="Xanlar"/>
+    <text class="label" x="90.11" y="144.28">GYG</text>
+  </g>
+  <g class="state" data-state="QAZ">
+    <title>Qazax</title>
+    <polygon class="tile" points="75.91,54.10 90.11,62.30 90.11,78.70 75.91,86.89 61.71,78.70 61.71,62.30" aria-label="Qazax"/>
+    <text class="label" x="75.91" y="70.50">QAZ</text>
+  </g>
+  <g class="state" data-state="BAB">
+    <title>Babək</title>
+    <polygon class="tile inset" points="75.91,201.66 90.11,209.86 90.11,226.25 75.91,234.45 61.71,226.25 61.71,209.86" aria-label="Babək"/>
+    <text class="label" x="75.91" y="218.05">BAB</text>
+  </g>
+  <g class="state" data-state="SAH">
+    <title>Şahbuz</title>
+    <polygon class="tile inset" points="47.51,152.47 61.71,160.67 61.71,177.07 47.51,185.26 33.32,177.07 33.32,160.67" aria-label="Şahbuz"/>
+    <text class="label" x="47.51" y="168.87">SAH</text>
+  </g>
+  <g class="state" data-state="NX">
+    <title>Naxçıvan</title>
+    <polygon class="tile inset" points="47.51,103.29 61.71,111.49 61.71,127.88 47.51,136.08 33.32,127.88 33.32,111.49" aria-label="Naxçıvan"/>
+    <text class="label" x="47.51" y="119.68">NX</text>
+  </g>
+  <g class="state" data-state="KAN">
+    <title>Kangarli</title>
+    <polygon class="tile inset" points="47.51,4.92 61.71,13.12 61.71,29.51 47.51,37.71 33.32,29.51 33.32,13.12" aria-label="Kangarli"/>
+    <text class="label" x="47.51" y="21.31">KAN</text>
+  </g>
+  <g class="state" data-state="SAR">
+    <title>Şərur</title>
+    <polygon class="tile inset" points="19.12,54.10 33.32,62.30 33.32,78.70 19.12,86.89 4.92,78.70 4.92,62.30" aria-label="Şərur"/>
+    <text class="label" x="19.12" y="70.50">SAR</text>
+  </g>
+</svg>

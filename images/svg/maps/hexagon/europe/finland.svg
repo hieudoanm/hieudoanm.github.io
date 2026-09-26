@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 292.40" width="314.85" height="292.40" role="img" aria-labelledby="finland-title finland-desc">
+  <title id="finland-title">Finland hex map</title>
+  <desc id="finland-desc">Hexagon map with 18 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="NK">
+    <title>North Karelia</title>
+    <polygon class="tile" points="275.20,61.20 304.65,78.20 304.65,112.20 275.20,129.20 245.76,112.20 245.76,78.20" aria-label="North Karelia"/>
+    <text class="label" x="275.20" y="95.20">NK</text>
+  </g>
+  <g class="state" data-state="KAI">
+    <title>Kainuu</title>
+    <polygon class="tile" points="245.76,10.20 275.20,27.20 275.20,61.20 245.76,78.20 216.31,61.20 216.31,27.20" aria-label="Kainuu"/>
+    <text class="label" x="245.76" y="44.20">KAI</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Southern Savonia</title>
+    <polygon class="tile" points="245.76,112.20 275.20,129.20 275.20,163.20 245.76,180.20 216.31,163.20 216.31,129.20" aria-label="Southern Savonia"/>
+    <text class="label" x="245.76" y="146.20">SS</text>
+  </g>
+  <g class="state" data-state="NS">
+    <title>Northern Savonia</title>
+    <polygon class="tile" points="216.31,61.20 245.76,78.20 245.76,112.20 216.31,129.20 186.87,112.20 186.87,78.20" aria-label="Northern Savonia"/>
+    <text class="label" x="216.31" y="95.20">NS</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>South Karelia</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="South Karelia"/>
+    <text class="label" x="216.31" y="197.20">SK</text>
+  </g>
+  <g class="state" data-state="NO">
+    <title>Northern Ostrobothnia</title>
+    <polygon class="tile" points="186.87,10.20 216.31,27.20 216.31,61.20 186.87,78.20 157.42,61.20 157.42,27.20" aria-label="Northern Ostrobothnia"/>
+    <text class="label" x="186.87" y="44.20">NO</text>
+  </g>
+  <g class="state" data-state="CF">
+    <title>Central Finland</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Central Finland"/>
+    <text class="label" x="186.87" y="146.20">CF</text>
+  </g>
+  <g class="state" data-state="KYM">
+    <title>Kymenlaakso</title>
+    <polygon class="tile" points="186.87,214.20 216.31,231.20 216.31,265.20 186.87,282.20 157.42,265.20 157.42,231.20" aria-label="Kymenlaakso"/>
+    <text class="label" x="186.87" y="248.20">KYM</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Central Ostrobothnia</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Central Ostrobothnia"/>
+    <text class="label" x="157.42" y="95.20">CO</text>
+  </g>
+  <g class="state" data-state="PH">
+    <title>Päijät-Häme</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Päijät-Häme"/>
+    <text class="label" x="157.42" y="197.20">PH</text>
+  </g>
+  <g class="state" data-state="LAP">
+    <title>Lapland</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Lapland"/>
+    <text class="label" x="127.98" y="44.20">LAP</text>
+  </g>
+  <g class="state" data-state="PIR">
+    <title>Pirkanmaa</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Pirkanmaa"/>
+    <text class="label" x="127.98" y="146.20">PIR</text>
+  </g>
+  <g class="state" data-state="UUS">
+    <title>Uusimaa</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Uusimaa"/>
+    <text class="label" x="127.98" y="248.20">UUS</text>
+  </g>
+  <g class="state" data-state="OST">
+    <title>Ostrobothnia</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Ostrobothnia"/>
+    <text class="label" x="98.53" y="95.20">OST</text>
+  </g>
+  <g class="state" data-state="TP">
+    <title>Tavastia Proper</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Tavastia Proper"/>
+    <text class="label" x="98.53" y="197.20">TP</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Southern Ostrobothnia</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Southern Ostrobothnia"/>
+    <text class="label" x="69.09" y="146.20">SO</text>
+  </g>
+  <g class="state" data-state="FP">
+    <title>Finland Proper</title>
+    <polygon class="tile" points="69.09,214.20 98.53,231.20 98.53,265.20 69.09,282.20 39.64,265.20 39.64,231.20" aria-label="Finland Proper"/>
+    <text class="label" x="69.09" y="248.20">FP</text>
+  </g>
+  <g class="state" data-state="SAT">
+    <title>Satakunta</title>
+    <polygon class="tile" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Satakunta"/>
+    <text class="label" x="39.64" y="197.20">SAT</text>
+  </g>
+</svg>

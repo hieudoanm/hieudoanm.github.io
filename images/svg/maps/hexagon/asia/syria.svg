@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 241.40" width="314.85" height="241.40" role="img" aria-labelledby="syria-title syria-desc">
+  <title id="syria-title">Syria hex map</title>
+  <desc id="syria-desc">Hexagon map with 15 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="HA">
+    <title>Hasaka (Al Haksa)</title>
+    <polygon class="tile" points="275.20,10.20 304.65,27.20 304.65,61.20 275.20,78.20 245.76,61.20 245.76,27.20" aria-label="Hasaka (Al Haksa)"/>
+    <text class="label" x="275.20" y="44.20">HA</text>
+  </g>
+  <g class="state" data-state="DY">
+    <title>Dayr Az Zawr</title>
+    <polygon class="tile" points="245.76,61.20 275.20,78.20 275.20,112.20 245.76,129.20 216.31,112.20 216.31,78.20" aria-label="Dayr Az Zawr"/>
+    <text class="label" x="245.76" y="95.20">DY</text>
+  </g>
+  <g class="state" data-state="RA">
+    <title>Ar Raqqah</title>
+    <polygon class="tile" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Ar Raqqah"/>
+    <text class="label" x="216.31" y="44.20">RA</text>
+  </g>
+  <g class="state" data-state="HI">
+    <title>Homs (Hims)</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Homs (Hims)"/>
+    <text class="label" x="216.31" y="146.20">HI</text>
+  </g>
+  <g class="state" data-state="HM">
+    <title>Hamah</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Hamah"/>
+    <text class="label" x="186.87" y="95.20">HM</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>As Suwayda'</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="As Suwayda'"/>
+    <text class="label" x="186.87" y="197.20">SU</text>
+  </g>
+  <g class="state" data-state="HL">
+    <title>Aleppo</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Aleppo"/>
+    <text class="label" x="157.42" y="44.20">HL</text>
+  </g>
+  <g class="state" data-state="RD">
+    <title>Rif Dimashq</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Rif Dimashq"/>
+    <text class="label" x="157.42" y="146.20">RD</text>
+  </g>
+  <g class="state" data-state="ID">
+    <title>Idlib</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Idlib"/>
+    <text class="label" x="127.98" y="95.20">ID</text>
+  </g>
+  <g class="state" data-state="DR">
+    <title>Dar`a</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Dar`a"/>
+    <text class="label" x="127.98" y="197.20">DR</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Lattakia</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Lattakia"/>
+    <text class="label" x="98.53" y="44.20">LA</text>
+  </g>
+  <g class="state" data-state="UND">
+    <title>UNDOF</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="UNDOF"/>
+    <text class="label" x="98.53" y="146.20">UND</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Tartus</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Tartus"/>
+    <text class="label" x="69.09" y="95.20">TA</text>
+  </g>
+  <g class="state" data-state="QU">
+    <title>Quneitra</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="Quneitra"/>
+    <text class="label" x="69.09" y="197.20">QU</text>
+  </g>
+  <g class="state" data-state="DI">
+    <title>Damascus</title>
+    <polygon class="tile" points="39.64,112.20 69.09,129.20 69.09,163.20 39.64,180.20 10.20,163.20 10.20,129.20" aria-label="Damascus"/>
+    <text class="label" x="39.64" y="146.20">DI</text>
+  </g>
+</svg>

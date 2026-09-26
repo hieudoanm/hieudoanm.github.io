@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.63 238.38" width="361.63" height="238.38" role="img" aria-labelledby="mexico-title mexico-desc">
+  <title id="mexico-title">Mexico hex map</title>
+  <desc id="mexico-desc">Hexagon map with 32 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.01; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 9.91 7.08; }
+    .label { fill: #52525b; font: 600 8.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="ROO">
+    <title>Quintana Roo</title>
+    <polygon class="tile" points="334.11,148.69 354.55,160.49 354.55,184.09 334.11,195.89 313.67,184.09 313.67,160.49" aria-label="Quintana Roo"/>
+    <text class="label" x="334.11" y="172.29">ROO</text>
+  </g>
+  <g class="state" data-state="YUC">
+    <title>Yucatán</title>
+    <polygon class="tile" points="313.67,113.29 334.11,125.09 334.11,148.69 313.67,160.49 293.23,148.69 293.23,125.09" aria-label="Yucatán"/>
+    <text class="label" x="313.67" y="136.89">YUC</text>
+  </g>
+  <g class="state" data-state="TAB">
+    <title>Tabasco</title>
+    <polygon class="tile" points="313.67,184.09 334.11,195.89 334.11,219.49 313.67,231.30 293.23,219.49 293.23,195.89" aria-label="Tabasco"/>
+    <text class="label" x="313.67" y="207.69">TAB</text>
+  </g>
+  <g class="state" data-state="CAM">
+    <title>Campeche</title>
+    <polygon class="tile" points="293.23,148.69 313.67,160.49 313.67,184.09 293.23,195.89 272.79,184.09 272.79,160.49" aria-label="Campeche"/>
+    <text class="label" x="293.23" y="172.29">CAM</text>
+  </g>
+  <g class="state" data-state="DIF">
+    <title>Distrito Federal</title>
+    <polygon class="tile" points="272.79,113.29 293.23,125.09 293.23,148.69 272.79,160.49 252.36,148.69 252.36,125.09" aria-label="Distrito Federal"/>
+    <text class="label" x="272.79" y="136.89">DIF</text>
+  </g>
+  <g class="state" data-state="CHP">
+    <title>Chiapas</title>
+    <polygon class="tile" points="272.79,184.09 293.23,195.89 293.23,219.49 272.79,231.30 252.36,219.49 252.36,195.89" aria-label="Chiapas"/>
+    <text class="label" x="272.79" y="207.69">CHP</text>
+  </g>
+  <g class="state" data-state="VER">
+    <title>Veracruz</title>
+    <polygon class="tile" points="252.36,148.69 272.79,160.49 272.79,184.09 252.36,195.89 231.92,184.09 231.92,160.49" aria-label="Veracruz"/>
+    <text class="label" x="252.36" y="172.29">VER</text>
+  </g>
+  <g class="state" data-state="HID">
+    <title>Hidalgo</title>
+    <polygon class="tile" points="231.92,113.29 252.36,125.09 252.36,148.69 231.92,160.49 211.48,148.69 211.48,125.09" aria-label="Hidalgo"/>
+    <text class="label" x="231.92" y="136.89">HID</text>
+  </g>
+  <g class="state" data-state="OAX">
+    <title>Oaxaca</title>
+    <polygon class="tile" points="231.92,184.09 252.36,195.89 252.36,219.49 231.92,231.30 211.48,219.49 211.48,195.89" aria-label="Oaxaca"/>
+    <text class="label" x="231.92" y="207.69">OAX</text>
+  </g>
+  <g class="state" data-state="QUE">
+    <title>Querétaro</title>
+    <polygon class="tile" points="211.48,77.89 231.92,89.69 231.92,113.29 211.48,125.09 191.04,113.29 191.04,89.69" aria-label="Querétaro"/>
+    <text class="label" x="211.48" y="101.49">QUE</text>
+  </g>
+  <g class="state" data-state="PUE">
+    <title>Puebla</title>
+    <polygon class="tile" points="211.48,148.69 231.92,160.49 231.92,184.09 211.48,195.89 191.04,184.09 191.04,160.49" aria-label="Puebla"/>
+    <text class="label" x="211.48" y="172.29">PUE</text>
+  </g>
+  <g class="state" data-state="TAM">
+    <title>Tamaulipas</title>
+    <polygon class="tile" points="191.04,42.48 211.48,54.28 211.48,77.89 191.04,89.69 170.60,77.89 170.60,54.28" aria-label="Tamaulipas"/>
+    <text class="label" x="191.04" y="66.08">TAM</text>
+  </g>
+  <g class="state" data-state="TLA">
+    <title>Tlaxcala</title>
+    <polygon class="tile" points="191.04,113.29 211.48,125.09 211.48,148.69 191.04,160.49 170.60,148.69 170.60,125.09" aria-label="Tlaxcala"/>
+    <text class="label" x="191.04" y="136.89">TLA</text>
+  </g>
+  <g class="state" data-state="MOR">
+    <title>Morelos</title>
+    <polygon class="tile" points="191.04,184.09 211.48,195.89 211.48,219.49 191.04,231.30 170.60,219.49 170.60,195.89" aria-label="Morelos"/>
+    <text class="label" x="191.04" y="207.69">MOR</text>
+  </g>
+  <g class="state" data-state="SLP">
+    <title>San Luis Potosí</title>
+    <polygon class="tile" points="170.60,77.89 191.04,89.69 191.04,113.29 170.60,125.09 150.16,113.29 150.16,89.69" aria-label="San Luis Potosí"/>
+    <text class="label" x="170.60" y="101.49">SLP</text>
+  </g>
+  <g class="state" data-state="MEX">
+    <title>México</title>
+    <polygon class="tile" points="170.60,148.69 191.04,160.49 191.04,184.09 170.60,195.89 150.16,184.09 150.16,160.49" aria-label="México"/>
+    <text class="label" x="170.60" y="172.29">MEX</text>
+  </g>
+  <g class="state" data-state="NLE">
+    <title>Nuevo León</title>
+    <polygon class="tile" points="150.16,42.48 170.60,54.28 170.60,77.89 150.16,89.69 129.72,77.89 129.72,54.28" aria-label="Nuevo León"/>
+    <text class="label" x="150.16" y="66.08">NLE</text>
+  </g>
+  <g class="state" data-state="GUA">
+    <title>Guanajuato</title>
+    <polygon class="tile" points="150.16,113.29 170.60,125.09 170.60,148.69 150.16,160.49 129.72,148.69 129.72,125.09" aria-label="Guanajuato"/>
+    <text class="label" x="150.16" y="136.89">GUA</text>
+  </g>
+  <g class="state" data-state="GRO">
+    <title>Guerrero</title>
+    <polygon class="tile" points="150.16,184.09 170.60,195.89 170.60,219.49 150.16,231.30 129.72,219.49 129.72,195.89" aria-label="Guerrero"/>
+    <text class="label" x="150.16" y="207.69">GRO</text>
+  </g>
+  <g class="state" data-state="COA">
+    <title>Coahuila</title>
+    <polygon class="tile" points="129.72,7.08 150.16,18.88 150.16,42.48 129.72,54.28 109.28,42.48 109.28,18.88" aria-label="Coahuila"/>
+    <text class="label" x="129.72" y="30.68">COA</text>
+  </g>
+  <g class="state" data-state="ZAC">
+    <title>Zacatecas</title>
+    <polygon class="tile" points="129.72,77.89 150.16,89.69 150.16,113.29 129.72,125.09 109.28,113.29 109.28,89.69" aria-label="Zacatecas"/>
+    <text class="label" x="129.72" y="101.49">ZAC</text>
+  </g>
+  <g class="state" data-state="MIC">
+    <title>Michoacán</title>
+    <polygon class="tile" points="129.72,148.69 150.16,160.49 150.16,184.09 129.72,195.89 109.28,184.09 109.28,160.49" aria-label="Michoacán"/>
+    <text class="label" x="129.72" y="172.29">MIC</text>
+  </g>
+  <g class="state" data-state="DUR">
+    <title>Durango</title>
+    <polygon class="tile" points="109.28,42.48 129.72,54.28 129.72,77.89 109.28,89.69 88.84,77.89 88.84,54.28" aria-label="Durango"/>
+    <text class="label" x="109.28" y="66.08">DUR</text>
+  </g>
+  <g class="state" data-state="JAL">
+    <title>Jalisco</title>
+    <polygon class="tile" points="109.28,113.29 129.72,125.09 129.72,148.69 109.28,160.49 88.84,148.69 88.84,125.09" aria-label="Jalisco"/>
+    <text class="label" x="109.28" y="136.89">JAL</text>
+  </g>
+  <g class="state" data-state="CHH">
+    <title>Chihuahua</title>
+    <polygon class="tile" points="88.84,7.08 109.28,18.88 109.28,42.48 88.84,54.28 68.40,42.48 68.40,18.88" aria-label="Chihuahua"/>
+    <text class="label" x="88.84" y="30.68">CHH</text>
+  </g>
+  <g class="state" data-state="NAY">
+    <title>Nayarit</title>
+    <polygon class="tile" points="88.84,77.89 109.28,89.69 109.28,113.29 88.84,125.09 68.40,113.29 68.40,89.69" aria-label="Nayarit"/>
+    <text class="label" x="88.84" y="101.49">NAY</text>
+  </g>
+  <g class="state" data-state="COL">
+    <title>Colima</title>
+    <polygon class="tile" points="88.84,148.69 109.28,160.49 109.28,184.09 88.84,195.89 68.40,184.09 68.40,160.49" aria-label="Colima"/>
+    <text class="label" x="88.84" y="172.29">COL</text>
+  </g>
+  <g class="state" data-state="SIN">
+    <title>Sinaloa</title>
+    <polygon class="tile" points="68.40,42.48 88.84,54.28 88.84,77.89 68.40,89.69 47.96,77.89 47.96,54.28" aria-label="Sinaloa"/>
+    <text class="label" x="68.40" y="66.08">SIN</text>
+  </g>
+  <g class="state" data-state="AGU">
+    <title>Aguascalientes</title>
+    <polygon class="tile" points="68.40,113.29 88.84,125.09 88.84,148.69 68.40,160.49 47.96,148.69 47.96,125.09" aria-label="Aguascalientes"/>
+    <text class="label" x="68.40" y="136.89">AGU</text>
+  </g>
+  <g class="state" data-state="SON">
+    <title>Sonora</title>
+    <polygon class="tile" points="47.96,7.08 68.40,18.88 68.40,42.48 47.96,54.28 27.52,42.48 27.52,18.88" aria-label="Sonora"/>
+    <text class="label" x="47.96" y="30.68">SON</text>
+  </g>
+  <g class="state" data-state="BCS">
+    <title>Baja California Sur</title>
+    <polygon class="tile" points="47.96,77.89 68.40,89.69 68.40,113.29 47.96,125.09 27.52,113.29 27.52,89.69" aria-label="Baja California Sur"/>
+    <text class="label" x="47.96" y="101.49">BCS</text>
+  </g>
+  <g class="state" data-state="BCN">
+    <title>Baja California</title>
+    <polygon class="tile" points="27.52,42.48 47.96,54.28 47.96,77.89 27.52,89.69 7.08,77.89 7.08,54.28" aria-label="Baja California"/>
+    <text class="label" x="27.52" y="66.08">BCN</text>
+  </g>
+</svg>

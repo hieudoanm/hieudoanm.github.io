@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.03 289.70" width="361.03" height="289.70" role="img" aria-labelledby="romania-title romania-desc">
+  <title id="romania-title">Romania hex map</title>
+  <desc id="romania-desc">Hexagon map with 42 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.12; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 10.49 7.49; }
+    .label { fill: #52525b; font: 600 8.49px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="TL">
+    <title>Tulcea</title>
+    <polygon class="tile" points="331.91,157.33 353.54,169.82 353.54,194.80 331.91,207.28 310.28,194.80 310.28,169.82" aria-label="Tulcea"/>
+    <text class="label" x="331.91" y="182.31">TL</text>
+  </g>
+  <g class="state" data-state="GL">
+    <title>Galati</title>
+    <polygon class="tile" points="310.28,119.87 331.91,132.36 331.91,157.33 310.28,169.82 288.65,157.33 288.65,132.36" aria-label="Galati"/>
+    <text class="label" x="310.28" y="144.85">GL</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Constanta</title>
+    <polygon class="tile" points="310.28,194.80 331.91,207.28 331.91,232.26 310.28,244.74 288.65,232.26 288.65,207.28" aria-label="Constanta"/>
+    <text class="label" x="310.28" y="219.77">CT</text>
+  </g>
+  <g class="state" data-state="VS">
+    <title>Vaslui</title>
+    <polygon class="tile" points="288.65,82.41 310.28,94.90 310.28,119.87 288.65,132.36 267.03,119.87 267.03,94.90" aria-label="Vaslui"/>
+    <text class="label" x="288.65" y="107.39">VS</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Braila</title>
+    <polygon class="tile" points="288.65,157.33 310.28,169.82 310.28,194.80 288.65,207.28 267.03,194.80 267.03,169.82" aria-label="Braila"/>
+    <text class="label" x="288.65" y="182.31">BR</text>
+  </g>
+  <g class="state" data-state="CL">
+    <title>Calarasi</title>
+    <polygon class="tile" points="288.65,232.26 310.28,244.74 310.28,269.72 288.65,282.20 267.03,269.72 267.03,244.74" aria-label="Calarasi"/>
+    <text class="label" x="288.65" y="257.23">CL</text>
+  </g>
+  <g class="state" data-state="IS">
+    <title>Iasi</title>
+    <polygon class="tile" points="267.03,44.95 288.65,57.44 288.65,82.41 267.03,94.90 245.40,82.41 245.40,57.44" aria-label="Iasi"/>
+    <text class="label" x="267.03" y="69.93">IS</text>
+  </g>
+  <g class="state" data-state="VN">
+    <title>Vrancea</title>
+    <polygon class="tile" points="267.03,119.87 288.65,132.36 288.65,157.33 267.03,169.82 245.40,157.33 245.40,132.36" aria-label="Vrancea"/>
+    <text class="label" x="267.03" y="144.85">VN</text>
+  </g>
+  <g class="state" data-state="IL">
+    <title>Ialomita</title>
+    <polygon class="tile" points="267.03,194.80 288.65,207.28 288.65,232.26 267.03,244.74 245.40,232.26 245.40,207.28" aria-label="Ialomita"/>
+    <text class="label" x="267.03" y="219.77">IL</text>
+  </g>
+  <g class="state" data-state="BT">
+    <title>Botosani</title>
+    <polygon class="tile" points="245.40,7.49 267.03,19.98 267.03,44.95 245.40,57.44 223.77,44.95 223.77,19.98" aria-label="Botosani"/>
+    <text class="label" x="245.40" y="32.47">BT</text>
+  </g>
+  <g class="state" data-state="BC">
+    <title>Bacau</title>
+    <polygon class="tile" points="245.40,82.41 267.03,94.90 267.03,119.87 245.40,132.36 223.77,119.87 223.77,94.90" aria-label="Bacau"/>
+    <text class="label" x="245.40" y="107.39">BC</text>
+  </g>
+  <g class="state" data-state="BZ">
+    <title>Buzau</title>
+    <polygon class="tile" points="245.40,157.33 267.03,169.82 267.03,194.80 245.40,207.28 223.77,194.80 223.77,169.82" aria-label="Buzau"/>
+    <text class="label" x="245.40" y="182.31">BZ</text>
+  </g>
+  <g class="state" data-state="BI">
+    <title>Bucharest</title>
+    <polygon class="tile" points="245.40,232.26 267.03,244.74 267.03,269.72 245.40,282.20 223.77,269.72 223.77,244.74" aria-label="Bucharest"/>
+    <text class="label" x="245.40" y="257.23">BI</text>
+  </g>
+  <g class="state" data-state="NT">
+    <title>Neamt</title>
+    <polygon class="tile" points="223.77,44.95 245.40,57.44 245.40,82.41 223.77,94.90 202.14,82.41 202.14,57.44" aria-label="Neamt"/>
+    <text class="label" x="223.77" y="69.93">NT</text>
+  </g>
+  <g class="state" data-state="CV">
+    <title>Covasna</title>
+    <polygon class="tile" points="223.77,119.87 245.40,132.36 245.40,157.33 223.77,169.82 202.14,157.33 202.14,132.36" aria-label="Covasna"/>
+    <text class="label" x="223.77" y="144.85">CV</text>
+  </g>
+  <g class="state" data-state="IF">
+    <title>Ilfov</title>
+    <polygon class="tile" points="223.77,194.80 245.40,207.28 245.40,232.26 223.77,244.74 202.14,232.26 202.14,207.28" aria-label="Ilfov"/>
+    <text class="label" x="223.77" y="219.77">IF</text>
+  </g>
+  <g class="state" data-state="SV">
+    <title>Suceava</title>
+    <polygon class="tile" points="202.14,7.49 223.77,19.98 223.77,44.95 202.14,57.44 180.52,44.95 180.52,19.98" aria-label="Suceava"/>
+    <text class="label" x="202.14" y="32.47">SV</text>
+  </g>
+  <g class="state" data-state="HR">
+    <title>Harghita</title>
+    <polygon class="tile" points="202.14,82.41 223.77,94.90 223.77,119.87 202.14,132.36 180.52,119.87 180.52,94.90" aria-label="Harghita"/>
+    <text class="label" x="202.14" y="107.39">HR</text>
+  </g>
+  <g class="state" data-state="PH">
+    <title>Prahova</title>
+    <polygon class="tile" points="202.14,157.33 223.77,169.82 223.77,194.80 202.14,207.28 180.52,194.80 180.52,169.82" aria-label="Prahova"/>
+    <text class="label" x="202.14" y="182.31">PH</text>
+  </g>
+  <g class="state" data-state="GR">
+    <title>Giurgiu</title>
+    <polygon class="tile" points="202.14,232.26 223.77,244.74 223.77,269.72 202.14,282.20 180.52,269.72 180.52,244.74" aria-label="Giurgiu"/>
+    <text class="label" x="202.14" y="257.23">GR</text>
+  </g>
+  <g class="state" data-state="BN">
+    <title>Bistrita-Nasaud</title>
+    <polygon class="tile" points="180.52,44.95 202.14,57.44 202.14,82.41 180.52,94.90 158.89,82.41 158.89,57.44" aria-label="Bistrita-Nasaud"/>
+    <text class="label" x="180.52" y="69.93">BN</text>
+  </g>
+  <g class="state" data-state="BV">
+    <title>Brasov</title>
+    <polygon class="tile" points="180.52,119.87 202.14,132.36 202.14,157.33 180.52,169.82 158.89,157.33 158.89,132.36" aria-label="Brasov"/>
+    <text class="label" x="180.52" y="144.85">BV</text>
+  </g>
+  <g class="state" data-state="DB">
+    <title>Dâmbovita</title>
+    <polygon class="tile" points="180.52,194.80 202.14,207.28 202.14,232.26 180.52,244.74 158.89,232.26 158.89,207.28" aria-label="Dâmbovita"/>
+    <text class="label" x="180.52" y="219.77">DB</text>
+  </g>
+  <g class="state" data-state="MM">
+    <title>Maramures</title>
+    <polygon class="tile" points="158.89,7.49 180.52,19.98 180.52,44.95 158.89,57.44 137.26,44.95 137.26,19.98" aria-label="Maramures"/>
+    <text class="label" x="158.89" y="32.47">MM</text>
+  </g>
+  <g class="state" data-state="MS">
+    <title>Mures</title>
+    <polygon class="tile" points="158.89,82.41 180.52,94.90 180.52,119.87 158.89,132.36 137.26,119.87 137.26,94.90" aria-label="Mures"/>
+    <text class="label" x="158.89" y="107.39">MS</text>
+  </g>
+  <g class="state" data-state="AG">
+    <title>Arges</title>
+    <polygon class="tile" points="158.89,157.33 180.52,169.82 180.52,194.80 158.89,207.28 137.26,194.80 137.26,169.82" aria-label="Arges"/>
+    <text class="label" x="158.89" y="182.31">AG</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Teleorman</title>
+    <polygon class="tile" points="158.89,232.26 180.52,244.74 180.52,269.72 158.89,282.20 137.26,269.72 137.26,244.74" aria-label="Teleorman"/>
+    <text class="label" x="158.89" y="257.23">TR</text>
+  </g>
+  <g class="state" data-state="CJ">
+    <title>Cluj</title>
+    <polygon class="tile" points="137.26,44.95 158.89,57.44 158.89,82.41 137.26,94.90 115.63,82.41 115.63,57.44" aria-label="Cluj"/>
+    <text class="label" x="137.26" y="69.93">CJ</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Sibiu</title>
+    <polygon class="tile" points="137.26,119.87 158.89,132.36 158.89,157.33 137.26,169.82 115.63,157.33 115.63,132.36" aria-label="Sibiu"/>
+    <text class="label" x="137.26" y="144.85">SB</text>
+  </g>
+  <g class="state" data-state="OT">
+    <title>Olt</title>
+    <polygon class="tile" points="137.26,194.80 158.89,207.28 158.89,232.26 137.26,244.74 115.63,232.26 115.63,207.28" aria-label="Olt"/>
+    <text class="label" x="137.26" y="219.77">OT</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Satu Mare</title>
+    <polygon class="tile" points="115.63,7.49 137.26,19.98 137.26,44.95 115.63,57.44 94.00,44.95 94.00,19.98" aria-label="Satu Mare"/>
+    <text class="label" x="115.63" y="32.47">SM</text>
+  </g>
+  <g class="state" data-state="AB">
+    <title>Alba</title>
+    <polygon class="tile" points="115.63,82.41 137.26,94.90 137.26,119.87 115.63,132.36 94.00,119.87 94.00,94.90" aria-label="Alba"/>
+    <text class="label" x="115.63" y="107.39">AB</text>
+  </g>
+  <g class="state" data-state="VL">
+    <title>Vâlcea</title>
+    <polygon class="tile" points="115.63,157.33 137.26,169.82 137.26,194.80 115.63,207.28 94.00,194.80 94.00,169.82" aria-label="Vâlcea"/>
+    <text class="label" x="115.63" y="182.31">VL</text>
+  </g>
+  <g class="state" data-state="DJ">
+    <title>Dolj</title>
+    <polygon class="tile" points="115.63,232.26 137.26,244.74 137.26,269.72 115.63,282.20 94.00,269.72 94.00,244.74" aria-label="Dolj"/>
+    <text class="label" x="115.63" y="257.23">DJ</text>
+  </g>
+  <g class="state" data-state="SJ">
+    <title>Salaj</title>
+    <polygon class="tile" points="94.00,44.95 115.63,57.44 115.63,82.41 94.00,94.90 72.38,82.41 72.38,57.44" aria-label="Salaj"/>
+    <text class="label" x="94.00" y="69.93">SJ</text>
+  </g>
+  <g class="state" data-state="HD">
+    <title>Hunedoara</title>
+    <polygon class="tile" points="94.00,119.87 115.63,132.36 115.63,157.33 94.00,169.82 72.38,157.33 72.38,132.36" aria-label="Hunedoara"/>
+    <text class="label" x="94.00" y="144.85">HD</text>
+  </g>
+  <g class="state" data-state="MH">
+    <title>Mehedinti</title>
+    <polygon class="tile" points="94.00,194.80 115.63,207.28 115.63,232.26 94.00,244.74 72.38,232.26 72.38,207.28" aria-label="Mehedinti"/>
+    <text class="label" x="94.00" y="219.77">MH</text>
+  </g>
+  <g class="state" data-state="BH">
+    <title>Bihor</title>
+    <polygon class="tile" points="72.38,82.41 94.00,94.90 94.00,119.87 72.38,132.36 50.75,119.87 50.75,94.90" aria-label="Bihor"/>
+    <text class="label" x="72.38" y="107.39">BH</text>
+  </g>
+  <g class="state" data-state="GJ">
+    <title>Gorj</title>
+    <polygon class="tile" points="72.38,157.33 94.00,169.82 94.00,194.80 72.38,207.28 50.75,194.80 50.75,169.82" aria-label="Gorj"/>
+    <text class="label" x="72.38" y="182.31">GJ</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Arad</title>
+    <polygon class="tile" points="50.75,119.87 72.38,132.36 72.38,157.33 50.75,169.82 29.12,157.33 29.12,132.36" aria-label="Arad"/>
+    <text class="label" x="50.75" y="144.85">AR</text>
+  </g>
+  <g class="state" data-state="CS">
+    <title>Caras-Severin</title>
+    <polygon class="tile" points="50.75,194.80 72.38,207.28 72.38,232.26 50.75,244.74 29.12,232.26 29.12,207.28" aria-label="Caras-Severin"/>
+    <text class="label" x="50.75" y="219.77">CS</text>
+  </g>
+  <g class="state" data-state="TM">
+    <title>Timis</title>
+    <polygon class="tile" points="29.12,157.33 50.75,169.82 50.75,194.80 29.12,207.28 7.49,194.80 7.49,169.82" aria-label="Timis"/>
+    <text class="label" x="29.12" y="182.31">TM</text>
+  </g>
+</svg>

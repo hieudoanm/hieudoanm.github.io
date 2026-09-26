@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 231.05" width="357.71" height="231.05" role="img" aria-labelledby="estonia-title estonia-desc">
+  <title id="estonia-title">Estonia hex map</title>
+  <desc id="estonia-desc">Hexagon map with 15 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="IV">
+    <title>Ida-Viru</title>
+    <polygon class="tile" points="319.76,58.57 347.94,74.85 347.94,107.39 319.76,123.66 291.58,107.39 291.58,74.85" aria-label="Ida-Viru"/>
+    <text class="label" x="319.76" y="91.12">IV</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Põlva</title>
+    <polygon class="tile" points="319.76,156.20 347.94,172.47 347.94,205.01 319.76,221.28 291.58,205.01 291.58,172.47" aria-label="Põlva"/>
+    <text class="label" x="319.76" y="188.74">PL</text>
+  </g>
+  <g class="state" data-state="LV">
+    <title>Lääne-Viru</title>
+    <polygon class="tile" points="291.58,9.76 319.76,26.03 319.76,58.57 291.58,74.85 263.40,58.57 263.40,26.03" aria-label="Lääne-Viru"/>
+    <text class="label" x="291.58" y="42.30">LV</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Tartu</title>
+    <polygon class="tile" points="291.58,107.39 319.76,123.66 319.76,156.20 291.58,172.47 263.40,156.20 263.40,123.66" aria-label="Tartu"/>
+    <text class="label" x="291.58" y="139.93">TA</text>
+  </g>
+  <g class="state" data-state="JN">
+    <title>Jõgeva</title>
+    <polygon class="tile" points="263.40,58.57 291.58,74.85 291.58,107.39 263.40,123.66 235.22,107.39 235.22,74.85" aria-label="Jõgeva"/>
+    <text class="label" x="263.40" y="91.12">JN</text>
+  </g>
+  <g class="state" data-state="VG">
+    <title>Valga</title>
+    <polygon class="tile" points="263.40,156.20 291.58,172.47 291.58,205.01 263.40,221.28 235.22,205.01 235.22,172.47" aria-label="Valga"/>
+    <text class="label" x="263.40" y="188.74">VG</text>
+  </g>
+  <g class="state" data-state="JR">
+    <title>Järva</title>
+    <polygon class="tile" points="235.22,9.76 263.40,26.03 263.40,58.57 235.22,74.85 207.04,58.57 207.04,26.03" aria-label="Järva"/>
+    <text class="label" x="235.22" y="42.30">JR</text>
+  </g>
+  <g class="state" data-state="VD">
+    <title>Viljandi</title>
+    <polygon class="tile" points="235.22,107.39 263.40,123.66 263.40,156.20 235.22,172.47 207.04,156.20 207.04,123.66" aria-label="Viljandi"/>
+    <text class="label" x="235.22" y="139.93">VD</text>
+  </g>
+  <g class="state" data-state="RA">
+    <title>Rapla</title>
+    <polygon class="tile" points="207.04,58.57 235.22,74.85 235.22,107.39 207.04,123.66 178.85,107.39 178.85,74.85" aria-label="Rapla"/>
+    <text class="label" x="207.04" y="91.12">RA</text>
+  </g>
+  <g class="state" data-state="VR">
+    <title>Võru</title>
+    <polygon class="tile" points="207.04,156.20 235.22,172.47 235.22,205.01 207.04,221.28 178.85,205.01 178.85,172.47" aria-label="Võru"/>
+    <text class="label" x="207.04" y="188.74">VR</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Harju</title>
+    <polygon class="tile" points="178.85,9.76 207.04,26.03 207.04,58.57 178.85,74.85 150.67,58.57 150.67,26.03" aria-label="Harju"/>
+    <text class="label" x="178.85" y="42.30">HA</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Pärnu</title>
+    <polygon class="tile" points="178.85,107.39 207.04,123.66 207.04,156.20 178.85,172.47 150.67,156.20 150.67,123.66" aria-label="Pärnu"/>
+    <text class="label" x="178.85" y="139.93">PR</text>
+  </g>
+  <g class="state" data-state="LN">
+    <title>Lääne</title>
+    <polygon class="tile" points="150.67,58.57 178.85,74.85 178.85,107.39 150.67,123.66 122.49,107.39 122.49,74.85" aria-label="Lääne"/>
+    <text class="label" x="150.67" y="91.12">LN</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Saare</title>
+    <polygon class="tile inset" points="94.31,156.20 122.49,172.47 122.49,205.01 94.31,221.28 66.13,205.01 66.13,172.47" aria-label="Saare"/>
+    <text class="label" x="94.31" y="188.74">SA</text>
+  </g>
+  <g class="state" data-state="HI">
+    <title>Hiiu</title>
+    <polygon class="tile inset" points="37.94,58.57 66.13,74.85 66.13,107.39 37.94,123.66 9.76,107.39 9.76,74.85" aria-label="Hiiu"/>
+    <text class="label" x="37.94" y="91.12">HI</text>
+  </g>
+</svg>

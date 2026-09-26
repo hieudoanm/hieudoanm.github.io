@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.71 305.52" width="358.71" height="305.52" role="img" aria-labelledby="solomon-islands-title solomon-islands-desc">
+  <title id="solomon-islands-title">Solomon Islands hex map</title>
+  <desc id="solomon-islands-desc">Hexagon map with 10 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.57; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 12.70 9.07; }
+    .label { fill: #52525b; font: 600 10.28px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="TE">
+    <title>Temotu</title>
+    <polygon class="tile inset" points="323.44,145.20 349.64,160.32 349.64,190.57 323.44,205.70 297.24,190.57 297.24,160.32" aria-label="Temotu"/>
+    <text class="label" x="323.44" y="175.45">TE</text>
+  </g>
+  <g class="state" data-state="ML">
+    <title>Malaita</title>
+    <polygon class="tile inset" points="244.85,99.82 271.05,114.95 271.05,145.20 244.85,160.32 218.65,145.20 218.65,114.95" aria-label="Malaita"/>
+    <text class="label" x="244.85" y="130.07">ML</text>
+  </g>
+  <g class="state" data-state="MK">
+    <title>Makira</title>
+    <polygon class="tile inset" points="244.85,190.57 271.05,205.70 271.05,235.95 244.85,251.07 218.65,235.95 218.65,205.70" aria-label="Makira"/>
+    <text class="label" x="244.85" y="220.82">MK</text>
+  </g>
+  <g class="state" data-state="CHO">
+    <title>Choiseul</title>
+    <polygon class="tile inset" points="192.46,9.07 218.65,24.20 218.65,54.45 192.46,69.57 166.26,54.45 166.26,24.20" aria-label="Choiseul"/>
+    <text class="label" x="192.46" y="39.32">CHO</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Guadalcanal</title>
+    <polygon class="tile" points="166.26,145.20 192.46,160.32 192.46,190.57 166.26,205.70 140.06,190.57 140.06,160.32" aria-label="Guadalcanal"/>
+    <text class="label" x="166.26" y="175.45">GU</text>
+  </g>
+  <g class="state" data-state="RB">
+    <title>Rennell and Bellona</title>
+    <polygon class="tile inset" points="166.26,235.95 192.46,251.07 192.46,281.32 166.26,296.45 140.06,281.32 140.06,251.07" aria-label="Rennell and Bellona"/>
+    <text class="label" x="166.26" y="266.20">RB</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Capital Territory (Honiara)</title>
+    <polygon class="tile" points="140.06,99.82 166.26,114.95 166.26,145.20 140.06,160.32 113.86,145.20 113.86,114.95" aria-label="Capital Territory (Honiara)"/>
+    <text class="label" x="140.06" y="130.07">CT</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Central</title>
+    <polygon class="tile inset" points="87.67,9.07 113.86,24.20 113.86,54.45 87.67,69.57 61.47,54.45 61.47,24.20" aria-label="Central"/>
+    <text class="label" x="87.67" y="39.32">CE</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Western</title>
+    <polygon class="tile inset" points="87.67,190.57 113.86,205.70 113.86,235.95 87.67,251.07 61.47,235.95 61.47,205.70" aria-label="Western"/>
+    <text class="label" x="87.67" y="220.82">CH</text>
+  </g>
+  <g class="state" data-state="IS">
+    <title>Isabel</title>
+    <polygon class="tile inset" points="35.27,99.82 61.47,114.95 61.47,145.20 35.27,160.32 9.07,145.20 9.07,114.95" aria-label="Isabel"/>
+    <text class="label" x="35.27" y="130.07">IS</text>
+  </g>
+</svg>

@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.71 441.65" width="358.71" height="441.65" role="img" aria-labelledby="seychelles-title seychelles-desc">
+  <title id="seychelles-title">Seychelles hex map</title>
+  <desc id="seychelles-desc">Hexagon map with 26 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.57; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 12.70 9.07; }
+    .label { fill: #52525b; font: 600 10.28px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="BSA">
+    <title>Baie Sainte Anne</title>
+    <polygon class="tile inset" points="323.44,145.20 349.64,160.32 349.64,190.57 323.44,205.70 297.24,190.57 297.24,160.32" aria-label="Baie Sainte Anne"/>
+    <text class="label" x="323.44" y="175.45">BSA</text>
+  </g>
+  <g class="state" data-state="PLR">
+    <title>Pointe La Rue</title>
+    <polygon class="tile" points="271.05,235.95 297.24,251.07 297.24,281.32 271.05,296.45 244.85,281.32 244.85,251.07" aria-label="Pointe La Rue"/>
+    <text class="label" x="271.05" y="266.20">PLR</text>
+  </g>
+  <g class="state" data-state="AAP">
+    <title>Anse aux Pins</title>
+    <polygon class="tile" points="271.05,326.70 297.24,341.82 297.24,372.07 271.05,387.20 244.85,372.07 244.85,341.82" aria-label="Anse aux Pins"/>
+    <text class="label" x="271.05" y="356.95">AAP</text>
+  </g>
+  <g class="state" data-state="GP">
+    <title>Grand'Anse Praslin</title>
+    <polygon class="tile inset" points="271.05,54.45 297.24,69.57 297.24,99.82 271.05,114.95 244.85,99.82 244.85,69.57" aria-label="Grand'Anse Praslin"/>
+    <text class="label" x="271.05" y="84.70">GP</text>
+  </g>
+  <g class="state" data-state="RC">
+    <title>Roche Caïman</title>
+    <polygon class="tile" points="244.85,190.57 271.05,205.70 271.05,235.95 244.85,251.07 218.65,235.95 218.65,205.70" aria-label="Roche Caïman"/>
+    <text class="label" x="244.85" y="220.82">RC</text>
+  </g>
+  <g class="state" data-state="AC">
+    <title>Au Cap</title>
+    <polygon class="tile" points="244.85,281.32 271.05,296.45 271.05,326.70 244.85,341.82 218.65,326.70 218.65,296.45" aria-label="Au Cap"/>
+    <text class="label" x="244.85" y="311.57">AC</text>
+  </g>
+  <g class="state" data-state="TAK">
+    <title>Takamaka</title>
+    <polygon class="tile" points="244.85,372.07 271.05,387.20 271.05,417.45 244.85,432.57 218.65,417.45 218.65,387.20" aria-label="Takamaka"/>
+    <text class="label" x="244.85" y="402.32">TAK</text>
+  </g>
+  <g class="state" data-state="GLA">
+    <title>Glacis</title>
+    <polygon class="tile" points="218.65,145.20 244.85,160.32 244.85,190.57 218.65,205.70 192.46,190.57 192.46,160.32" aria-label="Glacis"/>
+    <text class="label" x="218.65" y="175.45">GLA</text>
+  </g>
+  <g class="state" data-state="CAS">
+    <title>Cascade</title>
+    <polygon class="tile" points="218.65,235.95 244.85,251.07 244.85,281.32 218.65,296.45 192.46,281.32 192.46,251.07" aria-label="Cascade"/>
+    <text class="label" x="218.65" y="266.20">CAS</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Anse Royale</title>
+    <polygon class="tile" points="218.65,326.70 244.85,341.82 244.85,372.07 218.65,387.20 192.46,372.07 192.46,341.82" aria-label="Anse Royale"/>
+    <text class="label" x="218.65" y="356.95">AR</text>
+  </g>
+  <g class="state" data-state="AE">
+    <title>Anse Etoile</title>
+    <polygon class="tile" points="192.46,99.82 218.65,114.95 218.65,145.20 192.46,160.32 166.26,145.20 166.26,114.95" aria-label="Anse Etoile"/>
+    <text class="label" x="192.46" y="130.07">AE</text>
+  </g>
+  <g class="state" data-state="LM">
+    <title>Les Mamelles</title>
+    <polygon class="tile" points="192.46,190.57 218.65,205.70 218.65,235.95 192.46,251.07 166.26,235.95 166.26,205.70" aria-label="Les Mamelles"/>
+    <text class="label" x="192.46" y="220.82">LM</text>
+  </g>
+  <g class="state" data-state="AB">
+    <title>Anse Boileau</title>
+    <polygon class="tile" points="192.46,281.32 218.65,296.45 218.65,326.70 192.46,341.82 166.26,326.70 166.26,296.45" aria-label="Anse Boileau"/>
+    <text class="label" x="192.46" y="311.57">AB</text>
+  </g>
+  <g class="state" data-state="LDAI">
+    <title>La Digue and Inner Islands</title>
+    <polygon class="tile inset" points="192.46,9.07 218.65,24.20 218.65,54.45 192.46,69.57 166.26,54.45 166.26,24.20" aria-label="La Digue and Inner Islands"/>
+    <text class="label" x="192.46" y="39.32">LDAI</text>
+  </g>
+  <g class="state" data-state="ER">
+    <title>English River</title>
+    <polygon class="tile" points="166.26,145.20 192.46,160.32 192.46,190.57 166.26,205.70 140.06,190.57 140.06,160.32" aria-label="English River"/>
+    <text class="label" x="166.26" y="175.45">ER</text>
+  </g>
+  <g class="state" data-state="GRA">
+    <title>Grand'Anse</title>
+    <polygon class="tile" points="166.26,235.95 192.46,251.07 192.46,281.32 166.26,296.45 140.06,281.32 140.06,251.07" aria-label="Grand'Anse"/>
+    <text class="label" x="166.26" y="266.20">GRA</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Baie Lazare</title>
+    <polygon class="tile" points="166.26,326.70 192.46,341.82 192.46,372.07 166.26,387.20 140.06,372.07 140.06,341.82" aria-label="Baie Lazare"/>
+    <text class="label" x="166.26" y="356.95">BL</text>
+  </g>
+  <g class="state" data-state="MB">
+    <title>Mont Buxton</title>
+    <polygon class="tile" points="140.06,99.82 166.26,114.95 166.26,145.20 140.06,160.32 113.86,145.20 113.86,114.95" aria-label="Mont Buxton"/>
+    <text class="label" x="140.06" y="130.07">MB</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bel Air</title>
+    <polygon class="tile" points="140.06,190.57 166.26,205.70 166.26,235.95 140.06,251.07 113.86,235.95 113.86,205.70" aria-label="Bel Air"/>
+    <text class="label" x="140.06" y="220.82">BA</text>
+  </g>
+  <g class="state" data-state="MF">
+    <title>Mont Fleuri</title>
+    <polygon class="tile" points="140.06,281.32 166.26,296.45 166.26,326.70 140.06,341.82 113.86,326.70 113.86,296.45" aria-label="Mont Fleuri"/>
+    <text class="label" x="140.06" y="311.57">MF</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Saint Louis</title>
+    <polygon class="tile" points="113.86,145.20 140.06,160.32 140.06,190.57 113.86,205.70 87.67,190.57 87.67,160.32" aria-label="Saint Louis"/>
+    <text class="label" x="113.86" y="175.45">SL</text>
+  </g>
+  <g class="state" data-state="PLA">
+    <title>Plaisance</title>
+    <polygon class="tile" points="113.86,235.95 140.06,251.07 140.06,281.32 113.86,296.45 87.67,281.32 87.67,251.07" aria-label="Plaisance"/>
+    <text class="label" x="113.86" y="266.20">PLA</text>
+  </g>
+  <g class="state" data-state="BV">
+    <title>Beau Vallon</title>
+    <polygon class="tile" points="87.67,99.82 113.86,114.95 113.86,145.20 87.67,160.32 61.47,145.20 61.47,114.95" aria-label="Beau Vallon"/>
+    <text class="label" x="87.67" y="130.07">BV</text>
+  </g>
+  <g class="state" data-state="PG">
+    <title>Port Glaud</title>
+    <polygon class="tile" points="87.67,190.57 113.86,205.70 113.86,235.95 87.67,251.07 61.47,235.95 61.47,205.70" aria-label="Port Glaud"/>
+    <text class="label" x="87.67" y="220.82">PG</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Bel Ombre</title>
+    <polygon class="tile" points="61.47,145.20 87.67,160.32 87.67,190.57 61.47,205.70 35.27,190.57 35.27,160.32" aria-label="Bel Ombre"/>
+    <text class="label" x="61.47" y="175.45">BO</text>
+  </g>
+  <g class="state" data-state="OI">
+    <title>Outer Islands</title>
+    <polygon class="tile inset" points="35.27,281.32 61.47,296.45 61.47,326.70 35.27,341.82 9.07,326.70 9.07,296.45" aria-label="Outer Islands"/>
+    <text class="label" x="35.27" y="311.57">OI</text>
+  </g>
+</svg>

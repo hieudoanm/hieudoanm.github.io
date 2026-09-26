@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.66 406.16" width="362.66" height="406.16" role="img" aria-labelledby="indonesia-title indonesia-desc">
+  <title id="indonesia-title">Indonesia hex map</title>
+  <desc id="indonesia-desc">Hexagon map with 33 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.81; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 8.93 6.38; }
+    .label { fill: #52525b; font: 600 7.23px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="KS">
+    <title>Kalimantan Selatan</title>
+    <polygon class="tile inset" points="337.86,229.66 356.28,240.29 356.28,261.56 337.86,272.19 319.45,261.56 319.45,240.29" aria-label="Kalimantan Selatan"/>
+    <text class="label" x="337.86" y="250.92">KS</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>Sulawesi Tenggara</title>
+    <polygon class="tile inset" points="337.86,165.87 356.28,176.50 356.28,197.76 337.86,208.39 319.45,197.76 319.45,176.50" aria-label="Sulawesi Tenggara"/>
+    <text class="label" x="337.86" y="187.13">SG</text>
+  </g>
+  <g class="state" data-state="NB">
+    <title>Nusa Tenggara Barat</title>
+    <polygon class="tile inset" points="337.86,293.45 356.28,304.09 356.28,325.35 337.86,335.98 319.45,325.35 319.45,304.09" aria-label="Nusa Tenggara Barat"/>
+    <text class="label" x="337.86" y="314.72">NB</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Sulawesi Barat</title>
+    <polygon class="tile inset" points="301.03,102.07 319.45,112.70 319.45,133.97 301.03,144.60 282.62,133.97 282.62,112.70" aria-label="Sulawesi Barat"/>
+    <text class="label" x="301.03" y="123.34">SR</text>
+  </g>
+  <g class="state" data-state="JB">
+    <title>Jawa Barat</title>
+    <polygon class="tile inset" points="282.62,261.56 301.03,272.19 301.03,293.45 282.62,304.09 264.20,293.45 264.20,272.19" aria-label="Jawa Barat"/>
+    <text class="label" x="282.62" y="282.82">JB</text>
+  </g>
+  <g class="state" data-state="BB">
+    <title>Bangka-Belitung</title>
+    <polygon class="tile inset" points="282.62,197.76 301.03,208.39 301.03,229.66 282.62,240.29 264.20,229.66 264.20,208.39" aria-label="Bangka-Belitung"/>
+    <text class="label" x="282.62" y="219.03">BB</text>
+  </g>
+  <g class="state" data-state="KI">
+    <title>Kalimantan Timur</title>
+    <polygon class="tile inset" points="282.62,325.35 301.03,335.98 301.03,357.25 282.62,367.88 264.20,357.25 264.20,335.98" aria-label="Kalimantan Timur"/>
+    <text class="label" x="282.62" y="346.62">KI</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Sulawesi Tengah</title>
+    <polygon class="tile inset" points="264.20,38.28 282.62,48.91 282.62,70.17 264.20,80.81 245.79,70.17 245.79,48.91" aria-label="Sulawesi Tengah"/>
+    <text class="label" x="264.20" y="59.54">ST</text>
+  </g>
+  <g class="state" data-state="JT">
+    <title>Jawa Tengah</title>
+    <polygon class="tile inset" points="245.79,133.97 264.20,144.60 264.20,165.87 245.79,176.50 227.37,165.87 227.37,144.60" aria-label="Jawa Tengah"/>
+    <text class="label" x="245.79" y="155.23">JT</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Lampung</title>
+    <polygon class="tile" points="227.37,229.66 245.79,240.29 245.79,261.56 227.37,272.19 208.95,261.56 208.95,240.29" aria-label="Lampung"/>
+    <text class="label" x="227.37" y="250.92">LA</text>
+  </g>
+  <g class="state" data-state="BT">
+    <title>Banten</title>
+    <polygon class="tile inset" points="227.37,293.45 245.79,304.09 245.79,325.35 227.37,335.98 208.95,325.35 208.95,304.09" aria-label="Banten"/>
+    <text class="label" x="227.37" y="314.72">BT</text>
+  </g>
+  <g class="state" data-state="NT">
+    <title>Nusa Tenggara Timur</title>
+    <polygon class="tile inset" points="227.37,357.25 245.79,367.88 245.79,389.15 227.37,399.78 208.95,389.15 208.95,367.88" aria-label="Nusa Tenggara Timur"/>
+    <text class="label" x="227.37" y="378.51">NT</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Sumatera Selatan</title>
+    <polygon class="tile" points="208.95,197.76 227.37,208.39 227.37,229.66 208.95,240.29 190.54,229.66 190.54,208.39" aria-label="Sumatera Selatan"/>
+    <text class="label" x="208.95" y="219.03">SS</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Kepulauan Riau</title>
+    <polygon class="tile inset" points="208.95,70.17 227.37,80.81 227.37,102.07 208.95,112.70 190.54,102.07 190.54,80.81" aria-label="Kepulauan Riau"/>
+    <text class="label" x="208.95" y="91.44">KR</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Sulawesi Utara</title>
+    <polygon class="tile inset" points="208.95,6.38 227.37,17.01 227.37,38.28 208.95,48.91 190.54,38.28 190.54,17.01" aria-label="Sulawesi Utara"/>
+    <text class="label" x="208.95" y="27.64">SA</text>
+  </g>
+  <g class="state" data-state="RI">
+    <title>Riau</title>
+    <polygon class="tile" points="190.54,165.87 208.95,176.50 208.95,197.76 190.54,208.39 172.12,197.76 172.12,176.50" aria-label="Riau"/>
+    <text class="label" x="190.54" y="187.13">RI</text>
+  </g>
+  <g class="state" data-state="BE">
+    <title>Bengkulu</title>
+    <polygon class="tile" points="190.54,229.66 208.95,240.29 208.95,261.56 190.54,272.19 172.12,261.56 172.12,240.29" aria-label="Bengkulu"/>
+    <text class="label" x="190.54" y="250.92">BE</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>Sumatera Utara</title>
+    <polygon class="tile" points="172.12,133.97 190.54,144.60 190.54,165.87 172.12,176.50 153.71,165.87 153.71,144.60" aria-label="Sumatera Utara"/>
+    <text class="label" x="172.12" y="155.23">SU</text>
+  </g>
+  <g class="state" data-state="JA">
+    <title>Jambi</title>
+    <polygon class="tile" points="172.12,197.76 190.54,208.39 190.54,229.66 172.12,240.29 153.71,229.66 153.71,208.39" aria-label="Jambi"/>
+    <text class="label" x="172.12" y="219.03">JA</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Sumatera Barat</title>
+    <polygon class="tile" points="153.71,165.87 172.12,176.50 172.12,197.76 153.71,208.39 135.29,197.76 135.29,176.50" aria-label="Sumatera Barat"/>
+    <text class="label" x="153.71" y="187.13">SB</text>
+  </g>
+  <g class="state" data-state="JK">
+    <title>Jakarta Raya</title>
+    <polygon class="tile inset" points="153.71,293.45 172.12,304.09 172.12,325.35 153.71,335.98 135.29,325.35 135.29,304.09" aria-label="Jakarta Raya"/>
+    <text class="label" x="153.71" y="314.72">JK</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Maluku</title>
+    <polygon class="tile inset" points="153.71,357.25 172.12,367.88 172.12,389.15 153.71,399.78 135.29,389.15 135.29,367.88" aria-label="Maluku"/>
+    <text class="label" x="153.71" y="378.51">MA</text>
+  </g>
+  <g class="state" data-state="AC">
+    <title>Aceh</title>
+    <polygon class="tile" points="135.29,133.97 153.71,144.60 153.71,165.87 135.29,176.50 116.87,165.87 116.87,144.60" aria-label="Aceh"/>
+    <text class="label" x="135.29" y="155.23">AC</text>
+  </g>
+  <g class="state" data-state="KB">
+    <title>Kalimantan Barat</title>
+    <polygon class="tile inset" points="135.29,70.17 153.71,80.81 153.71,102.07 135.29,112.70 116.87,102.07 116.87,80.81" aria-label="Kalimantan Barat"/>
+    <text class="label" x="135.29" y="91.44">KB</text>
+  </g>
+  <g class="state" data-state="GO">
+    <title>Gorontalo</title>
+    <polygon class="tile inset" points="135.29,6.38 153.71,17.01 153.71,38.28 135.29,48.91 116.87,38.28 116.87,17.01" aria-label="Gorontalo"/>
+    <text class="label" x="135.29" y="27.64">GO</text>
+  </g>
+  <g class="state" data-state="YO">
+    <title>Yogyakarta</title>
+    <polygon class="tile inset" points="116.87,229.66 135.29,240.29 135.29,261.56 116.87,272.19 98.46,261.56 98.46,240.29" aria-label="Yogyakarta"/>
+    <text class="label" x="116.87" y="250.92">YO</text>
+  </g>
+  <g class="state" data-state="MU">
+    <title>Maluku Utara</title>
+    <polygon class="tile inset" points="98.46,325.35 116.87,335.98 116.87,357.25 98.46,367.88 80.04,357.25 80.04,335.98" aria-label="Maluku Utara"/>
+    <text class="label" x="98.46" y="346.62">MU</text>
+  </g>
+  <g class="state" data-state="JI">
+    <title>Jawa Timur</title>
+    <polygon class="tile inset" points="80.04,165.87 98.46,176.50 98.46,197.76 80.04,208.39 61.63,197.76 61.63,176.50" aria-label="Jawa Timur"/>
+    <text class="label" x="80.04" y="187.13">JI</text>
+  </g>
+  <g class="state" data-state="KT">
+    <title>Kalimantan Tengah</title>
+    <polygon class="tile inset" points="80.04,102.07 98.46,112.70 98.46,133.97 80.04,144.60 61.63,133.97 61.63,112.70" aria-label="Kalimantan Tengah"/>
+    <text class="label" x="80.04" y="123.34">KT</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bali</title>
+    <polygon class="tile inset" points="80.04,38.28 98.46,48.91 98.46,70.17 80.04,80.81 61.63,70.17 61.63,48.91" aria-label="Bali"/>
+    <text class="label" x="80.04" y="59.54">BA</text>
+  </g>
+  <g class="state" data-state="PB">
+    <title>Papua Barat</title>
+    <polygon class="tile inset" points="61.63,261.56 80.04,272.19 80.04,293.45 61.63,304.09 43.21,293.45 43.21,272.19" aria-label="Papua Barat"/>
+    <text class="label" x="61.63" y="282.82">PB</text>
+  </g>
+  <g class="state" data-state="SN">
+    <title>Sulawesi Selatan</title>
+    <polygon class="tile inset" points="24.80,133.97 43.21,144.60 43.21,165.87 24.80,176.50 6.38,165.87 6.38,144.60" aria-label="Sulawesi Selatan"/>
+    <text class="label" x="24.80" y="155.23">SN</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Papua</title>
+    <polygon class="tile inset" points="24.80,70.17 43.21,80.81 43.21,102.07 24.80,112.70 6.38,102.07 6.38,80.81" aria-label="Papua"/>
+    <text class="label" x="24.80" y="91.44">PA</text>
+  </g>
+</svg>

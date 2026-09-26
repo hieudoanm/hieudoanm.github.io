@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.17 393.75" width="362.17" height="393.75" role="img" aria-labelledby="maldives-title maldives-desc">
+  <title id="maldives-title">Maldives hex map</title>
+  <desc id="maldives-desc">Hexagon map with 21 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.90; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 9.40 6.71; }
+    .label { fill: #52525b; font: 600 7.61px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="KAA">
+    <title>Kaafu</title>
+    <polygon class="tile inset" points="336.09,208.06 355.46,219.25 355.46,241.62 336.09,252.81 316.71,241.62 316.71,219.25" aria-label="Kaafu"/>
+    <text class="label" x="336.09" y="230.43">KAA</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Malé</title>
+    <polygon class="tile inset" points="297.34,140.95 316.71,152.13 316.71,174.50 297.34,185.69 277.96,174.50 277.96,152.13" aria-label="Malé"/>
+    <text class="label" x="297.34" y="163.32">MA</text>
+  </g>
+  <g class="state" data-state="LH">
+    <title>Lhaviyani</title>
+    <polygon class="tile inset" points="297.34,275.18 316.71,286.37 316.71,308.74 297.34,319.92 277.96,308.74 277.96,286.37" aria-label="Lhaviyani"/>
+    <text class="label" x="297.34" y="297.55">LH</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Gaafu Alifu</title>
+    <polygon class="tile inset" points="258.59,208.06 277.96,219.25 277.96,241.62 258.59,252.81 239.21,241.62 239.21,219.25" aria-label="Gaafu Alifu"/>
+    <text class="label" x="258.59" y="230.43">GA</text>
+  </g>
+  <g class="state" data-state="VAA">
+    <title>Vaavu</title>
+    <polygon class="tile inset" points="258.59,73.83 277.96,85.01 277.96,107.39 258.59,118.57 239.21,107.39 239.21,85.01" aria-label="Vaavu"/>
+    <text class="label" x="258.59" y="96.20">VAA</text>
+  </g>
+  <g class="state" data-state="NOO">
+    <title>Noonu</title>
+    <polygon class="tile inset" points="258.59,342.30 277.96,353.48 277.96,375.86 258.59,387.04 239.21,375.86 239.21,353.48" aria-label="Noonu"/>
+    <text class="label" x="258.59" y="364.67">NOO</text>
+  </g>
+  <g class="state" data-state="GN">
+    <title>Gnaviyani</title>
+    <polygon class="tile inset" points="219.84,140.95 239.21,152.13 239.21,174.50 219.84,185.69 200.46,174.50 200.46,152.13" aria-label="Gnaviyani"/>
+    <text class="label" x="219.84" y="163.32">GN</text>
+  </g>
+  <g class="state" data-state="TH">
+    <title>Thaa</title>
+    <polygon class="tile inset" points="219.84,275.18 239.21,286.37 239.21,308.74 219.84,319.92 200.46,308.74 200.46,286.37" aria-label="Thaa"/>
+    <text class="label" x="219.84" y="297.55">TH</text>
+  </g>
+  <g class="state" data-state="ADD">
+    <title>Addu</title>
+    <polygon class="tile" points="181.09,208.06 200.46,219.25 200.46,241.62 181.09,252.81 161.71,241.62 161.71,219.25" aria-label="Addu"/>
+    <text class="label" x="181.09" y="230.43">ADD</text>
+  </g>
+  <g class="state" data-state="MEE">
+    <title>Meemu</title>
+    <polygon class="tile inset" points="181.09,73.83 200.46,85.01 200.46,107.39 181.09,118.57 161.71,107.39 161.71,85.01" aria-label="Meemu"/>
+    <text class="label" x="181.09" y="96.20">MEE</text>
+  </g>
+  <g class="state" data-state="SH">
+    <title>Shaviyani</title>
+    <polygon class="tile inset" points="181.09,342.30 200.46,353.48 200.46,375.86 181.09,387.04 161.71,375.86 161.71,353.48" aria-label="Shaviyani"/>
+    <text class="label" x="181.09" y="364.67">SH</text>
+  </g>
+  <g class="state" data-state="HDH">
+    <title>Haa Dhaalu</title>
+    <polygon class="tile inset" points="181.09,6.71 200.46,17.90 200.46,40.27 181.09,51.46 161.71,40.27 161.71,17.90" aria-label="Haa Dhaalu"/>
+    <text class="label" x="181.09" y="29.08">HDH</text>
+  </g>
+  <g class="state" data-state="GDH">
+    <title>Gaafu Dhaalu</title>
+    <polygon class="tile inset" points="142.34,140.95 161.71,152.13 161.71,174.50 142.34,185.69 122.96,174.50 122.96,152.13" aria-label="Gaafu Dhaalu"/>
+    <text class="label" x="142.34" y="163.32">GDH</text>
+  </g>
+  <g class="state" data-state="DH">
+    <title>Dhaalu</title>
+    <polygon class="tile inset" points="142.34,275.18 161.71,286.37 161.71,308.74 142.34,319.92 122.96,308.74 122.96,286.37" aria-label="Dhaalu"/>
+    <text class="label" x="142.34" y="297.55">DH</text>
+  </g>
+  <g class="state" data-state="LAA">
+    <title>Laamu</title>
+    <polygon class="tile inset" points="103.59,208.06 122.96,219.25 122.96,241.62 103.59,252.81 84.21,241.62 84.21,219.25" aria-label="Laamu"/>
+    <text class="label" x="103.59" y="230.43">LAA</text>
+  </g>
+  <g class="state" data-state="FAA">
+    <title>Faafu</title>
+    <polygon class="tile inset" points="103.59,73.83 122.96,85.01 122.96,107.39 103.59,118.57 84.21,107.39 84.21,85.01" aria-label="Faafu"/>
+    <text class="label" x="103.59" y="96.20">FAA</text>
+  </g>
+  <g class="state" data-state="RAA">
+    <title>Raa</title>
+    <polygon class="tile inset" points="103.59,342.30 122.96,353.48 122.96,375.86 103.59,387.04 84.21,375.86 84.21,353.48" aria-label="Raa"/>
+    <text class="label" x="103.59" y="364.67">RAA</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Haa Alifu</title>
+    <polygon class="tile inset" points="103.59,6.71 122.96,17.90 122.96,40.27 103.59,51.46 84.21,40.27 84.21,17.90" aria-label="Haa Alifu"/>
+    <text class="label" x="103.59" y="29.08">HA</text>
+  </g>
+  <g class="state" data-state="ADH">
+    <title>Alifu Dhaalu</title>
+    <polygon class="tile inset" points="64.84,140.95 84.21,152.13 84.21,174.50 64.84,185.69 45.46,174.50 45.46,152.13" aria-label="Alifu Dhaalu"/>
+    <text class="label" x="64.84" y="163.32">ADH</text>
+  </g>
+  <g class="state" data-state="BAA">
+    <title>Baa</title>
+    <polygon class="tile inset" points="64.84,275.18 84.21,286.37 84.21,308.74 64.84,319.92 45.46,308.74 45.46,286.37" aria-label="Baa"/>
+    <text class="label" x="64.84" y="297.55">BAA</text>
+  </g>
+  <g class="state" data-state="AA">
+    <title>Alifu Alifu</title>
+    <polygon class="tile inset" points="26.09,208.06 45.46,219.25 45.46,241.62 26.09,252.81 6.71,241.62 6.71,219.25" aria-label="Alifu Alifu"/>
+    <text class="label" x="26.09" y="230.43">AA</text>
+  </g>
+</svg>

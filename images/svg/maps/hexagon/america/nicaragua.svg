@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.40 292.40" width="285.40" height="292.40" role="img" aria-labelledby="nicaragua-title nicaragua-desc">
+  <title id="nicaragua-title">Nicaragua hex map</title>
+  <desc id="nicaragua-desc">Hexagon map with 17 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="AS">
+    <title>Atlántico Sur</title>
+    <polygon class="tile" points="245.76,163.20 275.20,180.20 275.20,214.20 245.76,231.20 216.31,214.20 216.31,180.20" aria-label="Atlántico Sur"/>
+    <text class="label" x="245.76" y="197.20">AS</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Atlántico Norte</title>
+    <polygon class="tile" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Atlántico Norte"/>
+    <text class="label" x="216.31" y="44.20">AN</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Boaco</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Boaco"/>
+    <text class="label" x="216.31" y="146.20">BO</text>
+  </g>
+  <g class="state" data-state="SJ">
+    <title>Rio San Juan</title>
+    <polygon class="tile" points="216.31,214.20 245.76,231.20 245.76,265.20 216.31,282.20 186.87,265.20 186.87,231.20" aria-label="Rio San Juan"/>
+    <text class="label" x="216.31" y="248.20">SJ</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Matagalpa</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Matagalpa"/>
+    <text class="label" x="186.87" y="95.20">MT</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Chontales</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Chontales"/>
+    <text class="label" x="186.87" y="197.20">CO</text>
+  </g>
+  <g class="state" data-state="JI">
+    <title>Jinotega</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Jinotega"/>
+    <text class="label" x="157.42" y="44.20">JI</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Managua</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Managua"/>
+    <text class="label" x="157.42" y="146.20">MN</text>
+  </g>
+  <g class="state" data-state="RI">
+    <title>Rivas</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="Rivas"/>
+    <text class="label" x="157.42" y="248.20">RI</text>
+  </g>
+  <g class="state" data-state="ES">
+    <title>Estelí</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Estelí"/>
+    <text class="label" x="127.98" y="95.20">ES</text>
+  </g>
+  <g class="state" data-state="GR">
+    <title>Granada</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Granada"/>
+    <text class="label" x="127.98" y="197.20">GR</text>
+  </g>
+  <g class="state" data-state="NS">
+    <title>Nueva Segovia</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Nueva Segovia"/>
+    <text class="label" x="98.53" y="44.20">NS</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>León</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="León"/>
+    <text class="label" x="98.53" y="146.20">LE</text>
+  </g>
+  <g class="state" data-state="CA">
+    <title>Carazo</title>
+    <polygon class="tile" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Carazo"/>
+    <text class="label" x="98.53" y="248.20">CA</text>
+  </g>
+  <g class="state" data-state="MD">
+    <title>Madriz</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Madriz"/>
+    <text class="label" x="69.09" y="95.20">MD</text>
+  </g>
+  <g class="state" data-state="MS">
+    <title>Masaya</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="Masaya"/>
+    <text class="label" x="69.09" y="197.20">MS</text>
+  </g>
+  <g class="state" data-state="CI">
+    <title>Chinandega</title>
+    <polygon class="tile" points="39.64,112.20 69.09,129.20 69.09,163.20 39.64,180.20 10.20,163.20 10.20,129.20" aria-label="Chinandega"/>
+    <text class="label" x="39.64" y="146.20">CI</text>
+  </g>
+</svg>

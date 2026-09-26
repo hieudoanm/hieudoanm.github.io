@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 377.48" width="357.71" height="377.48" role="img" aria-labelledby="ireland-title ireland-desc">
+  <title id="ireland-title">Ireland hex map</title>
+  <desc id="ireland-desc">Hexagon map with 34 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="DLA">
+    <title>Dún Laoghaire–Rathdown</title>
+    <polygon class="tile" points="319.76,156.20 347.94,172.47 347.94,205.01 319.76,221.28 291.58,205.01 291.58,172.47" aria-label="Dún Laoghaire–Rathdown"/>
+    <text class="label" x="319.76" y="188.74">DLA</text>
+  </g>
+  <g class="state" data-state="DN">
+    <title>Dublin</title>
+    <polygon class="tile" points="291.58,107.39 319.76,123.66 319.76,156.20 291.58,172.47 263.40,156.20 263.40,123.66" aria-label="Dublin"/>
+    <text class="label" x="291.58" y="139.93">DN</text>
+  </g>
+  <g class="state" data-state="WW">
+    <title>Wicklow</title>
+    <polygon class="tile" points="291.58,205.01 319.76,221.28 319.76,253.82 291.58,270.09 263.40,253.82 263.40,221.28" aria-label="Wicklow"/>
+    <text class="label" x="291.58" y="237.55">WW</text>
+  </g>
+  <g class="state" data-state="LH">
+    <title>Louth</title>
+    <polygon class="tile" points="263.40,58.57 291.58,74.85 291.58,107.39 263.40,123.66 235.22,107.39 235.22,74.85" aria-label="Louth"/>
+    <text class="label" x="263.40" y="91.12">LH</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>South Dublin</title>
+    <polygon class="tile" points="263.40,156.20 291.58,172.47 291.58,205.01 263.40,221.28 235.22,205.01 235.22,172.47" aria-label="South Dublin"/>
+    <text class="label" x="263.40" y="188.74">SD</text>
+  </g>
+  <g class="state" data-state="WX">
+    <title>Wexford</title>
+    <polygon class="tile" points="263.40,253.82 291.58,270.09 291.58,302.64 263.40,318.91 235.22,302.64 235.22,270.09" aria-label="Wexford"/>
+    <text class="label" x="263.40" y="286.37">WX</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Monaghan</title>
+    <polygon class="tile" points="235.22,9.76 263.40,26.03 263.40,58.57 235.22,74.85 207.04,58.57 207.04,26.03" aria-label="Monaghan"/>
+    <text class="label" x="235.22" y="42.30">MN</text>
+  </g>
+  <g class="state" data-state="FIN">
+    <title>Fingal</title>
+    <polygon class="tile" points="235.22,107.39 263.40,123.66 263.40,156.20 235.22,172.47 207.04,156.20 207.04,123.66" aria-label="Fingal"/>
+    <text class="label" x="235.22" y="139.93">FIN</text>
+  </g>
+  <g class="state" data-state="CW">
+    <title>Carlow</title>
+    <polygon class="tile" points="235.22,205.01 263.40,221.28 263.40,253.82 235.22,270.09 207.04,253.82 207.04,221.28" aria-label="Carlow"/>
+    <text class="label" x="235.22" y="237.55">CW</text>
+  </g>
+  <g class="state" data-state="WAT">
+    <title>Waterford</title>
+    <polygon class="tile" points="235.22,302.64 263.40,318.91 263.40,351.45 235.22,367.72 207.04,351.45 207.04,318.91" aria-label="Waterford"/>
+    <text class="label" x="235.22" y="335.18">WAT</text>
+  </g>
+  <g class="state" data-state="MH">
+    <title>Meath</title>
+    <polygon class="tile" points="207.04,58.57 235.22,74.85 235.22,107.39 207.04,123.66 178.85,107.39 178.85,74.85" aria-label="Meath"/>
+    <text class="label" x="207.04" y="91.12">MH</text>
+  </g>
+  <g class="state" data-state="KE">
+    <title>Kildare</title>
+    <polygon class="tile" points="207.04,156.20 235.22,172.47 235.22,205.01 207.04,221.28 178.85,205.01 178.85,172.47" aria-label="Kildare"/>
+    <text class="label" x="207.04" y="188.74">KE</text>
+  </g>
+  <g class="state" data-state="KK">
+    <title>Kilkenny</title>
+    <polygon class="tile" points="207.04,253.82 235.22,270.09 235.22,302.64 207.04,318.91 178.85,302.64 178.85,270.09" aria-label="Kilkenny"/>
+    <text class="label" x="207.04" y="286.37">KK</text>
+  </g>
+  <g class="state" data-state="CN">
+    <title>Cavan</title>
+    <polygon class="tile" points="178.85,9.76 207.04,26.03 207.04,58.57 178.85,74.85 150.67,58.57 150.67,26.03" aria-label="Cavan"/>
+    <text class="label" x="178.85" y="42.30">CN</text>
+  </g>
+  <g class="state" data-state="WH">
+    <title>Westmeath</title>
+    <polygon class="tile" points="178.85,107.39 207.04,123.66 207.04,156.20 178.85,172.47 150.67,156.20 150.67,123.66" aria-label="Westmeath"/>
+    <text class="label" x="178.85" y="139.93">WH</text>
+  </g>
+  <g class="state" data-state="LS">
+    <title>Laoighis</title>
+    <polygon class="tile" points="178.85,205.01 207.04,221.28 207.04,253.82 178.85,270.09 150.67,253.82 150.67,221.28" aria-label="Laoighis"/>
+    <text class="label" x="178.85" y="237.55">LS</text>
+  </g>
+  <g class="state" data-state="WD">
+    <title>Waterford</title>
+    <polygon class="tile" points="178.85,302.64 207.04,318.91 207.04,351.45 178.85,367.72 150.67,351.45 150.67,318.91" aria-label="Waterford"/>
+    <text class="label" x="178.85" y="335.18">WD</text>
+  </g>
+  <g class="state" data-state="LD">
+    <title>Longford</title>
+    <polygon class="tile" points="150.67,58.57 178.85,74.85 178.85,107.39 150.67,123.66 122.49,107.39 122.49,74.85" aria-label="Longford"/>
+    <text class="label" x="150.67" y="91.12">LD</text>
+  </g>
+  <g class="state" data-state="OY">
+    <title>Offaly</title>
+    <polygon class="tile" points="150.67,156.20 178.85,172.47 178.85,205.01 150.67,221.28 122.49,205.01 122.49,172.47" aria-label="Offaly"/>
+    <text class="label" x="150.67" y="188.74">OY</text>
+  </g>
+  <g class="state" data-state="TY">
+    <title>South Tipperary</title>
+    <polygon class="tile" points="150.67,253.82 178.85,270.09 178.85,302.64 150.67,318.91 122.49,302.64 122.49,270.09" aria-label="South Tipperary"/>
+    <text class="label" x="150.67" y="286.37">TY</text>
+  </g>
+  <g class="state" data-state="DL">
+    <title>Donegal</title>
+    <polygon class="tile" points="122.49,9.76 150.67,26.03 150.67,58.57 122.49,74.85 94.31,58.57 94.31,26.03" aria-label="Donegal"/>
+    <text class="label" x="122.49" y="42.30">DL</text>
+  </g>
+  <g class="state" data-state="RN">
+    <title>Roscommon</title>
+    <polygon class="tile" points="122.49,107.39 150.67,123.66 150.67,156.20 122.49,172.47 94.31,156.20 94.31,123.66" aria-label="Roscommon"/>
+    <text class="label" x="122.49" y="139.93">RN</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>North Tipperary</title>
+    <polygon class="tile" points="122.49,205.01 150.67,221.28 150.67,253.82 122.49,270.09 94.31,253.82 94.31,221.28" aria-label="North Tipperary"/>
+    <text class="label" x="122.49" y="237.55">TA</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Cork</title>
+    <polygon class="tile" points="122.49,302.64 150.67,318.91 150.67,351.45 122.49,367.72 94.31,351.45 94.31,318.91" aria-label="Cork"/>
+    <text class="label" x="122.49" y="335.18">CO</text>
+  </g>
+  <g class="state" data-state="LM">
+    <title>Leitrim</title>
+    <polygon class="tile" points="94.31,58.57 122.49,74.85 122.49,107.39 94.31,123.66 66.13,107.39 66.13,74.85" aria-label="Leitrim"/>
+    <text class="label" x="94.31" y="91.12">LM</text>
+  </g>
+  <g class="state" data-state="GY">
+    <title>Galway</title>
+    <polygon class="tile" points="94.31,156.20 122.49,172.47 122.49,205.01 94.31,221.28 66.13,205.01 66.13,172.47" aria-label="Galway"/>
+    <text class="label" x="94.31" y="188.74">GY</text>
+  </g>
+  <g class="state" data-state="LK">
+    <title>Limerick</title>
+    <polygon class="tile" points="94.31,253.82 122.49,270.09 122.49,302.64 94.31,318.91 66.13,302.64 66.13,270.09" aria-label="Limerick"/>
+    <text class="label" x="94.31" y="286.37">LK</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Sligo</title>
+    <polygon class="tile" points="66.13,9.76 94.31,26.03 94.31,58.57 66.13,74.85 37.94,58.57 37.94,26.03" aria-label="Sligo"/>
+    <text class="label" x="66.13" y="42.30">SO</text>
+  </g>
+  <g class="state" data-state="GAL">
+    <title>Galway</title>
+    <polygon class="tile" points="66.13,107.39 94.31,123.66 94.31,156.20 66.13,172.47 37.94,156.20 37.94,123.66" aria-label="Galway"/>
+    <text class="label" x="66.13" y="139.93">GAL</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Clare</title>
+    <polygon class="tile" points="66.13,205.01 94.31,221.28 94.31,253.82 66.13,270.09 37.94,253.82 37.94,221.28" aria-label="Clare"/>
+    <text class="label" x="66.13" y="237.55">CE</text>
+  </g>
+  <g class="state" data-state="CK">
+    <title>Cork</title>
+    <polygon class="tile" points="66.13,302.64 94.31,318.91 94.31,351.45 66.13,367.72 37.94,351.45 37.94,318.91" aria-label="Cork"/>
+    <text class="label" x="66.13" y="335.18">CK</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Mayo</title>
+    <polygon class="tile" points="37.94,58.57 66.13,74.85 66.13,107.39 37.94,123.66 9.76,107.39 9.76,74.85" aria-label="Mayo"/>
+    <text class="label" x="37.94" y="91.12">MO</text>
+  </g>
+  <g class="state" data-state="LIM">
+    <title>Limerick</title>
+    <polygon class="tile" points="37.94,156.20 66.13,172.47 66.13,205.01 37.94,221.28 9.76,205.01 9.76,172.47" aria-label="Limerick"/>
+    <text class="label" x="37.94" y="188.74">LIM</text>
+  </g>
+  <g class="state" data-state="KY">
+    <title>Kerry</title>
+    <polygon class="tile" points="37.94,253.82 66.13,270.09 66.13,302.64 37.94,318.91 9.76,302.64 9.76,270.09" aria-label="Kerry"/>
+    <text class="label" x="37.94" y="286.37">KY</text>
+  </g>
+</svg>

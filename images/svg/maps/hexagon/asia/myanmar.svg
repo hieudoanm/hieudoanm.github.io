@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.51 343.40" width="226.51" height="343.40" role="img" aria-labelledby="myanmar-title myanmar-desc">
+  <title id="myanmar-title">Myanmar hex map</title>
+  <desc id="myanmar-desc">Hexagon map with 14 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SH">
+    <title>Shan</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Shan"/>
+    <text class="label" x="186.87" y="95.20">SH</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>Kayin</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Kayin"/>
+    <text class="label" x="186.87" y="197.20">KN</text>
+  </g>
+  <g class="state" data-state="TN">
+    <title>Tanintharyi</title>
+    <polygon class="tile" points="186.87,265.20 216.31,282.20 216.31,316.20 186.87,333.20 157.42,316.20 157.42,282.20" aria-label="Tanintharyi"/>
+    <text class="label" x="186.87" y="299.20">TN</text>
+  </g>
+  <g class="state" data-state="KC">
+    <title>Kachin</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Kachin"/>
+    <text class="label" x="157.42" y="44.20">KC</text>
+  </g>
+  <g class="state" data-state="KH">
+    <title>Kayah</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Kayah"/>
+    <text class="label" x="157.42" y="146.20">KH</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Mon</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="Mon"/>
+    <text class="label" x="157.42" y="248.20">MO</text>
+  </g>
+  <g class="state" data-state="MD">
+    <title>Mandalay</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Mandalay"/>
+    <text class="label" x="127.98" y="95.20">MD</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bago</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Bago"/>
+    <text class="label" x="127.98" y="197.20">BA</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Sagaing</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Sagaing"/>
+    <text class="label" x="98.53" y="44.20">SA</text>
+  </g>
+  <g class="state" data-state="MG">
+    <title>Magway</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Magway"/>
+    <text class="label" x="98.53" y="146.20">MG</text>
+  </g>
+  <g class="state" data-state="YA">
+    <title>Yangon</title>
+    <polygon class="tile" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Yangon"/>
+    <text class="label" x="98.53" y="248.20">YA</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Chin</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Chin"/>
+    <text class="label" x="69.09" y="95.20">CH</text>
+  </g>
+  <g class="state" data-state="AY">
+    <title>Ayeyarwady</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="Ayeyarwady"/>
+    <text class="label" x="69.09" y="197.20">AY</text>
+  </g>
+  <g class="state" data-state="RA">
+    <title>Rakhine</title>
+    <polygon class="tile" points="39.64,112.20 69.09,129.20 69.09,163.20 39.64,180.20 10.20,163.20 10.20,129.20" aria-label="Rakhine"/>
+    <text class="label" x="39.64" y="146.20">RA</text>
+  </g>
+</svg>

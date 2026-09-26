@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.03 477.00" width="361.03" height="477.00" role="img" aria-labelledby="new-zealand-title new-zealand-desc">
+  <title id="new-zealand-title">New Zealand hex map</title>
+  <desc id="new-zealand-desc">Hexagon map with 24 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.12; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 10.49 7.49; }
+    .label { fill: #52525b; font: 600 8.49px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="OTA">
+    <title>Otago</title>
+    <polygon class="tile inset" points="331.91,232.26 353.54,244.74 353.54,269.72 331.91,282.20 310.28,269.72 310.28,244.74" aria-label="Otago"/>
+    <text class="label" x="331.91" y="257.23">OTA</text>
+  </g>
+  <g class="state" data-state="WTC">
+    <title>West Coast</title>
+    <polygon class="tile inset" points="288.65,307.18 310.28,319.66 310.28,344.64 288.65,357.12 267.03,344.64 267.03,319.66" aria-label="West Coast"/>
+    <text class="label" x="288.65" y="332.15">WTC</text>
+  </g>
+  <g class="state" data-state="CIT">
+    <title>Chatham Islands Territory</title>
+    <polygon class="tile inset" points="288.65,157.33 310.28,169.82 310.28,194.80 288.65,207.28 267.03,194.80 267.03,169.82" aria-label="Chatham Islands Territory"/>
+    <text class="label" x="288.65" y="182.31">CIT</text>
+  </g>
+  <g class="state" data-state="KI">
+    <title>Kermadec Islands</title>
+    <polygon class="tile inset" points="288.65,82.41 310.28,94.90 310.28,119.87 288.65,132.36 267.03,119.87 267.03,94.90" aria-label="Kermadec Islands"/>
+    <text class="label" x="288.65" y="107.39">KI</text>
+  </g>
+  <g class="state" data-state="AIA">
+    <title>Antipodes Islands</title>
+    <polygon class="tile inset" points="288.65,382.10 310.28,394.59 310.28,419.56 288.65,432.05 267.03,419.56 267.03,394.59" aria-label="Antipodes Islands"/>
+    <text class="label" x="288.65" y="407.07">AIA</text>
+  </g>
+  <g class="state" data-state="TOK">
+    <title>Tokelau</title>
+    <polygon class="tile inset" points="288.65,7.49 310.28,19.98 310.28,44.95 288.65,57.44 267.03,44.95 267.03,19.98" aria-label="Tokelau"/>
+    <text class="label" x="288.65" y="32.47">TOK</text>
+  </g>
+  <g class="state" data-state="GIS">
+    <title>Gisborne District</title>
+    <polygon class="tile" points="245.40,232.26 267.03,244.74 267.03,269.72 245.40,282.20 223.77,269.72 223.77,244.74" aria-label="Gisborne District"/>
+    <text class="label" x="245.40" y="257.23">GIS</text>
+  </g>
+  <g class="state" data-state="BOP">
+    <title>Bay of Plenty</title>
+    <polygon class="tile" points="223.77,194.80 245.40,207.28 245.40,232.26 223.77,244.74 202.14,232.26 202.14,207.28" aria-label="Bay of Plenty"/>
+    <text class="label" x="223.77" y="219.77">BOP</text>
+  </g>
+  <g class="state" data-state="HKB">
+    <title>Hawke's Bay</title>
+    <polygon class="tile" points="223.77,269.72 245.40,282.20 245.40,307.18 223.77,319.66 202.14,307.18 202.14,282.20" aria-label="Hawke's Bay"/>
+    <text class="label" x="223.77" y="294.69">HKB</text>
+  </g>
+  <g class="state" data-state="TAS">
+    <title>Tasman District</title>
+    <polygon class="tile inset" points="223.77,344.64 245.40,357.12 245.40,382.10 223.77,394.59 202.14,382.10 202.14,357.12" aria-label="Tasman District"/>
+    <text class="label" x="223.77" y="369.61">TAS</text>
+  </g>
+  <g class="state" data-state="AUK">
+    <title>Auckland</title>
+    <polygon class="tile" points="202.14,157.33 223.77,169.82 223.77,194.80 202.14,207.28 180.52,194.80 180.52,169.82" aria-label="Auckland"/>
+    <text class="label" x="202.14" y="182.31">AUK</text>
+  </g>
+  <g class="state" data-state="MWT">
+    <title>Manawatu-Wanganui</title>
+    <polygon class="tile" points="202.14,232.26 223.77,244.74 223.77,269.72 202.14,282.20 180.52,269.72 180.52,244.74" aria-label="Manawatu-Wanganui"/>
+    <text class="label" x="202.14" y="257.23">MWT</text>
+  </g>
+  <g class="state" data-state="STL">
+    <title>Southland</title>
+    <polygon class="tile inset" points="202.14,82.41 223.77,94.90 223.77,119.87 202.14,132.36 180.52,119.87 180.52,94.90" aria-label="Southland"/>
+    <text class="label" x="202.14" y="107.39">STL</text>
+  </g>
+  <g class="state" data-state="WKO">
+    <title>Waikato</title>
+    <polygon class="tile" points="180.52,194.80 202.14,207.28 202.14,232.26 180.52,244.74 158.89,232.26 158.89,207.28" aria-label="Waikato"/>
+    <text class="label" x="180.52" y="219.77">WKO</text>
+  </g>
+  <g class="state" data-state="WGN">
+    <title>Wellington</title>
+    <polygon class="tile" points="180.52,269.72 202.14,282.20 202.14,307.18 180.52,319.66 158.89,307.18 158.89,282.20" aria-label="Wellington"/>
+    <text class="label" x="180.52" y="294.69">WGN</text>
+  </g>
+  <g class="state" data-state="NTL">
+    <title>Northland</title>
+    <polygon class="tile" points="158.89,157.33 180.52,169.82 180.52,194.80 158.89,207.28 137.26,194.80 137.26,169.82" aria-label="Northland"/>
+    <text class="label" x="158.89" y="182.31">NTL</text>
+  </g>
+  <g class="state" data-state="TK">
+    <title>Taranaki</title>
+    <polygon class="tile" points="158.89,232.26 180.52,244.74 180.52,269.72 158.89,282.20 137.26,269.72 137.26,244.74" aria-label="Taranaki"/>
+    <text class="label" x="158.89" y="257.23">TK</text>
+  </g>
+  <g class="state" data-state="MBH">
+    <title>Marlborough District</title>
+    <polygon class="tile inset" points="137.26,344.64 158.89,357.12 158.89,382.10 137.26,394.59 115.63,382.10 115.63,357.12" aria-label="Marlborough District"/>
+    <text class="label" x="137.26" y="369.61">MBH</text>
+  </g>
+  <g class="state" data-state="CI">
+    <title>Campbell Islands</title>
+    <polygon class="tile inset" points="137.26,419.56 158.89,432.05 158.89,457.02 137.26,469.51 115.63,457.02 115.63,432.05" aria-label="Campbell Islands"/>
+    <text class="label" x="137.26" y="444.53">CI</text>
+  </g>
+  <g class="state" data-state="TKI">
+    <title>Three Kings Islands</title>
+    <polygon class="tile inset" points="115.63,82.41 137.26,94.90 137.26,119.87 115.63,132.36 94.00,119.87 94.00,94.90" aria-label="Three Kings Islands"/>
+    <text class="label" x="115.63" y="107.39">TKI</text>
+  </g>
+  <g class="state" data-state="NSN">
+    <title>Nelson City</title>
+    <polygon class="tile inset" points="94.00,269.72 115.63,282.20 115.63,307.18 94.00,319.66 72.38,307.18 72.38,282.20" aria-label="Nelson City"/>
+    <text class="label" x="94.00" y="294.69">NSN</text>
+  </g>
+  <g class="state" data-state="CAN">
+    <title>Canterbury</title>
+    <polygon class="tile inset" points="94.00,194.80 115.63,207.28 115.63,232.26 94.00,244.74 72.38,232.26 72.38,207.28" aria-label="Canterbury"/>
+    <text class="label" x="94.00" y="219.77">CAN</text>
+  </g>
+  <g class="state" data-state="TS">
+    <title>The Snares</title>
+    <polygon class="tile inset" points="29.12,232.26 50.75,244.74 50.75,269.72 29.12,282.20 7.49,269.72 7.49,244.74" aria-label="The Snares"/>
+    <text class="label" x="29.12" y="257.23">TS</text>
+  </g>
+  <g class="state" data-state="AI">
+    <title>Auckland Islands</title>
+    <polygon class="tile inset" points="29.12,157.33 50.75,169.82 50.75,194.80 29.12,207.28 7.49,194.80 7.49,169.82" aria-label="Auckland Islands"/>
+    <text class="label" x="29.12" y="182.31">AI</text>
+  </g>
+</svg>

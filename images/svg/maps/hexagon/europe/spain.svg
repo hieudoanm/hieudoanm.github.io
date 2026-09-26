@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363.10 326.21" width="363.10" height="326.21" role="img" aria-labelledby="spain-title spain-desc">
+  <title id="spain-title">Spain hex map</title>
+  <desc id="spain-desc">Hexagon map with 52 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.72; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 8.51 6.08; }
+    .label { fill: #52525b; font: 600 6.89px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="PM">
+    <title>Baleares</title>
+    <polygon class="tile inset" points="339.47,127.65 357.02,137.78 357.02,158.04 339.47,168.17 321.93,158.04 321.93,137.78" aria-label="Baleares"/>
+    <text class="label" x="339.47" y="147.91">PM</text>
+  </g>
+  <g class="state" data-state="BAR">
+    <title>Barcelona</title>
+    <polygon class="tile" points="304.38,66.86 321.93,76.99 321.93,97.26 304.38,107.39 286.83,97.26 286.83,76.99" aria-label="Barcelona"/>
+    <text class="label" x="304.38" y="87.13">BAR</text>
+  </g>
+  <g class="state" data-state="GI">
+    <title>Gerona</title>
+    <polygon class="tile" points="286.83,36.47 304.38,46.60 304.38,66.86 286.83,76.99 269.29,66.86 269.29,46.60" aria-label="Gerona"/>
+    <text class="label" x="286.83" y="56.73">GI</text>
+  </g>
+  <g class="state" data-state="TAR">
+    <title>Tarragona</title>
+    <polygon class="tile" points="286.83,97.26 304.38,107.39 304.38,127.65 286.83,137.78 269.29,127.65 269.29,107.39" aria-label="Tarragona"/>
+    <text class="label" x="286.83" y="117.52">TAR</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Lérida</title>
+    <polygon class="tile" points="269.29,66.86 286.83,76.99 286.83,97.26 269.29,107.39 251.74,97.26 251.74,76.99" aria-label="Lérida"/>
+    <text class="label" x="269.29" y="87.13">CT</text>
+  </g>
+  <g class="state" data-state="CS">
+    <title>Castellón</title>
+    <polygon class="tile" points="269.29,127.65 286.83,137.78 286.83,158.04 269.29,168.17 251.74,158.04 251.74,137.78" aria-label="Castellón"/>
+    <text class="label" x="269.29" y="147.91">CS</text>
+  </g>
+  <g class="state" data-state="HU">
+    <title>Huesca</title>
+    <polygon class="tile" points="251.74,36.47 269.29,46.60 269.29,66.86 251.74,76.99 234.19,66.86 234.19,46.60" aria-label="Huesca"/>
+    <text class="label" x="251.74" y="56.73">HU</text>
+  </g>
+  <g class="state" data-state="TE">
+    <title>Teruel</title>
+    <polygon class="tile" points="251.74,97.26 269.29,107.39 269.29,127.65 251.74,137.78 234.19,127.65 234.19,107.39" aria-label="Teruel"/>
+    <text class="label" x="251.74" y="117.52">TE</text>
+  </g>
+  <g class="state" data-state="ALI">
+    <title>Alicante</title>
+    <polygon class="tile" points="251.74,158.04 269.29,168.17 269.29,188.43 251.74,198.56 234.19,188.43 234.19,168.17" aria-label="Alicante"/>
+    <text class="label" x="251.74" y="178.30">ALI</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Zaragoza</title>
+    <polygon class="tile" points="234.19,66.86 251.74,76.99 251.74,97.26 234.19,107.39 216.64,97.26 216.64,76.99" aria-label="Zaragoza"/>
+    <text class="label" x="234.19" y="87.13">AR</text>
+  </g>
+  <g class="state" data-state="VC">
+    <title>Valencia</title>
+    <polygon class="tile" points="234.19,127.65 251.74,137.78 251.74,158.04 234.19,168.17 216.64,158.04 216.64,137.78" aria-label="Valencia"/>
+    <text class="label" x="234.19" y="147.91">VC</text>
+  </g>
+  <g class="state" data-state="MU">
+    <title>Murcia</title>
+    <polygon class="tile" points="234.19,188.43 251.74,198.56 251.74,218.83 234.19,228.96 216.64,218.83 216.64,198.56" aria-label="Murcia"/>
+    <text class="label" x="234.19" y="208.70">MU</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Navarra</title>
+    <polygon class="tile" points="216.64,36.47 234.19,46.60 234.19,66.86 216.64,76.99 199.10,66.86 199.10,46.60" aria-label="Navarra"/>
+    <text class="label" x="216.64" y="56.73">NA</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Guadalajara</title>
+    <polygon class="tile" points="216.64,97.26 234.19,107.39 234.19,127.65 216.64,137.78 199.10,127.65 199.10,107.39" aria-label="Guadalajara"/>
+    <text class="label" x="216.64" y="117.52">GU</text>
+  </g>
+  <g class="state" data-state="AB">
+    <title>Albacete</title>
+    <polygon class="tile" points="216.64,158.04 234.19,168.17 234.19,188.43 216.64,198.56 199.10,188.43 199.10,168.17" aria-label="Albacete"/>
+    <text class="label" x="216.64" y="178.30">AB</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Almería</title>
+    <polygon class="tile" points="216.64,218.83 234.19,228.96 234.19,249.22 216.64,259.35 199.10,249.22 199.10,228.96" aria-label="Almería"/>
+    <text class="label" x="216.64" y="239.09">AL</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Gipuzkoa</title>
+    <polygon class="tile" points="199.10,6.08 216.64,16.21 216.64,36.47 199.10,46.60 181.55,36.47 181.55,16.21" aria-label="Gipuzkoa"/>
+    <text class="label" x="199.10" y="26.34">SS</text>
+  </g>
+  <g class="state" data-state="LO">
+    <title>La Rioja</title>
+    <polygon class="tile" points="199.10,66.86 216.64,76.99 216.64,97.26 199.10,107.39 181.55,97.26 181.55,76.99" aria-label="La Rioja"/>
+    <text class="label" x="199.10" y="87.13">LO</text>
+  </g>
+  <g class="state" data-state="CU">
+    <title>Cuenca</title>
+    <polygon class="tile" points="199.10,127.65 216.64,137.78 216.64,158.04 199.10,168.17 181.55,158.04 181.55,137.78" aria-label="Cuenca"/>
+    <text class="label" x="199.10" y="147.91">CU</text>
+  </g>
+  <g class="state" data-state="JAN">
+    <title>Jaén</title>
+    <polygon class="tile" points="199.10,188.43 216.64,198.56 216.64,218.83 199.10,228.96 181.55,218.83 181.55,198.56" aria-label="Jaén"/>
+    <text class="label" x="199.10" y="208.70">JAN</text>
+  </g>
+  <g class="state" data-state="VI">
+    <title>Álava</title>
+    <polygon class="tile" points="181.55,36.47 199.10,46.60 199.10,66.86 181.55,76.99 164.00,66.86 164.00,46.60" aria-label="Álava"/>
+    <text class="label" x="181.55" y="56.73">VI</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Soria</title>
+    <polygon class="tile" points="181.55,97.26 199.10,107.39 199.10,127.65 181.55,137.78 164.00,127.65 164.00,107.39" aria-label="Soria"/>
+    <text class="label" x="181.55" y="117.52">SO</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Ciudad Real</title>
+    <polygon class="tile" points="181.55,158.04 199.10,168.17 199.10,188.43 181.55,198.56 164.00,188.43 164.00,168.17" aria-label="Ciudad Real"/>
+    <text class="label" x="181.55" y="178.30">CR</text>
+  </g>
+  <g class="state" data-state="GR">
+    <title>Granada</title>
+    <polygon class="tile" points="181.55,218.83 199.10,228.96 199.10,249.22 181.55,259.35 164.00,249.22 164.00,228.96" aria-label="Granada"/>
+    <text class="label" x="181.55" y="239.09">GR</text>
+  </g>
+  <g class="state" data-state="ML">
+    <title>Melilla</title>
+    <polygon class="tile inset" points="181.55,279.61 199.10,289.74 199.10,310.00 181.55,320.14 164.00,310.00 164.00,289.74" aria-label="Melilla"/>
+    <text class="label" x="181.55" y="299.87">ML</text>
+  </g>
+  <g class="state" data-state="BI">
+    <title>Bizkaia</title>
+    <polygon class="tile" points="164.00,6.08 181.55,16.21 181.55,36.47 164.00,46.60 146.46,36.47 146.46,16.21" aria-label="Bizkaia"/>
+    <text class="label" x="164.00" y="26.34">BI</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Burgos</title>
+    <polygon class="tile" points="164.00,66.86 181.55,76.99 181.55,97.26 164.00,107.39 146.46,97.26 146.46,76.99" aria-label="Burgos"/>
+    <text class="label" x="164.00" y="87.13">BU</text>
+  </g>
+  <g class="state" data-state="MD">
+    <title>Madrid</title>
+    <polygon class="tile" points="164.00,127.65 181.55,137.78 181.55,158.04 164.00,168.17 146.46,158.04 146.46,137.78" aria-label="Madrid"/>
+    <text class="label" x="164.00" y="147.91">MD</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Córdoba</title>
+    <polygon class="tile" points="164.00,188.43 181.55,198.56 181.55,218.83 164.00,228.96 146.46,218.83 146.46,198.56" aria-label="Córdoba"/>
+    <text class="label" x="164.00" y="208.70">CO</text>
+  </g>
+  <g class="state" data-state="CL">
+    <title>Palencia</title>
+    <polygon class="tile" points="146.46,36.47 164.00,46.60 164.00,66.86 146.46,76.99 128.91,66.86 128.91,46.60" aria-label="Palencia"/>
+    <text class="label" x="146.46" y="56.73">CL</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>Segovia</title>
+    <polygon class="tile" points="146.46,97.26 164.00,107.39 164.00,127.65 146.46,137.78 128.91,127.65 128.91,107.39" aria-label="Segovia"/>
+    <text class="label" x="146.46" y="117.52">SG</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Toledo</title>
+    <polygon class="tile" points="146.46,158.04 164.00,168.17 164.00,188.43 146.46,198.56 128.91,188.43 128.91,168.17" aria-label="Toledo"/>
+    <text class="label" x="146.46" y="178.30">TO</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Málaga</title>
+    <polygon class="tile" points="146.46,218.83 164.00,228.96 164.00,249.22 146.46,259.35 128.91,249.22 128.91,228.96" aria-label="Málaga"/>
+    <text class="label" x="146.46" y="239.09">MA</text>
+  </g>
+  <g class="state" data-state="CB">
+    <title>Cantabria</title>
+    <polygon class="tile" points="128.91,6.08 146.46,16.21 146.46,36.47 128.91,46.60 111.36,36.47 111.36,16.21" aria-label="Cantabria"/>
+    <text class="label" x="128.91" y="26.34">CB</text>
+  </g>
+  <g class="state" data-state="VA">
+    <title>Valladolid</title>
+    <polygon class="tile" points="128.91,66.86 146.46,76.99 146.46,97.26 128.91,107.39 111.36,97.26 111.36,76.99" aria-label="Valladolid"/>
+    <text class="label" x="128.91" y="87.13">VA</text>
+  </g>
+  <g class="state" data-state="AV">
+    <title>Ávila</title>
+    <polygon class="tile" points="128.91,127.65 146.46,137.78 146.46,158.04 128.91,168.17 111.36,158.04 111.36,137.78" aria-label="Ávila"/>
+    <text class="label" x="128.91" y="147.91">AV</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Sevilla</title>
+    <polygon class="tile" points="128.91,188.43 146.46,198.56 146.46,218.83 128.91,228.96 111.36,218.83 111.36,198.56" aria-label="Sevilla"/>
+    <text class="label" x="128.91" y="208.70">SE</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>León</title>
+    <polygon class="tile" points="111.36,36.47 128.91,46.60 128.91,66.86 111.36,76.99 93.81,66.86 93.81,46.60" aria-label="León"/>
+    <text class="label" x="111.36" y="56.73">LE</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Salamanca</title>
+    <polygon class="tile" points="111.36,97.26 128.91,107.39 128.91,127.65 111.36,137.78 93.81,127.65 93.81,107.39" aria-label="Salamanca"/>
+    <text class="label" x="111.36" y="117.52">SA</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Badajoz</title>
+    <polygon class="tile" points="111.36,158.04 128.91,168.17 128.91,188.43 111.36,198.56 93.81,188.43 93.81,168.17" aria-label="Badajoz"/>
+    <text class="label" x="111.36" y="178.30">BA</text>
+  </g>
+  <g class="state" data-state="CA">
+    <title>Cádiz</title>
+    <polygon class="tile" points="111.36,218.83 128.91,228.96 128.91,249.22 111.36,259.35 93.81,249.22 93.81,228.96" aria-label="Cádiz"/>
+    <text class="label" x="111.36" y="239.09">CA</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Ceuta</title>
+    <polygon class="tile inset" points="111.36,279.61 128.91,289.74 128.91,310.00 111.36,320.14 93.81,310.00 93.81,289.74" aria-label="Ceuta"/>
+    <text class="label" x="111.36" y="299.87">CE</text>
+  </g>
+  <g class="state" data-state="AS">
+    <title>Asturias</title>
+    <polygon class="tile" points="93.81,6.08 111.36,16.21 111.36,36.47 93.81,46.60 76.27,36.47 76.27,16.21" aria-label="Asturias"/>
+    <text class="label" x="93.81" y="26.34">AS</text>
+  </g>
+  <g class="state" data-state="ZA">
+    <title>Zamora</title>
+    <polygon class="tile" points="93.81,66.86 111.36,76.99 111.36,97.26 93.81,107.39 76.27,97.26 76.27,76.99" aria-label="Zamora"/>
+    <text class="label" x="93.81" y="87.13">ZA</text>
+  </g>
+  <g class="state" data-state="CC">
+    <title>Cáceres</title>
+    <polygon class="tile" points="93.81,127.65 111.36,137.78 111.36,158.04 93.81,168.17 76.27,158.04 76.27,137.78" aria-label="Cáceres"/>
+    <text class="label" x="93.81" y="147.91">CC</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Huelva</title>
+    <polygon class="tile" points="93.81,188.43 111.36,198.56 111.36,218.83 93.81,228.96 76.27,218.83 76.27,198.56" aria-label="Huelva"/>
+    <text class="label" x="93.81" y="208.70">AN</text>
+  </g>
+  <g class="state" data-state="LU">
+    <title>Lugo</title>
+    <polygon class="tile" points="76.27,36.47 93.81,46.60 93.81,66.86 76.27,76.99 58.72,66.86 58.72,46.60" aria-label="Lugo"/>
+    <text class="label" x="76.27" y="56.73">LU</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>La Coruña</title>
+    <polygon class="tile" points="58.72,6.08 76.27,16.21 76.27,36.47 58.72,46.60 41.17,36.47 41.17,16.21" aria-label="La Coruña"/>
+    <text class="label" x="58.72" y="26.34">GA</text>
+  </g>
+  <g class="state" data-state="OR">
+    <title>Orense</title>
+    <polygon class="tile" points="58.72,66.86 76.27,76.99 76.27,97.26 58.72,107.39 41.17,97.26 41.17,76.99" aria-label="Orense"/>
+    <text class="label" x="58.72" y="87.13">OR</text>
+  </g>
+  <g class="state" data-state="GC">
+    <title>Las Palmas</title>
+    <polygon class="tile inset" points="58.72,249.22 76.27,259.35 76.27,279.61 58.72,289.74 41.17,279.61 41.17,259.35" aria-label="Las Palmas"/>
+    <text class="label" x="58.72" y="269.48">GC</text>
+  </g>
+  <g class="state" data-state="PO">
+    <title>Pontevedra</title>
+    <polygon class="tile" points="41.17,36.47 58.72,46.60 58.72,66.86 41.17,76.99 23.63,66.86 23.63,46.60" aria-label="Pontevedra"/>
+    <text class="label" x="41.17" y="56.73">PO</text>
+  </g>
+  <g class="state" data-state="TF">
+    <title>Santa Cruz de Tenerife</title>
+    <polygon class="tile inset" points="23.63,188.43 41.17,198.56 41.17,218.83 23.63,228.96 6.08,218.83 6.08,198.56" aria-label="Santa Cruz de Tenerife"/>
+    <text class="label" x="23.63" y="208.70">TF</text>
+  </g>
+</svg>

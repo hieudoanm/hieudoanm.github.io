@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 343.40" width="314.85" height="343.40" role="img" aria-labelledby="honduras-title honduras-desc">
+  <title id="honduras-title">Honduras hex map</title>
+  <desc id="honduras-desc">Hexagon map with 18 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="CL">
+    <title>Colón</title>
+    <polygon class="tile" points="275.20,112.20 304.65,129.20 304.65,163.20 275.20,180.20 245.76,163.20 245.76,129.20" aria-label="Colón"/>
+    <text class="label" x="275.20" y="146.20">CL</text>
+  </g>
+  <g class="state" data-state="GD">
+    <title>Gracias a Dios</title>
+    <polygon class="tile" points="275.20,214.20 304.65,231.20 304.65,265.20 275.20,282.20 245.76,265.20 245.76,231.20" aria-label="Gracias a Dios"/>
+    <text class="label" x="275.20" y="248.20">GD</text>
+  </g>
+  <g class="state" data-state="IB">
+    <title>Islas de la Bahía</title>
+    <polygon class="tile inset" points="275.20,10.20 304.65,27.20 304.65,61.20 275.20,78.20 245.76,61.20 245.76,27.20" aria-label="Islas de la Bahía"/>
+    <text class="label" x="275.20" y="44.20">IB</text>
+  </g>
+  <g class="state" data-state="OL">
+    <title>Olancho</title>
+    <polygon class="tile" points="245.76,163.20 275.20,180.20 275.20,214.20 245.76,231.20 216.31,214.20 216.31,180.20" aria-label="Olancho"/>
+    <text class="label" x="245.76" y="197.20">OL</text>
+  </g>
+  <g class="state" data-state="EP">
+    <title>El Paraíso</title>
+    <polygon class="tile" points="245.76,265.20 275.20,282.20 275.20,316.20 245.76,333.20 216.31,316.20 216.31,282.20" aria-label="El Paraíso"/>
+    <text class="label" x="245.76" y="299.20">EP</text>
+  </g>
+  <g class="state" data-state="AT">
+    <title>Atlántida</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Atlántida"/>
+    <text class="label" x="216.31" y="146.20">AT</text>
+  </g>
+  <g class="state" data-state="FM">
+    <title>Francisco Morazán</title>
+    <polygon class="tile" points="216.31,214.20 245.76,231.20 245.76,265.20 216.31,282.20 186.87,265.20 186.87,231.20" aria-label="Francisco Morazán"/>
+    <text class="label" x="216.31" y="248.20">FM</text>
+  </g>
+  <g class="state" data-state="YO">
+    <title>Yoro</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Yoro"/>
+    <text class="label" x="186.87" y="197.20">YO</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Choluteca</title>
+    <polygon class="tile" points="186.87,265.20 216.31,282.20 216.31,316.20 186.87,333.20 157.42,316.20 157.42,282.20" aria-label="Choluteca"/>
+    <text class="label" x="186.87" y="299.20">CH</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Cortés</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Cortés"/>
+    <text class="label" x="157.42" y="146.20">CR</text>
+  </g>
+  <g class="state" data-state="LP">
+    <title>La Paz</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="La Paz"/>
+    <text class="label" x="157.42" y="248.20">LP</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Comayagua</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Comayagua"/>
+    <text class="label" x="127.98" y="197.20">CM</text>
+  </g>
+  <g class="state" data-state="VA">
+    <title>Valle</title>
+    <polygon class="tile" points="127.98,265.20 157.42,282.20 157.42,316.20 127.98,333.20 98.53,316.20 98.53,282.20" aria-label="Valle"/>
+    <text class="label" x="127.98" y="299.20">VA</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Santa Bárbara</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Santa Bárbara"/>
+    <text class="label" x="98.53" y="146.20">SB</text>
+  </g>
+  <g class="state" data-state="IN">
+    <title>Intibucá</title>
+    <polygon class="tile" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Intibucá"/>
+    <text class="label" x="98.53" y="248.20">IN</text>
+  </g>
+  <g class="state" data-state="CP">
+    <title>Copán</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="Copán"/>
+    <text class="label" x="69.09" y="197.20">CP</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>Lempira</title>
+    <polygon class="tile" points="69.09,265.20 98.53,282.20 98.53,316.20 69.09,333.20 39.64,316.20 39.64,282.20" aria-label="Lempira"/>
+    <text class="label" x="69.09" y="299.20">LE</text>
+  </g>
+  <g class="state" data-state="OC">
+    <title>Ocotepeque</title>
+    <polygon class="tile" points="39.64,214.20 69.09,231.20 69.09,265.20 39.64,282.20 10.20,265.20 10.20,231.20" aria-label="Ocotepeque"/>
+    <text class="label" x="39.64" y="248.20">OC</text>
+  </g>
+</svg>
