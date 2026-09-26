@@ -20,6 +20,7 @@ $scales: (
   .scale-#{$name} {
     --tw-scale-x: #{$value * $scale-unit};
     --tw-scale-y: #{$value * $scale-unit};
+
     transform: #{$transform-composite};
   }
 }
@@ -27,6 +28,7 @@ $scales: (
 @each $name, $value in $scales {
   .scale-x-#{$name} {
     --tw-scale-x: #{$value * $scale-unit};
+
     transform: #{$transform-composite};
   }
 }
@@ -34,6 +36,7 @@ $scales: (
 @each $name, $value in $scales {
   .scale-y-#{$name} {
     --tw-scale-y: #{$value * $scale-unit};
+
     transform: #{$transform-composite};
   }
 }

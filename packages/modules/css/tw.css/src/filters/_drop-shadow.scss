@@ -27,6 +27,7 @@ $drop-shadows: (
 @each $name, $value in $drop-shadows {
   .drop-shadow {
     --tw-drop-shadow: #{$value};
+
     filter: #{$filter-composite};
   }
 }
@@ -35,6 +36,7 @@ $drop-shadows: (
   @if $name != 'DEFAULT' {
     .drop-shadow-#{$name} {
       --tw-drop-shadow: #{$value};
+
       filter: #{$filter-composite};
     }
   }

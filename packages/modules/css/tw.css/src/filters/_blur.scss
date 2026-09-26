@@ -16,6 +16,7 @@ $blurs: (
 @each $name, $value in $blurs {
   .blur {
     --tw-blur: #{$value};
+
     filter: #{$filter-composite};
   }
 }
@@ -24,6 +25,7 @@ $blurs: (
   @if $name != 'DEFAULT' {
     .blur-#{$name} {
       --tw-blur: #{$value};
+
       filter: #{$filter-composite};
     }
   }

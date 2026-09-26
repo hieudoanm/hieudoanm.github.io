@@ -12,6 +12,7 @@ $backdrop-opacity-max: 100;
       --tw-backdrop-opacity: opacity(
         #{math.div($value, $backdrop-opacity-max)}
       );
+
       -webkit-backdrop-filter: #{$backdrop-filter-composite};
       backdrop-filter: #{$backdrop-filter-composite};
     }

@@ -7,7 +7,6 @@ $overflow-values: (
   ('visible', visible),
   ('scroll', scroll)
 );
-
 $overflow-axes: (('', overflow), ('-x', overflow-x), ('-y', overflow-y));
 
 @each $axis, $property in $overflow-axes {
