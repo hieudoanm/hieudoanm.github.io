@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
-# renovate-rust-cargo.sh: pin direct dependencies, refresh lockfiles, then
-# reconcile `rust-version` and report edition drift.
-#
-# The logic lives in lib/; this file only sequences the three phases. Two
-# behaviours are deliberately conservative because they change public build
-# promises rather than internal wiring:
-#   CARGO_RENOVATE_ADD_MSRV=1    declare a rust-version where none exists
-#   CARGO_RENOVATE_FIX_EDITION=1 migrate editions with `cargo fix --edition`
+# renovate-rust.sh: pin direct dependencies, refresh lockfiles, then reconcile
+# `rust-version` and report edition drift. Logic lives in lib/; this file only
+# sequences the three phases. Two behaviours are opt-in because they change
+# public build promises: CARGO_RENOVATE_ADD_MSRV=1 declares a missing
+# rust-version, CARGO_RENOVATE_FIX_EDITION=1 migrates editions via cargo fix.
 
 set -euo pipefail
 
@@ -23,11 +20,6 @@ ROOT_DIR="$(cd "$RENOVATE_DIR/../.." && pwd)"
 . "$RENOVATE_DIR/lib/cargo-msrv.sh"
 
 require cargo curl jq python3
-init_transcript CARGO_SCRIPT_LOG_RUN cargo-update
-
-CACHE_FILE="$(mktemp "${TMPDIR:-/tmp}/cargo-update-cache.XXXXXX")"
-ROOT_LIST="$(mktemp "${TMPDIR:-/tmp}/cargo-update-roots.XXXXXX")"
-trap 'rm -f "$CACHE_FILE" "$ROOT_LIST"' EXIT
 
 banner() {
     printf '\n==================================================\n%s\n==================================================\n' "$1"
@@ -118,67 +110,91 @@ pin_workspace_deps() {
 }
 
 # 1) Pin every package's direct dependencies, then its workspace entries.
-#    Unresolvable manifests (e.g. unregistered crates under a workspace) are
-#    skipped instead of aborting the whole run.
-banner "Phase 1: pinning dependencies"
-while IFS= read -r manifest; do
-    banner "Processing $manifest"
-
-    if deps="$(pinnable_deps "$manifest")"; then
-        if [[ -n "$deps" ]]; then
-            pin_direct_deps "$(dirname "$manifest")" "$deps" "$CACHE_FILE"
+#    Unresolvable manifests are skipped instead of aborting the whole run.
+pin_all_manifests() {
+    local manifest deps
+    banner "Phase 1: pinning dependencies"
+    while IFS= read -r manifest; do
+        banner "Processing $manifest"
+        if deps="$(pinnable_deps "$manifest")"; then
+            if [[ -n "$deps" ]]; then
+                pin_direct_deps "$(dirname "$manifest")" "$deps" "$CACHE_FILE"
+            else
+                echo "  Skipping (no direct dependencies to pin)."
+            fi
         else
-            echo "  Skipping (no direct dependencies to pin)."
+            echo "  Skipping (could not resolve manifest)."
         fi
-    else
-        echo "  Skipping (could not resolve manifest)."
-    fi
-
-    pin_workspace_deps "$manifest" "$CACHE_FILE"
-done < <(find_manifests "$ROOT_DIR")
+        pin_workspace_deps "$manifest" "$CACHE_FILE"
+    done < <(find_manifests "$ROOT_DIR")
+}
 
 # 2) Regenerate the lockfile once per workspace root. Cargo.lock always lives at
 #    the workspace root, never inside a member, so each manifest is mapped to its
 #    root and de-duplicated before regenerating.
-banner "Phase 2: regenerating Cargo.lock"
-while IFS= read -r manifest; do
-    root="$(workspace_root_of "$manifest")"
-    if [[ -n "$root" ]]; then
-        printf '%s\n' "$root" >> "$ROOT_LIST"
-    else
-        echo "  WARNING: could not resolve workspace root for $manifest."
-    fi
-done < <(find_manifests "$ROOT_DIR")
+regenerate_lockfiles() {
+    local manifest root
+    banner "Phase 2: regenerating Cargo.lock"
+    while IFS= read -r manifest; do
+        root="$(workspace_root_of "$manifest")"
+        if [[ -n "$root" ]]; then
+            printf '%s\n' "$root" >> "$ROOT_LIST"
+        else
+            echo "  WARNING: could not resolve workspace root for $manifest."
+        fi
+    done < <(find_manifests "$ROOT_DIR")
 
-while IFS= read -r root; do
-    if [[ -z "$root" ]]; then
-        continue
-    fi
-    printf '\n--------------------------------------------------\nRegenerating Cargo.lock for %s\n--------------------------------------------------\n' "$root"
-    if (cd "$root" && run_timeout 600 cargo generate-lockfile); then
-        echo "  OK: Cargo.lock regenerated for $root."
-    else
-        echo "  WARNING: could not regenerate lockfile for $root."
-    fi
-done < <(sort -u "$ROOT_LIST")
+    while IFS= read -r root; do
+        if [[ -z "$root" ]]; then
+            continue
+        fi
+        printf '\n--------------------------------------------------\nRegenerating Cargo.lock for %s\n--------------------------------------------------\n' "$root"
+        if (cd "$root" && run_timeout 600 cargo generate-lockfile); then
+            echo "  OK: Cargo.lock regenerated for $root."
+        else
+            echo "  WARNING: could not regenerate lockfile for $root."
+        fi
+    done < <(sort -u "$ROOT_LIST")
+}
 
 # 3) Reconcile `rust-version` and report edition drift. See lib/cargo-msrv.sh for
 #    why a false MSRV is corrected but a valid one is never raised, and why
-#    edition migration stays opt-in.
-banner "Phase 3: checking rust-version and edition"
-LATEST_EDITION="$(latest_edition)"
-msrv_raised=0
-msrv_added=0
-edition_behind=0
+#    edition migration stays opt-in. LATEST_EDITION and the msrv_*/edition_behind
+#    counters stay global because lib/cargo-msrv.sh updates them.
+reconcile_all_roots() {
+    local root
+    banner "Phase 3: checking rust-version and edition"
+    LATEST_EDITION="$(latest_edition)"
+    msrv_raised=0
+    msrv_added=0
+    edition_behind=0
 
-echo "Local toolchain: $(rustc --version 2>/dev/null | awk '{print $2}'), newest usable edition: ${LATEST_EDITION:-unknown}"
-echo "CARGO_RENOVATE_ADD_MSRV=${CARGO_RENOVATE_ADD_MSRV:-0}  CARGO_RENOVATE_FIX_EDITION=${CARGO_RENOVATE_FIX_EDITION:-0}"
+    echo "Local toolchain: $(rustc --version 2>/dev/null | awk '{print $2}'), newest usable edition: ${LATEST_EDITION:-unknown}"
+    echo "CARGO_RENOVATE_ADD_MSRV=${CARGO_RENOVATE_ADD_MSRV:-0}  CARGO_RENOVATE_FIX_EDITION=${CARGO_RENOVATE_FIX_EDITION:-0}"
 
-while IFS= read -r root; do
-    if [[ -n "$root" ]]; then
-        reconcile_root "$root"
-    fi
-done < <(sort -u "$ROOT_LIST")
+    while IFS= read -r root; do
+        if [[ -n "$root" ]]; then
+            reconcile_root "$root"
+        fi
+    done < <(sort -u "$ROOT_LIST")
 
-printf '\nDone (raised %s rust-version, added %s, %s edition(s) behind %s).\n' \
-    "$msrv_raised" "$msrv_added" "$edition_behind" "${LATEST_EDITION:-unknown}"
+    printf '\nDone (raised %s rust-version, added %s, %s edition(s) behind %s).\n' \
+        "$msrv_raised" "$msrv_added" "$edition_behind" "${LATEST_EDITION:-unknown}"
+}
+
+# CACHE_FILE, ROOT_LIST and LATEST_EDITION stay global because the lib helpers
+# read them, so they are created per run rather than at load time.
+main() {
+    init_transcript CARGO_SCRIPT_LOG_RUN cargo-update
+    CACHE_FILE="$(mktemp "${TMPDIR:-/tmp}/cargo-update-cache.XXXXXX")"
+    ROOT_LIST="$(mktemp "${TMPDIR:-/tmp}/cargo-update-roots.XXXXXX")"
+    trap 'rm -f "$CACHE_FILE" "$ROOT_LIST"' EXIT
+    pin_all_manifests
+    regenerate_lockfiles
+    reconcile_all_roots
+}
+
+# Sourcing this file exposes the helpers for tests without running an update.
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    main "$@"
+fi

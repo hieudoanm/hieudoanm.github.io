@@ -29,7 +29,7 @@ latest_crate_version() {
     path="$(crate_index_path "$crate")"
     version="$(
         curl -fsS --compressed --max-time 30 --retry 3 --retry-delay 1 \
-            -A "renovate-rust-cargo.sh (sparse index probe)" \
+            -A "renovate-rust.sh (sparse index probe)" \
             "https://index.crates.io/$path" 2>/dev/null \
         | jq -r -s '
             map(select((.yanked | not) and (.vers | contains("-") | not)))
