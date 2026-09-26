@@ -406,7 +406,7 @@ fn extract_json_string(body: &str, field: &str) -> Result<String, ScrapeError> {
 }
 
 fn openapi_spec() -> String {
-    include_str!("../../../docs/openapi.json").replace("0.0.0", VERSION)
+    include_str!("../../../api/openapi.json").replace("0.0.0", VERSION)
 }
 
 fn openapi_docs_page() -> (u16, Response<std::io::Cursor<Vec<u8>>>) {
