@@ -25,6 +25,8 @@ go build ./...
 | `make install`   | Install to `~/bin/landify`                    |
 | `make clean`     | Remove `./bin`, `./coverage` and `index.html` |
 
+`make all` (format + lint + test + build) is the gate before handoff.
+
 ## Coding Conventions
 
 Follow the repo-wide [Go conventions](../../../../../AGENTS.md) — in short:
@@ -69,10 +71,16 @@ static/                  # embedded templates, partials, examples
 - `serve_test.go` — file server serves bytes and shuts down on cancel
 - `internal/tui/tui_test.go` — editor command parsing, validate/build/theming
   via `renderConfig`, dirty tracking and scaffold generation
+- `internal/mcp/*_test.go` — the MCP server is tested through its real wire
+  protocol: `helpers_test.go` drives a full session against a temp-directory
+  workspace, and the per-tool files (`scaffold_test.go`, `validate_test.go`,
+  `build_test.go`, `theme_tokens_test.go`, `catalog_test.go`, `tools_test.go`)
+  cover one tool each. `workspace_escape_test.go` covers the sandbox, including
+  symlinks that point out of the root
 - Keep tests isolated; never depend on the real `bin/landify` or `index.html`
 
 ## Docs
 
-Update `docs/ARCHITECTURE.md` when the pipeline, type list or theme logic
-changes. Update `README.md` when commands or flags change. Keep
+Update `docs/ARCHITECTURE.md` when the pipeline, type list, theme logic or MCP
+tool surface changes. Update `README.md` when commands or flags change. Keep
 `docs/ROADMAP.md` checkboxes in sync with what actually ships.

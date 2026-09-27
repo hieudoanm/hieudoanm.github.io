@@ -20,6 +20,8 @@ commands, layout and content rules specific to this Go module.
 | `make install`   | Build to `~/bin/landify`                           |
 | `make clean`     | Remove `./bin`, `./coverage` and `index.html`      |
 
+The binary also exposes `landify mcp serve`; see [MCP](#mcp-model-context-protocol).
+
 Verification before handoff: `make all` passes — `go fmt` produces no diff,
 `go vet` exits 0, and `go test ./...` is green.
 
@@ -31,12 +33,12 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 - Standard Go layout: `main.go` + `cmd/` + `internal/landify/`. Keep commands
   thin: `cmd/*.go` parse flags and delegate to `internal/landify` (e.g.
   `BuildFile`, `ValidateFile`, `WritePlaceholder`).
-- The `cmd/` files register exactly seven subcommands on the root: `new`,
-  `validate`, `build`, `themes`, `serve`, `tui`, `studio`. `--file` (`-f`,
+- The `cmd/` files register exactly eight subcommands on the root: `new`,
+  `validate`, `build`, `themes`, `serve`, `tui`, `studio`, `mcp`. `--file` (`-f`,
   default `landify.yaml`) is a persistent root flag; `build` adds
   `--output`/`-o` (`index.html`) and `--theme`/`-t`; `new` adds `--type`/`-t`
   (`product`) and `--force`/`-F`; `serve` adds `--dir`/`-d` (`.`), `--bind`/`-b`
-  (`127.0.0.1`) and `--port`/`-p` (`8080`).
+  (`127.0.0.1`) and `--port`/`-p` (`8080`); `mcp serve` adds `--root` (`.`).
   `serve` shuts down gracefully on `SIGINT`/`SIGTERM`.
 - `tui` takes an optional positional `[path]` (defaults to `landify.yaml`)
   and delegates to `internal/tui.Run`. It is a bubbletea editor that ships in
@@ -61,6 +63,45 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 - Follow repo-wide Go rules from the root [AGENTS.md](../../../../../AGENTS.md):
   `error` last, handle errors explicitly, `var` zero-init over `:=`, no global
   state, table-driven tests, return early.
+- MCP: `landify mcp serve` speaks newline-delimited JSON-RPC 2.0 over stdio.
+  `internal/mcp` is a parallel tree — `protocol.go` (JSON-RPC envelope) +
+  `transport.go` (newline framing) + `server.go` (dispatch) + `workspace.go`
+  (sandboxed file access) + `tools.go` (catalogue) + `args.go` (argument
+  decoding) + `handlers.go` / `handlers_build.go` (tool handlers). Keep it
+  hand-rolled — do not add an MCP SDK, and do not convert the CLI off cobra.
+  - Tools: `landify_scaffold`, `landify_validate`, `landify_build`,
+    `landify_types`, `landify_themes`, `landify_theme_tokens`.
+  - A model chooses every path that reaches a tool, so `workspace.go` confines
+    all file access to one root directory. Absolute paths and `..` escapes are
+    **rejected, not rewritten** — a caller that means to leave the sandbox has a
+    bug, and quietly serving a different file would hide it. Do not add a tool
+    that touches the filesystem without going through `Workspace`.
+  - Containment is checked on the **resolved** path, not the joined one: the root
+    is canonicalised with `filepath.EvalSymlinks` at startup and `Resolve`
+    re-resolves symlinks (`resolveExisting` walks up to the longest existing
+    prefix) so a link inside the root pointing out of it is refused. A symlink
+    that stays inside the root is still allowed. Keep it that way — a lexical
+    check alone is trivially bypassed by a symlink the model can create.
+  - `landify_scaffold` refuses to replace an existing file unless `overwrite` is
+    set, so a model cannot silently destroy a config the user is editing.
+  - `handleBuild` resolves the `output` path _before_ rendering, so a bad path
+    fails fast instead of after the whole page has been built.
+  - Tool failures return a `ToolResult` with `isError`. JSON-RPC errors are only
+    for framing problems: bad JSON, wrong jsonrpc version, unknown method,
+    unknown tool, undecodable params. A config that fails validation is **not** a
+    transport failure — return the `validateResult` payload so the model can
+    read and fix the problems.
+  - A notification (a request with a nil `ID`) is never answered, whatever the
+    method. `handleMessage` returns before the dispatch switch; do not move that
+    check into individual cases.
+  - Every `text` block is built with `json.MarshalIndent` on a typed struct —
+    never `fmt.Sprintf` on raw values, which breaks on quotes and newlines.
+  - `typeDescriptions` in `handlers_catalog.go` is the only place the 12 layouts are
+    described in prose. A model picking a type has no other way to know which
+    layout fits, so every entry needs a real sentence.
+  - Tests: `internal/mcp` drives the real wire protocol against a temp-dir
+    workspace (`helpers_test.go`), so framing, dispatch, sandboxing and every
+    tool are covered end to end. `cmd/mcp_test.go` covers flag wiring.
 - Tests: colocated `*_test.go`, table-driven, behaviour-spec names.
   `config_test.go`, `build_test.go`, `themes_test.go`, `placeholder_test.go`,
   `serve_test.go` and `internal/tui/tui_test.go` cover parsing, rendering,
@@ -120,7 +161,8 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 - Files read: `landify.yaml` (`-f/--file` to override); `static/` templates,
   partials and `examples/` are embedded at build time, not read from disk.
 - Files written: `index.html` (default `build` output), `landify.yaml`
-  (created by `new`, refuses to overwrite without `--force`).
+  (created by `new`, refuses to overwrite without `--force`). The MCP tools
+  read and write only inside the `--root` given to `mcp serve` (default `.`).
 - No environment variables; no network calls; no external services.
 
 ## Documentation

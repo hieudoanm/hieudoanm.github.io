@@ -50,6 +50,8 @@
 
 ## Phase 5 — Polish
 
+- [x] MCP server (`landify mcp serve`) — six sandboxed tools over stdio for
+      LLM clients: scaffold, validate, build, types, themes, theme tokens
 - [ ] Configurable favicon / social meta (Open Graph, Twitter cards)
 - [ ] Custom fonts and typography scale options in `theme:`
 - [ ] Analytical components (countdown, announcement bar, lead form handler)
