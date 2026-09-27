@@ -15,6 +15,10 @@ Kotlin.
         │          server            │  Tokens -> Handler -> Server
         └─────────────┬──────────────┘
                       │
+        ┌─────────────▼─────────────┐
+        │ mcp (JSON-RPC over stdio) │  its own Store seam
+        └─────────────┬──────────────┘
+                      │
                 ┌─────▼─────┐
                 │    Db     │  concurrent map + per-key expiry
                 └─────┬─────┘
@@ -26,7 +30,8 @@ Kotlin.
 
 The dependency arrows only point downward. `db` and `server` know nothing about
 the UI, so the protocol and the store can be tested with no terminal and no
-window.
+window. `mcp` sits beside `server` and shares `db`, but it reaches the store
+through its own `Store` interface so it can also proxy a remote server.
 
 ## `db`
 
@@ -68,6 +73,37 @@ ServeRunner(config, kv, logger, tuiLauncher = { session -> session.port })
 `ServeRunner.run()` loads the data file, binds the socket, starts the server
 thread, installs a shutdown hook, runs the requested manager (or joins the
 server thread), then saves and shuts down.
+
+## `mcp`
+
+`kevin mcp serve` is a second front end, speaking newline-delimited JSON-RPC 2.0
+on stdin/stdout. It is hand-rolled: there is no MCP SDK dependency, only
+`kotlinx.serialization` over two streams. Split by role:
+
+| File           | Role                                                          |
+| -------------- | ------------------------------------------------------------- |
+| `Protocol.kt`  | version constants, `JsonRpcRequest`, ok/error frames          |
+| `Schema.kt`    | `Tool`, `ToolResult`, content items, the object-schema helper |
+| `Server.kt`    | dispatch, notification handling, the stdio read loop          |
+| `Store.kt`     | the `Store` seam plus `DbStore`                               |
+| `TcpStore.kt`  | the `Store` implementation that proxies a running server       |
+| `Session.kt`   | picks a backend and owns the snapshot lifecycle                |
+| `Args.kt`      | typed argument extraction with readable failures              |
+| `Tools.kt`     | the ten handlers                                               |
+| `ToolSchemas.kt` | the advertised shape of each tool                           |
+
+Three rules carry most of the weight:
+
+- A store failure becomes a result with `isError: true`, never a JSON-RPC
+  error. Only parse failures, unknown methods and unknown tools are transport
+  errors.
+- A notification — an absent or `null` `id` — returns `null` from
+  `McpServer.handle` and the read loop writes nothing.
+- stdout is protocol-only. `java.util.logging` already writes to stderr, so the
+  startup line and snapshot warnings stay off the wire.
+
+`StoreContractTest` states the store contract once and runs it against both
+`DbStore` and `TcpStore`, so the two backends cannot drift apart.
 
 ## `tui`
 

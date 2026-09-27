@@ -22,6 +22,7 @@ src/main/kotlin/io/github/hieudoanm/kevin/
 ├── cli/                 ServeConfig, ServeRunner, ServeSession, commands
 ├── db/                  Db, Ttl, JSON snapshot save/load
 ├── gui/                 GuiState, GuiController, Compose UI
+├── mcp/                 Protocol, Schema, Server, Store, Session, tools
 ├── server/              Tokens, Handler, Server
 └── tui/                 TuiState, TuiReducer, Render, terminal loop
 ```
@@ -30,6 +31,32 @@ src/main/kotlin/io/github/hieudoanm/kevin/
 - `tui` and `gui` are two front ends over one `Db`; neither may duplicate
   filtering, sorting or edit rules.
 - `--tui` and `--gui` are mutually exclusive; the TCP server runs either way.
+- `mcp` depends on `db` only. It never imports `tui` or `gui`.
+
+## MCP server
+
+`kevin mcp serve` speaks newline-delimited JSON-RPC 2.0 on stdin/stdout, with
+no MCP SDK dependency. Keep these invariants:
+
+- Protocol version `2025-11-25`, server name `kevin-mcp`, version `1.0.0`.
+- Tools are `kevin_ping`, `kevin_set`, `kevin_get`, `kevin_del`,
+  `kevin_exists`, `kevin_keys`, `kevin_len`, `kevin_ttl`, `kevin_expire` and
+  `kevin_flush`. `tools/list` is sorted by name.
+- A tool failure is a result with `isError: true` and a readable message. Only
+  parse errors, unknown methods and unknown tools use JSON-RPC error codes.
+- Notifications get no reply, so an absent or `null` `id` must return `null`
+  from `McpServer.handle`.
+- stdout carries protocol frames only. Logging goes to stderr.
+- `Store` is the seam: `DbStore` wraps `Db` in-process, `TcpStore` proxies a
+  running server. `Session` picks one and owns the snapshot lifecycle.
+- `--addr` and `--data` are mutually exclusive; `Session.open` enforces it with
+  `require`, and `McpServeCommand` rejects the pair with a `UsageError`.
+- The inline TCP protocol is whitespace-tokenised, so `TcpStore` rejects keys
+  and values containing spaces or newlines. The in-process store has no such
+  limit.
+- TTL states are `missing`, `no-expiry` and `expiring`; remaining seconds round
+  up. `kevin_expire` applies the TTL with `EXPIRE` over TCP and a negative
+  result maps to `ok: false`.
 
 ## Kotlin style
 
@@ -99,6 +126,17 @@ These must match the Go and Rust ports exactly, including error strings:
   `0` and assert against the real socket instead of stubbing the server.
 - `ServeSession.port` reports the _bound_ port, which is what a test needs when
   the configured port is `0`.
+- A test that injects a TUI or GUI launcher must also set the matching `tui` or
+  `gui` config flag. Otherwise `ServeRunner` takes the `thread.join()` branch and
+  the test hangs until the suite times out.
+- Clikt 5's `test()` takes the arguments *after* the command name and never
+  throws: assert on `statusCode` and `stderr`. Use the `test(arrayOf(...))`
+  overload, because `test("a", "b")` silently binds `"b"` to the `stdin`
+  parameter instead of treating it as an argument.
+- MCP store behaviour is covered once by `StoreContractTest` and run against
+  both `DbStore` and `TcpStore`, so a new `Store` only needs one contract run.
+- Writing to a test socket must flush, not close, the buffered writer: closing
+  the output stream shuts the socket down before the replies arrive.
 
 ## Build notes
 
@@ -117,6 +155,7 @@ make test
 make build
 make coverage
 ./gradlew run --args="serve --tui"
+./gradlew run --args="mcp serve"
 ```
 
 [mdn]: https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values

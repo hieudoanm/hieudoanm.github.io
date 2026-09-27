@@ -16,13 +16,18 @@ class ServeRunnerTest {
     private val logger = Logger.getLogger("kevin-test").apply { level = Level.OFF }
     private val kv = Db()
 
-    private fun config(data: Path? = null) = ServeConfig(port = 0, bind = "127.0.0.1", data = data)
+    // tui = true so the runner calls the injected launcher; otherwise it joins the
+    // server thread, which only returns on a real shutdown.
+    private fun config(data: Path? = null) =
+        ServeConfig(port = 0, bind = "127.0.0.1", data = data, tui = true)
 
     private fun ServeSession.send(vararg commands: String): List<String> {
         Socket("127.0.0.1", port).use { socket ->
-            socket.getOutputStream().bufferedWriter().use {
-                it.write(commands.joinToString("\r\n", postfix = "\r\n"))
-            }
+            // Flush, never close: closing the output stream would shut the socket
+            // down before the replies arrive.
+            val writer = socket.getOutputStream().bufferedWriter()
+            writer.write(commands.joinToString("\r\n", postfix = "\r\n"))
+            writer.flush()
             return socket.getInputStream().bufferedReader().use { reader ->
                 commands.indices.map { reader.readLine().orEmpty() }
             }
@@ -44,7 +49,7 @@ class ServeRunnerTest {
         var guiRan = false
         var tuiRan = false
         ServeRunner(
-            config = config().copy(gui = true),
+            config = config().copy(gui = true, tui = false),
             kv = kv,
             logger = logger,
             guiLauncher = { guiRan = true },

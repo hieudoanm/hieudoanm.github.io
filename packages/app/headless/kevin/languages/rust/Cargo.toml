@@ -55,5 +55,9 @@ path = "tests/persist.rs"
 name = "server"
 path = "tests/server.rs"
 
+[[test]]
+name = "mcp"
+path = "tests/mcp.rs"
+
 [profile.release]
 lto = true

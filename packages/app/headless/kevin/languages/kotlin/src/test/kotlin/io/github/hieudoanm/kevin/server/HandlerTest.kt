@@ -21,7 +21,7 @@ class HandlerTest {
     @Test
     fun `commands are case insensitive`() {
         assertEquals(Reply("PONG\n", true), run("ping"))
-        assertEquals(Reply("OK\n", true), run("sEt Foo Bar"))
+        assertEquals(Reply("OK\n", true), run("sEt foo Bar"))
         assertEquals(Reply("Bar\n", true), run("get foo"))
     }
 

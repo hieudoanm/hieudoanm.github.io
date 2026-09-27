@@ -9,6 +9,9 @@ interesting work is keeping the five ports behaving identically.
   `FLUSHDB`, `EXPIRE`, `TTL`
 - Atomic JSON persistence with a temp file and rename
 - Clikt CLI, Mordant TUI, Compose desktop GUI
+- `kevin mcp serve`: a hand-rolled JSON-RPC 2.0 stdio server exposing ten
+  `kevin_*` tools over an in-process store, a `--data` snapshot, or a `--addr`
+  proxy to a running server
 - Unit tests over the store, the protocol, both managers and the CLI
 
 ## Next

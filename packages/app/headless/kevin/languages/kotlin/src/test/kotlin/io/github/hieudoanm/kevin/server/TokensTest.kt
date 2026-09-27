@@ -28,7 +28,7 @@ class TokensTest {
 
     @Test
     fun `splitToken on only spaces yields two empty parts`() {
-        assertEquals("" to "   ", splitToken("   "))
+        assertEquals("" to "", splitToken("   "))
     }
 
     @Test
