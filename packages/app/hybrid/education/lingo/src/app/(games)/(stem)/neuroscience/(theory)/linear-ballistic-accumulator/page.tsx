@@ -5,6 +5,7 @@ const LinearBallisticAccumulatorPage: FC = () => (
   <TheoryTemplate
     title="Linear Ballistic Accumulator (LBA)"
     subtitle=""
+    parentLink={{ href: '/neuroscience', label: 'Neuroscience' }}
     sections={[
       {
         title: 'Overview',

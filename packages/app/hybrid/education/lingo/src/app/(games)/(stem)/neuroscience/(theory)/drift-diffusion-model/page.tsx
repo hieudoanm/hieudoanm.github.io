@@ -7,6 +7,7 @@ const DriftDiffusionModelPage: NextPage = () => (
   <TheoryTemplate
     title="Drift Diffusion Model"
     subtitle="How the brain accumulates noisy evidence over time to reach a binary decision — and why speed and accuracy trade off."
+    parentLink={{ href: '/neuroscience', label: 'Neuroscience' }}
     sections={[
       {
         title: 'What is it?',
@@ -147,48 +148,6 @@ const DriftDiffusionModelPage: NextPage = () => (
         label: 'DDM Simulator',
         description:
           'Tune drift rate, boundary, and noise in real time and watch evidence accumulate toward a decision.',
-      },
-      {
-        href: '/neuroscience/drift-diffusion-model/random-dot-motion',
-        label: 'Random Dot Motion',
-        description:
-          'Judge the direction of coherent motion at four difficulty levels and observe how coherence scales drift rate.',
-      },
-      {
-        href: '/neuroscience/drift-diffusion-model/flanker-task',
-        label: 'Flanker Task',
-        description:
-          'Respond to the central arrow while ignoring flankers — measure the congruency cost on RT and accuracy.',
-      },
-      {
-        href: '/neuroscience/drift-diffusion-model/stroop-task',
-        label: 'Stroop Task',
-        description:
-          'Name the ink colour while ignoring the printed colour word — observe the Stroop interference effect.',
-      },
-      {
-        href: '/neuroscience/drift-diffusion-model/lexical-decision',
-        label: 'Lexical Decision',
-        description:
-          'Decide if each letter string is a real word — compare RTs for words vs non-words.',
-      },
-      {
-        href: '/neuroscience/drift-diffusion-model/numerical-comparison',
-        label: 'Numerical Comparison',
-        description:
-          'Choose the larger of two digits and experience the distance effect on speed and accuracy.',
-      },
-      {
-        href: '/neuroscience/drift-diffusion-model/memory-recognition',
-        label: 'Memory Recognition',
-        description:
-          'Study a word list, then judge Old vs New probes — measure hit rate and false alarms.',
-      },
-      {
-        href: '/neuroscience/drift-diffusion-model/visual-search',
-        label: 'Visual Search',
-        description:
-          'Find the red circle among distractors across three set sizes — observe the set-size effect on RT.',
       },
     ]}
     references={[

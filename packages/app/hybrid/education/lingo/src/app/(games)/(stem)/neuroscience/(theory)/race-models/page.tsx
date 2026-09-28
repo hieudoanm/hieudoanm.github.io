@@ -5,6 +5,7 @@ const RaceModelsPage: FC = () => (
   <TheoryTemplate
     title="Race Models"
     subtitle=""
+    parentLink={{ href: '/neuroscience', label: 'Neuroscience' }}
     sections={[
       {
         title: 'Overview',

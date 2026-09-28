@@ -5,6 +5,7 @@ const LeakyCompetingAccumulatorPage: FC = () => (
   <TheoryTemplate
     title="Leaky Competing Accumulator (LCA)"
     subtitle=""
+    parentLink={{ href: '/neuroscience', label: 'Neuroscience' }}
     sections={[
       {
         title: 'Overview',
