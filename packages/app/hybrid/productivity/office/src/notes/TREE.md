@@ -2,15 +2,11 @@
 
 ```text
 ├── engineering/
-│   ├── [agents.md](./engineering/agents.md)
 │   ├── [algorithms.md](./engineering/algorithms.md)
-│   ├── [blockchain.md](./engineering/blockchain.md)
 │   ├── [data-structures-and-algorithms.md](./engineering/data-structures-and-algorithms.md)
 │   ├── [data-structures.md](./engineering/data-structures.md)
-│   ├── [technology.md](./engineering/technology.md)
 │   └── [techstack.md](./engineering/techstack.md)
 ├── life/
-│   ├── [education.md](./life/education.md)
 │   ├── [maslow-hierarchy.md](./life/maslow-hierarchy.md)
 │   ├── [monday-fear.md](./life/monday-fear.md)
 │   ├── [nothing.md](./life/nothing.md)
@@ -30,14 +26,13 @@
 │   └── [stem.md](./science/stem.md)
 ├── sports/
 │   └── [sports.md](./sports/sports.md)
-├── transport/
-│   └── [vehicles.md](./transport/vehicles.md)
 ├── [TREE.md](./TREE.md)
 ├── [bored.md](./bored.md)
 ├── [engineering.md](./engineering.md)
 ├── [intro.md](./intro.md)
 ├── [me.md](./me.md)
+├── [minimalism.md](./minimalism.md)
 └── [resume.md](./resume.md)
 ```
 
-8 directories, 29 files
+7 directories, 25 files

@@ -547,37 +547,46 @@
 │   │   │       │   │   └── [page.tsx](./src/app/(games)/(stem)/maths/kaprekar-constant/page.tsx)
 │   │   │       │   └── [page.tsx](./src/app/(games)/(stem)/maths/page.tsx)
 │   │   │       └── neuroscience/
-│   │   │           ├── drift-diffusion-model/
-│   │   │           │   ├── (tasks)/
-│   │   │           │   │   ├── flanker-task/
-│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/(tasks)/flanker-task/page.tsx)
-│   │   │           │   │   ├── lexical-decision/
-│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/(tasks)/lexical-decision/page.tsx)
-│   │   │           │   │   ├── memory-recognition/
-│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/(tasks)/memory-recognition/page.tsx)
-│   │   │           │   │   ├── numerical-comparison/
-│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/(tasks)/numerical-comparison/page.tsx)
-│   │   │           │   │   ├── random-dot-motion/
-│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/(tasks)/random-dot-motion/page.tsx)
-│   │   │           │   │   ├── stroop-task/
-│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/(tasks)/stroop-task/page.tsx)
-│   │   │           │   │   └── visual-search/
-│   │   │           │   │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/(tasks)/visual-search/page.tsx)
-│   │   │           │   ├── interactive/
-│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/interactive/page.tsx)
-│   │   │           │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/drift-diffusion-model/page.tsx)
-│   │   │           ├── leaky-competing-accumulator/
-│   │   │           │   ├── interactive/
-│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/leaky-competing-accumulator/interactive/page.tsx)
-│   │   │           │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/leaky-competing-accumulator/page.tsx)
-│   │   │           ├── linear-ballistic-accumulator/
-│   │   │           │   ├── interactive/
-│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/linear-ballistic-accumulator/interactive/page.tsx)
-│   │   │           │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/linear-ballistic-accumulator/page.tsx)
-│   │   │           ├── race-models/
-│   │   │           │   ├── interactive/
-│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/race-models/interactive/page.tsx)
-│   │   │           │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/race-models/page.tsx)
+│   │   │           ├── (tasks)/
+│   │   │           │   ├── flanker-task/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/flanker-task/page.tsx)
+│   │   │           │   ├── lexical-decision/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/lexical-decision/page.tsx)
+│   │   │           │   ├── memory-recognition/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/memory-recognition/page.tsx)
+│   │   │           │   ├── numerical-comparison/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/numerical-comparison/page.tsx)
+│   │   │           │   ├── random-dot-motion/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/random-dot-motion/page.tsx)
+│   │   │           │   ├── stroop-task/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/stroop-task/page.tsx)
+│   │   │           │   └── visual-search/
+│   │   │           │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/visual-search/page.tsx)
+│   │   │           ├── (theory)/
+│   │   │           │   ├── attentional-drift-diffusion-model/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/attentional-drift-diffusion-model/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/attentional-drift-diffusion-model/page.tsx)
+│   │   │           │   ├── drift-diffusion-model/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/drift-diffusion-model/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/drift-diffusion-model/page.tsx)
+│   │   │           │   ├── hierarchical-drift-diffusion-model/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/hierarchical-drift-diffusion-model/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/hierarchical-drift-diffusion-model/page.tsx)
+│   │   │           │   ├── leaky-competing-accumulator/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/leaky-competing-accumulator/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/leaky-competing-accumulator/page.tsx)
+│   │   │           │   ├── linear-ballistic-accumulator/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/linear-ballistic-accumulator/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/linear-ballistic-accumulator/page.tsx)
+│   │   │           │   └── race-models/
+│   │   │           │       ├── interactive/
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/race-models/interactive/page.tsx)
+│   │   │           │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/race-models/page.tsx)
 │   │   │           └── [page.tsx](./src/app/(games)/(stem)/neuroscience/page.tsx)
 │   │   ├── (info)/
 │   │   │   ├── about/
@@ -1825,12 +1834,22 @@
 │   │       │       ├── [index.tsx](./src/games/stem/maths/kaprekar-constant/index.tsx)
 │   │       │       └── [utils.ts](./src/games/stem/maths/kaprekar-constant/utils.ts)
 │   │       └── neuroscience/
+│   │           ├── attentional-drift-diffusion-model/
+│   │           │   ├── [components.tsx](./src/games/stem/neuroscience/attentional-drift-diffusion-model/components.tsx)
+│   │           │   ├── [game.ts](./src/games/stem/neuroscience/attentional-drift-diffusion-model/game.ts)
+│   │           │   ├── [index.tsx](./src/games/stem/neuroscience/attentional-drift-diffusion-model/index.tsx)
+│   │           │   └── [types.ts](./src/games/stem/neuroscience/attentional-drift-diffusion-model/types.ts)
 │   │           ├── drift-diffusion-model/
 │   │           │   ├── [components.tsx](./src/games/stem/neuroscience/drift-diffusion-model/components.tsx)
 │   │           │   ├── [constants.ts](./src/games/stem/neuroscience/drift-diffusion-model/constants.ts)
 │   │           │   ├── [game.ts](./src/games/stem/neuroscience/drift-diffusion-model/game.ts)
 │   │           │   ├── [index.tsx](./src/games/stem/neuroscience/drift-diffusion-model/index.tsx)
 │   │           │   └── [types.ts](./src/games/stem/neuroscience/drift-diffusion-model/types.ts)
+│   │           ├── hierarchical-drift-diffusion-model/
+│   │           │   ├── [components.tsx](./src/games/stem/neuroscience/hierarchical-drift-diffusion-model/components.tsx)
+│   │           │   ├── [game.ts](./src/games/stem/neuroscience/hierarchical-drift-diffusion-model/game.ts)
+│   │           │   ├── [index.tsx](./src/games/stem/neuroscience/hierarchical-drift-diffusion-model/index.tsx)
+│   │           │   └── [types.ts](./src/games/stem/neuroscience/hierarchical-drift-diffusion-model/types.ts)
 │   │           ├── leaky-competing-accumulator/
 │   │           │   ├── [components.tsx](./src/games/stem/neuroscience/leaky-competing-accumulator/components.tsx)
 │   │           │   ├── [game.ts](./src/games/stem/neuroscience/leaky-competing-accumulator/game.ts)
@@ -1965,4 +1984,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-589 directories, 1373 files
+596 directories, 1385 files

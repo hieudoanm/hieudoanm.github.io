@@ -59,6 +59,8 @@
 │   │   └── [docker.md](./devops/docker/docker.md)
 │   ├── kubernetes/
 │   │   └── [kubernetes.md](./devops/kubernetes/kubernetes.md)
+│   ├── makefile/
+│   │   └── [makefile.md](./devops/makefile/makefile.md)
 │   └── server/
 │       ├── [apache-server.md](./devops/server/apache-server.md)
 │       └── [nginx.md](./devops/server/nginx.md)
@@ -193,6 +195,10 @@
 │   │   ├── orm/
 │   │   │   └── [sql-alchemy.md](./languages/python/orm/sql-alchemy.md)
 │   │   └── [python.md](./languages/python/python.md)
+│   ├── qml/
+│   │   ├── ui/
+│   │   │   └── [qt.md](./languages/qml/ui/qt.md)
+│   │   └── [qml.md](./languages/qml/qml.md)
 │   ├── r/
 │   │   └── [r.md](./languages/r/r.md)
 │   ├── ruby/
@@ -222,6 +228,8 @@
 │   │   │   └── [play.md](./languages/scala/backend/play.md)
 │   │   └── [scala.md](./languages/scala/scala.md)
 │   ├── swift/
+│   │   ├── cli/
+│   │   │   └── [swift-argument-parser.md](./languages/swift/cli/swift-argument-parser.md)
 │   │   ├── ui/
 │   │   │   └── [swiftui.md](./languages/swift/ui/swiftui.md)
 │   │   └── [swift.md](./languages/swift/swift.md)
@@ -271,6 +279,7 @@
 │       │   │   └── web/
 │       │   │       ├── [angular.md](./languages/typescript/frontend/frameworks/web/angular.md)
 │       │   │       ├── [astro.md](./languages/typescript/frontend/frameworks/web/astro.md)
+│       │   │       ├── [docusaurus.md](./languages/typescript/frontend/frameworks/web/docusaurus.md)
 │       │   │       ├── [gatsby.md](./languages/typescript/frontend/frameworks/web/gatsby.md)
 │       │   │       ├── [next.md](./languages/typescript/frontend/frameworks/web/next.md)
 │       │   │       ├── [nuxt.md](./languages/typescript/frontend/frameworks/web/nuxt.md)
@@ -365,4 +374,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-99 directories, 263 files
+103 directories, 268 files
