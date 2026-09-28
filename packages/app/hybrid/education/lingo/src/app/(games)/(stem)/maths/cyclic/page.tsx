@@ -1,6 +1,6 @@
 'use client';
 
-import { CyclicNumber } from '@/games/maths/cyclic';
+import { CyclicNumber } from '@/games/stem/maths/cyclic';
 import { NextPage } from 'next';
 
 const CyclicNumberPage: NextPage = () => (

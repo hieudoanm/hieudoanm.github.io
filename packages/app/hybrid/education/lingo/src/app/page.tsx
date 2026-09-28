@@ -4,6 +4,7 @@ import { GamesTemplate } from '@/components/templates/GamesTemplate';
 import { NextPage } from 'next';
 import {
   PiBank,
+  PiBrain,
   PiCalendar,
   PiCards,
   PiEye,
@@ -28,6 +29,13 @@ const ITEMS = [
     description: 'Interactive periodic table of elements',
     icon: PiFlask,
     href: '/chemistry/',
+    group: 'STEM',
+  },
+  {
+    name: 'Neuroscience',
+    description: 'Computational models of perception and decision-making',
+    icon: PiBrain,
+    href: '/neuroscience/',
     group: 'STEM',
   },
   {
