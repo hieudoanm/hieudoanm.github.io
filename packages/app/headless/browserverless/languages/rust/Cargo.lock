@@ -579,7 +579,7 @@ dependencies = [
 name = "browserverless-cli"
 version = "0.0.1"
 dependencies = [
- "base64 0.22.1",
+ "base64 0.23.1",
  "browserverless",
  "clap",
  "dpi",
