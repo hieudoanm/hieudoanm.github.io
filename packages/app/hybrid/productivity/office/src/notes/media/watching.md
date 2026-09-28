@@ -1,5 +1,0 @@
-# Watching
-
-- Anime
-- Movies
-- Series

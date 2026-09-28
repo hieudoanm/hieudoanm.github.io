@@ -35,6 +35,33 @@
 │   └── wide-column/
 │       ├── [apache-cassandra.md](./database/wide-column/apache-cassandra.md)
 │       └── [apache-hbase.md](./database/wide-column/apache-hbase.md)
+├── development/
+│   ├── architecture/
+│   │   ├── [cqrs.md](./development/architecture/cqrs.md)
+│   │   ├── [event-driven.md](./development/architecture/event-driven.md)
+│   │   ├── [hexagonal.md](./development/architecture/hexagonal.md)
+│   │   ├── [microservices.md](./development/architecture/microservices.md)
+│   │   └── [monolith.md](./development/architecture/monolith.md)
+│   └── security/
+│       ├── [jwt.md](./development/security/jwt.md)
+│       ├── [oauth2.md](./development/security/oauth2.md)
+│       └── [oidc.md](./development/security/oidc.md)
+├── devops/
+│   ├── ci/
+│   │   ├── [circle-ci.md](./devops/ci/circle-ci.md)
+│   │   ├── [github-actions.md](./devops/ci/github-actions.md)
+│   │   ├── [gitlab-ci.md](./devops/ci/gitlab-ci.md)
+│   │   ├── [harness.md](./devops/ci/harness.md)
+│   │   ├── [jenkins.md](./devops/ci/jenkins.md)
+│   │   └── [travis-ci.md](./devops/ci/travis-ci.md)
+│   ├── docker/
+│   │   ├── [docker-compose.md](./devops/docker/docker-compose.md)
+│   │   └── [docker.md](./devops/docker/docker.md)
+│   ├── kubernetes/
+│   │   └── [kubernetes.md](./devops/kubernetes/kubernetes.md)
+│   └── server/
+│       ├── [apache-server.md](./devops/server/apache-server.md)
+│       └── [nginx.md](./devops/server/nginx.md)
 ├── events/
 │   ├── [activemq.md](./events/activemq.md)
 │   ├── [apache-kafka.md](./events/apache-kafka.md)
@@ -61,6 +88,8 @@
 │   │   │   └── [unreal.md](./languages/cpp/game/unreal.md)
 │   │   └── [cpp.md](./languages/cpp/cpp.md)
 │   ├── csharp/
+│   │   ├── backend/
+│   │   │   └── [dotnet.md](./languages/csharp/backend/dotnet.md)
 │   │   ├── game/
 │   │   │   └── [unity.md](./languages/csharp/game/unity.md)
 │   │   ├── [csharp.md](./languages/csharp/csharp.md)
@@ -135,6 +164,7 @@
 │   │   └── [power-shell.md](./languages/power-shell/power-shell.md)
 │   ├── python/
 │   │   ├── backend/
+│   │   │   ├── [django.md](./languages/python/backend/django.md)
 │   │   │   ├── [fastapi.md](./languages/python/backend/fastapi.md)
 │   │   │   ├── [flask.md](./languages/python/backend/flask.md)
 │   │   │   ├── [pyramid.md](./languages/python/backend/pyramid.md)
@@ -155,6 +185,7 @@
 │   │   │   │   └── [apache-trino.md](./languages/python/data/engineer/apache-trino.md)
 │   │   │   └── science/
 │   │   │       ├── [hugging-face.md](./languages/python/data/science/hugging-face.md)
+│   │   │       ├── [lightgbm.md](./languages/python/data/science/lightgbm.md)
 │   │   │       ├── [pytorch.md](./languages/python/data/science/pytorch.md)
 │   │   │       ├── [scikit-learn.md](./languages/python/data/science/scikit-learn.md)
 │   │   │       ├── [tensorflow.md](./languages/python/data/science/tensorflow.md)
@@ -171,6 +202,7 @@
 │   ├── rust/
 │   │   ├── backend/
 │   │   │   ├── [actix.md](./languages/rust/backend/actix.md)
+│   │   │   ├── [axum.md](./languages/rust/backend/axum.md)
 │   │   │   ├── [gotham.md](./languages/rust/backend/gotham.md)
 │   │   │   ├── [hyper.md](./languages/rust/backend/hyper.md)
 │   │   │   ├── [rocket.md](./languages/rust/backend/rocket.md)
@@ -180,7 +212,8 @@
 │   │   │   ├── [clap.md](./languages/rust/cli/clap.md)
 │   │   │   └── [ratatui.md](./languages/rust/cli/ratatui.md)
 │   │   ├── ui/
-│   │   │   └── [slint.material.md](./languages/rust/ui/slint.material.md)
+│   │   │   ├── [slint.material.md](./languages/rust/ui/slint.material.md)
+│   │   │   └── [tauri.md](./languages/rust/ui/tauri.md)
 │   │   └── [rust.md](./languages/rust/rust.md)
 │   ├── scala/
 │   │   ├── backend/
@@ -229,6 +262,25 @@
 │       │   │   ├── [plotly.md](./languages/typescript/frontend/charts/plotly.md)
 │       │   │   ├── [recharts.md](./languages/typescript/frontend/charts/recharts.md)
 │       │   │   └── [tanstack-charts.md](./languages/typescript/frontend/charts/tanstack-charts.md)
+│       │   ├── frameworks/
+│       │   │   ├── hybrid/
+│       │   │   │   ├── [electron.md](./languages/typescript/frontend/frameworks/hybrid/electron.md)
+│       │   │   │   ├── [ionic.md](./languages/typescript/frontend/frameworks/hybrid/ionic.md)
+│       │   │   │   ├── [lynx.md](./languages/typescript/frontend/frameworks/hybrid/lynx.md)
+│       │   │   │   └── [react-native.md](./languages/typescript/frontend/frameworks/hybrid/react-native.md)
+│       │   │   └── web/
+│       │   │       ├── [angular.md](./languages/typescript/frontend/frameworks/web/angular.md)
+│       │   │       ├── [astro.md](./languages/typescript/frontend/frameworks/web/astro.md)
+│       │   │       ├── [gatsby.md](./languages/typescript/frontend/frameworks/web/gatsby.md)
+│       │   │       ├── [next.md](./languages/typescript/frontend/frameworks/web/next.md)
+│       │   │       ├── [nuxt.md](./languages/typescript/frontend/frameworks/web/nuxt.md)
+│       │   │       ├── [react.md](./languages/typescript/frontend/frameworks/web/react.md)
+│       │   │       ├── [solid-start.md](./languages/typescript/frontend/frameworks/web/solid-start.md)
+│       │   │       ├── [solid.md](./languages/typescript/frontend/frameworks/web/solid.md)
+│       │   │       ├── [svelte-kit.md](./languages/typescript/frontend/frameworks/web/svelte-kit.md)
+│       │   │       ├── [svelte.md](./languages/typescript/frontend/frameworks/web/svelte.md)
+│       │   │       ├── [vue.md](./languages/typescript/frontend/frameworks/web/vue.md)
+│       │   │       └── [vuepress.md](./languages/typescript/frontend/frameworks/web/vuepress.md)
 │       │   ├── query/
 │       │   │   ├── [apollo-client.md](./languages/typescript/frontend/query/apollo-client.md)
 │       │   │   ├── [axios.md](./languages/typescript/frontend/query/axios.md)
@@ -242,6 +294,11 @@
 │       │       └── [zustand.md](./languages/typescript/frontend/state-management/zustand.md)
 │       ├── game/
 │       │   └── [cocos-creator.md](./languages/typescript/game/cocos-creator.md)
+│       ├── ml/
+│       │   ├── [brain.js.md](./languages/typescript/ml/brain.js.md)
+│       │   ├── [mind.js.md](./languages/typescript/ml/mind.js.md)
+│       │   ├── [ml5.js.md](./languages/typescript/ml/ml5.js.md)
+│       │   └── [synaptic.js.md](./languages/typescript/ml/synaptic.js.md)
 │       ├── orm/
 │       │   ├── [drizzle.md](./languages/typescript/orm/drizzle.md)
 │       │   ├── [mikro-orm.md](./languages/typescript/orm/mikro-orm.md)
@@ -308,4 +365,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-86 directories, 219 files
+99 directories, 263 files

@@ -10,12 +10,12 @@ localStorage.
 
 Reference docs live in `docs/`:
 
-| Doc                    | Covers                                                     |
-| ---------------------- | ---------------------------------------------------------- |
-| `docs/ARCHITECTURE.md` | Tech stack, directory structure, routing, state management |
-| `docs/ROADMAP.md`      | Phased feature roadmap with progress tracking              |
-| `docs/CONTRIBUTING.md` | Setup, dev commands, coding and testing conventions        |
-| `docs/PACKAGING.md`    | Packaging checklist per platform                           |
+| Doc                    | Covers                                                            |
+| ---------------------- | ----------------------------------------------------------------- |
+| `docs/ARCHITECTURE.md` | Tech stack, directory structure, routing, state management        |
+| `docs/ROADMAP.md`      | Phased feature roadmap with progress tracking                     |
+| `docs/CONTRIBUTING.md` | Setup, dev commands, coding and testing conventions               |
+| `docs/PACKAGING.md`    | Packaging checklist per platform                                  |
 | `docs/DOWNLOADS.md`    | Download links, feature overview, and Google/Microsoft comparison |
 
 ## Key Conventions
@@ -25,7 +25,8 @@ Reference docs live in `docs/`:
 - DaisyUI component classes (`btn`, `card`, `badge`, `table`, `select`)
 - Themes via DaisyUI plugin: `office-light` (default) and `office-dark`
 - `prettier-plugin-tailwindcss` for class sorting
-- Atomic design per feature: `src/components/<feature>/{atoms,molecules,organisms}`
+- Atomic design per feature:
+  `src/components/<feature>/{atoms,molecules,organisms}`
 - Feature logic in `src/lib/<feature>/`, data in `src/data/<feature>/`
 - Tests colocated in `__tests__/` — one `*.test.ts(x)` per unit; route-group
   pages use `colocated/page.test.tsx`, root pages under `src/app/__tests__/`
@@ -37,16 +38,16 @@ Reference docs live in `docs/`:
 - Persists to IndexedDB database **`office-db`** (kept separate from the old
   projects app's `projects-db`)
 - Providers composed in `src/components/tasks/Providers.tsx`:
-  `DataProvider > AuthProvider > ToastProvider` (path aliases
-  `@/lib/tasks/*` and `@/data/tasks/*`)
+  `DataProvider > AuthProvider > ToastProvider` (path aliases `@/lib/tasks/*`
+  and `@/data/tasks/*`)
 - Full page (`(app)/tasks/`) renders `ProjectSidebar` + `ViewSwitcher` +
   `BoardBody`. `BoardBody` switches among `KanbanBoard`, `ListView`,
   `CalendarView`, `TimelineView` — there is NO tasks view on the full page
   (tasks view is lite-only)
-- `TasksView` (lite + TasksView) has three states: loading spinner,
-  signed-out (`TaskSignInState`), empty (`TaskEmptyState`)
-- `AuthProvider` falls back to `members[0]` when the session userId is missing
-  — fixes blank screens
+- `TasksView` (lite + TasksView) has three states: loading spinner, signed-out
+  (`TaskSignInState`), empty (`TaskEmptyState`)
+- `AuthProvider` falls back to `members[0]` when the session userId is missing —
+  fixes blank screens
 - `PiTasks` does NOT exist in `react-icons/pi` — use `PiListChecks`
 
 ## Commands
@@ -90,6 +91,7 @@ e2e/                          # Playwright specs
 
 - `/` — Office hub (Calendar, CSV, Markdown, Tasks cards)
 - `/calendar/`, `/csv/`, `/md/`, `/tasks/` — full sub-apps
-- `/lite/` — lite hub; `/lite/calendar/`, `/lite/csv/`, `/lite/md/`, `/lite/tasks/`
+- `/lite/` — lite hub; `/lite/calendar/`, `/lite/csv/`, `/lite/md/`,
+  `/lite/tasks/`
 - `/about`, `/downloads`, `/version` — info pages
 - `/sign-in`, `/sign-up`, `/profile`, `/forget-password`, `/reset-password`
