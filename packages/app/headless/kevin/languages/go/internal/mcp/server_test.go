@@ -316,3 +316,93 @@ func (r *failingReader) Read([]byte) (int, error) {
 
 // errRead is the failure failingReader reports.
 var errRead = errors.New("read failed")
+
+// A notification carries no id, so it must never be answered. Answering one
+// desynchronises the client, which is a protocol violation.
+func TestNotificationsAreNeverAnswered(t *testing.T) {
+	methods := []string{"initialize", "ping", "tools/list", "tools/call", "resources/list"}
+
+	for _, method := range methods {
+		t.Run(method, func(t *testing.T) {
+			frame := `{"jsonrpc":"2.0","method":"` + method + `","params":{"name":"kevin_flush","arguments":{"confirm":true}}}`
+			if out := runServer(t, frame, nil); out != "" {
+				t.Fatalf("notification %s was answered with %q", method, out)
+			}
+		})
+	}
+}
+
+// A tools/call notification must not run the tool. Otherwise a frame that omits
+// an id can flush the store with no reply to carry the result.
+func TestToolsCallNotificationDoesNotRunTheTool(t *testing.T) {
+	store := NewDBStore(newTestDB())
+	server := NewServerWithIO(nil)
+	RegisterTools(server, store)
+
+	frame := `{"jsonrpc":"2.0","method":"tools/call","params":{"name":"kevin_set","arguments":{"key":"a","value":"b"}}}`
+	if out := runServerOn(t, server, frame); out != "" {
+		t.Fatalf("expected no reply, got %q", out)
+	}
+
+	if _, found, err := store.Get("a"); err != nil || found {
+		t.Fatalf("a notification ran the tool: found=%v err=%v", found, err)
+	}
+}
+
+// A malformed notification is still not answered: the version check must not
+// precede the notification check.
+func TestMalformedNotificationIsNotAnswered(t *testing.T) {
+	if out := runServer(t, `{"method":"ping"}`, nil); out != "" {
+		t.Fatalf("a malformed notification was answered with %q", out)
+	}
+}
+
+// A frame larger than the cap is reported as a parse error rather than being
+// buffered, and the stream resynchronises on the next newline.
+func TestOverlongFrameIsAParseErrorAndTheStreamRecovers(t *testing.T) {
+	oversized := `{"jsonrpc":"2.0","id":1,"method":"ping","params":{"pad":"` +
+		strings.Repeat("x", MaxFrameBytes) + `"}}`
+	input := oversized + "\n" + `{"jsonrpc":"2.0","id":2,"method":"ping"}` + "\n"
+
+	lines := responseLines(t, runServer(t, input, nil))
+	if len(lines) < 2 {
+		t.Fatalf("expected a parse error and a ping reply, got %v", lines)
+	}
+
+	var first struct {
+		ID    json.RawMessage `json:"id"`
+		Error *ErrorObject    `json:"error"`
+	}
+	if err := json.Unmarshal([]byte(lines[0]), &first); err != nil {
+		t.Fatalf("unmarshal %q: %v", lines[0], err)
+	}
+	if first.Error == nil || first.Error.Code != ErrCodeParse {
+		t.Fatalf("expected a parse error, got %q", lines[0])
+	}
+	if !strings.Contains(lines[len(lines)-1], `"id":2`) {
+		t.Fatalf("the stream did not resynchronise, got %q", lines[len(lines)-1])
+	}
+}
+
+// The version is echoed when the server speaks it, and the server's latest is
+// offered otherwise.
+func TestInitializeNegotiatesTheProtocolVersion(t *testing.T) {
+	tests := []struct {
+		name    string
+		request string
+		want    string
+	}{
+		{"supported version is echoed", ProtocolVersion, ProtocolVersion},
+		{"unsupported version falls back", "1999-01-01", ProtocolVersion},
+		{"absent params fall back", "", ProtocolVersion},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			frame := `{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"` + tt.request + `"}}`
+			if out := runServer(t, frame, nil); !strings.Contains(out, tt.want) {
+				t.Fatalf("expected protocol version %q, got %q", tt.want, out)
+			}
+		})
+	}
+}

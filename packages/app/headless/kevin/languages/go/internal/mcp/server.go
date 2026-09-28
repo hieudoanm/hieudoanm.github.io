@@ -66,19 +66,14 @@ func (s *Server) RunWithContext(ctx context.Context) error {
 // runWithReader serves requests read from in. A nil error is returned on clean
 // EOF, which is how MCP clients signal shutdown.
 func (s *Server) runWithReader(ctx context.Context, in io.Reader) error {
-	type readResult struct {
-		line string
-		err  error
-	}
-
 	results := make(chan readResult)
 	go func() {
 		defer close(results)
 		reader := bufio.NewReader(in)
 		for {
-			line, err := reader.ReadString('\n')
+			line, tooLong, err := readFrame(reader)
 			select {
-			case results <- readResult{line: line, err: err}:
+			case results <- readResult{line: line, tooLong: tooLong, err: err}:
 			case <-ctx.Done():
 				return
 			}
@@ -96,98 +91,148 @@ func (s *Server) runWithReader(ctx context.Context, in io.Reader) error {
 			if !ok {
 				return nil
 			}
-			if line := strings.TrimSpace(result.line); line != "" {
-				s.handleMessage([]byte(line))
-			}
+			s.handleFrame(result)
 			if result.err != nil {
-				if errors.Is(result.err, io.EOF) {
-					return nil
-				}
-				return fmt.Errorf("read stdin: %w", result.err)
+				return endOfInput(result.err)
 			}
 		}
 	}
 }
 
+// readResult is one frame pulled off the input, or the reason reading stopped.
+type readResult struct {
+	line    string
+	tooLong bool
+	err     error
+}
+
+// readFrame reads one newline-terminated frame, refusing anything larger than
+// MaxFrameBytes so a hostile or broken client cannot grow the heap without
+// bound. An over-long frame leaves the reader on its remaining bytes, so the
+// tail is discarded as junk and the stream resynchronises on the next newline.
+func readFrame(reader *bufio.Reader) (string, bool, error) {
+	var frame strings.Builder
+	for {
+		chunk, err := reader.ReadSlice('\n')
+		if frame.Len()+len(chunk) > MaxFrameBytes {
+			return "", true, nil
+		}
+		frame.Write(chunk)
+		if err == nil {
+			return frame.String(), false, nil
+		}
+		if errors.Is(err, bufio.ErrBufferFull) {
+			continue
+		}
+		return frame.String(), false, err
+	}
+}
+
+// handleFrame answers one frame, reporting an over-long one as a parse error
+// and skipping blank lines.
+func (s *Server) handleFrame(result readResult) {
+	if result.tooLong {
+		slog.Error("frame too large", "max", MaxFrameBytes)
+		s.write(NewErrorResponse(nil, ErrCodeParse, "parse error: frame too large"))
+		return
+	}
+	if line := strings.TrimSpace(result.line); line != "" {
+		s.handleMessage([]byte(line))
+	}
+}
+
+// endOfInput maps a read error onto the serve result: a clean EOF is how MCP
+// clients signal shutdown and is not a failure.
+func endOfInput(err error) error {
+	if errors.Is(err, io.EOF) {
+		return nil
+	}
+	return fmt.Errorf("read stdin: %w", err)
+}
+
 // handleMessage decodes one JSON-RPC frame and dispatches it. Undecodable
-// frames and unknown methods produce an error reply; notifications (frames
-// without an id) never get a reply.
+// frames produce an error reply.
+//
+// A notification — a frame carrying no id — is neither answered nor dispatched,
+// whatever the method. Answering one desynchronises the client, and dispatching
+// a tools/call notification would run a destructive tool with no reply to carry
+// its result.
 func (s *Server) handleMessage(raw []byte) {
 	var request Request
 	if err := json.Unmarshal(raw, &request); err != nil {
 		s.write(NewErrorResponse(nil, ErrCodeParse, "parse error: "+err.Error()))
 		return
 	}
-	if request.JSONRPC != "2.0" {
-		s.write(NewErrorResponse(request.ID, ErrCodeInvalidRequest, "invalid jsonrpc version"))
+	if isNotification(request.ID) {
+		slog.Debug("ignoring notification", "method", request.Method)
 		return
 	}
+	if request.JSONRPC != "2.0" {
+		s.reply(request.ID, NewErrorResponse(request.ID, ErrCodeInvalidRequest, "invalid jsonrpc version"))
+		return
+	}
+	s.dispatch(request)
+}
 
-	isNotification := len(request.ID) == 0 || string(request.ID) == "null"
-
+// dispatch answers one addressed request.
+func (s *Server) dispatch(request Request) {
 	switch request.Method {
 	case "initialize":
-		s.handleInitialize(request.ID)
+		s.reply(request.ID, NewSuccessResponse(request.ID, initializeResult(request.Params)))
 	case "ping":
-		s.write(NewSuccessResponse(request.ID, map[string]any{}))
+		s.reply(request.ID, NewSuccessResponse(request.ID, PingResult{}))
 	case "tools/list":
-		s.handleListTools(request.ID)
+		s.reply(request.ID, NewSuccessResponse(request.ID, ListToolsResult{Tools: s.sortedTools()}))
 	case "tools/call":
-		s.handleCallTool(request.ID, request.Params)
+		s.reply(request.ID, s.callTool(request))
 	default:
 		slog.Debug("unknown method", "method", request.Method)
-		if !isNotification {
-			s.write(NewErrorResponse(request.ID, ErrCodeMethodNotFound, "method not found: "+request.Method))
-		}
+		s.reply(request.ID, NewErrorResponse(request.ID, ErrCodeMethodNotFound, "method not found: "+request.Method))
 	}
 }
 
-// handleInitialize replies with the negotiated protocol version, the tool
-// capability, and this server's identity.
-func (s *Server) handleInitialize(id json.RawMessage) {
-	s.write(NewSuccessResponse(id, InitializeResult{
-		ProtocolVersion: ProtocolVersion,
-		Capabilities: ServerCapabilities{
-			Tools: &ToolsCapabilities{ListChanged: false},
-		},
-		ServerInfo: ServerInfo{
-			Name:    ServerName,
-			Version: ServerVersion,
-		},
-	}))
+// isNotification reports whether an id marks its frame as a notification. Both
+// a missing id and an explicit null do, per JSON-RPC 2.0.
+func isNotification(id json.RawMessage) bool {
+	return len(id) == 0 || string(id) == "null"
 }
 
-// handleListTools replies with every registered tool, sorted by name so
-// clients and tests see a stable order.
-func (s *Server) handleListTools(id json.RawMessage) {
+// reply writes response unless id marks the frame as a notification.
+func (s *Server) reply(id json.RawMessage, response Response) {
+	if isNotification(id) {
+		return
+	}
+	s.write(response)
+}
+
+// handleListTools used to inline this; sortedTools is the listable view.
+func (s *Server) sortedTools() []Tool {
 	s.mu.Lock()
+	defer s.mu.Unlock()
+
 	tools := make([]Tool, 0, len(s.tools))
 	for _, tool := range s.tools {
 		tools = append(tools, tool)
 	}
-	s.mu.Unlock()
-
 	sort.Slice(tools, func(i, j int) bool { return tools[i].Name < tools[j].Name })
-	s.write(NewSuccessResponse(id, ListToolsResult{Tools: tools}))
+	return tools
 }
 
-// handleCallTool decodes the call params and invokes the named tool handler.
-func (s *Server) handleCallTool(id json.RawMessage, params json.RawMessage) {
+// callTool runs the named tool and wraps its result in a reply. A malformed
+// params object or an unregistered name is a JSON-RPC error.
+func (s *Server) callTool(request Request) Response {
 	var call ToolCallParams
-	if err := json.Unmarshal(params, &call); err != nil {
-		s.write(NewErrorResponse(id, ErrCodeInvalidParams, "invalid params: "+err.Error()))
-		return
+	if err := json.Unmarshal(objectOrEmpty(request.Params), &call); err != nil {
+		return NewErrorResponse(request.ID, ErrCodeInvalidParams, "invalid params: "+err.Error())
 	}
 
 	s.mu.Lock()
 	handler, ok := s.handlers[call.Name]
 	s.mu.Unlock()
 	if !ok {
-		s.write(NewErrorResponse(id, ErrCodeMethodNotFound, "tool not found: "+call.Name))
-		return
+		return NewErrorResponse(request.ID, ErrCodeMethodNotFound, "tool not found: "+call.Name)
 	}
-
-	s.write(NewSuccessResponse(id, handler(call.Arguments)))
+	return NewSuccessResponse(request.ID, handler(call.Arguments))
 }
 
 // write emits one response frame. Diagnostics go to stderr so that stdout

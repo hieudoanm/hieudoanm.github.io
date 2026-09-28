@@ -103,6 +103,13 @@ func within(root, target string) bool {
 // resolveExisting resolves symlinks in the longest existing prefix of path and
 // re-appends the segments that do not exist yet, so a file the server is about
 // to create is checked against the real location of its parent directory.
+//
+// A component that exists but cannot be resolved is a broken symlink, not a
+// path awaiting creation. Confusing the two would let a link inside the root
+// point at a location outside it: the target does not exist, so nothing is
+// written there yet, and the walk would happily approve the link's own name.
+// The write would then follow the link and create the file outside the root, so
+// a broken symlink is refused outright.
 func resolveExisting(path string) (string, error) {
 	tail := ""
 	for current := path; ; {
@@ -113,6 +120,11 @@ func resolveExisting(path string) (string, error) {
 		if !errors.Is(err, os.ErrNotExist) {
 			return "", err
 		}
+		if broken, lerr := isSymlink(current); lerr != nil {
+			return "", lerr
+		} else if broken {
+			return "", fmt.Errorf("path %s is a symlink that does not resolve, so its target cannot be confined to the root", current)
+		}
 		parent := filepath.Dir(current)
 		if parent == current {
 			return path, nil
@@ -120,6 +132,19 @@ func resolveExisting(path string) (string, error) {
 		tail = filepath.Join(filepath.Base(current), tail)
 		current = parent
 	}
+}
+
+// isSymlink reports whether path exists and is itself a symbolic link. Lstat
+// does not follow the link, so a broken link is still seen as a link.
+func isSymlink(path string) (bool, error) {
+	info, err := os.Lstat(path)
+	if errors.Is(err, os.ErrNotExist) {
+		return false, nil
+	}
+	if err != nil {
+		return false, fmt.Errorf("inspect %s: %w", path, err)
+	}
+	return info.Mode()&os.ModeSymlink != 0, nil
 }
 
 // Read returns the contents of a file inside the root.

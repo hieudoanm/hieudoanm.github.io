@@ -148,8 +148,18 @@ impl Default for InitializeResult {
 impl InitializeResult {
     /// Builds the result for `initialize`, advertising tools only.
     pub fn new() -> Self {
+        Self::negotiated(None)
+    }
+
+    /// Builds the result, negotiating the protocol revision against the
+    /// client's requested `protocolVersion`.
+    ///
+    /// A revision this server speaks is echoed back; anything else falls back to
+    /// [`PROTOCOL_VERSION`] and the client is expected to disconnect if it
+    /// cannot speak that either. Non-object or absent params negotiate nothing.
+    pub fn negotiated(params: Option<&Value>) -> Self {
         Self {
-            protocol_version: PROTOCOL_VERSION.to_string(),
+            protocol_version: negotiated_version(params).to_string(),
             capabilities: ServerCapabilities {
                 tools: Some(ToolsCapabilities {
                     list_changed: false,
@@ -162,6 +172,27 @@ impl InitializeResult {
         }
     }
 }
+
+/// Returns the revision to advertise to a client that requested `params`.
+///
+/// Returning an element of [`supported_protocol_versions`] rather than the
+/// borrowed request keeps the result `&'static str`.
+fn negotiated_version(params: Option<&Value>) -> &'static str {
+    let requested = params
+        .and_then(Value::as_object)
+        .and_then(|params| params.get("protocolVersion"))
+        .and_then(Value::as_str);
+    supported_protocol_versions()
+        .into_iter()
+        .find(|version| Some(*version) == requested)
+        .unwrap_or(PROTOCOL_VERSION)
+}
+
+/// The revisions this server can speak, newest first.
+pub fn supported_protocol_versions() -> Vec<&'static str> {
+    vec![PROTOCOL_VERSION]
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

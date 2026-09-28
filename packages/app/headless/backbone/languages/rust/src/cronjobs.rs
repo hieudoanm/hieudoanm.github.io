@@ -136,8 +136,14 @@ mod tests {
         };
         let data = webhook_cronjob_data(&job);
         assert_eq!(data["cronjob"]["name"], "Job with spéçïal & ch@rs!");
-        assert_eq!(data["cronjob"]["command"], "https://example.com/hook?q=test&lang=en");
-        assert_eq!(data["cronjob"]["headers"], r#"[["X-Custom", "val=1; type=test"]]"#);
+        assert_eq!(
+            data["cronjob"]["command"],
+            "https://example.com/hook?q=test&lang=en"
+        );
+        assert_eq!(
+            data["cronjob"]["headers"],
+            r#"[["X-Custom", "val=1; type=test"]]"#
+        );
         assert_eq!(data["cronjob"]["body"], r#"{"message": "hello \"world\""}"#);
     }
 
@@ -166,7 +172,10 @@ mod tests {
             ..sample_cronjob()
         };
         let data = webhook_cronjob_data(&job);
-        assert_eq!(data["cronjob"]["headers"], r#"[["X-API-Key", "secret123"]]"#);
+        assert_eq!(
+            data["cronjob"]["headers"],
+            r#"[["X-API-Key", "secret123"]]"#
+        );
         assert_eq!(data["cronjob"]["body"], r#"{"data": "test"}"#);
     }
 
@@ -179,11 +188,10 @@ mod tests {
         let conn = rusqlite::Connection::open(&db_path).unwrap();
         db::migrate_db(&conn).unwrap();
         drop(conn);
-        let pool: Pool<db::ConnectionManager> = deadpool::managed::Pool::builder(
-            db::ConnectionManager { path: db_path },
-        )
-        .build()
-        .unwrap();
+        let pool: Pool<db::ConnectionManager> =
+            deadpool::managed::Pool::builder(db::ConnectionManager { path: db_path })
+                .build()
+                .unwrap();
         let state = Arc::new(AppState {
             db: pool,
             storage_dir: tmp_dir.clone(),
@@ -202,12 +210,7 @@ mod tests {
     async fn test_server(status: u16, body: &'static str) -> std::net::SocketAddr {
         let app = axum::Router::new().route(
             "/hook",
-            any(move || async move {
-                (
-                    axum::http::StatusCode::from_u16(status).unwrap(),
-                    body,
-                )
-            }),
+            any(move || async move { (axum::http::StatusCode::from_u16(status).unwrap(), body) }),
         );
         let listener = TcpListener::bind("127.0.0.1:0").await.unwrap();
         let addr = listener.local_addr().unwrap();
@@ -241,7 +244,17 @@ mod tests {
         let job = make_job("cg-get", "GET", &format!("http://{addr}/hook"), "", "");
         {
             let conn = state.db.get().await.unwrap();
-            db::insert_cron_job(&conn, &job.id, &job.name, &job.schedule, &job.command, &job.method, &job.headers, &job.body).unwrap();
+            db::insert_cron_job(
+                &conn,
+                &job.id,
+                &job.name,
+                &job.schedule,
+                &job.command,
+                &job.method,
+                &job.headers,
+                &job.body,
+            )
+            .unwrap();
         }
         execute_cron_job(Arc::clone(&state), job).await;
         let conn = state.db.get().await.unwrap();
@@ -330,7 +343,13 @@ mod tests {
     async fn execute_cron_job_unknown_method_defaults_to_get() {
         let (state, tmp_dir) = create_test_env();
         let addr = test_server(200, "default-get").await;
-        let job = make_job("cg-unknown", "OPTIONS", &format!("http://{addr}/hook"), "", "");
+        let job = make_job(
+            "cg-unknown",
+            "OPTIONS",
+            &format!("http://{addr}/hook"),
+            "",
+            "",
+        );
         execute_cron_job(Arc::clone(&state), job).await;
         let conn = state.db.get().await.unwrap();
         let logs = db::list_cron_job_logs(&conn, "cg-unknown").unwrap();
@@ -378,7 +397,17 @@ mod tests {
         let job = make_job("cg-net", "GET", "http://127.0.0.1:1/hook", "", "");
         {
             let conn = state.db.get().await.unwrap();
-            db::insert_cron_job(&conn, &job.id, &job.name, &job.schedule, &job.command, &job.method, &job.headers, &job.body).unwrap();
+            db::insert_cron_job(
+                &conn,
+                &job.id,
+                &job.name,
+                &job.schedule,
+                &job.command,
+                &job.method,
+                &job.headers,
+                &job.body,
+            )
+            .unwrap();
         }
         execute_cron_job(Arc::clone(&state), job).await;
         let conn = state.db.get().await.unwrap();
@@ -449,7 +478,18 @@ mod tests {
             )
             .unwrap();
             // Mark job as inactive
-            db::update_cron_job(&conn, "sched-inactive", "inactive test", "* * * * * *", &format!("http://{addr}/hook"), "GET", "", "", false).unwrap();
+            db::update_cron_job(
+                &conn,
+                "sched-inactive",
+                "inactive test",
+                "* * * * * *",
+                &format!("http://{addr}/hook"),
+                "GET",
+                "",
+                "",
+                false,
+            )
+            .unwrap();
         }
 
         start_cron_scheduler(Arc::clone(&state)).await;
@@ -554,7 +594,11 @@ pub async fn execute_cron_job(state: Arc<AppState>, job: CronJob) {
         .unwrap_or(Utc::now());
     let duration_ms = (finished - started).num_milliseconds();
 
-    let status_str = if (200..300).contains(&status) { "success" } else { "failure" };
+    let status_str = if (200..300).contains(&status) {
+        "success"
+    } else {
+        "failure"
+    };
 
     let log = CronJobLog {
         id: Uuid::new_v4().to_string().replace('-', ""),

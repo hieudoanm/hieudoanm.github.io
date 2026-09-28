@@ -73,16 +73,21 @@ func (s *Server) handleMessage(ctx context.Context, raw []byte) {
 		s.write(NewErrorResponse(nil, ErrCodeParse, "parse error: "+err.Error()))
 		return
 	}
+	// A notification carries no id, so it must never be answered. Answering one
+	// desynchronises the client, so this check precedes the jsonrpc version
+	// check and covers every method, not just unknown ones.
+	if request.IsNotification() {
+		slog.Debug("ignoring notification", "method", request.Method)
+		return
+	}
 	if request.JSONRPC != "2.0" {
 		s.write(NewErrorResponse(request.ID, ErrCodeInvalidRequest, "invalid jsonrpc version"))
 		return
 	}
 
-	isNotification := len(request.ID) == 0 || string(request.ID) == "null"
-
 	switch request.Method {
 	case "initialize":
-		s.handleInitialize(request.ID)
+		s.handleInitialize(request.ID, request.Params)
 	case "ping":
 		s.write(NewSuccessResponse(request.ID, map[string]any{}))
 	case "tools/list":
@@ -91,17 +96,15 @@ func (s *Server) handleMessage(ctx context.Context, raw []byte) {
 		s.handleCallTool(ctx, request.ID, request.Params)
 	default:
 		slog.Debug("unknown method", "method", request.Method)
-		if !isNotification {
-			s.write(NewErrorResponse(request.ID, ErrCodeMethodNotFound, "method not found: "+request.Method))
-		}
+		s.write(NewErrorResponse(request.ID, ErrCodeMethodNotFound, "method not found: "+request.Method))
 	}
 }
 
 // handleInitialize replies with the negotiated protocol version, the tool
 // capability, and this server's identity.
-func (s *Server) handleInitialize(id json.RawMessage) {
+func (s *Server) handleInitialize(id json.RawMessage, params json.RawMessage) {
 	s.write(NewSuccessResponse(id, InitializeResult{
-		ProtocolVersion: ProtocolVersion,
+		ProtocolVersion: NegotiatedVersion(params),
 		Capabilities: ServerCapabilities{
 			Tools: &ToolsCapabilities{ListChanged: false},
 		},
@@ -127,9 +130,11 @@ func (s *Server) handleListTools(id json.RawMessage) {
 }
 
 // handleCallTool decodes the call params and invokes the named tool handler.
+// Absent or null params are treated as an empty object, so a call with no
+// params names no tool rather than failing to decode.
 func (s *Server) handleCallTool(ctx context.Context, id json.RawMessage, params json.RawMessage) {
 	var call ToolCallParams
-	if err := json.Unmarshal(params, &call); err != nil {
+	if err := json.Unmarshal(ObjectOrEmpty(params), &call); err != nil {
 		s.write(NewErrorResponse(id, ErrCodeInvalidParams, "invalid params: "+err.Error()))
 		return
 	}

@@ -1,10 +1,8 @@
 package mcp
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
-	"strings"
 )
 
 // Schema property shorthands, kept here so every tool describes its arguments
@@ -179,8 +177,6 @@ func handlerFor(name string, store Store) ToolHandler {
 
 // tool helpers
 
-type pingArgs struct{}
-
 func pingTool(store Store) *ToolResult {
 	if err := store.Ping(); err != nil {
 		return NewToolResultError(err.Error())
@@ -188,42 +184,27 @@ func pingTool(store Store) *ToolResult {
 	return NewToolResultText(`{"pong": true}`)
 }
 
-type setArgs struct {
-	Key        string `json:"key"`
-	Value      string `json:"value"`
-	TTLSeconds int    `json:"ttl_seconds,omitempty"`
-}
-
 func setTool(store Store, raw json.RawMessage) *ToolResult {
-	var args setArgs
-	if err := unmarshalArgs(raw, &args); err != nil {
-		return NewToolResultError(err.Error())
-	}
-	if missing := requireKey(args.Key); missing != nil {
+	key := stringArg(raw, "key")
+	if missing := requireKey(key); missing != nil {
 		return missing
 	}
-	if args.Value == "" {
+	value := stringArg(raw, "value")
+	if value == "" {
 		return NewToolResultError("value is required and must not be empty")
 	}
-	if err := store.Set(args.Key, args.Value, args.TTLSeconds); err != nil {
+	if err := store.Set(key, value, intArg(raw, "ttl_seconds")); err != nil {
 		return NewToolResultError(err.Error())
 	}
 	return NewToolResultText(`{"ok": true}`)
 }
 
-type getArgs struct {
-	Key string `json:"key"`
-}
-
 func getTool(store Store, raw json.RawMessage) *ToolResult {
-	var args getArgs
-	if err := unmarshalArgs(raw, &args); err != nil {
-		return NewToolResultError(err.Error())
-	}
-	if missing := requireKey(args.Key); missing != nil {
+	key := stringArg(raw, "key")
+	if missing := requireKey(key); missing != nil {
 		return missing
 	}
-	value, found, err := store.Get(args.Key)
+	value, found, err := store.Get(key)
 	if err != nil {
 		return NewToolResultError(err.Error())
 	}
@@ -237,45 +218,29 @@ func getTool(store Store, raw json.RawMessage) *ToolResult {
 	return NewToolResultText(fmt.Sprintf(`{"found": true, "value": %s}`, encoded))
 }
 
-type delArgs struct {
-	Keys []string `json:"keys"`
-}
-
 func delTool(store Store, raw json.RawMessage) *ToolResult {
-	var args delArgs
-	if err := unmarshalArgs(raw, &args); err != nil {
-		return NewToolResultError(err.Error())
-	}
-	if len(args.Keys) == 0 {
+	keys := stringListArg(raw, "keys")
+	if len(keys) == 0 {
 		return NewToolResultError("keys is required and must contain at least one key")
 	}
-	deleted, err := store.Del(args.Keys)
+	deleted, err := store.Del(keys)
 	if err != nil {
 		return NewToolResultError(err.Error())
 	}
 	return NewToolResultText(fmt.Sprintf(`{"deleted": %d}`, deleted))
 }
 
-type existsArgs struct {
-	Key string `json:"key"`
-}
-
 func existsTool(store Store, raw json.RawMessage) *ToolResult {
-	var args existsArgs
-	if err := unmarshalArgs(raw, &args); err != nil {
-		return NewToolResultError(err.Error())
-	}
-	if missing := requireKey(args.Key); missing != nil {
+	key := stringArg(raw, "key")
+	if missing := requireKey(key); missing != nil {
 		return missing
 	}
-	exists, err := store.Exists(args.Key)
+	exists, err := store.Exists(key)
 	if err != nil {
 		return NewToolResultError(err.Error())
 	}
 	return NewToolResultText(fmt.Sprintf(`{"exists": %t}`, exists))
 }
-
-type keysArgs struct{}
 
 func keysTool(store Store) *ToolResult {
 	keys, err := store.Keys()
@@ -289,8 +254,6 @@ func keysTool(store Store) *ToolResult {
 	return NewToolResultText(fmt.Sprintf(`{"keys": %s, "count": %d}`, encoded, len(keys)))
 }
 
-type lenArgs struct{}
-
 func lenTool(store Store) *ToolResult {
 	count, err := store.Len()
 	if err != nil {
@@ -299,65 +262,43 @@ func lenTool(store Store) *ToolResult {
 	return NewToolResultText(fmt.Sprintf(`{"count": %d}`, count))
 }
 
-type ttlArgs struct {
-	Key string `json:"key"`
-}
-
+// ttlTool reports the key alongside its state. The key is marshalled rather
+// than interpolated, so a key containing a quote or a newline still produces
+// well-formed JSON.
 func ttlTool(store Store, raw json.RawMessage) *ToolResult {
-	var args ttlArgs
-	if err := unmarshalArgs(raw, &args); err != nil {
-		return NewToolResultError(err.Error())
-	}
-	if missing := requireKey(args.Key); missing != nil {
+	key := stringArg(raw, "key")
+	if missing := requireKey(key); missing != nil {
 		return missing
 	}
-	seconds, state, err := store.TTL(args.Key)
+	seconds, state, err := store.TTL(key)
 	if err != nil {
 		return NewToolResultError(err.Error())
 	}
-	switch state {
-	case TTLStateMissing:
-		return NewToolResultText(`{"key": null, "seconds": -2, "state": "missing"}`)
-	case TTLStateNoExpiry:
-		return NewToolResultText(`{"key": "` + args.Key + `", "seconds": -1, "state": "no-expiry"}`)
-	default:
-		return NewToolResultText(fmt.Sprintf(`{"key": "%s", "seconds": %d, "state": "expiring"}`, args.Key, seconds))
+	encoded, err := json.Marshal(key)
+	if err != nil {
+		return NewToolResultError(fmt.Sprintf("marshal key: %v", err))
 	}
-}
-
-type expireArgs struct {
-	Key     string `json:"key"`
-	Seconds int    `json:"seconds"`
+	return NewToolResultText(fmt.Sprintf(`{"key": %s, "seconds": %d, "state": "%s"}`, encoded, seconds, state))
 }
 
 func expireTool(store Store, raw json.RawMessage) *ToolResult {
-	var args expireArgs
-	if err := unmarshalArgs(raw, &args); err != nil {
-		return NewToolResultError(err.Error())
-	}
-	if missing := requireKey(args.Key); missing != nil {
+	key := stringArg(raw, "key")
+	if missing := requireKey(key); missing != nil {
 		return missing
 	}
-	if args.Seconds <= 0 {
+	seconds := intArg(raw, "seconds")
+	if seconds <= 0 {
 		return NewToolResultError("seconds is required and must be greater than 0")
 	}
-	ok, err := store.Expire(args.Key, args.Seconds)
+	ok, err := store.Expire(key, seconds)
 	if err != nil {
 		return NewToolResultError(err.Error())
 	}
 	return NewToolResultText(fmt.Sprintf(`{"ok": %t}`, ok))
 }
 
-type flushArgs struct {
-	Confirm bool `json:"confirm"`
-}
-
 func flushTool(store Store, raw json.RawMessage) *ToolResult {
-	var args flushArgs
-	if err := unmarshalArgs(raw, &args); err != nil {
-		return NewToolResultError(err.Error())
-	}
-	if !args.Confirm {
+	if !boolArg(raw, "confirm") {
 		return NewToolResultError("confirm must be true to remove every key")
 	}
 	deleted, err := store.Flush()
@@ -365,26 +306,4 @@ func flushTool(store Store, raw json.RawMessage) *ToolResult {
 		return NewToolResultError(err.Error())
 	}
 	return NewToolResultText(fmt.Sprintf(`{"deleted": %d}`, deleted))
-}
-
-// unmarshalArgs deserialises raw into dst, allowing nulls to be treated as
-// empty objects. The MCP protocol typically sends empty objects, not null.
-func unmarshalArgs(raw json.RawMessage, dst any) error {
-	if len(raw) == 0 {
-		return json.Unmarshal([]byte("{}"), dst)
-	}
-	if bytes.Equal(raw, []byte("null")) {
-		return json.Unmarshal([]byte("{}"), dst)
-	}
-	return json.Unmarshal(raw, dst)
-}
-
-// requireKey rejects a missing or blank key. Without this a client that omits
-// the argument would silently operate on the empty key, which is never a key
-// the store holds.
-func requireKey(key string) *ToolResult {
-	if strings.TrimSpace(key) == "" {
-		return NewToolResultError("key is required and must not be blank")
-	}
-	return nil
 }

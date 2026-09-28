@@ -7,8 +7,10 @@ import com.github.ajalt.clikt.core.main
 import com.github.ajalt.clikt.core.subcommands
 import com.github.ajalt.clikt.parameters.options.versionOption
 import io.github.hieudoanm.landify.cli.BuildCommand
+import io.github.hieudoanm.landify.cli.McpCommand
 import io.github.hieudoanm.landify.cli.LandifyCommand
 import io.github.hieudoanm.landify.cli.NewCommand
+import io.github.hieudoanm.landify.cli.McpServeCommand
 import io.github.hieudoanm.landify.cli.ServeCommand
 import io.github.hieudoanm.landify.cli.StudioCommand
 import io.github.hieudoanm.landify.cli.ThemesCommand
@@ -25,6 +27,7 @@ fun main(args: Array<String>) = LandifyCommand()
         ServeCommand(),
         TuiCommand(),
         StudioCommand(),
+        McpCommand().subcommands(McpServeCommand()),
     )
     .versionOption(VERSION, names = setOf("--version", "-V"), message = { "landify $it" })
     .main(args)

@@ -17,7 +17,10 @@ pub fn generate_thumbnail(path: &Path, max_dim: u32) -> Result<Vec<u8>, String> 
 }
 
 pub fn is_supported_image(mime: &str) -> bool {
-    matches!(mime, "image/jpeg" | "image/png" | "image/webp" | "image/gif")
+    matches!(
+        mime,
+        "image/jpeg" | "image/png" | "image/webp" | "image/gif"
+    )
 }
 
 #[cfg(test)]

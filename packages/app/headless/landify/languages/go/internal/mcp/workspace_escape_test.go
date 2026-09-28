@@ -103,8 +103,50 @@ func TestWorkspaceRefusesToFollowSymlinksOutOfTheRoot(t *testing.T) {
 	}
 }
 
-// A symlink that stays inside the root is legitimate — a project may well link
-// its content directory — so it must keep working.
+// A dangling symlink is the one escape the resolved-path check misses. Its
+// target does not exist, so filepath.EvalSymlinks reports it as absent and the
+// walk treats it as a path the server is about to create — but os.WriteFile
+// still follows the link and creates the file outside the root. This is a
+// create-outside-the-root primitive, so it is checked before the file is
+// touched.
+func TestWorkspaceRefusesToFollowDanglingSymlinks(t *testing.T) {
+	ws, _ := testWorkspace(t)
+	outside := t.TempDir()
+	victim := filepath.Join(outside, "victim.txt")
+
+	// The link points at a file that does not exist yet, so writing through it
+	// creates that file rather than overwriting one.
+	if err := os.Symlink(victim, filepath.Join(ws.Root(), "dangling.txt")); err != nil {
+		t.Skipf("symlinks unavailable: %v", err)
+	}
+
+	if err := ws.Write("dangling.txt", []byte("owned")); err == nil {
+		t.Fatal("expected writing through a dangling symlink to be refused")
+	}
+	if _, err := os.Stat(victim); !os.IsNotExist(err) {
+		t.Fatalf("a file was created outside the root: %v", err)
+	}
+}
+
+// A dangling symlink is refused for reads and stats too, so the refusal is a
+// property of Resolve rather than of one caller.
+func TestWorkspaceRefusesDanglingSymlinksForEveryOperation(t *testing.T) {
+	ws, _ := testWorkspace(t)
+	outside := t.TempDir()
+	if err := os.Symlink(filepath.Join(outside, "absent"), filepath.Join(ws.Root(), "link")); err != nil {
+		t.Skipf("symlinks unavailable: %v", err)
+	}
+
+	if _, err := ws.Read("link"); err == nil {
+		t.Error("expected reading through a dangling symlink to be refused")
+	}
+	if _, err := ws.Exists("link"); err == nil {
+		t.Error("expected statting a dangling symlink to be refused")
+	}
+}
+
+// A symlink inside the root that stays inside the root is legitimate — a
+// project may well link its content directory — so it must keep working.
 func TestWorkspaceAllowsSymlinksThatStayInsideTheRoot(t *testing.T) {
 	ws, _ := testWorkspace(t)
 	ws.Write("pages/site.yaml", []byte(validYAML))

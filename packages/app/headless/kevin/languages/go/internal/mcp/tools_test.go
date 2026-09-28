@@ -231,15 +231,28 @@ func TestToolsRejectEveryRequiredArgument(t *testing.T) {
 	}
 }
 
-func TestUnmarshalArgsTreatsNullAsEmpty(t *testing.T) {
-	var target struct {
-		Key string `json:"key"`
+func TestObjectOrEmptyTreatsNullAsAnEmptyObject(t *testing.T) {
+	tests := []struct {
+		name   string
+		params json.RawMessage
+	}{
+		{"absent", nil},
+		{"null", json.RawMessage(`null`)},
+		{"empty object", json.RawMessage(`{}`)},
 	}
 
-	for _, raw := range []json.RawMessage{nil, json.RawMessage(`null`), json.RawMessage(`{}`)} {
-		if err := unmarshalArgs(raw, &target); err != nil {
-			t.Fatalf("unmarshal %q: %v", string(raw), err)
-		}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			var target struct {
+				Key string `json:"key"`
+			}
+			if err := json.Unmarshal(objectOrEmpty(tt.params), &target); err != nil {
+				t.Fatalf("unmarshal %q: %v", string(objectOrEmpty(tt.params)), err)
+			}
+			if target.Key != "" {
+				t.Fatalf("expected an empty object, got key %q", target.Key)
+			}
+		})
 	}
 }
 
@@ -287,4 +300,65 @@ func resultText(result *ToolResult) string {
 		return ""
 	}
 	return result.Content[0].Text
+}
+
+// A key containing JSON metacharacters must still yield a parsable result. The
+// key is marshalled rather than interpolated, so quotes and newlines are safe.
+func TestTTLEscapesTheKeyIntoValidJSON(t *testing.T) {
+	store := NewDBStore(newTestDB())
+	hostile := `quo"te` + "\n" + `back\slash`
+
+	result := callTool(t, store, `{"name":"kevin_ttl","arguments":{"key":`+mustMarshal(t, hostile)+`}}`)
+	if result.IsError {
+		t.Fatalf("unexpected failure: %s", resultText(result))
+	}
+
+	var payload struct {
+		Key   string `json:"key"`
+		State string `json:"state"`
+	}
+	if err := json.Unmarshal([]byte(resultText(result)), &payload); err != nil {
+		t.Fatalf("result text is not valid JSON (%v): %s", err, resultText(result))
+	}
+	if payload.Key != hostile {
+		t.Fatalf("expected the key %q back, got %q", hostile, payload.Key)
+	}
+	if payload.State != "missing" {
+		t.Fatalf("expected a missing key, got %q", payload.State)
+	}
+}
+
+// A wrongly typed argument falls back to its default rather than failing the
+// whole call, matching the Kotlin and Rust ports.
+func TestWronglyTypedArgumentsFallBackToDefaults(t *testing.T) {
+	store := NewDBStore(newTestDB())
+
+	tests := []struct {
+		name   string
+		params string
+		want   string
+	}{
+		{"numeric key", `{"name":"kevin_get","arguments":{"key":7}}`, "key is required and must not be blank"},
+		{"string seconds", `{"name":"kevin_expire","arguments":{"key":"a","seconds":"30"}}`, "seconds is required and must be greater than 0"},
+		{"string confirm", `{"name":"kevin_flush","arguments":{"confirm":"true"}}`, "confirm must be true to remove every key"},
+		{"mixed list", `{"name":"kevin_del","arguments":{"keys":["a",3,null]}}`, `{"deleted": 0}`},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := resultText(callTool(t, store, tt.params))
+			if got != tt.want {
+				t.Fatalf("expected %q, got %q", tt.want, got)
+			}
+		})
+	}
+}
+
+func mustMarshal(t *testing.T, value string) string {
+	t.Helper()
+	encoded, err := json.Marshal(value)
+	if err != nil {
+		t.Fatalf("marshal %q: %v", value, err)
+	}
+	return string(encoded)
 }

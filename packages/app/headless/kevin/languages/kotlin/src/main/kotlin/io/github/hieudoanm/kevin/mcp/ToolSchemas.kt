@@ -11,18 +11,18 @@ internal object ToolSchemas {
 
     fun ping(): Tool = tool(
         name = "kevin_ping",
-        description = "Check that the key/value store is reachable.",
+        description = "Verify the KeVIN key/value store is reachable.",
         schema = objectSchema(emptyMap()),
     )
 
     fun set(): Tool = tool(
         name = "kevin_set",
-        description = "Store a value under a key, optionally expiring it.",
+        description = "Store value under key, overwriting any existing value. Set ttl_seconds to expire the key automatically.",
         schema = objectSchema(
             properties = mapOf(
-                "key" to stringProperty("Key to store the value under."),
-                "value" to stringProperty("Value to store."),
-                "ttl_seconds" to integerProperty("Seconds until the key expires; omit or 0 to persist."),
+                "key" to keyProperty(),
+                "value" to stringProperty("Value to store. May contain spaces."),
+                "ttl_seconds" to integerProperty("Seconds until the key expires. Omit or use 0 for no expiry."),
             ),
             required = listOf("key", "value"),
         ),
@@ -30,16 +30,16 @@ internal object ToolSchemas {
 
     fun get(): Tool = tool(
         name = "kevin_get",
-        description = "Read the value stored under a key.",
+        description = "Retrieve the value stored under key. Returns found=false when the key is absent or expired.",
         schema = objectSchema(
-            properties = mapOf("key" to stringProperty("Key to read.")),
+            properties = mapOf("key" to keyProperty()),
             required = listOf("key"),
         ),
     )
 
     fun del(): Tool = tool(
         name = "kevin_del",
-        description = "Delete one or more keys, reporting how many were present.",
+        description = "Delete one or more keys and report how many were present.",
         schema = objectSchema(
             properties = mapOf("keys" to stringArrayProperty("Keys to delete.")),
             required = listOf("keys"),
@@ -48,9 +48,9 @@ internal object ToolSchemas {
 
     fun exists(): Tool = tool(
         name = "kevin_exists",
-        description = "Report whether a key is present and unexpired.",
+        description = "Check whether key is present and not expired.",
         schema = objectSchema(
-            properties = mapOf("key" to stringProperty("Key to test.")),
+            properties = mapOf("key" to keyProperty()),
             required = listOf("key"),
         ),
     )
@@ -69,20 +69,20 @@ internal object ToolSchemas {
 
     fun ttl(): Tool = tool(
         name = "kevin_ttl",
-        description = "Report a key's expiry state and its remaining seconds.",
+        description = "Report the remaining lifetime of key in whole seconds, rounded up. The state is one of expiring, no-expiry, or missing.",
         schema = objectSchema(
-            properties = mapOf("key" to stringProperty("Key to inspect.")),
+            properties = mapOf("key" to keyProperty()),
             required = listOf("key"),
         ),
     )
 
     fun expire(): Tool = tool(
         name = "kevin_expire",
-        description = "Set a key's time to live in seconds.",
+        description = "Set an expiry on an existing key, replacing any previous one. Reports ok=false when the key does not exist.",
         schema = objectSchema(
             properties = mapOf(
-                "key" to stringProperty("Key to give an expiry."),
-                "seconds" to integerProperty("Seconds until the key expires; must be greater than 0."),
+                "key" to keyProperty(),
+                "seconds" to integerProperty("Seconds until the key expires. Must be greater than 0."),
             ),
             required = listOf("key", "seconds"),
         ),
@@ -90,9 +90,9 @@ internal object ToolSchemas {
 
     fun flush(): Tool = tool(
         name = "kevin_flush",
-        description = "Delete every key. Destructive, so it must be confirmed.",
+        description = "Remove every key and report how many were removed. Destructive: requires confirm=true.",
         schema = objectSchema(
-            properties = mapOf("confirm" to booleanProperty("Must be true; guards against an accidental wipe.")),
+            properties = mapOf("confirm" to booleanProperty("Must be true. Guards against an accidental flush.")),
             required = listOf("confirm"),
         ),
     )

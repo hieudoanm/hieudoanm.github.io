@@ -70,14 +70,19 @@ func (s *Server) handleMessage(raw []byte) {
 		s.write(NewErrorResponse(nil, ErrCodeParse, "parse error: "+err.Error()))
 		return
 	}
-	if request.JSONRPC != "2.0" {
-		s.write(NewErrorResponse(request.ID, ErrCodeInvalidRequest, "invalid jsonrpc version"))
-		return
-	}
 
+	// The notification check comes first: a frame without an id has nobody to
+	// match a reply against, so it must be dropped even when the rest of the
+	// envelope is malformed. Answering a bad-version notification would put a
+	// stray frame on the wire and desynchronise the client.
 	isNotification := len(request.ID) == 0 || string(request.ID) == "null"
 	if isNotification {
 		slog.Debug("ignoring notification", "method", request.Method)
+		return
+	}
+
+	if request.JSONRPC != "2.0" {
+		s.write(NewErrorResponse(request.ID, ErrCodeInvalidRequest, "invalid jsonrpc version"))
 		return
 	}
 

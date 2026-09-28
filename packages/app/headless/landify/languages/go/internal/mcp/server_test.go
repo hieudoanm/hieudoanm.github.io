@@ -117,10 +117,13 @@ func TestServerListToolsIsSorted(t *testing.T) {
 	}
 }
 
-func TestServerDoesNotAnswerNotifications(t *testing.T) {
+func TestServerDoesNotAnswerMalformedNotifications(t *testing.T) {
 	ws, _ := testWorkspace(t)
+	// Both frames lack an id, so neither may be answered even though the first
+	// also carries a bad jsonrpc version. A reply to it would land on the wire
+	// with no id to match, desynchronising the client.
 	input := strings.Join([]string{
-		`{"jsonrpc":"2.0","method":"notifications/initialized"}`,
+		`{"jsonrpc":"1.0","method":"notifications/initialized"}`,
 		`{"jsonrpc":"2.0","method":"ping"}`,
 		`{"jsonrpc":"2.0","id":9,"method":"tools/call","params":{"name":"landify_types","arguments":{}}}`,
 	}, "\n") + "\n"
@@ -131,6 +134,19 @@ func TestServerDoesNotAnswerNotifications(t *testing.T) {
 	}
 	if !strings.Contains(lines[0], `"id":9`) {
 		t.Fatalf("expected the one reply to be for the request, got %s", lines[0])
+	}
+}
+
+func TestServerRejectsBadVersionOnARequest(t *testing.T) {
+	ws, _ := testWorkspace(t)
+	input := `{"jsonrpc":"1.0","id":1,"method":"ping"}` + "\n"
+
+	lines := responseLines(t, runServer(t, ws, input))
+	if len(lines) != 1 {
+		t.Fatalf("expected one rejection, got %v", lines)
+	}
+	if !strings.Contains(lines[0], `"id":1`) || !strings.Contains(lines[0], "invalid jsonrpc version") {
+		t.Fatalf("expected an invalid-request error for id 1, got %s", lines[0])
 	}
 }
 

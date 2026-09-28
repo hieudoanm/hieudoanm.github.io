@@ -20,6 +20,7 @@ func TestRenderToolArgumentErrors(t *testing.T) {
 		{"unsupported scheme", ToolScrape, map[string]any{"url": "ftp://host/x"}, "unsupported scheme: ftp"},
 		{"schemeless url", ToolScrape, map[string]any{"url": "example.com"}, "invalid url"},
 		{"negative timeout", ToolScrape, map[string]any{"url": "https://e.com", "timeout_ms": -1}, "timeout_ms must not be negative"},
+		{"overflowing timeout", ToolScrape, map[string]any{"url": "https://e.com", "timeout_ms": 1 << 62}, "timeout_ms is too large"},
 		{"wrong argument type", ToolScrape, map[string]any{"url": 42}, "invalid arguments"},
 		{"missing url on screenshot", ToolScreenshot, map[string]any{}, "missing required argument: url"},
 		{"bad scheme on screenshot", ToolScreenshot, map[string]any{"url": "file:///etc/passwd"}, "unsupported scheme: file"},

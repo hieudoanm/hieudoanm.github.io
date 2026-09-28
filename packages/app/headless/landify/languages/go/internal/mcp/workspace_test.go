@@ -1,6 +1,7 @@
 package mcp
 
 import (
+	"encoding/json"
 	"os"
 	"path/filepath"
 	"strings"
@@ -180,4 +181,44 @@ func TestWorkspaceExists(t *testing.T) {
 			}
 		})
 	}
+}
+
+// A frame larger than the cap is reported as a parse error rather than being
+// buffered, and the stream resynchronises on the next newline.
+func TestServerRefusesAnOversizedFrameAndRecovers(t *testing.T) {
+	oversized := `{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"pad":"` +
+		strings.Repeat("x", MaxFrameBytes) + `"}}`
+	input := oversized + "\n" + `{"jsonrpc":"2.0","id":2,"method":"tools/list"}` + "\n"
+
+	ws, _ := testWorkspace(t)
+
+	lines := outputLines(runServer(t, ws, input))
+	if len(lines) < 2 {
+		t.Fatalf("expected a parse error and a tools/list reply, got %d frames", len(lines))
+	}
+
+	var first struct {
+		ID    json.RawMessage `json:"id"`
+		Error *ErrorObject    `json:"error"`
+	}
+	if err := json.Unmarshal([]byte(lines[0]), &first); err != nil {
+		t.Fatalf("unmarshal %q: %v", lines[0], err)
+	}
+	if first.Error == nil || first.Error.Code != ErrCodeParse {
+		t.Fatalf("expected a parse error, got %q", lines[0])
+	}
+	if !strings.Contains(lines[len(lines)-1], `"id":2`) {
+		t.Fatalf("the stream did not resynchronise, got %q", lines[len(lines)-1])
+	}
+}
+
+// outputLines splits a captured stdout into frames, dropping blank lines.
+func outputLines(out string) []string {
+	var lines []string
+	for _, line := range strings.Split(out, "\n") {
+		if trimmed := strings.TrimSpace(line); trimmed != "" {
+			lines = append(lines, trimmed)
+		}
+	}
+	return lines
 }

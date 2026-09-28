@@ -14,6 +14,24 @@ pub enum AppError {
     Internal(String),
 }
 
+impl std::fmt::Display for AppError {
+    /// Prints only the message, so a handler can surface the cause to a caller
+    /// without also leaking the HTTP status it maps to.
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let message = match self {
+            AppError::BadRequest(m)
+            | AppError::NotFound(m)
+            | AppError::Conflict(m)
+            | AppError::Unauthorized(m)
+            | AppError::Forbidden(m)
+            | AppError::Internal(m) => m,
+        };
+        write!(f, "{message}")
+    }
+}
+
+impl std::error::Error for AppError {}
+
 impl IntoResponse for AppError {
     fn into_response(self) -> Response {
         let (code, msg) = match self {
@@ -605,16 +623,14 @@ mod tests {
 
     #[test]
     fn create_collection_request_defaults_schema() {
-        let req: CreateCollectionRequest =
-            serde_json::from_value(json!({"name": "c"})).unwrap();
+        let req: CreateCollectionRequest = serde_json::from_value(json!({"name": "c"})).unwrap();
         assert_eq!(req.name, "c");
         assert_eq!(req.schema, "{}");
     }
 
     #[test]
     fn create_record_request_defaults_data() {
-        let req: CreateRecordRequest =
-            serde_json::from_value(json!({"id": "r1"})).unwrap();
+        let req: CreateRecordRequest = serde_json::from_value(json!({"id": "r1"})).unwrap();
         assert_eq!(req.id.unwrap(), "r1");
         assert_eq!(req.data, json!({}));
     }

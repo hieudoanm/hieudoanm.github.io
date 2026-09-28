@@ -118,3 +118,16 @@ func TestHTTPRendererReportsPartialRenders(t *testing.T) {
 		t.Error("a partial render must survive the proxy as timed_out = true")
 	}
 }
+
+// The proxy client must carry its own deadline. A per-call timeout_ms only
+// bounds the context, so a backend that accepts the connection and then stalls
+// would otherwise hang the tool for good.
+func TestHTTPRendererClientHasADeadline(t *testing.T) {
+	renderer, ok := NewHTTPRenderer("http://127.0.0.1:1").(*httpRenderer)
+	if !ok {
+		t.Fatal("NewHTTPRenderer did not return the HTTP backend")
+	}
+	if renderer.client.Timeout <= 0 {
+		t.Errorf("client timeout = %v, want a positive backstop", renderer.client.Timeout)
+	}
+}

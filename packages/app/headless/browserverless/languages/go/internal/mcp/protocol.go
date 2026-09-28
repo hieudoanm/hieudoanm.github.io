@@ -6,10 +6,54 @@
 // the browserverless tool surface lives in tools.go and the render backends in renderer.go.
 package mcp
 
-import "encoding/json"
+import (
+	"bytes"
+	"encoding/json"
+)
 
 // ProtocolVersion is the MCP revision this server implements.
 const ProtocolVersion = "2025-11-25"
+
+// MaxFrameBytes caps a single JSON-RPC frame. A larger frame is reported as a
+// parse error instead of being buffered, so a client cannot grow the heap
+// without bound. It matches the cap the other headless MCP servers use.
+const MaxFrameBytes = 8 << 20
+
+// SupportedProtocolVersions lists the MCP revisions this server can speak,
+// newest first.
+func SupportedProtocolVersions() []string {
+	return []string{ProtocolVersion}
+}
+
+// NegotiatedVersion picks the revision to advertise to a client that requested
+// the given initialize params. A revision this server speaks is echoed; anything
+// else falls back to ProtocolVersion and the client is expected to disconnect if
+// it cannot speak that either.
+func NegotiatedVersion(params json.RawMessage) string {
+	var decoded struct {
+		ProtocolVersion string `json:"protocolVersion"`
+	}
+	if err := json.Unmarshal(ObjectOrEmpty(params), &decoded); err != nil {
+		return ProtocolVersion
+	}
+	for _, version := range SupportedProtocolVersions() {
+		if decoded.ProtocolVersion == version {
+			return version
+		}
+	}
+	return ProtocolVersion
+}
+
+// ObjectOrEmpty returns params, treating an absent or JSON-null value as an
+// empty object so a tools/call without params still names no tool instead of
+// failing to decode.
+func ObjectOrEmpty(params json.RawMessage) json.RawMessage {
+	trimmed := bytes.TrimSpace(params)
+	if len(trimmed) == 0 || string(trimmed) == "null" {
+		return json.RawMessage(`{}`)
+	}
+	return params
+}
 
 // ServerName identifies this server during initialize. The reported version is
 // internal/version.Version so builds stamped with -ldflags stay accurate.
@@ -30,6 +74,13 @@ type Request struct {
 	ID      json.RawMessage `json:"id"`
 	Method  string          `json:"method"`
 	Params  json.RawMessage `json:"params,omitempty"`
+}
+
+// IsNotification reports whether this frame expects no reply. A missing or
+// JSON-null id marks a notification.
+func (r Request) IsNotification() bool {
+	trimmed := bytes.TrimSpace(r.ID)
+	return len(trimmed) == 0 || string(trimmed) == "null"
 }
 
 // Response is an outgoing JSON-RPC 2.0 reply. Exactly one of Result and Error

@@ -1,8 +1,33 @@
 package mcp
 
-import "encoding/json"
+import (
+	"bytes"
+	"encoding/json"
+)
 
 const ProtocolVersion = "2025-11-25"
+
+// MaxFrameBytes caps a single JSON-RPC frame. A larger frame is reported as a
+// parse error instead of being buffered, so a client cannot grow the heap
+// without bound. It matches the cap the other headless MCP servers use.
+const MaxFrameBytes = 8 << 20
+
+// SupportedProtocolVersions lists the MCP revisions this server can speak,
+// newest first.
+func SupportedProtocolVersions() []string {
+	return []string{ProtocolVersion}
+}
+
+// ObjectOrEmpty returns params, treating an absent or JSON-null value as an
+// empty object so a tools/call without params still names no tool instead of
+// failing to decode.
+func ObjectOrEmpty(params json.RawMessage) json.RawMessage {
+	trimmed := bytes.TrimSpace(params)
+	if len(trimmed) == 0 || string(trimmed) == "null" {
+		return json.RawMessage(`{}`)
+	}
+	return params
+}
 
 type Request struct {
 	JSONRPC string          `json:"jsonrpc"`

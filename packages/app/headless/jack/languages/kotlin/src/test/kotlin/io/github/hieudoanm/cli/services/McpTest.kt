@@ -266,18 +266,18 @@ class McpTest {
         val output = runMcp(input)
         val json = JsonParser.parseString(output.trim()).asJsonObject
         val error = json.getAsJsonObject("error")
-        assertEquals(-32602, error.get("code").asInt)
-        assertEquals("missing params", error.get("message").asString)
+        // Absent params are treated as an empty object, so the call names no
+        // tool rather than failing to decode. This matches the other headless
+        // MCP servers.
+        assertEquals(-32601, error.get("code").asInt)
     }
 
     @Test
-    fun testMcpServerCallToolMissingParamsWithIdNull() {
+    fun testMcpServerCallToolWithIdNullIsANotification() {
         val input = """{"jsonrpc":"2.0","id":null,"method":"tools/call"}""" + "\n"
-        val output = runMcp(input)
-        val json = JsonParser.parseString(output.trim()).asJsonObject
-        assertTrue(json.get("id") == null || json.get("id").isJsonNull)
-        val error = json.getAsJsonObject("error")
-        assertEquals(-32602, error.get("code").asInt)
+        // An id of null marks a notification, which must never be answered —
+        // replying to one desynchronises the client.
+        assertTrue(runMcp(input).isBlank())
     }
 
     @Test

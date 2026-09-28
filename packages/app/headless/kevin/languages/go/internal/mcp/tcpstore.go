@@ -6,9 +6,16 @@ import (
 	"errors"
 	"fmt"
 	"net"
+	"strconv"
 	"strings"
 	"sync"
+	"time"
 )
+
+// CommandTimeout bounds one write-then-read exchange with the remote server.
+// Without it a server that accepts the connection and then stalls would block
+// the MCP request forever, since the dispatcher is sequential.
+const CommandTimeout = 10 * time.Second
 
 // tcpStore talks the inline protocol to a running `kevin serve` over a single
 // TCP connection. The MCP server handles one request at a time, so the
@@ -43,6 +50,10 @@ func (s *tcpStore) do(format string, args ...any) (string, error) {
 
 	s.mu.Lock()
 	defer s.mu.Unlock()
+
+	if err := s.conn.SetDeadline(time.Now().Add(CommandTimeout)); err != nil {
+		return "", fmt.Errorf("set deadline for %q: %w", request, err)
+	}
 
 	if _, err := fmt.Fprintf(s.conn, "%s\r\n", request); err != nil {
 		return "", fmt.Errorf("send %q: %w", request, err)
@@ -214,10 +225,11 @@ func stateFromSeconds(seconds int) TTLState {
 	}
 }
 
-// parseCount parses a non-negative integer reply.
+// parseCount parses an integer reply, rejecting trailing garbage so a malformed
+// response surfaces as an error rather than a silently truncated count.
 func parseCount(reply string) (int, error) {
-	value := 0
-	if _, err := fmt.Sscanf(reply, "%d", &value); err != nil {
+	value, err := strconv.Atoi(strings.TrimSpace(reply))
+	if err != nil {
 		return 0, fmt.Errorf("unexpected reply %q", reply)
 	}
 	return value, nil

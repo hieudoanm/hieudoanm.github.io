@@ -5,14 +5,23 @@
 use super::store::{Store, TtlState};
 use anyhow::{bail, Context, Result};
 use std::io::{BufRead, BufReader, Write};
-use std::net::TcpStream;
+use std::net::{TcpStream, ToSocketAddrs};
 use std::sync::Mutex;
+use std::time::Duration;
 
 /// Reply the protocol uses for a missing value.
 const NIL: &str = "(nil)";
 
 /// Command line terminator; the server strips a trailing `\r\n`.
 const EOL: &str = "\r\n";
+
+/// Bounds a single connect attempt, so an unroutable address fails fast.
+const CONNECT_TIMEOUT: Duration = Duration::from_secs(5);
+
+/// Bounds one write-then-read exchange. A server that accepts the connection
+/// and then stalls would otherwise block the MCP request forever, since the
+/// dispatcher answers one request at a time.
+const COMMAND_TIMEOUT: Duration = Duration::from_secs(10);
 
 /// The connection split into a reading and a writing half.
 struct Conn {
@@ -33,7 +42,13 @@ impl TcpStore {
     /// Connects to a `kevin serve` listening on `addr`. The caller owns the
     /// returned store and should close it when done.
     pub fn connect(addr: &str) -> Result<Self> {
-        let stream = TcpStream::connect(addr).with_context(|| format!("dial kevin at {addr}"))?;
+        let address = addr
+            .to_socket_addrs()
+            .with_context(|| format!("resolve kevin address {addr:?}"))?
+            .next()
+            .with_context(|| format!("resolve kevin address {addr:?} yielded no address"))?;
+        let stream = TcpStream::connect_timeout(&address, CONNECT_TIMEOUT)
+            .with_context(|| format!("dial kevin at {addr}"))?;
         let writer = stream.try_clone().context("clone kevin connection")?;
         Ok(Self {
             conn: Mutex::new(Conn {
@@ -52,12 +67,19 @@ impl TcpStore {
             .lock()
             .map_err(|_| anyhow::anyhow!("the kevin connection lock was poisoned"))?;
         conn.writer
+            .set_write_timeout(Some(COMMAND_TIMEOUT))
+            .with_context(|| format!("set write timeout for {request:?}"))?;
+        conn.writer
             .write_all(format!("{request}{EOL}").as_bytes())
             .with_context(|| format!("send {request:?}"))?;
         conn.writer
             .flush()
             .with_context(|| format!("send {request:?}"))?;
 
+        conn.reader
+            .get_ref()
+            .set_read_timeout(Some(COMMAND_TIMEOUT))
+            .with_context(|| format!("set read timeout for {request:?}"))?;
         let mut reply = String::new();
         let read = conn
             .reader

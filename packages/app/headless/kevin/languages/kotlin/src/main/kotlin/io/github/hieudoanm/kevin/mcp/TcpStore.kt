@@ -9,6 +9,7 @@ import java.net.InetSocketAddress
 import java.net.Socket
 
 private const val CONNECT_TIMEOUT_MS = 5_000
+private const val COMMAND_TIMEOUT_MS = 10_000
 private const val ERROR_PREFIX = "ERR "
 private const val OK = "OK"
 private const val NIL = "(nil)"
@@ -31,6 +32,9 @@ internal class TcpStore(val address: String) : Store, Closeable {
             ?: throw StoreException("kevin address must be host:port, got \"$address\"")
         val host = address.substringBeforeLast(':', "127.0.0.1")
         socket.connect(InetSocketAddress(host, port), CONNECT_TIMEOUT_MS)
+        // A server that accepts the connection and then stalls would otherwise
+        // block the MCP request forever, since the dispatcher is sequential.
+        socket.soTimeout = COMMAND_TIMEOUT_MS
         reader = BufferedReader(InputStreamReader(socket.getInputStream(), Charsets.UTF_8))
         writer = BufferedWriter(OutputStreamWriter(socket.getOutputStream(), Charsets.UTF_8))
     }
@@ -45,6 +49,7 @@ internal class TcpStore(val address: String) : Store, Closeable {
     }
 
     override fun get(key: String): Pair<String, Boolean> {
+        validateToken("key", key)
         val reply = command("GET $key").trim()
         if (reply == NIL) return "" to false
         return reply to true

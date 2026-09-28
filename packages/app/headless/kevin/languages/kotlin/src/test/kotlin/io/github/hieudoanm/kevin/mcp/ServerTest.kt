@@ -127,6 +127,51 @@ class ServerTest {
     }
 
     @Test
+    fun `an oversized frame is refused and the stream resynchronises`() {
+        // A small cap stands in for the production 8 MiB limit, so the fixture
+        // stays small while still proving the overflow path.
+        val input = buildString {
+            append("{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"ping\"}\n")
+            append("x".repeat(500))
+            append('\n')
+            append("{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"ping\"}\n")
+        }.reader()
+        val frames = FrameReader(input, maxChars = 64)
+        val seen = mutableListOf<Frame>()
+
+        while (true) {
+            val frame = frames.next()
+            if (frame is Frame.Eof) break
+            seen += frame
+        }
+
+        assertEquals(3, seen.size, "got $seen")
+        assertEquals(Frame.Line("{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"ping\"}"), seen[0])
+        assertEquals(Frame.TooLong, seen[1], "the oversized frame must be dropped, not truncated")
+        assertEquals(Frame.Line("{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"ping\"}"), seen[2])
+    }
+
+    @Test
+    fun `a final frame without a trailing newline is still read`() {
+        val frames = FrameReader("{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"ping\"}".reader())
+
+        assertEquals(
+            Frame.Line("{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"ping\"}"),
+            frames.next(),
+        )
+        assertEquals(Frame.Eof, frames.next())
+    }
+
+    @Test
+    fun `a blank line produces no reply`() {
+        val output = StringWriter()
+
+        testServer().runWith("\n".reader().buffered(), output)
+
+        assertEquals("", output.toString(), "a blank line is not a frame to answer")
+    }
+
+    @Test
     fun `the transport writes one frame per answered request`() {
         val server = testServer()
         val input = """
@@ -290,5 +335,200 @@ class ToolTest {
     fun `a successful result omits the error flag`() {
         val result = testServer().reply(callFrame(1, "kevin_ping", buildJsonObject {})).result()
         assertNull(result["isError"], "a success should not carry isError")
+    }
+}
+
+/**
+ * A notification carries no id, so it must never be answered. Answering one
+ * desynchronises the client, which is a protocol violation.
+ */
+class NotificationTest {
+
+    private val methods = listOf("initialize", "ping", "tools/list", "tools/call")
+
+    @Test
+    fun `no method answers a notification`() {
+        val server = testServer()
+        for (method in methods) {
+            val frame = """{"jsonrpc":"2.0","method":"$method","params":{"name":"kevin_flush","arguments":{"confirm":true}}}"""
+            assertNull(server.handle(frame), "$method was answered")
+        }
+    }
+
+    @Test
+    fun `a tools call notification does not run the tool`() {
+        val db = Db()
+        val store = DbStore(db)
+        val server = McpServer().also { Tools.register(it, store) }
+
+        val frame = """{"jsonrpc":"2.0","method":"tools/call","params":{"name":"kevin_set","arguments":{"key":"a","value":"b"}}}"""
+        assertNull(server.handle(frame), "expected no reply")
+
+        assertNull(db.get("a"), "a notification ran the tool")
+    }
+
+    @Test
+    fun `a malformed notification is not answered`() {
+        assertNull(testServer().handle("""{"method":"ping"}"""), "a malformed notification was answered")
+    }
+}
+
+/** The `ping` method and the notification and frame rules live in McpServer. */
+class ProtocolTest {
+
+    @Test
+    fun `ping is answered with an empty object`() {
+        val result = testServer().reply("""{"jsonrpc":"2.0","id":1,"method":"ping"}""").result()
+        assertEquals(emptyMap(), result)
+    }
+
+    @Test
+    fun `the ping tool reaches the store`() {
+        val server = McpServer().also { Tools.register(it, UnreachableStore()) }
+        val reply = server.reply(callFrame(1, "kevin_ping", buildJsonObject {}))
+
+        assertEquals(true, reply.result()["isError"]!!.jsonPrimitive.content.toBoolean())
+        assertEquals("store is unreachable", reply.text())
+    }
+
+    @Test
+    fun `a healthy ping reports pong`() {
+        val reply = testServer().reply(callFrame(1, "kevin_ping", buildJsonObject {}))
+        assertNull(reply.result()["isError"], "a reachable store should not error")
+        assertTrue(json.parseToJsonElement(reply.text()).jsonObject["pong"]!!.jsonPrimitive.content.toBoolean())
+    }
+
+    @Test
+    fun `a malformed jsonrpc version is rejected`() {
+        val error = testServer().reply("""{"jsonrpc":"1.0","id":1,"method":"ping"}""")["error"]!!.jsonObject
+        assertEquals(-32600, error["code"]!!.jsonPrimitive.content.toInt())
+        assertEquals("invalid jsonrpc version", error["message"]!!.jsonPrimitive.content)
+    }
+
+    @Test
+    fun `params of the wrong type are rejected`() {
+        val error = testServer().reply("""{"jsonrpc":"2.0","id":1,"method":"tools/call","params":"nope"}""")["error"]!!.jsonObject
+        assertEquals(-32602, error["code"]!!.jsonPrimitive.content.toInt())
+    }
+
+    @Test
+    fun `absent params are tolerated and name no tool`() {
+        val error = testServer().reply("""{"jsonrpc":"2.0","id":1,"method":"tools/call"}""")["error"]!!.jsonObject
+        assertEquals(-32601, error["code"]!!.jsonPrimitive.content.toInt())
+        assertEquals("tool not found: ", error["message"]!!.jsonPrimitive.content)
+    }
+
+    @Test
+    fun `the version is echoed when supported and replaced otherwise`() {
+        val supported = testServer().reply(
+            """{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25"}}""",
+        ).result()
+        assertEquals("2025-11-25", supported["protocolVersion"]!!.jsonPrimitive.content)
+
+        val unsupported = testServer().reply(
+            """{"jsonrpc":"2.0","id":2,"method":"initialize","params":{"protocolVersion":"1999-01-01"}}""",
+        ).result()
+        assertEquals("2025-11-25", unsupported["protocolVersion"]!!.jsonPrimitive.content)
+    }
+
+    @Test
+    fun `a frame beyond the cap is a parse error and the stream recovers`() {
+        val input = buildString {
+            append("""{"jsonrpc":"2.0","id":1,"method":"ping","params":{"pad":"""")
+            repeat(MAX_FRAME_CHARS) { append('x') }
+            append(""""}}""").append('\n')
+            append("""{"jsonrpc":"2.0","id":2,"method":"ping"}""").append('\n')
+        }.reader().buffered()
+        val output = StringWriter()
+
+        testServer().runWith(input, output)
+
+        val lines = output.toString().lines().filter(String::isNotEmpty)
+        assertEquals(2, lines.size, "got $lines")
+        val first = json.parseToJsonElement(lines[0]).jsonObject
+        assertEquals(-32700, first["error"]!!.jsonObject["code"]!!.jsonPrimitive.content.toInt())
+        assertEquals(2, lines[1].let { json.parseToJsonElement(it).jsonObject["id"]!!.jsonPrimitive.content.toInt() })
+    }
+}
+
+/** A store whose health check always fails, so tools cannot fake success. */
+internal class UnreachableStore : Store {
+    override fun ping(): Unit = throw StoreException("store is unreachable")
+    override fun get(key: String) = error("unused")
+    override fun set(key: String, value: String, ttlSeconds: Int) = error("unused")
+    override fun del(keys: List<String>): Int = error("unused")
+    override fun exists(key: String): Boolean = error("unused")
+    override fun keys(): List<String> = error("unused")
+    override fun len(): Int = error("unused")
+    override fun flush(): Int = error("unused")
+    override fun ttl(key: String) = error("unused")
+    override fun expire(key: String, seconds: Int): Boolean = error("unused")
+}
+
+/**
+ * The Go and Rust ports advertise these exact descriptions. A tool's wording
+ * reaches the model, so drift between ports is a user-visible behaviour change,
+ * not a cosmetic one. See `tools.go` and `tools/schema.rs`.
+ */
+class ToolSchemaParityTest {
+
+    private val tools = testServer().tools().tools
+
+    private fun descriptionOf(name: String): String =
+        tools.first { it.name == name }.description
+
+    private fun propertyDescription(tool: String, property: String): String =
+        tools.first { it.name == tool }
+            .inputSchema["properties"]!!.jsonObject[property]!!
+            .jsonObject["description"]!!.jsonPrimitive.content
+
+    @Test
+    fun `the tool names match the Go and Rust catalogues`() {
+        assertEquals(
+            listOf(
+                "kevin_del", "kevin_exists", "kevin_expire", "kevin_flush",
+                "kevin_get", "kevin_keys", "kevin_len", "kevin_ping",
+                "kevin_set", "kevin_ttl",
+            ),
+            tools.map { it.name },
+        )
+    }
+
+    @Test
+    fun `every tool description matches the Go and Rust ports`() {
+        val expected = mapOf(
+            "kevin_ping" to "Verify the KeVIN key/value store is reachable.",
+            "kevin_set" to "Store value under key, overwriting any existing value. Set ttl_seconds to expire the key automatically.",
+            "kevin_get" to "Retrieve the value stored under key. Returns found=false when the key is absent or expired.",
+            "kevin_del" to "Delete one or more keys and report how many were present.",
+            "kevin_exists" to "Check whether key is present and not expired.",
+            "kevin_keys" to "List every present, unexpired key.",
+            "kevin_len" to "Count the present, unexpired keys.",
+            "kevin_ttl" to "Report the remaining lifetime of key in whole seconds, rounded up. The state is one of expiring, no-expiry, or missing.",
+            "kevin_expire" to "Set an expiry on an existing key, replacing any previous one. Reports ok=false when the key does not exist.",
+            "kevin_flush" to "Remove every key and report how many were removed. Destructive: requires confirm=true.",
+        )
+        for ((name, text) in expected) {
+            assertEquals(text, descriptionOf(name), "description of $name")
+        }
+    }
+
+    @Test
+    fun `every property description matches the Go and Rust ports`() {
+        val expected = listOf(
+            Triple("kevin_set", "key", "Key to operate on."),
+            Triple("kevin_set", "value", "Value to store. May contain spaces."),
+            Triple("kevin_set", "ttl_seconds", "Seconds until the key expires. Omit or use 0 for no expiry."),
+            Triple("kevin_get", "key", "Key to operate on."),
+            Triple("kevin_del", "keys", "Keys to delete."),
+            Triple("kevin_exists", "key", "Key to operate on."),
+            Triple("kevin_ttl", "key", "Key to operate on."),
+            Triple("kevin_expire", "key", "Key to operate on."),
+            Triple("kevin_expire", "seconds", "Seconds until the key expires. Must be greater than 0."),
+            Triple("kevin_flush", "confirm", "Must be true. Guards against an accidental flush."),
+        )
+        for ((tool, property, text) in expected) {
+            assertEquals(text, propertyDescription(tool, property), "$tool.$property")
+        }
     }
 }

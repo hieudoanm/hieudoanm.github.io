@@ -27,6 +27,11 @@ const (
 	ErrCodeInternal       = -32603
 )
 
+// MaxFrameBytes caps a single JSON-RPC frame. A larger frame is reported as a
+// parse error instead of being buffered, so a client cannot grow the heap
+// without bound. It matches the cap the other headless MCP servers use.
+const MaxFrameBytes = 8 << 20
+
 // Request is an incoming JSON-RPC 2.0 message. ID is nil for notifications.
 type Request struct {
 	JSONRPC string          `json:"jsonrpc"`

@@ -1,0 +1,10 @@
+# Build artifacts
+build/
+dist/
+bin/
+coverage/
+.gradle/
+*.log
+
+# macOS
+.DS_Store

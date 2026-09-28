@@ -30,6 +30,7 @@ internal object Tools {
     }
 
     private fun ping(store: Store): ToolResult = report {
+        store.ping()
         buildJsonObject { put("pong", true) }
     }
 

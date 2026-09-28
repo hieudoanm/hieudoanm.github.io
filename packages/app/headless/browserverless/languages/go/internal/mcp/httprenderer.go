@@ -17,6 +17,11 @@ import (
 const (
 	maxResponseBytes = 32 << 20
 	maxErrorBytes    = 64 << 10
+
+	// proxyTimeout is a backstop on the whole request, including body transfer.
+	// A per-call timeout_ms only bounds the context; without this a backend that
+	// accepts the connection and then stalls would hang the tool forever.
+	proxyTimeout = 2 * headless.DefaultLoadTimeout
 )
 
 // requestBody is the JSON payload both render endpoints accept.
@@ -36,7 +41,7 @@ type httpRenderer struct {
 func NewHTTPRenderer(baseURL string) Renderer {
 	return &httpRenderer{
 		baseURL: strings.TrimRight(baseURL, "/"),
-		client:  &http.Client{},
+		client:  &http.Client{Timeout: proxyTimeout},
 	}
 }
 

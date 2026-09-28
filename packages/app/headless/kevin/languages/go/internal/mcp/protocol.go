@@ -11,6 +11,11 @@ import "encoding/json"
 // ProtocolVersion is the MCP revision this server implements.
 const ProtocolVersion = "2025-11-25"
 
+// MaxFrameBytes caps a single JSON-RPC frame. A larger frame is reported as a
+// parse error instead of being buffered, so a client cannot grow the process
+// heap without bound.
+const MaxFrameBytes = 8 << 20
+
 // ServerName and ServerVersion identify this server during initialize.
 const (
 	ServerName    = "kevin-mcp"
@@ -127,6 +132,59 @@ type ServerInfo struct {
 type ListToolsResult struct {
 	Tools      []Tool `json:"tools"`
 	NextCursor string `json:"nextCursor,omitempty"`
+}
+
+// PingResult is the empty object a ping is answered with.
+type PingResult struct{}
+
+// supportedProtocolVersions lists the revisions this server can speak, newest
+// first. A client asking for one of these gets exactly that version echoed
+// back, so an older client is not forced to speak a revision it never asked for.
+func supportedProtocolVersions() []string {
+	return []string{ProtocolVersion}
+}
+
+// initializeResult negotiates the protocol revision and advertises the tool
+// capability. When the client asks for a revision this server does not speak,
+// the server's latest is offered and the client is expected to disconnect if it
+// cannot speak that either.
+func initializeResult(params json.RawMessage) InitializeResult {
+	return InitializeResult{
+		ProtocolVersion: negotiatedVersion(params),
+		Capabilities: ServerCapabilities{
+			Tools: &ToolsCapabilities{ListChanged: false},
+		},
+		ServerInfo: ServerInfo{
+			Name:    ServerName,
+			Version: ServerVersion,
+		},
+	}
+}
+
+// negotiatedVersion echoes the client's requested revision when the server
+// supports it, and otherwise falls back to the server's latest. An unparsable
+// or absent params object is treated as no request at all.
+func negotiatedVersion(params json.RawMessage) string {
+	var requested InitializeParams
+	if err := json.Unmarshal(objectOrEmpty(params), &requested); err != nil {
+		return ProtocolVersion
+	}
+	for _, version := range supportedProtocolVersions() {
+		if requested.ProtocolVersion == version {
+			return version
+		}
+	}
+	return ProtocolVersion
+}
+
+// objectOrEmpty normalises absent and null params to an empty object, which is
+// what the tool handlers expect. The MCP protocol typically sends an object,
+// never a null.
+func objectOrEmpty(params json.RawMessage) json.RawMessage {
+	if len(params) == 0 || string(params) == "null" {
+		return json.RawMessage("{}")
+	}
+	return params
 }
 
 // NewErrorResponse builds a JSON-RPC error reply for id.

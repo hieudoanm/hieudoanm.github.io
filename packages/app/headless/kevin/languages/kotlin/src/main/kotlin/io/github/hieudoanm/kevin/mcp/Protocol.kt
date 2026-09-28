@@ -21,7 +21,13 @@ const val ERR_INVALID_REQUEST: Int = -32600
 const val ERR_METHOD_NOT_FOUND: Int = -32601
 const val ERR_INVALID_PARAMS: Int = -32602
 
-private const val JSONRPC: String = "2.0"
+/**
+ * Caps a single JSON-RPC frame. A larger frame is reported as a parse error
+ * instead of being buffered, so a client cannot grow the heap without bound.
+ */
+const val MAX_FRAME_CHARS: Int = 8 shl 20
+
+internal const val JSONRPC: String = "2.0"
 
 internal val json: Json = Json { ignoreUnknownKeys = true }
 
