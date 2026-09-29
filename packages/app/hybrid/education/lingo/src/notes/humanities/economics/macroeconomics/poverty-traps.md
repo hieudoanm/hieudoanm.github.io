@@ -1,0 +1,69 @@
+# Poverty Traps
+
+> Why the poor can stay poor: self-reinforcing cycles that block escape from
+> destitution.
+
+App route: `/economics/poverty-traps/`
+
+## What is it?
+
+A **poverty trap** is a self-reinforcing mechanism that keeps people or
+countries poor even when escape is theoretically possible. Because the poor lack
+the minimal resources—savings, health, education, credit—needed to make
+productive investments, they can’t take the step that would lift them out of
+poverty. It contrasts with the view that markets naturally reward effort and
+lift everyone (see Development Economics).
+
+## How traps form
+
+**Credit constraints:** Poor households can’t borrow to invest in seeds, tools,
+or skills, so they remain trapped at subsistence levels despite high returns to
+investment.
+
+**Health:** Malnutrition and disease sap energy and productivity, lowering
+income, worsening health further—a downward spiral.
+
+**Education:** Families too poor to send children to school or keep them healthy
+reproduce low human capital across generations.
+
+**Geography and institutions:** Weak infrastructure and institutions can trap
+entire regions, not just individuals.
+
+## Thresholds and S-curves
+
+**Multiple equilibria:** Below a certain asset threshold, income growth fails to
+take off and people stagnate; above it, they accumulate and grow. This produces
+two stable outcomes rather than one smooth path.
+
+**The poverty line matters:** Whether a “big push” (a coordinated wave of
+investment) can leap the threshold is a central debate.
+
+**Not universal:** Many poor people are poor mainly due to temporary shocks or
+bad luck, not a trap—distinguishing the two matters for policy.
+
+## The policy implication
+
+**Targeted transfers:** One-off grants, cash transfers, and asset provision
+(livestock, capital) can push households past the threshold to self-sustaining
+growth.
+
+**Microfinance and access:** Extending credit and insurance lets the poor invest
+and smooth shocks that would otherwise push them back into poverty.
+
+**Evidence-first:** Randomized trials (see Development RCTs) test which
+interventions actually break traps, informing cost-effective aid.
+
+## Examples
+
+- [Poverty Trap Escape](/economics/poverty-traps/escape) — Simulate the S-shaped
+  savings dynamic and design the minimum one-off transfer that lifts a household
+  past the escape threshold.
+
+## References
+
+1. [Wikipedia: Poverty Trap](https://en.wikipedia.org/wiki/Poverty_trap) —
+   Overview of self-reinforcing mechanisms that keep people poor.
+2. [Investopedia: Poverty Trap](https://www.investopedia.com/terms/p/poverty-trap.asp)
+   — Entry on the causes of poverty traps and proposed solutions.
+3. [Nobel Prize: 2019 laureates](https://www.nobelprize.org/prizes/economic-sciences/2019/summary/)
+   — 2019 prize for the experimental approach to alleviating global poverty.

@@ -76,8 +76,8 @@ const RaceModelsPage: FC = () => (
           'Evidence for an accumulator model of psychophysical discrimination.',
       },
       {
-        href: 'https://doi.org/10.1037/0033-295X.86.4.285',
-        label: 'Raab (1962) — Psychological Review',
+        href: 'https://doi.org/10.1037/0033-295X.85.2.59',
+        label: 'Ratcliff (1978) — Psychological Review',
         description:
           'Statistical facilitation and the classic race model formulation.',
       },

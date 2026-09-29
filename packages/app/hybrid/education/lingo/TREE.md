@@ -253,266 +253,271 @@
 │   │   │   │       └── [page.tsx](./src/app/(games)/(health)/psychology/page.tsx)
 │   │   │   ├── (humanities)/
 │   │   │   │   ├── economics/
-│   │   │   │   │   ├── adverse-selection/
-│   │   │   │   │   │   ├── lemons/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/adverse-selection/lemons/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/adverse-selection/page.tsx)
-│   │   │   │   │   ├── aggregate-demand-supply/
-│   │   │   │   │   │   ├── shocks/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/aggregate-demand-supply/shocks/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/aggregate-demand-supply/page.tsx)
-│   │   │   │   │   ├── arbitrage/
-│   │   │   │   │   │   ├── triangular/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/arbitrage/triangular/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/arbitrage/page.tsx)
-│   │   │   │   │   ├── auction-theory/
-│   │   │   │   │   │   ├── auction/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/auction-theory/auction/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/auction-theory/page.tsx)
-│   │   │   │   │   ├── backward-induction/
-│   │   │   │   │   │   ├── rollback/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/backward-induction/rollback/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/backward-induction/page.tsx)
-│   │   │   │   │   ├── bargaining-theory/
-│   │   │   │   │   │   ├── ultimatum/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/bargaining-theory/ultimatum/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/bargaining-theory/page.tsx)
-│   │   │   │   │   ├── bayesian-updating/
-│   │   │   │   │   │   ├── monty-hall/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/bayesian-updating/monty-hall/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/bayesian-updating/page.tsx)
-│   │   │   │   │   ├── behavioral-finance/
-│   │   │   │   │   │   ├── bubble/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/behavioral-finance/bubble/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/behavioral-finance/page.tsx)
-│   │   │   │   │   ├── behavioral-heuristics/
-│   │   │   │   │   │   ├── lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/behavioral-heuristics/lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/behavioral-heuristics/page.tsx)
-│   │   │   │   │   ├── business-cycles/
-│   │   │   │   │   │   ├── predict/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/business-cycles/predict/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/business-cycles/page.tsx)
-│   │   │   │   │   ├── capm-and-risk/
-│   │   │   │   │   │   ├── portfolio/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/capm-and-risk/portfolio/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/capm-and-risk/page.tsx)
-│   │   │   │   │   ├── causal-inference/
-│   │   │   │   │   │   ├── experiments/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/causal-inference/experiments/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/causal-inference/page.tsx)
-│   │   │   │   │   ├── consumer-theory/
-│   │   │   │   │   │   ├── utility/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/consumer-theory/utility/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/consumer-theory/page.tsx)
-│   │   │   │   │   ├── coordination-games/
-│   │   │   │   │   │   ├── stag-hunt/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/coordination-games/stag-hunt/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/coordination-games/page.tsx)
-│   │   │   │   │   ├── development-rcts/
-│   │   │   │   │   │   ├── experiment/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/development-rcts/experiment/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/development-rcts/page.tsx)
-│   │   │   │   │   ├── economic-inequality/
-│   │   │   │   │   │   ├── lorenz/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/economic-inequality/lorenz/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/economic-inequality/page.tsx)
-│   │   │   │   │   ├── efficient-market-hypothesis/
-│   │   │   │   │   │   ├── random-walk/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/efficient-market-hypothesis/random-walk/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/efficient-market-hypothesis/page.tsx)
-│   │   │   │   │   ├── elasticity/
-│   │   │   │   │   │   ├── pricing/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/elasticity/pricing/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/elasticity/page.tsx)
-│   │   │   │   │   ├── endowment-effect/
-│   │   │   │   │   │   ├── trade/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/endowment-effect/trade/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/endowment-effect/page.tsx)
-│   │   │   │   │   ├── evolutionary-game-theory/
-│   │   │   │   │   │   ├── replicator/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/evolutionary-game-theory/replicator/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/evolutionary-game-theory/page.tsx)
-│   │   │   │   │   ├── externalities/
-│   │   │   │   │   │   ├── pigou/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/externalities/pigou/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/externalities/page.tsx)
-│   │   │   │   │   ├── fiscal-policy/
-│   │   │   │   │   │   ├── stimulus/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/fiscal-policy/stimulus/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/fiscal-policy/page.tsx)
-│   │   │   │   │   ├── game-theory-basics/
-│   │   │   │   │   │   ├── matrix/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/game-theory-basics/matrix/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/game-theory-basics/page.tsx)
-│   │   │   │   │   ├── gdp-and-national-accounts/
-│   │   │   │   │   │   ├── aggregate/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/gdp-and-national-accounts/aggregate/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/gdp-and-national-accounts/page.tsx)
-│   │   │   │   │   ├── human-capital/
-│   │   │   │   │   │   ├── decision/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/human-capital/decision/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/human-capital/page.tsx)
-│   │   │   │   │   ├── imperfect-competition/
-│   │   │   │   │   │   ├── lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/imperfect-competition/lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/imperfect-competition/page.tsx)
-│   │   │   │   │   ├── institutions-and-growth/
-│   │   │   │   │   │   ├── lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/institutions-and-growth/lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/institutions-and-growth/page.tsx)
-│   │   │   │   │   ├── is-lm-model/
-│   │   │   │   │   │   ├── equilibrium/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/is-lm-model/equilibrium/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/is-lm-model/page.tsx)
-│   │   │   │   │   ├── keynesian-economics/
-│   │   │   │   │   │   ├── cross/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/keynesian-economics/cross/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/keynesian-economics/page.tsx)
-│   │   │   │   │   ├── labor-markets/
-│   │   │   │   │   │   ├── wage/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/labor-markets/wage/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/labor-markets/page.tsx)
-│   │   │   │   │   ├── marginal-utility/
-│   │   │   │   │   │   ├── lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/marginal-utility/lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/marginal-utility/page.tsx)
-│   │   │   │   │   ├── market-failures/
-│   │   │   │   │   │   ├── policies/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/market-failures/policies/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/market-failures/page.tsx)
-│   │   │   │   │   ├── market-microstructure/
-│   │   │   │   │   │   ├── order-book/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/market-microstructure/order-book/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/market-microstructure/page.tsx)
-│   │   │   │   │   ├── mechanism-design/
-│   │   │   │   │   │   ├── reveal/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/mechanism-design/reveal/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/mechanism-design/page.tsx)
-│   │   │   │   │   ├── mental-accounting/
-│   │   │   │   │   │   ├── scenarios/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/mental-accounting/scenarios/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/mental-accounting/page.tsx)
-│   │   │   │   │   ├── migration-economics/
-│   │   │   │   │   │   ├── moves/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/migration-economics/moves/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/migration-economics/page.tsx)
-│   │   │   │   │   ├── monetary-policy/
-│   │   │   │   │   │   ├── interest/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/monetary-policy/interest/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/monetary-policy/page.tsx)
-│   │   │   │   │   ├── monopoly-and-market-power/
-│   │   │   │   │   │   ├── pricing/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/monopoly-and-market-power/pricing/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/monopoly-and-market-power/page.tsx)
-│   │   │   │   │   ├── moral-hazard/
-│   │   │   │   │   │   ├── insurance/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/moral-hazard/insurance/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/moral-hazard/page.tsx)
-│   │   │   │   │   ├── nash-equilibrium/
-│   │   │   │   │   │   ├── solve/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/nash-equilibrium/solve/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/nash-equilibrium/page.tsx)
-│   │   │   │   │   ├── nudge-and-behavioral-economics/
-│   │   │   │   │   │   ├── choice/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/nudge-and-behavioral-economics/choice/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/nudge-and-behavioral-economics/page.tsx)
-│   │   │   │   │   ├── oligopoly/
-│   │   │   │   │   │   ├── cournot/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/oligopoly/cournot/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/oligopoly/page.tsx)
-│   │   │   │   │   ├── opportunity-cost/
-│   │   │   │   │   │   ├── trade-offs/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/opportunity-cost/trade-offs/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/opportunity-cost/page.tsx)
-│   │   │   │   │   ├── overconfidence-bias/
-│   │   │   │   │   │   ├── calibration/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/overconfidence-bias/calibration/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/overconfidence-bias/page.tsx)
-│   │   │   │   │   ├── perfect-competition/
-│   │   │   │   │   │   ├── firm/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/perfect-competition/firm/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/perfect-competition/page.tsx)
-│   │   │   │   │   ├── phillips-curve/
-│   │   │   │   │   │   ├── tradeoff/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/phillips-curve/tradeoff/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/phillips-curve/page.tsx)
-│   │   │   │   │   ├── portfolio-theory/
-│   │   │   │   │   │   ├── frontier/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/portfolio-theory/frontier/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/portfolio-theory/page.tsx)
-│   │   │   │   │   ├── poverty-traps/
-│   │   │   │   │   │   ├── escape/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/poverty-traps/escape/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/poverty-traps/page.tsx)
-│   │   │   │   │   ├── price-discrimination/
-│   │   │   │   │   │   ├── split/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/price-discrimination/split/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/price-discrimination/page.tsx)
-│   │   │   │   │   ├── prisoners-dilemma/
-│   │   │   │   │   │   ├── bots/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/prisoners-dilemma/bots/page.tsx)
-│   │   │   │   │   │   ├── simulation/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/prisoners-dilemma/simulation/page.tsx)
-│   │   │   │   │   │   ├── versus/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/prisoners-dilemma/versus/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/prisoners-dilemma/page.tsx)
-│   │   │   │   │   ├── production-and-costs/
-│   │   │   │   │   │   ├── lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/production-and-costs/lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/production-and-costs/page.tsx)
-│   │   │   │   │   ├── prospect-theory/
-│   │   │   │   │   │   ├── framing/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/prospect-theory/framing/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/prospect-theory/page.tsx)
-│   │   │   │   │   ├── public-choice/
-│   │   │   │   │   │   ├── voting/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/public-choice/voting/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/public-choice/page.tsx)
-│   │   │   │   │   ├── public-goods-dilemma/
-│   │   │   │   │   │   ├── contribute/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/public-goods-dilemma/contribute/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/public-goods-dilemma/page.tsx)
-│   │   │   │   │   ├── repeated-games/
-│   │   │   │   │   │   ├── tournament/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/repeated-games/tournament/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/repeated-games/page.tsx)
-│   │   │   │   │   ├── signaling/
-│   │   │   │   │   │   ├── job-market/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/signaling/job-market/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/signaling/page.tsx)
-│   │   │   │   │   ├── social-preferences/
-│   │   │   │   │   │   ├── dictator/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/social-preferences/dictator/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/social-preferences/page.tsx)
-│   │   │   │   │   ├── supply-and-demand/
-│   │   │   │   │   │   ├── price-lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/supply-and-demand/price-lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/supply-and-demand/page.tsx)
-│   │   │   │   │   ├── time-inconsistency/
-│   │   │   │   │   │   ├── savings/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/time-inconsistency/savings/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/time-inconsistency/page.tsx)
-│   │   │   │   │   ├── time-value-of-money/
-│   │   │   │   │   │   ├── lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/time-value-of-money/lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/time-value-of-money/page.tsx)
-│   │   │   │   │   ├── trade-and-tariffs/
-│   │   │   │   │   │   ├── lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/trade-and-tariffs/lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/trade-and-tariffs/page.tsx)
-│   │   │   │   │   ├── tragedy-of-the-commons/
-│   │   │   │   │   │   ├── harvest/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/tragedy-of-the-commons/harvest/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/tragedy-of-the-commons/page.tsx)
-│   │   │   │   │   ├── unemployment-okuns-law/
-│   │   │   │   │   │   ├── lab/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/unemployment-okuns-law/lab/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/unemployment-okuns-law/page.tsx)
-│   │   │   │   │   ├── zero-sum-games/
-│   │   │   │   │   │   ├── rps/
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/zero-sum-games/rps/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/zero-sum-games/page.tsx)
+│   │   │   │   │   ├── (behavioral-economics)/
+│   │   │   │   │   │   ├── behavioral-finance/
+│   │   │   │   │   │   │   ├── bubble/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/behavioral-finance/bubble/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/behavioral-finance/page.tsx)
+│   │   │   │   │   │   ├── behavioral-heuristics/
+│   │   │   │   │   │   │   ├── lab/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/behavioral-heuristics/lab/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/behavioral-heuristics/page.tsx)
+│   │   │   │   │   │   ├── endowment-effect/
+│   │   │   │   │   │   │   ├── trade/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/endowment-effect/trade/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/endowment-effect/page.tsx)
+│   │   │   │   │   │   ├── mental-accounting/
+│   │   │   │   │   │   │   ├── scenarios/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/mental-accounting/scenarios/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/mental-accounting/page.tsx)
+│   │   │   │   │   │   ├── nudge-and-behavioral-economics/
+│   │   │   │   │   │   │   ├── choice/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/nudge-and-behavioral-economics/choice/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/nudge-and-behavioral-economics/page.tsx)
+│   │   │   │   │   │   ├── overconfidence-bias/
+│   │   │   │   │   │   │   ├── calibration/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/overconfidence-bias/calibration/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/overconfidence-bias/page.tsx)
+│   │   │   │   │   │   ├── prospect-theory/
+│   │   │   │   │   │   │   ├── framing/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/prospect-theory/framing/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/prospect-theory/page.tsx)
+│   │   │   │   │   │   ├── social-preferences/
+│   │   │   │   │   │   │   ├── dictator/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/social-preferences/dictator/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/social-preferences/page.tsx)
+│   │   │   │   │   │   └── time-inconsistency/
+│   │   │   │   │   │       ├── savings/
+│   │   │   │   │   │       │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/time-inconsistency/savings/page.tsx)
+│   │   │   │   │   │       └── [page.tsx](./src/app/(games)/(humanities)/economics/(behavioral-economics)/time-inconsistency/page.tsx)
+│   │   │   │   │   ├── (game-theory)/
+│   │   │   │   │   │   ├── auction-theory/
+│   │   │   │   │   │   │   ├── auction/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/auction-theory/auction/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/auction-theory/page.tsx)
+│   │   │   │   │   │   ├── backward-induction/
+│   │   │   │   │   │   │   ├── rollback/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/backward-induction/rollback/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/backward-induction/page.tsx)
+│   │   │   │   │   │   ├── bargaining-theory/
+│   │   │   │   │   │   │   ├── ultimatum/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/bargaining-theory/ultimatum/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/bargaining-theory/page.tsx)
+│   │   │   │   │   │   ├── bayesian-updating/
+│   │   │   │   │   │   │   ├── monty-hall/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/bayesian-updating/monty-hall/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/bayesian-updating/page.tsx)
+│   │   │   │   │   │   ├── coordination-games/
+│   │   │   │   │   │   │   ├── stag-hunt/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/coordination-games/stag-hunt/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/coordination-games/page.tsx)
+│   │   │   │   │   │   ├── evolutionary-game-theory/
+│   │   │   │   │   │   │   ├── replicator/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/evolutionary-game-theory/replicator/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/evolutionary-game-theory/page.tsx)
+│   │   │   │   │   │   ├── game-theory-basics/
+│   │   │   │   │   │   │   ├── matrix/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/game-theory-basics/matrix/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/game-theory-basics/page.tsx)
+│   │   │   │   │   │   ├── mechanism-design/
+│   │   │   │   │   │   │   ├── reveal/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/mechanism-design/reveal/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/mechanism-design/page.tsx)
+│   │   │   │   │   │   ├── nash-equilibrium/
+│   │   │   │   │   │   │   ├── solve/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/nash-equilibrium/solve/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/nash-equilibrium/page.tsx)
+│   │   │   │   │   │   ├── prisoners-dilemma/
+│   │   │   │   │   │   │   ├── bots/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/prisoners-dilemma/bots/page.tsx)
+│   │   │   │   │   │   │   ├── simulation/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/prisoners-dilemma/simulation/page.tsx)
+│   │   │   │   │   │   │   ├── versus/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/prisoners-dilemma/versus/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/prisoners-dilemma/page.tsx)
+│   │   │   │   │   │   ├── repeated-games/
+│   │   │   │   │   │   │   ├── tournament/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/repeated-games/tournament/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/repeated-games/page.tsx)
+│   │   │   │   │   │   ├── signaling/
+│   │   │   │   │   │   │   ├── job-market/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/signaling/job-market/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/signaling/page.tsx)
+│   │   │   │   │   │   └── zero-sum-games/
+│   │   │   │   │   │       ├── rps/
+│   │   │   │   │   │       │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/zero-sum-games/rps/page.tsx)
+│   │   │   │   │   │       └── [page.tsx](./src/app/(games)/(humanities)/economics/(game-theory)/zero-sum-games/page.tsx)
+│   │   │   │   │   ├── (macroeconomics)/
+│   │   │   │   │   │   ├── aggregate-demand-supply/
+│   │   │   │   │   │   │   ├── shocks/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/aggregate-demand-supply/shocks/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/aggregate-demand-supply/page.tsx)
+│   │   │   │   │   │   ├── business-cycles/
+│   │   │   │   │   │   │   ├── predict/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/business-cycles/predict/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/business-cycles/page.tsx)
+│   │   │   │   │   │   ├── development-rcts/
+│   │   │   │   │   │   │   ├── experiment/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/development-rcts/experiment/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/development-rcts/page.tsx)
+│   │   │   │   │   │   ├── economic-inequality/
+│   │   │   │   │   │   │   ├── lorenz/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/economic-inequality/lorenz/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/economic-inequality/page.tsx)
+│   │   │   │   │   │   ├── fiscal-policy/
+│   │   │   │   │   │   │   ├── stimulus/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/fiscal-policy/stimulus/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/fiscal-policy/page.tsx)
+│   │   │   │   │   │   ├── gdp-and-national-accounts/
+│   │   │   │   │   │   │   ├── aggregate/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/gdp-and-national-accounts/aggregate/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/gdp-and-national-accounts/page.tsx)
+│   │   │   │   │   │   ├── institutions-and-growth/
+│   │   │   │   │   │   │   ├── lab/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/institutions-and-growth/lab/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/institutions-and-growth/page.tsx)
+│   │   │   │   │   │   ├── is-lm-model/
+│   │   │   │   │   │   │   ├── equilibrium/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/is-lm-model/equilibrium/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/is-lm-model/page.tsx)
+│   │   │   │   │   │   ├── keynesian-economics/
+│   │   │   │   │   │   │   ├── cross/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/keynesian-economics/cross/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/keynesian-economics/page.tsx)
+│   │   │   │   │   │   ├── migration-economics/
+│   │   │   │   │   │   │   ├── moves/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/migration-economics/moves/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/migration-economics/page.tsx)
+│   │   │   │   │   │   ├── monetary-policy/
+│   │   │   │   │   │   │   ├── interest/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/monetary-policy/interest/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/monetary-policy/page.tsx)
+│   │   │   │   │   │   ├── phillips-curve/
+│   │   │   │   │   │   │   ├── tradeoff/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/phillips-curve/tradeoff/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/phillips-curve/page.tsx)
+│   │   │   │   │   │   ├── poverty-traps/
+│   │   │   │   │   │   │   ├── escape/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/poverty-traps/escape/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/poverty-traps/page.tsx)
+│   │   │   │   │   │   ├── trade-and-tariffs/
+│   │   │   │   │   │   │   ├── lab/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/trade-and-tariffs/lab/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/trade-and-tariffs/page.tsx)
+│   │   │   │   │   │   └── unemployment-okuns-law/
+│   │   │   │   │   │       ├── lab/
+│   │   │   │   │   │       │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/unemployment-okuns-law/lab/page.tsx)
+│   │   │   │   │   │       └── [page.tsx](./src/app/(games)/(humanities)/economics/(macroeconomics)/unemployment-okuns-law/page.tsx)
+│   │   │   │   │   ├── (markets-and-public-policy)/
+│   │   │   │   │   │   ├── adverse-selection/
+│   │   │   │   │   │   │   ├── lemons/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/adverse-selection/lemons/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/adverse-selection/page.tsx)
+│   │   │   │   │   │   ├── arbitrage/
+│   │   │   │   │   │   │   ├── triangular/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/arbitrage/triangular/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/arbitrage/page.tsx)
+│   │   │   │   │   │   ├── capm-and-risk/
+│   │   │   │   │   │   │   ├── portfolio/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/capm-and-risk/portfolio/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/capm-and-risk/page.tsx)
+│   │   │   │   │   │   ├── efficient-market-hypothesis/
+│   │   │   │   │   │   │   ├── random-walk/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/efficient-market-hypothesis/random-walk/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/efficient-market-hypothesis/page.tsx)
+│   │   │   │   │   │   ├── externalities/
+│   │   │   │   │   │   │   ├── pigou/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/externalities/pigou/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/externalities/page.tsx)
+│   │   │   │   │   │   ├── market-failures/
+│   │   │   │   │   │   │   ├── policies/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/market-failures/policies/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/market-failures/page.tsx)
+│   │   │   │   │   │   ├── market-microstructure/
+│   │   │   │   │   │   │   ├── order-book/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/market-microstructure/order-book/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/market-microstructure/page.tsx)
+│   │   │   │   │   │   ├── moral-hazard/
+│   │   │   │   │   │   │   ├── insurance/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/moral-hazard/insurance/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/moral-hazard/page.tsx)
+│   │   │   │   │   │   ├── portfolio-theory/
+│   │   │   │   │   │   │   ├── frontier/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/portfolio-theory/frontier/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/portfolio-theory/page.tsx)
+│   │   │   │   │   │   ├── public-choice/
+│   │   │   │   │   │   │   ├── voting/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/public-choice/voting/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/public-choice/page.tsx)
+│   │   │   │   │   │   ├── public-goods-dilemma/
+│   │   │   │   │   │   │   ├── contribute/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/public-goods-dilemma/contribute/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/public-goods-dilemma/page.tsx)
+│   │   │   │   │   │   ├── time-value-of-money/
+│   │   │   │   │   │   │   ├── lab/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/time-value-of-money/lab/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/time-value-of-money/page.tsx)
+│   │   │   │   │   │   └── tragedy-of-the-commons/
+│   │   │   │   │   │       ├── harvest/
+│   │   │   │   │   │       │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/tragedy-of-the-commons/harvest/page.tsx)
+│   │   │   │   │   │       └── [page.tsx](./src/app/(games)/(humanities)/economics/(markets-and-public-policy)/tragedy-of-the-commons/page.tsx)
+│   │   │   │   │   ├── (microeconomics)/
+│   │   │   │   │   │   ├── causal-inference/
+│   │   │   │   │   │   │   ├── experiments/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/causal-inference/experiments/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/causal-inference/page.tsx)
+│   │   │   │   │   │   ├── consumer-theory/
+│   │   │   │   │   │   │   ├── utility/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/consumer-theory/utility/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/consumer-theory/page.tsx)
+│   │   │   │   │   │   ├── elasticity/
+│   │   │   │   │   │   │   ├── pricing/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/elasticity/pricing/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/elasticity/page.tsx)
+│   │   │   │   │   │   ├── human-capital/
+│   │   │   │   │   │   │   ├── decision/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/human-capital/decision/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/human-capital/page.tsx)
+│   │   │   │   │   │   ├── imperfect-competition/
+│   │   │   │   │   │   │   ├── lab/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/imperfect-competition/lab/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/imperfect-competition/page.tsx)
+│   │   │   │   │   │   ├── labor-markets/
+│   │   │   │   │   │   │   ├── wage/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/labor-markets/wage/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/labor-markets/page.tsx)
+│   │   │   │   │   │   ├── marginal-utility/
+│   │   │   │   │   │   │   ├── lab/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/marginal-utility/lab/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/marginal-utility/page.tsx)
+│   │   │   │   │   │   ├── monopoly-and-market-power/
+│   │   │   │   │   │   │   ├── pricing/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/monopoly-and-market-power/pricing/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/monopoly-and-market-power/page.tsx)
+│   │   │   │   │   │   ├── oligopoly/
+│   │   │   │   │   │   │   ├── cournot/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/oligopoly/cournot/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/oligopoly/page.tsx)
+│   │   │   │   │   │   ├── opportunity-cost/
+│   │   │   │   │   │   │   ├── trade-offs/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/opportunity-cost/trade-offs/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/opportunity-cost/page.tsx)
+│   │   │   │   │   │   ├── perfect-competition/
+│   │   │   │   │   │   │   ├── firm/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/perfect-competition/firm/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/perfect-competition/page.tsx)
+│   │   │   │   │   │   ├── price-discrimination/
+│   │   │   │   │   │   │   ├── split/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/price-discrimination/split/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/price-discrimination/page.tsx)
+│   │   │   │   │   │   ├── production-and-costs/
+│   │   │   │   │   │   │   ├── lab/
+│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/production-and-costs/lab/page.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/production-and-costs/page.tsx)
+│   │   │   │   │   │   └── supply-and-demand/
+│   │   │   │   │   │       ├── price-lab/
+│   │   │   │   │   │       │   └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/supply-and-demand/price-lab/page.tsx)
+│   │   │   │   │   │       └── [page.tsx](./src/app/(games)/(humanities)/economics/(microeconomics)/supply-and-demand/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(games)/(humanities)/economics/page.tsx)
 │   │   │   │   ├── geography/
 │   │   │   │   │   ├── __tests__/
@@ -564,80 +569,82 @@
 │   │   │       │   │   └── [page.tsx](./src/app/(games)/(stem)/chemistry/periodic-table/page.tsx)
 │   │   │       │   └── [page.tsx](./src/app/(games)/(stem)/chemistry/page.tsx)
 │   │   │       ├── engineering/
-│   │   │       │   ├── algorithms/
+│   │   │       │   ├── (algorithms)/
 │   │   │       │   │   ├── binary-search/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/binary-search/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/binary-search/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/binary-search/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/binary-search/page.tsx)
 │   │   │       │   │   ├── bubble-sort/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/bubble-sort/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/bubble-sort/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/bubble-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/bubble-sort/page.tsx)
 │   │   │       │   │   ├── heap-sort/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/heap-sort/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/heap-sort/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/heap-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/heap-sort/page.tsx)
 │   │   │       │   │   ├── insertion-sort/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/insertion-sort/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/insertion-sort/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/insertion-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/insertion-sort/page.tsx)
 │   │   │       │   │   ├── linear-search/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/linear-search/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/linear-search/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/linear-search/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/linear-search/page.tsx)
 │   │   │       │   │   ├── merge-sort/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/merge-sort/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/merge-sort/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/merge-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/merge-sort/page.tsx)
 │   │   │       │   │   ├── quick-sort/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/quick-sort/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/quick-sort/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/quick-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/quick-sort/page.tsx)
 │   │   │       │   │   └── selection-sort/
 │   │   │       │   │       ├── interactive/
-│   │   │       │   │       │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/selection-sort/interactive/page.tsx)
-│   │   │       │   │       └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/selection-sort/page.tsx)
-│   │   │       │   ├── data-structures/
+│   │   │       │   │       │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/selection-sort/interactive/page.tsx)
+│   │   │       │   │       └── [page.tsx](./src/app/(games)/(stem)/engineering/(algorithms)/selection-sort/page.tsx)
+│   │   │       │   ├── (data-structures)/
 │   │   │       │   │   ├── array/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/array/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/array/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/array/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/array/page.tsx)
 │   │   │       │   │   ├── disjoint-set/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/disjoint-set/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/disjoint-set/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/disjoint-set/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/disjoint-set/page.tsx)
 │   │   │       │   │   ├── fenwick-trees/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/fenwick-trees/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/fenwick-trees/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/fenwick-trees/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/fenwick-trees/page.tsx)
 │   │   │       │   │   ├── hash-tables/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/hash-tables/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/hash-tables/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/hash-tables/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/hash-tables/page.tsx)
 │   │   │       │   │   ├── linked-lists/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/linked-lists/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/linked-lists/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/linked-lists/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/linked-lists/page.tsx)
 │   │   │       │   │   ├── queues/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/queues/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/queues/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/queues/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/queues/page.tsx)
 │   │   │       │   │   ├── segment-trees/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/segment-trees/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/segment-trees/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/segment-trees/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/segment-trees/page.tsx)
 │   │   │       │   │   ├── stacks/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/stacks/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/stacks/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/stacks/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/stacks/page.tsx)
 │   │   │       │   │   ├── suffix-arrays/
 │   │   │       │   │   │   ├── interactive/
-│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/suffix-arrays/interactive/page.tsx)
-│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/suffix-arrays/page.tsx)
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/suffix-arrays/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/suffix-arrays/page.tsx)
 │   │   │       │   │   └── trie/
 │   │   │       │   │       ├── interactive/
-│   │   │       │   │       │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/trie/interactive/page.tsx)
-│   │   │       │   │       └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/trie/page.tsx)
+│   │   │       │   │       │   └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/trie/interactive/page.tsx)
+│   │   │       │   │       └── [page.tsx](./src/app/(games)/(stem)/engineering/(data-structures)/trie/page.tsx)
+│   │   │       │   ├── __tests__/
+│   │   │       │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/__tests__/page.tsx)
 │   │   │       │   └── [page.tsx](./src/app/(games)/(stem)/engineering/page.tsx)
 │   │   │       ├── maths/
 │   │   │       │   ├── __tests__/
@@ -788,7 +795,6 @@
 │   │   │       │   └── [page.test.tsx](./src/app/(info)/version/__tests__/page.test.tsx)
 │   │   │       └── [page.tsx](./src/app/(info)/version/page.tsx)
 │   │   ├── __tests__/
-│   │   │   ├── [engineering-routes.test.tsx](./src/app/__tests__/engineering-routes.test.tsx)
 │   │   │   ├── [error.test.tsx](./src/app/__tests__/error.test.tsx)
 │   │   │   ├── [forbidden.test.tsx](./src/app/__tests__/forbidden.test.tsx)
 │   │   │   ├── [global-error.test.tsx](./src/app/__tests__/global-error.test.tsx)
@@ -1099,742 +1105,747 @@
 │   │   │           └── [utils.ts](./src/games/health/psychology/SatisfactionWithLifeScale/utils.ts)
 │   │   ├── humanities/
 │   │   │   ├── economics/
-│   │   │   │   ├── ad-as/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/ad-as/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/ad-as/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/ad-as/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/ad-as/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/ad-as/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/ad-as/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/ad-as/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/ad-as/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/ad-as/types.ts)
-│   │   │   │   ├── arbitrage/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/arbitrage/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/arbitrage/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/arbitrage/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/arbitrage/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/arbitrage/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/arbitrage/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/arbitrage/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/arbitrage/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/arbitrage/types.ts)
-│   │   │   │   ├── auction/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/auction/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/auction/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/auction/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/auction/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/auction/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/auction/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/auction/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/auction/types.ts)
-│   │   │   │   ├── bargaining/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/bargaining/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/bargaining/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/bargaining/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/bargaining/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/bargaining/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/bargaining/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/bargaining/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/bargaining/types.ts)
-│   │   │   │   ├── basics/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/basics/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/basics/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/basics/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/basics/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/basics/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/basics/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/basics/index.tsx)
-│   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/basics/panels.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/basics/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/basics/types.ts)
-│   │   │   │   ├── bayesian/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/bayesian/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/bayesian/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/bayesian/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/bayesian/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/bayesian/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/bayesian/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/bayesian/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/bayesian/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/bayesian/types.ts)
-│   │   │   │   ├── bubbles/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/bubbles/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/bubbles/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/bubbles/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/bubbles/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/bubbles/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/bubbles/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/bubbles/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/bubbles/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/bubbles/types.ts)
-│   │   │   │   ├── business-cycles/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/business-cycles/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/business-cycles/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/business-cycles/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/business-cycles/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/business-cycles/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/business-cycles/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/business-cycles/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/business-cycles/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/business-cycles/types.ts)
-│   │   │   │   ├── capm/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/capm/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/capm/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/capm/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/capm/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/capm/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/capm/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/capm/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/capm/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/capm/types.ts)
-│   │   │   │   ├── causal/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/causal/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/causal/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/causal/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/causal/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/causal/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/causal/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/causal/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/causal/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/causal/types.ts)
-│   │   │   │   ├── commitment/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/commitment/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/commitment/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/commitment/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/commitment/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/commitment/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/commitment/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/commitment/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/commitment/types.ts)
-│   │   │   │   ├── commons/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/commons/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/commons/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/commons/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/commons/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/commons/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/commons/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/commons/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/commons/types.ts)
-│   │   │   │   ├── consumer/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/consumer/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/consumer/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/consumer/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/consumer/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/consumer/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/consumer/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/consumer/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/consumer/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/consumer/types.ts)
-│   │   │   │   ├── dictator/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/dictator/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/dictator/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/dictator/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/dictator/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/dictator/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/dictator/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/dictator/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/dictator/types.ts)
-│   │   │   │   ├── elasticity/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/elasticity/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/elasticity/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/elasticity/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/elasticity/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/elasticity/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/elasticity/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/elasticity/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/elasticity/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/elasticity/types.ts)
-│   │   │   │   ├── emh/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/emh/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/emh/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/emh/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/emh/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/emh/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/emh/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/emh/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/emh/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/emh/types.ts)
-│   │   │   │   ├── endowment/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/endowment/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/endowment/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/endowment/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/endowment/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/endowment/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/endowment/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/endowment/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/endowment/types.ts)
-│   │   │   │   ├── evolution/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/evolution/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/evolution/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/evolution/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/evolution/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/evolution/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/evolution/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/evolution/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/evolution/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/evolution/types.ts)
-│   │   │   │   ├── externalities/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/externalities/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/externalities/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/externalities/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/externalities/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/externalities/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/externalities/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/externalities/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/externalities/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/externalities/types.ts)
-│   │   │   │   ├── fiscal/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/fiscal/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/fiscal/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/fiscal/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/fiscal/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/fiscal/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/fiscal/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/fiscal/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/fiscal/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/fiscal/types.ts)
-│   │   │   │   ├── framing/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/framing/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/framing/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/framing/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/framing/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/framing/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/framing/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/framing/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/framing/types.ts)
-│   │   │   │   ├── gdp/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/gdp/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/gdp/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/gdp/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/gdp/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/gdp/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/gdp/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/gdp/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/gdp/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/gdp/types.ts)
-│   │   │   │   ├── heuristics/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/heuristics/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/heuristics/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/heuristics/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/heuristics/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/heuristics/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/heuristics/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/heuristics/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/heuristics/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/heuristics/types.ts)
-│   │   │   │   ├── human-capital/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/human-capital/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/human-capital/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/human-capital/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/human-capital/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/human-capital/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/human-capital/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/human-capital/index.tsx)
-│   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/human-capital/panels.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/human-capital/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/human-capital/types.ts)
-│   │   │   │   ├── inequality/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/inequality/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/inequality/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/inequality/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/inequality/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/inequality/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/inequality/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/inequality/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/inequality/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/inequality/types.ts)
-│   │   │   │   ├── institutions/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/institutions/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/institutions/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/institutions/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/institutions/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/institutions/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/institutions/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/institutions/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/institutions/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/institutions/types.ts)
-│   │   │   │   ├── is-lm/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/is-lm/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/is-lm/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/is-lm/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/is-lm/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/is-lm/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/is-lm/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/is-lm/index.tsx)
-│   │   │   │   │   ├── [plot.tsx](./src/games/humanities/economics/is-lm/plot.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/is-lm/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/is-lm/types.ts)
-│   │   │   │   ├── keynesian/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/keynesian/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/keynesian/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/keynesian/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/keynesian/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/keynesian/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/keynesian/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/keynesian/index.tsx)
-│   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/keynesian/panels.tsx)
-│   │   │   │   │   ├── [primitives.tsx](./src/games/humanities/economics/keynesian/primitives.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/keynesian/reducer.ts)
-│   │   │   │   │   ├── [results.tsx](./src/games/humanities/economics/keynesian/results.tsx)
-│   │   │   │   │   ├── [screens.tsx](./src/games/humanities/economics/keynesian/screens.tsx)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/keynesian/types.ts)
-│   │   │   │   ├── labor/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/labor/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/labor/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/labor/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/labor/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/labor/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/labor/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/labor/index.tsx)
-│   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/labor/panels.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/labor/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/labor/types.ts)
-│   │   │   │   ├── lemons/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/lemons/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/lemons/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/lemons/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/lemons/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/lemons/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/lemons/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/lemons/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/lemons/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/lemons/types.ts)
-│   │   │   │   ├── marginal-utility/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/marginal-utility/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/marginal-utility/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/marginal-utility/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [challenge.tsx](./src/games/humanities/economics/marginal-utility/challenge.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/marginal-utility/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/marginal-utility/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/marginal-utility/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/marginal-utility/index.tsx)
-│   │   │   │   │   ├── [lab.tsx](./src/games/humanities/economics/marginal-utility/lab.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/marginal-utility/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/marginal-utility/types.ts)
-│   │   │   │   ├── market-failures/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/market-failures/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/market-failures/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/market-failures/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/market-failures/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/market-failures/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/market-failures/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/market-failures/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/market-failures/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/market-failures/types.ts)
-│   │   │   │   ├── mechanism/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/mechanism/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/mechanism/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/mechanism/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/mechanism/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/mechanism/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/mechanism/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/mechanism/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/mechanism/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/mechanism/types.ts)
-│   │   │   │   ├── mental-accounting/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/mental-accounting/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/mental-accounting/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/mental-accounting/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/mental-accounting/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/mental-accounting/constants.ts)
-│   │   │   │   │   ├── [framer.tsx](./src/games/humanities/economics/mental-accounting/framer.tsx)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/mental-accounting/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/mental-accounting/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/mental-accounting/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/mental-accounting/types.ts)
-│   │   │   │   ├── migration/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/migration/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/migration/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/migration/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/migration/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/migration/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/migration/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/migration/index.tsx)
-│   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/migration/panels.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/migration/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/migration/types.ts)
-│   │   │   │   ├── monetary-policy/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/monetary-policy/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/monetary-policy/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/monetary-policy/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/monetary-policy/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/monetary-policy/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/monetary-policy/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/monetary-policy/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/monetary-policy/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/monetary-policy/types.ts)
-│   │   │   │   ├── monopolistic/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/monopolistic/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/monopolistic/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/monopolistic/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [chart.tsx](./src/games/humanities/economics/monopolistic/chart.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/monopolistic/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/monopolistic/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/monopolistic/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/monopolistic/index.tsx)
-│   │   │   │   │   ├── [lab.tsx](./src/games/humanities/economics/monopolistic/lab.tsx)
-│   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/monopolistic/panels.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/monopolistic/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/monopolistic/types.ts)
-│   │   │   │   ├── monopoly/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/monopoly/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/monopoly/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/monopoly/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/monopoly/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/monopoly/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/monopoly/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/monopoly/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/monopoly/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/monopoly/types.ts)
-│   │   │   │   ├── moral-hazard/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/moral-hazard/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/moral-hazard/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/moral-hazard/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/moral-hazard/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/moral-hazard/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/moral-hazard/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/moral-hazard/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/moral-hazard/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/moral-hazard/types.ts)
-│   │   │   │   ├── nash/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/nash/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/nash/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/nash/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/nash/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/nash/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/nash/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/nash/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/nash/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/nash/types.ts)
-│   │   │   │   ├── nudge/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/nudge/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/nudge/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/nudge/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components-report.tsx](./src/games/humanities/economics/nudge/components-report.tsx)
-│   │   │   │   │   ├── [components-simulator.tsx](./src/games/humanities/economics/nudge/components-simulator.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/nudge/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/nudge/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/nudge/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/nudge/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/nudge/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/nudge/types.ts)
-│   │   │   │   ├── okuns/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/okuns/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/okuns/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/okuns/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── components/
-│   │   │   │   │   │   ├── [estimate.tsx](./src/games/humanities/economics/okuns/components/estimate.tsx)
-│   │   │   │   │   │   ├── [intro.tsx](./src/games/humanities/economics/okuns/components/intro.tsx)
-│   │   │   │   │   │   ├── [result.tsx](./src/games/humanities/economics/okuns/components/result.tsx)
-│   │   │   │   │   │   └── [steer.tsx](./src/games/humanities/economics/okuns/components/steer.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/okuns/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/okuns/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/okuns/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/okuns/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/okuns/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/okuns/types.ts)
-│   │   │   │   ├── oligopoly/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/oligopoly/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/oligopoly/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/oligopoly/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/oligopoly/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/oligopoly/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/oligopoly/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/oligopoly/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/oligopoly/types.ts)
-│   │   │   │   ├── opportunity-cost/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/opportunity-cost/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/opportunity-cost/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/opportunity-cost/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── components/
-│   │   │   │   │   │   ├── [challenge.tsx](./src/games/humanities/economics/opportunity-cost/components/challenge.tsx)
-│   │   │   │   │   │   ├── [format.ts](./src/games/humanities/economics/opportunity-cost/components/format.ts)
-│   │   │   │   │   │   ├── [results.tsx](./src/games/humanities/economics/opportunity-cost/components/results.tsx)
-│   │   │   │   │   │   └── [sandbox.tsx](./src/games/humanities/economics/opportunity-cost/components/sandbox.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/opportunity-cost/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/opportunity-cost/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/opportunity-cost/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/opportunity-cost/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/opportunity-cost/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/opportunity-cost/types.ts)
-│   │   │   │   ├── order-book/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/order-book/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/order-book/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/order-book/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/order-book/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/order-book/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/order-book/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/order-book/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/order-book/types.ts)
-│   │   │   │   ├── overconfidence/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/overconfidence/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/overconfidence/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/overconfidence/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [brackets.tsx](./src/games/humanities/economics/overconfidence/brackets.tsx)
-│   │   │   │   │   ├── [calibration.tsx](./src/games/humanities/economics/overconfidence/calibration.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/overconfidence/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/overconfidence/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/overconfidence/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/overconfidence/index.tsx)
-│   │   │   │   │   ├── [market.tsx](./src/games/humanities/economics/overconfidence/market.tsx)
-│   │   │   │   │   ├── [question.tsx](./src/games/humanities/economics/overconfidence/question.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/overconfidence/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/overconfidence/types.ts)
-│   │   │   │   ├── perfect-competition/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/perfect-competition/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/perfect-competition/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/perfect-competition/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/perfect-competition/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/perfect-competition/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/perfect-competition/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/perfect-competition/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/perfect-competition/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/perfect-competition/types.ts)
-│   │   │   │   ├── phillips/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/phillips/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/phillips/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/phillips/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/phillips/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/phillips/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/phillips/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/phillips/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/phillips/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/phillips/types.ts)
-│   │   │   │   ├── portfolio/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/portfolio/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/portfolio/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/portfolio/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [challenge.tsx](./src/games/humanities/economics/portfolio/challenge.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/portfolio/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/portfolio/constants.ts)
-│   │   │   │   │   ├── [frontier.tsx](./src/games/humanities/economics/portfolio/frontier.tsx)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/portfolio/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/portfolio/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/portfolio/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/portfolio/types.ts)
-│   │   │   │   ├── poverty-trap/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/poverty-trap/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/poverty-trap/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/poverty-trap/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/poverty-trap/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/poverty-trap/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/poverty-trap/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/poverty-trap/index.tsx)
-│   │   │   │   │   ├── [panel.tsx](./src/games/humanities/economics/poverty-trap/panel.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/poverty-trap/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/poverty-trap/types.ts)
-│   │   │   │   ├── price-discrimination/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/price-discrimination/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/price-discrimination/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/price-discrimination/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/price-discrimination/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/price-discrimination/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/price-discrimination/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/price-discrimination/index.tsx)
-│   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/price-discrimination/panels.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/price-discrimination/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/price-discrimination/types.ts)
-│   │   │   │   ├── price-lab/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/price-lab/__tests__/game.test.ts)
-│   │   │   │   │   │   └── [index.test.tsx](./src/games/humanities/economics/price-lab/__tests__/index.test.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/price-lab/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/price-lab/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/price-lab/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/price-lab/index.tsx)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/price-lab/types.ts)
-│   │   │   │   ├── prisoners-dilemma/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/prisoners-dilemma/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/prisoners-dilemma/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [tournament.test.ts](./src/games/humanities/economics/prisoners-dilemma/__tests__/tournament.test.ts)
-│   │   │   │   │   ├── [behaviours.ts](./src/games/humanities/economics/prisoners-dilemma/behaviours.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/prisoners-dilemma/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/prisoners-dilemma/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/prisoners-dilemma/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/prisoners-dilemma/reducer.ts)
-│   │   │   │   │   ├── [tournament.ts](./src/games/humanities/economics/prisoners-dilemma/tournament.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/prisoners-dilemma/types.ts)
-│   │   │   │   ├── production/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/production/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/production/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/production/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/production/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/production/constants.ts)
-│   │   │   │   │   ├── [curves.tsx](./src/games/humanities/economics/production/curves.tsx)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/production/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/production/index.tsx)
-│   │   │   │   │   ├── [metrics.tsx](./src/games/humanities/economics/production/metrics.tsx)
-│   │   │   │   │   ├── [quiz.tsx](./src/games/humanities/economics/production/quiz.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/production/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/production/types.ts)
-│   │   │   │   ├── public-choice/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/public-choice/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/public-choice/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/public-choice/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/public-choice/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/public-choice/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/public-choice/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/public-choice/index.tsx)
-│   │   │   │   │   ├── [median.tsx](./src/games/humanities/economics/public-choice/median.tsx)
-│   │   │   │   │   ├── [paradox.tsx](./src/games/humanities/economics/public-choice/paradox.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/public-choice/reducer.ts)
-│   │   │   │   │   ├── [rent.tsx](./src/games/humanities/economics/public-choice/rent.tsx)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/public-choice/types.ts)
-│   │   │   │   ├── public-goods/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/public-goods/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/public-goods/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/public-goods/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/public-goods/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/public-goods/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/public-goods/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/public-goods/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/public-goods/types.ts)
-│   │   │   │   ├── rcts/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/rcts/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/rcts/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/rcts/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/rcts/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/rcts/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/rcts/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/rcts/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/rcts/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/rcts/types.ts)
-│   │   │   │   ├── repeated/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/repeated/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/repeated/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/repeated/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/repeated/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/repeated/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/repeated/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/repeated/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/repeated/types.ts)
-│   │   │   │   ├── rps/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/rps/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/rps/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/rps/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/rps/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/rps/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/rps/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/rps/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/rps/types.ts)
-│   │   │   │   ├── sequential/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/sequential/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/sequential/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/sequential/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/sequential/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/sequential/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/sequential/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/sequential/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/sequential/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/sequential/types.ts)
-│   │   │   │   ├── signaling/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/signaling/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/signaling/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/signaling/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/signaling/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/signaling/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/signaling/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/signaling/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/signaling/types.ts)
-│   │   │   │   ├── stag-hunt/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/stag-hunt/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/stag-hunt/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/stag-hunt/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/stag-hunt/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/stag-hunt/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/stag-hunt/index.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/stag-hunt/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/stag-hunt/types.ts)
-│   │   │   │   ├── time-value/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/time-value/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/time-value/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/time-value/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [calculator.tsx](./src/games/humanities/economics/time-value/calculator.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/time-value/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/time-value/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/time-value/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/time-value/index.tsx)
-│   │   │   │   │   ├── [phases.tsx](./src/games/humanities/economics/time-value/phases.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/time-value/reducer.ts)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/time-value/types.ts)
-│   │   │   │   ├── trade/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/trade/__tests__/game.test.ts)
-│   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/trade/__tests__/index.test.tsx)
-│   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/trade/__tests__/reducer.test.ts)
-│   │   │   │   │   ├── [chart-scaffold.tsx](./src/games/humanities/economics/trade/chart-scaffold.tsx)
-│   │   │   │   │   ├── [chart.tsx](./src/games/humanities/economics/trade/chart.tsx)
-│   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/trade/components.tsx)
-│   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/trade/constants.ts)
-│   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/trade/game.ts)
-│   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/trade/index.tsx)
-│   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/trade/panels.tsx)
-│   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/trade/reducer.ts)
-│   │   │   │   │   ├── [retaliation.tsx](./src/games/humanities/economics/trade/retaliation.tsx)
-│   │   │   │   │   └── [types.ts](./src/games/humanities/economics/trade/types.ts)
+│   │   │   │   ├── behavioral-economics/
+│   │   │   │   │   ├── bubbles/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/bubbles/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/bubbles/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/bubbles/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/behavioral-economics/bubbles/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/bubbles/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/behavioral-economics/bubbles/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/bubbles/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/bubbles/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/behavioral-economics/bubbles/types.ts)
+│   │   │   │   │   ├── commitment/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/commitment/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/commitment/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/commitment/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/commitment/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/behavioral-economics/commitment/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/commitment/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/commitment/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/behavioral-economics/commitment/types.ts)
+│   │   │   │   │   ├── dictator/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/dictator/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/dictator/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/dictator/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/dictator/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/behavioral-economics/dictator/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/dictator/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/dictator/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/behavioral-economics/dictator/types.ts)
+│   │   │   │   │   ├── endowment/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/endowment/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/endowment/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/endowment/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/endowment/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/behavioral-economics/endowment/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/endowment/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/endowment/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/behavioral-economics/endowment/types.ts)
+│   │   │   │   │   ├── framing/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/framing/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/framing/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/framing/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/framing/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/behavioral-economics/framing/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/framing/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/framing/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/behavioral-economics/framing/types.ts)
+│   │   │   │   │   ├── heuristics/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/heuristics/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/heuristics/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/heuristics/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/behavioral-economics/heuristics/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/heuristics/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/behavioral-economics/heuristics/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/heuristics/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/heuristics/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/behavioral-economics/heuristics/types.ts)
+│   │   │   │   │   ├── mental-accounting/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/mental-accounting/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/mental-accounting/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/mental-accounting/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/behavioral-economics/mental-accounting/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/mental-accounting/constants.ts)
+│   │   │   │   │   │   ├── [framer.tsx](./src/games/humanities/economics/behavioral-economics/mental-accounting/framer.tsx)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/behavioral-economics/mental-accounting/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/mental-accounting/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/mental-accounting/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/behavioral-economics/mental-accounting/types.ts)
+│   │   │   │   │   ├── nudge/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/nudge/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/nudge/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/nudge/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components-report.tsx](./src/games/humanities/economics/behavioral-economics/nudge/components-report.tsx)
+│   │   │   │   │   │   ├── [components-simulator.tsx](./src/games/humanities/economics/behavioral-economics/nudge/components-simulator.tsx)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/behavioral-economics/nudge/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/nudge/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/behavioral-economics/nudge/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/nudge/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/nudge/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/behavioral-economics/nudge/types.ts)
+│   │   │   │   │   └── overconfidence/
+│   │   │   │   │       ├── __tests__/
+│   │   │   │   │       │   ├── [game.test.ts](./src/games/humanities/economics/behavioral-economics/overconfidence/__tests__/game.test.ts)
+│   │   │   │   │       │   ├── [index.test.tsx](./src/games/humanities/economics/behavioral-economics/overconfidence/__tests__/index.test.tsx)
+│   │   │   │   │       │   └── [reducer.test.ts](./src/games/humanities/economics/behavioral-economics/overconfidence/__tests__/reducer.test.ts)
+│   │   │   │   │       ├── [brackets.tsx](./src/games/humanities/economics/behavioral-economics/overconfidence/brackets.tsx)
+│   │   │   │   │       ├── [calibration.tsx](./src/games/humanities/economics/behavioral-economics/overconfidence/calibration.tsx)
+│   │   │   │   │       ├── [components.tsx](./src/games/humanities/economics/behavioral-economics/overconfidence/components.tsx)
+│   │   │   │   │       ├── [constants.ts](./src/games/humanities/economics/behavioral-economics/overconfidence/constants.ts)
+│   │   │   │   │       ├── [game.ts](./src/games/humanities/economics/behavioral-economics/overconfidence/game.ts)
+│   │   │   │   │       ├── [index.tsx](./src/games/humanities/economics/behavioral-economics/overconfidence/index.tsx)
+│   │   │   │   │       ├── [market.tsx](./src/games/humanities/economics/behavioral-economics/overconfidence/market.tsx)
+│   │   │   │   │       ├── [question.tsx](./src/games/humanities/economics/behavioral-economics/overconfidence/question.tsx)
+│   │   │   │   │       ├── [reducer.ts](./src/games/humanities/economics/behavioral-economics/overconfidence/reducer.ts)
+│   │   │   │   │       └── [types.ts](./src/games/humanities/economics/behavioral-economics/overconfidence/types.ts)
+│   │   │   │   ├── game-theory/
+│   │   │   │   │   ├── auction/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/auction/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/auction/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/auction/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/auction/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/auction/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/auction/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/auction/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/auction/types.ts)
+│   │   │   │   │   ├── bargaining/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/bargaining/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/bargaining/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/bargaining/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/bargaining/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/bargaining/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/bargaining/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/bargaining/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/bargaining/types.ts)
+│   │   │   │   │   ├── basics/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/basics/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/basics/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/basics/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/game-theory/basics/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/basics/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/basics/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/basics/index.tsx)
+│   │   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/game-theory/basics/panels.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/basics/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/basics/types.ts)
+│   │   │   │   │   ├── bayesian/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/bayesian/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/bayesian/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/bayesian/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/game-theory/bayesian/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/bayesian/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/bayesian/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/bayesian/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/bayesian/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/bayesian/types.ts)
+│   │   │   │   │   ├── evolution/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/evolution/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/evolution/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/evolution/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/game-theory/evolution/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/evolution/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/evolution/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/evolution/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/evolution/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/evolution/types.ts)
+│   │   │   │   │   ├── mechanism/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/mechanism/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/mechanism/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/mechanism/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/game-theory/mechanism/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/mechanism/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/mechanism/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/mechanism/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/mechanism/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/mechanism/types.ts)
+│   │   │   │   │   ├── nash/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/nash/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/nash/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/nash/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/game-theory/nash/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/nash/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/nash/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/nash/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/nash/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/nash/types.ts)
+│   │   │   │   │   ├── prisoners-dilemma/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/prisoners-dilemma/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/prisoners-dilemma/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [tournament.test.ts](./src/games/humanities/economics/game-theory/prisoners-dilemma/__tests__/tournament.test.ts)
+│   │   │   │   │   │   ├── [behaviours.ts](./src/games/humanities/economics/game-theory/prisoners-dilemma/behaviours.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/prisoners-dilemma/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/prisoners-dilemma/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/prisoners-dilemma/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/prisoners-dilemma/reducer.ts)
+│   │   │   │   │   │   ├── [tournament.ts](./src/games/humanities/economics/game-theory/prisoners-dilemma/tournament.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/prisoners-dilemma/types.ts)
+│   │   │   │   │   ├── repeated/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/repeated/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/repeated/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/repeated/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/repeated/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/repeated/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/repeated/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/repeated/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/repeated/types.ts)
+│   │   │   │   │   ├── rps/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/rps/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/rps/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/rps/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/rps/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/rps/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/rps/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/rps/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/rps/types.ts)
+│   │   │   │   │   ├── sequential/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/sequential/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/sequential/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/sequential/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/game-theory/sequential/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/sequential/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/sequential/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/sequential/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/sequential/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/sequential/types.ts)
+│   │   │   │   │   ├── signaling/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/signaling/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/signaling/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/signaling/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/game-theory/signaling/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/game-theory/signaling/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/game-theory/signaling/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/game-theory/signaling/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/game-theory/signaling/types.ts)
+│   │   │   │   │   └── stag-hunt/
+│   │   │   │   │       ├── __tests__/
+│   │   │   │   │       │   ├── [game.test.ts](./src/games/humanities/economics/game-theory/stag-hunt/__tests__/game.test.ts)
+│   │   │   │   │       │   ├── [index.test.tsx](./src/games/humanities/economics/game-theory/stag-hunt/__tests__/index.test.tsx)
+│   │   │   │   │       │   └── [reducer.test.ts](./src/games/humanities/economics/game-theory/stag-hunt/__tests__/reducer.test.ts)
+│   │   │   │   │       ├── [constants.ts](./src/games/humanities/economics/game-theory/stag-hunt/constants.ts)
+│   │   │   │   │       ├── [game.ts](./src/games/humanities/economics/game-theory/stag-hunt/game.ts)
+│   │   │   │   │       ├── [index.tsx](./src/games/humanities/economics/game-theory/stag-hunt/index.tsx)
+│   │   │   │   │       ├── [reducer.ts](./src/games/humanities/economics/game-theory/stag-hunt/reducer.ts)
+│   │   │   │   │       └── [types.ts](./src/games/humanities/economics/game-theory/stag-hunt/types.ts)
+│   │   │   │   ├── macroeconomics/
+│   │   │   │   │   ├── ad-as/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/ad-as/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/ad-as/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/ad-as/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/ad-as/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/ad-as/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/ad-as/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/ad-as/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/ad-as/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/ad-as/types.ts)
+│   │   │   │   │   ├── business-cycles/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/business-cycles/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/business-cycles/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/business-cycles/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/business-cycles/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/business-cycles/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/business-cycles/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/business-cycles/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/business-cycles/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/business-cycles/types.ts)
+│   │   │   │   │   ├── fiscal/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/fiscal/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/fiscal/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/fiscal/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/fiscal/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/fiscal/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/fiscal/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/fiscal/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/fiscal/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/fiscal/types.ts)
+│   │   │   │   │   ├── gdp/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/gdp/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/gdp/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/gdp/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/gdp/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/gdp/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/gdp/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/gdp/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/gdp/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/gdp/types.ts)
+│   │   │   │   │   ├── inequality/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/inequality/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/inequality/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/inequality/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/inequality/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/inequality/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/inequality/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/inequality/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/inequality/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/inequality/types.ts)
+│   │   │   │   │   ├── institutions/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/institutions/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/institutions/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/institutions/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/institutions/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/institutions/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/institutions/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/institutions/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/institutions/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/institutions/types.ts)
+│   │   │   │   │   ├── is-lm/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/is-lm/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/is-lm/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/is-lm/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/is-lm/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/is-lm/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/is-lm/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/is-lm/index.tsx)
+│   │   │   │   │   │   ├── [plot.tsx](./src/games/humanities/economics/macroeconomics/is-lm/plot.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/is-lm/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/is-lm/types.ts)
+│   │   │   │   │   ├── keynesian/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/keynesian/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/keynesian/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/keynesian/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/keynesian/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/keynesian/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/keynesian/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/keynesian/index.tsx)
+│   │   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/macroeconomics/keynesian/panels.tsx)
+│   │   │   │   │   │   ├── [primitives.tsx](./src/games/humanities/economics/macroeconomics/keynesian/primitives.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/keynesian/reducer.ts)
+│   │   │   │   │   │   ├── [results.tsx](./src/games/humanities/economics/macroeconomics/keynesian/results.tsx)
+│   │   │   │   │   │   ├── [screens.tsx](./src/games/humanities/economics/macroeconomics/keynesian/screens.tsx)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/keynesian/types.ts)
+│   │   │   │   │   ├── migration/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/migration/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/migration/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/migration/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/migration/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/migration/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/migration/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/migration/index.tsx)
+│   │   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/macroeconomics/migration/panels.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/migration/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/migration/types.ts)
+│   │   │   │   │   ├── monetary-policy/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/monetary-policy/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/monetary-policy/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/monetary-policy/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/monetary-policy/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/monetary-policy/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/monetary-policy/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/monetary-policy/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/monetary-policy/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/monetary-policy/types.ts)
+│   │   │   │   │   ├── okuns/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/okuns/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/okuns/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/okuns/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── components/
+│   │   │   │   │   │   │   ├── [estimate.tsx](./src/games/humanities/economics/macroeconomics/okuns/components/estimate.tsx)
+│   │   │   │   │   │   │   ├── [intro.tsx](./src/games/humanities/economics/macroeconomics/okuns/components/intro.tsx)
+│   │   │   │   │   │   │   ├── [result.tsx](./src/games/humanities/economics/macroeconomics/okuns/components/result.tsx)
+│   │   │   │   │   │   │   └── [steer.tsx](./src/games/humanities/economics/macroeconomics/okuns/components/steer.tsx)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/okuns/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/okuns/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/okuns/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/okuns/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/okuns/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/okuns/types.ts)
+│   │   │   │   │   ├── phillips/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/phillips/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/phillips/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/phillips/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/phillips/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/phillips/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/phillips/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/phillips/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/phillips/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/phillips/types.ts)
+│   │   │   │   │   ├── poverty-trap/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/poverty-trap/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/poverty-trap/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/poverty-trap/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/poverty-trap/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/poverty-trap/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/poverty-trap/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/poverty-trap/index.tsx)
+│   │   │   │   │   │   ├── [panel.tsx](./src/games/humanities/economics/macroeconomics/poverty-trap/panel.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/poverty-trap/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/poverty-trap/types.ts)
+│   │   │   │   │   ├── rcts/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/rcts/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/rcts/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/rcts/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/macroeconomics/rcts/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/macroeconomics/rcts/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/macroeconomics/rcts/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/macroeconomics/rcts/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/rcts/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/macroeconomics/rcts/types.ts)
+│   │   │   │   │   └── trade/
+│   │   │   │   │       ├── __tests__/
+│   │   │   │   │       │   ├── [game.test.ts](./src/games/humanities/economics/macroeconomics/trade/__tests__/game.test.ts)
+│   │   │   │   │       │   ├── [index.test.tsx](./src/games/humanities/economics/macroeconomics/trade/__tests__/index.test.tsx)
+│   │   │   │   │       │   └── [reducer.test.ts](./src/games/humanities/economics/macroeconomics/trade/__tests__/reducer.test.ts)
+│   │   │   │   │       ├── [chart-scaffold.tsx](./src/games/humanities/economics/macroeconomics/trade/chart-scaffold.tsx)
+│   │   │   │   │       ├── [chart.tsx](./src/games/humanities/economics/macroeconomics/trade/chart.tsx)
+│   │   │   │   │       ├── [components.tsx](./src/games/humanities/economics/macroeconomics/trade/components.tsx)
+│   │   │   │   │       ├── [constants.ts](./src/games/humanities/economics/macroeconomics/trade/constants.ts)
+│   │   │   │   │       ├── [game.ts](./src/games/humanities/economics/macroeconomics/trade/game.ts)
+│   │   │   │   │       ├── [index.tsx](./src/games/humanities/economics/macroeconomics/trade/index.tsx)
+│   │   │   │   │       ├── [panels.tsx](./src/games/humanities/economics/macroeconomics/trade/panels.tsx)
+│   │   │   │   │       ├── [reducer.ts](./src/games/humanities/economics/macroeconomics/trade/reducer.ts)
+│   │   │   │   │       ├── [retaliation.tsx](./src/games/humanities/economics/macroeconomics/trade/retaliation.tsx)
+│   │   │   │   │       └── [types.ts](./src/games/humanities/economics/macroeconomics/trade/types.ts)
+│   │   │   │   ├── markets-and-public-policy/
+│   │   │   │   │   ├── arbitrage/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/arbitrage/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/arbitrage/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/arbitrage/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/arbitrage/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/arbitrage/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/arbitrage/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/arbitrage/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/arbitrage/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/arbitrage/types.ts)
+│   │   │   │   │   ├── capm/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/capm/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/capm/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/capm/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/capm/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/capm/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/capm/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/capm/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/capm/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/capm/types.ts)
+│   │   │   │   │   ├── commons/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/commons/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/commons/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/commons/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/commons/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/commons/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/commons/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/commons/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/commons/types.ts)
+│   │   │   │   │   ├── emh/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/emh/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/emh/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/emh/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/emh/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/emh/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/emh/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/emh/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/emh/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/emh/types.ts)
+│   │   │   │   │   ├── externalities/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/externalities/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/externalities/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/externalities/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/externalities/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/externalities/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/externalities/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/externalities/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/externalities/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/externalities/types.ts)
+│   │   │   │   │   ├── lemons/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/lemons/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/lemons/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/lemons/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/lemons/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/lemons/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/lemons/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/lemons/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/lemons/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/lemons/types.ts)
+│   │   │   │   │   ├── market-failures/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/market-failures/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/market-failures/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/market-failures/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/market-failures/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/market-failures/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/market-failures/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/market-failures/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/market-failures/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/market-failures/types.ts)
+│   │   │   │   │   ├── moral-hazard/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/moral-hazard/types.ts)
+│   │   │   │   │   ├── order-book/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/order-book/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/order-book/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/order-book/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/order-book/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/order-book/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/order-book/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/order-book/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/order-book/types.ts)
+│   │   │   │   │   ├── portfolio/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/portfolio/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/portfolio/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/portfolio/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [challenge.tsx](./src/games/humanities/economics/markets-and-public-policy/portfolio/challenge.tsx)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/portfolio/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/portfolio/constants.ts)
+│   │   │   │   │   │   ├── [frontier.tsx](./src/games/humanities/economics/markets-and-public-policy/portfolio/frontier.tsx)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/portfolio/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/portfolio/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/portfolio/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/portfolio/types.ts)
+│   │   │   │   │   ├── public-choice/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/public-choice/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/public-choice/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/public-choice/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/public-choice/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/public-choice/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/public-choice/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/public-choice/index.tsx)
+│   │   │   │   │   │   ├── [median.tsx](./src/games/humanities/economics/markets-and-public-policy/public-choice/median.tsx)
+│   │   │   │   │   │   ├── [paradox.tsx](./src/games/humanities/economics/markets-and-public-policy/public-choice/paradox.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/public-choice/reducer.ts)
+│   │   │   │   │   │   ├── [rent.tsx](./src/games/humanities/economics/markets-and-public-policy/public-choice/rent.tsx)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/public-choice/types.ts)
+│   │   │   │   │   ├── public-goods/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/public-goods/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/public-goods/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/public-goods/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/public-goods/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/public-goods/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/public-goods/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/public-goods/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/public-goods/types.ts)
+│   │   │   │   │   └── time-value/
+│   │   │   │   │       ├── __tests__/
+│   │   │   │   │       │   ├── [game.test.ts](./src/games/humanities/economics/markets-and-public-policy/time-value/__tests__/game.test.ts)
+│   │   │   │   │       │   ├── [index.test.tsx](./src/games/humanities/economics/markets-and-public-policy/time-value/__tests__/index.test.tsx)
+│   │   │   │   │       │   └── [reducer.test.ts](./src/games/humanities/economics/markets-and-public-policy/time-value/__tests__/reducer.test.ts)
+│   │   │   │   │       ├── [calculator.tsx](./src/games/humanities/economics/markets-and-public-policy/time-value/calculator.tsx)
+│   │   │   │   │       ├── [components.tsx](./src/games/humanities/economics/markets-and-public-policy/time-value/components.tsx)
+│   │   │   │   │       ├── [constants.ts](./src/games/humanities/economics/markets-and-public-policy/time-value/constants.ts)
+│   │   │   │   │       ├── [game.ts](./src/games/humanities/economics/markets-and-public-policy/time-value/game.ts)
+│   │   │   │   │       ├── [index.tsx](./src/games/humanities/economics/markets-and-public-policy/time-value/index.tsx)
+│   │   │   │   │       ├── [phases.tsx](./src/games/humanities/economics/markets-and-public-policy/time-value/phases.tsx)
+│   │   │   │   │       ├── [reducer.ts](./src/games/humanities/economics/markets-and-public-policy/time-value/reducer.ts)
+│   │   │   │   │       └── [types.ts](./src/games/humanities/economics/markets-and-public-policy/time-value/types.ts)
+│   │   │   │   ├── microeconomics/
+│   │   │   │   │   ├── causal/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/causal/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/causal/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/causal/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/causal/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/causal/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/causal/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/causal/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/causal/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/causal/types.ts)
+│   │   │   │   │   ├── consumer/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/consumer/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/consumer/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/consumer/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/consumer/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/consumer/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/consumer/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/consumer/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/consumer/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/consumer/types.ts)
+│   │   │   │   │   ├── elasticity/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/elasticity/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/elasticity/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/elasticity/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/elasticity/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/elasticity/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/elasticity/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/elasticity/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/elasticity/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/elasticity/types.ts)
+│   │   │   │   │   ├── human-capital/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/human-capital/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/human-capital/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/human-capital/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/human-capital/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/human-capital/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/human-capital/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/human-capital/index.tsx)
+│   │   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/microeconomics/human-capital/panels.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/human-capital/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/human-capital/types.ts)
+│   │   │   │   │   ├── labor/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/labor/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/labor/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/labor/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/labor/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/labor/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/labor/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/labor/index.tsx)
+│   │   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/microeconomics/labor/panels.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/labor/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/labor/types.ts)
+│   │   │   │   │   ├── marginal-utility/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/marginal-utility/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/marginal-utility/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/marginal-utility/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [challenge.tsx](./src/games/humanities/economics/microeconomics/marginal-utility/challenge.tsx)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/marginal-utility/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/marginal-utility/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/marginal-utility/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/marginal-utility/index.tsx)
+│   │   │   │   │   │   ├── [lab.tsx](./src/games/humanities/economics/microeconomics/marginal-utility/lab.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/marginal-utility/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/marginal-utility/types.ts)
+│   │   │   │   │   ├── monopolistic/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/monopolistic/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/monopolistic/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/monopolistic/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [chart.tsx](./src/games/humanities/economics/microeconomics/monopolistic/chart.tsx)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/monopolistic/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/monopolistic/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/monopolistic/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/monopolistic/index.tsx)
+│   │   │   │   │   │   ├── [lab.tsx](./src/games/humanities/economics/microeconomics/monopolistic/lab.tsx)
+│   │   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/microeconomics/monopolistic/panels.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/monopolistic/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/monopolistic/types.ts)
+│   │   │   │   │   ├── monopoly/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/monopoly/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/monopoly/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/monopoly/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/monopoly/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/monopoly/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/monopoly/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/monopoly/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/monopoly/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/monopoly/types.ts)
+│   │   │   │   │   ├── oligopoly/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/oligopoly/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/oligopoly/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/oligopoly/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/oligopoly/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/oligopoly/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/oligopoly/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/oligopoly/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/oligopoly/types.ts)
+│   │   │   │   │   ├── opportunity-cost/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/opportunity-cost/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/opportunity-cost/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/opportunity-cost/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── components/
+│   │   │   │   │   │   │   ├── [challenge.tsx](./src/games/humanities/economics/microeconomics/opportunity-cost/components/challenge.tsx)
+│   │   │   │   │   │   │   ├── [format.ts](./src/games/humanities/economics/microeconomics/opportunity-cost/components/format.ts)
+│   │   │   │   │   │   │   ├── [results.tsx](./src/games/humanities/economics/microeconomics/opportunity-cost/components/results.tsx)
+│   │   │   │   │   │   │   └── [sandbox.tsx](./src/games/humanities/economics/microeconomics/opportunity-cost/components/sandbox.tsx)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/opportunity-cost/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/opportunity-cost/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/opportunity-cost/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/opportunity-cost/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/opportunity-cost/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/opportunity-cost/types.ts)
+│   │   │   │   │   ├── perfect-competition/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/perfect-competition/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/perfect-competition/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/perfect-competition/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/perfect-competition/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/perfect-competition/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/perfect-competition/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/perfect-competition/index.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/perfect-competition/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/perfect-competition/types.ts)
+│   │   │   │   │   ├── price-discrimination/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/price-discrimination/__tests__/game.test.ts)
+│   │   │   │   │   │   │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/price-discrimination/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/price-discrimination/__tests__/reducer.test.ts)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/price-discrimination/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/price-discrimination/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/price-discrimination/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/price-discrimination/index.tsx)
+│   │   │   │   │   │   ├── [panels.tsx](./src/games/humanities/economics/microeconomics/price-discrimination/panels.tsx)
+│   │   │   │   │   │   ├── [reducer.ts](./src/games/humanities/economics/microeconomics/price-discrimination/reducer.ts)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/price-discrimination/types.ts)
+│   │   │   │   │   ├── price-lab/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/price-lab/__tests__/game.test.ts)
+│   │   │   │   │   │   │   └── [index.test.tsx](./src/games/humanities/economics/microeconomics/price-lab/__tests__/index.test.tsx)
+│   │   │   │   │   │   ├── [components.tsx](./src/games/humanities/economics/microeconomics/price-lab/components.tsx)
+│   │   │   │   │   │   ├── [constants.ts](./src/games/humanities/economics/microeconomics/price-lab/constants.ts)
+│   │   │   │   │   │   ├── [game.ts](./src/games/humanities/economics/microeconomics/price-lab/game.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/games/humanities/economics/microeconomics/price-lab/index.tsx)
+│   │   │   │   │   │   └── [types.ts](./src/games/humanities/economics/microeconomics/price-lab/types.ts)
+│   │   │   │   │   └── production/
+│   │   │   │   │       ├── __tests__/
+│   │   │   │   │       │   ├── [game.test.ts](./src/games/humanities/economics/microeconomics/production/__tests__/game.test.ts)
+│   │   │   │   │       │   ├── [index.test.tsx](./src/games/humanities/economics/microeconomics/production/__tests__/index.test.tsx)
+│   │   │   │   │       │   └── [reducer.test.ts](./src/games/humanities/economics/microeconomics/production/__tests__/reducer.test.ts)
+│   │   │   │   │       ├── [components.tsx](./src/games/humanities/economics/microeconomics/production/components.tsx)
+│   │   │   │   │       ├── [constants.ts](./src/games/humanities/economics/microeconomics/production/constants.ts)
+│   │   │   │   │       ├── [curves.tsx](./src/games/humanities/economics/microeconomics/production/curves.tsx)
+│   │   │   │   │       ├── [game.ts](./src/games/humanities/economics/microeconomics/production/game.ts)
+│   │   │   │   │       ├── [index.tsx](./src/games/humanities/economics/microeconomics/production/index.tsx)
+│   │   │   │   │       ├── [metrics.tsx](./src/games/humanities/economics/microeconomics/production/metrics.tsx)
+│   │   │   │   │       ├── [quiz.tsx](./src/games/humanities/economics/microeconomics/production/quiz.tsx)
+│   │   │   │   │       ├── [reducer.ts](./src/games/humanities/economics/microeconomics/production/reducer.ts)
+│   │   │   │   │       └── [types.ts](./src/games/humanities/economics/microeconomics/production/types.ts)
 │   │   │   │   └── [data.ts](./src/games/humanities/economics/data.ts)
 │   │   │   ├── geography/
 │   │   │   │   ├── _shared/
@@ -2208,6 +2219,140 @@
 │   │   ├── [catalog.ts](./src/lib/catalog.ts)
 │   │   ├── [progress.ts](./src/lib/progress.ts)
 │   │   └── [publicPaths.ts](./src/lib/publicPaths.ts)
+│   ├── notes/
+│   │   ├── arts/
+│   │   │   └── colors/
+│   │   │       ├── [css.md](./src/notes/arts/colors/css.md)
+│   │   │       ├── [harmony.md](./src/notes/arts/colors/harmony.md)
+│   │   │       ├── [models.md](./src/notes/arts/colors/models.md)
+│   │   │       ├── [perception.md](./src/notes/arts/colors/perception.md)
+│   │   │       └── [scales.md](./src/notes/arts/colors/scales.md)
+│   │   ├── health/
+│   │   │   ├── ophthalmology/
+│   │   │   │   └── [vision.md](./src/notes/health/ophthalmology/vision.md)
+│   │   │   └── psychology/
+│   │   │       ├── practices/
+│   │   │       │   ├── [counselling.md](./src/notes/health/psychology/practices/counselling.md)
+│   │   │       │   ├── [journaling.md](./src/notes/health/psychology/practices/journaling.md)
+│   │   │       │   └── [mindfulness.md](./src/notes/health/psychology/practices/mindfulness.md)
+│   │   │       └── theory/
+│   │   │           ├── [biology.md](./src/notes/health/psychology/theory/biology.md)
+│   │   │           ├── [cognitive.md](./src/notes/health/psychology/theory/cognitive.md)
+│   │   │           ├── [developmental.md](./src/notes/health/psychology/theory/developmental.md)
+│   │   │           └── [social.md](./src/notes/health/psychology/theory/social.md)
+│   │   ├── humanities/
+│   │   │   └── economics/
+│   │   │       ├── behavioral-economics/
+│   │   │       │   ├── [behavioral-finance.md](./src/notes/humanities/economics/behavioral-economics/behavioral-finance.md)
+│   │   │       │   ├── [behavioral-heuristics.md](./src/notes/humanities/economics/behavioral-economics/behavioral-heuristics.md)
+│   │   │       │   ├── [endowment-effect.md](./src/notes/humanities/economics/behavioral-economics/endowment-effect.md)
+│   │   │       │   ├── [mental-accounting.md](./src/notes/humanities/economics/behavioral-economics/mental-accounting.md)
+│   │   │       │   ├── [nudge-and-behavioral-economics.md](./src/notes/humanities/economics/behavioral-economics/nudge-and-behavioral-economics.md)
+│   │   │       │   ├── [overconfidence-bias.md](./src/notes/humanities/economics/behavioral-economics/overconfidence-bias.md)
+│   │   │       │   ├── [prospect-theory.md](./src/notes/humanities/economics/behavioral-economics/prospect-theory.md)
+│   │   │       │   ├── [social-preferences.md](./src/notes/humanities/economics/behavioral-economics/social-preferences.md)
+│   │   │       │   └── [time-inconsistency.md](./src/notes/humanities/economics/behavioral-economics/time-inconsistency.md)
+│   │   │       ├── game-theory/
+│   │   │       │   ├── [auction-theory.md](./src/notes/humanities/economics/game-theory/auction-theory.md)
+│   │   │       │   ├── [backward-induction.md](./src/notes/humanities/economics/game-theory/backward-induction.md)
+│   │   │       │   ├── [bargaining-theory.md](./src/notes/humanities/economics/game-theory/bargaining-theory.md)
+│   │   │       │   ├── [bayesian-updating.md](./src/notes/humanities/economics/game-theory/bayesian-updating.md)
+│   │   │       │   ├── [coordination-games.md](./src/notes/humanities/economics/game-theory/coordination-games.md)
+│   │   │       │   ├── [evolutionary-game-theory.md](./src/notes/humanities/economics/game-theory/evolutionary-game-theory.md)
+│   │   │       │   ├── [game-theory-basics.md](./src/notes/humanities/economics/game-theory/game-theory-basics.md)
+│   │   │       │   ├── [mechanism-design.md](./src/notes/humanities/economics/game-theory/mechanism-design.md)
+│   │   │       │   ├── [nash-equilibrium.md](./src/notes/humanities/economics/game-theory/nash-equilibrium.md)
+│   │   │       │   ├── [prisoners-dilemma.md](./src/notes/humanities/economics/game-theory/prisoners-dilemma.md)
+│   │   │       │   ├── [repeated-games.md](./src/notes/humanities/economics/game-theory/repeated-games.md)
+│   │   │       │   ├── [signaling.md](./src/notes/humanities/economics/game-theory/signaling.md)
+│   │   │       │   └── [zero-sum-games.md](./src/notes/humanities/economics/game-theory/zero-sum-games.md)
+│   │   │       ├── macroeconomics/
+│   │   │       │   ├── [aggregate-demand-supply.md](./src/notes/humanities/economics/macroeconomics/aggregate-demand-supply.md)
+│   │   │       │   ├── [business-cycles.md](./src/notes/humanities/economics/macroeconomics/business-cycles.md)
+│   │   │       │   ├── [development-rcts.md](./src/notes/humanities/economics/macroeconomics/development-rcts.md)
+│   │   │       │   ├── [economic-inequality.md](./src/notes/humanities/economics/macroeconomics/economic-inequality.md)
+│   │   │       │   ├── [fiscal-policy.md](./src/notes/humanities/economics/macroeconomics/fiscal-policy.md)
+│   │   │       │   ├── [gdp-and-national-accounts.md](./src/notes/humanities/economics/macroeconomics/gdp-and-national-accounts.md)
+│   │   │       │   ├── [institutions-and-growth.md](./src/notes/humanities/economics/macroeconomics/institutions-and-growth.md)
+│   │   │       │   ├── [is-lm-model.md](./src/notes/humanities/economics/macroeconomics/is-lm-model.md)
+│   │   │       │   ├── [keynesian-economics.md](./src/notes/humanities/economics/macroeconomics/keynesian-economics.md)
+│   │   │       │   ├── [migration-economics.md](./src/notes/humanities/economics/macroeconomics/migration-economics.md)
+│   │   │       │   ├── [monetary-policy.md](./src/notes/humanities/economics/macroeconomics/monetary-policy.md)
+│   │   │       │   ├── [phillips-curve.md](./src/notes/humanities/economics/macroeconomics/phillips-curve.md)
+│   │   │       │   ├── [poverty-traps.md](./src/notes/humanities/economics/macroeconomics/poverty-traps.md)
+│   │   │       │   ├── [trade-and-tariffs.md](./src/notes/humanities/economics/macroeconomics/trade-and-tariffs.md)
+│   │   │       │   └── [unemployment-okuns-law.md](./src/notes/humanities/economics/macroeconomics/unemployment-okuns-law.md)
+│   │   │       ├── markets-and-public-policy/
+│   │   │       │   ├── [adverse-selection.md](./src/notes/humanities/economics/markets-and-public-policy/adverse-selection.md)
+│   │   │       │   ├── [arbitrage.md](./src/notes/humanities/economics/markets-and-public-policy/arbitrage.md)
+│   │   │       │   ├── [capm-and-risk.md](./src/notes/humanities/economics/markets-and-public-policy/capm-and-risk.md)
+│   │   │       │   ├── [efficient-market-hypothesis.md](./src/notes/humanities/economics/markets-and-public-policy/efficient-market-hypothesis.md)
+│   │   │       │   ├── [externalities.md](./src/notes/humanities/economics/markets-and-public-policy/externalities.md)
+│   │   │       │   ├── [market-failures.md](./src/notes/humanities/economics/markets-and-public-policy/market-failures.md)
+│   │   │       │   ├── [market-microstructure.md](./src/notes/humanities/economics/markets-and-public-policy/market-microstructure.md)
+│   │   │       │   ├── [moral-hazard.md](./src/notes/humanities/economics/markets-and-public-policy/moral-hazard.md)
+│   │   │       │   ├── [portfolio-theory.md](./src/notes/humanities/economics/markets-and-public-policy/portfolio-theory.md)
+│   │   │       │   ├── [public-choice.md](./src/notes/humanities/economics/markets-and-public-policy/public-choice.md)
+│   │   │       │   ├── [public-goods-dilemma.md](./src/notes/humanities/economics/markets-and-public-policy/public-goods-dilemma.md)
+│   │   │       │   ├── [time-value-of-money.md](./src/notes/humanities/economics/markets-and-public-policy/time-value-of-money.md)
+│   │   │       │   └── [tragedy-of-the-commons.md](./src/notes/humanities/economics/markets-and-public-policy/tragedy-of-the-commons.md)
+│   │   │       └── microeconomics/
+│   │   │           ├── [causal-inference.md](./src/notes/humanities/economics/microeconomics/causal-inference.md)
+│   │   │           ├── [consumer-theory.md](./src/notes/humanities/economics/microeconomics/consumer-theory.md)
+│   │   │           ├── [elasticity.md](./src/notes/humanities/economics/microeconomics/elasticity.md)
+│   │   │           ├── [human-capital.md](./src/notes/humanities/economics/microeconomics/human-capital.md)
+│   │   │           ├── [imperfect-competition.md](./src/notes/humanities/economics/microeconomics/imperfect-competition.md)
+│   │   │           ├── [labor-markets.md](./src/notes/humanities/economics/microeconomics/labor-markets.md)
+│   │   │           ├── [marginal-utility.md](./src/notes/humanities/economics/microeconomics/marginal-utility.md)
+│   │   │           ├── [monopoly-and-market-power.md](./src/notes/humanities/economics/microeconomics/monopoly-and-market-power.md)
+│   │   │           ├── [oligopoly.md](./src/notes/humanities/economics/microeconomics/oligopoly.md)
+│   │   │           ├── [opportunity-cost.md](./src/notes/humanities/economics/microeconomics/opportunity-cost.md)
+│   │   │           ├── [perfect-competition.md](./src/notes/humanities/economics/microeconomics/perfect-competition.md)
+│   │   │           ├── [price-discrimination.md](./src/notes/humanities/economics/microeconomics/price-discrimination.md)
+│   │   │           ├── [production-and-costs.md](./src/notes/humanities/economics/microeconomics/production-and-costs.md)
+│   │   │           └── [supply-and-demand.md](./src/notes/humanities/economics/microeconomics/supply-and-demand.md)
+│   │   ├── stem/
+│   │   │   ├── engineering/
+│   │   │   │   ├── algorithms/
+│   │   │   │   │   ├── [binary-search.md](./src/notes/stem/engineering/algorithms/binary-search.md)
+│   │   │   │   │   ├── [bubble-sort.md](./src/notes/stem/engineering/algorithms/bubble-sort.md)
+│   │   │   │   │   ├── [heap-sort.md](./src/notes/stem/engineering/algorithms/heap-sort.md)
+│   │   │   │   │   ├── [insertion-sort.md](./src/notes/stem/engineering/algorithms/insertion-sort.md)
+│   │   │   │   │   ├── [linear-search.md](./src/notes/stem/engineering/algorithms/linear-search.md)
+│   │   │   │   │   ├── [merge-sort.md](./src/notes/stem/engineering/algorithms/merge-sort.md)
+│   │   │   │   │   ├── [quick-sort.md](./src/notes/stem/engineering/algorithms/quick-sort.md)
+│   │   │   │   │   └── [selection-sort.md](./src/notes/stem/engineering/algorithms/selection-sort.md)
+│   │   │   │   └── data-structures/
+│   │   │   │       ├── [array.md](./src/notes/stem/engineering/data-structures/array.md)
+│   │   │   │       ├── [disjoint-set.md](./src/notes/stem/engineering/data-structures/disjoint-set.md)
+│   │   │   │       ├── [fenwick-trees.md](./src/notes/stem/engineering/data-structures/fenwick-trees.md)
+│   │   │   │       ├── [hash-tables.md](./src/notes/stem/engineering/data-structures/hash-tables.md)
+│   │   │   │       ├── [linked-lists.md](./src/notes/stem/engineering/data-structures/linked-lists.md)
+│   │   │   │       ├── [queues.md](./src/notes/stem/engineering/data-structures/queues.md)
+│   │   │   │       ├── [segment-trees.md](./src/notes/stem/engineering/data-structures/segment-trees.md)
+│   │   │   │       ├── [stacks.md](./src/notes/stem/engineering/data-structures/stacks.md)
+│   │   │   │       ├── [suffix-arrays.md](./src/notes/stem/engineering/data-structures/suffix-arrays.md)
+│   │   │   │       └── [trie.md](./src/notes/stem/engineering/data-structures/trie.md)
+│   │   │   └── neuroscience/
+│   │   │       ├── neuroimaging/
+│   │   │       │   ├── eeg/
+│   │   │       │   │   ├── [eeg.md](./src/notes/stem/neuroscience/neuroimaging/eeg/eeg.md)
+│   │   │       │   │   └── [qeeg.md](./src/notes/stem/neuroscience/neuroimaging/eeg/qeeg.md)
+│   │   │       │   ├── meg/
+│   │   │       │   │   ├── [meg.md](./src/notes/stem/neuroscience/neuroimaging/meg/meg.md)
+│   │   │       │   │   └── [opm-meg.md](./src/notes/stem/neuroscience/neuroimaging/meg/opm-meg.md)
+│   │   │       │   └── mri/
+│   │   │       │       ├── [fmri.md](./src/notes/stem/neuroscience/neuroimaging/mri/fmri.md)
+│   │   │       │       ├── [fnirs.md](./src/notes/stem/neuroscience/neuroimaging/mri/fnirs.md)
+│   │   │       │       └── [mri.md](./src/notes/stem/neuroscience/neuroimaging/mri/mri.md)
+│   │   │       └── theory/
+│   │   │           ├── [attentional-drift-diffusion-model.md](./src/notes/stem/neuroscience/theory/attentional-drift-diffusion-model.md)
+│   │   │           ├── [drift-diffusion-model.md](./src/notes/stem/neuroscience/theory/drift-diffusion-model.md)
+│   │   │           ├── [hierarchical-drift-diffusion-model.md](./src/notes/stem/neuroscience/theory/hierarchical-drift-diffusion-model.md)
+│   │   │           ├── [leaky-competing-accumulator.md](./src/notes/stem/neuroscience/theory/leaky-competing-accumulator.md)
+│   │   │           ├── [linear-ballistic-accumulator.md](./src/notes/stem/neuroscience/theory/linear-ballistic-accumulator.md)
+│   │   │           └── [race-models.md](./src/notes/stem/neuroscience/theory/race-models.md)
+│   │   └── [TREE.md](./src/notes/TREE.md)
 │   ├── providers/
 │   │   ├── __tests__/
 │   │   │   ├── [NativeProvider.test.tsx](./src/providers/__tests__/NativeProvider.test.tsx)
@@ -2309,4 +2454,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-739 directories, 1567 files
+775 directories, 1676 files

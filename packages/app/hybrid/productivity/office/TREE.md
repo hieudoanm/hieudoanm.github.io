@@ -478,20 +478,12 @@
 │   │       ├── [toast.tsx](./src/lib/tasks/toast.tsx)
 │   │       └── [types.ts](./src/lib/tasks/types.ts)
 │   ├── notes/
-│   │   ├── engineering/
-│   │   │   ├── [agents.md](./src/notes/engineering/agents.md)
-│   │   │   ├── [algorithms.md](./src/notes/engineering/algorithms.md)
-│   │   │   ├── [blockchain.md](./src/notes/engineering/blockchain.md)
-│   │   │   ├── [data-structures-and-algorithms.md](./src/notes/engineering/data-structures-and-algorithms.md)
-│   │   │   ├── [data-structures.md](./src/notes/engineering/data-structures.md)
-│   │   │   ├── [technology.md](./src/notes/engineering/technology.md)
-│   │   │   └── [techstack.md](./src/notes/engineering/techstack.md)
 │   │   ├── life/
-│   │   │   ├── [education.md](./src/notes/life/education.md)
 │   │   │   ├── [maslow-hierarchy.md](./src/notes/life/maslow-hierarchy.md)
 │   │   │   ├── [monday-fear.md](./src/notes/life/monday-fear.md)
 │   │   │   ├── [nothing.md](./src/notes/life/nothing.md)
-│   │   │   └── [sample.md](./src/notes/life/sample.md)
+│   │   │   ├── [sample.md](./src/notes/life/sample.md)
+│   │   │   └── [sports.md](./src/notes/life/sports.md)
 │   │   ├── marketing/
 │   │   │   └── copy-writer/
 │   │   │       └── sites/
@@ -499,25 +491,12 @@
 │   │   │           ├── [hacker-news.md](./src/notes/marketing/copy-writer/sites/hacker-news.md)
 │   │   │           ├── [indie-hackers.md](./src/notes/marketing/copy-writer/sites/indie-hackers.md)
 │   │   │           └── [product-hunt.md](./src/notes/marketing/copy-writer/sites/product-hunt.md)
-│   │   ├── media/
-│   │   │   ├── [entertainment.md](./src/notes/media/entertainment.md)
-│   │   │   ├── [listening.md](./src/notes/media/listening.md)
-│   │   │   ├── [reading.md](./src/notes/media/reading.md)
-│   │   │   └── [watching.md](./src/notes/media/watching.md)
-│   │   ├── science/
-│   │   │   ├── [brain.md](./src/notes/science/brain.md)
-│   │   │   ├── [mathematics.md](./src/notes/science/mathematics.md)
-│   │   │   ├── [psychology.md](./src/notes/science/psychology.md)
-│   │   │   ├── [sciences.md](./src/notes/science/sciences.md)
-│   │   │   └── [stem.md](./src/notes/science/stem.md)
-│   │   ├── sports/
-│   │   │   └── [sports.md](./src/notes/sports/sports.md)
-│   │   ├── transport/
-│   │   │   └── [vehicles.md](./src/notes/transport/vehicles.md)
 │   │   ├── [TREE.md](./src/notes/TREE.md)
+│   │   ├── [bored.md](./src/notes/bored.md)
 │   │   ├── [engineering.md](./src/notes/engineering.md)
 │   │   ├── [intro.md](./src/notes/intro.md)
 │   │   ├── [me.md](./src/notes/me.md)
+│   │   ├── [minimalism.md](./src/notes/minimalism.md)
 │   │   └── [resume.md](./src/notes/resume.md)
 │   ├── styles/
 │   │   ├── [globals.css](./src/styles/globals.css)
@@ -614,4 +593,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-132 directories, 479 files
+127 directories, 463 files

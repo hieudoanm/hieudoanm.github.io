@@ -57,13 +57,18 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 ## Structure
 
 ```txt
-src/app/            # App Router pages — /languages /music /maths /colors /history /economics /geography /psychology /neuroscience /ophthalmology + info routes
+src/app/            # App Router pages — (auth)/ (games)/ (info) route groups; /languages /music /maths /chemistry /engineering /colors /history /economics /geography /psychology /neuroscience /ophthalmology
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   organisms/        # Header
-  templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
+  templates/        # HomeTemplate, TheoryTemplate/GamesTemplate, About/Downloads/Version/ErrorTemplate
 src/content/        # about/download/version copy
-src/games/          # languages (incl. sign/, english/), music, colors, history, economics, geography, psychology, neuroscience (grouped anatomy/ neuroimaging/ theory/ + shared/), ophthalmology
+src/games/          # grouped by subject, mirroring the app route groups:
+  arts/             # colors, music
+  health/           # ophthalmology, psychology
+  humanities/       # economics, geography, history, languages (incl. sign/, english/)
+  stem/             # chemistry, engineering, maths, neuroscience
+src/notes/          # standalone Markdown authoring docs mirroring the theory pages, one .md per page, indexed by src/notes/TREE.md — not rendered by the app
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
@@ -93,8 +98,29 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
     - css: gradient, palette, theme
 - `/downloads` — downloads page
 - `/economics` — economics hub
-  - `/economics/<category>` — theory per category
-  - `/economics/<category>/<game>` — interactive game per topic
+  - `/economics/<category>` — theory per category; the five subfields are route
+    groups — `(microeconomics)`, `(macroeconomics)`, `(game-theory)`,
+    `(behavioral-economics)`, `(markets-and-public-policy)` — so URLs stay flat
+  - `/economics/<category>/<game>` — interactive game per topic; the games
+    mirror those five subfields as plain folders under
+    `src/games/humanities/economics/`, with the catalogue in
+    `src/games/humanities/economics/data.ts`
+- `/engineering` — engineering hub (single hub; one theory page per topic, each
+  with a matching `/interactive`)
+  - `/engineering/<algorithm>` — theory: binary-search, bubble-sort, heap-sort,
+    insertion-sort, linear-search, merge-sort, quick-sort, selection-sort
+  - `/engineering/<data-structure>` — theory: array, disjoint-set,
+    fenwick-trees, hash-tables, linked-lists, queues, segment-trees, stacks,
+    suffix-arrays, trie
+  - `/engineering/<topic>/interactive` — simulator per topic, under
+    `src/games/stem/engineering/<group>/<topic>/` with shared pieces in
+    `src/games/stem/engineering/shared/`
+
+  `(algorithms)` and `(data-structures)` are route groups, so the URLs stay flat
+  under `/engineering` while the code stays grouped; the hub links to all 18
+  topics. Games follow the same grouping and drop the parentheses, since nothing
+  routes there.
+
 - `/forget-password` — password recovery
 - `/geography` — geography hub
   - `/geography/connections`

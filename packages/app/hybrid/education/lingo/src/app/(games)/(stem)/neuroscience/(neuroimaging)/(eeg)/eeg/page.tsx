@@ -165,7 +165,7 @@ const EegPage: FC = () => (
     ]}
     references={[
       {
-        href: 'https://doi.org/10.1016/S0013-4694(58)80099-8',
+        href: 'https://doi.org/10.1016/0013-4694(58)90053-1',
         label:
           'Jasper (1958) — Electroencephalography and Clinical Neurophysiology',
         description:

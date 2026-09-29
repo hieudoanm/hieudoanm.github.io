@@ -1,0 +1,73 @@
+# Zero-Sum Games
+
+> Games where one player's gain is exactly another's loss.
+
+App route: `/economics/zero-sum-games/`
+
+## What is it?
+
+A **zero-sum game** is a strategic interaction where the total payoff across all
+players is fixed—whatever one player wins, another must lose. In a two-player
+version, the gains of one exactly equal the losses of the other. Chess, poker,
+and most sporting contests are zero-sum; real economies are largely
+**positive-sum** because trade creates value. Whether a situation is zero-sum
+shapes how conflict is approached.
+
+## Core ideas
+
+**Fixed pie:** There is a fixed quantity to divide. Every improvement for one
+participant comes at the expense of another—there is no way to create more
+value, only to redistribute it.
+
+**Pure conflict:** Interests are diametrically opposed. Cooperation is rational
+only as a tactical alliance, not as value creation—unlike positive-sum games
+where cooperation expands the pie.
+
+**Strict deinition:** Formally, the sum of all players’ utilities is constant
+(often zero). A “sum game” generalizes this to cases where total value can grow
+or shrink.
+
+## Solution concepts
+
+**Minimax:** In a perfect-information zero-sum game like chess, the optimal
+strategy minimizes your maximum possible loss. John von Neumann’s minimax
+theorem guarantees every finite zero-sum game has a value—the best a player can
+guarantee against an optimal opponent.
+
+**Mixed strategies:** In games like rock-paper-scissors, no pure strategy is
+safe. Players randomize so the opponent cannot exploit them—at the equilibrium,
+randomizing at specific probabilities guarantees the value of the game.
+
+**Limited cooperation:** Because the pie is fixed, zero-sum games breed rivalry.
+Cartels and collusion are fragile because every gain is another’s loss.
+
+## Real-world applications
+
+**Sports and betting:** A fixed pool of points or bets means every win is offset
+by a loss—prototypical zero-sum contests.
+
+**International conflict:** Territorial disputes and (in a destructively
+simplified view) some strategic arms races are treated as zero-sum by
+adversaries, shaping deterrence and brinkmanship.
+
+**Markets and trade:** When competition is framed as winning market share from a
+rival rather than growing the market, firms behave as if in a zero-sum game—even
+though specialization usually makes the overall economy positive-sum.
+
+**Cybersecurity:** Hacking and defense are often modeled as zero-sum, where one
+party’s foothold is another’s exposure.
+
+## Examples
+
+- [Play RPS](/economics/zero-sum-games/rps) — Learn minimax and the value of
+  zero-sum games on the classic playground.
+
+## References
+
+1. [Wikipedia: Zero-sum game](https://en.wikipedia.org/wiki/Zero-sum_game) —
+   Zero-sum games in which one player's gain is another's loss.
+2. [Investopedia: Zero-Sum Game](https://www.investopedia.com/terms/z/zero-sumgame.asp)
+   — Zero-sum games in investment and competition contexts.
+3. [Stanford Encyclopedia of Philosophy: Game Theory](https://plato.stanford.edu/entries/game-theory/)
+   — Formal treatment of strategic games, including zero-sum and mixed-strategy
+   equilibria.

@@ -103,8 +103,8 @@ const QeegPage: FC = () => (
           'Why scalp oscillations reflect coordinated population activity, and the physical limits on localising them.',
       },
       {
-        href: 'https://doi.org/10.1016/S0165-0173(06)68034-0',
-        label: 'Siontorp (2019) — Brain, Behavior, and Immunity',
+        href: 'https://doi.org/10.1016/j.clinph.2007.06.018',
+        label: 'Gudmundsson et al. (2007) — Clinical Neurophysiology',
         description:
           'A critical appraisal of quantitative EEG in clinical research, emphasising pipeline sensitivity.',
       },

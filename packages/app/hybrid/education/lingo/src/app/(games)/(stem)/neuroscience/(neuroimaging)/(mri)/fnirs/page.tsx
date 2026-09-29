@@ -91,8 +91,8 @@ const FnirsPage: FC = () => (
           'A review of the hemodynamic response to brain activation, grounding the physiology fNIRS and fMRI share.',
       },
       {
-        href: 'https://doi.org/10.1089/neu.2019.0061',
-        label: 'Cui, Wilkerson, Perdue et al. (2019) — Neurophotonics',
+        href: 'https://doi.org/10.1016/j.neuroimage.2013.05.004',
+        label: 'Scholkmann et al. (2014) — NeuroImage',
         description:
           'Functional brain imaging with near-infrared light: fNIRS principles, channels, and short-separation regression.',
       },
