@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Trie',
-  'subtitle':
-    "A tree of prefixes: lookup time depends on the key length, not on how
-    many\n    keys you store.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/trie/interactive',
-        'label': 'Trie Builder',
-        'description':
-          'Insert words and watch shared prefixes collapse into a single path.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Trie',
-        'label': 'Trie',
-        'description':
-          'Prefix trees, the O(m) lookup bound, and the space trade-off.',
-      },
-    ],
-}
+"title": "Trie"
+"subtitle":
+  "A tree of prefixes: lookup time depends on the key length, not on how many
+  keys you store."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/trie/interactive"
+    "label": "Trie Builder"
+    "description":
+      "Insert words and watch shared prefixes collapse into a single path."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Trie"
+    "label": "Trie"
+    "description":
+      "Prefix trees, the O(m) lookup bound, and the space trade-off."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

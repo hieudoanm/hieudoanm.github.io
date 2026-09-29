@@ -1,42 +1,31 @@
 ---
-{
-  'title': 'Monopoly & Market Power',
-  'subtitle':
-    'When one seller controls the market—and why that usually hurts consumers.',
-  'links':
-    [
-      {
-        'href': '/economics/monopoly-and-market-power/pricing',
-        'label': 'Monopoly Pricing Lab',
-        'description':
-          "Sole seller of a linear-demand good: pick output to maximize
-          profit\n          and see the deadweight loss left behind.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Monopoly',
-        'label': 'Wikipedia: Monopoly',
-        'description':
-          "Overview of monopoly theory, pricing, deadweight loss,
-          and\n          regulation.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/m/monopoly.asp',
-        'label': 'Investopedia: Monopoly',
-        'description':
-          'Entry defining monopoly, barriers to entry, and market power.',
-      },
-      {
-        'href': 'https://www.britannica.com/topic/monopoly-economics',
-        'label': 'Encyclopedia Britannica: Monopoly',
-        'description':
-          'Encyclopedia entry on monopoly and its effects on market outcomes.',
-      },
-    ],
-}
+"title": "Monopoly & Market Power"
+"subtitle":
+  "When one seller controls the market—and why that usually hurts consumers."
+"links":
+  - "href": "/economics/monopoly-and-market-power/pricing"
+    "label": "Monopoly Pricing Lab"
+    "description":
+      "Sole seller of a linear-demand good: pick output to maximize profit and
+      see the deadweight loss left behind."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Monopoly"
+    "label": "Wikipedia: Monopoly"
+    "description":
+      "Overview of monopoly theory, pricing, deadweight loss, and regulation."
+  - "href": "https://www.investopedia.com/terms/m/monopoly.asp"
+    "label": "Investopedia: Monopoly"
+    "description":
+      "Entry defining monopoly, barriers to entry, and market power."
+  - "href": "https://www.britannica.com/topic/monopoly-economics"
+    "label": "Encyclopedia Britannica: Monopoly"
+    "description":
+      "Encyclopedia entry on monopoly and its effects on market outcomes."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

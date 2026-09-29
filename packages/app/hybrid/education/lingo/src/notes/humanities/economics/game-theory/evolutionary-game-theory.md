@@ -1,46 +1,35 @@
 ---
-{
-  'title': 'Evolutionary Game Theory',
-  'subtitle':
-    "When strategies spread not by rationality, but by who
-    reproduces—the\n    biology of games.",
-  'links':
-    [
-      {
-        'href': '/economics/evolutionary-game-theory/replicator',
-        'label': 'Replicator Dynamics Lab',
-        'description':
-          "Tune payoffs and step generations to watch hawk–dove
-          population\n          shares converge on an evolutionarily stable
-          strategy.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Evolutionary_game_theory',
-        'label': 'Wikipedia: Evolutionary Game Theory',
-        'description':
-          "Overview of evolutionary game theory, ESS, and applications
-          in\n          biology and economics.",
-      },
-      {
-        'href': 'https://www.nature.com/scitable/topicpage/evolutionary-game-theory-14246140/',
-        'label': 'Nature Scitable: Evolutionary Game Theory',
-        'description':
-          "Accessible introduction to evolutionary game theory and
-          its\n          biological foundations.",
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Evolutionarily_stable_strategy',
-        'label': 'Wikipedia: Evolutionarily Stable Strategy',
-        'description':
-          "Definition and analysis of ESS, the hawk-dove game, and
-          stability\n          conditions.",
-      },
-    ],
-}
+"title": "Evolutionary Game Theory"
+"subtitle":
+  "When strategies spread not by rationality, but by who reproduces—the biology
+  of games."
+"links":
+  - "href": "/economics/evolutionary-game-theory/replicator"
+    "label": "Replicator Dynamics Lab"
+    "description":
+      "Tune payoffs and step generations to watch hawk–dove population shares
+      converge on an evolutionarily stable strategy."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Evolutionary_game_theory"
+    "label": "Wikipedia: Evolutionary Game Theory"
+    "description":
+      "Overview of evolutionary game theory, ESS, and applications in biology
+      and economics."
+  - "href": "https://www.nature.com/scitable/topicpage/evolutionary-game-theory-14246140/"
+    "label": "Nature Scitable: Evolutionary Game Theory"
+    "description":
+      "Accessible introduction to evolutionary game theory and its biological
+      foundations."
+  - "href": "https://en.wikipedia.org/wiki/Evolutionarily_stable_strategy"
+    "label": "Wikipedia: Evolutionarily Stable Strategy"
+    "description":
+      "Definition and analysis of ESS, the hawk-dove game, and stability
+      conditions."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

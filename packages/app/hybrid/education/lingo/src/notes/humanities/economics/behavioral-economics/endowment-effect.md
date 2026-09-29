@@ -1,43 +1,33 @@
 ---
-{
-  'title': 'The Endowment Effect',
-  'subtitle':
-    'Why people demand more to give something up than they would pay to get it.',
-  'links':
-    [
-      {
-        'href': '/economics/endowment-effect/trade',
-        'label': 'Endowment Experiment',
-        'description':
-          'Measure your own willingness to accept vs pay and see the gap.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Endowment_effect',
-        'label': 'Wikipedia: Endowment Effect',
-        'description':
-          "Overview of the endowment effect, experimental evidence,
-          and\n          theoretical explanations.",
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2002/summary/',
-        'label': 'Nobel Prize: 2002 Economic Sciences',
-        'description':
-          "Nobel citation for Daniel Kahneman for integrating
-          psychological\n          research into economic science.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/e/endowment-effect.asp',
-        'label': 'Investopedia: Endowment Effect',
-        'description':
-          "Entry explaining the endowment effect, loss aversion,
-          and\n          implications for decision-making.",
-      },
-    ],
-}
+"title": "The Endowment Effect"
+"subtitle":
+  "Why people demand more to give something up than they would pay to get it."
+"links":
+  - "href": "/economics/endowment-effect/trade"
+    "label": "Endowment Experiment"
+    "description":
+      "Measure your own willingness to accept vs pay and see the gap."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Endowment_effect"
+    "label": "Wikipedia: Endowment Effect"
+    "description":
+      "Overview of the endowment effect, experimental evidence, and theoretical
+      explanations."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/2002/summary/"
+    "label": "Nobel Prize: 2002 Economic Sciences"
+    "description":
+      "Nobel citation for Daniel Kahneman for integrating psychological research
+      into economic science."
+  - "href": "https://www.investopedia.com/terms/e/endowment-effect.asp"
+    "label": "Investopedia: Endowment Effect"
+    "description":
+      "Entry explaining the endowment effect, loss aversion, and implications
+      for decision-making."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

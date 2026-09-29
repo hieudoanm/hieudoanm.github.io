@@ -1,33 +1,25 @@
 ---
-{
-  'title': 'Color Scales',
-  'subtitle': 'Building even, reusable steps from a single color.',
-  'links':
-    [
-      {
-        'href': '/colors/scales/shades-tints',
-        'label': 'Shades & Tints',
-        'description':
-          'Build a balanced 5–13 step scale from one color with one slider.',
-      },
-      {
-        'href': '/colors/scales/tint-shade-tone',
-        'label': 'Tint, Shade & Tone',
-        'description': 'Lighten, darken or mute a color in even steps.',
-      },
-      {
-        'href': '/colors/scales/opacity',
-        'label': 'Opacity Overlay',
-        'description': 'Preview a color over white and black at any alpha.',
-      },
-      {
-        'href': '/colors/scales/css-scale',
-        'label': 'CSS Scale Exporter',
-        'description': 'Export a color scale as CSS custom properties.',
-      },
-    ],
-}
+"title": "Color Scales"
+"subtitle": "Building even, reusable steps from a single color."
+"links":
+  - "href": "/colors/scales/shades-tints"
+    "label": "Shades & Tints"
+    "description":
+      "Build a balanced 5–13 step scale from one color with one slider."
+  - "href": "/colors/scales/tint-shade-tone"
+    "label": "Tint, Shade & Tone"
+    "description": "Lighten, darken or mute a color in even steps."
+  - "href": "/colors/scales/opacity"
+    "label": "Opacity Overlay"
+    "description": "Preview a color over white and black at any alpha."
+  - "href": "/colors/scales/css-scale"
+    "label": "CSS Scale Exporter"
+    "description": "Export a color scale as CSS custom properties."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Shades, tints and tones
 

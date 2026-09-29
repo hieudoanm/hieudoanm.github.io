@@ -1,44 +1,33 @@
 ---
-{
-  'title': 'Marginal Utility',
-  'subtitle':
-    "Why the first slice of pizza is better than the fifth—and what that
-    means\n    for value.",
-  'links':
-    [
-      {
-        'href': '/economics/marginal-utility/lab',
-        'label': 'Marginal Utility Lab',
-        'description':
-          "Allocate a budget between apples and cookies and find
-          the\n          utility-maximizing bundle.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Marginal_utility',
-        'label': 'Wikipedia: Marginal Utility',
-        'description':
-          "Overview of the concept, its history, and the law of
-          diminishing\n          marginal utility.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/m/marginalutility.asp',
-        'label': 'Investopedia: Marginal Utility',
-        'description':
-          "Entry defining marginal utility and its role in consumer
-          choice\n          theory.",
-      },
-      {
-        'href': 'https://www.britannica.com/science/marginal-utility',
-        'label': 'Encyclopedia Britannica: Marginal Utility',
-        'description':
-          'Encyclopedia entry on the concept and its economic applications.',
-      },
-    ],
-}
+"title": "Marginal Utility"
+"subtitle":
+  "Why the first slice of pizza is better than the fifth—and what that means for
+  value."
+"links":
+  - "href": "/economics/marginal-utility/lab"
+    "label": "Marginal Utility Lab"
+    "description":
+      "Allocate a budget between apples and cookies and find the
+      utility-maximizing bundle."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Marginal_utility"
+    "label": "Wikipedia: Marginal Utility"
+    "description":
+      "Overview of the concept, its history, and the law of diminishing marginal
+      utility."
+  - "href": "https://www.investopedia.com/terms/m/marginalutility.asp"
+    "label": "Investopedia: Marginal Utility"
+    "description":
+      "Entry defining marginal utility and its role in consumer choice theory."
+  - "href": "https://www.britannica.com/science/marginal-utility"
+    "label": "Encyclopedia Britannica: Marginal Utility"
+    "description":
+      "Encyclopedia entry on the concept and its economic applications."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

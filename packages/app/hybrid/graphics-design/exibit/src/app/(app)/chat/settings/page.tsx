@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 import { useData } from '@/providers/messaging/DataProvider';
 import { useToast } from '@/providers/messaging/ToastProvider';
+import { Providers } from '@/providers/messaging/Providers';
 
 const THEMES = ['messaging-light', 'messaging-dark'];
 
@@ -15,7 +16,7 @@ const DISAPPEARING_OPTIONS = [
   { value: 3600, label: '1 hour' },
 ];
 
-const SettingsPage: FC = () => {
+const SettingsPageContent: FC = () => {
   const { settings, updateSettings } = useData();
   const { showToast } = useToast();
 
@@ -136,6 +137,32 @@ const SettingsPage: FC = () => {
       </div>
     </div>
   );
+};
+
+const SettingsPage: FC = () => (
+  <Providers>
+    <SettingsPageContent />
+  </Providers>
+);
+
+const toggle = (
+  key: 'notifications' | 'readReceipts' | 'typingIndicators',
+  settings: ReturnType<typeof useData>['settings'],
+  updateSettings: ReturnType<typeof useData>['updateSettings'],
+  showToast: ReturnType<typeof useToast>['showToast']
+): void => {
+  void updateSettings({ [key]: !settings[key] });
+  showToast(`${key} toggled`, 'success');
+};
+
+const changeTheme = (
+  theme: string,
+  updateSettings: ReturnType<typeof useData>['updateSettings'],
+  showToast: ReturnType<typeof useToast>['showToast']
+): void => {
+  document.documentElement.setAttribute('data-theme', theme);
+  void updateSettings({ theme });
+  showToast(`Theme set to ${theme}`, 'success');
 };
 
 export default SettingsPage;

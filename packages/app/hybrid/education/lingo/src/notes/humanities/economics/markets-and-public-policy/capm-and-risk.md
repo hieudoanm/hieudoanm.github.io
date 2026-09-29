@@ -1,44 +1,33 @@
 ---
-{
-  'title': 'CAPM & Risk',
-  'subtitle':
-    'Putting a price on risk: how the expected return of an asset is determined.',
-  'links':
-    [
-      {
-        'href': '/economics/capm-and-risk/portfolio',
-        'label': 'Portfolio Lab',
-        'description':
-          "Blend a stock and a bond, watch risk and return trade off along
-          the\n          efficient frontier, then price stocks by beta.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Capital_asset_pricing_model',
-        'label': 'Wikipedia: Capital Asset Pricing Model',
-        'description':
-          "Derivation and discussion of CAPM, beta, and the Security
-          Market\n          Line.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/c/capm.asp',
-        'label': 'Investopedia: CAPM',
-        'description':
-          "Entry defining CAPM, its formula, and its use in estimating cost
-          of\n          equity.",
-      },
-      {
-        'href': 'https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1964.tb02865.x',
-        'label': 'Sharpe (1964): Capital Asset Prices',
-        'description':
-          "William Sharpe's foundational paper establishing the capital
-          asset\n          pricing model.",
-      },
-    ],
-}
+"title": "CAPM & Risk"
+"subtitle":
+  "Putting a price on risk: how the expected return of an asset is determined."
+"links":
+  - "href": "/economics/capm-and-risk/portfolio"
+    "label": "Portfolio Lab"
+    "description":
+      "Blend a stock and a bond, watch risk and return trade off along the
+      efficient frontier, then price stocks by beta."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Capital_asset_pricing_model"
+    "label": "Wikipedia: Capital Asset Pricing Model"
+    "description":
+      "Derivation and discussion of CAPM, beta, and the Security Market Line."
+  - "href": "https://www.investopedia.com/terms/c/capm.asp"
+    "label": "Investopedia: CAPM"
+    "description":
+      "Entry defining CAPM, its formula, and its use in estimating cost of
+      equity."
+  - "href": "https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1964.tb02865.x"
+    "label": "Sharpe (1964): Capital Asset Prices"
+    "description":
+      "William Sharpe's foundational paper establishing the capital asset
+      pricing model."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

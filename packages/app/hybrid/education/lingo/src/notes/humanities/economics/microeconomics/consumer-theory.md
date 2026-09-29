@@ -1,46 +1,37 @@
 ---
-{
-  'title': 'Consumer Theory & Indifference Curves',
-  'subtitle':
-    "How rational consumers choose between goods to get the most
-    satisfaction\n    from a limited budget.",
-  'links':
-    [
-      {
-        'href': '/economics/consumer-theory/utility',
-        'label': 'Budget Line Lab',
-        'description':
-          "Move a point along the budget line to maximize utility
-          for\n          Cobb-Douglas, perfect substitutes, and perfect
-          complements.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Consumer_choice',
-        'label': 'Wikipedia: Consumer Choice',
-        'description':
-          "Overview of consumer theory, utility maximization, and
-          indifference\n          curve analysis.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/i/indifferencecurve.asp',
-        'label': 'Investopedia: Indifference Curve',
-        'description':
-          "Entry explaining the indifference curve, its properties, and
-          the\n          consumer optimum.",
-      },
-      {
-        'href': 'https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-consumer-theory/indifference-curves-tutorial/v/indifference-curves-and-marginal-rate-of-substitution',
-        'label': 'Khan Academy: Indifference Curves & MRS',
-        'description':
-          "Video explaining indifference curves and the marginal rate
-          of\n          substitution.",
-      },
-    ],
-}
+"title": "Consumer Theory & Indifference Curves"
+"subtitle":
+  "How rational consumers choose between goods to get the most satisfaction from
+  a limited budget."
+"links":
+  - "href": "/economics/consumer-theory/utility"
+    "label": "Budget Line Lab"
+    "description":
+      "Move a point along the budget line to maximize utility for Cobb-Douglas,
+      perfect substitutes, and perfect complements."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Consumer_choice"
+    "label": "Wikipedia: Consumer Choice"
+    "description":
+      "Overview of consumer theory, utility maximization, and indifference curve
+      analysis."
+  - "href": "https://www.investopedia.com/terms/i/indifferencecurve.asp"
+    "label": "Investopedia: Indifference Curve"
+    "description":
+      "Entry explaining the indifference curve, its properties, and the consumer
+      optimum."
+  - "href":
+      "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-consumer-theory/indifference-curv\
+      es-tutorial/v/indifference-curves-and-marginal-rate-of-substitution"
+    "label": "Khan Academy: Indifference Curves & MRS"
+    "description":
+      "Video explaining indifference curves and the marginal rate of
+      substitution."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

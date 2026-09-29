@@ -1,44 +1,32 @@
 ---
-{
-  'title': 'Migration Economics',
-  'subtitle':
-    "Why people move, what they gain, and how migration reshapes sending
-    and\n    receiving economies.",
-  'links':
-    [
-      {
-        'href': '/economics/migration-economics/moves',
-        'label': 'Migration Decision Lab',
-        'description':
-          "Choose to stay or move, price the move as an NPV over a
-          10-year\n          horizon, and simulate how labor flows equalize
-          wages.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Economics_of_immigration',
-        'label': 'Wikipedia: Economics of Immigration',
-        'description':
-          'Overview of migration economics, wage gains, and remittance flows.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/r/remittance.asp',
-        'label': 'Investopedia: Remittance',
-        'description':
-          'Entry explaining remittances and their role in migration economics.',
-      },
-      {
-        'href': 'https://www.britannica.com/topic/brain-drain',
-        'label': 'Encyclopedia Britannica: Brain Drain',
-        'description':
-          "Encyclopedia entry on the emigration of skilled workers and
-          its\n          effects.",
-      },
-    ],
-}
+"title": "Migration Economics"
+"subtitle":
+  "Why people move, what they gain, and how migration reshapes sending and
+  receiving economies."
+"links":
+  - "href": "/economics/migration-economics/moves"
+    "label": "Migration Decision Lab"
+    "description":
+      "Choose to stay or move, price the move as an NPV over a 10-year horizon,
+      and simulate how labor flows equalize wages."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Economics_of_immigration"
+    "label": "Wikipedia: Economics of Immigration"
+    "description":
+      "Overview of migration economics, wage gains, and remittance flows."
+  - "href": "https://www.investopedia.com/terms/r/remittance.asp"
+    "label": "Investopedia: Remittance"
+    "description":
+      "Entry explaining remittances and their role in migration economics."
+  - "href": "https://www.britannica.com/topic/brain-drain"
+    "label": "Encyclopedia Britannica: Brain Drain"
+    "description":
+      "Encyclopedia entry on the emigration of skilled workers and its effects."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

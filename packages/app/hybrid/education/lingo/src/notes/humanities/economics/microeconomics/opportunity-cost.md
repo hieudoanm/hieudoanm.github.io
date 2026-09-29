@@ -1,40 +1,29 @@
 ---
-{
-  'title': 'Opportunity Cost & Comparative Advantage',
-  'subtitle':
-    'The real cost of every choice, and why trade makes everyone better off.',
-  'links':
-    [
-      {
-        'href': '/economics/opportunity-cost/trade-offs',
-        'label': 'Trade-Off Builder',
-        'description':
-          "Explore explicit monetary opportunity cost with a sandbox
-          and\n          challenge rounds.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Opportunity_cost',
-        'label': 'Wikipedia: Opportunity Cost',
-        'description':
-          'Overview of the concept and how it shapes economic decisions.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/o/opportunitycost.asp',
-        'label': 'Investopedia: Opportunity Cost',
-        'description': 'Definition, formula, and examples of opportunity cost.',
-      },
-      {
-        'href': 'https://www.britannica.com/topic/comparative-advantage',
-        'label': 'Britannica: Comparative Advantage',
-        'description':
-          'Article on comparative advantage and the gains from trade.',
-      },
-    ],
-}
+"title": "Opportunity Cost & Comparative Advantage"
+"subtitle":
+  "The real cost of every choice, and why trade makes everyone better off."
+"links":
+  - "href": "/economics/opportunity-cost/trade-offs"
+    "label": "Trade-Off Builder"
+    "description":
+      "Explore explicit monetary opportunity cost with a sandbox and challenge
+      rounds."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Opportunity_cost"
+    "label": "Wikipedia: Opportunity Cost"
+    "description":
+      "Overview of the concept and how it shapes economic decisions."
+  - "href": "https://www.investopedia.com/terms/o/opportunitycost.asp"
+    "label": "Investopedia: Opportunity Cost"
+    "description": "Definition, formula, and examples of opportunity cost."
+  - "href": "https://www.britannica.com/topic/comparative-advantage"
+    "label": "Britannica: Comparative Advantage"
+    "description": "Article on comparative advantage and the gains from trade."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

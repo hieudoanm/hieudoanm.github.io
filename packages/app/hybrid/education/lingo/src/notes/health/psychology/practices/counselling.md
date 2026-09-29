@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Counselling Psychology',
-  'subtitle':
-    "Theories that guide therapy, what the common approaches share, and where
-    a\n    counsellor stops.",
-  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
-  'links':
-    [
-      {
-        'href': '/psychology/patient-health-questionnaire/',
-        'label': 'Patient Health Questionnaire (PHQ-9)',
-        'description': 'Common first step in screening for depression',
-      },
-      {
-        'href': '/psychology/generalized-anxiety-disorder/',
-        'label': 'Generalized Anxiety Disorder (GAD-7)',
-        'description': 'Screening for generalised anxiety symptoms',
-      },
-      {
-        'href': '/psychology/dyadic-adjustment-scale/',
-        'label': 'Dyadic Adjustment Scale',
-        'description': 'Relationship functioning, a common therapy focus',
-      },
-    ],
-}
+"title": "Counselling Psychology"
+"subtitle":
+  "Theories that guide therapy, what the common approaches share, and where a
+  counsellor stops."
+"parentLink":
+  "href": "/psychology/"
+  "label": "Psychology"
+"links":
+  - "href": "/psychology/patient-health-questionnaire/"
+    "label": "Patient Health Questionnaire (PHQ-9)"
+    "description": "Common first step in screening for depression"
+  - "href": "/psychology/generalized-anxiety-disorder/"
+    "label": "Generalized Anxiety Disorder (GAD-7)"
+    "description": "Screening for generalised anxiety symptoms"
+  - "href": "/psychology/dyadic-adjustment-scale/"
+    "label": "Dyadic Adjustment Scale"
+    "description": "Relationship functioning, a common therapy focus"
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What counselling is
 

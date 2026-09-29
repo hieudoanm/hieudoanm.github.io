@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Leaky Competing Accumulator (LCA)',
-  'subtitle': '',
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'links':
-    [
-      {
-        'href': '/neuroscience/leaky-competing-accumulator/interactive',
-        'label': 'LCA Simulator',
-        'description':
-          "Experiment with leak and inhibition parameters in a noisy
-          accumulator\n          network.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://doi.org/10.1037/0033-295X.108.3.550',
-        'label': 'Usher & McClelland (2001) — Psychological Review',
-        'description':
-          "The foundational paper detailing the LCA model and its
-          neural\n          inspiration.",
-      },
-    ],
-}
+"title": "Leaky Competing Accumulator (LCA)"
+"subtitle": ""
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"links":
+  - "href": "/neuroscience/leaky-competing-accumulator/interactive"
+    "label": "LCA Simulator"
+    "description":
+      "Experiment with leak and inhibition parameters in a noisy accumulator
+      network."
+"references":
+  - "href": "https://doi.org/10.1037/0033-295X.108.3.550"
+    "label": "Usher & McClelland (2001) — Psychological Review"
+    "description":
+      "The foundational paper detailing the LCA model and its neural
+      inspiration."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Overview
 

@@ -3,10 +3,11 @@
 import { type FC, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { AppShell } from '@/components/messaging/templates/AppShell';
+import { Providers } from '@/providers/messaging/Providers';
 import { useData } from '@/providers/messaging/DataProvider';
 import { getChatIdFromURL } from '@/lib/messaging/url';
 
-const HomePage: FC = () => {
+const HomePageContent: FC = () => {
   const { isLoading, session } = useData();
   const [selectedChatId, setSelectedChatId] = useState<string | null>(null);
   const router = useRouter();
@@ -35,5 +36,11 @@ const HomePage: FC = () => {
     />
   );
 };
+
+const HomePage: FC = () => (
+  <Providers>
+    <HomePageContent />
+  </Providers>
+);
 
 export default HomePage;

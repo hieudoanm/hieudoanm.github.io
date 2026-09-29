@@ -1,31 +1,24 @@
 ---
-{
-  'title': 'Color & Perception',
-  'subtitle':
-    'How the eye measures contrast, fails to see some colors, and reads warmth.',
-  'links':
-    [
-      {
-        'href': '/colors/perception/contrast',
-        'label': 'Contrast Checker',
-        'description':
-          'Verify contrast ratios against all four WCAG thresholds.',
-      },
-      {
-        'href': '/colors/perception/color-blindness',
-        'label': 'Color Blindness',
-        'description':
-          'Simulate protanopia, deuteranopia and tritanopia on any color.',
-      },
-      {
-        'href': '/colors/perception/temperature',
-        'label': 'Color Temperature',
-        'description':
-          'Classify a color as warm or cool and map color temperature in Kelvin.',
-      },
-    ],
-}
+"title": "Color & Perception"
+"subtitle":
+  "How the eye measures contrast, fails to see some colors, and reads warmth."
+"links":
+  - "href": "/colors/perception/contrast"
+    "label": "Contrast Checker"
+    "description": "Verify contrast ratios against all four WCAG thresholds."
+  - "href": "/colors/perception/color-blindness"
+    "label": "Color Blindness"
+    "description":
+      "Simulate protanopia, deuteranopia and tritanopia on any color."
+  - "href": "/colors/perception/temperature"
+    "label": "Color Temperature"
+    "description":
+      "Classify a color as warm or cool and map color temperature in Kelvin."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Relative luminance
 

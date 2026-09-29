@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Cognitive Psychology',
-  'subtitle':
-    "The architecture of thought: attention, memory, language and the limits
-    of\n    each.",
-  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
-  'links':
-    [
-      {
-        'href': '/psychology/big-five-inventory/',
-        'label': 'Big Five Inventory',
-        'description': 'Trait structure underlying stable cognitive style',
-      },
-      {
-        'href': '/psychology/satisfaction-with-life/',
-        'label': 'Satisfaction With Life Scale',
-        'description': 'A validated measure of cognitive appraisal of life',
-      },
-      {
-        'href': '/psychology/patient-health-questionnaire/',
-        'label': 'Patient Health Questionnaire (PHQ-9)',
-        'description': 'Attention and memory symptoms screened clinically',
-      },
-    ],
-}
+"title": "Cognitive Psychology"
+"subtitle":
+  "The architecture of thought: attention, memory, language and the limits of
+  each."
+"parentLink":
+  "href": "/psychology/"
+  "label": "Psychology"
+"links":
+  - "href": "/psychology/big-five-inventory/"
+    "label": "Big Five Inventory"
+    "description": "Trait structure underlying stable cognitive style"
+  - "href": "/psychology/satisfaction-with-life/"
+    "label": "Satisfaction With Life Scale"
+    "description": "A validated measure of cognitive appraisal of life"
+  - "href": "/psychology/patient-health-questionnaire/"
+    "label": "Patient Health Questionnaire (PHQ-9)"
+    "description": "Attention and memory symptoms screened clinically"
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Attention is a filter, not a spotlight
 

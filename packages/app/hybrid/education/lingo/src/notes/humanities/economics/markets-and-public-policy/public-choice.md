@@ -1,45 +1,34 @@
 ---
-{
-  'title': 'Public Choice Theory',
-  'subtitle':
-    "What happens when we treat politicians, bureaucrats, and voters
-    as\n    self-interested—just like everyone else.",
-  'links':
-    [
-      {
-        'href': '/economics/public-choice/voting',
-        'label': 'Voting Power Lab',
-        'description':
-          "Simulate median-voter convergence, the voting paradox with
-          agenda\n          control, and rent-seeking contests.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Public_choice',
-        'label': 'Wikipedia: Public choice',
-        'description':
-          "Overview of public choice theory, applying economic analysis
-          to\n          political decision-making.",
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/1986/buchanan/facts/',
-        'label': 'Nobel Prize: James M. Buchanan Jr.',
-        'description':
-          "Official Nobel Prize biography of James Buchanan, founder of
-          public\n          choice theory.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/j/james-m-buchanan-jr.asp',
-        'label': 'Investopedia: James M. Buchanan',
-        'description':
-          "Introduction to James Buchanan and the public choice school
-          of\n          economics.",
-      },
-    ],
-}
+"title": "Public Choice Theory"
+"subtitle":
+  "What happens when we treat politicians, bureaucrats, and voters as
+  self-interested—just like everyone else."
+"links":
+  - "href": "/economics/public-choice/voting"
+    "label": "Voting Power Lab"
+    "description":
+      "Simulate median-voter convergence, the voting paradox with agenda
+      control, and rent-seeking contests."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Public_choice"
+    "label": "Wikipedia: Public choice"
+    "description":
+      "Overview of public choice theory, applying economic analysis to political
+      decision-making."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/1986/buchanan/facts/"
+    "label": "Nobel Prize: James M. Buchanan Jr."
+    "description":
+      "Official Nobel Prize biography of James Buchanan, founder of public
+      choice theory."
+  - "href": "https://www.investopedia.com/terms/j/james-m-buchanan-jr.asp"
+    "label": "Investopedia: James M. Buchanan"
+    "description":
+      "Introduction to James Buchanan and the public choice school of economics."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

@@ -4,7 +4,9 @@ import { parseSections } from '../sections';
 import { renderMarkdown } from '../markdown';
 
 const frontmatter = (fields: Record<string, unknown>): string =>
-  `---\n${JSON.stringify(fields, null, 2)}\n---\n\n## Only\n\nBody text.\n`;
+  `---\n${YAML.stringify(fields, null, 2)}\n---\n\n## Only\n\nBody text.\n`;
+
+import * as YAML from 'yaml';
 
 const minimal = { title: 'T', subtitle: 'S' };
 
@@ -44,15 +46,15 @@ describe('parseNote frontmatter', () => {
     );
   });
 
-  it('throws when frontmatter is not valid JSON', () => {
-    expect(() => parseNote('---\nnot json\n---\n\n## A\n\nB\n')).toThrow(
-      'note: frontmatter is not valid JSON'
+  it('throws when frontmatter is not valid YAML', () => {
+    expect(() => parseNote('---\nnot yaml\n---\n\n## A\n\nB\n')).toThrow(
+      'note: frontmatter must be a YAML object'
     );
   });
 
   it('throws when frontmatter is not an object', () => {
     expect(() => parseNote('---\n[1,2]\n---\n\n## A\n\nB\n')).toThrow(
-      'note: frontmatter must be a JSON object'
+      'note: frontmatter must be a YAML object'
     );
   });
 

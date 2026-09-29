@@ -1,56 +1,40 @@
 ---
-{
-  'title': 'Vision Theory',
-  'subtitle':
-    "How the eye resolves detail, what visual acuity means, and how the
-    three\n    charts measure it.",
-  'links':
-    [
-      {
-        'href': '/ophthalmology/vision/snellen',
-        'label': 'Snellen Chart',
-        'description':
-          "Classic letter chart from 20/200 to 20/10 — quick screening
-          with\n          irregular size steps.",
-      },
-      {
-        'href': '/ophthalmology/vision/logmar',
-        'label': 'LogMAR Chart',
-        'description':
-          "Five letters per line with logarithmic spacing and per-letter
-          scoring\n          for precise tracking.",
-      },
-      {
-        'href': '/ophthalmology/vision/tumbling-e',
-        'label': 'Tumbling E Chart',
-        'description':
-          "Direction-based E optotypes for non-readers — no letter
-          recognition\n          required.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Visual_acuity',
-        'label': 'Wikipedia: Visual Acuity',
-        'description':
-          "Overview of acuity measurement, the Snellen fraction, and
-          LogMAR\n          scoring.",
-      },
-      {
-        'href': 'https://www.nhs.uk/conditions/eye-tests/',
-        'label': 'NHS: Eye Tests',
-        'description':
-          'How routine sight tests work and what the results mean.',
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/LogMAR_chart',
-        'label': 'Wikipedia: LogMAR Chart',
-        'description': 'The logarithmic chart design and its scoring system.',
-      },
-    ],
-}
+"title": "Vision Theory"
+"subtitle":
+  "How the eye resolves detail, what visual acuity means, and how the three
+  charts measure it."
+"links":
+  - "href": "/ophthalmology/vision/snellen"
+    "label": "Snellen Chart"
+    "description":
+      "Classic letter chart from 20/200 to 20/10 — quick screening with
+      irregular size steps."
+  - "href": "/ophthalmology/vision/logmar"
+    "label": "LogMAR Chart"
+    "description":
+      "Five letters per line with logarithmic spacing and per-letter scoring for
+      precise tracking."
+  - "href": "/ophthalmology/vision/tumbling-e"
+    "label": "Tumbling E Chart"
+    "description":
+      "Direction-based E optotypes for non-readers — no letter recognition
+      required."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Visual_acuity"
+    "label": "Wikipedia: Visual Acuity"
+    "description":
+      "Overview of acuity measurement, the Snellen fraction, and LogMAR scoring."
+  - "href": "https://www.nhs.uk/conditions/eye-tests/"
+    "label": "NHS: Eye Tests"
+    "description": "How routine sight tests work and what the results mean."
+  - "href": "https://en.wikipedia.org/wiki/LogMAR_chart"
+    "label": "Wikipedia: LogMAR Chart"
+    "description": "The logarithmic chart design and its scoring system."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## How the eye focuses
 

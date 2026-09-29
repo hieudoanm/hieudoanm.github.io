@@ -1,31 +1,26 @@
 ---
-{
-  'title': 'Segment Tree',
-  'subtitle':
-    "Disjoint segments storing partial sums, answering any range in
-    logarithmic\n    time.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/segment-trees/interactive',
-        'label': 'Segment Tree Explorer',
-        'description':
-          'Query a range and watch which disjoint nodes get combined.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Segment_tree',
-        'label': 'Segment tree',
-        'description':
-          "Disjoint segment decomposition, power-of-two sizing, and
-          lazy\n          propagation.",
-      },
-    ],
-}
+"title": "Segment Tree"
+"subtitle":
+  "Disjoint segments storing partial sums, answering any range in logarithmic
+  time."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/segment-trees/interactive"
+    "label": "Segment Tree Explorer"
+    "description": "Query a range and watch which disjoint nodes get combined."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Segment_tree"
+    "label": "Segment tree"
+    "description":
+      "Disjoint segment decomposition, power-of-two sizing, and lazy
+      propagation."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

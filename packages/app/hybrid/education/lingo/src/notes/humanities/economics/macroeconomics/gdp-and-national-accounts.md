@@ -1,43 +1,32 @@
 ---
-{
-  'title': 'GDP & National Accounts',
-  'subtitle':
-    'How economists measure the size and growth of an entire economy.',
-  'links':
-    [
-      {
-        'href': '/economics/gdp-and-national-accounts/aggregate',
-        'label': 'GDP Explorer',
-        'description':
-          "Build an economy with C + I + G + NX sliders, then hit target
-          GDP\n          figures in a quiz.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Gross_domestic_product',
-        'label': 'Wikipedia: Gross Domestic Product',
-        'description':
-          'Overview of GDP definition, measurement approaches, and limitations.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/g/gdp.asp',
-        'label': 'Investopedia: Gross Domestic Product',
-        'description':
-          "Entry explaining GDP calculation, real vs nominal, and
-          economic\n          significance.",
-      },
-      {
-        'href': 'https://www.bea.gov/resources/methodologies/gdp-dashboard',
-        'label': 'BEA: GDP Dashboard',
-        'description':
-          "U.S. Bureau of Economic Analysis official GDP data and
-          national\n          accounts methodology.",
-      },
-    ],
-}
+"title": "GDP & National Accounts"
+"subtitle": "How economists measure the size and growth of an entire economy."
+"links":
+  - "href": "/economics/gdp-and-national-accounts/aggregate"
+    "label": "GDP Explorer"
+    "description":
+      "Build an economy with C + I + G + NX sliders, then hit target GDP figures
+      in a quiz."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Gross_domestic_product"
+    "label": "Wikipedia: Gross Domestic Product"
+    "description":
+      "Overview of GDP definition, measurement approaches, and limitations."
+  - "href": "https://www.investopedia.com/terms/g/gdp.asp"
+    "label": "Investopedia: Gross Domestic Product"
+    "description":
+      "Entry explaining GDP calculation, real vs nominal, and economic
+      significance."
+  - "href": "https://www.bea.gov/resources/methodologies/gdp-dashboard"
+    "label": "BEA: GDP Dashboard"
+    "description":
+      "U.S. Bureau of Economic Analysis official GDP data and national accounts
+      methodology."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

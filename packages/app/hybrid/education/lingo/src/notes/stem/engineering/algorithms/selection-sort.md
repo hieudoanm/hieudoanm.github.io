@@ -1,31 +1,27 @@
 ---
-{
-  'title': 'Selection Sort',
-  'subtitle':
-    'The quadratic sort with the most predictable cost — and no early exit.',
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/selection-sort/interactive',
-        'label': 'Selection Sort Visualiser',
-        'description':
-          "Step through each pass and watch the minimum swap into the front
-          of\n          the unsorted region.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
-        'label': 'Big O notation',
-        'description':
-          "How asymptotic growth classes are defined, and why constants
-          and\n          lower-order terms drop out.",
-      },
-    ],
-}
+"title": "Selection Sort"
+"subtitle":
+  "The quadratic sort with the most predictable cost — and no early exit."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/selection-sort/interactive"
+    "label": "Selection Sort Visualiser"
+    "description":
+      "Step through each pass and watch the minimum swap into the front of the
+      unsorted region."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Big_O_notation"
+    "label": "Big O notation"
+    "description":
+      "How asymptotic growth classes are defined, and why constants and
+      lower-order terms drop out."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

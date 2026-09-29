@@ -1,8 +1,9 @@
+import * as YAML from 'yaml';
 import {
   isRecord,
   readLinkList,
   readOptionalString,
-  readParentLink,
+  readParentLinkOpt,
   readString,
 } from './validate';
 import type { NoteFrontmatter } from './types';
@@ -31,21 +32,11 @@ const readOptionalLinks = (
 ): NoteFrontmatter['links'] =>
   raw[key] === undefined ? undefined : readLinkList(raw[key], key);
 
-const readJson = (source: string): unknown => {
-  try {
-    return JSON.parse(source) as unknown;
-  } catch (err) {
-    throw new TypeError(
-      `note: frontmatter is not valid JSON: ${(err as Error).message}`
-    );
-  }
-};
-
 export const parseFrontmatter = (source: string): NoteFrontmatter => {
-  const raw = readJson(source);
+  const raw = YAML.parse(source);
 
   if (!isRecord(raw)) {
-    throw new TypeError('note: frontmatter must be a JSON object');
+    throw new TypeError('note: frontmatter must be a YAML object');
   }
 
   rejectUnknownKeys(raw);
@@ -53,10 +44,7 @@ export const parseFrontmatter = (source: string): NoteFrontmatter => {
   return {
     title: readString(raw.title, 'title'),
     subtitle: readOptionalString(raw.subtitle),
-    parentLink:
-      raw.parentLink === undefined
-        ? undefined
-        : readParentLink(raw.parentLink, 'parentLink'),
+    parentLink: readParentLinkOpt(raw.parentLink),
     links: readOptionalLinks(raw, 'links'),
     references: readOptionalLinks(raw, 'references'),
   };

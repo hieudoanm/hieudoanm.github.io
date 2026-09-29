@@ -1,30 +1,25 @@
 ---
-{
-  'title': 'Stack',
-  'subtitle':
-    "Last in, first out: the discipline behind recursion, undo, and
-    expression\n    evaluation.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/stacks/interactive',
-        'label': 'Stack Playground',
-        'description':
-          'Push and pop values and watch the top of the stack move.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Stack_(abstract_data_type)',
-        'label': 'Stack (abstract data type)',
-        'description':
-          'The LIFO discipline and its array and linked-list implementations.',
-      },
-    ],
-}
+"title": "Stack"
+"subtitle":
+  "Last in, first out: the discipline behind recursion, undo, and expression
+  evaluation."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/stacks/interactive"
+    "label": "Stack Playground"
+    "description": "Push and pop values and watch the top of the stack move."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Stack_(abstract_data_type)"
+    "label": "Stack (abstract data type)"
+    "description":
+      "The LIFO discipline and its array and linked-list implementations."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

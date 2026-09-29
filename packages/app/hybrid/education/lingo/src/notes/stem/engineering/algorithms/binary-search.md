@@ -1,39 +1,33 @@
 ---
-{
-  'title': 'Binary Search',
-  'subtitle':
-    "Halving the window each step: the algorithm that turned searching
-    from\n    minutes into microseconds.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/binary-search/interactive',
-        'label': 'Binary Search Tracer',
-        'description':
-          "Watch the search window halve with every probe until the target
-          is\n          pinned down.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Binary_search_algorithm',
-        'label': 'Binary search algorithm',
-        'description':
-          "The halving argument, the exact iteration count, and
-          the\n          preconditions that make it correct.",
-      },
-      {
-        'href': 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/',
-        'label': 'MIT 6.006 — Introduction to Algorithms',
-        'description':
-          "Lecture notes covering asymptotics, sorting lower bounds,
-          and\n          hash-based lookup.",
-      },
-    ],
-}
+"title": "Binary Search"
+"subtitle":
+  "Halving the window each step: the algorithm that turned searching from
+  minutes into microseconds."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/binary-search/interactive"
+    "label": "Binary Search Tracer"
+    "description":
+      "Watch the search window halve with every probe until the target is pinned
+      down."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Binary_search_algorithm"
+    "label": "Binary search algorithm"
+    "description":
+      "The halving argument, the exact iteration count, and the preconditions
+      that make it correct."
+  - "href": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/"
+    "label": "MIT 6.006 — Introduction to Algorithms"
+    "description":
+      "Lecture notes covering asymptotics, sorting lower bounds, and hash-based
+      lookup."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

@@ -1,40 +1,29 @@
 ---
-{
-  'title': 'Zero-Sum Games',
-  'subtitle': "Games where one player's gain is exactly another's loss.",
-  'links':
-    [
-      {
-        'href': '/economics/zero-sum-games/rps',
-        'label': 'Play RPS',
-        'description':
-          "Learn minimax and the value of zero-sum games on the
-          classic\n          playground.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Zero-sum_game',
-        'label': 'Wikipedia: Zero-sum game',
-        'description':
-          "Zero-sum games in which one player's gain is another's loss.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/z/zero-sumgame.asp',
-        'label': 'Investopedia: Zero-Sum Game',
-        'description': 'Zero-sum games in investment and competition contexts.',
-      },
-      {
-        'href': 'https://plato.stanford.edu/entries/game-theory/',
-        'label': 'Stanford Encyclopedia of Philosophy: Game Theory',
-        'description':
-          "Formal treatment of strategic games, including zero-sum
-          and\n          mixed-strategy equilibria.",
-      },
-    ],
-}
+"title": "Zero-Sum Games"
+"subtitle": "Games where one player's gain is exactly another's loss."
+"links":
+  - "href": "/economics/zero-sum-games/rps"
+    "label": "Play RPS"
+    "description":
+      "Learn minimax and the value of zero-sum games on the classic playground."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Zero-sum_game"
+    "label": "Wikipedia: Zero-sum game"
+    "description":
+      "Zero-sum games in which one player's gain is another's loss."
+  - "href": "https://www.investopedia.com/terms/z/zero-sumgame.asp"
+    "label": "Investopedia: Zero-Sum Game"
+    "description": "Zero-sum games in investment and competition contexts."
+  - "href": "https://plato.stanford.edu/entries/game-theory/"
+    "label": "Stanford Encyclopedia of Philosophy: Game Theory"
+    "description":
+      "Formal treatment of strategic games, including zero-sum and
+      mixed-strategy equilibria."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

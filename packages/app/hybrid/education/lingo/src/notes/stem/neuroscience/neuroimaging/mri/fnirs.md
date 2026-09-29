@@ -1,30 +1,27 @@
 ---
-{
-  'title': 'Functional Near-Infrared Spectroscopy (fNIRS)',
-  'subtitle':
-    "The haemodynamic middle ground — millisecond sampling of a vascular
-    signal\n    through the skull, portable and affordable, with real but
-    bounded limits.",
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'references':
-    [
-      {
-        'href': 'https://doi.org/10.1038/nn.3474',
-        'label': 'Boas et al. (2011) — Nature Neuroscience',
-        'description':
-          "A review of the hemodynamic response to brain activation,
-          grounding\n          the physiology fNIRS and fMRI share.",
-      },
-      {
-        'href': 'https://doi.org/10.1016/j.neuroimage.2013.05.004',
-        'label': 'Scholkmann et al. (2014) — NeuroImage',
-        'description':
-          "Functional brain imaging with near-infrared light: fNIRS
-          principles,\n          channels, and short-separation regression.",
-      },
-    ],
-}
+"title": "Functional Near-Infrared Spectroscopy (fNIRS)"
+"subtitle":
+  "The haemodynamic middle ground — millisecond sampling of a vascular signal
+  through the skull, portable and affordable, with real but bounded limits."
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"references":
+  - "href": "https://doi.org/10.1038/nn.3474"
+    "label": "Boas et al. (2011) — Nature Neuroscience"
+    "description":
+      "A review of the hemodynamic response to brain activation, grounding the
+      physiology fNIRS and fMRI share."
+  - "href": "https://doi.org/10.1016/j.neuroimage.2013.05.004"
+    "label": "Scholkmann et al. (2014) — NeuroImage"
+    "description":
+      "Functional brain imaging with near-infrared light: fNIRS principles,
+      channels, and short-separation regression."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What it measures
 

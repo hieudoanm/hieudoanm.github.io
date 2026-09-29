@@ -1,45 +1,35 @@
 ---
-{
-  'title': 'Repeated Games & Tit-for-Tat',
-  'subtitle':
-    "Why playing the same game over and over unlocks cooperation that a
-    single\n    round never could.",
-  'links':
-    [
-      {
-        'href': '/economics/repeated-games/tournament',
-        'label': 'Repeated Dilemma',
-        'description':
-          "Play 10 rounds of the iterated prisoner's dilemma against classic
-          AI\n          strategies and learn when cooperation survives.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Tit_for_tat',
-        'label': 'Wikipedia: Tit for tat',
-        'description':
-          "The tit-for-tat strategy in repeated games and Axelrod's
-          tournament\n          results.",
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Folk_theorem_(game_theory)',
-        'label': 'Wikipedia: Folk theorem (game theory)',
-        'description':
-          "The folk theorem on cooperative outcomes achievable in
-          infinitely\n          repeated games.",
-      },
-      {
-        'href': 'https://plato.stanford.edu/entries/game-theory/',
-        'label': 'Stanford Encyclopedia of Philosophy: Game Theory',
-        'description':
-          "A rigorous overview of repeated games and game-theoretic
-          equilibrium\n          concepts.",
-      },
-    ],
-}
+"title": "Repeated Games & Tit-for-Tat"
+"subtitle":
+  "Why playing the same game over and over unlocks cooperation that a single
+  round never could."
+"links":
+  - "href": "/economics/repeated-games/tournament"
+    "label": "Repeated Dilemma"
+    "description":
+      "Play 10 rounds of the iterated prisoner's dilemma against classic AI
+      strategies and learn when cooperation survives."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Tit_for_tat"
+    "label": "Wikipedia: Tit for tat"
+    "description":
+      "The tit-for-tat strategy in repeated games and Axelrod's tournament
+      results."
+  - "href": "https://en.wikipedia.org/wiki/Folk_theorem_(game_theory)"
+    "label": "Wikipedia: Folk theorem (game theory)"
+    "description":
+      "The folk theorem on cooperative outcomes achievable in infinitely
+      repeated games."
+  - "href": "https://plato.stanford.edu/entries/game-theory/"
+    "label": "Stanford Encyclopedia of Philosophy: Game Theory"
+    "description":
+      "A rigorous overview of repeated games and game-theoretic equilibrium
+      concepts."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

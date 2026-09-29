@@ -1,29 +1,25 @@
 ---
-{
-  'title': 'Journaling',
-  'subtitle':
-    'Writing as a thinking tool — what changes when experience is put on paper.',
-  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
-  'links':
-    [
-      {
-        'href': '/psychology/patient-health-questionnaire/',
-        'label': 'Patient Health Questionnaire (PHQ-9)',
-        'description': 'Structured symptom tracking over two weeks',
-      },
-      {
-        'href': '/psychology/beck-depression-inventory/',
-        'label': 'Beck Depression Inventory (BDI-II)',
-        'description': 'Mood, sleep and energy across three weeks',
-      },
-      {
-        'href': '/psychology/satisfaction-with-life/',
-        'label': 'Satisfaction With Life Scale',
-        'description': 'A five-item snapshot to revisit periodically',
-      },
-    ],
-}
+"title": "Journaling"
+"subtitle":
+  "Writing as a thinking tool — what changes when experience is put on paper."
+"parentLink":
+  "href": "/psychology/"
+  "label": "Psychology"
+"links":
+  - "href": "/psychology/patient-health-questionnaire/"
+    "label": "Patient Health Questionnaire (PHQ-9)"
+    "description": "Structured symptom tracking over two weeks"
+  - "href": "/psychology/beck-depression-inventory/"
+    "label": "Beck Depression Inventory (BDI-II)"
+    "description": "Mood, sleep and energy across three weeks"
+  - "href": "/psychology/satisfaction-with-life/"
+    "label": "Satisfaction With Life Scale"
+    "description": "A five-item snapshot to revisit periodically"
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Why writing helps
 

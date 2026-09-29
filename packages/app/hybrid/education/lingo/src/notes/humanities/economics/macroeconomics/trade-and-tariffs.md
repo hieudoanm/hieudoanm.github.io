@@ -1,44 +1,32 @@
 ---
-{
-  'title': 'Trade & Tariffs',
-  'subtitle':
-    'Why countries benefit from trading—and what tariffs really cost.',
-  'links':
-    [
-      {
-        'href': '/economics/trade-and-tariffs/lab',
-        'label': 'Trade & Tariff Lab',
-        'description':
-          "Set a tariff on imports and watch consumer, producer, and
-          government\n          surplus shift; then pick tariffs that hit
-          revenue, protection, and\n          import targets before a
-          retaliation round.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Comparative_advantage',
-        'label': 'Wikipedia: Comparative advantage',
-        'description':
-          "Ricardo's theory of comparative advantage and gains from trade.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/t/tariff.asp',
-        'label': 'Investopedia: Tariff',
-        'description':
-          'Definition of tariffs, types, and their economic effects on trade.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/c/comparativeadvantage.asp',
-        'label': 'Investopedia: Comparative Advantage',
-        'description':
-          "Comparative advantage explained with examples of mutually
-          beneficial\n          trade.",
-      },
-    ],
-}
+"title": "Trade & Tariffs"
+"subtitle": "Why countries benefit from trading—and what tariffs really cost."
+"links":
+  - "href": "/economics/trade-and-tariffs/lab"
+    "label": "Trade & Tariff Lab"
+    "description":
+      "Set a tariff on imports and watch consumer, producer, and government
+      surplus shift; then pick tariffs that hit revenue, protection, and import
+      targets before a retaliation round."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Comparative_advantage"
+    "label": "Wikipedia: Comparative advantage"
+    "description":
+      "Ricardo's theory of comparative advantage and gains from trade."
+  - "href": "https://www.investopedia.com/terms/t/tariff.asp"
+    "label": "Investopedia: Tariff"
+    "description":
+      "Definition of tariffs, types, and their economic effects on trade."
+  - "href": "https://www.investopedia.com/terms/c/comparativeadvantage.asp"
+    "label": "Investopedia: Comparative Advantage"
+    "description":
+      "Comparative advantage explained with examples of mutually beneficial
+      trade."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

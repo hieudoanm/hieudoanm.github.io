@@ -1,32 +1,26 @@
 ---
-{
-  'title': 'Hierarchical Drift Diffusion Model (HDDM)',
-  'subtitle': '',
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'links':
-    [
-      {
-        'href': '/neuroscience/hierarchical-drift-diffusion-model/interactive',
-        'label': 'HDDM Simulator',
-        'description':
-          "Simulate a group of 50 subjects. Adjust the population variance
-          to\n          see how tightly the individuals cluster around the group
-          mean.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://doi.org/10.3389/fninf.2013.00014',
-        'label':
-          'Wiecki, Sofer, & Frank (2013) — Frontiers in Neuroinformatics',
-        'description':
-          "HDDM: Hierarchical Bayesian estimation of the Drift-Diffusion
-          Model\n          in Python.",
-      },
-    ],
-}
+"title": "Hierarchical Drift Diffusion Model (HDDM)"
+"subtitle": ""
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"links":
+  - "href": "/neuroscience/hierarchical-drift-diffusion-model/interactive"
+    "label": "HDDM Simulator"
+    "description":
+      "Simulate a group of 50 subjects. Adjust the population variance to see
+      how tightly the individuals cluster around the group mean."
+"references":
+  - "href": "https://doi.org/10.3389/fninf.2013.00014"
+    "label": "Wiecki, Sofer, & Frank (2013) — Frontiers in Neuroinformatics"
+    "description":
+      "HDDM: Hierarchical Bayesian estimation of the Drift-Diffusion Model in
+      Python."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Overview
 

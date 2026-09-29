@@ -1,30 +1,24 @@
 ---
-{
-  'title': 'Color Models',
-  'subtitle': 'The coordinate systems used to describe a color numerically.',
-  'links':
-    [
-      {
-        'href': '/colors/models/converter',
-        'label': 'Color Converter',
-        'description':
-          'Convert the active color between HEX, RGB, HSL, HSV and CMYK.',
-      },
-      {
-        'href': '/colors/models/adjuster',
-        'label': 'Color Adjuster',
-        'description':
-          'Tune hue, saturation and lightness of any color with sliders.',
-      },
-      {
-        'href': '/colors/models/random',
-        'label': 'Random Color',
-        'description':
-          'Generate and lock a random color to inspect in every notation.',
-      },
-    ],
-}
+"title": "Color Models"
+"subtitle": "The coordinate systems used to describe a color numerically."
+"links":
+  - "href": "/colors/models/converter"
+    "label": "Color Converter"
+    "description":
+      "Convert the active color between HEX, RGB, HSL, HSV and CMYK."
+  - "href": "/colors/models/adjuster"
+    "label": "Color Adjuster"
+    "description":
+      "Tune hue, saturation and lightness of any color with sliders."
+  - "href": "/colors/models/random"
+    "label": "Random Color"
+    "description":
+      "Generate and lock a random color to inspect in every notation."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Additive and subtractive
 

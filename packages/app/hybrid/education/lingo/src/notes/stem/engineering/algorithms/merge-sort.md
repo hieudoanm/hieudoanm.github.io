@@ -1,32 +1,28 @@
 ---
-{
-  'title': 'Merge Sort',
-  'subtitle':
-    "The divide-and-conquer sort that always takes n log n and pays for it
-    with\n    memory.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/merge-sort/interactive',
-        'label': 'Merge Sort Visualiser',
-        'description':
-          "Step through each merge and watch two sorted runs combine through
-          the\n          auxiliary buffer.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
-        'label': 'Big O notation',
-        'description':
-          "How asymptotic growth classes are defined, and why constants
-          and\n          lower-order terms drop out.",
-      },
-    ],
-}
+"title": "Merge Sort"
+"subtitle":
+  "The divide-and-conquer sort that always takes n log n and pays for it with
+  memory."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/merge-sort/interactive"
+    "label": "Merge Sort Visualiser"
+    "description":
+      "Step through each merge and watch two sorted runs combine through the
+      auxiliary buffer."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Big_O_notation"
+    "label": "Big O notation"
+    "description":
+      "How asymptotic growth classes are defined, and why constants and
+      lower-order terms drop out."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

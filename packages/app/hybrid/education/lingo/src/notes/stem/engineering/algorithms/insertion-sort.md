@@ -1,32 +1,28 @@
 ---
-{
-  'title': 'Insertion Sort',
-  'subtitle':
-    "The sort that is O(n) on nearly-sorted input, and the method behind
-    most\n    small-array sorts.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/insertion-sort/interactive',
-        'label': 'Insertion Sort Visualiser',
-        'description':
-          "Step through each insertion and watch the sorted prefix grow by
-          one\n          element.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
-        'label': 'Big O notation',
-        'description':
-          "How asymptotic growth classes are defined, and why constants
-          and\n          lower-order terms drop out.",
-      },
-    ],
-}
+"title": "Insertion Sort"
+"subtitle":
+  "The sort that is O(n) on nearly-sorted input, and the method behind most
+  small-array sorts."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/insertion-sort/interactive"
+    "label": "Insertion Sort Visualiser"
+    "description":
+      "Step through each insertion and watch the sorted prefix grow by one
+      element."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Big_O_notation"
+    "label": "Big O notation"
+    "description":
+      "How asymptotic growth classes are defined, and why constants and
+      lower-order terms drop out."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

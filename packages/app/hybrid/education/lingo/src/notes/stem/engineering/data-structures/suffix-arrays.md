@@ -1,29 +1,25 @@
 ---
-{
-  'title': 'Suffix Trees and Arrays',
-  'subtitle':
-    'Sorting every suffix to answer substring questions in logarithmic time.',
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/suffix-arrays/interactive',
-        'label': 'Suffix Array Builder',
-        'description':
-          'Build the suffix array by doubling and watch the ranks settle.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Suffix_array',
-        'label': 'Suffix array',
-        'description':
-          'Doubling construction, the LCP array, and substring queries.',
-      },
-    ],
-}
+"title": "Suffix Trees and Arrays"
+"subtitle":
+  "Sorting every suffix to answer substring questions in logarithmic time."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/suffix-arrays/interactive"
+    "label": "Suffix Array Builder"
+    "description":
+      "Build the suffix array by doubling and watch the ranks settle."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Suffix_array"
+    "label": "Suffix array"
+    "description":
+      "Doubling construction, the LCP array, and substring queries."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

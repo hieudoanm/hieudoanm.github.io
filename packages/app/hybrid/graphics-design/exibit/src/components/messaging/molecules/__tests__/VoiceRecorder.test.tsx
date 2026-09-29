@@ -28,15 +28,20 @@ Object.defineProperty(navigator, 'mediaDevices', {
   writable: true,
 });
 
+// Polyfill URL.createObjectURL and revokeObjectURL for jsdom
+if (!global.URL.createObjectURL) {
+  global.URL.createObjectURL = jest.fn(() => 'blob:mock-url');
+}
+if (!global.URL.revokeObjectURL) {
+  global.URL.revokeObjectURL = jest.fn();
+}
+
 jest.mock('react-icons/fa', () => ({
   FaMicrophone: () => <span data-testid="fa-microphone" />,
   FaStop: () => <span data-testid="fa-stop" />,
   FaTimes: () => <span data-testid="fa-times" />,
   FaPaperPlane: () => <span data-testid="fa-paper-plane" />,
 }));
-
-jest.spyOn(URL, 'createObjectURL').mockReturnValue('blob:mock-url');
-jest.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {});
 
 beforeEach(() => {
   jest.clearAllMocks();

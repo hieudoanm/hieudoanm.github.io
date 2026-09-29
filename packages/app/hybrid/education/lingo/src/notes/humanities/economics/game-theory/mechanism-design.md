@@ -1,45 +1,34 @@
 ---
-{
-  'title': 'Mechanism Design',
-  'subtitle':
-    "Designing the rules of the game so self-interested players produce
-    good\n    outcomes.",
-  'links':
-    [
-      {
-        'href': '/economics/mechanism-design/reveal',
-        'label': 'Revelation Game',
-        'description':
-          "Report what a public project is worth to you and see why the
-          pivot\n          (Clarke) rule makes honesty your best move.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2007/summary/',
-        'label': 'Nobel Prize: 2007 Economic Sciences',
-        'description':
-          "Nobel award to Hurwicz, Maskin, and Myerson for mechanism
-          design\n          theory.",
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Mechanism_design',
-        'label': 'Wikipedia: Mechanism Design',
-        'description':
-          "Overview of reverse game theory, incentive compatibility, and
-          the\n          revelation principle.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/m/mechanism-design.asp',
-        'label': 'Investopedia: Mechanism Design',
-        'description':
-          "Entry explaining how rules are designed to achieve desired
-          economic\n          outcomes.",
-      },
-    ],
-}
+"title": "Mechanism Design"
+"subtitle":
+  "Designing the rules of the game so self-interested players produce good
+  outcomes."
+"links":
+  - "href": "/economics/mechanism-design/reveal"
+    "label": "Revelation Game"
+    "description":
+      "Report what a public project is worth to you and see why the pivot
+      (Clarke) rule makes honesty your best move."
+"references":
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/2007/summary/"
+    "label": "Nobel Prize: 2007 Economic Sciences"
+    "description":
+      "Nobel award to Hurwicz, Maskin, and Myerson for mechanism design theory."
+  - "href": "https://en.wikipedia.org/wiki/Mechanism_design"
+    "label": "Wikipedia: Mechanism Design"
+    "description":
+      "Overview of reverse game theory, incentive compatibility, and the
+      revelation principle."
+  - "href": "https://www.investopedia.com/terms/m/mechanism-design.asp"
+    "label": "Investopedia: Mechanism Design"
+    "description":
+      "Entry explaining how rules are designed to achieve desired economic
+      outcomes."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

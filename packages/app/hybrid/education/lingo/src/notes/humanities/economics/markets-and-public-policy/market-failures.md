@@ -1,44 +1,33 @@
 ---
-{
-  'title': 'Market Failures',
-  'subtitle':
-    "The situations where free markets alone produce socially
-    inefficient\n    outcomes.",
-  'links':
-    [
-      {
-        'href': '/economics/market-failures/policies',
-        'label': 'Market Failure Fixer',
-        'description':
-          "Match the right policy to each market failure, then set a
-          Pigouvian\n          tax to restore optimal output.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Market_failure',
-        'label': 'Wikipedia: Market Failure',
-        'description':
-          "Overview of market failure types including externalities,
-          public\n          goods, and market power.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/m/marketfailure.asp',
-        'label': 'Investopedia: Market Failure',
-        'description':
-          'Entry defining market failure and its causes and remedies.',
-      },
-      {
-        'href': 'https://www.britannica.com/topic/market-failure',
-        'label': 'Encyclopedia Britannica: Market Failure',
-        'description':
-          "Encyclopedia entry on when free markets fail to allocate
-          resources\n          efficiently.",
-      },
-    ],
-}
+"title": "Market Failures"
+"subtitle":
+  "The situations where free markets alone produce socially inefficient
+  outcomes."
+"links":
+  - "href": "/economics/market-failures/policies"
+    "label": "Market Failure Fixer"
+    "description":
+      "Match the right policy to each market failure, then set a Pigouvian tax
+      to restore optimal output."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Market_failure"
+    "label": "Wikipedia: Market Failure"
+    "description":
+      "Overview of market failure types including externalities, public goods,
+      and market power."
+  - "href": "https://www.investopedia.com/terms/m/marketfailure.asp"
+    "label": "Investopedia: Market Failure"
+    "description": "Entry defining market failure and its causes and remedies."
+  - "href": "https://www.britannica.com/topic/market-failure"
+    "label": "Encyclopedia Britannica: Market Failure"
+    "description":
+      "Encyclopedia entry on when free markets fail to allocate resources
+      efficiently."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

@@ -1,42 +1,31 @@
 ---
-{
-  'title': 'Moral Hazard',
-  'subtitle':
-    'When insurance changes behavior—and someone else pays the price.',
-  'links':
-    [
-      {
-        'href': '/economics/moral-hazard/insurance',
-        'label': 'Hidden Effort',
-        'description':
-          "Insure your home, choose how hard to guard it, and watch full
-          cover\n          quietly destroy your incentive to try.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Moral_hazard',
-        'label': 'Wikipedia: Moral Hazard',
-        'description':
-          "Overview of moral hazard, asymmetric information, and
-          principal-agent\n          problems.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/m/moralhazard.asp',
-        'label': 'Investopedia: Moral Hazard',
-        'description':
-          'Entry explaining how insurance and guarantees change behavior.',
-      },
-      {
-        'href': 'https://www.britannica.com/topic/moral-hazard',
-        'label': 'Encyclopedia Britannica: Moral Hazard',
-        'description':
-          'Encyclopedia entry on moral hazard in economics and finance.',
-      },
-    ],
-}
+"title": "Moral Hazard"
+"subtitle": "When insurance changes behavior—and someone else pays the price."
+"links":
+  - "href": "/economics/moral-hazard/insurance"
+    "label": "Hidden Effort"
+    "description":
+      "Insure your home, choose how hard to guard it, and watch full cover
+      quietly destroy your incentive to try."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Moral_hazard"
+    "label": "Wikipedia: Moral Hazard"
+    "description":
+      "Overview of moral hazard, asymmetric information, and principal-agent
+      problems."
+  - "href": "https://www.investopedia.com/terms/m/moralhazard.asp"
+    "label": "Investopedia: Moral Hazard"
+    "description":
+      "Entry explaining how insurance and guarantees change behavior."
+  - "href": "https://www.britannica.com/topic/moral-hazard"
+    "label": "Encyclopedia Britannica: Moral Hazard"
+    "description":
+      "Encyclopedia entry on moral hazard in economics and finance."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

@@ -1,29 +1,25 @@
 ---
-{
-  'title': 'Linear Ballistic Accumulator (LBA)',
-  'subtitle': '',
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'links':
-    [
-      {
-        'href': '/neuroscience/linear-ballistic-accumulator/interactive',
-        'label': 'LBA Simulator',
-        'description':
-          "Simulate the race between two ballistic accumulators and see
-          how\n          between-trial variability shapes choices.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://doi.org/10.1016/j.cogpsych.2007.12.002',
-        'label': 'Brown & Heathcote (2008) — Cognitive Psychology',
-        'description':
-          'The seminal paper introducing the Linear Ballistic Accumulator model.',
-      },
-    ],
-}
+"title": "Linear Ballistic Accumulator (LBA)"
+"subtitle": ""
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"links":
+  - "href": "/neuroscience/linear-ballistic-accumulator/interactive"
+    "label": "LBA Simulator"
+    "description":
+      "Simulate the race between two ballistic accumulators and see how
+      between-trial variability shapes choices."
+"references":
+  - "href": "https://doi.org/10.1016/j.cogpsych.2007.12.002"
+    "label": "Brown & Heathcote (2008) — Cognitive Psychology"
+    "description":
+      "The seminal paper introducing the Linear Ballistic Accumulator model."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Overview
 

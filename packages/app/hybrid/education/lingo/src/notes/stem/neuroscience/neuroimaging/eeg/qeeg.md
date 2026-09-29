@@ -1,31 +1,27 @@
 ---
-{
-  'title': 'Quantitative EEG (qEEG)',
-  'subtitle':
-    "Turning scalp waveforms into frequency-domain measures of
-    oscillatory\n    coupling — powerful when handled carefully, fragile when it
-    is not.",
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'references':
-    [
-      {
-        'href': 'https://doi.org/10.1038/nrn3241',
-        'label':
-          'Buzsáki, Anastassiou & Koch (2012) — Nature Reviews Neuroscience',
-        'description':
-          "Why scalp oscillations reflect coordinated population activity,
-          and\n          the physical limits on localising them.",
-      },
-      {
-        'href': 'https://doi.org/10.1016/j.clinph.2007.06.018',
-        'label': 'Gudmundsson et al. (2007) — Clinical Neurophysiology',
-        'description':
-          "A critical appraisal of quantitative EEG in clinical
-          research,\n          emphasising pipeline sensitivity.",
-      },
-    ],
-}
+"title": "Quantitative EEG (qEEG)"
+"subtitle":
+  "Turning scalp waveforms into frequency-domain measures of oscillatory
+  coupling — powerful when handled carefully, fragile when it is not."
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"references":
+  - "href": "https://doi.org/10.1038/nrn3241"
+    "label": "Buzsáki, Anastassiou & Koch (2012) — Nature Reviews Neuroscience"
+    "description":
+      "Why scalp oscillations reflect coordinated population activity, and the
+      physical limits on localising them."
+  - "href": "https://doi.org/10.1016/j.clinph.2007.06.018"
+    "label": "Gudmundsson et al. (2007) — Clinical Neurophysiology"
+    "description":
+      "A critical appraisal of quantitative EEG in clinical research,
+      emphasising pipeline sensitivity."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What it measures
 

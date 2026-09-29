@@ -1,30 +1,25 @@
 ---
-{
-  'title': 'Fenwick Tree',
-  'subtitle':
-    "Overlapping blocks of lowbit length: point update and prefix sum, both
-    in\n    log n, in one array.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/fenwick-trees/interactive',
-        'label': 'Fenwick Tree Explorer',
-        'description':
-          'Query a prefix and watch the lowbit walk visit each block.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Fenwick_tree',
-        'label': 'Fenwick tree',
-        'description':
-          'Lowbit block decomposition and the shared update/query walk.',
-      },
-    ],
-}
+"title": "Fenwick Tree"
+"subtitle":
+  "Overlapping blocks of lowbit length: point update and prefix sum, both in log
+  n, in one array."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/fenwick-trees/interactive"
+    "label": "Fenwick Tree Explorer"
+    "description": "Query a prefix and watch the lowbit walk visit each block."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Fenwick_tree"
+    "label": "Fenwick tree"
+    "description":
+      "Lowbit block decomposition and the shared update/query walk."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

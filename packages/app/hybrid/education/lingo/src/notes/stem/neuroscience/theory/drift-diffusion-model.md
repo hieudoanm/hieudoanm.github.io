@@ -1,46 +1,37 @@
 ---
-{
-  'title': 'Drift Diffusion Model',
-  'subtitle':
-    "How the brain accumulates noisy evidence over time to reach a
-    binary\n    decision — and why speed and accuracy trade off.",
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'links':
-    [
-      {
-        'href': '/neuroscience/drift-diffusion-model/interactive',
-        'label': 'DDM Simulator',
-        'description':
-          "Tune drift rate, boundary, and noise in real time and watch
-          evidence\n          accumulate toward a decision.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Diffusion_model',
-        'label': 'Wikipedia: Diffusion model',
-        'description':
-          "Overview of the DDM, its parameters, and key
-          experimental\n          applications.",
-      },
-      {
-        'href': 'https://www.annualreviews.org/doi/10.1146/annurev.psych.51.1.481',
-        'label': 'Ratcliff & Rouder (2000) — Annual Review of Psychology',
-        'description':
-          "Foundational review of the diffusion model applied to
-          recognition\n          memory and choice RT.",
-      },
-      {
-        'href': 'https://www.jneurosci.org/content/28/26/6655',
-        'label': 'Forstmann et al. (2008) — Journal of Neuroscience',
-        'description':
-          "fMRI evidence linking striatal BOLD signal to
-          boundary-separation\n          adjustments during speed stress.",
-      },
-    ],
-}
+"title": "Drift Diffusion Model"
+"subtitle":
+  "How the brain accumulates noisy evidence over time to reach a binary decision
+  — and why speed and accuracy trade off."
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"links":
+  - "href": "/neuroscience/drift-diffusion-model/interactive"
+    "label": "DDM Simulator"
+    "description":
+      "Tune drift rate, boundary, and noise in real time and watch evidence
+      accumulate toward a decision."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Diffusion_model"
+    "label": "Wikipedia: Diffusion model"
+    "description":
+      "Overview of the DDM, its parameters, and key experimental applications."
+  - "href": "https://www.annualreviews.org/doi/10.1146/annurev.psych.51.1.481"
+    "label": "Ratcliff & Rouder (2000) — Annual Review of Psychology"
+    "description":
+      "Foundational review of the diffusion model applied to recognition memory
+      and choice RT."
+  - "href": "https://www.jneurosci.org/content/28/26/6655"
+    "label": "Forstmann et al. (2008) — Journal of Neuroscience"
+    "description":
+      "fMRI evidence linking striatal BOLD signal to boundary-separation
+      adjustments during speed stress."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

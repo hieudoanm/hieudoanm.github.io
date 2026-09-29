@@ -1,49 +1,39 @@
 ---
-{
-  'title': 'Magnetoencephalography (MEG)',
-  'subtitle':
-    "Millisecond-resolution magnetic fields from cortical currents —
-    exquisite\n    timing, and the magnetic skull is effectively transparent.",
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'links':
-    [
-      {
-        'href': '/neuroscience/meg/interactive',
-        'label': 'MEG / EEG Forward Model',
-        'description':
-          "Send one cortical dipole into a helmet: compare the
-          undistorted\n          magnetic field with the volume-conducted scalp
-          potential.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://mitpress.mit.edu/9780262621619/electric-fields-of-the-brain/',
-        'label': 'Nunez & Srinivasan — Electric Fields of the Brain, MIT Press',
-        'description':
-          "The definitive treatment of the bioelectric and biomagnetic
-          forward\n          problems, including why magnetic permeability makes
-          MEG the less\n          distorted of the two.",
-      },
-      {
-        'href': 'https://doi.org/10.1016/j.neuroimage.2017.05.068',
-        'label': 'Niso et al. (2018) — NeuroImage',
-        'description':
-          "Recommended open processing environment for MEG/EEG forward
-          modelling\n          and source reconstruction, with practical
-          guidance on depth bias.",
-      },
-      {
-        'href': 'https://doi.org/10.1038/s41583-018-0070-8',
-        'label': 'Baillet (2017) — Nature Reviews Neuroscience',
-        'description':
-          "Comprehensive review of MEG theory, hardware, source
-          reconstruction,\n          and artefact handling.",
-      },
-    ],
-}
+"title": "Magnetoencephalography (MEG)"
+"subtitle":
+  "Millisecond-resolution magnetic fields from cortical currents — exquisite
+  timing, and the magnetic skull is effectively transparent."
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"links":
+  - "href": "/neuroscience/meg/interactive"
+    "label": "MEG / EEG Forward Model"
+    "description":
+      "Send one cortical dipole into a helmet: compare the undistorted magnetic
+      field with the volume-conducted scalp potential."
+"references":
+  - "href": "https://mitpress.mit.edu/9780262621619/electric-fields-of-the-brain/"
+    "label": "Nunez & Srinivasan — Electric Fields of the Brain, MIT Press"
+    "description":
+      "The definitive treatment of the bioelectric and biomagnetic forward
+      problems, including why magnetic permeability makes MEG the less distorted
+      of the two."
+  - "href": "https://doi.org/10.1016/j.neuroimage.2017.05.068"
+    "label": "Niso et al. (2018) — NeuroImage"
+    "description":
+      "Recommended open processing environment for MEG/EEG forward modelling and
+      source reconstruction, with practical guidance on depth bias."
+  - "href": "https://doi.org/10.1038/s41583-018-0070-8"
+    "label": "Baillet (2017) — Nature Reviews Neuroscience"
+    "description":
+      "Comprehensive review of MEG theory, hardware, source reconstruction, and
+      artefact handling."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What it measures
 

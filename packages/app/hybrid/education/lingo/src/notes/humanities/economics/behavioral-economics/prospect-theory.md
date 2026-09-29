@@ -1,44 +1,32 @@
 ---
-{
-  'title': 'Prospect Theory',
-  'subtitle':
-    "Why we feel losses more than gains—and how that bends every decision
-    we\n    make.",
-  'links':
-    [
-      {
-        'href': '/economics/prospect-theory/framing',
-        'label': 'Framing Game',
-        'description':
-          "Answer Kahneman and Tversky questions and discover your
-          own\n          reflection effect.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Prospect_theory',
-        'label': 'Wikipedia: Prospect Theory',
-        'description':
-          "Overview of the value function, loss aversion, and
-          probability\n          weighting.",
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/',
-        'label': 'Nobel Prize: Daniel Kahneman (2002)',
-        'description':
-          'Nobel biography of Kahneman, awarded for work on prospect theory.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/p/prospecttheory.asp',
-        'label': 'Investopedia: Prospect Theory',
-        'description':
-          "Entry on how people underweight probabilities and fear losses
-          more\n          than gains.",
-      },
-    ],
-}
+"title": "Prospect Theory"
+"subtitle":
+  "Why we feel losses more than gains—and how that bends every decision we make."
+"links":
+  - "href": "/economics/prospect-theory/framing"
+    "label": "Framing Game"
+    "description":
+      "Answer Kahneman and Tversky questions and discover your own reflection
+      effect."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Prospect_theory"
+    "label": "Wikipedia: Prospect Theory"
+    "description":
+      "Overview of the value function, loss aversion, and probability weighting."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/"
+    "label": "Nobel Prize: Daniel Kahneman (2002)"
+    "description":
+      "Nobel biography of Kahneman, awarded for work on prospect theory."
+  - "href": "https://www.investopedia.com/terms/p/prospecttheory.asp"
+    "label": "Investopedia: Prospect Theory"
+    "description":
+      "Entry on how people underweight probabilities and fear losses more than
+      gains."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

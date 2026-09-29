@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Attentional Drift Diffusion Model (aDDM)',
-  'subtitle': '',
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'links':
-    [
-      {
-        'href': '/neuroscience/attentional-drift-diffusion-model/interactive',
-        'label': 'aDDM Simulator',
-        'description':
-          "Simulate fixations and see how alternating visual
-          attention\n          dynamically shifts the drift rate.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://doi.org/10.1038/nn.2635',
-        'label': 'Krajbich, Armel, & Rangel (2010) — Nature Neuroscience',
-        'description':
-          "Visual fixations and the computation and comparison of value
-          in\n          simple choice.",
-      },
-    ],
-}
+"title": "Attentional Drift Diffusion Model (aDDM)"
+"subtitle": ""
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"links":
+  - "href": "/neuroscience/attentional-drift-diffusion-model/interactive"
+    "label": "aDDM Simulator"
+    "description":
+      "Simulate fixations and see how alternating visual attention dynamically
+      shifts the drift rate."
+"references":
+  - "href": "https://doi.org/10.1038/nn.2635"
+    "label": "Krajbich, Armel, & Rangel (2010) — Nature Neuroscience"
+    "description":
+      "Visual fixations and the computation and comparison of value in simple
+      choice."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Overview
 

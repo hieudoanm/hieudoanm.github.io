@@ -1,30 +1,24 @@
 ---
-{
-  'title': 'Color Harmony',
-  'subtitle': 'How colors relate on the wheel and mix with each other.',
-  'links':
-    [
-      {
-        'href': '/colors/harmony/wheel',
-        'label': 'Color Wheel',
-        'description':
-          'Explore hues and see complementary, analogous and triadic markers.',
-      },
-      {
-        'href': '/colors/harmony/schemes',
-        'label': 'Color Schemes',
-        'description':
-          'Generate complementary, analogous, triadic and monochromatic sets.',
-      },
-      {
-        'href': '/colors/harmony/mixer',
-        'label': 'Color Mixer',
-        'description':
-          'Blend two colors by weight and read the result in every notation.',
-      },
-    ],
-}
+"title": "Color Harmony"
+"subtitle": "How colors relate on the wheel and mix with each other."
+"links":
+  - "href": "/colors/harmony/wheel"
+    "label": "Color Wheel"
+    "description":
+      "Explore hues and see complementary, analogous and triadic markers."
+  - "href": "/colors/harmony/schemes"
+    "label": "Color Schemes"
+    "description":
+      "Generate complementary, analogous, triadic and monochromatic sets."
+  - "href": "/colors/harmony/mixer"
+    "label": "Color Mixer"
+    "description":
+      "Blend two colors by weight and read the result in every notation."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The color wheel
 

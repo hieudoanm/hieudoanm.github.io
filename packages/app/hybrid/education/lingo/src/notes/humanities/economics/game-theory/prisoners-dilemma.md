@@ -1,48 +1,33 @@
 ---
-{
-  'title': "Prisoner's Dilemma",
-  'subtitle': 'A classic game theory model of cooperation and conflict.',
-  'links':
-    [
-      {
-        'href': '/economics/prisoners-dilemma/versus',
-        'label': 'Versus',
-        'description': 'Play head-to-head against a random AI strategy.',
-      },
-      {
-        'href': '/economics/prisoners-dilemma/bots',
-        'label': 'Bots',
-        'description': 'Browse all 32 strategies and learn how each one plays.',
-      },
-      {
-        'href': '/economics/prisoners-dilemma/simulation',
-        'label': 'Simulation',
-        'description':
-          'Run a round-robin tournament between every pair of bots.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Prisoner%27s_dilemma',
-        'label': 'Wikipedia: Prisoner’s Dilemma',
-        'description': 'Overview of the classic game and its applications.',
-      },
-      {
-        'href': 'https://plato.stanford.edu/entries/prisoner-dilemma/',
-        'label': 'Stanford Encyclopedia of Philosophy: Prisoner’s Dilemma',
-        'description':
-          'Authoritative survey of the dilemma and its formal treatment.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/p/prisoners-dilemma.asp',
-        'label': 'Investopedia: Prisoner’s Dilemma',
-        'description':
-          'Entry on how the dilemma works and its business applications.',
-      },
-    ],
-}
+"title": "Prisoner's Dilemma"
+"subtitle": "A classic game theory model of cooperation and conflict."
+"links":
+  - "href": "/economics/prisoners-dilemma/versus"
+    "label": "Versus"
+    "description": "Play head-to-head against a random AI strategy."
+  - "href": "/economics/prisoners-dilemma/bots"
+    "label": "Bots"
+    "description": "Browse all 32 strategies and learn how each one plays."
+  - "href": "/economics/prisoners-dilemma/simulation"
+    "label": "Simulation"
+    "description": "Run a round-robin tournament between every pair of bots."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Prisoner%27s_dilemma"
+    "label": "Wikipedia: Prisoner’s Dilemma"
+    "description": "Overview of the classic game and its applications."
+  - "href": "https://plato.stanford.edu/entries/prisoner-dilemma/"
+    "label": "Stanford Encyclopedia of Philosophy: Prisoner’s Dilemma"
+    "description":
+      "Authoritative survey of the dilemma and its formal treatment."
+  - "href": "https://www.investopedia.com/terms/p/prisoners-dilemma.asp"
+    "label": "Investopedia: Prisoner’s Dilemma"
+    "description":
+      "Entry on how the dilemma works and its business applications."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

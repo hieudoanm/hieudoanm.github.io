@@ -1,45 +1,35 @@
 ---
-{
-  'title': 'Human Capital',
-  'subtitle':
-    "Investing in people—education, skills, and health—as a driver
-    of\n    productivity and growth.",
-  'links':
-    [
-      {
-        'href': '/economics/human-capital/decision',
-        'label': 'Human Capital Decision',
-        'description':
-          "Interactive simulator: choose years of schooling and weigh
-          discounted\n          lifetime earnings against tuition costs.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Human_capital',
-        'label': 'Wikipedia: Human Capital',
-        'description':
-          "Overview of human capital theory, investment in education,
-          and\n          economic returns.",
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/1992/summary/',
-        'label': 'Nobel Prize: 1992 Economic Sciences',
-        'description':
-          "Nobel citation for Gary Becker for extending microeconomic
-          analysis\n          to human behavior.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/h/humancapital.asp',
-        'label': 'Investopedia: Human Capital',
-        'description':
-          "Entry defining human capital and its role in productivity
-          and\n          economic growth.",
-      },
-    ],
-}
+"title": "Human Capital"
+"subtitle":
+  "Investing in people—education, skills, and health—as a driver of productivity
+  and growth."
+"links":
+  - "href": "/economics/human-capital/decision"
+    "label": "Human Capital Decision"
+    "description":
+      "Interactive simulator: choose years of schooling and weigh discounted
+      lifetime earnings against tuition costs."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Human_capital"
+    "label": "Wikipedia: Human Capital"
+    "description":
+      "Overview of human capital theory, investment in education, and economic
+      returns."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/1992/summary/"
+    "label": "Nobel Prize: 1992 Economic Sciences"
+    "description":
+      "Nobel citation for Gary Becker for extending microeconomic analysis to
+      human behavior."
+  - "href": "https://www.investopedia.com/terms/h/humancapital.asp"
+    "label": "Investopedia: Human Capital"
+    "description":
+      "Entry defining human capital and its role in productivity and economic
+      growth."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

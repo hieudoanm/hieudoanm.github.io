@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Biological Psychology',
-  'subtitle':
-    "How neurons, brains and bodies produce behaviour — and why the body
-    is\n    never out of the loop.",
-  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
-  'links':
-    [
-      {
-        'href': '/psychology/generalized-anxiety-disorder/',
-        'label': 'Generalized Anxiety Disorder (GAD-7)',
-        'description': 'Arousal and worry measured on a validated scale',
-      },
-      {
-        'href': '/psychology/beck-depression-inventory/',
-        'label': 'Beck Depression Inventory (BDI-II)',
-        'description': 'Mood symptoms screened over the last two weeks',
-      },
-      {
-        'href': '/psychology/patient-health-questionnaire/',
-        'label': 'Patient Health Questionnaire (PHQ-9)',
-        'description': 'A brief screen for depressive symptom severity',
-      },
-    ],
-}
+"title": "Biological Psychology"
+"subtitle":
+  "How neurons, brains and bodies produce behaviour — and why the body is never
+  out of the loop."
+"parentLink":
+  "href": "/psychology/"
+  "label": "Psychology"
+"links":
+  - "href": "/psychology/generalized-anxiety-disorder/"
+    "label": "Generalized Anxiety Disorder (GAD-7)"
+    "description": "Arousal and worry measured on a validated scale"
+  - "href": "/psychology/beck-depression-inventory/"
+    "label": "Beck Depression Inventory (BDI-II)"
+    "description": "Mood symptoms screened over the last two weeks"
+  - "href": "/psychology/patient-health-questionnaire/"
+    "label": "Patient Health Questionnaire (PHQ-9)"
+    "description": "A brief screen for depressive symptom severity"
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Neurons and their electricity
 

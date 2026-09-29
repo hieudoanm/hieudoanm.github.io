@@ -1,42 +1,32 @@
 ---
-{
-  'title': "Unemployment & Okun's Law",
-  'subtitle':
-    'Why people are out of work, and how joblessness moves with economic growth.',
-  'links':
-    [
-      {
-        'href': '/economics/unemployment-okuns-law/lab',
-        'label': "Okun's Law Lab",
-        'description':
-          "A hands-on lab: steer the unemployment rate with GDP growth
-          and\n          estimate Okun's coefficient from data.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://www.investopedia.com/terms/o/okunslaw.asp',
-        'label': "Investopedia: Okun's Law",
-        'description':
-          "Okun's law linking short-run GDP growth to changes in
-          the\n          unemployment rate.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/u/unemployment.asp',
-        'label': 'Investopedia: Unemployment',
-        'description':
-          'Definition of unemployment and how the unemployment rate is measured.',
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Okun%27s_law',
-        'label': "Wikipedia: Okun's law",
-        'description':
-          'The empirical relationship between output and unemployment gaps.',
-      },
-    ],
-}
+"title": "Unemployment & Okun's Law"
+"subtitle":
+  "Why people are out of work, and how joblessness moves with economic growth."
+"links":
+  - "href": "/economics/unemployment-okuns-law/lab"
+    "label": "Okun's Law Lab"
+    "description":
+      "A hands-on lab: steer the unemployment rate with GDP growth and estimate
+      Okun's coefficient from data."
+"references":
+  - "href": "https://www.investopedia.com/terms/o/okunslaw.asp"
+    "label": "Investopedia: Okun's Law"
+    "description":
+      "Okun's law linking short-run GDP growth to changes in the unemployment
+      rate."
+  - "href": "https://www.investopedia.com/terms/u/unemployment.asp"
+    "label": "Investopedia: Unemployment"
+    "description":
+      "Definition of unemployment and how the unemployment rate is measured."
+  - "href": "https://en.wikipedia.org/wiki/Okun%27s_law"
+    "label": "Wikipedia: Okun's law"
+    "description":
+      "The empirical relationship between output and unemployment gaps."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

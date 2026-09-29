@@ -1,29 +1,24 @@
 ---
-{
-  'title': 'Hash Table',
-  'subtitle':
-    'Turning a key into an array index, so lookup stops being a search.',
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/hash-tables/interactive',
-        'label': 'Hash Table Playground',
-        'description':
-          'Insert keys and watch the hash function scatter them across buckets.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Hash_table',
-        'label': 'Hash table',
-        'description':
-          'Hash functions, collision resolution, and load-factor resizing.',
-      },
-    ],
-}
+"title": "Hash Table"
+"subtitle": "Turning a key into an array index, so lookup stops being a search."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/hash-tables/interactive"
+    "label": "Hash Table Playground"
+    "description":
+      "Insert keys and watch the hash function scatter them across buckets."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Hash_table"
+    "label": "Hash table"
+    "description":
+      "Hash functions, collision resolution, and load-factor resizing."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

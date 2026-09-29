@@ -1,44 +1,34 @@
 ---
-{
-  'title': 'Signaling',
-  'subtitle':
-    "How you prove something about yourself when others can't see it directly.",
-  'links':
-    [
-      {
-        'href': '/economics/signaling/job-market',
-        'label': 'Job Market',
-        'description':
-          "Set wages and learn why education only works as a signal when
-          it\n          costs more for the unproductive.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Signaling_game',
-        'label': 'Wikipedia: Signaling game',
-        'description':
-          "Signaling games and the conditions for separating, pooling,
-          and\n          hybrid equilibria.",
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2001/summary/',
-        'label': 'Nobel Prize: 2001 Prize in Economics',
-        'description':
-          "The 2001 Nobel Prize awarded for analyses of markets with
-          asymmetric\n          information.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/a/asymmetricinformation.asp',
-        'label': 'Investopedia: Asymmetric Information',
-        'description':
-          "Market failures from asymmetric information, including
-          adverse\n          selection and signaling.",
-      },
-    ],
-}
+"title": "Signaling"
+"subtitle":
+  "How you prove something about yourself when others can't see it directly."
+"links":
+  - "href": "/economics/signaling/job-market"
+    "label": "Job Market"
+    "description":
+      "Set wages and learn why education only works as a signal when it costs
+      more for the unproductive."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Signaling_game"
+    "label": "Wikipedia: Signaling game"
+    "description":
+      "Signaling games and the conditions for separating, pooling, and hybrid
+      equilibria."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/2001/summary/"
+    "label": "Nobel Prize: 2001 Prize in Economics"
+    "description":
+      "The 2001 Nobel Prize awarded for analyses of markets with asymmetric
+      information."
+  - "href": "https://www.investopedia.com/terms/a/asymmetricinformation.asp"
+    "label": "Investopedia: Asymmetric Information"
+    "description":
+      "Market failures from asymmetric information, including adverse selection
+      and signaling."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

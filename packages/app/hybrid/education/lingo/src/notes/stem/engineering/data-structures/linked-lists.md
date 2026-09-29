@@ -1,36 +1,30 @@
 ---
-{
-  'title': 'Linked Lists',
-  'subtitle':
-    'Nodes joined by pointers: O(1) splicing, no shifting, and no random access.',
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/linked-lists/interactive',
-        'label': 'Linked List Playground',
-        'description':
-          'Append nodes and search the list, watching each node visited in turn.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://algs4.cs.princeton.edu/home/',
-        'label': 'Sedgewick & Flajolet — Algorithms, 4th edition',
-        'description':
-          "The standard reference for data-structure invariants and
-          the\n          amortised cost of dynamic array growth.",
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Linked_list',
-        'label': 'Linked list',
-        'description':
-          'Node layout, the locality trade-off, and the skip-list variant.',
-      },
-    ],
-}
+"title": "Linked Lists"
+"subtitle":
+  "Nodes joined by pointers: O(1) splicing, no shifting, and no random access."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/linked-lists/interactive"
+    "label": "Linked List Playground"
+    "description":
+      "Append nodes and search the list, watching each node visited in turn."
+"references":
+  - "href": "https://algs4.cs.princeton.edu/home/"
+    "label": "Sedgewick & Flajolet — Algorithms, 4th edition"
+    "description":
+      "The standard reference for data-structure invariants and the amortised
+      cost of dynamic array growth."
+  - "href": "https://en.wikipedia.org/wiki/Linked_list"
+    "label": "Linked list"
+    "description":
+      "Node layout, the locality trade-off, and the skip-list variant."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

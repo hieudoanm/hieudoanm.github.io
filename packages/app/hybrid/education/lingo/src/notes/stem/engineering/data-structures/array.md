@@ -1,32 +1,27 @@
 ---
-{
-  'title': 'Array',
-  'subtitle':
-    "Contiguous storage: O(1) access by index, and a cache that reads ahead
-    for\n    you.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/array/interactive',
-        'label': 'Array Playground',
-        'description':
-          "Append and remove values and watch which slots the
-          structure\n          occupies.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Array_data_structure',
-        'label': 'Array data structure',
-        'description':
-          "Contiguous storage, amortised growth, and the shift cost of
-          mid-array\n          edits.",
-      },
-    ],
-}
+"title": "Array"
+"subtitle":
+  "Contiguous storage: O(1) access by index, and a cache that reads ahead for
+  you."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/array/interactive"
+    "label": "Array Playground"
+    "description":
+      "Append and remove values and watch which slots the structure occupies."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Array_data_structure"
+    "label": "Array data structure"
+    "description":
+      "Contiguous storage, amortised growth, and the shift cost of mid-array
+      edits."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Mindfulness',
-  'subtitle':
-    "Attention trained toward present-moment experience — what the
-    evidence\n    supports, and what it does not.",
-  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
-  'links':
-    [
-      {
-        'href': '/psychology/generalized-anxiety-disorder/',
-        'label': 'Generalized Anxiety Disorder (GAD-7)',
-        'description': 'Anxiety symptoms, the most-studied outcome',
-      },
-      {
-        'href': '/psychology/satisfaction-with-life/',
-        'label': 'Satisfaction With Life Scale',
-        'description': 'Broad wellbeing rather than symptom reduction',
-      },
-      {
-        'href': '/psychology/patient-health-questionnaire/',
-        'label': 'Patient Health Questionnaire (PHQ-9)',
-        'description': 'Depressive symptom severity over two weeks',
-      },
-    ],
-}
+"title": "Mindfulness"
+"subtitle":
+  "Attention trained toward present-moment experience — what the evidence
+  supports, and what it does not."
+"parentLink":
+  "href": "/psychology/"
+  "label": "Psychology"
+"links":
+  - "href": "/psychology/generalized-anxiety-disorder/"
+    "label": "Generalized Anxiety Disorder (GAD-7)"
+    "description": "Anxiety symptoms, the most-studied outcome"
+  - "href": "/psychology/satisfaction-with-life/"
+    "label": "Satisfaction With Life Scale"
+    "description": "Broad wellbeing rather than symptom reduction"
+  - "href": "/psychology/patient-health-questionnaire/"
+    "label": "Patient Health Questionnaire (PHQ-9)"
+    "description": "Depressive symptom severity over two weeks"
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What the practice is
 

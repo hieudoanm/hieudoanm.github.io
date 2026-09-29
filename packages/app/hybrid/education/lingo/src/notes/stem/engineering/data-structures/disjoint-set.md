@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Disjoint Set (Union-Find)',
-  'subtitle':
-    "Two operations, near-constant time, and the amortised bound that is
-    almost\n    O(1).",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/disjoint-set/interactive',
-        'label': 'Union-Find Playground',
-        'description':
-          'Merge elements and watch the components and their roots change.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Disjoint-set_data_structure',
-        'label': 'Disjoint-set data structure',
-        'description':
-          'Union by rank, path compression, and the inverse Ackermann bound.',
-      },
-    ],
-}
+"title": "Disjoint Set (Union-Find)"
+"subtitle":
+  "Two operations, near-constant time, and the amortised bound that is almost
+  O(1)."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/disjoint-set/interactive"
+    "label": "Union-Find Playground"
+    "description":
+      "Merge elements and watch the components and their roots change."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Disjoint-set_data_structure"
+    "label": "Disjoint-set data structure"
+    "description":
+      "Union by rank, path compression, and the inverse Ackermann bound."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

@@ -1,31 +1,27 @@
 ---
-{
-  'title': 'Quicksort',
-  'subtitle':
-    "The practical default: in place, cache-friendly, and fast except when
-    the\n    pivot is bad.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/quick-sort/interactive',
-        'label': 'Quicksort Visualiser',
-        'description':
-          'Step through each partition and watch a pivot carve the array in two.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
-        'label': 'Big O notation',
-        'description':
-          "How asymptotic growth classes are defined, and why constants
-          and\n          lower-order terms drop out.",
-      },
-    ],
-}
+"title": "Quicksort"
+"subtitle":
+  "The practical default: in place, cache-friendly, and fast except when the
+  pivot is bad."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/quick-sort/interactive"
+    "label": "Quicksort Visualiser"
+    "description":
+      "Step through each partition and watch a pivot carve the array in two."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Big_O_notation"
+    "label": "Big O notation"
+    "description":
+      "How asymptotic growth classes are defined, and why constants and
+      lower-order terms drop out."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

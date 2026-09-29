@@ -1,31 +1,26 @@
 ---
-{
-  'title': 'Bubble Sort',
-  'subtitle':
-    'The slowest comparison sort, and the clearest one to reason about.',
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/bubble-sort/interactive',
-        'label': 'Bubble Sort Visualiser',
-        'description':
-          "Step through each pass and watch the largest unsorted value bubble
-          to\n          the right end.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
-        'label': 'Big O notation',
-        'description':
-          "How asymptotic growth classes are defined, and why constants
-          and\n          lower-order terms drop out.",
-      },
-    ],
-}
+"title": "Bubble Sort"
+"subtitle": "The slowest comparison sort, and the clearest one to reason about."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/bubble-sort/interactive"
+    "label": "Bubble Sort Visualiser"
+    "description":
+      "Step through each pass and watch the largest unsorted value bubble to the
+      right end."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Big_O_notation"
+    "label": "Big O notation"
+    "description":
+      "How asymptotic growth classes are defined, and why constants and
+      lower-order terms drop out."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

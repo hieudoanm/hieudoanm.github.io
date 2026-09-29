@@ -1,29 +1,25 @@
 ---
-{
-  'title': 'Queue',
-  'subtitle':
-    "First in, first out: ordering work fairly, and why a naive array
-    wastes\n    memory.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/queues/interactive',
-        'label': 'Queue Playground',
-        'description':
-          'Enqueue and dequeue values and watch the front of the queue advance.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Queue_(abstract_data_type)',
-        'label': 'Queue (abstract data type)',
-        'description': 'FIFO ordering and the ring-buffer implementation.',
-      },
-    ],
-}
+"title": "Queue"
+"subtitle":
+  "First in, first out: ordering work fairly, and why a naive array wastes
+  memory."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/queues/interactive"
+    "label": "Queue Playground"
+    "description":
+      "Enqueue and dequeue values and watch the front of the queue advance."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Queue_(abstract_data_type)"
+    "label": "Queue (abstract data type)"
+    "description": "FIFO ordering and the ring-buffer implementation."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

@@ -1,42 +1,31 @@
 ---
-{
-  'title': 'Perfect Competition',
-  'subtitle':
-    "The idealized market where no one can influence price—and the benchmark
-    for\n    efficiency.",
-  'links':
-    [
-      {
-        'href': '/economics/perfect-competition/firm',
-        'label': 'Competitive Firm Lab',
-        'description':
-          "A price-taking firm: choose output where price equals marginal
-          cost,\n          and watch long-run profits fall to zero.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Perfect_competition',
-        'label': 'Wikipedia: Perfect Competition',
-        'description': 'Overview of the market structure and its assumptions.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/p/perfectcompetition.asp',
-        'label': 'Investopedia: Perfect Competition',
-        'description':
-          "Entry on the conditions, results, and efficiency of
-          perfect\n          competition.",
-      },
-      {
-        'href': 'https://www.britannica.com/topic/perfect-competition',
-        'label': 'Britannica: Perfect Competition',
-        'description':
-          'Article on the idealized market used as the benchmark for efficiency.',
-      },
-    ],
-}
+"title": "Perfect Competition"
+"subtitle":
+  "The idealized market where no one can influence price—and the benchmark for
+  efficiency."
+"links":
+  - "href": "/economics/perfect-competition/firm"
+    "label": "Competitive Firm Lab"
+    "description":
+      "A price-taking firm: choose output where price equals marginal cost, and
+      watch long-run profits fall to zero."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Perfect_competition"
+    "label": "Wikipedia: Perfect Competition"
+    "description": "Overview of the market structure and its assumptions."
+  - "href": "https://www.investopedia.com/terms/p/perfectcompetition.asp"
+    "label": "Investopedia: Perfect Competition"
+    "description":
+      "Entry on the conditions, results, and efficiency of perfect competition."
+  - "href": "https://www.britannica.com/topic/perfect-competition"
+    "label": "Britannica: Perfect Competition"
+    "description":
+      "Article on the idealized market used as the benchmark for efficiency."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

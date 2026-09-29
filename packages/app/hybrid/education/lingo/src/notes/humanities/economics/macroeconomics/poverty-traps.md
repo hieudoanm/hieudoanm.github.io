@@ -1,44 +1,32 @@
 ---
-{
-  'title': 'Poverty Traps',
-  'subtitle':
-    "Why the poor can stay poor: self-reinforcing cycles that block escape
-    from\n    destitution.",
-  'links':
-    [
-      {
-        'href': '/economics/poverty-traps/escape',
-        'label': 'Poverty Trap Escape',
-        'description':
-          "Simulate the S-shaped savings dynamic and design the minimum
-          one-off\n          transfer that lifts a household past the escape
-          threshold.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Poverty_trap',
-        'label': 'Wikipedia: Poverty Trap',
-        'description':
-          'Overview of self-reinforcing mechanisms that keep people poor.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/p/poverty-trap.asp',
-        'label': 'Investopedia: Poverty Trap',
-        'description':
-          'Entry on the causes of poverty traps and proposed solutions.',
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2019/summary/',
-        'label': 'Nobel Prize: 2019 laureates',
-        'description':
-          "2019 prize for the experimental approach to alleviating
-          global\n          poverty.",
-      },
-    ],
-}
+"title": "Poverty Traps"
+"subtitle":
+  "Why the poor can stay poor: self-reinforcing cycles that block escape from
+  destitution."
+"links":
+  - "href": "/economics/poverty-traps/escape"
+    "label": "Poverty Trap Escape"
+    "description":
+      "Simulate the S-shaped savings dynamic and design the minimum one-off
+      transfer that lifts a household past the escape threshold."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Poverty_trap"
+    "label": "Wikipedia: Poverty Trap"
+    "description":
+      "Overview of self-reinforcing mechanisms that keep people poor."
+  - "href": "https://www.investopedia.com/terms/p/poverty-trap.asp"
+    "label": "Investopedia: Poverty Trap"
+    "description":
+      "Entry on the causes of poverty traps and proposed solutions."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/2019/summary/"
+    "label": "Nobel Prize: 2019 laureates"
+    "description":
+      "2019 prize for the experimental approach to alleviating global poverty."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

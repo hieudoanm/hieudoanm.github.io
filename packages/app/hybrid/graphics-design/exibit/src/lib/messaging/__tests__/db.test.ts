@@ -8,6 +8,14 @@ import type {
   AuthSession,
 } from '@/types/messaging';
 
+// Polyfill structuredClone for Node.js/Jest environment
+if (!global.structuredClone) {
+  global.structuredClone = (obj: unknown) => JSON.parse(JSON.stringify(obj));
+}
+
+// Polyfill indexedDB for jsdom using fake-indexeddb
+import 'fake-indexeddb/auto';
+
 const DB_NAME = 'messaging-db';
 const DB_VERSION = 1;
 

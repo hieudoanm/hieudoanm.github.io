@@ -1,45 +1,34 @@
 ---
-{
-  'title': 'Time Value of Money',
-  'subtitle':
-    "Why a dollar today is worth more than a dollar tomorrow—the engine of
-    all\n    finance.",
-  'links':
-    [
-      {
-        'href': '/economics/time-value-of-money/lab',
-        'label': 'Future Value Lab',
-        'description':
-          "Interactive sliders for compounding, present value, doubling time
-          and\n          investment comparisons.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Time_value_of_money',
-        'label': 'Wikipedia: Time value of money',
-        'description':
-          "The concept that money today is worth more than the same amount
-          in\n          the future.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/t/timevalueofmoney.asp',
-        'label': 'Investopedia: Time Value of Money',
-        'description':
-          "Explanation of TVM with future value, present value, and
-          compounding\n          formulas.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/p/presentvalue.asp',
-        'label': 'Investopedia: Present Value',
-        'description':
-          "How present value discounts future cash flows for
-          investment\n          decisions.",
-      },
-    ],
-}
+"title": "Time Value of Money"
+"subtitle":
+  "Why a dollar today is worth more than a dollar tomorrow—the engine of all
+  finance."
+"links":
+  - "href": "/economics/time-value-of-money/lab"
+    "label": "Future Value Lab"
+    "description":
+      "Interactive sliders for compounding, present value, doubling time and
+      investment comparisons."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Time_value_of_money"
+    "label": "Wikipedia: Time value of money"
+    "description":
+      "The concept that money today is worth more than the same amount in the
+      future."
+  - "href": "https://www.investopedia.com/terms/t/timevalueofmoney.asp"
+    "label": "Investopedia: Time Value of Money"
+    "description":
+      "Explanation of TVM with future value, present value, and compounding
+      formulas."
+  - "href": "https://www.investopedia.com/terms/p/presentvalue.asp"
+    "label": "Investopedia: Present Value"
+    "description":
+      "How present value discounts future cash flows for investment decisions."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

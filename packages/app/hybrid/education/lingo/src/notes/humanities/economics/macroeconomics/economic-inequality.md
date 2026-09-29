@@ -1,44 +1,34 @@
 ---
-{
-  'title': 'Economic Inequality',
-  'subtitle':
-    'How wealth and income are distributed—and why the gap keeps widening.',
-  'links':
-    [
-      {
-        'href': '/economics/economic-inequality/lorenz',
-        'label': 'Inequality Explorer',
-        'description':
-          "Tax a ten-person economy and watch the Lorenz curve bend — hit
-          the\n          target Gini and see what redistribution really moves.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Economic_inequality',
-        'label': 'Wikipedia: Economic Inequality',
-        'description':
-          "Comprehensive overview of income and wealth inequality,
-          measurement\n          tools, and causes.",
-      },
-      {
-        'href': 'https://ourworldindata.org/economic-inequality',
-        'label': 'Our World in Data: Economic Inequality',
-        'description':
-          "Data-driven exploration of global inequality trends, causes,
-          and\n          consequences.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/g/gini-index.asp',
-        'label': 'Investopedia: Gini Index',
-        'description':
-          "Entry defining the Gini coefficient and its use in measuring
-          income\n          distribution.",
-      },
-    ],
-}
+"title": "Economic Inequality"
+"subtitle":
+  "How wealth and income are distributed—and why the gap keeps widening."
+"links":
+  - "href": "/economics/economic-inequality/lorenz"
+    "label": "Inequality Explorer"
+    "description":
+      "Tax a ten-person economy and watch the Lorenz curve bend — hit the target
+      Gini and see what redistribution really moves."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Economic_inequality"
+    "label": "Wikipedia: Economic Inequality"
+    "description":
+      "Comprehensive overview of income and wealth inequality, measurement
+      tools, and causes."
+  - "href": "https://ourworldindata.org/economic-inequality"
+    "label": "Our World in Data: Economic Inequality"
+    "description":
+      "Data-driven exploration of global inequality trends, causes, and
+      consequences."
+  - "href": "https://www.investopedia.com/terms/g/gini-index.asp"
+    "label": "Investopedia: Gini Index"
+    "description":
+      "Entry defining the Gini coefficient and its use in measuring income
+      distribution."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

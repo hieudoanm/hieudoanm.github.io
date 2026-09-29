@@ -47,3 +47,13 @@ export const readLinkList = (value: unknown, path: string): NoteLink[] => {
 
   return value.map((entry, index) => readLink(entry, `${path}[${index}]`));
 };
+
+export const readParentLinkOpt = (
+  value: unknown
+): NoteParentLink | undefined => {
+  if (value === undefined) return undefined;
+  if (!isRecord(value)) {
+    throw new TypeError('note: expected object at "parentLink"');
+  }
+  return readParentLink(value, 'parentLink');
+};

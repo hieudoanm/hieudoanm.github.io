@@ -1,45 +1,36 @@
 ---
-{
-  'title': 'Aggregate Demand & Supply',
-  'subtitle':
-    "The economy-wide version of supply and demand—explaining output,
-    prices,\n    and recessions.",
-  'links':
-    [
-      {
-        'href': '/economics/aggregate-demand-supply/shocks',
-        'label': 'AD-AS Shocks Lab',
-        'description':
-          "Hit the economy with demand shocks and watch the short-run gap
-          and\n          inflation evolve—then adjust back to long-run.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Aggregate_demand',
-        'label': 'Wikipedia: Aggregate Demand',
-        'description':
-          "Explanation of aggregate demand, its components, and
-          the\n          downward-sloping curve.",
-      },
-      {
-        'href': 'https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/aggregate-demand-supply/v/aggregate-demand',
-        'label': 'Khan Academy: Aggregate Demand',
-        'description':
-          "Video walkthrough of the aggregate demand concept and the
-          AD-AS\n          model.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/a/aggregatedemand.asp',
-        'label': 'Investopedia: Aggregate Demand',
-        'description':
-          "Entry defining aggregate demand, its formula, and factors that
-          shift\n          the curve.",
-      },
-    ],
-}
+"title": "Aggregate Demand & Supply"
+"subtitle":
+  "The economy-wide version of supply and demand—explaining output, prices, and
+  recessions."
+"links":
+  - "href": "/economics/aggregate-demand-supply/shocks"
+    "label": "AD-AS Shocks Lab"
+    "description":
+      "Hit the economy with demand shocks and watch the short-run gap and
+      inflation evolve—then adjust back to long-run."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Aggregate_demand"
+    "label": "Wikipedia: Aggregate Demand"
+    "description":
+      "Explanation of aggregate demand, its components, and the downward-sloping
+      curve."
+  - "href":
+      "https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/aggregate-demand-supply/v/aggreg\
+      ate-demand"
+    "label": "Khan Academy: Aggregate Demand"
+    "description":
+      "Video walkthrough of the aggregate demand concept and the AD-AS model."
+  - "href": "https://www.investopedia.com/terms/a/aggregatedemand.asp"
+    "label": "Investopedia: Aggregate Demand"
+    "description":
+      "Entry defining aggregate demand, its formula, and factors that shift the
+      curve."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

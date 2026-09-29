@@ -1,46 +1,35 @@
 ---
-{
-  'title': 'Backward Induction',
-  'subtitle':
-    "Solving sequential games by reasoning from the last move backward to
-    the\n    first.",
-  'links':
-    [
-      {
-        'href': '/economics/backward-induction/rollback',
-        'label': 'Rollback: Entry Game',
-        'description':
-          "Move first in a market-entry game while your rival plays
-          perfectly,\n          and see the subgame-perfect outcome appear by
-          rollback.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Backward_induction',
-        'label': 'Wikipedia: Backward Induction',
-        'description':
-          "Overview of backward induction as a solution concept for
-          sequential\n          games.",
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Centipede_game_theory',
-        'label': 'Wikipedia: Centipede Game',
-        'description':
-          "Description of the centipede game and its role in testing
-          backward\n          induction.",
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Subgame_perfect_equilibrium',
-        'label': 'Wikipedia: Subgame Perfect Equilibrium',
-        'description':
-          "Formal definition of subgame-perfect equilibrium, the
-          concept\n          backward induction produces.",
-      },
-    ],
-}
+"title": "Backward Induction"
+"subtitle":
+  "Solving sequential games by reasoning from the last move backward to the
+  first."
+"links":
+  - "href": "/economics/backward-induction/rollback"
+    "label": "Rollback: Entry Game"
+    "description":
+      "Move first in a market-entry game while your rival plays perfectly, and
+      see the subgame-perfect outcome appear by rollback."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Backward_induction"
+    "label": "Wikipedia: Backward Induction"
+    "description":
+      "Overview of backward induction as a solution concept for sequential
+      games."
+  - "href": "https://en.wikipedia.org/wiki/Centipede_game_theory"
+    "label": "Wikipedia: Centipede Game"
+    "description":
+      "Description of the centipede game and its role in testing backward
+      induction."
+  - "href": "https://en.wikipedia.org/wiki/Subgame_perfect_equilibrium"
+    "label": "Wikipedia: Subgame Perfect Equilibrium"
+    "description":
+      "Formal definition of subgame-perfect equilibrium, the concept backward
+      induction produces."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

@@ -1,51 +1,41 @@
 ---
-{
-  'title': 'Electroencephalography (EEG)',
-  'subtitle':
-    "Scalp voltage from millisecond-scale cortical synchrony — the
-    cheapest,\n    most portable, and most widely used window into human brain
-    dynamics.",
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'links':
-    [
-      {
-        'href': '/neuroscience/eeg/interactive',
-        'label': 'ERP & Averaging Simulator',
-        'description':
-          "Build a trial, inject blink, muscle, hum, and drift, then
-          watch\n          averaging cancel noise but keep artefacts.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://doi.org/10.1016/0013-4694(58)90053-1',
-        'label':
-          'Jasper (1958) — Electroencephalography and Clinical Neurophysiology',
-        'description':
-          "The original 10–20 electrode system that made scalp
-          recording\n          reproducible across laboratories.",
-      },
-      {
-        'href': 'https://doi.org/10.1016/j.clinph.2004.06.001',
-        'label': 'Michel et al. (2004) — Clinical Neurophysiology',
-        'description':
-          "EEG source imaging review: the forward model, the ill-posed
-          inverse\n          problem, and the standard reconstruction families.",
-      },
-      {
-        'href': 'https://mitpress.mit.edu/9780262611863/an-introduction-to-the-event-related-potential-method/',
-        'label':
-          "Luck (2014) — An Introduction to the Event-Related Potential
-          Method,\n          MIT Press",
-        'description':
-          "The reference treatment of ERP methodology: nomenclature,
-          polarity\n          conventions, baseline choice, and component
-          inference.",
-      },
-    ],
-}
+"title": "Electroencephalography (EEG)"
+"subtitle":
+  "Scalp voltage from millisecond-scale cortical synchrony — the cheapest, most
+  portable, and most widely used window into human brain dynamics."
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"links":
+  - "href": "/neuroscience/eeg/interactive"
+    "label": "ERP & Averaging Simulator"
+    "description":
+      "Build a trial, inject blink, muscle, hum, and drift, then watch averaging
+      cancel noise but keep artefacts."
+"references":
+  - "href": "https://doi.org/10.1016/0013-4694(58)90053-1"
+    "label":
+      "Jasper (1958) — Electroencephalography and Clinical Neurophysiology"
+    "description":
+      "The original 10–20 electrode system that made scalp recording
+      reproducible across laboratories."
+  - "href": "https://doi.org/10.1016/j.clinph.2004.06.001"
+    "label": "Michel et al. (2004) — Clinical Neurophysiology"
+    "description":
+      "EEG source imaging review: the forward model, the ill-posed inverse
+      problem, and the standard reconstruction families."
+  - "href": "https://mitpress.mit.edu/9780262611863/an-introduction-to-the-event-related-potential-method/"
+    "label":
+      "Luck (2014) — An Introduction to the Event-Related Potential Method, MIT
+      Press"
+    "description":
+      "The reference treatment of ERP methodology: nomenclature, polarity
+      conventions, baseline choice, and component inference."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What it measures
 

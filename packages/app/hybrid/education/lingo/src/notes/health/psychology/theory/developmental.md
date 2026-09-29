@@ -1,30 +1,26 @@
 ---
-{
-  'title': 'Developmental Psychology',
-  'subtitle':
-    "How people change across a lifetime — and why the earliest years are
-    not\n    simply a runway to adulthood.",
-  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
-  'links':
-    [
-      {
-        'href': '/psychology/relationship-closeness-inventory/',
-        'label': 'Relationship Closeness Inventory',
-        'description': 'Measure a bond across a graded set of dimensions',
-      },
-      {
-        'href': '/psychology/experiences-in-close-relationships/',
-        'label': 'Experiences in Close Relationships (ECR-R)',
-        'description': 'Adult attachment style and its developmental roots',
-      },
-      {
-        'href': '/psychology/satisfaction-with-life/',
-        'label': 'Satisfaction With Life Scale',
-        'description': 'Wellbeing across the lifespan in five short items',
-      },
-    ],
-}
+"title": "Developmental Psychology"
+"subtitle":
+  "How people change across a lifetime — and why the earliest years are not
+  simply a runway to adulthood."
+"parentLink":
+  "href": "/psychology/"
+  "label": "Psychology"
+"links":
+  - "href": "/psychology/relationship-closeness-inventory/"
+    "label": "Relationship Closeness Inventory"
+    "description": "Measure a bond across a graded set of dimensions"
+  - "href": "/psychology/experiences-in-close-relationships/"
+    "label": "Experiences in Close Relationships (ECR-R)"
+    "description": "Adult attachment style and its developmental roots"
+  - "href": "/psychology/satisfaction-with-life/"
+    "label": "Satisfaction With Life Scale"
+    "description": "Wellbeing across the lifespan in five short items"
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Infancy: built for attachment
 

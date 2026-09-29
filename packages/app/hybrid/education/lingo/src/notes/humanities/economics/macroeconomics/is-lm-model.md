@@ -1,44 +1,33 @@
 ---
-{
-  'title': 'The IS-LM Model',
-  'subtitle':
-    "A classic framework for how goods markets and money markets interact to
-    set\n    output and rates.",
-  'links':
-    [
-      {
-        'href': '/economics/is-lm-model/equilibrium',
-        'label': 'IS-LM Explorer',
-        'description':
-          "Move the IS and LM curves with fiscal and monetary policy to
-          find\n          equilibrium and tackle policy challenges.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/IS%E2%80%93LM_model',
-        'label': 'Wikipedia: IS-LM Model',
-        'description':
-          "Overview of the model developed by Hicks and Hansen and
-          its\n          applications.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/i/is-lm-curve.asp',
-        'label': 'Investopedia: IS-LM Curve',
-        'description':
-          'Entry explaining the IS and LM curves and their intersection.',
-      },
-      {
-        'href': 'https://www.britannica.com/topic/IS-LM-model',
-        'label': 'Encyclopedia Britannica: IS-LM Model',
-        'description':
-          "Encyclopedia entry on the IS-LM framework for macroeconomic
-          policy\n          analysis.",
-      },
-    ],
-}
+"title": "The IS-LM Model"
+"subtitle":
+  "A classic framework for how goods markets and money markets interact to set
+  output and rates."
+"links":
+  - "href": "/economics/is-lm-model/equilibrium"
+    "label": "IS-LM Explorer"
+    "description":
+      "Move the IS and LM curves with fiscal and monetary policy to find
+      equilibrium and tackle policy challenges."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/IS%E2%80%93LM_model"
+    "label": "Wikipedia: IS-LM Model"
+    "description":
+      "Overview of the model developed by Hicks and Hansen and its applications."
+  - "href": "https://www.investopedia.com/terms/i/is-lm-curve.asp"
+    "label": "Investopedia: IS-LM Curve"
+    "description":
+      "Entry explaining the IS and LM curves and their intersection."
+  - "href": "https://www.britannica.com/topic/IS-LM-model"
+    "label": "Encyclopedia Britannica: IS-LM Model"
+    "description":
+      "Encyclopedia entry on the IS-LM framework for macroeconomic policy
+      analysis."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

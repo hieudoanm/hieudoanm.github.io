@@ -1,30 +1,24 @@
 ---
-{
-  'title': 'Color in CSS',
-  'subtitle':
-    'Gradients, palettes and theme roles for shipping color to the browser.',
-  'links':
-    [
-      {
-        'href': '/colors/css/gradient',
-        'label': 'Gradient Builder',
-        'description':
-          'Compose linear and radial CSS gradients from two or three stops.',
-      },
-      {
-        'href': '/colors/css/palette',
-        'label': 'Palette Generator',
-        'description': 'Roll a random harmonious five-color palette.',
-      },
-      {
-        'href': '/colors/css/theme',
-        'label': 'Theme Colors',
-        'description':
-          'Browse the active theme palette roles as copyable CSS variables.',
-      },
-    ],
-}
+"title": "Color in CSS"
+"subtitle":
+  "Gradients, palettes and theme roles for shipping color to the browser."
+"links":
+  - "href": "/colors/css/gradient"
+    "label": "Gradient Builder"
+    "description":
+      "Compose linear and radial CSS gradients from two or three stops."
+  - "href": "/colors/css/palette"
+    "label": "Palette Generator"
+    "description": "Roll a random harmonious five-color palette."
+  - "href": "/colors/css/theme"
+    "label": "Theme Colors"
+    "description":
+      "Browse the active theme palette roles as copyable CSS variables."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Gradients
 

@@ -1,43 +1,32 @@
 ---
-{
-  'title': 'Social Preferences',
-  'subtitle':
-    'People care about fairness and others’ outcomes—not just their own payoff.',
-  'links':
-    [
-      {
-        'href': '/economics/social-preferences/dictator',
-        'label': 'Dictator Game',
-        'description':
-          'Decide how much of your endowment to give when nobody can punish you.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Social_preferences',
-        'label': 'Wikipedia: Social preferences',
-        'description':
-          "Overview of fairness, reciprocity, and altruism as social
-          preferences\n          in economic experiments.",
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Ultimatum_game',
-        'label': 'Wikipedia: Ultimatum game',
-        'description':
-          "The ultimatum game and experimental evidence against
-          pure\n          self-interest.",
-      },
-      {
-        'href': 'https://books.core-econ.org/the-economy/microeconomics/04-strategic-interactions-11-ultimatum-game.html',
-        'label': 'CORE Econ: The ultimatum game',
-        'description':
-          "Interactive CORE Economics textbook treatment of the ultimatum
-          game\n          and fairness.",
-      },
-    ],
-}
+"title": "Social Preferences"
+"subtitle":
+  "People care about fairness and others’ outcomes—not just their own payoff."
+"links":
+  - "href": "/economics/social-preferences/dictator"
+    "label": "Dictator Game"
+    "description":
+      "Decide how much of your endowment to give when nobody can punish you."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Social_preferences"
+    "label": "Wikipedia: Social preferences"
+    "description":
+      "Overview of fairness, reciprocity, and altruism as social preferences in
+      economic experiments."
+  - "href": "https://en.wikipedia.org/wiki/Ultimatum_game"
+    "label": "Wikipedia: Ultimatum game"
+    "description":
+      "The ultimatum game and experimental evidence against pure self-interest."
+  - "href": "https://books.core-econ.org/the-economy/microeconomics/04-strategic-interactions-11-ultimatum-game.html"
+    "label": "CORE Econ: The ultimatum game"
+    "description":
+      "Interactive CORE Economics textbook treatment of the ultimatum game and
+      fairness."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

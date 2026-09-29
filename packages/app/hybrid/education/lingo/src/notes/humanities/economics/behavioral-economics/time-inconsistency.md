@@ -1,43 +1,31 @@
 ---
-{
-  'title': 'Time Inconsistency & Credibility',
-  'subtitle':
-    "Why commitments made today so often fail tomorrow—and how to make
-    them\n    stick.",
-  'links':
-    [
-      {
-        'href': '/economics/time-inconsistency/savings',
-        'label': 'Commitment Device',
-        'description':
-          'Save across 12 days and feel present bias steal your own plans.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Dynamic_inconsistency',
-        'label': 'Wikipedia: Dynamic inconsistency',
-        'description':
-          'Time inconsistency of preferences and credibility in economic policy.',
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2004/summary/',
-        'label': 'Nobel Prize: 2004 Prize in Economics',
-        'description':
-          "The 2004 Nobel Prize awarded for work on the time consistency
-          of\n          economic policy.",
-      },
-      {
-        'href': 'https://en.wikipedia.org/wiki/Hyperbolic_discounting',
-        'label': 'Wikipedia: Hyperbolic discounting',
-        'description':
-          "Hyperbolic discounting as a model of present-biased
-          intertemporal\n          choice.",
-      },
-    ],
-}
+"title": "Time Inconsistency & Credibility"
+"subtitle":
+  "Why commitments made today so often fail tomorrow—and how to make them stick."
+"links":
+  - "href": "/economics/time-inconsistency/savings"
+    "label": "Commitment Device"
+    "description":
+      "Save across 12 days and feel present bias steal your own plans."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Dynamic_inconsistency"
+    "label": "Wikipedia: Dynamic inconsistency"
+    "description":
+      "Time inconsistency of preferences and credibility in economic policy."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/2004/summary/"
+    "label": "Nobel Prize: 2004 Prize in Economics"
+    "description":
+      "The 2004 Nobel Prize awarded for work on the time consistency of economic
+      policy."
+  - "href": "https://en.wikipedia.org/wiki/Hyperbolic_discounting"
+    "label": "Wikipedia: Hyperbolic discounting"
+    "description":
+      "Hyperbolic discounting as a model of present-biased intertemporal choice."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

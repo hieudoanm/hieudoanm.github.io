@@ -1,31 +1,27 @@
 ---
-{
-  'title': 'Heapsort',
-  'subtitle':
-    "A guaranteed n log n bound with no auxiliary memory, achieved by
-    treating\n    the array as a heap.",
-  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
-  'links':
-    [
-      {
-        'href': '/engineering/heap-sort/interactive',
-        'label': 'Heapsort Visualiser',
-        'description':
-          'Step through heapify and the repeated root-to-end swaps of heapsort.',
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
-        'label': 'Big O notation',
-        'description':
-          "How asymptotic growth classes are defined, and why constants
-          and\n          lower-order terms drop out.",
-      },
-    ],
-}
+"title": "Heapsort"
+"subtitle":
+  "A guaranteed n log n bound with no auxiliary memory, achieved by treating the
+  array as a heap."
+"parentLink":
+  "href": "/engineering"
+  "label": "Engineering"
+"links":
+  - "href": "/engineering/heap-sort/interactive"
+    "label": "Heapsort Visualiser"
+    "description":
+      "Step through heapify and the repeated root-to-end swaps of heapsort."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Big_O_notation"
+    "label": "Big O notation"
+    "description":
+      "How asymptotic growth classes are defined, and why constants and
+      lower-order terms drop out."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## The idea
 

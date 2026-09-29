@@ -1,43 +1,32 @@
 ---
-{
-  'title': 'Labor Markets & Minimum Wage',
-  'subtitle':
-    "How wages, jobs, and hours are set—and what forcing up the wage
-    floor\n    really does.",
-  'links':
-    [
-      {
-        'href': '/economics/labor-markets/wage',
-        'label': 'Labor Market Lab',
-        'description':
-          "Set demand and supply curves, then push the minimum wage
-          above\n          equilibrium to see unemployment and deadweight loss.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Minimum_wage',
-        'label': 'Wikipedia: Minimum Wage',
-        'description':
-          'Overview of minimum wage policy, history, and empirical evidence.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/m/minimum_wage.asp',
-        'label': 'Investopedia: Minimum Wage',
-        'description':
-          'Entry defining minimum wage and its economic effects on employment.',
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2021/popular-information/prize-fact/',
-        'label': 'Nobel Prize: 2021 Economic Sciences',
-        'description':
-          "Nobel award to Card, Krueger, and Angrist for empirical
-          labor\n          economics.",
-      },
-    ],
-}
+"title": "Labor Markets & Minimum Wage"
+"subtitle":
+  "How wages, jobs, and hours are set—and what forcing up the wage floor really
+  does."
+"links":
+  - "href": "/economics/labor-markets/wage"
+    "label": "Labor Market Lab"
+    "description":
+      "Set demand and supply curves, then push the minimum wage above
+      equilibrium to see unemployment and deadweight loss."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Minimum_wage"
+    "label": "Wikipedia: Minimum Wage"
+    "description":
+      "Overview of minimum wage policy, history, and empirical evidence."
+  - "href": "https://www.investopedia.com/terms/m/minimum_wage.asp"
+    "label": "Investopedia: Minimum Wage"
+    "description":
+      "Entry defining minimum wage and its economic effects on employment."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/2021/popular-information/prize-fact/"
+    "label": "Nobel Prize: 2021 Economic Sciences"
+    "description":
+      "Nobel award to Card, Krueger, and Angrist for empirical labor economics."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

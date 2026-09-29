@@ -3,7 +3,7 @@ import { parseSections } from './sections';
 import type { Note } from './types';
 
 const FRONTMATTER_PATTERN =
-  /^---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)/;
+  /^(?:<!-- prettier-ignore-start -->[ \t]*\r?\n)?---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)/;
 
 export const parseNote = (raw: string): Note => {
   const frontmatter = FRONTMATTER_PATTERN.exec(raw);

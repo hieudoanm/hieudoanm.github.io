@@ -1,44 +1,32 @@
 ---
-{
-  'title': 'Arbitrage',
-  'subtitle':
-    "Buying cheap and selling dear at the same moment—the force that
-    keeps\n    prices in line.",
-  'links':
-    [
-      {
-        'href': '/economics/arbitrage/triangular',
-        'label': 'Triangular Arbitrage Lab',
-        'description':
-          "Spot a mispriced EUR/JPY cross in five FX quotes and trade a
-          triangle\n          to lock in the spread.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Arbitrage',
-        'label': 'Wikipedia: Arbitrage',
-        'description':
-          "Overview of arbitrage theory, types, and its role in
-          market\n          efficiency.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/a/arbitrage.asp',
-        'label': 'Investopedia: Arbitrage',
-        'description':
-          'Entry defining arbitrage with examples across financial markets.',
-      },
-      {
-        'href': 'https://www.britannica.com/money/arbitrage',
-        'label': 'Encyclopedia Britannica: Arbitrage',
-        'description':
-          "Encyclopedic overview of arbitrage as a mechanism for
-          price\n          convergence.",
-      },
-    ],
-}
+"title": "Arbitrage"
+"subtitle":
+  "Buying cheap and selling dear at the same moment—the force that keeps prices
+  in line."
+"links":
+  - "href": "/economics/arbitrage/triangular"
+    "label": "Triangular Arbitrage Lab"
+    "description":
+      "Spot a mispriced EUR/JPY cross in five FX quotes and trade a triangle to
+      lock in the spread."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Arbitrage"
+    "label": "Wikipedia: Arbitrage"
+    "description":
+      "Overview of arbitrage theory, types, and its role in market efficiency."
+  - "href": "https://www.investopedia.com/terms/a/arbitrage.asp"
+    "label": "Investopedia: Arbitrage"
+    "description":
+      "Entry defining arbitrage with examples across financial markets."
+  - "href": "https://www.britannica.com/money/arbitrage"
+    "label": "Encyclopedia Britannica: Arbitrage"
+    "description":
+      "Encyclopedic overview of arbitrage as a mechanism for price convergence."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

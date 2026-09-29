@@ -1,35 +1,29 @@
 ---
-{
-  'title': 'Race Models',
-  'subtitle': '',
-  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
-  'links':
-    [
-      {
-        'href': '/neuroscience/race-models/interactive',
-        'label': 'Race Model Simulator',
-        'description':
-          "Run a classic independent race and observe how multiple
-          choices\n          affect decision speed.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://doi.org/10.1080/00140137008931117',
-        'label': 'Vickers (1970) — Ergonomics',
-        'description':
-          'Evidence for an accumulator model of psychophysical discrimination.',
-      },
-      {
-        'href': 'https://doi.org/10.1037/0033-295X.85.2.59',
-        'label': 'Ratcliff (1978) — Psychological Review',
-        'description':
-          'Statistical facilitation and the classic race model formulation.',
-      },
-    ],
-}
+"title": "Race Models"
+"subtitle": ""
+"parentLink":
+  "href": "/neuroscience"
+  "label": "Neuroscience"
+"links":
+  - "href": "/neuroscience/race-models/interactive"
+    "label": "Race Model Simulator"
+    "description":
+      "Run a classic independent race and observe how multiple choices affect
+      decision speed."
+"references":
+  - "href": "https://doi.org/10.1080/00140137008931117"
+    "label": "Vickers (1970) — Ergonomics"
+    "description":
+      "Evidence for an accumulator model of psychophysical discrimination."
+  - "href": "https://doi.org/10.1037/0033-295X.85.2.59"
+    "label": "Ratcliff (1978) — Psychological Review"
+    "description":
+      "Statistical facilitation and the classic race model formulation."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## Overview
 

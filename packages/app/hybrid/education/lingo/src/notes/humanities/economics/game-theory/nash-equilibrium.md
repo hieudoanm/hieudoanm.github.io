@@ -1,41 +1,31 @@
 ---
-{
-  'title': 'Nash Equilibrium',
-  'subtitle':
-    'The state where no one regrets their choice—given what everyone else did.',
-  'links':
-    [
-      {
-        'href': '/economics/nash-equilibrium/solve',
-        'label': 'Nash Equilibrium Solver',
-        'description':
-          "Best-respond to an AI opponent across three classic games and
-          learn\n          to spot Nash equilibria—or when only mixing wins.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Nash_equilibrium',
-        'label': 'Wikipedia: Nash Equilibrium',
-        'description': 'Overview of the concept, its definition, and history.',
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/n/nash-equilibrium.asp',
-        'label': 'Investopedia: Nash Equilibrium',
-        'description':
-          "How it works in game theory, with worked examples including
-          the\n          Prisoner’s Dilemma.",
-      },
-      {
-        'href': 'https://www.nobelprize.org/prizes/economic-sciences/1994/nash/facts/',
-        'label': 'Nobel Prize: John Nash (1994)',
-        'description':
-          'Nobel biography of Nash and his contribution to game theory.',
-      },
-    ],
-}
+"title": "Nash Equilibrium"
+"subtitle":
+  "The state where no one regrets their choice—given what everyone else did."
+"links":
+  - "href": "/economics/nash-equilibrium/solve"
+    "label": "Nash Equilibrium Solver"
+    "description":
+      "Best-respond to an AI opponent across three classic games and learn to
+      spot Nash equilibria—or when only mixing wins."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Nash_equilibrium"
+    "label": "Wikipedia: Nash Equilibrium"
+    "description": "Overview of the concept, its definition, and history."
+  - "href": "https://www.investopedia.com/terms/n/nash-equilibrium.asp"
+    "label": "Investopedia: Nash Equilibrium"
+    "description":
+      "How it works in game theory, with worked examples including the
+      Prisoner’s Dilemma."
+  - "href": "https://www.nobelprize.org/prizes/economic-sciences/1994/nash/facts/"
+    "label": "Nobel Prize: John Nash (1994)"
+    "description":
+      "Nobel biography of Nash and his contribution to game theory."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 

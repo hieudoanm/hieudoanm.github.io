@@ -1,44 +1,32 @@
 ---
-{
-  'title': 'Production & Costs',
-  'subtitle':
-    "How firms turn inputs into output—and how the shape of costs drives
-    their\n    supply decisions.",
-  'links':
-    [
-      {
-        'href': '/economics/production-and-costs/lab',
-        'label': 'Production & Cost Curves',
-        'description':
-          "Interactive lab: drag sliders to see Q, MP, AP, TC, MC, ATC and
-          AVC,\n          then check profit-maximizing output.",
-      },
-    ],
-  'references':
-    [
-      {
-        'href': 'https://en.wikipedia.org/wiki/Production_function',
-        'label': 'Wikipedia: Production Function',
-        'description':
-          'How inputs are converted into output, including marginal product.',
-      },
-      {
-        'href': 'https://www.britannica.com/money/production-function',
-        'label': 'Britannica: Production Function',
-        'description':
-          "Entry on the production function, marginal cost, and
-          output\n          decisions.",
-      },
-      {
-        'href': 'https://www.investopedia.com/terms/f/factors-production.asp',
-        'label': 'Investopedia: Factors of Production',
-        'description':
-          "The inputs behind production: land, labor, capital,
-          and\n          entrepreneurship.",
-      },
-    ],
-}
+"title": "Production & Costs"
+"subtitle":
+  "How firms turn inputs into output—and how the shape of costs drives their
+  supply decisions."
+"links":
+  - "href": "/economics/production-and-costs/lab"
+    "label": "Production & Cost Curves"
+    "description":
+      "Interactive lab: drag sliders to see Q, MP, AP, TC, MC, ATC and AVC, then
+      check profit-maximizing output."
+"references":
+  - "href": "https://en.wikipedia.org/wiki/Production_function"
+    "label": "Wikipedia: Production Function"
+    "description":
+      "How inputs are converted into output, including marginal product."
+  - "href": "https://www.britannica.com/money/production-function"
+    "label": "Britannica: Production Function"
+    "description":
+      "Entry on the production function, marginal cost, and output decisions."
+  - "href": "https://www.investopedia.com/terms/f/factors-production.asp"
+    "label": "Investopedia: Factors of Production"
+    "description":
+      "The inputs behind production: land, labor, capital, and entrepreneurship."
 ---
+
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-end -->
 
 ## What is it?
 
