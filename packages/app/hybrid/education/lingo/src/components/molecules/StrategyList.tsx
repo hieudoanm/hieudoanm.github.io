@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { STRATEGIES } from '@/games/humanities/economics/prisoners-dilemma/constants';
-import type { StrategyDef } from '@/games/humanities/economics/prisoners-dilemma/constants';
+import { STRATEGIES } from '@/games/humanities/economics/game-theory/prisoners-dilemma/constants';
+import type { StrategyDef } from '@/games/humanities/economics/game-theory/prisoners-dilemma/constants';
 
 export const StrategyList: FC<{ strategies?: StrategyDef[] }> = ({
   strategies = STRATEGIES,
