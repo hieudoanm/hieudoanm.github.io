@@ -9,7 +9,15 @@
 │   │   ├── [PACKAGING.md](./foody/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./foody/docs/ROADMAP.md)
 │   ├── e2e/
-│   │   └── [home.spec.ts](./foody/e2e/home.spec.ts)
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./foody/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./foody/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./foody/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./foody/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./foody/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./foody/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./foody/e2e/home.spec.ts)
+│   │   └── [version.spec.ts](./foody/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./foody/public/icons/icon-128x128.png)
@@ -17,13 +25,11 @@
 │   │   │   ├── [icon-152x152.png](./foody/public/icons/icon-152x152.png)
 │   │   │   ├── [icon-16x16.png](./foody/public/icons/icon-16x16.png)
 │   │   │   ├── [icon-180x180.png](./foody/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192.png](./foody/public/icons/icon-192.png)
 │   │   │   ├── [icon-192x192.png](./foody/public/icons/icon-192x192.png)
 │   │   │   ├── [icon-256x256.png](./foody/public/icons/icon-256x256.png)
 │   │   │   ├── [icon-32x32.png](./foody/public/icons/icon-32x32.png)
 │   │   │   ├── [icon-384x384.png](./foody/public/icons/icon-384x384.png)
 │   │   │   ├── [icon-48x48.png](./foody/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512.png](./foody/public/icons/icon-512.png)
 │   │   │   ├── [icon-512x512.png](./foody/public/icons/icon-512x512.png)
 │   │   │   ├── [icon-64x64.png](./foody/public/icons/icon-64x64.png)
 │   │   │   ├── [icon-72x72.png](./foody/public/icons/icon-72x72.png)
@@ -162,6 +168,10 @@
 │   │   │       ├── [ErrorTemplate.tsx](./foody/src/components/templates/ErrorTemplate.tsx)
 │   │   │       ├── [HomeTemplate.tsx](./foody/src/components/templates/HomeTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./foody/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./foody/src/content/about.ts)
+│   │   │   ├── [download.ts](./foody/src/content/download.ts)
+│   │   │   └── [version.ts](./foody/src/content/version.ts)
 │   │   ├── data/
 │   │   │   ├── __tests__/
 │   │   │   │   └── [constants.test.ts](./foody/src/data/__tests__/constants.test.ts)
@@ -201,16 +211,61 @@
 │   │   │   ├── [QueryProvider.tsx](./foody/src/providers/QueryProvider.tsx)
 │   │   │   └── [SWProvider.tsx](./foody/src/providers/SWProvider.tsx)
 │   │   └── styles/
-│   │       ├── [base.css](./foody/src/styles/base.css)
 │   │       ├── [globals.css](./foody/src/styles/globals.css)
 │   │       └── [themes.css](./foody/src/styles/themes.css)
 │   ├── src-tauri/
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./foody/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./foody/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./foody/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./foody/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./foody/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./foody/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./foody/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./foody/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./foody/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./foody/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./foody/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./foody/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./foody/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./foody/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./foody/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./foody/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./foody/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./foody/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./foody/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./foody/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./foody/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./foody/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./foody/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./foody/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./foody/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./foody/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./foody/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./foody/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./foody/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./foody/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./foody/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./foody/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./foody/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./foody/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./foody/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./foody/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./foody/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./foody/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./foody/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./foody/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./foody/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./foody/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./foody/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./foody/src-tauri/icons/Square150x150Logo.png)
@@ -221,6 +276,7 @@
 │   │   │   ├── [Square71x71Logo.png](./foody/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./foody/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./foody/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./foody/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./foody/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./foody/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./foody/src-tauri/icons/icon.png)
@@ -249,4 +305,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-69 directories, 177 files
+80 directories, 222 files

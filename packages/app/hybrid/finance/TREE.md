@@ -9,10 +9,19 @@
 │   │   ├── [PACKAGING.md](./tax/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./tax/docs/ROADMAP.md)
 │   ├── e2e/
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./tax/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./tax/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./tax/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./tax/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./tax/e2e/about.spec.ts)
 │   │   ├── [calculator.spec.ts](./tax/e2e/calculator.spec.ts)
+│   │   ├── [downloads.spec.ts](./tax/e2e/downloads.spec.ts)
 │   │   ├── [helpers.ts](./tax/e2e/helpers.ts)
+│   │   ├── [home.spec.ts](./tax/e2e/home.spec.ts)
 │   │   ├── [index.spec.ts](./tax/e2e/index.spec.ts)
-│   │   └── [navigation.spec.ts](./tax/e2e/navigation.spec.ts)
+│   │   ├── [navigation.spec.ts](./tax/e2e/navigation.spec.ts)
+│   │   └── [version.spec.ts](./tax/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./tax/public/icons/icon-128x128.png)
@@ -87,13 +96,6 @@
 │   │   │   │   ├── [template.test.tsx](./tax/src/app/__tests__/template.test.tsx)
 │   │   │   │   └── [unauthorized.test.tsx](./tax/src/app/__tests__/unauthorized.test.tsx)
 │   │   │   ├── business/
-│   │   │   │   ├── (audit)/
-│   │   │   │   │   └── audit/
-│   │   │   │   │       └── [id]/
-│   │   │   │   ├── (submission)/
-│   │   │   │   │   └── submission/
-│   │   │   │   │       ├── [id]/
-│   │   │   │   │       └── new/
 │   │   │   │   ├── audit/
 │   │   │   │   │   └── [page.tsx](./tax/src/app/business/audit/page.tsx)
 │   │   │   │   ├── submission/
@@ -122,8 +124,6 @@
 │   │   │   │   ├── [OfflineBanner.test.tsx](./tax/src/components/__tests__/OfflineBanner.test.tsx)
 │   │   │   │   ├── [RouteGuard.test.tsx](./tax/src/components/__tests__/RouteGuard.test.tsx)
 │   │   │   │   └── [SkipToContent.test.tsx](./tax/src/components/__tests__/SkipToContent.test.tsx)
-│   │   │   ├── atoms/
-│   │   │   ├── molecules/
 │   │   │   ├── organisms/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [AuditDetail.test.tsx](./tax/src/components/organisms/__tests__/AuditDetail.test.tsx)
@@ -159,6 +159,10 @@
 │   │   │   ├── [OfflineBanner.tsx](./tax/src/components/OfflineBanner.tsx)
 │   │   │   ├── [RouteGuard.tsx](./tax/src/components/RouteGuard.tsx)
 │   │   │   └── [SkipToContent.tsx](./tax/src/components/SkipToContent.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./tax/src/content/about.ts)
+│   │   │   ├── [download.ts](./tax/src/content/download.ts)
+│   │   │   └── [version.ts](./tax/src/content/version.ts)
 │   │   ├── data/
 │   │   │   ├── __tests__/
 │   │   │   │   ├── [mock.test.ts](./tax/src/data/__tests__/mock.test.ts)
@@ -201,7 +205,6 @@
 │   │   │   ├── [Providers.tsx](./tax/src/providers/Providers.tsx)
 │   │   │   └── [ToastProvider.tsx](./tax/src/providers/ToastProvider.tsx)
 │   │   ├── styles/
-│   │   │   ├── [base.css](./tax/src/styles/base.css)
 │   │   │   ├── [globals.css](./tax/src/styles/globals.css)
 │   │   │   └── [themes.css](./tax/src/styles/themes.css)
 │   │   ├── types/
@@ -273,6 +276,7 @@
 │   │   │   ├── [Square71x71Logo.png](./tax/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./tax/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./tax/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./tax/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./tax/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./tax/src-tauri/icons/icon.ico)
 │   │   │   ├── [icon.png](./tax/src-tauri/icons/icon.png)
@@ -304,19 +308,23 @@
 │   │   ├── [PACKAGING.md](./wallet/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./wallet/docs/ROADMAP.md)
 │   ├── e2e/
+│   │   ├── [about.spec.ts](./wallet/e2e/about.spec.ts)
 │   │   ├── [auth-guard.spec.ts](./wallet/e2e/auth-guard.spec.ts)
 │   │   ├── [auth.spec.ts](./wallet/e2e/auth.spec.ts)
 │   │   ├── [budget-notifications.spec.ts](./wallet/e2e/budget-notifications.spec.ts)
 │   │   ├── [cards.spec.ts](./wallet/e2e/cards.spec.ts)
+│   │   ├── [downloads.spec.ts](./wallet/e2e/downloads.spec.ts)
 │   │   ├── [exchange.spec.ts](./wallet/e2e/exchange.spec.ts)
 │   │   ├── [helpers.ts](./wallet/e2e/helpers.ts)
+│   │   ├── [home.spec.ts](./wallet/e2e/home.spec.ts)
 │   │   ├── [index.spec.ts](./wallet/e2e/index.spec.ts)
 │   │   ├── [navigation.spec.ts](./wallet/e2e/navigation.spec.ts)
 │   │   ├── [pages.spec.ts](./wallet/e2e/pages.spec.ts)
 │   │   ├── [pay.spec.ts](./wallet/e2e/pay.spec.ts)
 │   │   ├── [profile.spec.ts](./wallet/e2e/profile.spec.ts)
 │   │   ├── [transactions.spec.ts](./wallet/e2e/transactions.spec.ts)
-│   │   └── [transfer.spec.ts](./wallet/e2e/transfer.spec.ts)
+│   │   ├── [transfer.spec.ts](./wallet/e2e/transfer.spec.ts)
+│   │   └── [version.spec.ts](./wallet/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./wallet/public/icons/icon-128x128.png)
@@ -626,6 +634,10 @@
 │   │   │   ├── [PageTransition.tsx](./wallet/src/components/PageTransition.tsx)
 │   │   │   ├── [RouteGuard.tsx](./wallet/src/components/RouteGuard.tsx)
 │   │   │   └── [SkipToContent.tsx](./wallet/src/components/SkipToContent.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./wallet/src/content/about.ts)
+│   │   │   ├── [download.ts](./wallet/src/content/download.ts)
+│   │   │   └── [version.ts](./wallet/src/content/version.ts)
 │   │   ├── data/
 │   │   │   ├── [mock.ts](./wallet/src/data/mock.ts)
 │   │   │   └── [nav.ts](./wallet/src/data/nav.ts)
@@ -681,7 +693,6 @@
 │   │   │   ├── [SWProvider.tsx](./wallet/src/providers/SWProvider.tsx)
 │   │   │   └── [ToastProvider.tsx](./wallet/src/providers/ToastProvider.tsx)
 │   │   ├── styles/
-│   │   │   ├── [base.css](./wallet/src/styles/base.css)
 │   │   │   ├── [globals.css](./wallet/src/styles/globals.css)
 │   │   │   └── [themes.css](./wallet/src/styles/themes.css)
 │   │   ├── test-helpers/
@@ -710,9 +721,55 @@
 │   │   │       ├── [desktop-schema.json](./wallet/src-tauri/gen/schemas/desktop-schema.json)
 │   │   │       └── [macOS-schema.json](./wallet/src-tauri/gen/schemas/macOS-schema.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./wallet/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./wallet/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./wallet/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./wallet/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./wallet/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./wallet/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./wallet/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./wallet/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./wallet/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./wallet/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./wallet/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./wallet/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./wallet/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./wallet/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./wallet/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./wallet/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./wallet/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./wallet/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./wallet/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./wallet/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./wallet/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./wallet/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./wallet/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./wallet/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./wallet/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./wallet/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./wallet/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./wallet/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./wallet/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./wallet/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./wallet/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./wallet/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./wallet/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./wallet/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./wallet/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./wallet/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./wallet/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./wallet/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./wallet/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./wallet/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./wallet/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./wallet/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./wallet/src-tauri/icons/Square150x150Logo.png)
@@ -723,6 +780,7 @@
 │   │   │   ├── [Square71x71Logo.png](./wallet/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./wallet/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./wallet/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./wallet/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./wallet/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./wallet/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./wallet/src-tauri/icons/icon.png)
@@ -751,4 +809,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-201 directories, 547 files
+204 directories, 602 files

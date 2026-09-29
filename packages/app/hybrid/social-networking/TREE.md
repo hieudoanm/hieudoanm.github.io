@@ -12,6 +12,7 @@
 │   │   ├── [about.spec.ts](./chat/e2e/about.spec.ts)
 │   │   ├── [chat-header.spec.ts](./chat/e2e/chat-header.spec.ts)
 │   │   ├── [chat-thread.spec.ts](./chat/e2e/chat-thread.spec.ts)
+│   │   ├── [downloads.spec.ts](./chat/e2e/downloads.spec.ts)
 │   │   ├── [home.spec.ts](./chat/e2e/home.spec.ts)
 │   │   ├── [navigation.spec.ts](./chat/e2e/navigation.spec.ts)
 │   │   ├── [profile.spec.ts](./chat/e2e/profile.spec.ts)
@@ -143,6 +144,7 @@
 │   │   │   │   │   ├── [Sidebar.test.tsx](./chat/src/components/organisms/__tests__/Sidebar.test.tsx)
 │   │   │   │   │   └── [ToastContainer.test.tsx](./chat/src/components/organisms/__tests__/ToastContainer.test.tsx)
 │   │   │   │   ├── [ChatHeader.tsx](./chat/src/components/organisms/ChatHeader.tsx)
+│   │   │   │   ├── [Header.tsx](./chat/src/components/organisms/Header.tsx)
 │   │   │   │   ├── [OfflineBanner.tsx](./chat/src/components/organisms/OfflineBanner.tsx)
 │   │   │   │   ├── [Sidebar.tsx](./chat/src/components/organisms/Sidebar.tsx)
 │   │   │   │   └── [ToastContainer.tsx](./chat/src/components/organisms/ToastContainer.tsx)
@@ -166,8 +168,11 @@
 │   │   │   │   ├── [WriteTool.tsx](./chat/src/components/write/WriteTool.tsx)
 │   │   │   │   ├── [config.ts](./chat/src/components/write/config.ts)
 │   │   │   │   └── [index.tsx](./chat/src/components/write/index.tsx)
-│   │   │   ├── [FullScreen.tsx](./chat/src/components/FullScreen.tsx)
-│   │   │   └── [SWProvider.tsx](./chat/src/components/SWProvider.tsx)
+│   │   │   └── [FullScreen.tsx](./chat/src/components/FullScreen.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./chat/src/content/about.ts)
+│   │   │   ├── [download.ts](./chat/src/content/download.ts)
+│   │   │   └── [version.ts](./chat/src/content/version.ts)
 │   │   ├── data/
 │   │   │   ├── __tests__/
 │   │   │   │   ├── [models.test.ts](./chat/src/data/__tests__/models.test.ts)
@@ -203,6 +208,7 @@
 │   │   │   │   └── [ToastProvider.test.tsx](./chat/src/providers/__tests__/ToastProvider.test.tsx)
 │   │   │   ├── [DataProvider.tsx](./chat/src/providers/DataProvider.tsx)
 │   │   │   ├── [Providers.tsx](./chat/src/providers/Providers.tsx)
+│   │   │   ├── [SWProvider.tsx](./chat/src/providers/SWProvider.tsx)
 │   │   │   └── [ToastProvider.tsx](./chat/src/providers/ToastProvider.tsx)
 │   │   ├── server/
 │   │   │   ├── rest/
@@ -248,7 +254,6 @@
 │   │   │       │   └── [_app.ts](./chat/src/server/trpc/routers/_app.ts)
 │   │   │       └── [trpc.ts](./chat/src/server/trpc/trpc.ts)
 │   │   ├── styles/
-│   │   │   ├── [base.css](./chat/src/styles/base.css)
 │   │   │   ├── [globals.css](./chat/src/styles/globals.css)
 │   │   │   └── [themes.css](./chat/src/styles/themes.css)
 │   │   ├── types/
@@ -264,9 +269,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./chat/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./chat/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chat/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chat/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chat/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chat/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chat/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chat/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chat/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chat/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chat/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chat/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chat/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chat/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chat/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chat/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chat/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./chat/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./chat/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./chat/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./chat/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./chat/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./chat/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./chat/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./chat/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./chat/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./chat/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./chat/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./chat/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./chat/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./chat/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./chat/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./chat/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./chat/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./chat/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./chat/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./chat/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./chat/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./chat/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./chat/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./chat/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./chat/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./chat/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./chat/src-tauri/icons/Square150x150Logo.png)
@@ -277,6 +328,7 @@
 │   │   │   ├── [Square71x71Logo.png](./chat/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./chat/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./chat/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./chat/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./chat/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./chat/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./chat/src-tauri/icons/icon.png)
@@ -308,6 +360,16 @@
 │   │   ├── [DOWNLOADS.md](./messaging/docs/DOWNLOADS.md)
 │   │   ├── [PACKAGING.md](./messaging/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./messaging/docs/ROADMAP.md)
+│   ├── e2e/
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./messaging/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./messaging/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./messaging/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./messaging/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./messaging/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./messaging/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./messaging/e2e/home.spec.ts)
+│   │   └── [version.spec.ts](./messaging/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./messaging/public/icons/icon-128x128.png)
@@ -334,8 +396,9 @@
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── (app)/
-│   │   │   │   ├── chat/
 │   │   │   │   └── settings/
+│   │   │   │       ├── __tests__/
+│   │   │   │       │   └── [page.test.tsx](./messaging/src/app/(app)/settings/__tests__/page.test.tsx)
 │   │   │   │       └── [page.tsx](./messaging/src/app/(app)/settings/page.tsx)
 │   │   │   ├── (auth)/
 │   │   │   │   ├── forget-password/
@@ -360,28 +423,30 @@
 │   │   │   │       └── [page.tsx](./messaging/src/app/(auth)/sign-up/page.tsx)
 │   │   │   ├── (info)/
 │   │   │   │   ├── about/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [page.test.tsx](./messaging/src/app/(info)/about/__tests__/page.test.tsx)
 │   │   │   │   │   └── [page.tsx](./messaging/src/app/(info)/about/page.tsx)
 │   │   │   │   ├── downloads/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [page.test.tsx](./messaging/src/app/(info)/downloads/__tests__/page.test.tsx)
 │   │   │   │   │   └── [page.tsx](./messaging/src/app/(info)/downloads/page.tsx)
 │   │   │   │   └── version/
+│   │   │   │       ├── __tests__/
+│   │   │   │       │   └── [page.test.tsx](./messaging/src/app/(info)/version/__tests__/page.test.tsx)
 │   │   │   │       └── [page.tsx](./messaging/src/app/(info)/version/page.tsx)
 │   │   │   ├── __tests__/
-│   │   │   │   ├── [about-page.test.tsx](./messaging/src/app/__tests__/about-page.test.tsx)
-│   │   │   │   ├── [downloads-page.test.tsx](./messaging/src/app/__tests__/downloads-page.test.tsx)
 │   │   │   │   ├── [error-page.test.tsx](./messaging/src/app/__tests__/error-page.test.tsx)
 │   │   │   │   ├── [error.test.tsx](./messaging/src/app/__tests__/error.test.tsx)
 │   │   │   │   ├── [forbidden.test.tsx](./messaging/src/app/__tests__/forbidden.test.tsx)
 │   │   │   │   ├── [global-error.test.tsx](./messaging/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   ├── [home-page.test.tsx](./messaging/src/app/__tests__/home-page.test.tsx)
 │   │   │   │   ├── [layout.test.tsx](./messaging/src/app/__tests__/layout.test.tsx)
 │   │   │   │   ├── [loading.test.tsx](./messaging/src/app/__tests__/loading.test.tsx)
 │   │   │   │   ├── [not-found-page.test.tsx](./messaging/src/app/__tests__/not-found-page.test.tsx)
 │   │   │   │   ├── [not-found.test.tsx](./messaging/src/app/__tests__/not-found.test.tsx)
+│   │   │   │   ├── [page.test.tsx](./messaging/src/app/__tests__/page.test.tsx)
 │   │   │   │   ├── [robots.test.ts](./messaging/src/app/__tests__/robots.test.ts)
-│   │   │   │   ├── [settings-page.test.tsx](./messaging/src/app/__tests__/settings-page.test.tsx)
 │   │   │   │   ├── [template.test.tsx](./messaging/src/app/__tests__/template.test.tsx)
-│   │   │   │   ├── [unauthorized.test.tsx](./messaging/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   └── [version-page.test.tsx](./messaging/src/app/__tests__/version-page.test.tsx)
+│   │   │   │   └── [unauthorized.test.tsx](./messaging/src/app/__tests__/unauthorized.test.tsx)
 │   │   │   ├── [default.tsx](./messaging/src/app/default.tsx)
 │   │   │   ├── [error.tsx](./messaging/src/app/error.tsx)
 │   │   │   ├── [favicon.ico](./messaging/src/app/favicon.ico)
@@ -485,6 +550,7 @@
 │   │   │   │   ├── [ForwardModal.tsx](./messaging/src/components/organisms/ForwardModal.tsx)
 │   │   │   │   ├── [GroupAdminPanel.tsx](./messaging/src/components/organisms/GroupAdminPanel.tsx)
 │   │   │   │   ├── [GroupCallView.tsx](./messaging/src/components/organisms/GroupCallView.tsx)
+│   │   │   │   ├── [Header.tsx](./messaging/src/components/organisms/Header.tsx)
 │   │   │   │   ├── [ImageLightbox.tsx](./messaging/src/components/organisms/ImageLightbox.tsx)
 │   │   │   │   ├── [IncomingCallModal.tsx](./messaging/src/components/organisms/IncomingCallModal.tsx)
 │   │   │   │   ├── [MediaGallery.tsx](./messaging/src/components/organisms/MediaGallery.tsx)
@@ -504,6 +570,10 @@
 │   │   │       ├── [DownloadsTemplate.tsx](./messaging/src/components/templates/DownloadsTemplate.tsx)
 │   │   │       ├── [ErrorTemplate.tsx](./messaging/src/components/templates/ErrorTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./messaging/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./messaging/src/content/about.ts)
+│   │   │   ├── [download.ts](./messaging/src/content/download.ts)
+│   │   │   └── [version.ts](./messaging/src/content/version.ts)
 │   │   ├── data/
 │   │   │   ├── __tests__/
 │   │   │   │   ├── [models.test.ts](./messaging/src/data/__tests__/models.test.ts)
@@ -550,7 +620,6 @@
 │   │   │   ├── [ToastProvider.tsx](./messaging/src/providers/ToastProvider.tsx)
 │   │   │   └── [data-helpers.ts](./messaging/src/providers/data-helpers.ts)
 │   │   ├── styles/
-│   │   │   ├── [base.css](./messaging/src/styles/base.css)
 │   │   │   ├── [globals.css](./messaging/src/styles/globals.css)
 │   │   │   └── [themes.css](./messaging/src/styles/themes.css)
 │   │   └── types/
@@ -565,9 +634,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./messaging/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./messaging/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./messaging/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./messaging/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./messaging/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./messaging/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./messaging/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./messaging/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./messaging/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./messaging/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./messaging/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./messaging/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./messaging/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./messaging/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./messaging/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./messaging/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./messaging/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./messaging/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./messaging/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./messaging/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./messaging/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./messaging/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./messaging/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./messaging/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./messaging/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./messaging/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./messaging/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./messaging/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./messaging/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./messaging/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./messaging/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./messaging/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./messaging/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./messaging/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./messaging/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./messaging/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./messaging/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./messaging/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./messaging/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./messaging/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./messaging/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./messaging/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./messaging/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./messaging/src-tauri/icons/Square150x150Logo.png)
@@ -578,6 +693,7 @@
 │   │   │   ├── [Square71x71Logo.png](./messaging/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./messaging/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./messaging/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./messaging/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./messaging/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./messaging/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./messaging/src-tauri/icons/icon.png)
@@ -607,4 +723,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-132 directories, 472 files
+157 directories, 563 files
