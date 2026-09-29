@@ -201,22 +201,55 @@
 │   │   │   │   │   │   └── [page.tsx](./src/app/(games)/(health)/ophthalmology/vision/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(games)/(health)/ophthalmology/page.tsx)
 │   │   │   │   └── psychology/
-│   │   │   │       ├── beck-depression-inventory/
-│   │   │   │       │   └── [page.tsx](./src/app/(games)/(health)/psychology/beck-depression-inventory/page.tsx)
-│   │   │   │       ├── big-five-inventory/
-│   │   │   │       │   └── [page.tsx](./src/app/(games)/(health)/psychology/big-five-inventory/page.tsx)
-│   │   │   │       ├── dyadic-adjustment-scale/
-│   │   │   │       │   └── [page.tsx](./src/app/(games)/(health)/psychology/dyadic-adjustment-scale/page.tsx)
-│   │   │   │       ├── experiences-in-close-relationships/
-│   │   │   │       │   └── [page.tsx](./src/app/(games)/(health)/psychology/experiences-in-close-relationships/page.tsx)
-│   │   │   │       ├── generalized-anxiety-disorder/
-│   │   │   │       │   └── [page.tsx](./src/app/(games)/(health)/psychology/generalized-anxiety-disorder/page.tsx)
-│   │   │   │       ├── patient-health-questionnaire/
-│   │   │   │       │   └── [page.tsx](./src/app/(games)/(health)/psychology/patient-health-questionnaire/page.tsx)
-│   │   │   │       ├── relationship-closeness-inventory/
-│   │   │   │       │   └── [page.tsx](./src/app/(games)/(health)/psychology/relationship-closeness-inventory/page.tsx)
-│   │   │   │       ├── satisfaction-with-life/
-│   │   │   │       │   └── [page.tsx](./src/app/(games)/(health)/psychology/satisfaction-with-life/page.tsx)
+│   │   │   │       ├── (practices)/
+│   │   │   │       │   ├── counselling/
+│   │   │   │       │   │   ├── __tests__/
+│   │   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(health)/psychology/(practices)/counselling/__tests__/page.test.tsx)
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(practices)/counselling/page.tsx)
+│   │   │   │       │   ├── journaling/
+│   │   │   │       │   │   ├── __tests__/
+│   │   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(health)/psychology/(practices)/journaling/__tests__/page.test.tsx)
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(practices)/journaling/page.tsx)
+│   │   │   │       │   └── mindfulness/
+│   │   │   │       │       ├── __tests__/
+│   │   │   │       │       │   └── [page.test.tsx](./src/app/(games)/(health)/psychology/(practices)/mindfulness/__tests__/page.test.tsx)
+│   │   │   │       │       └── [page.tsx](./src/app/(games)/(health)/psychology/(practices)/mindfulness/page.tsx)
+│   │   │   │       ├── (scales)/
+│   │   │   │       │   ├── beck-depression-inventory/
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(scales)/beck-depression-inventory/page.tsx)
+│   │   │   │       │   ├── big-five-inventory/
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(scales)/big-five-inventory/page.tsx)
+│   │   │   │       │   ├── dyadic-adjustment-scale/
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(scales)/dyadic-adjustment-scale/page.tsx)
+│   │   │   │       │   ├── experiences-in-close-relationships/
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(scales)/experiences-in-close-relationships/page.tsx)
+│   │   │   │       │   ├── generalized-anxiety-disorder/
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(scales)/generalized-anxiety-disorder/page.tsx)
+│   │   │   │       │   ├── patient-health-questionnaire/
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(scales)/patient-health-questionnaire/page.tsx)
+│   │   │   │       │   ├── relationship-closeness-inventory/
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(scales)/relationship-closeness-inventory/page.tsx)
+│   │   │   │       │   └── satisfaction-with-life/
+│   │   │   │       │       └── [page.tsx](./src/app/(games)/(health)/psychology/(scales)/satisfaction-with-life/page.tsx)
+│   │   │   │       ├── (theory)/
+│   │   │   │       │   ├── biology/
+│   │   │   │       │   │   ├── __tests__/
+│   │   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(health)/psychology/(theory)/biology/__tests__/page.test.tsx)
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(theory)/biology/page.tsx)
+│   │   │   │       │   ├── cognitive/
+│   │   │   │       │   │   ├── __tests__/
+│   │   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(health)/psychology/(theory)/cognitive/__tests__/page.test.tsx)
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(theory)/cognitive/page.tsx)
+│   │   │   │       │   ├── developmental/
+│   │   │   │       │   │   ├── __tests__/
+│   │   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(health)/psychology/(theory)/developmental/__tests__/page.test.tsx)
+│   │   │   │       │   │   └── [page.tsx](./src/app/(games)/(health)/psychology/(theory)/developmental/page.tsx)
+│   │   │   │       │   └── social/
+│   │   │   │       │       ├── __tests__/
+│   │   │   │       │       │   └── [page.test.tsx](./src/app/(games)/(health)/psychology/(theory)/social/__tests__/page.test.tsx)
+│   │   │   │       │       └── [page.tsx](./src/app/(games)/(health)/psychology/(theory)/social/page.tsx)
+│   │   │   │       ├── __tests__/
+│   │   │   │       │   └── [page.test.tsx](./src/app/(games)/(health)/psychology/__tests__/page.test.tsx)
 │   │   │   │       └── [page.tsx](./src/app/(games)/(health)/psychology/page.tsx)
 │   │   │   ├── (humanities)/
 │   │   │   │   ├── economics/
@@ -530,6 +563,82 @@
 │   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(stem)/chemistry/periodic-table/__tests__/page.test.tsx)
 │   │   │       │   │   └── [page.tsx](./src/app/(games)/(stem)/chemistry/periodic-table/page.tsx)
 │   │   │       │   └── [page.tsx](./src/app/(games)/(stem)/chemistry/page.tsx)
+│   │   │       ├── engineering/
+│   │   │       │   ├── algorithms/
+│   │   │       │   │   ├── binary-search/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/binary-search/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/binary-search/page.tsx)
+│   │   │       │   │   ├── bubble-sort/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/bubble-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/bubble-sort/page.tsx)
+│   │   │       │   │   ├── heap-sort/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/heap-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/heap-sort/page.tsx)
+│   │   │       │   │   ├── insertion-sort/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/insertion-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/insertion-sort/page.tsx)
+│   │   │       │   │   ├── linear-search/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/linear-search/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/linear-search/page.tsx)
+│   │   │       │   │   ├── merge-sort/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/merge-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/merge-sort/page.tsx)
+│   │   │       │   │   ├── quick-sort/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/quick-sort/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/quick-sort/page.tsx)
+│   │   │       │   │   └── selection-sort/
+│   │   │       │   │       ├── interactive/
+│   │   │       │   │       │   └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/selection-sort/interactive/page.tsx)
+│   │   │       │   │       └── [page.tsx](./src/app/(games)/(stem)/engineering/algorithms/selection-sort/page.tsx)
+│   │   │       │   ├── data-structures/
+│   │   │       │   │   ├── array/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/array/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/array/page.tsx)
+│   │   │       │   │   ├── disjoint-set/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/disjoint-set/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/disjoint-set/page.tsx)
+│   │   │       │   │   ├── fenwick-trees/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/fenwick-trees/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/fenwick-trees/page.tsx)
+│   │   │       │   │   ├── hash-tables/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/hash-tables/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/hash-tables/page.tsx)
+│   │   │       │   │   ├── linked-lists/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/linked-lists/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/linked-lists/page.tsx)
+│   │   │       │   │   ├── queues/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/queues/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/queues/page.tsx)
+│   │   │       │   │   ├── segment-trees/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/segment-trees/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/segment-trees/page.tsx)
+│   │   │       │   │   ├── stacks/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/stacks/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/stacks/page.tsx)
+│   │   │       │   │   ├── suffix-arrays/
+│   │   │       │   │   │   ├── interactive/
+│   │   │       │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/suffix-arrays/interactive/page.tsx)
+│   │   │       │   │   │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/suffix-arrays/page.tsx)
+│   │   │       │   │   └── trie/
+│   │   │       │   │       ├── interactive/
+│   │   │       │   │       │   └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/trie/interactive/page.tsx)
+│   │   │       │   │       └── [page.tsx](./src/app/(games)/(stem)/engineering/data-structures/trie/page.tsx)
+│   │   │       │   └── [page.tsx](./src/app/(games)/(stem)/engineering/page.tsx)
 │   │   │       ├── maths/
 │   │   │       │   ├── __tests__/
 │   │   │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/maths/__tests__/page.test.tsx)
@@ -541,122 +650,130 @@
 │   │   │       │   │   ├── __tests__/
 │   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(stem)/maths/cyclic/__tests__/page.test.tsx)
 │   │   │       │   │   └── [page.tsx](./src/app/(games)/(stem)/maths/cyclic/page.tsx)
+│   │   │       │   ├── fibonacci-sequence/
+│   │   │       │   │   ├── __tests__/
+│   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(stem)/maths/fibonacci-sequence/__tests__/page.test.tsx)
+│   │   │       │   │   └── [page.tsx](./src/app/(games)/(stem)/maths/fibonacci-sequence/page.tsx)
 │   │   │       │   ├── kaprekar-constant/
 │   │   │       │   │   ├── __tests__/
 │   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(stem)/maths/kaprekar-constant/__tests__/page.test.tsx)
 │   │   │       │   │   └── [page.tsx](./src/app/(games)/(stem)/maths/kaprekar-constant/page.tsx)
+│   │   │       │   ├── prime-numbers/
+│   │   │       │   │   ├── __tests__/
+│   │   │       │   │   │   └── [page.test.tsx](./src/app/(games)/(stem)/maths/prime-numbers/__tests__/page.test.tsx)
+│   │   │       │   │   └── [page.tsx](./src/app/(games)/(stem)/maths/prime-numbers/page.tsx)
 │   │   │       │   └── [page.tsx](./src/app/(games)/(stem)/maths/page.tsx)
 │   │   │       └── neuroscience/
-│   │           ├── (anatomy)/
-│   │           │   └── brain-atlas/
-│   │           │       ├── __tests__/
-│   │           │       │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/__tests__/page.test.tsx)
-│   │           │       ├── basal-ganglia/
-│   │           │       │   ├── __tests__/
-│   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/basal-ganglia/__tests__/page.test.tsx)
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/basal-ganglia/page.tsx)
-│   │           │       ├── brainstem/
-│   │           │       │   ├── __tests__/
-│   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/brainstem/__tests__/page.test.tsx)
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/brainstem/page.tsx)
-│   │           │       ├── cerebellum/
-│   │           │       │   ├── __tests__/
-│   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/cerebellum/__tests__/page.test.tsx)
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/cerebellum/page.tsx)
-│   │           │       ├── cerebral-cortex/
-│   │           │       │   ├── __tests__/
-│   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/cerebral-cortex/__tests__/page.test.tsx)
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/cerebral-cortex/page.tsx)
-│   │           │       ├── corpus-callosum/
-│   │           │       │   ├── __tests__/
-│   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/corpus-callosum/__tests__/page.test.tsx)
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/corpus-callosum/page.tsx)
-│   │           │       ├── diencephalon/
-│   │           │       │   ├── __tests__/
-│   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/diencephalon/__tests__/page.test.tsx)
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/diencephalon/page.tsx)
-│   │           │       ├── interactive/
-│   │           │       │   ├── __tests__/
-│   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/interactive/__tests__/page.test.tsx)
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/interactive/page.tsx)
-│   │           │       ├── limbic-structures/
-│   │           │       │   ├── __tests__/
-│   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/limbic-structures/__tests__/page.test.tsx)
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/limbic-structures/page.tsx)
-│   │           │       ├── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/page.tsx)
-│   │           │       └── white-matter/
-│   │           │           ├── __tests__/
-│   │           │           │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/white-matter/__tests__/page.test.tsx)
-│   │           │           └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/white-matter/page.tsx)
-│   │           ├── (neuroimaging)/
-│   │           │   ├── (eeg)/
-│   │           │   │   ├── eeg/
-│   │           │   │   │   ├── interactive/
-│   │           │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(eeg)/eeg/interactive/page.tsx)
-│   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(eeg)/eeg/page.tsx)
-│   │           │   │   └── qeeg/
-│   │           │   │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(eeg)/qeeg/page.tsx)
-│   │           │   ├── (meg)/
-│   │           │   │   ├── meg/
-│   │           │   │   │   ├── interactive/
-│   │           │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(meg)/meg/interactive/page.tsx)
-│   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(meg)/meg/page.tsx)
-│   │           │   │   └── opm-meg/
-│   │           │   │       ├── interactive/
-│   │           │   │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(meg)/opm-meg/interactive/page.tsx)
-│   │           │   │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(meg)/opm-meg/page.tsx)
-│   │           │   └── (mri)/
-│   │           │       ├── fmri/
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(mri)/fmri/page.tsx)
-│   │           │       ├── fnirs/
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(mri)/fnirs/page.tsx)
-│   │           │       └── mri/
-│   │           │           ├── interactive/
-│   │           │           │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(mri)/mri/interactive/page.tsx)
-│   │           │           └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(mri)/mri/page.tsx)
-│   │           ├── (tasks)/
-│   │           │   ├── flanker-task/
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/flanker-task/page.tsx)
-│   │           │   ├── lexical-decision/
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/lexical-decision/page.tsx)
-│   │           │   ├── memory-recognition/
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/memory-recognition/page.tsx)
-│   │           │   ├── numerical-comparison/
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/numerical-comparison/page.tsx)
-│   │           │   ├── random-dot-motion/
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/random-dot-motion/page.tsx)
-│   │           │   ├── stroop-task/
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/stroop-task/page.tsx)
-│   │           │   └── visual-search/
-│   │           │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/visual-search/page.tsx)
-│   │           ├── (theory)/
-│   │           │   ├── attentional-drift-diffusion-model/
-│   │           │   │   ├── interactive/
-│   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/attentional-drift-diffusion-model/interactive/page.tsx)
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/attentional-drift-diffusion-model/page.tsx)
-│   │           │   ├── drift-diffusion-model/
-│   │           │   │   ├── interactive/
-│   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/drift-diffusion-model/interactive/page.tsx)
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/drift-diffusion-model/page.tsx)
-│   │           │   ├── hierarchical-drift-diffusion-model/
-│   │           │   │   ├── interactive/
-│   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/hierarchical-drift-diffusion-model/interactive/page.tsx)
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/hierarchical-drift-diffusion-model/page.tsx)
-│   │           │   ├── leaky-competing-accumulator/
-│   │           │   │   ├── interactive/
-│   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/leaky-competing-accumulator/interactive/page.tsx)
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/leaky-competing-accumulator/page.tsx)
-│   │           │   ├── linear-ballistic-accumulator/
-│   │           │   │   ├── interactive/
-│   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/linear-ballistic-accumulator/interactive/page.tsx)
-│   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/linear-ballistic-accumulator/page.tsx)
-│   │           │   └── race-models/
-│   │           │       ├── interactive/
-│   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/race-models/interactive/page.tsx)
-│   │           │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/race-models/page.tsx)
-│   │           ├── __tests__/
-│   │           │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/__tests__/page.test.tsx)
-│   │           └── [page.tsx](./src/app/(games)/(stem)/neuroscience/page.tsx)
+│   │   │           ├── (anatomy)/
+│   │   │           │   └── brain-atlas/
+│   │   │           │       ├── __tests__/
+│   │   │           │       │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/__tests__/page.test.tsx)
+│   │   │           │       ├── basal-ganglia/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/basal-ganglia/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/basal-ganglia/page.tsx)
+│   │   │           │       ├── brainstem/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/brainstem/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/brainstem/page.tsx)
+│   │   │           │       ├── cerebellum/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/cerebellum/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/cerebellum/page.tsx)
+│   │   │           │       ├── cerebral-cortex/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/cerebral-cortex/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/cerebral-cortex/page.tsx)
+│   │   │           │       ├── corpus-callosum/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/corpus-callosum/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/corpus-callosum/page.tsx)
+│   │   │           │       ├── diencephalon/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/diencephalon/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/diencephalon/page.tsx)
+│   │   │           │       ├── interactive/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/interactive/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/interactive/page.tsx)
+│   │   │           │       ├── limbic-structures/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/limbic-structures/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/limbic-structures/page.tsx)
+│   │   │           │       ├── white-matter/
+│   │   │           │       │   ├── __tests__/
+│   │   │           │       │   │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/white-matter/__tests__/page.test.tsx)
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/white-matter/page.tsx)
+│   │   │           │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(anatomy)/brain-atlas/page.tsx)
+│   │   │           ├── (neuroimaging)/
+│   │   │           │   ├── (eeg)/
+│   │   │           │   │   ├── eeg/
+│   │   │           │   │   │   ├── interactive/
+│   │   │           │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(eeg)/eeg/interactive/page.tsx)
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(eeg)/eeg/page.tsx)
+│   │   │           │   │   └── qeeg/
+│   │   │           │   │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(eeg)/qeeg/page.tsx)
+│   │   │           │   ├── (meg)/
+│   │   │           │   │   ├── meg/
+│   │   │           │   │   │   ├── interactive/
+│   │   │           │   │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(meg)/meg/interactive/page.tsx)
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(meg)/meg/page.tsx)
+│   │   │           │   │   └── opm-meg/
+│   │   │           │   │       ├── interactive/
+│   │   │           │   │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(meg)/opm-meg/interactive/page.tsx)
+│   │   │           │   │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(meg)/opm-meg/page.tsx)
+│   │   │           │   └── (mri)/
+│   │   │           │       ├── fmri/
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(mri)/fmri/page.tsx)
+│   │   │           │       ├── fnirs/
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(mri)/fnirs/page.tsx)
+│   │   │           │       └── mri/
+│   │   │           │           ├── interactive/
+│   │   │           │           │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(mri)/mri/interactive/page.tsx)
+│   │   │           │           └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(neuroimaging)/(mri)/mri/page.tsx)
+│   │   │           ├── (tasks)/
+│   │   │           │   ├── flanker-task/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/flanker-task/page.tsx)
+│   │   │           │   ├── lexical-decision/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/lexical-decision/page.tsx)
+│   │   │           │   ├── memory-recognition/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/memory-recognition/page.tsx)
+│   │   │           │   ├── numerical-comparison/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/numerical-comparison/page.tsx)
+│   │   │           │   ├── random-dot-motion/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/random-dot-motion/page.tsx)
+│   │   │           │   ├── stroop-task/
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/stroop-task/page.tsx)
+│   │   │           │   └── visual-search/
+│   │   │           │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(tasks)/visual-search/page.tsx)
+│   │   │           ├── (theory)/
+│   │   │           │   ├── attentional-drift-diffusion-model/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/attentional-drift-diffusion-model/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/attentional-drift-diffusion-model/page.tsx)
+│   │   │           │   ├── drift-diffusion-model/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/drift-diffusion-model/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/drift-diffusion-model/page.tsx)
+│   │   │           │   ├── hierarchical-drift-diffusion-model/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/hierarchical-drift-diffusion-model/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/hierarchical-drift-diffusion-model/page.tsx)
+│   │   │           │   ├── leaky-competing-accumulator/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/leaky-competing-accumulator/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/leaky-competing-accumulator/page.tsx)
+│   │   │           │   ├── linear-ballistic-accumulator/
+│   │   │           │   │   ├── interactive/
+│   │   │           │   │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/linear-ballistic-accumulator/interactive/page.tsx)
+│   │   │           │   │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/linear-ballistic-accumulator/page.tsx)
+│   │   │           │   └── race-models/
+│   │   │           │       ├── interactive/
+│   │   │           │       │   └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/race-models/interactive/page.tsx)
+│   │   │           │       └── [page.tsx](./src/app/(games)/(stem)/neuroscience/(theory)/race-models/page.tsx)
+│   │   │           ├── __tests__/
+│   │   │           │   └── [page.test.tsx](./src/app/(games)/(stem)/neuroscience/__tests__/page.test.tsx)
+│   │   │           └── [page.tsx](./src/app/(games)/(stem)/neuroscience/page.tsx)
 │   │   ├── (info)/
 │   │   │   ├── about/
 │   │   │   │   ├── __tests__/
@@ -671,6 +788,7 @@
 │   │   │       │   └── [page.test.tsx](./src/app/(info)/version/__tests__/page.test.tsx)
 │   │   │       └── [page.tsx](./src/app/(info)/version/page.tsx)
 │   │   ├── __tests__/
+│   │   │   ├── [engineering-routes.test.tsx](./src/app/__tests__/engineering-routes.test.tsx)
 │   │   │   ├── [error.test.tsx](./src/app/__tests__/error.test.tsx)
 │   │   │   ├── [forbidden.test.tsx](./src/app/__tests__/forbidden.test.tsx)
 │   │   │   ├── [global-error.test.tsx](./src/app/__tests__/global-error.test.tsx)
@@ -1876,6 +1994,72 @@
 │   │       │       │   └── [utils.test.ts](./src/games/stem/chemistry/periodic-table/__tests__/utils.test.ts)
 │   │       │       ├── [index.tsx](./src/games/stem/chemistry/periodic-table/index.tsx)
 │   │       │       └── [utils.ts](./src/games/stem/chemistry/periodic-table/utils.ts)
+│   │       ├── engineering/
+│   │       │   ├── algorithms/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── [searches.test.ts](./src/games/stem/engineering/algorithms/__tests__/searches.test.ts)
+│   │       │   │   │   └── [sorts.test.ts](./src/games/stem/engineering/algorithms/__tests__/sorts.test.ts)
+│   │       │   │   ├── binary-search/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/algorithms/binary-search/index.tsx)
+│   │       │   │   ├── bubble-sort/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/algorithms/bubble-sort/index.tsx)
+│   │       │   │   ├── heap-sort/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/algorithms/heap-sort/index.tsx)
+│   │       │   │   ├── insertion-sort/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/algorithms/insertion-sort/index.tsx)
+│   │       │   │   ├── linear-search/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/algorithms/linear-search/index.tsx)
+│   │       │   │   ├── merge-sort/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/algorithms/merge-sort/index.tsx)
+│   │       │   │   ├── quick-sort/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/algorithms/quick-sort/index.tsx)
+│   │       │   │   ├── selection-sort/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/algorithms/selection-sort/index.tsx)
+│   │       │   │   ├── [profiles.ts](./src/games/stem/engineering/algorithms/profiles.ts)
+│   │       │   │   ├── [searches.ts](./src/games/stem/engineering/algorithms/searches.ts)
+│   │       │   │   ├── [sorts-divide.ts](./src/games/stem/engineering/algorithms/sorts-divide.ts)
+│   │       │   │   └── [sorts-quadratic.ts](./src/games/stem/engineering/algorithms/sorts-quadratic.ts)
+│   │       │   ├── data-structures/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── [structures-ui.test.tsx](./src/games/stem/engineering/data-structures/__tests__/structures-ui.test.tsx)
+│   │       │   │   │   └── [structures.test.ts](./src/games/stem/engineering/data-structures/__tests__/structures.test.ts)
+│   │       │   │   ├── array/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/array/index.tsx)
+│   │       │   │   ├── disjoint-set/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/disjoint-set/index.tsx)
+│   │       │   │   ├── fenwick-trees/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/fenwick-trees/index.tsx)
+│   │       │   │   ├── hash-tables/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/hash-tables/index.tsx)
+│   │       │   │   ├── linked-lists/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/linked-lists/index.tsx)
+│   │       │   │   ├── queues/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/queues/index.tsx)
+│   │       │   │   ├── segment-trees/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/segment-trees/index.tsx)
+│   │       │   │   ├── stacks/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/stacks/index.tsx)
+│   │       │   │   ├── suffix-arrays/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/suffix-arrays/index.tsx)
+│   │       │   │   ├── trie/
+│   │       │   │   │   └── [index.tsx](./src/games/stem/engineering/data-structures/trie/index.tsx)
+│   │       │   │   ├── [linear-structures.tsx](./src/games/stem/engineering/data-structures/linear-structures.tsx)
+│   │       │   │   ├── [linear.ts](./src/games/stem/engineering/data-structures/linear.ts)
+│   │       │   │   ├── [linked-list.tsx](./src/games/stem/engineering/data-structures/linked-list.tsx)
+│   │       │   │   ├── [ranges.ts](./src/games/stem/engineering/data-structures/ranges.ts)
+│   │       │   │   ├── [structures.tsx](./src/games/stem/engineering/data-structures/structures.tsx)
+│   │       │   │   ├── [suffix.ts](./src/games/stem/engineering/data-structures/suffix.ts)
+│   │       │   │   └── [trees.ts](./src/games/stem/engineering/data-structures/trees.ts)
+│   │       │   └── shared/
+│   │       │       ├── [ArrayBars.tsx](./src/games/stem/engineering/shared/ArrayBars.tsx)
+│   │       │       ├── [Controls.tsx](./src/games/stem/engineering/shared/Controls.tsx)
+│   │       │       ├── [SearchSimulator.tsx](./src/games/stem/engineering/shared/SearchSimulator.tsx)
+│   │       │       ├── [SlotGrid.tsx](./src/games/stem/engineering/shared/SlotGrid.tsx)
+│   │       │       ├── [SortSimulator.tsx](./src/games/stem/engineering/shared/SortSimulator.tsx)
+│   │       │       ├── [random.ts](./src/games/stem/engineering/shared/random.ts)
+│   │       │       ├── [recorder.ts](./src/games/stem/engineering/shared/recorder.ts)
+│   │       │       ├── [types.ts](./src/games/stem/engineering/shared/types.ts)
+│   │       │       └── [usePlayer.ts](./src/games/stem/engineering/shared/usePlayer.ts)
 │   │       ├── maths/
 │   │       │   ├── attractors/
 │   │       │   │   ├── __tests__/
@@ -1896,12 +2080,24 @@
 │   │       │   │   │   └── [utils.test.ts](./src/games/stem/maths/cyclic/__tests__/utils.test.ts)
 │   │       │   │   ├── [index.tsx](./src/games/stem/maths/cyclic/index.tsx)
 │   │       │   │   └── [utils.ts](./src/games/stem/maths/cyclic/utils.ts)
-│   │       │   └── kaprekar-constant/
+│   │       │   ├── fibonacci-sequence/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── [index.test.tsx](./src/games/stem/maths/fibonacci-sequence/__tests__/index.test.tsx)
+│   │       │   │   │   └── [utils.test.ts](./src/games/stem/maths/fibonacci-sequence/__tests__/utils.test.ts)
+│   │       │   │   ├── [index.tsx](./src/games/stem/maths/fibonacci-sequence/index.tsx)
+│   │       │   │   └── [utils.ts](./src/games/stem/maths/fibonacci-sequence/utils.ts)
+│   │       │   ├── kaprekar-constant/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── [index.test.tsx](./src/games/stem/maths/kaprekar-constant/__tests__/index.test.tsx)
+│   │       │   │   │   └── [utils.test.ts](./src/games/stem/maths/kaprekar-constant/__tests__/utils.test.ts)
+│   │       │   │   ├── [index.tsx](./src/games/stem/maths/kaprekar-constant/index.tsx)
+│   │       │   │   └── [utils.ts](./src/games/stem/maths/kaprekar-constant/utils.ts)
+│   │       │   └── prime-numbers/
 │   │       │       ├── __tests__/
-│   │       │       │   ├── [index.test.tsx](./src/games/stem/maths/kaprekar-constant/__tests__/index.test.tsx)
-│   │       │       │   └── [utils.test.ts](./src/games/stem/maths/kaprekar-constant/__tests__/utils.test.ts)
-│   │       │       ├── [index.tsx](./src/games/stem/maths/kaprekar-constant/index.tsx)
-│   │       │       └── [utils.ts](./src/games/stem/maths/kaprekar-constant/utils.ts)
+│   │       │       │   ├── [index.test.tsx](./src/games/stem/maths/prime-numbers/__tests__/index.test.tsx)
+│   │       │       │   └── [utils.test.ts](./src/games/stem/maths/prime-numbers/__tests__/utils.test.ts)
+│   │       │       ├── [index.tsx](./src/games/stem/maths/prime-numbers/index.tsx)
+│   │       │       └── [utils.ts](./src/games/stem/maths/prime-numbers/utils.ts)
 │   │       └── neuroscience/
 │   │           ├── anatomy/
 │   │           │   └── brain-atlas/
@@ -2113,4 +2309,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-649 directories, 1460 files
+739 directories, 1567 files

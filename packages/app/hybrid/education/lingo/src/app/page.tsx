@@ -13,6 +13,7 @@ import {
   PiMathOperations,
   PiMusicNote,
   PiPalette,
+  PiTreeStructure,
   PiUsers,
 } from 'react-icons/pi';
 
@@ -36,6 +37,13 @@ const ITEMS = [
     description: 'Computational models of perception and decision-making',
     icon: PiBrain,
     href: '/neuroscience/',
+    group: 'STEM',
+  },
+  {
+    name: 'Engineering',
+    description: 'Data structures and algorithms, visualised step by step',
+    icon: PiTreeStructure,
+    href: '/engineering/',
     group: 'STEM',
   },
   {
