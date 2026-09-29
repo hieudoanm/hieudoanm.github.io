@@ -42,10 +42,28 @@
 │   │   ├── [hexagonal.md](./development/architecture/hexagonal.md)
 │   │   ├── [microservices.md](./development/architecture/microservices.md)
 │   │   └── [monolith.md](./development/architecture/monolith.md)
-│   └── security/
-│       ├── [jwt.md](./development/security/jwt.md)
-│       ├── [oauth2.md](./development/security/oauth2.md)
-│       └── [oidc.md](./development/security/oidc.md)
+│   ├── linux/
+│   │   ├── [arch.md](./development/linux/arch.md)
+│   │   ├── [debian.md](./development/linux/debian.md)
+│   │   ├── [mint.md](./development/linux/mint.md)
+│   │   └── [ubuntu.md](./development/linux/ubuntu.md)
+│   ├── security/
+│   │   ├── [jwt.md](./development/security/jwt.md)
+│   │   ├── [oauth2.md](./development/security/oauth2.md)
+│   │   └── [oidc.md](./development/security/oidc.md)
+│   └── tools/
+│       ├── api/
+│       │   ├── [bruno.md](./development/tools/api/bruno.md)
+│       │   ├── [insomnia.md](./development/tools/api/insomnia.md)
+│       │   └── [postman.md](./development/tools/api/postman.md)
+│       ├── editor/
+│       │   ├── [antigravity.md](./development/tools/editor/antigravity.md)
+│       │   ├── [cursor.md](./development/tools/editor/cursor.md)
+│       │   ├── [neovim.md](./development/tools/editor/neovim.md)
+│       │   ├── [vscode.md](./development/tools/editor/vscode.md)
+│       │   └── [zed.md](./development/tools/editor/zed.md)
+│       ├── [renovate.md](./development/tools/renovate.md)
+│       └── [snyk.md](./development/tools/snyk.md)
 ├── devops/
 │   ├── ci/
 │   │   ├── [circle-ci.md](./devops/ci/circle-ci.md)
@@ -84,14 +102,20 @@
 │   ├── bash/
 │   │   └── [bash.md](./languages/bash/bash.md)
 │   ├── c/
-│   │   └── [c.md](./languages/c/c.md)
-│   ├── cpp/
 │   │   ├── game/
-│   │   │   └── [unreal.md](./languages/cpp/game/unreal.md)
-│   │   └── [cpp.md](./languages/cpp/cpp.md)
+│   │   │   └── [unreal.md](./languages/c/game/unreal.md)
+│   │   ├── ide/
+│   │   │   └── [clion.md](./languages/c/ide/clion.md)
+│   │   ├── [c.md](./languages/c/c.md)
+│   │   └── [cpp.md](./languages/c/cpp.md)
 │   ├── csharp/
 │   │   ├── game/
 │   │   │   └── [unity.md](./languages/csharp/game/unity.md)
+│   │   ├── ide/
+│   │   │   ├── [rider.md](./languages/csharp/ide/rider.md)
+│   │   │   └── [visual-studio.md](./languages/csharp/ide/visual-studio.md)
+│   │   ├── ui/
+│   │   │   └── [windows.md](./languages/csharp/ui/windows.md)
 │   │   ├── [csharp.md](./languages/csharp/csharp.md)
 │   │   └── [dotnet.md](./languages/csharp/dotnet.md)
 │   ├── css/
@@ -143,6 +167,8 @@
 │   │   │   ├── [micronaut.md](./languages/java/backend/micronaut.md)
 │   │   │   ├── [quarkus.md](./languages/java/backend/quarkus.md)
 │   │   │   └── [spring-boot.md](./languages/java/backend/spring-boot.md)
+│   │   ├── ide/
+│   │   │   └── [idea.md](./languages/java/ide/idea.md)
 │   │   └── [java.md](./languages/java/java.md)
 │   ├── kotlin/
 │   │   ├── backend/
@@ -150,7 +176,10 @@
 │   │   ├── cli/
 │   │   │   ├── [clikt.md](./languages/kotlin/cli/clikt.md)
 │   │   │   └── [mordant.md](./languages/kotlin/cli/mordant.md)
+│   │   ├── ide/
+│   │   │   └── [android-studio.md](./languages/kotlin/ide/android-studio.md)
 │   │   ├── ui/
+│   │   │   ├── [android.md](./languages/kotlin/ui/android.md)
 │   │   │   ├── [compose.md](./languages/kotlin/ui/compose.md)
 │   │   │   └── [material-design-m3.md](./languages/kotlin/ui/material-design-m3.md)
 │   │   └── [kotlin.md](./languages/kotlin/kotlin.md)
@@ -159,6 +188,8 @@
 │   ├── php/
 │   │   ├── backend/
 │   │   │   └── [laravel.md](./languages/php/backend/laravel.md)
+│   │   ├── ide/
+│   │   │   └── [php-storm.md](./languages/php/ide/php-storm.md)
 │   │   └── [php.md](./languages/php/php.md)
 │   ├── power-shell/
 │   │   └── [power-shell.md](./languages/power-shell/power-shell.md)
@@ -190,6 +221,8 @@
 │   │   │       ├── [scikit-learn.md](./languages/python/data/science/scikit-learn.md)
 │   │   │       ├── [tensorflow.md](./languages/python/data/science/tensorflow.md)
 │   │   │       └── [xgboost.md](./languages/python/data/science/xgboost.md)
+│   │   ├── ide/
+│   │   │   └── [pycharm.md](./languages/python/ide/pycharm.md)
 │   │   ├── orm/
 │   │   │   └── [sql-alchemy.md](./languages/python/orm/sql-alchemy.md)
 │   │   └── [python.md](./languages/python/python.md)
@@ -202,6 +235,8 @@
 │   ├── ruby/
 │   │   ├── backend/
 │   │   │   └── [rails.md](./languages/ruby/backend/rails.md)
+│   │   ├── ide/
+│   │   │   └── [ruby-mine.md](./languages/ruby/ide/ruby-mine.md)
 │   │   └── [ruby.md](./languages/ruby/ruby.md)
 │   ├── rust/
 │   │   ├── backend/
@@ -215,6 +250,8 @@
 │   │   │   ├── [argh.md](./languages/rust/cli/argh.md)
 │   │   │   ├── [clap.md](./languages/rust/cli/clap.md)
 │   │   │   └── [ratatui.md](./languages/rust/cli/ratatui.md)
+│   │   ├── ide/
+│   │   │   └── [rust-rover.md](./languages/rust/ide/rust-rover.md)
 │   │   ├── ui/
 │   │   │   ├── [slint.material.md](./languages/rust/ui/slint.material.md)
 │   │   │   └── [tauri.md](./languages/rust/ui/tauri.md)
@@ -228,7 +265,12 @@
 │   ├── swift/
 │   │   ├── cli/
 │   │   │   └── [swift-argument-parser.md](./languages/swift/cli/swift-argument-parser.md)
+│   │   ├── ide/
+│   │   │   └── [xcode.md](./languages/swift/ide/xcode.md)
 │   │   ├── ui/
+│   │   │   ├── [ios.md](./languages/swift/ui/ios.md)
+│   │   │   ├── [ipados.md](./languages/swift/ui/ipados.md)
+│   │   │   ├── [macos.md](./languages/swift/ui/macos.md)
 │   │   │   └── [swiftui.md](./languages/swift/ui/swiftui.md)
 │   │   └── [swift.md](./languages/swift/swift.md)
 │   └── typescript/
@@ -296,6 +338,8 @@
 │       │       └── [zustand.md](./languages/typescript/frontend/state-management/zustand.md)
 │       ├── game/
 │       │   └── [cocos-creator.md](./languages/typescript/game/cocos-creator.md)
+│       ├── ide/
+│       │   └── [web-storm.md](./languages/typescript/ide/web-storm.md)
 │       ├── ml/
 │       │   ├── [brain.js.md](./languages/typescript/ml/brain.js.md)
 │       │   ├── [mind.js.md](./languages/typescript/ml/mind.js.md)
@@ -318,10 +362,12 @@
 │       │       ├── [github-packages.md](./languages/typescript/package/registry/github-packages.md)
 │       │       └── [jsr.md](./languages/typescript/package/registry/jsr.md)
 │       ├── runtime/
+│       │   ├── node/
+│       │   │   ├── [node.md](./languages/typescript/runtime/node/node.md)
+│       │   │   └── [nvm.md](./languages/typescript/runtime/node/nvm.md)
 │       │   ├── [bun.md](./languages/typescript/runtime/bun.md)
 │       │   ├── [deno.md](./languages/typescript/runtime/deno.md)
 │       │   ├── [llrt.md](./languages/typescript/runtime/llrt.md)
-│       │   ├── [node.md](./languages/typescript/runtime/node.md)
 │       │   └── [winter.js.md](./languages/typescript/runtime/winter.js.md)
 │       ├── testing/
 │       │   ├── e2e/
@@ -336,6 +382,11 @@
 │       │       ├── [mocha.js.md](./languages/typescript/testing/unit/mocha.js.md)
 │       │       ├── [testing-library.md](./languages/typescript/testing/unit/testing-library.md)
 │       │       └── [vitest.md](./languages/typescript/testing/unit/vitest.md)
+│       ├── tools/
+│       │   ├── [biome.md](./languages/typescript/tools/biome.md)
+│       │   ├── [eslint.md](./languages/typescript/tools/eslint.md)
+│       │   ├── [husky.md](./languages/typescript/tools/husky.md)
+│       │   └── [prettier.md](./languages/typescript/tools/prettier.md)
 │       ├── [javascript.md](./languages/typescript/javascript.md)
 │       └── [typescript.md](./languages/typescript/typescript.md)
 ├── saas/
@@ -367,4 +418,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-103 directories, 268 files
+117 directories, 297 files

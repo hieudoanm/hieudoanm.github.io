@@ -89,7 +89,7 @@ builder.Services.AddHealthChecks()
 ```
 
 - **`BackgroundService`/`IHostedService` for queues/cron-like work** — graceful shutdown is the framework's contract, don't re-implement it.
-- **Middleware pipelining order matters** (`UseRouting`/auth/cors/`UseEndpoints`) — the request-处理 pipeline is a documented sequence, not a pile.
+- **Middleware pipelining order matters** (`UseRouting`/auth/cors/`UseEndpoints`) — the request-handling pipeline is a documented sequence, not a pile.
 - **Process/configured ports** — Kestrel settings, `ASPNETCORE_URLS`, and `app.UseHttpsRedirection()` (prod) explicit.
 - **Health checks for orchestration** (liveness vs readiness) exposed and consumed by Docker/K8s probes.
 

@@ -82,7 +82,7 @@ EnableSendfile on
 ## 4. Security hardening
 
 - **`ServerTokens Prod`** — expose only `Apache` in server header, not version or modules.
-- **`ServerSignature Off`** — suppress trailing footer on エラーペ이지.
+- **`ServerSignature Off`** — suppress trailing footer on error pages.
 - **`Directory` restrictions** — use `Require all denied` for `.htaccess`, `.git`, and other sensitive directories.
 - **`mod_security`** — deploy rule set for WAF protection.
 

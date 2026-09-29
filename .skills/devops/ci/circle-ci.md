@@ -52,3 +52,4 @@ workflows:
     jobs:
       - build
       - test
+```

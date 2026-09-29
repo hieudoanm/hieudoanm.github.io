@@ -17,7 +17,7 @@ Node.js is a single-threaded, event-loop-based JavaScript runtime with a rich se
 - **`import.meta.url` / `import.meta.dirname`** replace `__dirname` for file-path resolution in ESM:
 
 ```ts
-import { fileURLToPath } from "node:url";
+import { fileURLToPath } from 'node:url';
 const cwd = import.meta.dirname;
 ```
 
@@ -39,8 +39,8 @@ const cwd = import.meta.dirname;
 - **`stream.pipeline` for composed stream chains** — none of the errors leak, and it cleans up automatically:
 
 ```ts
-import { pipeline } from "node:stream/promises";
-import { createReadStream, createWriteStream } from "node:fs";
+import { pipeline } from 'node:stream/promises';
+import { createReadStream, createWriteStream } from 'node:fs';
 
 await pipeline(createReadStream(src), makeTransform(), createWriteStream(dest));
 ```
@@ -56,16 +56,16 @@ await pipeline(createReadStream(src), makeTransform(), createWriteStream(dest));
 - **Signal handling at the composition root**, once — SIGINT/SIGTERM begin graceful shutdown (stop accepting, drain, close server):
 
 ```ts
-import { once } from "node:events";
+import { once } from 'node:events';
 
 const server = createServer();
 server.listen(PORT);
-for (const sig of ["SIGINT", "SIGTERM"] as const) {
-    process.once(sig, async () => {
-        server.close();
-        await drainTasks();                     // flush what's in flight
-        process.exit(0);                       // exit AFTER graceful close
-    });
+for (const sig of ['SIGINT', 'SIGTERM'] as const) {
+  process.once(sig, async () => {
+    server.close();
+    await drainTasks(); // flush what's in flight
+    process.exit(0); // exit AFTER graceful close
+  });
 }
 ```
 
@@ -120,11 +120,11 @@ if (!res.ok) throw new HttpError(res.status);
 - **`node:test` + `node --test`** — zero-dependency runner, structured `describe`/`it`/`t`, test files auto-discovered under `test/`:
 
 ```ts
-import { test } from "node:test";
-import assert from "node:assert/strict";
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
 
-test("loads the value when present", () => {
-    assert.equal(load("k"), "v");
+test('loads the value when present', () => {
+  assert.equal(load('k'), 'v');
 });
 ```
 

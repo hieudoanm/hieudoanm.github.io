@@ -65,7 +65,7 @@ const ITEMS: GameItem[] = [
     description:
       'Judge the direction of coherent motion at four difficulty levels and observe how coherence scales drift rate.',
     icon: PiBrain,
-    href: '/neuroscience/drift-diffusion-model/random-dot-motion/',
+    href: '/neuroscience/random-dot-motion/',
     group: 'Cognitive Tasks',
   },
   {
@@ -74,7 +74,7 @@ const ITEMS: GameItem[] = [
     description:
       'Respond to the central arrow while ignoring flankers — measure the congruency cost on RT and accuracy.',
     icon: PiBrain,
-    href: '/neuroscience/drift-diffusion-model/flanker-task/',
+    href: '/neuroscience/flanker-task/',
     group: 'Cognitive Tasks',
   },
   {
@@ -83,7 +83,7 @@ const ITEMS: GameItem[] = [
     description:
       'Name the ink colour while ignoring the printed colour word — observe the Stroop interference effect.',
     icon: PiBrain,
-    href: '/neuroscience/drift-diffusion-model/stroop-task/',
+    href: '/neuroscience/stroop-task/',
     group: 'Cognitive Tasks',
   },
   {
@@ -92,7 +92,7 @@ const ITEMS: GameItem[] = [
     description:
       'Decide if each letter string is a real word — compare RTs for words vs non-words.',
     icon: PiBrain,
-    href: '/neuroscience/drift-diffusion-model/lexical-decision/',
+    href: '/neuroscience/lexical-decision/',
     group: 'Cognitive Tasks',
   },
   {
@@ -101,7 +101,7 @@ const ITEMS: GameItem[] = [
     description:
       'Choose the larger of two digits and experience the distance effect on speed and accuracy.',
     icon: PiBrain,
-    href: '/neuroscience/drift-diffusion-model/numerical-comparison/',
+    href: '/neuroscience/numerical-comparison/',
     group: 'Cognitive Tasks',
   },
   {
@@ -110,7 +110,7 @@ const ITEMS: GameItem[] = [
     description:
       'Study a word list, then judge Old vs New probes — measure hit rate and false alarms.',
     icon: PiBrain,
-    href: '/neuroscience/drift-diffusion-model/memory-recognition/',
+    href: '/neuroscience/memory-recognition/',
     group: 'Cognitive Tasks',
   },
   {
@@ -119,8 +119,71 @@ const ITEMS: GameItem[] = [
     description:
       'Find the red circle among distractors across three set sizes — observe the set-size effect on RT.',
     icon: PiBrain,
-    href: '/neuroscience/drift-diffusion-model/visual-search/',
+    href: '/neuroscience/visual-search/',
     group: 'Cognitive Tasks',
+  },
+  {
+    testId: 'neuroscience-eeg',
+    name: 'Electroencephalography (EEG)',
+    description:
+      'Scalp voltage from cortical synchrony — the volume conductor problem, artefacts, and what ERPs reveal.',
+    icon: PiBrain,
+    href: '/neuroscience/eeg/',
+    group: 'Neuroimaging',
+  },
+  {
+    testId: 'neuroscience-qeeg',
+    name: 'Quantitative EEG (qEEG)',
+    description:
+      'Spectral power and phase coupling from scalp recordings — and why the processing chain matters more than the metric.',
+    icon: PiBrain,
+    href: '/neuroscience/qeeg/',
+    group: 'Neuroimaging',
+  },
+  {
+    testId: 'neuroscience-meg',
+    name: 'Magnetoencephalography (MEG)',
+    description:
+      'Millisecond-resolution magnetic fields — why the skull is transparent to MEG, and what SQUID hardware costs.',
+    icon: PiBrain,
+    href: '/neuroscience/meg/',
+    group: 'Neuroimaging',
+  },
+  {
+    testId: 'neuroscience-opm-meg',
+    name: 'OPM-MEG',
+    description:
+      'Room-temperature on-scalp MEG — no cryogenics, a sensor fitted to each head, and real MEG/EEG co-registration.',
+    icon: PiBrain,
+    href: '/neuroscience/opm-meg/',
+    group: 'Neuroimaging',
+  },
+  {
+    testId: 'neuroscience-mri',
+    name: 'Magnetic Resonance Imaging (MRI)',
+    description:
+      'Anatomy, diffusion, and the BOLD signal — spatial resolution bought with a sluggish haemodynamic response.',
+    icon: PiBrain,
+    href: '/neuroscience/mri/',
+    group: 'Neuroimaging',
+  },
+  {
+    testId: 'neuroscience-fmri',
+    name: 'Functional MRI (fMRI)',
+    description:
+      'The BOLD contrast — a vascular proxy for neural activity, with temporal resolution set by the repetition time.',
+    icon: PiBrain,
+    href: '/neuroscience/fmri/',
+    group: 'Neuroimaging',
+  },
+  {
+    testId: 'neuroscience-fnirs',
+    name: 'fNIRS',
+    description:
+      'Near-infrared haemoglobin measurement through the skull — portable, motion-tolerant, and shallow.',
+    icon: PiBrain,
+    href: '/neuroscience/fnirs/',
+    group: 'Neuroimaging',
   },
 ];
 
