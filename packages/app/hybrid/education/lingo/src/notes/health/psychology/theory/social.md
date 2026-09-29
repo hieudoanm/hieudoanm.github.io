@@ -2,8 +2,8 @@
 {
   'title': 'Social Psychology',
   'subtitle':
-    'How other people change what you think, feel and do — including when you
-    are not aware of it.',
+    "How other people change what you think, feel and do — including when
+    you\n    are not aware of it.",
   'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
   'links':
     [

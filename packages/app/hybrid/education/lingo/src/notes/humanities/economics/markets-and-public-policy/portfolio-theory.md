@@ -2,16 +2,16 @@
 {
   'title': 'Portfolio Theory',
   'subtitle':
-    'Why diversification is the only free lunch in investing—and how to build an
-    optimal mix.',
+    "Why diversification is the only free lunch in investing—and how to build
+    an\n    optimal mix.",
   'links':
     [
       {
         'href': '/economics/portfolio-theory/frontier',
         'label': 'Diversification Lab',
         'description':
-          'Mix three risky assets to trace the efficient frontier, and discover
-          the 1/√N rule of idiosyncratic-risk reduction.',
+          "Mix three risky assets to trace the efficient frontier, and
+          discover\n          the 1/√N rule of idiosyncratic-risk reduction.",
       },
     ],
   'references':

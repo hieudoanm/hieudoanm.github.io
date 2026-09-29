@@ -9,8 +9,8 @@
         'href': '/economics/monopoly-and-market-power/pricing',
         'label': 'Monopoly Pricing Lab',
         'description':
-          'Sole seller of a linear-demand good: pick output to maximize profit
-          and see the deadweight loss left behind.',
+          "Sole seller of a linear-demand good: pick output to maximize
+          profit\n          and see the deadweight loss left behind.",
       },
     ],
   'references':
@@ -19,8 +19,8 @@
         'href': 'https://en.wikipedia.org/wiki/Monopoly',
         'label': 'Wikipedia: Monopoly',
         'description':
-          'Overview of monopoly theory, pricing, deadweight loss, and
-          regulation.',
+          "Overview of monopoly theory, pricing, deadweight loss,
+          and\n          regulation.",
       },
       {
         'href': 'https://www.investopedia.com/terms/m/monopoly.asp',

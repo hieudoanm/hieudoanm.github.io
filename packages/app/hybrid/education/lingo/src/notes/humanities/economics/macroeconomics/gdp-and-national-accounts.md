@@ -9,8 +9,8 @@
         'href': '/economics/gdp-and-national-accounts/aggregate',
         'label': 'GDP Explorer',
         'description':
-          'Build an economy with C + I + G + NX sliders, then hit target GDP
-          figures in a quiz.',
+          "Build an economy with C + I + G + NX sliders, then hit target
+          GDP\n          figures in a quiz.",
       },
     ],
   'references':
@@ -25,15 +25,15 @@
         'href': 'https://www.investopedia.com/terms/g/gdp.asp',
         'label': 'Investopedia: Gross Domestic Product',
         'description':
-          'Entry explaining GDP calculation, real vs nominal, and economic
-          significance.',
+          "Entry explaining GDP calculation, real vs nominal, and
+          economic\n          significance.",
       },
       {
         'href': 'https://www.bea.gov/resources/methodologies/gdp-dashboard',
         'label': 'BEA: GDP Dashboard',
         'description':
-          'U.S. Bureau of Economic Analysis official GDP data and national
-          accounts methodology.',
+          "U.S. Bureau of Economic Analysis official GDP data and
+          national\n          accounts methodology.",
       },
     ],
 }

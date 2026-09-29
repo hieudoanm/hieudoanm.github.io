@@ -9,8 +9,9 @@
         'href': '/neuroscience/hierarchical-drift-diffusion-model/interactive',
         'label': 'HDDM Simulator',
         'description':
-          'Simulate a group of 50 subjects. Adjust the population variance to
-          see how tightly the individuals cluster around the group mean.',
+          "Simulate a group of 50 subjects. Adjust the population variance
+          to\n          see how tightly the individuals cluster around the group
+          mean.",
       },
     ],
   'references':
@@ -20,8 +21,8 @@
         'label':
           'Wiecki, Sofer, & Frank (2013) — Frontiers in Neuroinformatics',
         'description':
-          'HDDM: Hierarchical Bayesian estimation of the Drift-Diffusion Model
-          in Python.',
+          "HDDM: Hierarchical Bayesian estimation of the Drift-Diffusion
+          Model\n          in Python.",
       },
     ],
 }

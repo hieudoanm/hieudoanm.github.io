@@ -18,22 +18,22 @@
         'href': 'https://en.wikipedia.org/wiki/Social_preferences',
         'label': 'Wikipedia: Social preferences',
         'description':
-          'Overview of fairness, reciprocity, and altruism as social preferences
-          in economic experiments.',
+          "Overview of fairness, reciprocity, and altruism as social
+          preferences\n          in economic experiments.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Ultimatum_game',
         'label': 'Wikipedia: Ultimatum game',
         'description':
-          'The ultimatum game and experimental evidence against pure
-          self-interest.',
+          "The ultimatum game and experimental evidence against
+          pure\n          self-interest.",
       },
       {
         'href': 'https://books.core-econ.org/the-economy/microeconomics/04-strategic-interactions-11-ultimatum-game.html',
         'label': 'CORE Econ: The ultimatum game',
         'description':
-          'Interactive CORE Economics textbook treatment of the ultimatum game
-          and fairness.',
+          "Interactive CORE Economics textbook treatment of the ultimatum
+          game\n          and fairness.",
       },
     ],
 }

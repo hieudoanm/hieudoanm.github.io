@@ -2,16 +2,16 @@
 {
   'title': 'Market Microstructure',
   'subtitle':
-    'How the mechanics of trading—not just fundamentals—shape prices and
-    liquidity.',
+    "How the mechanics of trading—not just fundamentals—shape prices
+    and\n    liquidity.",
   'links':
     [
       {
         'href': '/economics/market-microstructure/order-book',
         'label': 'Order Book',
         'description':
-          'Trade the spread: cross it with market orders or earn it back with
-          limits.',
+          "Trade the spread: cross it with market orders or earn it back
+          with\n          limits.",
       },
     ],
   'references':
@@ -32,8 +32,8 @@
         'href': 'https://en.wikipedia.org/wiki/Grossman%E2%80%93Stiglitz_paradox',
         'label': 'Wikipedia: Grossman-Stiglitz Paradox',
         'description':
-          'Explanation of the paradox linking information costs to market
-          efficiency.',
+          "Explanation of the paradox linking information costs to
+          market\n          efficiency.",
       },
     ],
 }

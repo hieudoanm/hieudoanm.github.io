@@ -10,8 +10,8 @@
         'href': '/engineering/selection-sort/interactive',
         'label': 'Selection Sort Visualiser',
         'description':
-          'Step through each pass and watch the minimum swap into the front of
-          the unsorted region.',
+          "Step through each pass and watch the minimum swap into the front
+          of\n          the unsorted region.",
       },
     ],
   'references':
@@ -20,8 +20,8 @@
         'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
         'label': 'Big O notation',
         'description':
-          'How asymptotic growth classes are defined, and why constants and
-          lower-order terms drop out.',
+          "How asymptotic growth classes are defined, and why constants
+          and\n          lower-order terms drop out.",
       },
     ],
 }

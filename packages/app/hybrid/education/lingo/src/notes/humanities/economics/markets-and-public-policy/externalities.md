@@ -9,8 +9,9 @@
         'href': '/economics/externalities/pigou',
         'label': "Pigou's Factory",
         'description':
-          'Run a polluting mill, then impose a per-ton Pigouvian tax and watch
-          the private profit-maximum slide to the social optimum.',
+          "Run a polluting mill, then impose a per-ton Pigouvian tax and
+          watch\n          the private profit-maximum slide to the social
+          optimum.",
       },
     ],
   'references':
@@ -19,22 +20,22 @@
         'href': 'https://en.wikipedia.org/wiki/Externality',
         'label': 'Wikipedia: Externality',
         'description':
-          'Comprehensive overview of negative and positive externalities, market
-          failure, and remedies.',
+          "Comprehensive overview of negative and positive externalities,
+          market\n          failure, and remedies.",
       },
       {
         'href': 'https://www.investopedia.com/terms/e/externality.asp',
         'label': 'Investopedia: Externalities',
         'description':
-          'Entry defining externalities and their impact on market efficiency
-          and welfare.',
+          "Entry defining externalities and their impact on market
+          efficiency\n          and welfare.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Coase_theorem',
         'label': 'Wikipedia: Coase Theorem',
         'description':
-          'Explanation of how private bargaining can resolve externalities under
-          ideal conditions.',
+          "Explanation of how private bargaining can resolve externalities
+          under\n          ideal conditions.",
       },
     ],
 }

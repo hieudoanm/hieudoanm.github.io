@@ -9,8 +9,8 @@
         'href': '/economics/nash-equilibrium/solve',
         'label': 'Nash Equilibrium Solver',
         'description':
-          'Best-respond to an AI opponent across three classic games and learn
-          to spot Nash equilibria—or when only mixing wins.',
+          "Best-respond to an AI opponent across three classic games and
+          learn\n          to spot Nash equilibria—or when only mixing wins.",
       },
     ],
   'references':
@@ -24,8 +24,8 @@
         'href': 'https://www.investopedia.com/terms/n/nash-equilibrium.asp',
         'label': 'Investopedia: Nash Equilibrium',
         'description':
-          'How it works in game theory, with worked examples including the
-          Prisoner’s Dilemma.',
+          "How it works in game theory, with worked examples including
+          the\n          Prisoner’s Dilemma.",
       },
       {
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/1994/nash/facts/',

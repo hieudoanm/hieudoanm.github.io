@@ -9,8 +9,8 @@
         'href': '/economics/public-goods-dilemma/contribute',
         'label': 'Contribute!',
         'description':
-          'Play a public goods game and watch free riding trump the group
-          optimum.',
+          "Play a public goods game and watch free riding trump the
+          group\n          optimum.",
       },
     ],
   'references':
@@ -19,22 +19,22 @@
         'href': 'https://en.wikipedia.org/wiki/Public_good',
         'label': 'Wikipedia: Public good',
         'description':
-          'Definition of public goods and their characteristics of non-rivalry
-          and non-excludability.',
+          "Definition of public goods and their characteristics of
+          non-rivalry\n          and non-excludability.",
       },
       {
         'href': 'https://www.investopedia.com/terms/p/public-good.asp',
         'label': 'Investopedia: Public Good',
         'description':
-          'Explanation of public goods with examples and their implications for
-          provision.',
+          "Explanation of public goods with examples and their implications
+          for\n          provision.",
       },
       {
         'href': 'https://www.investopedia.com/terms/f/free_rider_problem.asp',
         'label': 'Investopedia: Free-Rider Problem',
         'description':
-          'How free riding arises with public goods and leads to
-          under-provision.',
+          "How free riding arises with public goods and leads
+          to\n          under-provision.",
       },
     ],
 }

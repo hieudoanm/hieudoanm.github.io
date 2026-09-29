@@ -2,16 +2,16 @@
 {
   'title': 'Mental Accounting',
   'subtitle':
-    'Why people treat money differently depending on where it comes from—and
-    where it’s going.',
+    "Why people treat money differently depending on where it comes
+    from—and\n    where it’s going.",
   'links':
     [
       {
         'href': '/economics/mental-accounting/scenarios',
         'label': 'Mental Accounting Game',
         'description':
-          'Wrestle with six Thaler-style vignettes — then split a $1,000
-          windfall across mental accounts.',
+          "Wrestle with six Thaler-style vignettes — then split a
+          $1,000\n          windfall across mental accounts.",
       },
     ],
   'references':
@@ -32,8 +32,8 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2017/summary/',
         'label': 'Nobel Prize: Richard Thaler 2017',
         'description':
-          'Nobel award to Thaler for contributions to behavioral economics
-          including mental accounting.',
+          "Nobel award to Thaler for contributions to behavioral
+          economics\n          including mental accounting.",
       },
     ],
 }

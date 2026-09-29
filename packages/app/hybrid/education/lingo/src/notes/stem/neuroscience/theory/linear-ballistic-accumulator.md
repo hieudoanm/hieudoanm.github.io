@@ -9,8 +9,8 @@
         'href': '/neuroscience/linear-ballistic-accumulator/interactive',
         'label': 'LBA Simulator',
         'description':
-          'Simulate the race between two ballistic accumulators and see how
-          between-trial variability shapes choices.',
+          "Simulate the race between two ballistic accumulators and see
+          how\n          between-trial variability shapes choices.",
       },
     ],
   'references':

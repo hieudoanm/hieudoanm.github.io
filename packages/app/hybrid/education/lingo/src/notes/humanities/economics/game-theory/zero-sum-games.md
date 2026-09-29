@@ -8,8 +8,8 @@
         'href': '/economics/zero-sum-games/rps',
         'label': 'Play RPS',
         'description':
-          'Learn minimax and the value of zero-sum games on the classic
-          playground.',
+          "Learn minimax and the value of zero-sum games on the
+          classic\n          playground.",
       },
     ],
   'references':
@@ -29,8 +29,8 @@
         'href': 'https://plato.stanford.edu/entries/game-theory/',
         'label': 'Stanford Encyclopedia of Philosophy: Game Theory',
         'description':
-          'Formal treatment of strategic games, including zero-sum and
-          mixed-strategy equilibria.',
+          "Formal treatment of strategic games, including zero-sum
+          and\n          mixed-strategy equilibria.",
       },
     ],
 }

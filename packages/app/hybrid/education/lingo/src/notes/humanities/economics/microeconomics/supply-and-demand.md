@@ -8,8 +8,8 @@
         'href': '/economics/supply-and-demand/price-lab',
         'label': 'Price Lab',
         'description':
-          'Drag the curves and see equilibrium, shortages, surpluses and
-          elasticity live.',
+          "Drag the curves and see equilibrium, shortages, surpluses
+          and\n          elasticity live.",
       },
     ],
   'references':
@@ -18,22 +18,22 @@
         'href': 'https://en.wikipedia.org/wiki/Supply_and_demand',
         'label': 'Wikipedia: Supply and demand',
         'description':
-          'Foundational model of how supply and demand determine market prices
-          and quantities.',
+          "Foundational model of how supply and demand determine market
+          prices\n          and quantities.",
       },
       {
         'href': 'https://www.investopedia.com/terms/s/supply.asp',
         'label': 'Investopedia: Supply',
         'description':
-          'Definition of supply, the supply curve, and the factors that shift
-          it.',
+          "Definition of supply, the supply curve, and the factors that
+          shift\n          it.",
       },
       {
         'href': 'https://www.investopedia.com/terms/l/law-of-supply-demand.asp',
         'label': 'Investopedia: Law of Supply and Demand',
         'description':
-          'The law of supply and demand and its role in reaching market
-          equilibrium.',
+          "The law of supply and demand and its role in reaching
+          market\n          equilibrium.",
       },
     ],
 }

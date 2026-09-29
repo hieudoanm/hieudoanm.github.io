@@ -9,9 +9,9 @@
         'href': '/economics/causal-inference/experiments',
         'label': 'Causation Challenge',
         'description':
-          'Interactive quiz: classify six real-world correlations as causal or
-          spurious, using an investigation budget of randomized trials and
-          confounder controls.',
+          "Interactive quiz: classify six real-world correlations as causal
+          or\n          spurious, using an investigation budget of randomized
+          trials and\n          confounder controls.",
       },
     ],
   'references':
@@ -20,22 +20,22 @@
         'href': 'https://en.wikipedia.org/wiki/Causal_inference',
         'label': 'Wikipedia: Causal Inference',
         'description':
-          'Survey of methods for estimating cause and effect from observational
-          and experimental data.',
+          "Survey of methods for estimating cause and effect from
+          observational\n          and experimental data.",
       },
       {
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2021/card-angrist-imbens/summary/',
         'label': 'Nobel Prize: 2021 (Card, Angrist, Imbens)',
         'description':
-          'Nobel Prize page recognizing contributions to natural experiments and
-          causal inference methods.',
+          "Nobel Prize page recognizing contributions to natural experiments
+          and\n          causal inference methods.",
       },
       {
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2019/banerjee-duflo-kremer/summary/',
         'label': 'Nobel Prize: 2019 (Banerjee, Duflo, Kremer)',
         'description':
-          'Nobel Prize page recognizing experimental approaches to alleviating
-          global poverty.',
+          "Nobel Prize page recognizing experimental approaches to
+          alleviating\n          global poverty.",
       },
     ],
 }

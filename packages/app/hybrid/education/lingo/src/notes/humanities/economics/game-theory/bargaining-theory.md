@@ -2,16 +2,16 @@
 {
   'title': 'Bargaining Theory',
   'subtitle':
-    'How two parties divide a surplus—and how the rules of negotiation decide
-    the split.',
+    "How two parties divide a surplus—and how the rules of negotiation
+    decide\n    the split.",
   'links':
     [
       {
         'href': '/economics/bargaining-theory/ultimatum',
         'label': 'Ultimatum Split',
         'description':
-          'Propose a split of $100 and learn how much you must offer to be
-          accepted.',
+          "Propose a split of $100 and learn how much you must offer to
+          be\n          accepted.",
       },
     ],
   'references':
@@ -20,22 +20,22 @@
         'href': 'https://en.wikipedia.org/wiki/Bargaining',
         'label': 'Wikipedia: Bargaining Theory',
         'description':
-          'Survey of axiomatic and game-theoretic models of bilateral
-          bargaining.',
+          "Survey of axiomatic and game-theoretic models of
+          bilateral\n          bargaining.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Nash_bargaining_solution',
         'label': 'Wikipedia: Nash Bargaining Solution',
         'description':
-          "Formal description of Nash's axiomatic approach to the two-person
-          bargaining problem.",
+          "Formal description of Nash's axiomatic approach to the
+          two-person\n          bargaining problem.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Rubinstein_bargaining_model',
         'label': 'Wikipedia: Rubinstein Bargaining Model',
         'description':
-          "Overview of Rubinstein's alternating-offer model and the role of
-          patience in bargaining.",
+          "Overview of Rubinstein's alternating-offer model and the role
+          of\n          patience in bargaining.",
       },
     ],
 }

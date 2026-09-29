@@ -18,22 +18,22 @@
         'href': 'https://en.wikipedia.org/wiki/Endowment_effect',
         'label': 'Wikipedia: Endowment Effect',
         'description':
-          'Overview of the endowment effect, experimental evidence, and
-          theoretical explanations.',
+          "Overview of the endowment effect, experimental evidence,
+          and\n          theoretical explanations.",
       },
       {
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2002/summary/',
         'label': 'Nobel Prize: 2002 Economic Sciences',
         'description':
-          'Nobel citation for Daniel Kahneman for integrating psychological
-          research into economic science.',
+          "Nobel citation for Daniel Kahneman for integrating
+          psychological\n          research into economic science.",
       },
       {
         'href': 'https://www.investopedia.com/terms/e/endowment-effect.asp',
         'label': 'Investopedia: Endowment Effect',
         'description':
-          'Entry explaining the endowment effect, loss aversion, and
-          implications for decision-making.',
+          "Entry explaining the endowment effect, loss aversion,
+          and\n          implications for decision-making.",
       },
     ],
 }

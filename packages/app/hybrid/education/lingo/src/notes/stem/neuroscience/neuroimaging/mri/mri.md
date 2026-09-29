@@ -2,9 +2,9 @@
 {
   'title': 'Magnetic Resonance Imaging (MRI)',
   'subtitle':
-    'Anatomy, tissue microstructure, and blood-oxygenation-level contrast —
-    millimetre spatial resolution in exchange for the poorest temporal
-    resolution of any method here.',
+    "Anatomy, tissue microstructure, and blood-oxygenation-level contrast
+    —\n    millimetre spatial resolution in exchange for the poorest
+    temporal\n    resolution of any method here.",
   'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
   'links':
     [
@@ -12,8 +12,8 @@
         'href': '/neuroscience/mri/interactive',
         'label': 'Haemodynamic Response Simulator',
         'description':
-          'Convolve a neural drive with the vascular response and see the 4–6
-          second lag that sets fMRI temporal resolution.',
+          "Convolve a neural drive with the vascular response and see the
+          4–6\n          second lag that sets fMRI temporal resolution.",
       },
     ],
   'references':
@@ -21,32 +21,32 @@
       {
         'href': 'https://doi.org/10.1073/pnas.87.24.9868',
         'label':
-          'Ogawa, Honda, Kawai et al. (1990) — Proceedings of the National
-          Academy of Sciences',
+          "Ogawa, Honda, Kawai et al. (1990) — Proceedings of the
+          National\n          Academy of Sciences",
         'description':
-          'The original demonstration of intrinsic BOLD contrast in the human
-          brain during activation.',
+          "The original demonstration of intrinsic BOLD contrast in the
+          human\n          brain during activation.",
       },
       {
         'href': 'https://doi.org/10.1038/nrn2348',
         'label': 'Logothetis (2008) — Nature Reviews Neuroscience',
         'description':
-          'What we can and cannot do with fMRI: the physiology of the BOLD
-          signal and the limits of the inferences it supports.',
+          "What we can and cannot do with fMRI: the physiology of the
+          BOLD\n          signal and the limits of the inferences it supports.",
       },
       {
         'href': 'https://doi.org/10.1016/j.tics.2006.05.004',
         'label': 'Poldrack (2006) — Trends in Cognitive Sciences',
         'description':
-          'Why activation maps do not license the reverse inference, with a
-          concrete predictive-code framing.',
+          "Why activation maps do not license the reverse inference, with
+          a\n          concrete predictive-code framing.",
       },
       {
         'href': 'https://doi.org/10.1002/ar.10048',
         'label': 'Beaulieu (2002) — The Anatomical Record',
         'description':
-          'Diffusion-weighted imaging as a neuroanatomical tool, including what
-          tractography can and cannot establish.',
+          "Diffusion-weighted imaging as a neuroanatomical tool, including
+          what\n          tractography can and cannot establish.",
       },
     ],
 }

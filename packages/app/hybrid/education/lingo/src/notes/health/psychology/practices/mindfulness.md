@@ -2,8 +2,8 @@
 {
   'title': 'Mindfulness',
   'subtitle':
-    'Attention trained toward present-moment experience — what the evidence
-    supports, and what it does not.',
+    "Attention trained toward present-moment experience — what the
+    evidence\n    supports, and what it does not.",
   'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
   'links':
     [

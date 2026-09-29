@@ -2,16 +2,16 @@
 {
   'title': 'Monetary Policy & Inflation',
   'subtitle':
-    'How central banks steer the economy through money, interest rates—and
-    expectations.',
+    "How central banks steer the economy through money, interest
+    rates—and\n    expectations.",
   'links':
     [
       {
         'href': '/economics/monetary-policy/interest',
         'label': 'Monetary Policy Lab',
         'description':
-          'Set policy rates against the Taylor rule and steer inflation and
-          output toward target.',
+          "Set policy rates against the Taylor rule and steer inflation
+          and\n          output toward target.",
       },
     ],
   'references':
@@ -20,8 +20,8 @@
         'href': 'https://en.wikipedia.org/wiki/Monetary_policy',
         'label': 'Wikipedia: Monetary Policy',
         'description':
-          'Overview of central bank tools, interest rates, and inflation
-          targeting.',
+          "Overview of central bank tools, interest rates, and
+          inflation\n          targeting.",
       },
       {
         'href': 'https://www.investopedia.com/terms/m/monetarypolicy.asp',
@@ -33,8 +33,8 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2022/popular-information/prize-fact/',
         'label': 'Nobel Prize: 2022 Economic Sciences',
         'description':
-          'Nobel award to Bernanke, Diamond, and Dybvig for research on banks
-          and financial crises.',
+          "Nobel award to Bernanke, Diamond, and Dybvig for research on
+          banks\n          and financial crises.",
       },
     ],
 }

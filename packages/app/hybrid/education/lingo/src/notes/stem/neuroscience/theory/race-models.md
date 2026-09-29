@@ -9,8 +9,8 @@
         'href': '/neuroscience/race-models/interactive',
         'label': 'Race Model Simulator',
         'description':
-          'Run a classic independent race and observe how multiple choices
-          affect decision speed.',
+          "Run a classic independent race and observe how multiple
+          choices\n          affect decision speed.",
       },
     ],
   'references':

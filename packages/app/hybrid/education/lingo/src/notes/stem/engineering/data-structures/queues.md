@@ -2,8 +2,8 @@
 {
   'title': 'Queue',
   'subtitle':
-    'First in, first out: ordering work fairly, and why a naive array wastes
-    memory.',
+    "First in, first out: ordering work fairly, and why a naive array
+    wastes\n    memory.",
   'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
   'links':
     [

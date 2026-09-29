@@ -9,8 +9,8 @@
         'href': '/economics/moral-hazard/insurance',
         'label': 'Hidden Effort',
         'description':
-          'Insure your home, choose how hard to guard it, and watch full cover
-          quietly destroy your incentive to try.',
+          "Insure your home, choose how hard to guard it, and watch full
+          cover\n          quietly destroy your incentive to try.",
       },
     ],
   'references':
@@ -19,8 +19,8 @@
         'href': 'https://en.wikipedia.org/wiki/Moral_hazard',
         'label': 'Wikipedia: Moral Hazard',
         'description':
-          'Overview of moral hazard, asymmetric information, and principal-agent
-          problems.',
+          "Overview of moral hazard, asymmetric information, and
+          principal-agent\n          problems.",
       },
       {
         'href': 'https://www.investopedia.com/terms/m/moralhazard.asp',

@@ -9,9 +9,10 @@
         'href': '/economics/trade-and-tariffs/lab',
         'label': 'Trade & Tariff Lab',
         'description':
-          'Set a tariff on imports and watch consumer, producer, and government
-          surplus shift; then pick tariffs that hit revenue, protection, and
-          import targets before a retaliation round.',
+          "Set a tariff on imports and watch consumer, producer, and
+          government\n          surplus shift; then pick tariffs that hit
+          revenue, protection, and\n          import targets before a
+          retaliation round.",
       },
     ],
   'references':
@@ -32,8 +33,8 @@
         'href': 'https://www.investopedia.com/terms/c/comparativeadvantage.asp',
         'label': 'Investopedia: Comparative Advantage',
         'description':
-          'Comparative advantage explained with examples of mutually beneficial
-          trade.',
+          "Comparative advantage explained with examples of mutually
+          beneficial\n          trade.",
       },
     ],
 }

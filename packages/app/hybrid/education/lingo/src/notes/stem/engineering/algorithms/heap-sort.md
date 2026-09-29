@@ -2,8 +2,8 @@
 {
   'title': 'Heapsort',
   'subtitle':
-    'A guaranteed n log n bound with no auxiliary memory, achieved by treating
-    the array as a heap.',
+    "A guaranteed n log n bound with no auxiliary memory, achieved by
+    treating\n    the array as a heap.",
   'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
   'links':
     [
@@ -20,8 +20,8 @@
         'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
         'label': 'Big O notation',
         'description':
-          'How asymptotic growth classes are defined, and why constants and
-          lower-order terms drop out.',
+          "How asymptotic growth classes are defined, and why constants
+          and\n          lower-order terms drop out.",
       },
     ],
 }

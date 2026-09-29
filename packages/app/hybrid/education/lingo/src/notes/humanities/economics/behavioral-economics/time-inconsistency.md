@@ -2,8 +2,8 @@
 {
   'title': 'Time Inconsistency & Credibility',
   'subtitle':
-    'Why commitments made today so often fail tomorrow—and how to make them
-    stick.',
+    "Why commitments made today so often fail tomorrow—and how to make
+    them\n    stick.",
   'links':
     [
       {
@@ -25,15 +25,15 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2004/summary/',
         'label': 'Nobel Prize: 2004 Prize in Economics',
         'description':
-          'The 2004 Nobel Prize awarded for work on the time consistency of
-          economic policy.',
+          "The 2004 Nobel Prize awarded for work on the time consistency
+          of\n          economic policy.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Hyperbolic_discounting',
         'label': 'Wikipedia: Hyperbolic discounting',
         'description':
-          'Hyperbolic discounting as a model of present-biased intertemporal
-          choice.',
+          "Hyperbolic discounting as a model of present-biased
+          intertemporal\n          choice.",
       },
     ],
 }

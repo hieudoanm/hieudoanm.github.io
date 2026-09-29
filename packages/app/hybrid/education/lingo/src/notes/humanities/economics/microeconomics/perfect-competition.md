@@ -2,16 +2,16 @@
 {
   'title': 'Perfect Competition',
   'subtitle':
-    'The idealized market where no one can influence price—and the benchmark for
-    efficiency.',
+    "The idealized market where no one can influence price—and the benchmark
+    for\n    efficiency.",
   'links':
     [
       {
         'href': '/economics/perfect-competition/firm',
         'label': 'Competitive Firm Lab',
         'description':
-          'A price-taking firm: choose output where price equals marginal cost,
-          and watch long-run profits fall to zero.',
+          "A price-taking firm: choose output where price equals marginal
+          cost,\n          and watch long-run profits fall to zero.",
       },
     ],
   'references':
@@ -25,8 +25,8 @@
         'href': 'https://www.investopedia.com/terms/p/perfectcompetition.asp',
         'label': 'Investopedia: Perfect Competition',
         'description':
-          'Entry on the conditions, results, and efficiency of perfect
-          competition.',
+          "Entry on the conditions, results, and efficiency of
+          perfect\n          competition.",
       },
       {
         'href': 'https://www.britannica.com/topic/perfect-competition',

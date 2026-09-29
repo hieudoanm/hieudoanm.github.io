@@ -2,16 +2,16 @@
 {
   'title': 'Efficient Market Hypothesis',
   'subtitle':
-    'Are prices always right? The theory that markets instantly reflect all
-    available information.',
+    "Are prices always right? The theory that markets instantly reflect
+    all\n    available information.",
   'links':
     [
       {
         'href': '/economics/efficient-market-hypothesis/random-walk',
         'label': 'Random Walk Market',
         'description':
-          'Simulate a weak-form efficient market where a public tip has no
-          reliable predictive power.',
+          "Simulate a weak-form efficient market where a public tip has
+          no\n          reliable predictive power.",
       },
     ],
   'references':
@@ -26,15 +26,15 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2013/summary/',
         'label': 'Nobel Prize: 2013 Economic Sciences',
         'description':
-          'Nobel citation for Eugene Fama, Lars Peter Hansen, and Robert Shiller
-          for empirical analysis of asset prices.',
+          "Nobel citation for Eugene Fama, Lars Peter Hansen, and Robert
+          Shiller\n          for empirical analysis of asset prices.",
       },
       {
         'href': 'https://www.investopedia.com/terms/e/efficientmarkethypothesis.asp',
         'label': 'Investopedia: Efficient Market Hypothesis',
         'description':
-          'Entry explaining the three forms of EMH and implications for
-          investing.',
+          "Entry explaining the three forms of EMH and implications
+          for\n          investing.",
       },
     ],
 }

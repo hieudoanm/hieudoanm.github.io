@@ -9,9 +9,9 @@
         'href': '/economics/development-rcts/experiment',
         'label': 'RCT Simulator',
         'description':
-          'Run your own experiment: pick a sample size and allocation, observe
-          the ATE and confidence interval, then judge whether the finding is
-          significant or noise.',
+          "Run your own experiment: pick a sample size and allocation,
+          observe\n          the ATE and confidence interval, then judge whether
+          the finding is\n          significant or noise.",
       },
     ],
   'references':
@@ -20,22 +20,22 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2019/summary/',
         'label': 'Nobel Prize: 2019 Economic Sciences',
         'description':
-          'Nobel citation for Banerjee, Duflo, and Kremer for their experimental
-          approach to alleviating global poverty.',
+          "Nobel citation for Banerjee, Duflo, and Kremer for their
+          experimental\n          approach to alleviating global poverty.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Randomized_controlled_trial',
         'label': 'Wikipedia: Randomized Controlled Trial',
         'description':
-          'Explanation of RCT methodology, design principles, and applications
-          in development economics.',
+          "Explanation of RCT methodology, design principles, and
+          applications\n          in development economics.",
       },
       {
         'href': 'https://www.povertyactionlab.org/',
         'label': 'J-PAL: Poverty Action Lab',
         'description':
-          'MIT-led network conducting randomized evaluations of anti-poverty
-          programs worldwide.',
+          "MIT-led network conducting randomized evaluations of
+          anti-poverty\n          programs worldwide.",
       },
     ],
 }

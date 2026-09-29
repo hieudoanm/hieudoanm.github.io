@@ -2,16 +2,16 @@
 {
   'title': 'Coordination Games',
   'subtitle':
-    'When the best choice depends on what everyone else chooses—and the
-    challenge is just to agree.',
+    "When the best choice depends on what everyone else chooses—and
+    the\n    challenge is just to agree.",
   'links':
     [
       {
         'href': '/economics/coordination-games/stag-hunt',
         'label': 'Stag Hunt',
         'description':
-          'Coordinate with a partner and learn why trust earns more than playing
-          it safe.',
+          "Coordinate with a partner and learn why trust earns more than
+          playing\n          it safe.",
       },
     ],
   'references':
@@ -20,8 +20,8 @@
         'href': 'https://en.wikipedia.org/wiki/Coordination_game',
         'label': 'Wikipedia: Coordination Game',
         'description':
-          'Overview of coordination games, multiple equilibria, and real-world
-          examples.',
+          "Overview of coordination games, multiple equilibria, and
+          real-world\n          examples.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Stag_hunt',
@@ -33,8 +33,8 @@
         'href': 'https://en.wikipedia.org/wiki/Focal_point_(game_theory)',
         'label': 'Wikipedia: Focal Point (Game Theory)',
         'description':
-          "Schelling's concept of focal points and how people coordinate without
-          communication.",
+          "Schelling's concept of focal points and how people coordinate
+          without\n          communication.",
       },
     ],
 }

@@ -9,8 +9,8 @@
         'href': '/economics/price-discrimination/split',
         'label': 'Segment Pricing Lab',
         'description':
-          'Charge one price or two per-segment prices and see third-degree price
-          discrimination raise the take.',
+          "Charge one price or two per-segment prices and see third-degree
+          price\n          discrimination raise the take.",
       },
     ],
   'references':
@@ -31,8 +31,8 @@
         'href': 'https://www.britannica.com/topic/price-discrimination',
         'label': 'Britannica: Price Discrimination',
         'description':
-          'Article on selling the same product at different prices to different
-          buyers.',
+          "Article on selling the same product at different prices to
+          different\n          buyers.",
       },
     ],
 }

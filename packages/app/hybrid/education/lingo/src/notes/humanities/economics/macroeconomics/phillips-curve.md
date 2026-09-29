@@ -2,16 +2,16 @@
 {
   'title': 'The Phillips Curve',
   'subtitle':
-    'Does lower unemployment always mean higher inflation? The famous
-    tradeoff—and why it breaks.',
+    "Does lower unemployment always mean higher inflation? The
+    famous\n    tradeoff—and why it breaks.",
   'links':
     [
       {
         'href': '/economics/phillips-curve/tradeoff',
         'label': 'Phillips Curve Lab',
         'description':
-          'Navigate short-run tradeoffs, anchor expectations, and see the
-          economy return to NAIRU.',
+          "Navigate short-run tradeoffs, anchor expectations, and see
+          the\n          economy return to NAIRU.",
       },
     ],
   'references':
@@ -26,15 +26,15 @@
         'href': 'https://www.investopedia.com/terms/p/phillipscurve.asp',
         'label': 'Investopedia: Phillips Curve',
         'description':
-          'Entry explaining the inflation–unemployment relationship and its
-          limits.',
+          "Entry explaining the inflation–unemployment relationship and
+          its\n          limits.",
       },
       {
         'href': 'https://www.britannica.com/topic/Phillips-curve',
         'label': 'Britannica: Phillips Curve',
         'description':
-          'Article on the research behind the curve and why the tradeoff broke
-          down.',
+          "Article on the research behind the curve and why the tradeoff
+          broke\n          down.",
       },
     ],
 }

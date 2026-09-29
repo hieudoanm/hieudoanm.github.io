@@ -2,8 +2,8 @@
 {
   'title': 'Trie',
   'subtitle':
-    'A tree of prefixes: lookup time depends on the key length, not on how many
-    keys you store.',
+    "A tree of prefixes: lookup time depends on the key length, not on how
+    many\n    keys you store.",
   'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
   'links':
     [

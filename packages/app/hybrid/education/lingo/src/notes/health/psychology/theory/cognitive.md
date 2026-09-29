@@ -2,8 +2,8 @@
 {
   'title': 'Cognitive Psychology',
   'subtitle':
-    'The architecture of thought: attention, memory, language and the limits of
-    each.',
+    "The architecture of thought: attention, memory, language and the limits
+    of\n    each.",
   'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
   'links':
     [

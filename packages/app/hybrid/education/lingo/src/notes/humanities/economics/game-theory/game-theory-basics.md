@@ -2,16 +2,16 @@
 {
   'title': 'Game Theory Basics',
   'subtitle':
-    'The formal study of strategy: how people make choices when the outcome
-    depends on others.',
+    "The formal study of strategy: how people make choices when the
+    outcome\n    depends on others.",
   'links':
     [
       {
         'href': '/economics/game-theory-basics/matrix',
         'label': 'Payoff Matrix Explorer',
         'description':
-          'Explore six classic 2x2 games: Nash equilibria, dominant strategies,
-          and best responses.',
+          "Explore six classic 2x2 games: Nash equilibria, dominant
+          strategies,\n          and best responses.",
       },
     ],
   'references':
@@ -20,22 +20,22 @@
         'href': 'https://en.wikipedia.org/wiki/Game_theory',
         'label': 'Wikipedia: Game Theory',
         'description':
-          'Comprehensive overview of game theory, solution concepts, and
-          applications.',
+          "Comprehensive overview of game theory, solution concepts,
+          and\n          applications.",
       },
       {
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/1994/summary/',
         'label': 'Nobel Prize: 1994 Economic Sciences',
         'description':
-          'Nobel citation for John Nash, John Harsanyi, and Reinhard Selten for
-          game theory analysis.',
+          "Nobel citation for John Nash, John Harsanyi, and Reinhard Selten
+          for\n          game theory analysis.",
       },
       {
         'href': 'https://plato.stanford.edu/entries/game-theory/',
         'label': 'Stanford Encyclopedia of Philosophy: Game Theory',
         'description':
-          'In-depth philosophical and formal treatment of game theory concepts
-          and debates.',
+          "In-depth philosophical and formal treatment of game theory
+          concepts\n          and debates.",
       },
     ],
 }

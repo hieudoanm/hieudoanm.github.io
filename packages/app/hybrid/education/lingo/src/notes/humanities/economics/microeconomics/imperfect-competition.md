@@ -2,16 +2,17 @@
 {
   'title': 'Imperfect Competition',
   'subtitle':
-    'The real world lies between perfect competition and monopoly—where firms
-    hold some pricing power.',
+    "The real world lies between perfect competition and monopoly—where
+    firms\n    hold some pricing power.",
   'links':
     [
       {
         'href': '/economics/imperfect-competition/lab',
         'label': 'Market Power Lab',
         'description':
-          'Set product differentiation, price, and output across perfect
-          competition, monopolistic competition, and monopoly.',
+          "Set product differentiation, price, and output across
+          perfect\n          competition, monopolistic competition, and
+          monopoly.",
       },
     ],
   'references':
@@ -20,22 +21,22 @@
         'href': 'https://en.wikipedia.org/wiki/Imperfect_competition',
         'label': 'Wikipedia: Imperfect Competition',
         'description':
-          'Overview of market structures between perfect competition and
-          monopoly.',
+          "Overview of market structures between perfect competition
+          and\n          monopoly.",
       },
       {
         'href': 'https://www.investopedia.com/terms/i/imperfectcompetition.asp',
         'label': 'Investopedia: Imperfect Competition',
         'description':
-          'Entry defining imperfect competition and its types: monopolistic
-          competition and oligopoly.',
+          "Entry defining imperfect competition and its types:
+          monopolistic\n          competition and oligopoly.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Monopolistic_competition',
         'label': 'Wikipedia: Monopolistic Competition',
         'description':
-          'Detailed analysis of monopolistic competition, product
-          differentiation, and long-run equilibrium.',
+          "Detailed analysis of monopolistic competition,
+          product\n          differentiation, and long-run equilibrium.",
       },
     ],
 }

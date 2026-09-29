@@ -2,16 +2,17 @@
 {
   'title': 'Poverty Traps',
   'subtitle':
-    'Why the poor can stay poor: self-reinforcing cycles that block escape from
-    destitution.',
+    "Why the poor can stay poor: self-reinforcing cycles that block escape
+    from\n    destitution.",
   'links':
     [
       {
         'href': '/economics/poverty-traps/escape',
         'label': 'Poverty Trap Escape',
         'description':
-          'Simulate the S-shaped savings dynamic and design the minimum one-off
-          transfer that lifts a household past the escape threshold.',
+          "Simulate the S-shaped savings dynamic and design the minimum
+          one-off\n          transfer that lifts a household past the escape
+          threshold.",
       },
     ],
   'references':
@@ -32,8 +33,8 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2019/summary/',
         'label': 'Nobel Prize: 2019 laureates',
         'description':
-          '2019 prize for the experimental approach to alleviating global
-          poverty.',
+          "2019 prize for the experimental approach to alleviating
+          global\n          poverty.",
       },
     ],
 }

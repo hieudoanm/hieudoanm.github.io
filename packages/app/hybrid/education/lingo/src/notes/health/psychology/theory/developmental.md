@@ -2,8 +2,8 @@
 {
   'title': 'Developmental Psychology',
   'subtitle':
-    'How people change across a lifetime — and why the earliest years are not
-    simply a runway to adulthood.',
+    "How people change across a lifetime — and why the earliest years are
+    not\n    simply a runway to adulthood.",
   'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
   'links':
     [

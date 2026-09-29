@@ -2,16 +2,16 @@
 {
   'title': 'Overconfidence Bias',
   'subtitle':
-    'People systematically overestimate their abilities, forecasts, and control
-    over outcomes.',
+    "People systematically overestimate their abilities, forecasts, and
+    control\n    over outcomes.",
   'links':
     [
       {
         'href': '/economics/overconfidence-bias/calibration',
         'label': 'Calibration Challenge',
         'description':
-          'Test how calibrated your confidence is across factual questions, a
-          market bet, and a range estimate.',
+          "Test how calibrated your confidence is across factual questions,
+          a\n          market bet, and a range estimate.",
       },
     ],
   'references':
@@ -31,8 +31,8 @@
         'href': 'https://www.britannica.com/science/Dunning-Kruger-effect',
         'label': 'Britannica: Dunning-Kruger Effect',
         'description':
-          'Related phenomenon in which the least competent overestimate their
-          ability.',
+          "Related phenomenon in which the least competent overestimate
+          their\n          ability.",
       },
     ],
 }

@@ -2,8 +2,8 @@
 {
   'title': 'Linear Search',
   'subtitle':
-    'The only search that needs no ordering — and the baseline every other
-    search is measured against.',
+    "The only search that needs no ordering — and the baseline every
+    other\n    search is measured against.",
   'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
   'links':
     [
@@ -20,15 +20,15 @@
         'href': 'https://en.wikipedia.org/wiki/Binary_search_algorithm',
         'label': 'Binary search algorithm',
         'description':
-          'The halving argument, the exact iteration count, and the
-          preconditions that make it correct.',
+          "The halving argument, the exact iteration count, and
+          the\n          preconditions that make it correct.",
       },
       {
         'href': 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/',
         'label': 'MIT 6.006 — Introduction to Algorithms',
         'description':
-          'Lecture notes covering asymptotics, sorting lower bounds, and
-          hash-based lookup.',
+          "Lecture notes covering asymptotics, sorting lower bounds,
+          and\n          hash-based lookup.",
       },
     ],
 }

@@ -2,8 +2,8 @@
 {
   'title': 'Counselling Psychology',
   'subtitle':
-    'Theories that guide therapy, what the common approaches share, and where a
-    counsellor stops.',
+    "Theories that guide therapy, what the common approaches share, and where
+    a\n    counsellor stops.",
   'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
   'links':
     [

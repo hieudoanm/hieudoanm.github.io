@@ -9,8 +9,8 @@
         'href': '/economics/opportunity-cost/trade-offs',
         'label': 'Trade-Off Builder',
         'description':
-          'Explore explicit monetary opportunity cost with a sandbox and
-          challenge rounds.',
+          "Explore explicit monetary opportunity cost with a sandbox
+          and\n          challenge rounds.",
       },
     ],
   'references':

@@ -2,8 +2,8 @@
 {
   'title': 'Biological Psychology',
   'subtitle':
-    'How neurons, brains and bodies produce behaviour — and why the body is
-    never out of the loop.',
+    "How neurons, brains and bodies produce behaviour — and why the body
+    is\n    never out of the loop.",
   'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
   'links':
     [

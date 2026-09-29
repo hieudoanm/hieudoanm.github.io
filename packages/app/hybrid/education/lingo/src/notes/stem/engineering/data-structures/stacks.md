@@ -2,8 +2,8 @@
 {
   'title': 'Stack',
   'subtitle':
-    'Last in, first out: the discipline behind recursion, undo, and expression
-    evaluation.',
+    "Last in, first out: the discipline behind recursion, undo, and
+    expression\n    evaluation.",
   'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
   'links':
     [

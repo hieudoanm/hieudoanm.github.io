@@ -19,8 +19,8 @@
         'href': 'https://algs4.cs.princeton.edu/home/',
         'label': 'Sedgewick & Flajolet — Algorithms, 4th edition',
         'description':
-          'The standard reference for data-structure invariants and the
-          amortised cost of dynamic array growth.',
+          "The standard reference for data-structure invariants and
+          the\n          amortised cost of dynamic array growth.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Linked_list',

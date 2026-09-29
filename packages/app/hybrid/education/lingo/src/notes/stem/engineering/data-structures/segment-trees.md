@@ -2,8 +2,8 @@
 {
   'title': 'Segment Tree',
   'subtitle':
-    'Disjoint segments storing partial sums, answering any range in logarithmic
-    time.',
+    "Disjoint segments storing partial sums, answering any range in
+    logarithmic\n    time.",
   'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
   'links':
     [
@@ -20,8 +20,8 @@
         'href': 'https://en.wikipedia.org/wiki/Segment_tree',
         'label': 'Segment tree',
         'description':
-          'Disjoint segment decomposition, power-of-two sizing, and lazy
-          propagation.',
+          "Disjoint segment decomposition, power-of-two sizing, and
+          lazy\n          propagation.",
       },
     ],
 }

@@ -2,17 +2,17 @@
 {
   'title': 'Business Cycles',
   'subtitle':
-    'The recurring pattern of expansion and contraction that every economy
-    experiences.',
+    "The recurring pattern of expansion and contraction that every
+    economy\n    experiences.",
   'links':
     [
       {
         'href': '/economics/business-cycles/predict',
         'label': 'Business Cycle Forecaster',
         'description':
-          'Act as an economic forecaster: use trailing growth, unemployment,
-          confidence and inflation to call the next phase of the cycle before it
-          is revealed.',
+          "Act as an economic forecaster: use trailing growth,
+          unemployment,\n          confidence and inflation to call the next
+          phase of the cycle before it\n          is revealed.",
       },
     ],
   'references':
@@ -21,22 +21,22 @@
         'href': 'https://en.wikipedia.org/wiki/Business_cycle',
         'label': 'Wikipedia: Business Cycle',
         'description':
-          'Overview of the phases of the business cycle and competing theories
-          of its causes.',
+          "Overview of the phases of the business cycle and competing
+          theories\n          of its causes.",
       },
       {
         'href': 'https://www.khanacademy.org/economics-finance-domain/macroeconomics/healthy-economy/business-cycles/v/business-cycles-intro',
         'label': 'Khan Academy: Business Cycles Intro',
         'description':
-          'Video introduction to expansions, recessions, and stabilization
-          policy.',
+          "Video introduction to expansions, recessions, and
+          stabilization\n          policy.",
       },
       {
         'href': 'https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions',
         'label': 'NBER: US Business Cycle Dates',
         'description':
-          'Official chronology of US business cycle peaks and troughs maintained
-          by the NBER.',
+          "Official chronology of US business cycle peaks and troughs
+          maintained\n          by the NBER.",
       },
     ],
 }

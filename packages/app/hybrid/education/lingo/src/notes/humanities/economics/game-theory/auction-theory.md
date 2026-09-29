@@ -8,8 +8,8 @@
         'href': '/economics/auction-theory/auction',
         'label': 'Auction Simulator',
         'description':
-          'Bid against three AI bidders across four auction formats and discover
-          revenue equivalence.',
+          "Bid against three AI bidders across four auction formats and
+          discover\n          revenue equivalence.",
       },
     ],
   'references':
@@ -18,22 +18,22 @@
         'href': 'https://en.wikipedia.org/wiki/Auction_theory',
         'label': 'Wikipedia: Auction Theory',
         'description':
-          'Survey of auction theory, formats, and key results like revenue
-          equivalence.',
+          "Survey of auction theory, formats, and key results like
+          revenue\n          equivalence.",
       },
       {
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2020/milgrom-wilson/summary/',
         'label': 'Nobel Prize: 2020 (Milgrom & Wilson)',
         'description':
-          'Nobel Prize page for auction theory pioneers Paul Milgrom and Robert
-          Wilson.',
+          "Nobel Prize page for auction theory pioneers Paul Milgrom and
+          Robert\n          Wilson.",
       },
       {
         'href': 'https://www.investopedia.com/terms/v/vickrey-auction.asp',
         'label': 'Investopedia: Vickrey Auction',
         'description':
-          'Entry explaining the second-price sealed-bid auction and its truthful
-          bidding property.',
+          "Entry explaining the second-price sealed-bid auction and its
+          truthful\n          bidding property.",
       },
     ],
 }

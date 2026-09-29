@@ -2,16 +2,16 @@
 {
   'title': 'Adverse Selection',
   'subtitle':
-    'When hidden information before a deal leads markets to attract exactly the
-    wrong participants.',
+    "When hidden information before a deal leads markets to attract exactly
+    the\n    wrong participants.",
   'links':
     [
       {
         'href': '/economics/adverse-selection/lemons',
         'label': 'The Market for Lemons',
         'description':
-          'Post one price for a used car and watch good cars refuse to sell at
-          "fair" prices—Akerlof''s adverse selection in action.',
+          "Post one price for a used car and watch good cars refuse to sell at
+          'fair' prices—Akerlof's adverse selection in action.",
       },
     ],
   'references':
@@ -20,22 +20,22 @@
         'href': 'https://en.wikipedia.org/wiki/Adverse_selection',
         'label': 'Wikipedia: Adverse Selection',
         'description':
-          'Overview of adverse selection theory, its causes, and market
-          implications.',
+          "Overview of adverse selection theory, its causes, and
+          market\n          implications.",
       },
       {
         'href': 'https://www.investopedia.com/terms/a/adverseselection.asp',
         'label': 'Investopedia: Adverse Selection',
         'description':
-          'Entry defining adverse selection and its role in insurance and
-          financial markets.',
+          "Entry defining adverse selection and its role in insurance
+          and\n          financial markets.",
       },
       {
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2001/akerlof/summary/',
         'label': 'Nobel Prize: George Akerlof (2001)',
         'description':
-          'Nobel Prize page for Akerlof, summarising his research on markets
-          with asymmetric information.',
+          "Nobel Prize page for Akerlof, summarising his research on
+          markets\n          with asymmetric information.",
       },
     ],
 }

@@ -9,8 +9,8 @@
         'href': '/economics/unemployment-okuns-law/lab',
         'label': "Okun's Law Lab",
         'description':
-          "A hands-on lab: steer the unemployment rate with GDP growth and
-          estimate Okun's coefficient from data.",
+          "A hands-on lab: steer the unemployment rate with GDP growth
+          and\n          estimate Okun's coefficient from data.",
       },
     ],
   'references':
@@ -19,8 +19,8 @@
         'href': 'https://www.investopedia.com/terms/o/okunslaw.asp',
         'label': "Investopedia: Okun's Law",
         'description':
-          "Okun's law linking short-run GDP growth to changes in the
-          unemployment rate.",
+          "Okun's law linking short-run GDP growth to changes in
+          the\n          unemployment rate.",
       },
       {
         'href': 'https://www.investopedia.com/terms/u/unemployment.asp',

@@ -9,8 +9,8 @@
         'href': '/economics/tragedy-of-the-commons/harvest',
         'label': 'Commons Harvest',
         'description':
-          'Graze one shared resource against four villagers and try to avoid
-          collapse.',
+          "Graze one shared resource against four villagers and try to
+          avoid\n          collapse.",
       },
     ],
   'references':
@@ -31,8 +31,8 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/',
         'label': 'Nobel Prize: Elinor Ostrom',
         'description':
-          'The 2009 Nobel Prize recognized the governance of common-pool
-          resources.',
+          "The 2009 Nobel Prize recognized the governance of
+          common-pool\n          resources.",
       },
     ],
 }

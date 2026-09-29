@@ -2,16 +2,17 @@
 {
   'title': 'Institutions & Economic Growth',
   'subtitle':
-    'Why the rules of a society—its institutions—decide whether nations prosper
-    or stagnate.',
+    "Why the rules of a society—its institutions—decide whether nations
+    prosper\n    or stagnate.",
   'links':
     [
       {
         'href': '/economics/institutions-and-growth/lab',
         'label': 'Institutions Game',
         'description':
-          'Set property rights, contracts, and stability to drive ten years of
-          GDP growth toward a target—and see inclusive institutions outperform.',
+          "Set property rights, contracts, and stability to drive ten years
+          of\n          GDP growth toward a target—and see inclusive
+          institutions outperform.",
       },
     ],
   'references':
@@ -20,15 +21,15 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2024/popular-information/prize-fact/',
         'label': 'Nobel Prize: 2024 Economic Sciences',
         'description':
-          'Acemoglu, Johnson, and Robinson awarded for work on inclusive
-          institutions and prosperity.',
+          "Acemoglu, Johnson, and Robinson awarded for work on
+          inclusive\n          institutions and prosperity.",
       },
       {
         'href': 'https://en.wikipedia.org/wiki/Why_Nations_Fail',
         'label': 'Wikipedia: Why Nations Fail',
         'description':
-          'Overview of the Acemoglu and Robinson book on inclusive vs extractive
-          institutions.',
+          "Overview of the Acemoglu and Robinson book on inclusive vs
+          extractive\n          institutions.",
       },
       {
         'href': 'https://www.investopedia.com/terms/i/institutional-economics.asp',

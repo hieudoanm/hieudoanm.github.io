@@ -2,8 +2,8 @@
 {
   'title': 'Disjoint Set (Union-Find)',
   'subtitle':
-    'Two operations, near-constant time, and the amortised bound that is almost
-    O(1).',
+    "Two operations, near-constant time, and the amortised bound that is
+    almost\n    O(1).",
   'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
   'links':
     [

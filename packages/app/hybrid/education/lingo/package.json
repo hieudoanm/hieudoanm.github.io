@@ -76,6 +76,7 @@
     "fake-indexeddb": "6.2.5",
     "jest": "30.5.2",
     "jest-environment-jsdom": "30.5.2",
+    "json5": "2.2.3",
     "kill-port": "2.0.1",
     "prettier": "3.9.9",
     "prettier-plugin-tailwindcss": "0.8.1",

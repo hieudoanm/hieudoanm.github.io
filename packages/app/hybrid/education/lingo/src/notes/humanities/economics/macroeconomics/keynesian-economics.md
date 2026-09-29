@@ -2,16 +2,17 @@
 {
   'title': 'Keynesian Economics',
   'subtitle':
-    'Why economies can get stuck in recessions—and what governments can do about
-    it.',
+    "Why economies can get stuck in recessions—and what governments can do
+    about\n    it.",
   'links':
     [
       {
         'href': '/economics/keynesian-economics/cross',
         'label': 'Keynesian Cross',
         'description':
-          'Set MPC and autonomous spending to find equilibrium output, then
-          close an output gap with the right dose of government spending.',
+          "Set MPC and autonomous spending to find equilibrium output,
+          then\n          close an output gap with the right dose of government
+          spending.",
       },
     ],
   'references':
@@ -20,22 +21,22 @@
         'href': 'https://en.wikipedia.org/wiki/Keynesian_economics',
         'label': 'Wikipedia: Keynesian Economics',
         'description':
-          'Comprehensive overview of Keynesian theory and its policy
-          implications.',
+          "Comprehensive overview of Keynesian theory and its
+          policy\n          implications.",
       },
       {
         'href': 'https://www.investopedia.com/terms/k/keynesianeconomics.asp',
         'label': 'Investopedia: Keynesian Economics',
         'description':
-          'Entry defining aggregate demand, the multiplier, and countercyclical
-          policy.',
+          "Entry defining aggregate demand, the multiplier, and
+          countercyclical\n          policy.",
       },
       {
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/1999/summary/',
         'label': 'Nobel Prize: Robert Mundell 1999',
         'description':
-          'Nobel citation for work on monetary and fiscal policy in the
-          Keynesian tradition.',
+          "Nobel citation for work on monetary and fiscal policy in
+          the\n          Keynesian tradition.",
       },
     ],
 }

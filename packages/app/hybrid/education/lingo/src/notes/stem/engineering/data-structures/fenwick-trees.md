@@ -2,8 +2,8 @@
 {
   'title': 'Fenwick Tree',
   'subtitle':
-    'Overlapping blocks of lowbit length: point update and prefix sum, both in
-    log n, in one array.',
+    "Overlapping blocks of lowbit length: point update and prefix sum, both
+    in\n    log n, in one array.",
   'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
   'links':
     [

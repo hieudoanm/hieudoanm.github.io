@@ -2,8 +2,8 @@
 {
   'title': 'Functional MRI (fMRI)',
   'subtitle':
-    'Mapping the brain by the blood it spends — high spatial resolution bought
-    with poor temporal resolution and an indirect signal.',
+    "Mapping the brain by the blood it spends — high spatial resolution
+    bought\n    with poor temporal resolution and an indirect signal.",
   'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
   'references':
     [
@@ -11,15 +11,15 @@
         'href': 'https://doi.org/10.1073/pnas.87.24.9868',
         'label': 'Ogawa et al. (1990) — PNAS',
         'description':
-          'The original observation that deoxyhaemoglobin changes T2* and
-          produces the BOLD contrast.',
+          "The original observation that deoxyhaemoglobin changes T2*
+          and\n          produces the BOLD contrast.",
       },
       {
         'href': 'https://doi.org/10.1016/j.neuroimage.2012.01.022',
         'label': 'Buzsáki, Ulkau, McKenzie (2006) — Cerebral Cortex',
         'description':
-          'The origins of the BOLD signal: the physiology linking neural
-          activity to local blood flow.',
+          "The origins of the BOLD signal: the physiology linking
+          neural\n          activity to local blood flow.",
       },
     ],
 }

@@ -2,16 +2,16 @@
 {
   'title': 'Labor Markets & Minimum Wage',
   'subtitle':
-    'How wages, jobs, and hours are set—and what forcing up the wage floor
-    really does.',
+    "How wages, jobs, and hours are set—and what forcing up the wage
+    floor\n    really does.",
   'links':
     [
       {
         'href': '/economics/labor-markets/wage',
         'label': 'Labor Market Lab',
         'description':
-          'Set demand and supply curves, then push the minimum wage above
-          equilibrium to see unemployment and deadweight loss.',
+          "Set demand and supply curves, then push the minimum wage
+          above\n          equilibrium to see unemployment and deadweight loss.",
       },
     ],
   'references':
@@ -32,8 +32,8 @@
         'href': 'https://www.nobelprize.org/prizes/economic-sciences/2021/popular-information/prize-fact/',
         'label': 'Nobel Prize: 2021 Economic Sciences',
         'description':
-          'Nobel award to Card, Krueger, and Angrist for empirical labor
-          economics.',
+          "Nobel award to Card, Krueger, and Angrist for empirical
+          labor\n          economics.",
       },
     ],
 }

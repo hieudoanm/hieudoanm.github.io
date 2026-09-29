@@ -1,14 +1,14 @@
 {
-  "name": "@hieudoanm.github.io/exibit",
+  "name": "@hieudoanm.github.io/exhibit",
   "version": "0.0.1",
   "private": true,
   "description": "UI Exhibition - Showcase of Applications",
   "keywords": [
-    "exibit",
+    "exhibit",
     "showcase",
     "ui"
   ],
-  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-exibit-latest",
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-exhibit-latest",
   "bugs": {
     "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
   },

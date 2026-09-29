@@ -9,8 +9,8 @@
         'href': '/economics/bayesian-updating/monty-hall',
         'label': 'Monty Hall Explorer',
         'description':
-          'Test switching vs staying across repeated trials and watch a 2/3 vs
-          1/3 win rate emerge — Bayesian updating the fun way.',
+          "Test switching vs staying across repeated trials and watch a 2/3
+          vs\n          1/3 win rate emerge — Bayesian updating the fun way.",
       },
     ],
   'references':
@@ -19,22 +19,22 @@
         'href': 'https://en.wikipedia.org/wiki/Bayesian_inference',
         'label': 'Wikipedia: Bayesian Inference',
         'description':
-          'Overview of Bayes theorem and its application to updating beliefs
-          from evidence.',
+          "Overview of Bayes theorem and its application to updating
+          beliefs\n          from evidence.",
       },
       {
         'href': 'https://www.khanacademy.org/computing/computer-science/probability/bayes-theorem/v/bayes-theorem',
         'label': 'Khan Academy: Bayes Theorem',
         'description':
-          'Video explanation of Bayes rule and how prior beliefs update with new
-          data.',
+          "Video explanation of Bayes rule and how prior beliefs update with
+          new\n          data.",
       },
       {
         'href': 'https://plato.stanford.edu/entries/bayes-theorem/',
         'label': 'Stanford Encyclopedia: Bayes Theorem',
         'description':
-          'Philosophical entry on Bayes theorem, its justifications, and its
-          role in rational belief revision.',
+          "Philosophical entry on Bayes theorem, its justifications, and
+          its\n          role in rational belief revision.",
       },
     ],
 }

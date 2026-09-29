@@ -9,8 +9,8 @@
         'href': '/neuroscience/leaky-competing-accumulator/interactive',
         'label': 'LCA Simulator',
         'description':
-          'Experiment with leak and inhibition parameters in a noisy accumulator
-          network.',
+          "Experiment with leak and inhibition parameters in a noisy
+          accumulator\n          network.",
       },
     ],
   'references':
@@ -19,8 +19,8 @@
         'href': 'https://doi.org/10.1037/0033-295X.108.3.550',
         'label': 'Usher & McClelland (2001) — Psychological Review',
         'description':
-          'The foundational paper detailing the LCA model and its neural
-          inspiration.',
+          "The foundational paper detailing the LCA model and its
+          neural\n          inspiration.",
       },
     ],
 }

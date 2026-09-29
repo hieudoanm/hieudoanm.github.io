@@ -2,16 +2,16 @@
 {
   'title': 'Oligopoly & Strategic Competition',
   'subtitle':
-    'A few big firms, each watching the others—markets where strategy decides
-    everything.',
+    "A few big firms, each watching the others—markets where strategy
+    decides\n    everything.",
   'links':
     [
       {
         'href': '/economics/oligopoly/cournot',
         'label': 'Cournot Competition',
         'description':
-          'Pick your output against a rival firm and feel the pull of the
-          Cournot equilibrium.',
+          "Pick your output against a rival firm and feel the pull of
+          the\n          Cournot equilibrium.",
       },
     ],
   'references':
@@ -32,8 +32,8 @@
         'href': 'https://www.britannica.com/topic/oligopoly',
         'label': 'Britannica: Oligopoly',
         'description':
-          'Article on how each of a few large producers affects but does not
-          control the market.',
+          "Article on how each of a few large producers affects but does
+          not\n          control the market.",
       },
     ],
 }
