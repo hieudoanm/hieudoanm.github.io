@@ -114,7 +114,10 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
   - `/maths/attractors` — 3-D strange-attractor particle visualisation (migrated
     from the docs app)
   - `/maths/cyclic` — cyclic number 142857
+  - `/maths/fibonacci-sequence` — golden-ratio convergence and Zeckendorf
+    decomposition
   - `/maths/kaprekar-constant` — Kaprekar constant routine
+  - `/maths/prime-numbers` — sieve of Eratosthenes, prime gaps, twin primes
 - `/music` — ear-training game (migrated from the `music` app)
   - `/music/pitch` — pitch training
 - `/ophthalmology` — migrated from the `eyes` app as standalone components under
@@ -126,6 +129,8 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
     - tumbling-e
 - `/profile` — user profile
 - `/psychology` — psychology hub
+  - `/psychology/<theory>` — theory: biology, cognitive, developmental, social
+  - `/psychology/<practice>` — practices: counselling, journaling, mindfulness
   - `/psychology/<scale>` — screening instruments, not diagnostics:
     - beck-depression-inventory
     - big-five-inventory

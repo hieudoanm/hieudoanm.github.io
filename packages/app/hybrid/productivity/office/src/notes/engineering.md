@@ -7,9 +7,23 @@
 
 - [Engineering](#engineering)
   - [Table of Contents](#table-of-contents)
+  - [Mathematics](#mathematics)
   - [Version Control](#version-control)
   - [DNS (Domain Name System)](#dns-domain-name-system)
   - [Blockchain](#blockchain)
+  - [Science Prizes](#science-prizes)
+
+## Mathematics
+
+- Arithmetic: Basic number operations
+- Algebra: Symbols and rules for manipulating them
+- Geometry: Shapes, sizes, and spatial reasoning
+- Trigonometry: Relationships in triangles
+- Calculus: Change and motion (includes differential and integral calculus)
+- Number Theory: Properties of integers
+- Set Theory: Study of sets (collections of objects)
+- Linear Algebra: Vector spaces and linear equations
+- Analysis
 
 ## Version Control
 
@@ -35,3 +49,8 @@
 3. [Solana](https://solana.com)
 4. [Monero](https://www.getmonero.org)
 5. [Polygon](https://polygon.technology)
+
+## Science Prizes
+
+- Fields
+- Nobel

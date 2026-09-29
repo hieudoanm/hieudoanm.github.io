@@ -1,6 +1,0 @@
-# Sciences
-
-## Prizes
-
-- Fields
-- Nobel
