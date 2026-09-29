@@ -1,8 +1,45 @@
-# Development Economics & RCTs
-
-> Using randomized experiments to discover what actually reduces poverty.
-
-App route: `/economics/development-rcts/`
+---
+{
+  'title': 'Development Economics & RCTs',
+  'subtitle':
+    'Using randomized experiments to discover what actually reduces poverty.',
+  'links':
+    [
+      {
+        'href': '/economics/development-rcts/experiment',
+        'label': 'RCT Simulator',
+        'description':
+          'Run your own experiment: pick a sample size and allocation, observe
+          the ATE and confidence interval, then judge whether the finding is
+          significant or noise.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2019/summary/',
+        'label': 'Nobel Prize: 2019 Economic Sciences',
+        'description':
+          'Nobel citation for Banerjee, Duflo, and Kremer for their experimental
+          approach to alleviating global poverty.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Randomized_controlled_trial',
+        'label': 'Wikipedia: Randomized Controlled Trial',
+        'description':
+          'Explanation of RCT methodology, design principles, and applications
+          in development economics.',
+      },
+      {
+        'href': 'https://www.povertyactionlab.org/',
+        'label': 'J-PAL: Poverty Action Lab',
+        'description':
+          'MIT-led network conducting randomized evaluations of anti-poverty
+          programs worldwide.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -62,20 +99,3 @@ costly.
 **Narrow focus:** Critics contend RCTs favor small, measurable interventions
 while sidelining big structural questions about institutions, power, and
 inequality.
-
-## Examples
-
-- [RCT Simulator](/economics/development-rcts/experiment) — Run your own
-  experiment: pick a sample size and allocation, observe the ATE and confidence
-  interval, then judge whether the finding is significant or noise.
-
-## References
-
-1. [Nobel Prize: 2019 Economic Sciences](https://www.nobelprize.org/prizes/economic-sciences/2019/summary/)
-   — Nobel citation for Banerjee, Duflo, and Kremer for their experimental
-   approach to alleviating global poverty.
-2. [Wikipedia: Randomized Controlled Trial](https://en.wikipedia.org/wiki/Randomized_controlled_trial)
-   — Explanation of RCT methodology, design principles, and applications in
-   development economics.
-3. [J-PAL: Poverty Action Lab](https://www.povertyactionlab.org/) — MIT-led
-   network conducting randomized evaluations of anti-poverty programs worldwide.

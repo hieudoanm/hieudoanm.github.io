@@ -1,8 +1,48 @@
-# Prisoner's Dilemma
-
-> A classic game theory model of cooperation and conflict.
-
-App route: `/economics/prisoners-dilemma/`
+---
+{
+  'title': "Prisoner's Dilemma",
+  'subtitle': 'A classic game theory model of cooperation and conflict.',
+  'links':
+    [
+      {
+        'href': '/economics/prisoners-dilemma/versus',
+        'label': 'Versus',
+        'description': 'Play head-to-head against a random AI strategy.',
+      },
+      {
+        'href': '/economics/prisoners-dilemma/bots',
+        'label': 'Bots',
+        'description': 'Browse all 32 strategies and learn how each one plays.',
+      },
+      {
+        'href': '/economics/prisoners-dilemma/simulation',
+        'label': 'Simulation',
+        'description':
+          'Run a round-robin tournament between every pair of bots.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Prisoner%27s_dilemma',
+        'label': 'Wikipedia: Prisoner’s Dilemma',
+        'description': 'Overview of the classic game and its applications.',
+      },
+      {
+        'href': 'https://plato.stanford.edu/entries/prisoner-dilemma/',
+        'label': 'Stanford Encyclopedia of Philosophy: Prisoner’s Dilemma',
+        'description':
+          'Authoritative survey of the dilemma and its formal treatment.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/p/prisoners-dilemma.asp',
+        'label': 'Investopedia: Prisoner’s Dilemma',
+        'description':
+          'Entry on how the dilemma works and its business applications.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -13,7 +53,7 @@ single round, yet mutual cooperation leads to a better collective outcome.
 
 ## The payoff matrix
 
-_Interactive: PayoffMatrix (app-only component)_
+{{embed:PayoffMatrix}}
 
 ## Why it matters
 
@@ -32,21 +72,3 @@ contracts, and incentive structures.
 **In iterated play:** When the game is repeated, strategies like Tit-for-Tat can
 sustain cooperation through reciprocity. This app lets you explore all these
 dynamics with 32 different AI strategies.
-
-## Examples
-
-- [Versus](/economics/prisoners-dilemma/versus) — Play head-to-head against a
-  random AI strategy.
-- [Bots](/economics/prisoners-dilemma/bots) — Browse all 32 strategies and learn
-  how each one plays.
-- [Simulation](/economics/prisoners-dilemma/simulation) — Run a round-robin
-  tournament between every pair of bots.
-
-## References
-
-1. [Wikipedia: Prisoner’s Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
-   — Overview of the classic game and its applications.
-2. [Stanford Encyclopedia of Philosophy: Prisoner’s Dilemma](https://plato.stanford.edu/entries/prisoner-dilemma/)
-   — Authoritative survey of the dilemma and its formal treatment.
-3. [Investopedia: Prisoner’s Dilemma](https://www.investopedia.com/terms/p/prisoners-dilemma.asp)
-   — Entry on how the dilemma works and its business applications.

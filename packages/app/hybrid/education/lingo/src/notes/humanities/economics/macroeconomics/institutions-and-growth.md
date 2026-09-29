@@ -1,9 +1,44 @@
-# Institutions & Economic Growth
-
-> Why the rules of a society—its institutions—decide whether nations prosper or
-> stagnate.
-
-App route: `/economics/institutions-and-growth/`
+---
+{
+  'title': 'Institutions & Economic Growth',
+  'subtitle':
+    'Why the rules of a society—its institutions—decide whether nations prosper
+    or stagnate.',
+  'links':
+    [
+      {
+        'href': '/economics/institutions-and-growth/lab',
+        'label': 'Institutions Game',
+        'description':
+          'Set property rights, contracts, and stability to drive ten years of
+          GDP growth toward a target—and see inclusive institutions outperform.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2024/popular-information/prize-fact/',
+        'label': 'Nobel Prize: 2024 Economic Sciences',
+        'description':
+          'Acemoglu, Johnson, and Robinson awarded for work on inclusive
+          institutions and prosperity.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Why_Nations_Fail',
+        'label': 'Wikipedia: Why Nations Fail',
+        'description':
+          'Overview of the Acemoglu and Robinson book on inclusive vs extractive
+          institutions.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/i/institutional-economics.asp',
+        'label': 'Investopedia: Institutional Economics',
+        'description':
+          'Entry explaining how institutions shape economic behavior and growth.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,20 +91,3 @@ political conflicts at that moment.
 **The reform challenge:** If institutions are the deep cause of prosperity, then
 lasting development requires changing them—a slow, contested, political process,
 not a technical fix.
-
-## Examples
-
-- [Institutions Game](/economics/institutions-and-growth/lab) — Set property
-  rights, contracts, and stability to drive ten years of GDP growth toward a
-  target—and see inclusive institutions outperform.
-
-## References
-
-1. [Nobel Prize: 2024 Economic Sciences](https://www.nobelprize.org/prizes/economic-sciences/2024/popular-information/prize-fact/)
-   — Acemoglu, Johnson, and Robinson awarded for work on inclusive institutions
-   and prosperity.
-2. [Wikipedia: Why Nations Fail](https://en.wikipedia.org/wiki/Why_Nations_Fail)
-   — Overview of the Acemoglu and Robinson book on inclusive vs extractive
-   institutions.
-3. [Investopedia: Institutional Economics](https://www.investopedia.com/terms/i/institutional-economics.asp)
-   — Entry explaining how institutions shape economic behavior and growth.

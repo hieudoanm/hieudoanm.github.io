@@ -1,8 +1,44 @@
-# Prospect Theory
-
-> Why we feel losses more than gains—and how that bends every decision we make.
-
-App route: `/economics/prospect-theory/`
+---
+{
+  'title': 'Prospect Theory',
+  'subtitle':
+    'Why we feel losses more than gains—and how that bends every decision we
+    make.',
+  'links':
+    [
+      {
+        'href': '/economics/prospect-theory/framing',
+        'label': 'Framing Game',
+        'description':
+          'Answer Kahneman and Tversky questions and discover your own
+          reflection effect.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Prospect_theory',
+        'label': 'Wikipedia: Prospect Theory',
+        'description':
+          'Overview of the value function, loss aversion, and probability
+          weighting.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/',
+        'label': 'Nobel Prize: Daniel Kahneman (2002)',
+        'description':
+          'Nobel biography of Kahneman, awarded for work on prospect theory.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/p/prospecttheory.asp',
+        'label': 'Investopedia: Prospect Theory',
+        'description':
+          'Entry on how people underweight probabilities and fear losses more
+          than gains.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -59,18 +95,3 @@ the gain feel larger than stating the same final price outright.
 
 **Public policy:** Loss-framed messages (you will lose X if you don’t act) are
 more persuasive than gain-framed ones for prevention behaviors.
-
-## Examples
-
-- [Framing Game](/economics/prospect-theory/framing) — Answer Kahneman and
-  Tversky questions and discover your own reflection effect.
-
-## References
-
-1. [Wikipedia: Prospect Theory](https://en.wikipedia.org/wiki/Prospect_theory) —
-   Overview of the value function, loss aversion, and probability weighting.
-2. [Nobel Prize: Daniel Kahneman (2002)](https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/)
-   — Nobel biography of Kahneman, awarded for work on prospect theory.
-3. [Investopedia: Prospect Theory](https://www.investopedia.com/terms/p/prospecttheory.asp)
-   — Entry on how people underweight probabilities and fear losses more than
-   gains.

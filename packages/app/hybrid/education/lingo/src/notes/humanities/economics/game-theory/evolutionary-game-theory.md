@@ -1,9 +1,45 @@
-# Evolutionary Game Theory
-
-> When strategies spread not by rationality, but by who reproduces—the biology
-> of games.
-
-App route: `/economics/evolutionary-game-theory/`
+---
+{
+  'title': 'Evolutionary Game Theory',
+  'subtitle':
+    'When strategies spread not by rationality, but by who reproduces—the
+    biology of games.',
+  'links':
+    [
+      {
+        'href': '/economics/evolutionary-game-theory/replicator',
+        'label': 'Replicator Dynamics Lab',
+        'description':
+          'Tune payoffs and step generations to watch hawk–dove population
+          shares converge on an evolutionarily stable strategy.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Evolutionary_game_theory',
+        'label': 'Wikipedia: Evolutionary Game Theory',
+        'description':
+          'Overview of evolutionary game theory, ESS, and applications in
+          biology and economics.',
+      },
+      {
+        'href': 'https://www.nature.com/scitable/topicpage/evolutionary-game-theory-14246140/',
+        'label': 'Nature Scitable: Evolutionary Game Theory',
+        'description':
+          'Accessible introduction to evolutionary game theory and its
+          biological foundations.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Evolutionarily_stable_strategy',
+        'label': 'Wikipedia: Evolutionarily Stable Strategy',
+        'description':
+          'Definition and analysis of ESS, the hawk-dove game, and stability
+          conditions.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -59,21 +95,3 @@ reputation—can be understood as stable evolutionary outcomes.
 **Network dynamics:** Evolutionary modeling shows how strategies spread through
 connected populations, useful for understanding the diffusion of behavior and
 technology.
-
-## Examples
-
-- [Replicator Dynamics Lab](/economics/evolutionary-game-theory/replicator) —
-  Tune payoffs and step generations to watch hawk–dove population shares
-  converge on an evolutionarily stable strategy.
-
-## References
-
-1. [Wikipedia: Evolutionary Game Theory](https://en.wikipedia.org/wiki/Evolutionary_game_theory)
-   — Overview of evolutionary game theory, ESS, and applications in biology and
-   economics.
-2. [Nature Scitable: Evolutionary Game Theory](https://www.nature.com/scitable/topicpage/evolutionary-game-theory-14246140/)
-   — Accessible introduction to evolutionary game theory and its biological
-   foundations.
-3. [Wikipedia: Evolutionarily Stable Strategy](https://en.wikipedia.org/wiki/Evolutionarily_stable_strategy)
-   — Definition and analysis of ESS, the hawk-dove game, and stability
-   conditions.

@@ -1,9 +1,45 @@
-# Bargaining Theory
-
-> How two parties divide a surplus—and how the rules of negotiation decide the
-> split.
-
-App route: `/economics/bargaining-theory/`
+---
+{
+  'title': 'Bargaining Theory',
+  'subtitle':
+    'How two parties divide a surplus—and how the rules of negotiation decide
+    the split.',
+  'links':
+    [
+      {
+        'href': '/economics/bargaining-theory/ultimatum',
+        'label': 'Ultimatum Split',
+        'description':
+          'Propose a split of $100 and learn how much you must offer to be
+          accepted.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Bargaining',
+        'label': 'Wikipedia: Bargaining Theory',
+        'description':
+          'Survey of axiomatic and game-theoretic models of bilateral
+          bargaining.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Nash_bargaining_solution',
+        'label': 'Wikipedia: Nash Bargaining Solution',
+        'description':
+          "Formal description of Nash's axiomatic approach to the two-person
+          bargaining problem.",
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Rubinstein_bargaining_model',
+        'label': 'Wikipedia: Rubinstein Bargaining Model',
+        'description':
+          "Overview of Rubinstein's alternating-offer model and the role of
+          patience in bargaining.",
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -52,19 +88,3 @@ reflects the relative power and patience of the negotiating parties.
 
 **Bargaining power:** Improving your alternatives (building skills, cultivating
 options) is the practical lever bargaining theory hands to negotiators.
-
-## Examples
-
-- [Ultimatum Split](/economics/bargaining-theory/ultimatum) — Propose a split of
-  $100 and learn how much you must offer to be accepted.
-
-## References
-
-1. [Wikipedia: Bargaining Theory](https://en.wikipedia.org/wiki/Bargaining) —
-   Survey of axiomatic and game-theoretic models of bilateral bargaining.
-2. [Wikipedia: Nash Bargaining Solution](https://en.wikipedia.org/wiki/Nash_bargaining_solution)
-   — Formal description of Nash's axiomatic approach to the two-person
-   bargaining problem.
-3. [Wikipedia: Rubinstein Bargaining Model](https://en.wikipedia.org/wiki/Rubinstein_bargaining_model)
-   — Overview of Rubinstein's alternating-offer model and the role of patience
-   in bargaining.

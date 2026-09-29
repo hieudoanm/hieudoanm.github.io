@@ -1,8 +1,43 @@
-# Market Microstructure
-
-> How the mechanics of trading—not just fundamentals—shape prices and liquidity.
-
-App route: `/economics/market-microstructure/`
+---
+{
+  'title': 'Market Microstructure',
+  'subtitle':
+    'How the mechanics of trading—not just fundamentals—shape prices and
+    liquidity.',
+  'links':
+    [
+      {
+        'href': '/economics/market-microstructure/order-book',
+        'label': 'Order Book',
+        'description':
+          'Trade the spread: cross it with market orders or earn it back with
+          limits.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Market_microstructure',
+        'label': 'Wikipedia: Market Microstructure',
+        'description':
+          'Overview of trading mechanics, bid-ask spreads, and price formation.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/m/market-microstructure.asp',
+        'label': 'Investopedia: Market Microstructure',
+        'description':
+          'Entry explaining how market structure affects prices and liquidity.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Grossman%E2%80%93Stiglitz_paradox',
+        'label': 'Wikipedia: Grossman-Stiglitz Paradox',
+        'description':
+          'Explanation of the paradox linking information costs to market
+          efficiency.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -55,17 +90,3 @@ and order-book dynamics—microstructure concepts.
 
 **Transaction cost analysis:** Institutional investors use microstructure to
 estimate and minimize the cost of executing large trades.
-
-## Examples
-
-- [Order Book](/economics/market-microstructure/order-book) — Trade the spread:
-  cross it with market orders or earn it back with limits.
-
-## References
-
-1. [Wikipedia: Market Microstructure](https://en.wikipedia.org/wiki/Market_microstructure)
-   — Overview of trading mechanics, bid-ask spreads, and price formation.
-2. [Investopedia: Market Microstructure](https://www.investopedia.com/terms/m/market-microstructure.asp)
-   — Entry explaining how market structure affects prices and liquidity.
-3. [Wikipedia: Grossman-Stiglitz Paradox](https://en.wikipedia.org/wiki/Grossman%E2%80%93Stiglitz_paradox)
-   — Explanation of the paradox linking information costs to market efficiency.

@@ -1,9 +1,45 @@
-# Adverse Selection
-
-> When hidden information before a deal leads markets to attract exactly the
-> wrong participants.
-
-App route: `/economics/adverse-selection/`
+---
+{
+  'title': 'Adverse Selection',
+  'subtitle':
+    'When hidden information before a deal leads markets to attract exactly the
+    wrong participants.',
+  'links':
+    [
+      {
+        'href': '/economics/adverse-selection/lemons',
+        'label': 'The Market for Lemons',
+        'description':
+          'Post one price for a used car and watch good cars refuse to sell at
+          "fair" prices—Akerlof''s adverse selection in action.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Adverse_selection',
+        'label': 'Wikipedia: Adverse Selection',
+        'description':
+          'Overview of adverse selection theory, its causes, and market
+          implications.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/a/adverseselection.asp',
+        'label': 'Investopedia: Adverse Selection',
+        'description':
+          'Entry defining adverse selection and its role in insurance and
+          financial markets.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2001/akerlof/summary/',
+        'label': 'Nobel Prize: George Akerlof (2001)',
+        'description':
+          'Nobel Prize page for Akerlof, summarising his research on markets
+          with asymmetric information.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -59,20 +95,3 @@ force broad participation so that risk is shared rather than selected against.
 
 **Market mechanisms:** Third-party ratings, licensed intermediaries, and
 reputation systems help buyers trust quality before they buy.
-
-## Examples
-
-- [The Market for Lemons](/economics/adverse-selection/lemons) — Post one price
-  for a used car and watch good cars refuse to sell at "fair" prices—Akerlof's
-  adverse selection in action.
-
-## References
-
-1. [Wikipedia: Adverse Selection](https://en.wikipedia.org/wiki/Adverse_selection)
-   — Overview of adverse selection theory, its causes, and market implications.
-2. [Investopedia: Adverse Selection](https://www.investopedia.com/terms/a/adverseselection.asp)
-   — Entry defining adverse selection and its role in insurance and financial
-   markets.
-3. [Nobel Prize: George Akerlof (2001)](https://www.nobelprize.org/prizes/economic-sciences/2001/akerlof/summary/)
-   — Nobel Prize page for Akerlof, summarising his research on markets with
-   asymmetric information.

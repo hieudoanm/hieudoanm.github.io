@@ -1,8 +1,30 @@
-# Color Models
-
-> The coordinate systems used to describe a color numerically.
-
-App route: `/colors/models/`
+---
+{
+  'title': 'Color Models',
+  'subtitle': 'The coordinate systems used to describe a color numerically.',
+  'links':
+    [
+      {
+        'href': '/colors/models/converter',
+        'label': 'Color Converter',
+        'description':
+          'Convert the active color between HEX, RGB, HSL, HSV and CMYK.',
+      },
+      {
+        'href': '/colors/models/adjuster',
+        'label': 'Color Adjuster',
+        'description':
+          'Tune hue, saturation and lightness of any color with sliders.',
+      },
+      {
+        'href': '/colors/models/random',
+        'label': 'Random Color',
+        'description':
+          'Generate and lock a random color to inspect in every notation.',
+      },
+    ],
+}
+---
 
 ## Additive and subtractive
 
@@ -32,12 +54,3 @@ the second green, the third blue. A three-digit code doubles each digit, so
 
 Being a fixed-width text format, HEX is what most design tools and style sheets
 use, even though it is the least readable way to see how a color will behave.
-
-## Examples
-
-- [Color Converter](/colors/models/converter) — Convert the active color between
-  HEX, RGB, HSL, HSV and CMYK.
-- [Color Adjuster](/colors/models/adjuster) — Tune hue, saturation and lightness
-  of any color with sliders.
-- [Random Color](/colors/models/random) — Generate and lock a random color to
-  inspect in every notation.

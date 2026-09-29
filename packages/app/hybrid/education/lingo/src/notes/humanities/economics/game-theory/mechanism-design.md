@@ -1,9 +1,45 @@
-# Mechanism Design
-
-> Designing the rules of the game so self-interested players produce good
-> outcomes.
-
-App route: `/economics/mechanism-design/`
+---
+{
+  'title': 'Mechanism Design',
+  'subtitle':
+    'Designing the rules of the game so self-interested players produce good
+    outcomes.',
+  'links':
+    [
+      {
+        'href': '/economics/mechanism-design/reveal',
+        'label': 'Revelation Game',
+        'description':
+          'Report what a public project is worth to you and see why the pivot
+          (Clarke) rule makes honesty your best move.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2007/summary/',
+        'label': 'Nobel Prize: 2007 Economic Sciences',
+        'description':
+          'Nobel award to Hurwicz, Maskin, and Myerson for mechanism design
+          theory.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Mechanism_design',
+        'label': 'Wikipedia: Mechanism Design',
+        'description':
+          'Overview of reverse game theory, incentive compatibility, and the
+          revelation principle.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/m/mechanism-design.asp',
+        'label': 'Investopedia: Mechanism Design',
+        'description':
+          'Entry explaining how rules are designed to achieve desired economic
+          outcomes.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -62,20 +98,3 @@ match could.
 
 **Carbon markets:** Cap-and-trade systems are mechanisms designed to internalize
 the externality of pollution by making emission rights tradeable.
-
-## Examples
-
-- [Revelation Game](/economics/mechanism-design/reveal) — Report what a public
-  project is worth to you and see why the pivot (Clarke) rule makes honesty your
-  best move.
-
-## References
-
-1. [Nobel Prize: 2007 Economic Sciences](https://www.nobelprize.org/prizes/economic-sciences/2007/summary/)
-   — Nobel award to Hurwicz, Maskin, and Myerson for mechanism design theory.
-2. [Wikipedia: Mechanism Design](https://en.wikipedia.org/wiki/Mechanism_design)
-   — Overview of reverse game theory, incentive compatibility, and the
-   revelation principle.
-3. [Investopedia: Mechanism Design](https://www.investopedia.com/terms/m/mechanism-design.asp)
-   — Entry explaining how rules are designed to achieve desired economic
-   outcomes.

@@ -1,8 +1,44 @@
-# Externalities
-
-> When your actions affect strangers who never asked—for better or worse.
-
-App route: `/economics/externalities/`
+---
+{
+  'title': 'Externalities',
+  'subtitle':
+    'When your actions affect strangers who never asked—for better or worse.',
+  'links':
+    [
+      {
+        'href': '/economics/externalities/pigou',
+        'label': "Pigou's Factory",
+        'description':
+          'Run a polluting mill, then impose a per-ton Pigouvian tax and watch
+          the private profit-maximum slide to the social optimum.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Externality',
+        'label': 'Wikipedia: Externality',
+        'description':
+          'Comprehensive overview of negative and positive externalities, market
+          failure, and remedies.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/e/externality.asp',
+        'label': 'Investopedia: Externalities',
+        'description':
+          'Entry defining externalities and their impact on market efficiency
+          and welfare.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Coase_theorem',
+        'label': 'Wikipedia: Coase Theorem',
+        'description':
+          'Explanation of how private bargaining can resolve externalities under
+          ideal conditions.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,21 +92,3 @@ government—though in reality transaction costs usually prevent this.
 **Regulation and cap-and-trade:** Command-and-control rules or tradable permits
 directly limit harmful activity while letting the market allocate who reduces
 emissions.
-
-## Examples
-
-- [Pigou's Factory](/economics/externalities/pigou) — Run a polluting mill, then
-  impose a per-ton Pigouvian tax and watch the private profit-maximum slide to
-  the social optimum.
-
-## References
-
-1. [Wikipedia: Externality](https://en.wikipedia.org/wiki/Externality) —
-   Comprehensive overview of negative and positive externalities, market
-   failure, and remedies.
-2. [Investopedia: Externalities](https://www.investopedia.com/terms/e/externality.asp)
-   — Entry defining externalities and their impact on market efficiency and
-   welfare.
-3. [Wikipedia: Coase Theorem](https://en.wikipedia.org/wiki/Coase_theorem) —
-   Explanation of how private bargaining can resolve externalities under ideal
-   conditions.

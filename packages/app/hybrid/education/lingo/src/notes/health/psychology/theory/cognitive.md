@@ -1,9 +1,30 @@
-# Cognitive Psychology
-
-> The architecture of thought: attention, memory, language and the limits of
-> each.
-
-App route: `/psychology/cognitive/` · back to [Psychology](/psychology/)
+---
+{
+  'title': 'Cognitive Psychology',
+  'subtitle':
+    'The architecture of thought: attention, memory, language and the limits of
+    each.',
+  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
+  'links':
+    [
+      {
+        'href': '/psychology/big-five-inventory/',
+        'label': 'Big Five Inventory',
+        'description': 'Trait structure underlying stable cognitive style',
+      },
+      {
+        'href': '/psychology/satisfaction-with-life/',
+        'label': 'Satisfaction With Life Scale',
+        'description': 'A validated measure of cognitive appraisal of life',
+      },
+      {
+        'href': '/psychology/patient-health-questionnaire/',
+        'label': 'Patient Health Questionnaire (PHQ-9)',
+        'description': 'Attention and memory symptoms screened clinically',
+      },
+    ],
+}
+---
 
 ## Attention is a filter, not a spotlight
 
@@ -63,12 +84,3 @@ Executive function coordinates working memory, attention, inhibition and
 planning, and keeps goals active over time. Damage to the prefrontal cortex
 degrades it while leaving vocabulary and general knowledge largely intact, which
 is the dissociation clearest evidence that they are separate systems.
-
-## Examples
-
-- [Big Five Inventory](/psychology/big-five-inventory/) — Trait structure
-  underlying stable cognitive style
-- [Satisfaction With Life Scale](/psychology/satisfaction-with-life/) — A
-  validated measure of cognitive appraisal of life
-- [Patient Health Questionnaire (PHQ-9)](/psychology/patient-health-questionnaire/)
-  — Attention and memory symptoms screened clinically

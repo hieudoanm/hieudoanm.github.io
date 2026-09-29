@@ -1,9 +1,29 @@
-# Functional MRI (fMRI)
-
-> Mapping the brain by the blood it spends — high spatial resolution bought with
-> poor temporal resolution and an indirect signal.
-
-App route: `/neuroscience/fmri/` · back to [Neuroscience](/neuroscience)
+---
+{
+  'title': 'Functional MRI (fMRI)',
+  'subtitle':
+    'Mapping the brain by the blood it spends — high spatial resolution bought
+    with poor temporal resolution and an indirect signal.',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1073/pnas.87.24.9868',
+        'label': 'Ogawa et al. (1990) — PNAS',
+        'description':
+          'The original observation that deoxyhaemoglobin changes T2* and
+          produces the BOLD contrast.',
+      },
+      {
+        'href': 'https://doi.org/10.1016/j.neuroimage.2012.01.022',
+        'label': 'Buzsáki, Ulkau, McKenzie (2006) — Cerebral Cortex',
+        'description':
+          'The origins of the BOLD signal: the physiology linking neural
+          activity to local blood flow.',
+      },
+    ],
+}
+---
 
 ## What it measures
 
@@ -45,12 +65,3 @@ blood-flow change** under a task, not a picture of a neuron. Absent a causal
 manipulation or a converging source measure, a BOLD difference is correlational
 evidence about which regions engaged, not proof that they performed the mental
 operation attributed to them.
-
-## References
-
-1. [Ogawa et al. (1990) — PNAS](https://doi.org/10.1073/pnas.87.24.9868) — The
-   original observation that deoxyhaemoglobin changes T2* and produces the BOLD
-   contrast.
-2. [Buzsáki, Ulkau, McKenzie (2006) — Cerebral Cortex](https://doi.org/10.1016/j.neuroimage.2012.01.022)
-   — The origins of the BOLD signal: the physiology linking neural activity to
-   local blood flow.

@@ -1,8 +1,31 @@
-# Bubble Sort
-
-> The slowest comparison sort, and the clearest one to reason about.
-
-App route: `/engineering/bubble-sort/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Bubble Sort',
+  'subtitle':
+    'The slowest comparison sort, and the clearest one to reason about.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/bubble-sort/interactive',
+        'label': 'Bubble Sort Visualiser',
+        'description':
+          'Step through each pass and watch the largest unsorted value bubble to
+          the right end.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
+        'label': 'Big O notation',
+        'description':
+          'How asymptotic growth classes are defined, and why constants and
+          lower-order terms drop out.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -38,14 +61,3 @@ It is worth knowing as a contrast case. It is stable, it sorts in place, and it
 is the only sort here whose correctness argument needs no auxiliary structure,
 so it is a useful baseline against which quicksort's partitioning and heapsort's
 heap property are compared.
-
-## Examples
-
-- [Bubble Sort Visualiser](/engineering/bubble-sort/interactive) — Step through
-  each pass and watch the largest unsorted value bubble to the right end.
-
-## References
-
-1. [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation) — How
-   asymptotic growth classes are defined, and why constants and lower-order
-   terms drop out.

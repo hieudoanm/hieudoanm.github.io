@@ -1,8 +1,42 @@
-# Unemployment & Okun's Law
-
-> Why people are out of work, and how joblessness moves with economic growth.
-
-App route: `/economics/unemployment-okuns-law/`
+---
+{
+  'title': "Unemployment & Okun's Law",
+  'subtitle':
+    'Why people are out of work, and how joblessness moves with economic growth.',
+  'links':
+    [
+      {
+        'href': '/economics/unemployment-okuns-law/lab',
+        'label': "Okun's Law Lab",
+        'description':
+          "A hands-on lab: steer the unemployment rate with GDP growth and
+          estimate Okun's coefficient from data.",
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://www.investopedia.com/terms/o/okunslaw.asp',
+        'label': "Investopedia: Okun's Law",
+        'description':
+          "Okun's law linking short-run GDP growth to changes in the
+          unemployment rate.",
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/u/unemployment.asp',
+        'label': 'Investopedia: Unemployment',
+        'description':
+          'Definition of unemployment and how the unemployment rate is measured.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Okun%27s_law',
+        'label': "Wikipedia: Okun's law",
+        'description':
+          'The empirical relationship between output and unemployment gaps.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -54,19 +88,3 @@ lifetime earnings.
 **Policy target:** Reducing cyclical unemployment without pushing inflation too
 high is a central goal of macroeconomic policy, balancing the tradeoff captured
 by the Phillips curve.
-
-## Examples
-
-- [Okun's Law Lab](/economics/unemployment-okuns-law/lab) — A hands-on lab:
-  steer the unemployment rate with GDP growth and estimate Okun's coefficient
-  from data.
-
-## References
-
-1. [Investopedia: Okun's Law](https://www.investopedia.com/terms/o/okunslaw.asp)
-   — Okun's law linking short-run GDP growth to changes in the unemployment
-   rate.
-2. [Investopedia: Unemployment](https://www.investopedia.com/terms/u/unemployment.asp)
-   — Definition of unemployment and how the unemployment rate is measured.
-3. [Wikipedia: Okun's law](https://en.wikipedia.org/wiki/Okun%27s_law) — The
-   empirical relationship between output and unemployment gaps.

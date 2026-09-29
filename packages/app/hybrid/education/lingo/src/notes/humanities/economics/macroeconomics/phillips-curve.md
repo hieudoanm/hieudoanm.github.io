@@ -1,9 +1,44 @@
-# The Phillips Curve
-
-> Does lower unemployment always mean higher inflation? The famous tradeoff—and
-> why it breaks.
-
-App route: `/economics/phillips-curve/`
+---
+{
+  'title': 'The Phillips Curve',
+  'subtitle':
+    'Does lower unemployment always mean higher inflation? The famous
+    tradeoff—and why it breaks.',
+  'links':
+    [
+      {
+        'href': '/economics/phillips-curve/tradeoff',
+        'label': 'Phillips Curve Lab',
+        'description':
+          'Navigate short-run tradeoffs, anchor expectations, and see the
+          economy return to NAIRU.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Phillips_curve',
+        'label': 'Wikipedia: Phillips Curve',
+        'description':
+          'Overview of the tradeoff and the expectations critique.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/p/phillipscurve.asp',
+        'label': 'Investopedia: Phillips Curve',
+        'description':
+          'Entry explaining the inflation–unemployment relationship and its
+          limits.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/Phillips-curve',
+        'label': 'Britannica: Phillips Curve',
+        'description':
+          'Article on the research behind the curve and why the tradeoff broke
+          down.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -51,17 +86,3 @@ high unemployment together—which the simple curve cannot explain.
 **Policy lesson:** The Phillips curve cautions against relying on a fixed
 inflation-unemployment menu; expectations and supply conditions matter as much
 as the tradeoff itself.
-
-## Examples
-
-- [Phillips Curve Lab](/economics/phillips-curve/tradeoff) — Navigate short-run
-  tradeoffs, anchor expectations, and see the economy return to NAIRU.
-
-## References
-
-1. [Wikipedia: Phillips Curve](https://en.wikipedia.org/wiki/Phillips_curve) —
-   Overview of the tradeoff and the expectations critique.
-2. [Investopedia: Phillips Curve](https://www.investopedia.com/terms/p/phillipscurve.asp)
-   — Entry explaining the inflation–unemployment relationship and its limits.
-3. [Britannica: Phillips Curve](https://www.britannica.com/topic/Phillips-curve)
-   — Article on the research behind the curve and why the tradeoff broke down.

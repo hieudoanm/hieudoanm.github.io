@@ -1,9 +1,45 @@
-# Time Value of Money
-
-> Why a dollar today is worth more than a dollar tomorrow—the engine of all
-> finance.
-
-App route: `/economics/time-value-of-money/`
+---
+{
+  'title': 'Time Value of Money',
+  'subtitle':
+    'Why a dollar today is worth more than a dollar tomorrow—the engine of all
+    finance.',
+  'links':
+    [
+      {
+        'href': '/economics/time-value-of-money/lab',
+        'label': 'Future Value Lab',
+        'description':
+          'Interactive sliders for compounding, present value, doubling time and
+          investment comparisons.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Time_value_of_money',
+        'label': 'Wikipedia: Time value of money',
+        'description':
+          'The concept that money today is worth more than the same amount in
+          the future.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/t/timevalueofmoney.asp',
+        'label': 'Investopedia: Time Value of Money',
+        'description':
+          'Explanation of TVM with future value, present value, and compounding
+          formulas.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/p/presentvalue.asp',
+        'label': 'Investopedia: Present Value',
+        'description':
+          'How present value discounts future cash flows for investment
+          decisions.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -53,19 +89,3 @@ future contributions will be worth.
 **Inflation and risk:** Delayed money must compensate for lost purchasing power
 and uncertainty, which is why interest rates embed an inflation premium and a
 risk premium.
-
-## Examples
-
-- [Future Value Lab](/economics/time-value-of-money/lab) — Interactive sliders
-  for compounding, present value, doubling time and investment comparisons.
-
-## References
-
-1. [Wikipedia: Time value of money](https://en.wikipedia.org/wiki/Time_value_of_money)
-   — The concept that money today is worth more than the same amount in the
-   future.
-2. [Investopedia: Time Value of Money](https://www.investopedia.com/terms/t/timevalueofmoney.asp)
-   — Explanation of TVM with future value, present value, and compounding
-   formulas.
-3. [Investopedia: Present Value](https://www.investopedia.com/terms/p/presentvalue.asp)
-   — How present value discounts future cash flows for investment decisions.

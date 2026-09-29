@@ -1,9 +1,43 @@
-# Poverty Traps
-
-> Why the poor can stay poor: self-reinforcing cycles that block escape from
-> destitution.
-
-App route: `/economics/poverty-traps/`
+---
+{
+  'title': 'Poverty Traps',
+  'subtitle':
+    'Why the poor can stay poor: self-reinforcing cycles that block escape from
+    destitution.',
+  'links':
+    [
+      {
+        'href': '/economics/poverty-traps/escape',
+        'label': 'Poverty Trap Escape',
+        'description':
+          'Simulate the S-shaped savings dynamic and design the minimum one-off
+          transfer that lifts a household past the escape threshold.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Poverty_trap',
+        'label': 'Wikipedia: Poverty Trap',
+        'description':
+          'Overview of self-reinforcing mechanisms that keep people poor.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/p/poverty-trap.asp',
+        'label': 'Investopedia: Poverty Trap',
+        'description':
+          'Entry on the causes of poverty traps and proposed solutions.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2019/summary/',
+        'label': 'Nobel Prize: 2019 laureates',
+        'description':
+          '2019 prize for the experimental approach to alleviating global
+          poverty.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -52,18 +86,3 @@ and smooth shocks that would otherwise push them back into poverty.
 
 **Evidence-first:** Randomized trials (see Development RCTs) test which
 interventions actually break traps, informing cost-effective aid.
-
-## Examples
-
-- [Poverty Trap Escape](/economics/poverty-traps/escape) — Simulate the S-shaped
-  savings dynamic and design the minimum one-off transfer that lifts a household
-  past the escape threshold.
-
-## References
-
-1. [Wikipedia: Poverty Trap](https://en.wikipedia.org/wiki/Poverty_trap) —
-   Overview of self-reinforcing mechanisms that keep people poor.
-2. [Investopedia: Poverty Trap](https://www.investopedia.com/terms/p/poverty-trap.asp)
-   — Entry on the causes of poverty traps and proposed solutions.
-3. [Nobel Prize: 2019 laureates](https://www.nobelprize.org/prizes/economic-sciences/2019/summary/)
-   — 2019 prize for the experimental approach to alleviating global poverty.

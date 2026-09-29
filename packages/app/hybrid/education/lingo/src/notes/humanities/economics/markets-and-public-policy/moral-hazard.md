@@ -1,8 +1,42 @@
-# Moral Hazard
-
-> When insurance changes behavior—and someone else pays the price.
-
-App route: `/economics/moral-hazard/`
+---
+{
+  'title': 'Moral Hazard',
+  'subtitle':
+    'When insurance changes behavior—and someone else pays the price.',
+  'links':
+    [
+      {
+        'href': '/economics/moral-hazard/insurance',
+        'label': 'Hidden Effort',
+        'description':
+          'Insure your home, choose how hard to guard it, and watch full cover
+          quietly destroy your incentive to try.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Moral_hazard',
+        'label': 'Wikipedia: Moral Hazard',
+        'description':
+          'Overview of moral hazard, asymmetric information, and principal-agent
+          problems.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/m/moralhazard.asp',
+        'label': 'Investopedia: Moral Hazard',
+        'description':
+          'Entry explaining how insurance and guarantees change behavior.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/moral-hazard',
+        'label': 'Encyclopedia Britannica: Moral Hazard',
+        'description':
+          'Encyclopedia entry on moral hazard in economics and finance.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -49,19 +83,3 @@ compensation structures reduce the gap between private and social costs.
 
 **Screening and selection:** Offering different policy tiers forces agents to
 self-select, revealing their true risk level.
-
-## Examples
-
-- [Hidden Effort](/economics/moral-hazard/insurance) — Insure your home, choose
-  how hard to guard it, and watch full cover quietly destroy your incentive to
-  try.
-
-## References
-
-1. [Wikipedia: Moral Hazard](https://en.wikipedia.org/wiki/Moral_hazard) —
-   Overview of moral hazard, asymmetric information, and principal-agent
-   problems.
-2. [Investopedia: Moral Hazard](https://www.investopedia.com/terms/m/moralhazard.asp)
-   — Entry explaining how insurance and guarantees change behavior.
-3. [Encyclopedia Britannica: Moral Hazard](https://www.britannica.com/topic/moral-hazard)
-   — Encyclopedia entry on moral hazard in economics and finance.

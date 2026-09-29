@@ -1,8 +1,30 @@
-# Color Harmony
-
-> How colors relate on the wheel and mix with each other.
-
-App route: `/colors/harmony/`
+---
+{
+  'title': 'Color Harmony',
+  'subtitle': 'How colors relate on the wheel and mix with each other.',
+  'links':
+    [
+      {
+        'href': '/colors/harmony/wheel',
+        'label': 'Color Wheel',
+        'description':
+          'Explore hues and see complementary, analogous and triadic markers.',
+      },
+      {
+        'href': '/colors/harmony/schemes',
+        'label': 'Color Schemes',
+        'description':
+          'Generate complementary, analogous, triadic and monochromatic sets.',
+      },
+      {
+        'href': '/colors/harmony/mixer',
+        'label': 'Color Mixer',
+        'description':
+          'Blend two colors by weight and read the result in every notation.',
+      },
+    ],
+}
+---
 
 ## The color wheel
 
@@ -29,12 +51,3 @@ Mixing on screen is a weighted average of the two colors&apos; RGB channels, so
 at 50% the result sits exactly halfway between them. Paint behaves differently:
 pigments absorb light, so mixing two paints tends toward darkness rather than a
 bright average.
-
-## Examples
-
-- [Color Wheel](/colors/harmony/wheel) — Explore hues and see complementary,
-  analogous and triadic markers.
-- [Color Schemes](/colors/harmony/schemes) — Generate complementary, analogous,
-  triadic and monochromatic sets.
-- [Color Mixer](/colors/harmony/mixer) — Blend two colors by weight and read the
-  result in every notation.

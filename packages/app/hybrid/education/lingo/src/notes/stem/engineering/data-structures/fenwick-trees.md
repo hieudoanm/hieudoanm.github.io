@@ -1,9 +1,30 @@
-# Fenwick Tree
-
-> Overlapping blocks of lowbit length: point update and prefix sum, both in log
-> n, in one array.
-
-App route: `/engineering/fenwick-trees/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Fenwick Tree',
+  'subtitle':
+    'Overlapping blocks of lowbit length: point update and prefix sum, both in
+    log n, in one array.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/fenwick-trees/interactive',
+        'label': 'Fenwick Tree Explorer',
+        'description':
+          'Query a prefix and watch the lowbit walk visit each block.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Fenwick_tree',
+        'label': 'Fenwick tree',
+        'description':
+          'Lowbit block decomposition and the shared update/query walk.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -37,13 +58,3 @@ The segment tree generalises to any monoid, at the price of more memory and more
 code. The rule of thumb is to use a Fenwick tree when the operation is a sum and
 the memory matters, and a segment tree when the operation is associative but not
 invertible or when you need range updates.
-
-## Examples
-
-- [Fenwick Tree Explorer](/engineering/fenwick-trees/interactive) — Query a
-  prefix and watch the lowbit walk visit each block.
-
-## References
-
-1. [Fenwick tree](https://en.wikipedia.org/wiki/Fenwick_tree) — Lowbit block
-   decomposition and the shared update/query walk.

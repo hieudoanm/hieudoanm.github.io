@@ -1,9 +1,32 @@
-# Merge Sort
-
-> The divide-and-conquer sort that always takes n log n and pays for it with
-> memory.
-
-App route: `/engineering/merge-sort/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Merge Sort',
+  'subtitle':
+    'The divide-and-conquer sort that always takes n log n and pays for it with
+    memory.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/merge-sort/interactive',
+        'label': 'Merge Sort Visualiser',
+        'description':
+          'Step through each merge and watch two sorted runs combine through the
+          auxiliary buffer.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
+        'label': 'Big O notation',
+        'description':
+          'How asymptotic growth classes are defined, and why constants and
+          lower-order terms drop out.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -38,14 +61,3 @@ of comparisons per level regardless of the values involved.
 That predictability is why it is the default choice when the worst case has to
 be bounded — real-time systems, and merge phases of external sorts where the
 data no longer fits in memory.
-
-## Examples
-
-- [Merge Sort Visualiser](/engineering/merge-sort/interactive) — Step through
-  each merge and watch two sorted runs combine through the auxiliary buffer.
-
-## References
-
-1. [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation) — How
-   asymptotic growth classes are defined, and why constants and lower-order
-   terms drop out.

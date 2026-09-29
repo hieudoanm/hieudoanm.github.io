@@ -1,9 +1,43 @@
-# Oligopoly & Strategic Competition
-
-> A few big firms, each watching the others—markets where strategy decides
-> everything.
-
-App route: `/economics/oligopoly/`
+---
+{
+  'title': 'Oligopoly & Strategic Competition',
+  'subtitle':
+    'A few big firms, each watching the others—markets where strategy decides
+    everything.',
+  'links':
+    [
+      {
+        'href': '/economics/oligopoly/cournot',
+        'label': 'Cournot Competition',
+        'description':
+          'Pick your output against a rival firm and feel the pull of the
+          Cournot equilibrium.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Oligopoly',
+        'label': 'Wikipedia: Oligopoly',
+        'description':
+          'Overview of oligopoly market structure and strategic behavior.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/o/oligopoly.asp',
+        'label': 'Investopedia: Oligopoly',
+        'description':
+          'Entry explaining the characteristics of oligopolistic markets.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/oligopoly',
+        'label': 'Britannica: Oligopoly',
+        'description':
+          'Article on how each of a few large producers affects but does not
+          control the market.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -60,17 +94,3 @@ in every move.
 
 **Measuring market power:** Concentration indices like the Herfindahl-Hirschman
 Index help regulators gauge how close a market is to oligopoly.
-
-## Examples
-
-- [Cournot Competition](/economics/oligopoly/cournot) — Pick your output against
-  a rival firm and feel the pull of the Cournot equilibrium.
-
-## References
-
-1. [Wikipedia: Oligopoly](https://en.wikipedia.org/wiki/Oligopoly) — Overview of
-   oligopoly market structure and strategic behavior.
-2. [Investopedia: Oligopoly](https://www.investopedia.com/terms/o/oligopoly.asp)
-   — Entry explaining the characteristics of oligopolistic markets.
-3. [Britannica: Oligopoly](https://www.britannica.com/topic/oligopoly) — Article
-   on how each of a few large producers affects but does not control the market.

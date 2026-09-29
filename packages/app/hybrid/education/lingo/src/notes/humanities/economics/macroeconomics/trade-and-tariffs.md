@@ -1,8 +1,43 @@
-# Trade & Tariffs
-
-> Why countries benefit from trading—and what tariffs really cost.
-
-App route: `/economics/trade-and-tariffs/`
+---
+{
+  'title': 'Trade & Tariffs',
+  'subtitle':
+    'Why countries benefit from trading—and what tariffs really cost.',
+  'links':
+    [
+      {
+        'href': '/economics/trade-and-tariffs/lab',
+        'label': 'Trade & Tariff Lab',
+        'description':
+          'Set a tariff on imports and watch consumer, producer, and government
+          surplus shift; then pick tariffs that hit revenue, protection, and
+          import targets before a retaliation round.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Comparative_advantage',
+        'label': 'Wikipedia: Comparative advantage',
+        'description':
+          "Ricardo's theory of comparative advantage and gains from trade.",
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/t/tariff.asp',
+        'label': 'Investopedia: Tariff',
+        'description':
+          'Definition of tariffs, types, and their economic effects on trade.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/c/comparativeadvantage.asp',
+        'label': 'Investopedia: Comparative Advantage',
+        'description':
+          'Comparative advantage explained with examples of mutually beneficial
+          trade.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -61,19 +96,3 @@ efficiency for other objectives.
 **The bottom line:** Economists broadly agree that trade raises welfare on
 average, but the distribution of gains and losses and the best policy response
 remains contested.
-
-## Examples
-
-- [Trade & Tariff Lab](/economics/trade-and-tariffs/lab) — Set a tariff on
-  imports and watch consumer, producer, and government surplus shift; then pick
-  tariffs that hit revenue, protection, and import targets before a retaliation
-  round.
-
-## References
-
-1. [Wikipedia: Comparative advantage](https://en.wikipedia.org/wiki/Comparative_advantage)
-   — Ricardo's theory of comparative advantage and gains from trade.
-2. [Investopedia: Tariff](https://www.investopedia.com/terms/t/tariff.asp) —
-   Definition of tariffs, types, and their economic effects on trade.
-3. [Investopedia: Comparative Advantage](https://www.investopedia.com/terms/c/comparativeadvantage.asp)
-   — Comparative advantage explained with examples of mutually beneficial trade.

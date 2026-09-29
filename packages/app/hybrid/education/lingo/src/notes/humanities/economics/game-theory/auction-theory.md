@@ -1,8 +1,43 @@
-# Auction Theory
-
-> How the rules of bidding shape who wins—and how much they pay.
-
-App route: `/economics/auction-theory/`
+---
+{
+  'title': 'Auction Theory',
+  'subtitle': 'How the rules of bidding shape who wins—and how much they pay.',
+  'links':
+    [
+      {
+        'href': '/economics/auction-theory/auction',
+        'label': 'Auction Simulator',
+        'description':
+          'Bid against three AI bidders across four auction formats and discover
+          revenue equivalence.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Auction_theory',
+        'label': 'Wikipedia: Auction Theory',
+        'description':
+          'Survey of auction theory, formats, and key results like revenue
+          equivalence.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2020/milgrom-wilson/summary/',
+        'label': 'Nobel Prize: 2020 (Milgrom & Wilson)',
+        'description':
+          'Nobel Prize page for auction theory pioneers Paul Milgrom and Robert
+          Wilson.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/v/vickrey-auction.asp',
+        'label': 'Investopedia: Vickrey Auction',
+        'description':
+          'Entry explaining the second-price sealed-bid auction and its truthful
+          bidding property.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -53,19 +88,3 @@ billions of times a day to place ads—each impression is a tiny auction.
 
 **Carbon permits:** Cap-and-trade systems auction emission allowances—designing
 the auction determines how efficiently pollution is allocated across firms.
-
-## Examples
-
-- [Auction Simulator](/economics/auction-theory/auction) — Bid against three AI
-  bidders across four auction formats and discover revenue equivalence.
-
-## References
-
-1. [Wikipedia: Auction Theory](https://en.wikipedia.org/wiki/Auction_theory) —
-   Survey of auction theory, formats, and key results like revenue equivalence.
-2. [Nobel Prize: 2020 (Milgrom & Wilson)](https://www.nobelprize.org/prizes/economic-sciences/2020/milgrom-wilson/summary/)
-   — Nobel Prize page for auction theory pioneers Paul Milgrom and Robert
-   Wilson.
-3. [Investopedia: Vickrey Auction](https://www.investopedia.com/terms/v/vickrey-auction.asp)
-   — Entry explaining the second-price sealed-bid auction and its truthful
-   bidding property.

@@ -1,9 +1,45 @@
-# Behavioral Finance
-
-> When investors are not rational: how psychology creates mispricing and market
-> anomalies.
-
-App route: `/economics/behavioral-finance/`
+---
+{
+  'title': 'Behavioral Finance',
+  'subtitle':
+    'When investors are not rational: how psychology creates mispricing and
+    market anomalies.',
+  'links':
+    [
+      {
+        'href': '/economics/behavioral-finance/bubble',
+        'label': 'Bubble Lab',
+        'description':
+          'Trade an asset as its price inflates beyond fundamentals, then
+          crashes — learn to sell before the bubble bursts.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Behavioral_economics',
+        'label': 'Wikipedia: Behavioral Economics',
+        'description':
+          'Survey of behavioral economics and its application to financial
+          markets and investor bias.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/b/behavioralfinance.asp',
+        'label': 'Investopedia: Behavioral Finance',
+        'description':
+          'Entry defining behavioral finance and the key biases that affect
+          investor decision-making.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2017/thaler/summary/',
+        'label': 'Nobel Prize: Richard Thaler (2017)',
+        'description':
+          'Nobel Prize page for Thaler, whose work on nudge theory and mental
+          accounting shaped behavioral finance.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -52,21 +88,3 @@ gradually filtered out, weakening their influence.
 **Complement, not replacement:** Most economists treat behavioral finance as
 enriching—rather than overturning—financial theory, explaining deviations around
 broadly efficient markets.
-
-## Examples
-
-- [Bubble Lab](/economics/behavioral-finance/bubble) — Trade an asset as its
-  price inflates beyond fundamentals, then crashes — learn to sell before the
-  bubble bursts.
-
-## References
-
-1. [Wikipedia: Behavioral Economics](https://en.wikipedia.org/wiki/Behavioral_economics)
-   — Survey of behavioral economics and its application to financial markets and
-   investor bias.
-2. [Investopedia: Behavioral Finance](https://www.investopedia.com/terms/b/behavioralfinance.asp)
-   — Entry defining behavioral finance and the key biases that affect investor
-   decision-making.
-3. [Nobel Prize: Richard Thaler (2017)](https://www.nobelprize.org/prizes/economic-sciences/2017/thaler/summary/)
-   — Nobel Prize page for Thaler, whose work on nudge theory and mental
-   accounting shaped behavioral finance.

@@ -1,8 +1,40 @@
-# Opportunity Cost & Comparative Advantage
-
-> The real cost of every choice, and why trade makes everyone better off.
-
-App route: `/economics/opportunity-cost/`
+---
+{
+  'title': 'Opportunity Cost & Comparative Advantage',
+  'subtitle':
+    'The real cost of every choice, and why trade makes everyone better off.',
+  'links':
+    [
+      {
+        'href': '/economics/opportunity-cost/trade-offs',
+        'label': 'Trade-Off Builder',
+        'description':
+          'Explore explicit monetary opportunity cost with a sandbox and
+          challenge rounds.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Opportunity_cost',
+        'label': 'Wikipedia: Opportunity Cost',
+        'description':
+          'Overview of the concept and how it shapes economic decisions.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/o/opportunitycost.asp',
+        'label': 'Investopedia: Opportunity Cost',
+        'description': 'Definition, formula, and examples of opportunity cost.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/comparative-advantage',
+        'label': 'Britannica: Comparative Advantage',
+        'description':
+          'Article on comparative advantage and the gains from trade.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -52,17 +84,3 @@ trade, division of labor, and specialization in teams and global markets.
 
 **Warning:** Opportunity costs change, so comparative advantage can shift over
 time—which is why skills and economies must keep adapting.
-
-## Examples
-
-- [Trade-Off Builder](/economics/opportunity-cost/trade-offs) — Explore explicit
-  monetary opportunity cost with a sandbox and challenge rounds.
-
-## References
-
-1. [Wikipedia: Opportunity Cost](https://en.wikipedia.org/wiki/Opportunity_cost)
-   — Overview of the concept and how it shapes economic decisions.
-2. [Investopedia: Opportunity Cost](https://www.investopedia.com/terms/o/opportunitycost.asp)
-   — Definition, formula, and examples of opportunity cost.
-3. [Britannica: Comparative Advantage](https://www.britannica.com/topic/comparative-advantage)
-   — Article on comparative advantage and the gains from trade.

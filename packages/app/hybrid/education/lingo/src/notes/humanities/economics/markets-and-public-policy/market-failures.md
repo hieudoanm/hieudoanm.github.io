@@ -1,8 +1,44 @@
-# Market Failures
-
-> The situations where free markets alone produce socially inefficient outcomes.
-
-App route: `/economics/market-failures/`
+---
+{
+  'title': 'Market Failures',
+  'subtitle':
+    'The situations where free markets alone produce socially inefficient
+    outcomes.',
+  'links':
+    [
+      {
+        'href': '/economics/market-failures/policies',
+        'label': 'Market Failure Fixer',
+        'description':
+          'Match the right policy to each market failure, then set a Pigouvian
+          tax to restore optimal output.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Market_failure',
+        'label': 'Wikipedia: Market Failure',
+        'description':
+          'Overview of market failure types including externalities, public
+          goods, and market power.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/m/marketfailure.asp',
+        'label': 'Investopedia: Market Failure',
+        'description':
+          'Entry defining market failure and its causes and remedies.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/market-failure',
+        'label': 'Encyclopedia Britannica: Market Failure',
+        'description':
+          'Encyclopedia entry on when free markets fail to allocate resources
+          efficiently.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -51,20 +87,3 @@ intervention must be weighed against its own costs and distortions.
 
 **The judgment call:** Whether a market failure warrants intervention—and what
 form it should take—is a central and contested policy question.
-
-## Examples
-
-- [Market Failure Fixer](/economics/market-failures/policies) — Match the right
-  policy to each market failure, then set a Pigouvian tax to restore optimal
-  output.
-
-## References
-
-1. [Wikipedia: Market Failure](https://en.wikipedia.org/wiki/Market_failure) —
-   Overview of market failure types including externalities, public goods, and
-   market power.
-2. [Investopedia: Market Failure](https://www.investopedia.com/terms/m/marketfailure.asp)
-   — Entry defining market failure and its causes and remedies.
-3. [Encyclopedia Britannica: Market Failure](https://www.britannica.com/topic/market-failure)
-   — Encyclopedia entry on when free markets fail to allocate resources
-   efficiently.

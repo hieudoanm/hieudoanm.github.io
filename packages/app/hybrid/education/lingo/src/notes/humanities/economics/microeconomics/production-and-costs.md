@@ -1,9 +1,44 @@
-# Production & Costs
-
-> How firms turn inputs into output—and how the shape of costs drives their
-> supply decisions.
-
-App route: `/economics/production-and-costs/`
+---
+{
+  'title': 'Production & Costs',
+  'subtitle':
+    'How firms turn inputs into output—and how the shape of costs drives their
+    supply decisions.',
+  'links':
+    [
+      {
+        'href': '/economics/production-and-costs/lab',
+        'label': 'Production & Cost Curves',
+        'description':
+          'Interactive lab: drag sliders to see Q, MP, AP, TC, MC, ATC and AVC,
+          then check profit-maximizing output.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Production_function',
+        'label': 'Wikipedia: Production Function',
+        'description':
+          'How inputs are converted into output, including marginal product.',
+      },
+      {
+        'href': 'https://www.britannica.com/money/production-function',
+        'label': 'Britannica: Production Function',
+        'description':
+          'Entry on the production function, marginal cost, and output
+          decisions.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/f/factors-production.asp',
+        'label': 'Investopedia: Factors of Production',
+        'description':
+          'The inputs behind production: land, labor, capital, and
+          entrepreneurship.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -52,18 +87,3 @@ marginal cost curve above the shutdown point—it supplies more when price rises
 **Entry and exit:** In the long run, profits attract entry and losses trigger
 exit, pushing prices toward the minimum of average total cost—the benchmark of
 efficient production.
-
-## Examples
-
-- [Production & Cost Curves](/economics/production-and-costs/lab) — Interactive
-  lab: drag sliders to see Q, MP, AP, TC, MC, ATC and AVC, then check
-  profit-maximizing output.
-
-## References
-
-1. [Wikipedia: Production Function](https://en.wikipedia.org/wiki/Production_function)
-   — How inputs are converted into output, including marginal product.
-2. [Britannica: Production Function](https://www.britannica.com/money/production-function)
-   — Entry on the production function, marginal cost, and output decisions.
-3. [Investopedia: Factors of Production](https://www.investopedia.com/terms/f/factors-production.asp)
-   — The inputs behind production: land, labor, capital, and entrepreneurship.

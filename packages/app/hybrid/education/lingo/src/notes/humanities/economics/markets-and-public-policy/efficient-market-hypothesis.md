@@ -1,9 +1,44 @@
-# Efficient Market Hypothesis
-
-> Are prices always right? The theory that markets instantly reflect all
-> available information.
-
-App route: `/economics/efficient-market-hypothesis/`
+---
+{
+  'title': 'Efficient Market Hypothesis',
+  'subtitle':
+    'Are prices always right? The theory that markets instantly reflect all
+    available information.',
+  'links':
+    [
+      {
+        'href': '/economics/efficient-market-hypothesis/random-walk',
+        'label': 'Random Walk Market',
+        'description':
+          'Simulate a weak-form efficient market where a public tip has no
+          reliable predictive power.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Efficient-market_hypothesis',
+        'label': 'Wikipedia: Efficient-Market Hypothesis',
+        'description':
+          'Comprehensive overview of EMH forms, evidence, and critiques.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2013/summary/',
+        'label': 'Nobel Prize: 2013 Economic Sciences',
+        'description':
+          'Nobel citation for Eugene Fama, Lars Peter Hansen, and Robert Shiller
+          for empirical analysis of asset prices.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/e/efficientmarkethypothesis.asp',
+        'label': 'Investopedia: Efficient Market Hypothesis',
+        'description':
+          'Entry explaining the three forms of EMH and implications for
+          investing.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -49,19 +84,3 @@ insiders profit unfairly.
 **A lively debate:** The EMH is one of finance’s most contested ideas, dividing
 believers in market efficiency from behavioral economists who see persistent,
 exploitable mistakes (see Behavioral Finance).
-
-## Examples
-
-- [Random Walk Market](/economics/efficient-market-hypothesis/random-walk) —
-  Simulate a weak-form efficient market where a public tip has no reliable
-  predictive power.
-
-## References
-
-1. [Wikipedia: Efficient-Market Hypothesis](https://en.wikipedia.org/wiki/Efficient-market_hypothesis)
-   — Comprehensive overview of EMH forms, evidence, and critiques.
-2. [Nobel Prize: 2013 Economic Sciences](https://www.nobelprize.org/prizes/economic-sciences/2013/summary/)
-   — Nobel citation for Eugene Fama, Lars Peter Hansen, and Robert Shiller for
-   empirical analysis of asset prices.
-3. [Investopedia: Efficient Market Hypothesis](https://www.investopedia.com/terms/e/efficientmarkethypothesis.asp)
-   — Entry explaining the three forms of EMH and implications for investing.

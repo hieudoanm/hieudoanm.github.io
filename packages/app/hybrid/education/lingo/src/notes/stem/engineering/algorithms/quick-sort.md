@@ -1,9 +1,31 @@
-# Quicksort
-
-> The practical default: in place, cache-friendly, and fast except when the
-> pivot is bad.
-
-App route: `/engineering/quick-sort/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Quicksort',
+  'subtitle':
+    'The practical default: in place, cache-friendly, and fast except when the
+    pivot is bad.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/quick-sort/interactive',
+        'label': 'Quicksort Visualiser',
+        'description':
+          'Step through each partition and watch a pivot carve the array in two.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
+        'label': 'Big O notation',
+        'description':
+          'How asymptotic growth classes are defined, and why constants and
+          lower-order terms drop out.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -36,14 +58,3 @@ distant elements, so it is not stable — equal keys can cross.
 The empirical gap has a hardware explanation: quicksort's inner loop scans
 memory almost linearly, so it benefits from prefetching and cache locality,
 while merge sort repeatedly jumps between the input and the buffer.
-
-## Examples
-
-- [Quicksort Visualiser](/engineering/quick-sort/interactive) — Step through
-  each partition and watch a pivot carve the array in two.
-
-## References
-
-1. [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation) — How
-   asymptotic growth classes are defined, and why constants and lower-order
-   terms drop out.

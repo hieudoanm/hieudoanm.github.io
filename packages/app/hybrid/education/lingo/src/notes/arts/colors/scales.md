@@ -1,8 +1,33 @@
-# Color Scales
-
-> Building even, reusable steps from a single color.
-
-App route: `/colors/scales/`
+---
+{
+  'title': 'Color Scales',
+  'subtitle': 'Building even, reusable steps from a single color.',
+  'links':
+    [
+      {
+        'href': '/colors/scales/shades-tints',
+        'label': 'Shades & Tints',
+        'description':
+          'Build a balanced 5–13 step scale from one color with one slider.',
+      },
+      {
+        'href': '/colors/scales/tint-shade-tone',
+        'label': 'Tint, Shade & Tone',
+        'description': 'Lighten, darken or mute a color in even steps.',
+      },
+      {
+        'href': '/colors/scales/opacity',
+        'label': 'Opacity Overlay',
+        'description': 'Preview a color over white and black at any alpha.',
+      },
+      {
+        'href': '/colors/scales/css-scale',
+        'label': 'CSS Scale Exporter',
+        'description': 'Export a color scale as CSS custom properties.',
+      },
+    ],
+}
+---
 
 ## Shades, tints and tones
 
@@ -29,14 +54,3 @@ On screen every rendered color is opaque: a 50% translucent red over white
 actually shows the weighted average of the two, computed per channel. Lowering
 opacity never reveals a background — it blends the color with whatever sits
 underneath.
-
-## Examples
-
-- [Shades & Tints](/colors/scales/shades-tints) — Build a balanced 5–13 step
-  scale from one color with one slider.
-- [Tint, Shade & Tone](/colors/scales/tint-shade-tone) — Lighten, darken or mute
-  a color in even steps.
-- [Opacity Overlay](/colors/scales/opacity) — Preview a color over white and
-  black at any alpha.
-- [CSS Scale Exporter](/colors/scales/css-scale) — Export a color scale as CSS
-  custom properties.

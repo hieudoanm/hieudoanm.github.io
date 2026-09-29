@@ -1,10 +1,56 @@
-# Magnetic Resonance Imaging (MRI)
-
-> Anatomy, tissue microstructure, and blood-oxygenation-level contrast —
-> millimetre spatial resolution in exchange for the poorest temporal resolution
-> of any method here.
-
-App route: `/neuroscience/mri/` · back to [Neuroscience](/neuroscience)
+---
+{
+  'title': 'Magnetic Resonance Imaging (MRI)',
+  'subtitle':
+    'Anatomy, tissue microstructure, and blood-oxygenation-level contrast —
+    millimetre spatial resolution in exchange for the poorest temporal
+    resolution of any method here.',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/mri/interactive',
+        'label': 'Haemodynamic Response Simulator',
+        'description':
+          'Convolve a neural drive with the vascular response and see the 4–6
+          second lag that sets fMRI temporal resolution.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1073/pnas.87.24.9868',
+        'label':
+          'Ogawa, Honda, Kawai et al. (1990) — Proceedings of the National
+          Academy of Sciences',
+        'description':
+          'The original demonstration of intrinsic BOLD contrast in the human
+          brain during activation.',
+      },
+      {
+        'href': 'https://doi.org/10.1038/nrn2348',
+        'label': 'Logothetis (2008) — Nature Reviews Neuroscience',
+        'description':
+          'What we can and cannot do with fMRI: the physiology of the BOLD
+          signal and the limits of the inferences it supports.',
+      },
+      {
+        'href': 'https://doi.org/10.1016/j.tics.2006.05.004',
+        'label': 'Poldrack (2006) — Trends in Cognitive Sciences',
+        'description':
+          'Why activation maps do not license the reverse inference, with a
+          concrete predictive-code framing.',
+      },
+      {
+        'href': 'https://doi.org/10.1002/ar.10048',
+        'label': 'Beaulieu (2002) — The Anatomical Record',
+        'description':
+          'Diffusion-weighted imaging as a neuroanatomical tool, including what
+          tractography can and cannot establish.',
+      },
+    ],
+}
+---
 
 ## The signal
 
@@ -30,7 +76,7 @@ the claims they support.
   water, giving white-matter tractography, fractional anisotropy, and mean
   diffusivity. This is the modality that makes _structural connectivity_
   measurable.
-- _*T2*/SWI:_* sensitive to paramagnetic substances — iron, deoxyhaemoglobin,
+- **T2\*/SWI:** sensitive to paramagnetic substances — iron, deoxyhaemoglobin,
   veins, microbleeds.
 - **MR spectroscopy:** metabolite concentrations (N-acetylaspartate, choline,
   creatine, GABA) as markers of integrity and metabolism.
@@ -41,7 +87,7 @@ Functional MRI does not measure neural activity. It measures the
 **blood-oxygenation-level-dependent** signal: the relaxation time of water
 protons in and around capillary beds. Neural activity drives local blood flow
 that overshoots oxygen extraction, raising local oxyhaemoglobin and shifting
-T2*.
+T2\*.
 
 Every step of that chain is a compromise. The signal change is only **1–2%**
 against a noisy baseline. Spatial resolution is excellent (1–3 mm), but that
@@ -84,24 +130,3 @@ acquisition cost for a much stronger inference.
 Structural MRI also provides the ground truth for lesion studies and the anatomy
 behind tractography, where diffusion constrains a _macroscopic connectivity_
 hypothesis and not a monosynaptic one.
-
-## Examples
-
-- [Haemodynamic Response Simulator](/neuroscience/mri/interactive) — Convolve a
-  neural drive with the vascular response and see the 4–6 second lag that sets
-  fMRI temporal resolution.
-
-## References
-
-1. [Ogawa, Honda, Kawai et al. (1990) — Proceedings of the National Academy of Sciences](https://doi.org/10.1073/pnas.87.24.9868)
-   — The original demonstration of intrinsic BOLD contrast in the human brain
-   during activation.
-2. [Logothetis (2008) — Nature Reviews Neuroscience](https://doi.org/10.1038/nrn2348)
-   — What we can and cannot do with fMRI: the physiology of the BOLD signal and
-   the limits of the inferences it supports.
-3. [Poldrack (2006) — Trends in Cognitive Sciences](https://doi.org/10.1016/j.tics.2006.05.004)
-   — Why activation maps do not license the reverse inference, with a concrete
-   predictive-code framing.
-4. [Beaulieu (2002) — The Anatomical Record](https://doi.org/10.1002/ar.10048) —
-   Diffusion-weighted imaging as a neuroanatomical tool, including what
-   tractography can and cannot establish.

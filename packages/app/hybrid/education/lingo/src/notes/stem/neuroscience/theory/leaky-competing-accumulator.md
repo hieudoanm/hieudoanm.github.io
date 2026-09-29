@@ -1,7 +1,30 @@
-# Leaky Competing Accumulator (LCA)
-
-App route: `/neuroscience/leaky-competing-accumulator/` · back to
-[Neuroscience](/neuroscience)
+---
+{
+  'title': 'Leaky Competing Accumulator (LCA)',
+  'subtitle': '',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/leaky-competing-accumulator/interactive',
+        'label': 'LCA Simulator',
+        'description':
+          'Experiment with leak and inhibition parameters in a noisy accumulator
+          network.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1037/0033-295X.108.3.550',
+        'label': 'Usher & McClelland (2001) — Psychological Review',
+        'description':
+          'The foundational paper detailing the LCA model and its neural
+          inspiration.',
+      },
+    ],
+}
+---
 
 ## Overview
 
@@ -30,13 +53,3 @@ findings. Recordings in the posterior parietal cortex and frontal eye fields
 during choice tasks show precisely these dynamics: recurrent excitation
 (accumulation), decay (leak), and mutual suppression between neural populations
 encoding different targets.
-
-## Examples
-
-- [LCA Simulator](/neuroscience/leaky-competing-accumulator/interactive) —
-  Experiment with leak and inhibition parameters in a noisy accumulator network.
-
-## References
-
-1. [Usher & McClelland (2001) — Psychological Review](https://doi.org/10.1037/0033-295X.108.3.550)
-   — The foundational paper detailing the LCA model and its neural inspiration.

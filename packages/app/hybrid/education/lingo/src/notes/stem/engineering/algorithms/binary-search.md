@@ -1,9 +1,39 @@
-# Binary Search
-
-> Halving the window each step: the algorithm that turned searching from minutes
-> into microseconds.
-
-App route: `/engineering/binary-search/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Binary Search',
+  'subtitle':
+    'Halving the window each step: the algorithm that turned searching from
+    minutes into microseconds.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/binary-search/interactive',
+        'label': 'Binary Search Tracer',
+        'description':
+          'Watch the search window halve with every probe until the target is
+          pinned down.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Binary_search_algorithm',
+        'label': 'Binary search algorithm',
+        'description':
+          'The halving argument, the exact iteration count, and the
+          preconditions that make it correct.',
+      },
+      {
+        'href': 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/',
+        'label': 'MIT 6.006 — Introduction to Algorithms',
+        'description':
+          'Lecture notes covering asymptotics, sorting lower bounds, and
+          hash-based lookup.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -36,17 +66,3 @@ of the array, and the algorithm is no better than scanning.
 This is the trade at the heart of searching: sorting costs O(n log n) once, and
 every subsequent query is then logarithmic. Sort when you will query repeatedly;
 scan when you will query once.
-
-## Examples
-
-- [Binary Search Tracer](/engineering/binary-search/interactive) — Watch the
-  search window halve with every probe until the target is pinned down.
-
-## References
-
-1. [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
-   — The halving argument, the exact iteration count, and the preconditions that
-   make it correct.
-2. [MIT 6.006 — Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/)
-   — Lecture notes covering asymptotics, sorting lower bounds, and hash-based
-   lookup.

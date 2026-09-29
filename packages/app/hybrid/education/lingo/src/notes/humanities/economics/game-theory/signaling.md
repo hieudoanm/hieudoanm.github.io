@@ -1,8 +1,44 @@
-# Signaling
-
-> How you prove something about yourself when others can't see it directly.
-
-App route: `/economics/signaling/`
+---
+{
+  'title': 'Signaling',
+  'subtitle':
+    "How you prove something about yourself when others can't see it directly.",
+  'links':
+    [
+      {
+        'href': '/economics/signaling/job-market',
+        'label': 'Job Market',
+        'description':
+          'Set wages and learn why education only works as a signal when it
+          costs more for the unproductive.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Signaling_game',
+        'label': 'Wikipedia: Signaling game',
+        'description':
+          'Signaling games and the conditions for separating, pooling, and
+          hybrid equilibria.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2001/summary/',
+        'label': 'Nobel Prize: 2001 Prize in Economics',
+        'description':
+          'The 2001 Nobel Prize awarded for analyses of markets with asymmetric
+          information.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/a/asymmetricinformation.asp',
+        'label': 'Investopedia: Asymmetric Information',
+        'description':
+          'Market failures from asymmetric information, including adverse
+          selection and signaling.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -55,20 +91,3 @@ candidates self-select against.
 hidden-information problems that can otherwise collapse markets (the market for
 lemons). Understanding which is happening tells us who bears the effort of
 overcoming the information gap.
-
-## Examples
-
-- [Job Market](/economics/signaling/job-market) — Set wages and learn why
-  education only works as a signal when it costs more for the unproductive.
-
-## References
-
-1. [Wikipedia: Signaling game](https://en.wikipedia.org/wiki/Signaling_game) —
-   Signaling games and the conditions for separating, pooling, and hybrid
-   equilibria.
-2. [Nobel Prize: 2001 Prize in Economics](https://www.nobelprize.org/prizes/economic-sciences/2001/summary/)
-   — The 2001 Nobel Prize awarded for analyses of markets with asymmetric
-   information.
-3. [Investopedia: Asymmetric Information](https://www.investopedia.com/terms/a/asymmetricinformation.asp)
-   — Market failures from asymmetric information, including adverse selection
-   and signaling.

@@ -1,9 +1,30 @@
-# Stack
-
-> Last in, first out: the discipline behind recursion, undo, and expression
-> evaluation.
-
-App route: `/engineering/stacks/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Stack',
+  'subtitle':
+    'Last in, first out: the discipline behind recursion, undo, and expression
+    evaluation.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/stacks/interactive',
+        'label': 'Stack Playground',
+        'description':
+          'Push and pop values and watch the top of the stack move.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Stack_(abstract_data_type)',
+        'label': 'Stack (abstract data type)',
+        'description':
+          'The LIFO discipline and its array and linked-list implementations.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -35,13 +56,3 @@ why the discipline exists in the first place.
 The fixed-capacity version fails predictably — overflow on push, underflow on
 pop. A growable version doubles its capacity when full, making every operation
 amortised O(1).
-
-## Examples
-
-- [Stack Playground](/engineering/stacks/interactive) — Push and pop values and
-  watch the top of the stack move.
-
-## References
-
-1. [Stack (abstract data type)](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)
-   — The LIFO discipline and its array and linked-list implementations.

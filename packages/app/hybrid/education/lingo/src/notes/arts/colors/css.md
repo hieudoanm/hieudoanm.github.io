@@ -1,8 +1,30 @@
-# Color in CSS
-
-> Gradients, palettes and theme roles for shipping color to the browser.
-
-App route: `/colors/css/`
+---
+{
+  'title': 'Color in CSS',
+  'subtitle':
+    'Gradients, palettes and theme roles for shipping color to the browser.',
+  'links':
+    [
+      {
+        'href': '/colors/css/gradient',
+        'label': 'Gradient Builder',
+        'description':
+          'Compose linear and radial CSS gradients from two or three stops.',
+      },
+      {
+        'href': '/colors/css/palette',
+        'label': 'Palette Generator',
+        'description': 'Roll a random harmonious five-color palette.',
+      },
+      {
+        'href': '/colors/css/theme',
+        'label': 'Theme Colors',
+        'description':
+          'Browse the active theme palette roles as copyable CSS variables.',
+      },
+    ],
+}
+---
 
 ## Gradients
 
@@ -32,12 +54,3 @@ readable text color for their paired background.
 
 Theming tools read those computed variables at runtime, so the palette you
 browse is always the theme actually applied.
-
-## Examples
-
-- [Gradient Builder](/colors/css/gradient) — Compose linear and radial CSS
-  gradients from two or three stops.
-- [Palette Generator](/colors/css/palette) — Roll a random harmonious five-color
-  palette.
-- [Theme Colors](/colors/css/theme) — Browse the active theme palette roles as
-  copyable CSS variables.

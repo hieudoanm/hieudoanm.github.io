@@ -1,8 +1,40 @@
-# Zero-Sum Games
-
-> Games where one player's gain is exactly another's loss.
-
-App route: `/economics/zero-sum-games/`
+---
+{
+  'title': 'Zero-Sum Games',
+  'subtitle': "Games where one player's gain is exactly another's loss.",
+  'links':
+    [
+      {
+        'href': '/economics/zero-sum-games/rps',
+        'label': 'Play RPS',
+        'description':
+          'Learn minimax and the value of zero-sum games on the classic
+          playground.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Zero-sum_game',
+        'label': 'Wikipedia: Zero-sum game',
+        'description':
+          "Zero-sum games in which one player's gain is another's loss.",
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/z/zero-sumgame.asp',
+        'label': 'Investopedia: Zero-Sum Game',
+        'description': 'Zero-sum games in investment and competition contexts.',
+      },
+      {
+        'href': 'https://plato.stanford.edu/entries/game-theory/',
+        'label': 'Stanford Encyclopedia of Philosophy: Game Theory',
+        'description':
+          'Formal treatment of strategic games, including zero-sum and
+          mixed-strategy equilibria.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,18 +88,3 @@ though specialization usually makes the overall economy positive-sum.
 
 **Cybersecurity:** Hacking and defense are often modeled as zero-sum, where one
 party’s foothold is another’s exposure.
-
-## Examples
-
-- [Play RPS](/economics/zero-sum-games/rps) — Learn minimax and the value of
-  zero-sum games on the classic playground.
-
-## References
-
-1. [Wikipedia: Zero-sum game](https://en.wikipedia.org/wiki/Zero-sum_game) —
-   Zero-sum games in which one player's gain is another's loss.
-2. [Investopedia: Zero-Sum Game](https://www.investopedia.com/terms/z/zero-sumgame.asp)
-   — Zero-sum games in investment and competition contexts.
-3. [Stanford Encyclopedia of Philosophy: Game Theory](https://plato.stanford.edu/entries/game-theory/)
-   — Formal treatment of strategic games, including zero-sum and mixed-strategy
-   equilibria.

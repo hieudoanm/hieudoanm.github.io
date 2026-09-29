@@ -1,8 +1,45 @@
-# Causal Inference & LATE
-
-> Moving beyond correlation to understand what actually causes what.
-
-App route: `/economics/causal-inference/`
+---
+{
+  'title': 'Causal Inference & LATE',
+  'subtitle':
+    'Moving beyond correlation to understand what actually causes what.',
+  'links':
+    [
+      {
+        'href': '/economics/causal-inference/experiments',
+        'label': 'Causation Challenge',
+        'description':
+          'Interactive quiz: classify six real-world correlations as causal or
+          spurious, using an investigation budget of randomized trials and
+          confounder controls.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Causal_inference',
+        'label': 'Wikipedia: Causal Inference',
+        'description':
+          'Survey of methods for estimating cause and effect from observational
+          and experimental data.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2021/card-angrist-imbens/summary/',
+        'label': 'Nobel Prize: 2021 (Card, Angrist, Imbens)',
+        'description':
+          'Nobel Prize page recognizing contributions to natural experiments and
+          causal inference methods.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2019/banerjee-duflo-kremer/summary/',
+        'label': 'Nobel Prize: 2019 (Banerjee, Duflo, Kremer)',
+        'description':
+          'Nobel Prize page recognizing experimental approaches to alleviating
+          global poverty.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,21 +93,3 @@ generalizes with care.
 **Interpretation:** A LATE is the right answer to a precisely delimited
 question, but the wrong answer to a broad one (“what’s the effect of college for
 everyone?”). Researchers must be explicit about which population they identify.
-
-## Examples
-
-- [Causation Challenge](/economics/causal-inference/experiments) — Interactive
-  quiz: classify six real-world correlations as causal or spurious, using an
-  investigation budget of randomized trials and confounder controls.
-
-## References
-
-1. [Wikipedia: Causal Inference](https://en.wikipedia.org/wiki/Causal_inference)
-   — Survey of methods for estimating cause and effect from observational and
-   experimental data.
-2. [Nobel Prize: 2021 (Card, Angrist, Imbens)](https://www.nobelprize.org/prizes/economic-sciences/2021/card-angrist-imbens/summary/)
-   — Nobel Prize page recognizing contributions to natural experiments and
-   causal inference methods.
-3. [Nobel Prize: 2019 (Banerjee, Duflo, Kremer)](https://www.nobelprize.org/prizes/economic-sciences/2019/banerjee-duflo-kremer/summary/)
-   — Nobel Prize page recognizing experimental approaches to alleviating global
-   poverty.

@@ -1,9 +1,44 @@
-# Coordination Games
-
-> When the best choice depends on what everyone else chooses—and the challenge
-> is just to agree.
-
-App route: `/economics/coordination-games/`
+---
+{
+  'title': 'Coordination Games',
+  'subtitle':
+    'When the best choice depends on what everyone else chooses—and the
+    challenge is just to agree.',
+  'links':
+    [
+      {
+        'href': '/economics/coordination-games/stag-hunt',
+        'label': 'Stag Hunt',
+        'description':
+          'Coordinate with a partner and learn why trust earns more than playing
+          it safe.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Coordination_game',
+        'label': 'Wikipedia: Coordination Game',
+        'description':
+          'Overview of coordination games, multiple equilibria, and real-world
+          examples.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Stag_hunt',
+        'label': 'Wikipedia: Stag Hunt',
+        'description':
+          'Detailed look at the stag hunt game, trust, and social cooperation.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Focal_point_(game_theory)',
+        'label': 'Wikipedia: Focal Point (Game Theory)',
+        'description':
+          "Schelling's concept of focal points and how people coordinate without
+          communication.",
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,19 +91,3 @@ games—everyone joins the platform others are on.
 
 **Social conventions:** Norms, etiquette, and traffic rules are self-enforcing
 coordination outcomes with no one in charge.
-
-## Examples
-
-- [Stag Hunt](/economics/coordination-games/stag-hunt) — Coordinate with a
-  partner and learn why trust earns more than playing it safe.
-
-## References
-
-1. [Wikipedia: Coordination Game](https://en.wikipedia.org/wiki/Coordination_game)
-   — Overview of coordination games, multiple equilibria, and real-world
-   examples.
-2. [Wikipedia: Stag Hunt](https://en.wikipedia.org/wiki/Stag_hunt) — Detailed
-   look at the stag hunt game, trust, and social cooperation.
-3. [Wikipedia: Focal Point (Game Theory)](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>)
-   — Schelling's concept of focal points and how people coordinate without
-   communication.

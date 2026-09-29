@@ -1,9 +1,42 @@
-# Overconfidence Bias
-
-> People systematically overestimate their abilities, forecasts, and control
-> over outcomes.
-
-App route: `/economics/overconfidence-bias/`
+---
+{
+  'title': 'Overconfidence Bias',
+  'subtitle':
+    'People systematically overestimate their abilities, forecasts, and control
+    over outcomes.',
+  'links':
+    [
+      {
+        'href': '/economics/overconfidence-bias/calibration',
+        'label': 'Calibration Challenge',
+        'description':
+          'Test how calibrated your confidence is across factual questions, a
+          market bet, and a range estimate.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Overconfidence_effect',
+        'label': 'Wikipedia: Overconfidence Effect',
+        'description': 'Overview of the bias and the evidence behind it.',
+      },
+      {
+        'href': 'https://www.investopedia.com/overconfidence-bias-7485796',
+        'label': 'Investopedia: Overconfidence Bias',
+        'description':
+          'How overconfidence distorts investing decisions and performance.',
+      },
+      {
+        'href': 'https://www.britannica.com/science/Dunning-Kruger-effect',
+        'label': 'Britannica: Dunning-Kruger Effect',
+        'description':
+          'Related phenomenon in which the least competent overestimate their
+          ability.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -50,18 +83,3 @@ ignoring contradictions reinforces overconfidence.
 that can pay off (entrepreneurship); the cost is often borne when it distorts
 judgment. Mitigating it requires explicit consideration of opposing evidence and
 honest calibration of uncertainty.
-
-## Examples
-
-- [Calibration Challenge](/economics/overconfidence-bias/calibration) — Test how
-  calibrated your confidence is across factual questions, a market bet, and a
-  range estimate.
-
-## References
-
-1. [Wikipedia: Overconfidence Effect](https://en.wikipedia.org/wiki/Overconfidence_effect)
-   — Overview of the bias and the evidence behind it.
-2. [Investopedia: Overconfidence Bias](https://www.investopedia.com/overconfidence-bias-7485796)
-   — How overconfidence distorts investing decisions and performance.
-3. [Britannica: Dunning-Kruger Effect](https://www.britannica.com/science/Dunning-Kruger-effect)
-   — Related phenomenon in which the least competent overestimate their ability.

@@ -1,8 +1,43 @@
-# Supply & Demand
-
-> The two forces that set almost every price in a market economy.
-
-App route: `/economics/supply-and-demand/`
+---
+{
+  'title': 'Supply & Demand',
+  'subtitle': 'The two forces that set almost every price in a market economy.',
+  'links':
+    [
+      {
+        'href': '/economics/supply-and-demand/price-lab',
+        'label': 'Price Lab',
+        'description':
+          'Drag the curves and see equilibrium, shortages, surpluses and
+          elasticity live.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Supply_and_demand',
+        'label': 'Wikipedia: Supply and demand',
+        'description':
+          'Foundational model of how supply and demand determine market prices
+          and quantities.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/s/supply.asp',
+        'label': 'Investopedia: Supply',
+        'description':
+          'Definition of supply, the supply curve, and the factors that shift
+          it.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/l/law-of-supply-demand.asp',
+        'label': 'Investopedia: Law of Supply and Demand',
+        'description':
+          'The law of supply and demand and its role in reaching market
+          equilibrium.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -51,18 +86,3 @@ market by moving prices away from equilibrium, producing shortages or surpluses.
 
 **Allocation:** Prices ration scarce goods to those who value them most and
 signal producers where to direct resources.
-
-## Examples
-
-- [Price Lab](/economics/supply-and-demand/price-lab) — Drag the curves and see
-  equilibrium, shortages, surpluses and elasticity live.
-
-## References
-
-1. [Wikipedia: Supply and demand](https://en.wikipedia.org/wiki/Supply_and_demand)
-   — Foundational model of how supply and demand determine market prices and
-   quantities.
-2. [Investopedia: Supply](https://www.investopedia.com/terms/s/supply.asp) —
-   Definition of supply, the supply curve, and the factors that shift it.
-3. [Investopedia: Law of Supply and Demand](https://www.investopedia.com/terms/l/law-of-supply-demand.asp)
-   — The law of supply and demand and its role in reaching market equilibrium.

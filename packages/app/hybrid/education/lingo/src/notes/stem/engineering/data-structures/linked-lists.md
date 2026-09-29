@@ -1,8 +1,36 @@
-# Linked Lists
-
-> Nodes joined by pointers: O(1) splicing, no shifting, and no random access.
-
-App route: `/engineering/linked-lists/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Linked Lists',
+  'subtitle':
+    'Nodes joined by pointers: O(1) splicing, no shifting, and no random access.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/linked-lists/interactive',
+        'label': 'Linked List Playground',
+        'description':
+          'Append nodes and search the list, watching each node visited in turn.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://algs4.cs.princeton.edu/home/',
+        'label': 'Sedgewick & Flajolet — Algorithms, 4th edition',
+        'description':
+          'The standard reference for data-structure invariants and the
+          amortised cost of dynamic array growth.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Linked_list',
+        'label': 'Linked list',
+        'description':
+          'Node layout, the locality trade-off, and the skip-list variant.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -36,16 +64,3 @@ to a sorted linked list, giving O(log n) search with a far simpler
 implementation than a balanced tree. Redis uses sorted skip lists instead of
 balanced trees, and the comparison is instructive about where simplicity beats
 theory.
-
-## Examples
-
-- [Linked List Playground](/engineering/linked-lists/interactive) — Append nodes
-  and search the list, watching each node visited in turn.
-
-## References
-
-1. [Sedgewick & Flajolet — Algorithms, 4th edition](https://algs4.cs.princeton.edu/home/)
-   — The standard reference for data-structure invariants and the amortised cost
-   of dynamic array growth.
-2. [Linked list](https://en.wikipedia.org/wiki/Linked_list) — Node layout, the
-   locality trade-off, and the skip-list variant.

@@ -1,8 +1,29 @@
-# Suffix Trees and Arrays
-
-> Sorting every suffix to answer substring questions in logarithmic time.
-
-App route: `/engineering/suffix-arrays/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Suffix Trees and Arrays',
+  'subtitle':
+    'Sorting every suffix to answer substring questions in logarithmic time.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/suffix-arrays/interactive',
+        'label': 'Suffix Array Builder',
+        'description':
+          'Build the suffix array by doubling and watch the ranks settle.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Suffix_array',
+        'label': 'Suffix array',
+        'description':
+          'Doubling construction, the LCP array, and substring queries.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -38,13 +59,3 @@ The array is also a compressed representation of the string itself: to store a
 text of length n, storing a suffix array and a base-64 string is asymptotically
 smaller than storing the text naively, which is how large genome assemblies
 compress their data.
-
-## Examples
-
-- [Suffix Array Builder](/engineering/suffix-arrays/interactive) — Build the
-  suffix array by doubling and watch the ranks settle.
-
-## References
-
-1. [Suffix array](https://en.wikipedia.org/wiki/Suffix_array) — Doubling
-   construction, the LCP array, and substring queries.

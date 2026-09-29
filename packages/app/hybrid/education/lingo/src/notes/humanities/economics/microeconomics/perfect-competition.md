@@ -1,9 +1,42 @@
-# Perfect Competition
-
-> The idealized market where no one can influence price—and the benchmark for
-> efficiency.
-
-App route: `/economics/perfect-competition/`
+---
+{
+  'title': 'Perfect Competition',
+  'subtitle':
+    'The idealized market where no one can influence price—and the benchmark for
+    efficiency.',
+  'links':
+    [
+      {
+        'href': '/economics/perfect-competition/firm',
+        'label': 'Competitive Firm Lab',
+        'description':
+          'A price-taking firm: choose output where price equals marginal cost,
+          and watch long-run profits fall to zero.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Perfect_competition',
+        'label': 'Wikipedia: Perfect Competition',
+        'description': 'Overview of the market structure and its assumptions.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/p/perfectcompetition.asp',
+        'label': 'Investopedia: Perfect Competition',
+        'description':
+          'Entry on the conditions, results, and efficiency of perfect
+          competition.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/perfect-competition',
+        'label': 'Britannica: Perfect Competition',
+        'description':
+          'Article on the idealized market used as the benchmark for efficiency.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -53,18 +86,3 @@ shows the social loss from monopoly and imperfect competition.
 **Limits:** Real markets rarely satisfy all conditions; the model is a
 simplification. It also ignores externalities and imperfect information, which
 is why those are studied separately as market failures.
-
-## Examples
-
-- [Competitive Firm Lab](/economics/perfect-competition/firm) — A price-taking
-  firm: choose output where price equals marginal cost, and watch long-run
-  profits fall to zero.
-
-## References
-
-1. [Wikipedia: Perfect Competition](https://en.wikipedia.org/wiki/Perfect_competition)
-   — Overview of the market structure and its assumptions.
-2. [Investopedia: Perfect Competition](https://www.investopedia.com/terms/p/perfectcompetition.asp)
-   — Entry on the conditions, results, and efficiency of perfect competition.
-3. [Britannica: Perfect Competition](https://www.britannica.com/topic/perfect-competition)
-   — Article on the idealized market used as the benchmark for efficiency.

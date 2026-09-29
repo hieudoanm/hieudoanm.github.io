@@ -1,8 +1,31 @@
-# Color & Perception
-
-> How the eye measures contrast, fails to see some colors, and reads warmth.
-
-App route: `/colors/perception/`
+---
+{
+  'title': 'Color & Perception',
+  'subtitle':
+    'How the eye measures contrast, fails to see some colors, and reads warmth.',
+  'links':
+    [
+      {
+        'href': '/colors/perception/contrast',
+        'label': 'Contrast Checker',
+        'description':
+          'Verify contrast ratios against all four WCAG thresholds.',
+      },
+      {
+        'href': '/colors/perception/color-blindness',
+        'label': 'Color Blindness',
+        'description':
+          'Simulate protanopia, deuteranopia and tritanopia on any color.',
+      },
+      {
+        'href': '/colors/perception/temperature',
+        'label': 'Color Temperature',
+        'description':
+          'Classify a color as warm or cool and map color temperature in Kelvin.',
+      },
+    ],
+}
+---
 
 ## Relative luminance
 
@@ -32,12 +55,3 @@ blue.
 In color theory the same words describe hue position: reds, oranges and yellows
 feel warm; greens, blues and violets feel cool. Low-saturation colors read as
 neutral.
-
-## Examples
-
-- [Contrast Checker](/colors/perception/contrast) — Verify contrast ratios
-  against all four WCAG thresholds.
-- [Color Blindness](/colors/perception/color-blindness) — Simulate protanopia,
-  deuteranopia and tritanopia on any color.
-- [Color Temperature](/colors/perception/temperature) — Classify a color as warm
-  or cool and map color temperature in Kelvin.

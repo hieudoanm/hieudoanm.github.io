@@ -1,9 +1,45 @@
-# Nudge & Behavioral Economics
-
-> Small changes in how choices are presented can dramatically change what people
-> choose.
-
-App route: `/economics/nudge-and-behavioral-economics/`
+---
+{
+  'title': 'Nudge & Behavioral Economics',
+  'subtitle':
+    'Small changes in how choices are presented can dramatically change what
+    people choose.',
+  'links':
+    [
+      {
+        'href': '/economics/nudge-and-behavioral-economics/choice',
+        'label': 'Nudge Design Lab',
+        'description':
+          'Design opt-in vs opt-out defaults and run an auto-enroll simulator to
+          see default effects.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Nudge_theory',
+        'label': 'Wikipedia: Nudge Theory',
+        'description':
+          'Overview of nudge theory, choice architecture, and libertarian
+          paternalism.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/b/behavioraleconomics.asp',
+        'label': 'Investopedia: Behavioral Economics',
+        'description':
+          'Introduction to behavioral economics and how psychology shapes
+          economic decisions.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2017/thaler/facts/',
+        'label': 'Nobel Prize: Richard Thaler (2017)',
+        'description':
+          'Nobel biography of Thaler, awarded for integrating psychology into
+          economics.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -62,20 +98,3 @@ consumers.
 
 **Replication:** Some classic nudge effects have proven fragile or
 context-dependent, raising questions about generalizability.
-
-## Examples
-
-- [Nudge Design Lab](/economics/nudge-and-behavioral-economics/choice) — Design
-  opt-in vs opt-out defaults and run an auto-enroll simulator to see default
-  effects.
-
-## References
-
-1. [Wikipedia: Nudge Theory](https://en.wikipedia.org/wiki/Nudge_theory) —
-   Overview of nudge theory, choice architecture, and libertarian paternalism.
-2. [Investopedia: Behavioral Economics](https://www.investopedia.com/terms/b/behavioraleconomics.asp)
-   — Introduction to behavioral economics and how psychology shapes economic
-   decisions.
-3. [Nobel Prize: Richard Thaler (2017)](https://www.nobelprize.org/prizes/economic-sciences/2017/thaler/facts/)
-   — Nobel biography of Thaler, awarded for integrating psychology into
-   economics.

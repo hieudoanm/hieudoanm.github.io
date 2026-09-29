@@ -860,8 +860,11 @@
 │   │       ├── [DownloadsTemplate.tsx](./src/components/templates/DownloadsTemplate.tsx)
 │   │       ├── [ErrorTemplate.tsx](./src/components/templates/ErrorTemplate.tsx)
 │   │       ├── [GamesTemplate.tsx](./src/components/templates/GamesTemplate.tsx)
+│   │       ├── [NoteBody.tsx](./src/components/templates/NoteBody.tsx)
+│   │       ├── [NoteTemplate.tsx](./src/components/templates/NoteTemplate.tsx)
 │   │       ├── [TheoryTemplate.tsx](./src/components/templates/TheoryTemplate.tsx)
-│   │       └── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
+│   │       ├── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
+│   │       └── [noteEmbeds.ts](./src/components/templates/noteEmbeds.ts)
 │   ├── content/
 │   │   ├── [about.ts](./src/content/about.ts)
 │   │   ├── [download.ts](./src/content/download.ts)
@@ -2216,6 +2219,18 @@
 │   │   │   ├── __tests__/
 │   │   │   │   └── [index.test.ts](./src/lib/native/__tests__/index.test.ts)
 │   │   │   └── [index.ts](./src/lib/native/index.ts)
+│   │   ├── notes/
+│   │   │   ├── __tests__/
+│   │   │   │   ├── [allNotes.test.ts](./src/lib/notes/__tests__/allNotes.test.ts)
+│   │   │   │   └── [note.test.ts](./src/lib/notes/__tests__/note.test.ts)
+│   │   │   ├── [frontmatter.ts](./src/lib/notes/frontmatter.ts)
+│   │   │   ├── [index.ts](./src/lib/notes/index.ts)
+│   │   │   ├── [markdown-segments.ts](./src/lib/notes/markdown-segments.ts)
+│   │   │   ├── [markdown.ts](./src/lib/notes/markdown.ts)
+│   │   │   ├── [note.ts](./src/lib/notes/note.ts)
+│   │   │   ├── [sections.ts](./src/lib/notes/sections.ts)
+│   │   │   ├── [types.ts](./src/lib/notes/types.ts)
+│   │   │   └── [validate.ts](./src/lib/notes/validate.ts)
 │   │   ├── [catalog.ts](./src/lib/catalog.ts)
 │   │   ├── [progress.ts](./src/lib/progress.ts)
 │   │   └── [publicPaths.ts](./src/lib/publicPaths.ts)
@@ -2361,9 +2376,10 @@
 │   │   ├── [NativeProvider.tsx](./src/providers/NativeProvider.tsx)
 │   │   ├── [QueryProvider.tsx](./src/providers/QueryProvider.tsx)
 │   │   └── [SWProvider.tsx](./src/providers/SWProvider.tsx)
-│   └── styles/
-│       ├── [globals.css](./src/styles/globals.css)
-│       └── [themes.css](./src/styles/themes.css)
+│   ├── styles/
+│   │   ├── [globals.css](./src/styles/globals.css)
+│   │   └── [themes.css](./src/styles/themes.css)
+│   └── [global.d.ts](./src/global.d.ts)
 ├── src-tauri/
 │   ├── capabilities/
 │   │   └── [default.json](./src-tauri/capabilities/default.json)
@@ -2446,6 +2462,7 @@
 ├── [docker-compose.yaml](./docker-compose.yaml)
 ├── [eslint.config.mts](./eslint.config.mts)
 ├── [jest.config.ts](./jest.config.ts)
+├── [jest.markdown-transform.js](./jest.markdown-transform.js)
 ├── [jest.setup.ts](./jest.setup.ts)
 ├── [next.config.ts](./next.config.ts)
 ├── [package.json](./package.json)
@@ -2454,4 +2471,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-775 directories, 1676 files
+777 directories, 1691 files

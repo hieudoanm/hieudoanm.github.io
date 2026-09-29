@@ -1,9 +1,32 @@
-# Insertion Sort
-
-> The sort that is O(n) on nearly-sorted input, and the method behind most
-> small-array sorts.
-
-App route: `/engineering/insertion-sort/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Insertion Sort',
+  'subtitle':
+    'The sort that is O(n) on nearly-sorted input, and the method behind most
+    small-array sorts.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/insertion-sort/interactive',
+        'label': 'Insertion Sort Visualiser',
+        'description':
+          'Step through each insertion and watch the sorted prefix grow by one
+          element.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
+        'label': 'Big O notation',
+        'description':
+          'How asymptotic growth classes are defined, and why constants and
+          lower-order terms drop out.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -38,14 +61,3 @@ than the k swaps a swap-based version would need.
 
 The visualiser marks the gap with the active state, so the hole is visible as it
 migrates. That motion is the algorithm; everything else is bookkeeping.
-
-## Examples
-
-- [Insertion Sort Visualiser](/engineering/insertion-sort/interactive) — Step
-  through each insertion and watch the sorted prefix grow by one element.
-
-## References
-
-1. [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation) — How
-   asymptotic growth classes are defined, and why constants and lower-order
-   terms drop out.

@@ -1,9 +1,30 @@
-# Quantitative EEG (qEEG)
-
-> Turning scalp waveforms into frequency-domain measures of oscillatory coupling
-> — powerful when handled carefully, fragile when it is not.
-
-App route: `/neuroscience/qeeg/` · back to [Neuroscience](/neuroscience)
+---
+{
+  'title': 'Quantitative EEG (qEEG)',
+  'subtitle':
+    'Turning scalp waveforms into frequency-domain measures of oscillatory
+    coupling — powerful when handled carefully, fragile when it is not.',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1038/nrn3241',
+        'label':
+          'Buzsáki, Anastassiou & Koch (2012) — Nature Reviews Neuroscience',
+        'description':
+          'Why scalp oscillations reflect coordinated population activity, and
+          the physical limits on localising them.',
+      },
+      {
+        'href': 'https://doi.org/10.1016/j.clinph.2007.06.018',
+        'label': 'Gudmundsson et al. (2007) — Clinical Neurophysiology',
+        'description':
+          'A critical appraisal of quantitative EEG in clinical research,
+          emphasising pipeline sensitivity.',
+      },
+    ],
+}
+---
 
 ## What it measures
 
@@ -51,12 +72,3 @@ Treat a qEEG difference as a hypothesis about coordinated activity, not a
 localisation claim. When the question is _where_, reach for fMRI or a
 source-reconstruction method; when it is _when_ and _how states change_, qEEG is
 the right instrument.
-
-## References
-
-1. [Buzsáki, Anastassiou & Koch (2012) — Nature Reviews Neuroscience](https://doi.org/10.1038/nrn3241)
-   — Why scalp oscillations reflect coordinated population activity, and the
-   physical limits on localising them.
-2. [Gudmundsson et al. (2007) — Clinical Neurophysiology](https://doi.org/10.1016/j.clinph.2007.06.018)
-   — A critical appraisal of quantitative EEG in clinical research, emphasising
-   pipeline sensitivity.

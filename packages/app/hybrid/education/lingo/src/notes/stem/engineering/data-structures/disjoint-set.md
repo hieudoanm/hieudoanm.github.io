@@ -1,9 +1,30 @@
-# Disjoint Set (Union-Find)
-
-> Two operations, near-constant time, and the amortised bound that is almost
-> O(1).
-
-App route: `/engineering/disjoint-set/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Disjoint Set (Union-Find)',
+  'subtitle':
+    'Two operations, near-constant time, and the amortised bound that is almost
+    O(1).',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/disjoint-set/interactive',
+        'label': 'Union-Find Playground',
+        'description':
+          'Merge elements and watch the components and their roots change.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Disjoint-set_data_structure',
+        'label': 'Disjoint-set data structure',
+        'description':
+          'Union by rank, path compression, and the inverse Ackermann bound.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -38,13 +59,3 @@ It also underpins the union-find structure behind golfing, equivalence- class
 inference in unification-based type checking, and tracking equivalence relations
 in constraint solvers. In all of them the operations arrive in an order that the
 offline structure is well suited to.
-
-## Examples
-
-- [Union-Find Playground](/engineering/disjoint-set/interactive) — Merge
-  elements and watch the components and their roots change.
-
-## References
-
-1. [Disjoint-set data structure](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
-   — Union by rank, path compression, and the inverse Ackermann bound.

@@ -1,8 +1,29 @@
-# Journaling
-
-> Writing as a thinking tool — what changes when experience is put on paper.
-
-App route: `/psychology/journaling/` · back to [Psychology](/psychology/)
+---
+{
+  'title': 'Journaling',
+  'subtitle':
+    'Writing as a thinking tool — what changes when experience is put on paper.',
+  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
+  'links':
+    [
+      {
+        'href': '/psychology/patient-health-questionnaire/',
+        'label': 'Patient Health Questionnaire (PHQ-9)',
+        'description': 'Structured symptom tracking over two weeks',
+      },
+      {
+        'href': '/psychology/beck-depression-inventory/',
+        'label': 'Beck Depression Inventory (BDI-II)',
+        'description': 'Mood, sleep and energy across three weeks',
+      },
+      {
+        'href': '/psychology/satisfaction-with-life/',
+        'label': 'Satisfaction With Life Scale',
+        'description': 'A five-item snapshot to revisit periodically',
+      },
+    ],
+}
+---
 
 ## Why writing helps
 
@@ -51,12 +72,3 @@ do not.
 One caution: mood-tracking scales can become a source of rumination if used only
 to record distress. Pair tracking with something generative, and treat a bad run
 as data rather than a verdict.
-
-## Examples
-
-- [Patient Health Questionnaire (PHQ-9)](/psychology/patient-health-questionnaire/)
-  — Structured symptom tracking over two weeks
-- [Beck Depression Inventory (BDI-II)](/psychology/beck-depression-inventory/) —
-  Mood, sleep and energy across three weeks
-- [Satisfaction With Life Scale](/psychology/satisfaction-with-life/) — A
-  five-item snapshot to revisit periodically

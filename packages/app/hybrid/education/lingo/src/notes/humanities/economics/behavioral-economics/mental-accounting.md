@@ -1,9 +1,43 @@
-# Mental Accounting
-
-> Why people treat money differently depending on where it comes from—and where
-> it’s going.
-
-App route: `/economics/mental-accounting/`
+---
+{
+  'title': 'Mental Accounting',
+  'subtitle':
+    'Why people treat money differently depending on where it comes from—and
+    where it’s going.',
+  'links':
+    [
+      {
+        'href': '/economics/mental-accounting/scenarios',
+        'label': 'Mental Accounting Game',
+        'description':
+          'Wrestle with six Thaler-style vignettes — then split a $1,000
+          windfall across mental accounts.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Mental_accounting',
+        'label': 'Wikipedia: Mental Accounting',
+        'description':
+          "Overview of Thaler's concept and its role in behavioral economics.",
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/m/mental-accounting.asp',
+        'label': 'Investopedia: Mental Accounting',
+        'description':
+          'Entry explaining how people categorize and treat money differently.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2017/summary/',
+        'label': 'Nobel Prize: Richard Thaler 2017',
+        'description':
+          'Nobel award to Thaler for contributions to behavioral economics
+          including mental accounting.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -49,19 +83,3 @@ automatic savings or a dedicated travel fund.
 
 **A double-edged tool:** Mental accounting is a bias when it distorts spending,
 but a useful constraint when deliberately harnessed to enforce saving goals.
-
-## Examples
-
-- [Mental Accounting Game](/economics/mental-accounting/scenarios) — Wrestle
-  with six Thaler-style vignettes — then split a $1,000 windfall across mental
-  accounts.
-
-## References
-
-1. [Wikipedia: Mental Accounting](https://en.wikipedia.org/wiki/Mental_accounting)
-   — Overview of Thaler's concept and its role in behavioral economics.
-2. [Investopedia: Mental Accounting](https://www.investopedia.com/terms/m/mental-accounting.asp)
-   — Entry explaining how people categorize and treat money differently.
-3. [Nobel Prize: Richard Thaler 2017](https://www.nobelprize.org/prizes/economic-sciences/2017/summary/)
-   — Nobel award to Thaler for contributions to behavioral economics including
-   mental accounting.

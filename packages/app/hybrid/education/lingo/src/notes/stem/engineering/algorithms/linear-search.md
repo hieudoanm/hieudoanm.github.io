@@ -1,9 +1,38 @@
-# Linear Search
-
-> The only search that needs no ordering — and the baseline every other search
-> is measured against.
-
-App route: `/engineering/linear-search/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Linear Search',
+  'subtitle':
+    'The only search that needs no ordering — and the baseline every other
+    search is measured against.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/linear-search/interactive',
+        'label': 'Linear Search Tracer',
+        'description':
+          'Watch each element get probed in turn until the target turns up.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Binary_search_algorithm',
+        'label': 'Binary search algorithm',
+        'description':
+          'The halving argument, the exact iteration count, and the
+          preconditions that make it correct.',
+      },
+      {
+        'href': 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/',
+        'label': 'MIT 6.006 — Introduction to Algorithms',
+        'description':
+          'Lecture notes covering asymptotics, sorting lower bounds, and
+          hash-based lookup.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -37,17 +66,3 @@ value that cannot equal the target, trading a branch inside the loop for one at
 the end. Modern compilers usually make that rewrite pointless, since the branch
 predicts perfectly — an instructive example of an optimisation that outlived its
 hardware.
-
-## Examples
-
-- [Linear Search Tracer](/engineering/linear-search/interactive) — Watch each
-  element get probed in turn until the target turns up.
-
-## References
-
-1. [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
-   — The halving argument, the exact iteration count, and the preconditions that
-   make it correct.
-2. [MIT 6.006 — Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/)
-   — Lecture notes covering asymptotics, sorting lower bounds, and hash-based
-   lookup.

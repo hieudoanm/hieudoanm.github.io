@@ -1,9 +1,42 @@
-# Portfolio Theory
-
-> Why diversification is the only free lunch in investing—and how to build an
-> optimal mix.
-
-App route: `/economics/portfolio-theory/`
+---
+{
+  'title': 'Portfolio Theory',
+  'subtitle':
+    'Why diversification is the only free lunch in investing—and how to build an
+    optimal mix.',
+  'links':
+    [
+      {
+        'href': '/economics/portfolio-theory/frontier',
+        'label': 'Diversification Lab',
+        'description':
+          'Mix three risky assets to trace the efficient frontier, and discover
+          the 1/√N rule of idiosyncratic-risk reduction.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Modern_portfolio_theory',
+        'label': 'Wikipedia: Modern Portfolio Theory',
+        'description':
+          'Overview of MPT, diversification, and the efficient frontier.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/m/modernportfoliotheory.asp',
+        'label': 'Investopedia: Modern Portfolio Theory',
+        'description':
+          'Entry on MPT, expected returns, and portfolio construction.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/1990/markowitz/facts/',
+        'label': 'Nobel Prize: Harry Markowitz (1990)',
+        'description':
+          'Nobel biography of Markowitz, founder of modern portfolio theory.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -50,18 +83,3 @@ rate.
 **Indexing implication:** This supports broad, low-cost market exposure (index
 funds) as the rational default, with risk adjusted by the share allocated to
 safe assets (see the Efficient Market Hypothesis).
-
-## Examples
-
-- [Diversification Lab](/economics/portfolio-theory/frontier) — Mix three risky
-  assets to trace the efficient frontier, and discover the 1/√N rule of
-  idiosyncratic-risk reduction.
-
-## References
-
-1. [Wikipedia: Modern Portfolio Theory](https://en.wikipedia.org/wiki/Modern_portfolio_theory)
-   — Overview of MPT, diversification, and the efficient frontier.
-2. [Investopedia: Modern Portfolio Theory](https://www.investopedia.com/terms/m/modernportfoliotheory.asp)
-   — Entry on MPT, expected returns, and portfolio construction.
-3. [Nobel Prize: Harry Markowitz (1990)](https://www.nobelprize.org/prizes/economic-sciences/1990/markowitz/facts/)
-   — Nobel biography of Markowitz, founder of modern portfolio theory.

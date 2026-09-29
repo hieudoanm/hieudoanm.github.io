@@ -1,6 +1,35 @@
-# Race Models
-
-App route: `/neuroscience/race-models/` · back to [Neuroscience](/neuroscience)
+---
+{
+  'title': 'Race Models',
+  'subtitle': '',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/race-models/interactive',
+        'label': 'Race Model Simulator',
+        'description':
+          'Run a classic independent race and observe how multiple choices
+          affect decision speed.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1080/00140137008931117',
+        'label': 'Vickers (1970) — Ergonomics',
+        'description':
+          'Evidence for an accumulator model of psychophysical discrimination.',
+      },
+      {
+        'href': 'https://doi.org/10.1037/0033-295X.85.2.59',
+        'label': 'Ratcliff (1978) — Psychological Review',
+        'description':
+          'Statistical facilitation and the classic race model formulation.',
+      },
+    ],
+}
+---
 
 ## Overview
 
@@ -30,15 +59,3 @@ Race models naturally predict a phenomenon known as _statistical facilitation_
 can both trigger a response, the overall response time is faster than the
 response time to either target alone. This occurs because you are taking the
 minimum completion time of two independent racing processes.
-
-## Examples
-
-- [Race Model Simulator](/neuroscience/race-models/interactive) — Run a classic
-  independent race and observe how multiple choices affect decision speed.
-
-## References
-
-1. [Vickers (1970) — Ergonomics](https://doi.org/10.1080/00140137008931117) —
-   Evidence for an accumulator model of psychophysical discrimination.
-2. [Ratcliff (1978) — Psychological Review](https://doi.org/10.1037/0033-295X.85.2.59)
-   — Statistical facilitation and the classic race model formulation.

@@ -1,9 +1,45 @@
-# Aggregate Demand & Supply
-
-> The economy-wide version of supply and demand—explaining output, prices, and
-> recessions.
-
-App route: `/economics/aggregate-demand-supply/`
+---
+{
+  'title': 'Aggregate Demand & Supply',
+  'subtitle':
+    'The economy-wide version of supply and demand—explaining output, prices,
+    and recessions.',
+  'links':
+    [
+      {
+        'href': '/economics/aggregate-demand-supply/shocks',
+        'label': 'AD-AS Shocks Lab',
+        'description':
+          'Hit the economy with demand shocks and watch the short-run gap and
+          inflation evolve—then adjust back to long-run.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Aggregate_demand',
+        'label': 'Wikipedia: Aggregate Demand',
+        'description':
+          'Explanation of aggregate demand, its components, and the
+          downward-sloping curve.',
+      },
+      {
+        'href': 'https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/aggregate-demand-supply/v/aggregate-demand',
+        'label': 'Khan Academy: Aggregate Demand',
+        'description':
+          'Video walkthrough of the aggregate demand concept and the AD-AS
+          model.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/a/aggregatedemand.asp',
+        'label': 'Investopedia: Aggregate Demand',
+        'description':
+          'Entry defining aggregate demand, its formula, and factors that shift
+          the curve.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -48,20 +84,3 @@ Keynesian Economics).
 
 **Inflationary gap:** If AD exceeds potential, output can temporarily rise above
 it, pushing up prices—inviting contractionary policy (see Monetary Policy).
-
-## Examples
-
-- [AD-AS Shocks Lab](/economics/aggregate-demand-supply/shocks) — Hit the
-  economy with demand shocks and watch the short-run gap and inflation
-  evolve—then adjust back to long-run.
-
-## References
-
-1. [Wikipedia: Aggregate Demand](https://en.wikipedia.org/wiki/Aggregate_demand)
-   — Explanation of aggregate demand, its components, and the downward-sloping
-   curve.
-2. [Khan Academy: Aggregate Demand](https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/aggregate-demand-supply/v/aggregate-demand)
-   — Video walkthrough of the aggregate demand concept and the AD-AS model.
-3. [Investopedia: Aggregate Demand](https://www.investopedia.com/terms/a/aggregatedemand.asp)
-   — Entry defining aggregate demand, its formula, and factors that shift the
-   curve.

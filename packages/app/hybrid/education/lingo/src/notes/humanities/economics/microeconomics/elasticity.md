@@ -1,8 +1,43 @@
-# Elasticity
-
-> How much do buyers and sellers really respond when prices change?
-
-App route: `/economics/elasticity/`
+---
+{
+  'title': 'Elasticity',
+  'subtitle':
+    'How much do buyers and sellers really respond when prices change?',
+  'links':
+    [
+      {
+        'href': '/economics/elasticity/pricing',
+        'label': 'Revenue Explorer',
+        'description':
+          'Pick prices under different demand elasticities and find the
+          revenue-maximizing spot where |elasticity| equals one.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Price_elasticity_of_demand',
+        'label': 'Wikipedia: Price Elasticity of Demand',
+        'description':
+          'Detailed explanation of demand elasticity, determinants, and
+          measurement.',
+      },
+      {
+        'href': 'https://www.khanacademy.org/economics-finance-domain/microeconomics/price-consumer-producer-surplus/elasticity-tutorial/a/price-elasticity-of-demand',
+        'label': 'Khan Academy: Price Elasticity of Demand',
+        'description':
+          'Tutorial covering elasticity concepts, calculation, and real-world
+          applications.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/e/elasticity.asp',
+        'label': 'Investopedia: Elasticity',
+        'description':
+          'Entry defining elasticity and its types in economics and finance.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -54,19 +89,3 @@ short-run reactions.
 **Income elasticity:** It separates necessities from luxuries—necessities have
 low income elasticity, luxuries high—shaping how spending shifts as nations grow
 richer.
-
-## Examples
-
-- [Revenue Explorer](/economics/elasticity/pricing) — Pick prices under
-  different demand elasticities and find the revenue-maximizing spot where
-  |elasticity| equals one.
-
-## References
-
-1. [Wikipedia: Price Elasticity of Demand](https://en.wikipedia.org/wiki/Price_elasticity_of_demand)
-   — Detailed explanation of demand elasticity, determinants, and measurement.
-2. [Khan Academy: Price Elasticity of Demand](https://www.khanacademy.org/economics-finance-domain/microeconomics/price-consumer-producer-surplus/elasticity-tutorial/a/price-elasticity-of-demand)
-   — Tutorial covering elasticity concepts, calculation, and real-world
-   applications.
-3. [Investopedia: Elasticity](https://www.investopedia.com/terms/e/elasticity.asp)
-   — Entry defining elasticity and its types in economics and finance.

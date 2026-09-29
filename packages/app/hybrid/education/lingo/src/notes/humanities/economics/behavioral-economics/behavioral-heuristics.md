@@ -1,8 +1,44 @@
-# Behavioral Heuristics & Biases
-
-> The mental shortcuts that usually work—but sometimes lead us badly astray.
-
-App route: `/economics/behavioral-heuristics/`
+---
+{
+  'title': 'Behavioral Heuristics & Biases',
+  'subtitle':
+    'The mental shortcuts that usually work—but sometimes lead us badly astray.',
+  'links':
+    [
+      {
+        'href': '/economics/behavioral-heuristics/lab',
+        'label': 'Heuristics Lab',
+        'description':
+          'Answer estimation puzzles with and without an anchor and watch
+          anchoring, availability and representativeness bend your guesses.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Heuristics_in_judgment_and_decision-making',
+        'label': 'Wikipedia: Heuristics in Judgment and Decision-Making',
+        'description':
+          'Survey of Kahneman and Tverskys research on mental shortcuts and
+          cognitive biases.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/summary/',
+        'label': 'Nobel Prize: Daniel Kahneman (2002)',
+        'description':
+          'Nobel Prize page for Kahneman, recognizing his work on judgment under
+          uncertainty and prospect theory.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/c/cognitive-bias.asp',
+        'label': 'Investopedia: Cognitive Bias',
+        'description':
+          'Entry listing common cognitive biases that affect financial and
+          everyday decision-making.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,21 +92,3 @@ information, and present statistical context to help people choose better
 
 **Aggregate diverse views:** Decision teams with diverse perspectives and
 structured dissent expose individual blind spots.
-
-## Examples
-
-- [Heuristics Lab](/economics/behavioral-heuristics/lab) — Answer estimation
-  puzzles with and without an anchor and watch anchoring, availability and
-  representativeness bend your guesses.
-
-## References
-
-1. [Wikipedia: Heuristics in Judgment and Decision-Making](https://en.wikipedia.org/wiki/Heuristics_in_judgment_and_decision-making)
-   — Survey of Kahneman and Tverskys research on mental shortcuts and cognitive
-   biases.
-2. [Nobel Prize: Daniel Kahneman (2002)](https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/summary/)
-   — Nobel Prize page for Kahneman, recognizing his work on judgment under
-   uncertainty and prospect theory.
-3. [Investopedia: Cognitive Bias](https://www.investopedia.com/terms/c/cognitive-bias.asp)
-   — Entry listing common cognitive biases that affect financial and everyday
-   decision-making.

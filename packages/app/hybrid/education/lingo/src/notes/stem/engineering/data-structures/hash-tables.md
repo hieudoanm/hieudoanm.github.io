@@ -1,8 +1,29 @@
-# Hash Table
-
-> Turning a key into an array index, so lookup stops being a search.
-
-App route: `/engineering/hash-tables/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Hash Table',
+  'subtitle':
+    'Turning a key into an array index, so lookup stops being a search.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/hash-tables/interactive',
+        'label': 'Hash Table Playground',
+        'description':
+          'Insert keys and watch the hash function scatter them across buckets.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Hash_table',
+        'label': 'Hash table',
+        'description':
+          'Hash functions, collision resolution, and load-factor resizing.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -36,13 +57,3 @@ probe sequence.
 When the load factor crosses the threshold the table resizes into a bigger array
 and rehashes every key. That is O(n) work at once, which is why hash tables are
 described as having amortised O(1) operations rather than worst-case O(1).
-
-## Examples
-
-- [Hash Table Playground](/engineering/hash-tables/interactive) — Insert keys
-  and watch the hash function scatter them across buckets.
-
-## References
-
-1. [Hash table](https://en.wikipedia.org/wiki/Hash_table) — Hash functions,
-   collision resolution, and load-factor resizing.

@@ -1,8 +1,42 @@
-# Monopoly & Market Power
-
-> When one seller controls the market—and why that usually hurts consumers.
-
-App route: `/economics/monopoly-and-market-power/`
+---
+{
+  'title': 'Monopoly & Market Power',
+  'subtitle':
+    'When one seller controls the market—and why that usually hurts consumers.',
+  'links':
+    [
+      {
+        'href': '/economics/monopoly-and-market-power/pricing',
+        'label': 'Monopoly Pricing Lab',
+        'description':
+          'Sole seller of a linear-demand good: pick output to maximize profit
+          and see the deadweight loss left behind.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Monopoly',
+        'label': 'Wikipedia: Monopoly',
+        'description':
+          'Overview of monopoly theory, pricing, deadweight loss, and
+          regulation.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/m/monopoly.asp',
+        'label': 'Investopedia: Monopoly',
+        'description':
+          'Entry defining monopoly, barriers to entry, and market power.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/monopoly-economics',
+        'label': 'Encyclopedia Britannica: Monopoly',
+        'description':
+          'Encyclopedia entry on monopoly and its effects on market outcomes.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -55,18 +89,3 @@ monopoly position, diverting effort from productive activity.
 **Antitrust response:** Competition policy—breaking up monopolies, blocking
 anti-competitive mergers, and regulating natural monopolies—aims to restore
 competition and protect consumers.
-
-## Examples
-
-- [Monopoly Pricing Lab](/economics/monopoly-and-market-power/pricing) — Sole
-  seller of a linear-demand good: pick output to maximize profit and see the
-  deadweight loss left behind.
-
-## References
-
-1. [Wikipedia: Monopoly](https://en.wikipedia.org/wiki/Monopoly) — Overview of
-   monopoly theory, pricing, deadweight loss, and regulation.
-2. [Investopedia: Monopoly](https://www.investopedia.com/terms/m/monopoly.asp) —
-   Entry defining monopoly, barriers to entry, and market power.
-3. [Encyclopedia Britannica: Monopoly](https://www.britannica.com/topic/monopoly-economics)
-   — Encyclopedia entry on monopoly and its effects on market outcomes.

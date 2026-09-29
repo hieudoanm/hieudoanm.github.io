@@ -1,7 +1,29 @@
-# Linear Ballistic Accumulator (LBA)
-
-App route: `/neuroscience/linear-ballistic-accumulator/` · back to
-[Neuroscience](/neuroscience)
+---
+{
+  'title': 'Linear Ballistic Accumulator (LBA)',
+  'subtitle': '',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/linear-ballistic-accumulator/interactive',
+        'label': 'LBA Simulator',
+        'description':
+          'Simulate the race between two ballistic accumulators and see how
+          between-trial variability shapes choices.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1016/j.cogpsych.2007.12.002',
+        'label': 'Brown & Heathcote (2008) — Cognitive Psychology',
+        'description':
+          'The seminal paper introducing the Linear Ballistic Accumulator model.',
+      },
+    ],
+}
+---
 
 ## Overview
 
@@ -44,14 +66,3 @@ accuracy, making it extremely fast to fit to empirical data.
 Additionally, its multi-accumulator architecture makes it naturally suited for
 tasks with more than two response options, whereas the standard DDM is strictly
 limited to binary choices.
-
-## Examples
-
-- [LBA Simulator](/neuroscience/linear-ballistic-accumulator/interactive) —
-  Simulate the race between two ballistic accumulators and see how between-trial
-  variability shapes choices.
-
-## References
-
-1. [Brown & Heathcote (2008) — Cognitive Psychology](https://doi.org/10.1016/j.cogpsych.2007.12.002)
-   — The seminal paper introducing the Linear Ballistic Accumulator model.

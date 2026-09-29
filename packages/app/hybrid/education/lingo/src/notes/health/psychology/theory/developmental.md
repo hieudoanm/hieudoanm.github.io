@@ -1,9 +1,30 @@
-# Developmental Psychology
-
-> How people change across a lifetime — and why the earliest years are not
-> simply a runway to adulthood.
-
-App route: `/psychology/developmental/` · back to [Psychology](/psychology/)
+---
+{
+  'title': 'Developmental Psychology',
+  'subtitle':
+    'How people change across a lifetime — and why the earliest years are not
+    simply a runway to adulthood.',
+  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
+  'links':
+    [
+      {
+        'href': '/psychology/relationship-closeness-inventory/',
+        'label': 'Relationship Closeness Inventory',
+        'description': 'Measure a bond across a graded set of dimensions',
+      },
+      {
+        'href': '/psychology/experiences-in-close-relationships/',
+        'label': 'Experiences in Close Relationships (ECR-R)',
+        'description': 'Adult attachment style and its developmental roots',
+      },
+      {
+        'href': '/psychology/satisfaction-with-life/',
+        'label': 'Satisfaction With Life Scale',
+        'description': 'Wellbeing across the lifespan in five short items',
+      },
+    ],
+}
+---
 
 ## Infancy: built for attachment
 
@@ -65,12 +86,3 @@ Erikson called the late-life task **integrity versus despair**: reviewing a life
 with enough coherence to accept it. In research, the strongest predictor of
 later wellbeing is often the quality of close relationships, above health or
 income.
-
-## Examples
-
-- [Relationship Closeness Inventory](/psychology/relationship-closeness-inventory/)
-  — Measure a bond across a graded set of dimensions
-- [Experiences in Close Relationships (ECR-R)](/psychology/experiences-in-close-relationships/)
-  — Adult attachment style and its developmental roots
-- [Satisfaction With Life Scale](/psychology/satisfaction-with-life/) —
-  Wellbeing across the lifespan in five short items

@@ -1,9 +1,30 @@
-# Social Psychology
-
-> How other people change what you think, feel and do — including when you are
-> not aware of it.
-
-App route: `/psychology/social/` · back to [Psychology](/psychology/)
+---
+{
+  'title': 'Social Psychology',
+  'subtitle':
+    'How other people change what you think, feel and do — including when you
+    are not aware of it.',
+  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
+  'links':
+    [
+      {
+        'href': '/psychology/relationship-closeness-inventory/',
+        'label': 'Relationship Closeness Inventory',
+        'description': 'Rate a specific relationship across ten dimensions',
+      },
+      {
+        'href': '/psychology/experiences-in-close-relationships/',
+        'label': 'Experiences in Close Relationships (ECR-R)',
+        'description': 'Attachment anxiety and avoidance in adult bonds',
+      },
+      {
+        'href': '/psychology/dyadic-adjustment-scale/',
+        'label': 'Dyadic Adjustment Scale',
+        'description': 'How well two people are working together',
+      },
+    ],
+}
+---
 
 ## The situation does more work than you think
 
@@ -62,12 +83,3 @@ reliably increases intervention.
 Relationships are measured across dimensions like closeness, commitment, and
 mutual support. These scales map the same territory this page describes, from
 dyadic attachment to overall life satisfaction.
-
-## Examples
-
-- [Relationship Closeness Inventory](/psychology/relationship-closeness-inventory/)
-  — Rate a specific relationship across ten dimensions
-- [Experiences in Close Relationships (ECR-R)](/psychology/experiences-in-close-relationships/)
-  — Attachment anxiety and avoidance in adult bonds
-- [Dyadic Adjustment Scale](/psychology/dyadic-adjustment-scale/) — How well two
-  people are working together

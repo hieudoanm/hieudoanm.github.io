@@ -1,9 +1,47 @@
-# Magnetoencephalography (MEG)
-
-> Millisecond-resolution magnetic fields from cortical currents — exquisite
-> timing, and the magnetic skull is effectively transparent.
-
-App route: `/neuroscience/meg/` · back to [Neuroscience](/neuroscience)
+---
+{
+  'title': 'Magnetoencephalography (MEG)',
+  'subtitle':
+    'Millisecond-resolution magnetic fields from cortical currents — exquisite
+    timing, and the magnetic skull is effectively transparent.',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/meg/interactive',
+        'label': 'MEG / EEG Forward Model',
+        'description':
+          'Send one cortical dipole into a helmet: compare the undistorted
+          magnetic field with the volume-conducted scalp potential.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://mitpress.mit.edu/9780262621619/electric-fields-of-the-brain/',
+        'label': 'Nunez & Srinivasan — Electric Fields of the Brain, MIT Press',
+        'description':
+          'The definitive treatment of the bioelectric and biomagnetic forward
+          problems, including why magnetic permeability makes MEG the less
+          distorted of the two.',
+      },
+      {
+        'href': 'https://doi.org/10.1016/j.neuroimage.2017.05.068',
+        'label': 'Niso et al. (2018) — NeuroImage',
+        'description':
+          'Recommended open processing environment for MEG/EEG forward modelling
+          and source reconstruction, with practical guidance on depth bias.',
+      },
+      {
+        'href': 'https://doi.org/10.1038/s41583-018-0070-8',
+        'label': 'Baillet (2017) — Nature Reviews Neuroscience',
+        'description':
+          'Comprehensive review of MEG theory, hardware, source reconstruction,
+          and artefact handling.',
+      },
+    ],
+}
+---
 
 ## What it measures
 
@@ -80,22 +118,3 @@ sensitivity to different source orientations, is standard in modern pipelines.
   shielded room the size of a small studio, periodic helium refills, and
   participants who must hold still because the sensors cannot follow a moving
   head. MEG is a laboratory instrument, not a clinical or wearable one.
-
-## Examples
-
-- [MEG / EEG Forward Model](/neuroscience/meg/interactive) — Send one cortical
-  dipole into a helmet: compare the undistorted magnetic field with the
-  volume-conducted scalp potential.
-
-## References
-
-1. [Nunez & Srinivasan — Electric Fields of the Brain, MIT Press](https://mitpress.mit.edu/9780262621619/electric-fields-of-the-brain/)
-   — The definitive treatment of the bioelectric and biomagnetic forward
-   problems, including why magnetic permeability makes MEG the less distorted of
-   the two.
-2. [Niso et al. (2018) — NeuroImage](https://doi.org/10.1016/j.neuroimage.2017.05.068)
-   — Recommended open processing environment for MEG/EEG forward modelling and
-   source reconstruction, with practical guidance on depth bias.
-3. [Baillet (2017) — Nature Reviews Neuroscience](https://doi.org/10.1038/s41583-018-0070-8)
-   — Comprehensive review of MEG theory, hardware, source reconstruction, and
-   artefact handling.

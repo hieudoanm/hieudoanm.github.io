@@ -1,9 +1,45 @@
-# Backward Induction
-
-> Solving sequential games by reasoning from the last move backward to the
-> first.
-
-App route: `/economics/backward-induction/`
+---
+{
+  'title': 'Backward Induction',
+  'subtitle':
+    'Solving sequential games by reasoning from the last move backward to the
+    first.',
+  'links':
+    [
+      {
+        'href': '/economics/backward-induction/rollback',
+        'label': 'Rollback: Entry Game',
+        'description':
+          'Move first in a market-entry game while your rival plays perfectly,
+          and see the subgame-perfect outcome appear by rollback.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Backward_induction',
+        'label': 'Wikipedia: Backward Induction',
+        'description':
+          'Overview of backward induction as a solution concept for sequential
+          games.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Centipede_game_theory',
+        'label': 'Wikipedia: Centipede Game',
+        'description':
+          'Description of the centipede game and its role in testing backward
+          induction.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Subgame_perfect_equilibrium',
+        'label': 'Wikipedia: Subgame Perfect Equilibrium',
+        'description':
+          'Formal definition of subgame-perfect equilibrium, the concept
+          backward induction produces.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,20 +92,3 @@ working backward from there—yields sound strategy.
 **Limits:** With many players and long horizons, backward induction is
 computationally heavy, and real behavior often deviates, as the centipede game
 demonstrates.
-
-## Examples
-
-- [Rollback: Entry Game](/economics/backward-induction/rollback) — Move first in
-  a market-entry game while your rival plays perfectly, and see the
-  subgame-perfect outcome appear by rollback.
-
-## References
-
-1. [Wikipedia: Backward Induction](https://en.wikipedia.org/wiki/Backward_induction)
-   — Overview of backward induction as a solution concept for sequential games.
-2. [Wikipedia: Centipede Game](https://en.wikipedia.org/wiki/Centipede_game_theory)
-   — Description of the centipede game and its role in testing backward
-   induction.
-3. [Wikipedia: Subgame Perfect Equilibrium](https://en.wikipedia.org/wiki/Subgame_perfect_equilibrium)
-   — Formal definition of subgame-perfect equilibrium, the concept backward
-   induction produces.

@@ -1,9 +1,31 @@
-# Segment Tree
-
-> Disjoint segments storing partial sums, answering any range in logarithmic
-> time.
-
-App route: `/engineering/segment-trees/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Segment Tree',
+  'subtitle':
+    'Disjoint segments storing partial sums, answering any range in logarithmic
+    time.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/segment-trees/interactive',
+        'label': 'Segment Tree Explorer',
+        'description':
+          'Query a range and watch which disjoint nodes get combined.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Segment_tree',
+        'label': 'Segment tree',
+        'description':
+          'Disjoint segment decomposition, power-of-two sizing, and lazy
+          propagation.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -38,13 +60,3 @@ It is also the standard tool for range-update range-query problems such as lazy
 propagation for range increments. The cost is memory: a tree over n elements
 holds roughly 2n nodes, which is acceptable for arrays that fit in memory but
 not for the largest inputs — where the Fenwick tree is usually the better trade.
-
-## Examples
-
-- [Segment Tree Explorer](/engineering/segment-trees/interactive) — Query a
-  range and watch which disjoint nodes get combined.
-
-## References
-
-1. [Segment tree](https://en.wikipedia.org/wiki/Segment_tree) — Disjoint segment
-   decomposition, power-of-two sizing, and lazy propagation.

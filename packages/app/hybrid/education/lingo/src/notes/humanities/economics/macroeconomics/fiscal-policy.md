@@ -1,8 +1,43 @@
-# Fiscal Policy
-
-> How government spending and taxation steer the economy.
-
-App route: `/economics/fiscal-policy/`
+---
+{
+  'title': 'Fiscal Policy',
+  'subtitle': 'How government spending and taxation steer the economy.',
+  'links':
+    [
+      {
+        'href': '/economics/fiscal-policy/stimulus',
+        'label': 'Fiscal Multiplier Lab',
+        'description':
+          'Set government spending and tax cuts to close output gaps while
+          keeping the fiscal budget in check.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Fiscal_policy',
+        'label': 'Wikipedia: Fiscal Policy',
+        'description':
+          'Overview of fiscal policy tools, multiplier effects, and
+          stabilization goals.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/f/fiscalpolicy.asp',
+        'label': 'Investopedia: Fiscal Policy',
+        'description':
+          'Entry explaining government spending, taxation, and their
+          macroeconomic effects.',
+      },
+      {
+        'href': 'https://www.imf.org/en/Publications/fiscal-monitor',
+        'label': 'IMF: Fiscal Monitor',
+        'description':
+          'IMF publication analyzing global fiscal trends, debt, and policy
+          recommendations.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -47,20 +82,3 @@ recession can be prudent, paying for itself through future growth.
 **Sustainability:** Persistent large deficits raise the debt ratio, crowding out
 investment and risking higher interest rates or inflation. Balancing stimulus
 against debt sustainability is the core fiscal challenge.
-
-## Examples
-
-- [Fiscal Multiplier Lab](/economics/fiscal-policy/stimulus) — Set government
-  spending and tax cuts to close output gaps while keeping the fiscal budget in
-  check.
-
-## References
-
-1. [Wikipedia: Fiscal Policy](https://en.wikipedia.org/wiki/Fiscal_policy) —
-   Overview of fiscal policy tools, multiplier effects, and stabilization goals.
-2. [Investopedia: Fiscal Policy](https://www.investopedia.com/terms/f/fiscalpolicy.asp)
-   — Entry explaining government spending, taxation, and their macroeconomic
-   effects.
-3. [IMF: Fiscal Monitor](https://www.imf.org/en/Publications/fiscal-monitor) —
-   IMF publication analyzing global fiscal trends, debt, and policy
-   recommendations.

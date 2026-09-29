@@ -1,7 +1,31 @@
-# Hierarchical Drift Diffusion Model (HDDM)
-
-App route: `/neuroscience/hierarchical-drift-diffusion-model/` · back to
-[Neuroscience](/neuroscience)
+---
+{
+  'title': 'Hierarchical Drift Diffusion Model (HDDM)',
+  'subtitle': '',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/hierarchical-drift-diffusion-model/interactive',
+        'label': 'HDDM Simulator',
+        'description':
+          'Simulate a group of 50 subjects. Adjust the population variance to
+          see how tightly the individuals cluster around the group mean.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.3389/fninf.2013.00014',
+        'label':
+          'Wiecki, Sofer, & Frank (2013) — Frontiers in Neuroinformatics',
+        'description':
+          'HDDM: Hierarchical Bayesian estimation of the Drift-Diffusion Model
+          in Python.',
+      },
+    ],
+}
+---
 
 ## Overview
 
@@ -43,15 +67,3 @@ differences between groups:
   compared to neurotypical controls.
 - **Pharmacological Interventions:** Tracking how specific drugs (like L-DOPA)
   affect distinct cognitive sub-processes.
-
-## Examples
-
-- [HDDM Simulator](/neuroscience/hierarchical-drift-diffusion-model/interactive)
-  — Simulate a group of 50 subjects. Adjust the population variance to see how
-  tightly the individuals cluster around the group mean.
-
-## References
-
-1. [Wiecki, Sofer, & Frank (2013) — Frontiers in Neuroinformatics](https://doi.org/10.3389/fninf.2013.00014)
-   — HDDM: Hierarchical Bayesian estimation of the Drift-Diffusion Model in
-   Python.

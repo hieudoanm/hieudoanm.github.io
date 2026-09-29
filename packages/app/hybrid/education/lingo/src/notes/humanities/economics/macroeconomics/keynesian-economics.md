@@ -1,9 +1,45 @@
-# Keynesian Economics
-
-> Why economies can get stuck in recessions—and what governments can do about
-> it.
-
-App route: `/economics/keynesian-economics/`
+---
+{
+  'title': 'Keynesian Economics',
+  'subtitle':
+    'Why economies can get stuck in recessions—and what governments can do about
+    it.',
+  'links':
+    [
+      {
+        'href': '/economics/keynesian-economics/cross',
+        'label': 'Keynesian Cross',
+        'description':
+          'Set MPC and autonomous spending to find equilibrium output, then
+          close an output gap with the right dose of government spending.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Keynesian_economics',
+        'label': 'Wikipedia: Keynesian Economics',
+        'description':
+          'Comprehensive overview of Keynesian theory and its policy
+          implications.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/k/keynesianeconomics.asp',
+        'label': 'Investopedia: Keynesian Economics',
+        'description':
+          'Entry defining aggregate demand, the multiplier, and countercyclical
+          policy.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/1999/summary/',
+        'label': 'Nobel Prize: Robert Mundell 1999',
+        'description':
+          'Nobel citation for work on monetary and fiscal policy in the
+          Keynesian tradition.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -55,20 +91,3 @@ mainly causes inflation and misallocation.
 **The middle ground:** Most modern macroeconomics blends Keynesian short-run
 demand management with supply-side realities—the neoclassical synthesis. Central
 banks now routinely manage demand as part of mainstream policy.
-
-## Examples
-
-- [Keynesian Cross](/economics/keynesian-economics/cross) — Set MPC and
-  autonomous spending to find equilibrium output, then close an output gap with
-  the right dose of government spending.
-
-## References
-
-1. [Wikipedia: Keynesian Economics](https://en.wikipedia.org/wiki/Keynesian_economics)
-   — Comprehensive overview of Keynesian theory and its policy implications.
-2. [Investopedia: Keynesian Economics](https://www.investopedia.com/terms/k/keynesianeconomics.asp)
-   — Entry defining aggregate demand, the multiplier, and countercyclical
-   policy.
-3. [Nobel Prize: Robert Mundell 1999](https://www.nobelprize.org/prizes/economic-sciences/1999/summary/)
-   — Nobel citation for work on monetary and fiscal policy in the Keynesian
-   tradition.

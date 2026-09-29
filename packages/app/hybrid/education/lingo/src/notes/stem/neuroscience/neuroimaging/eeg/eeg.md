@@ -1,9 +1,49 @@
-# Electroencephalography (EEG)
-
-> Scalp voltage from millisecond-scale cortical synchrony — the cheapest, most
-> portable, and most widely used window into human brain dynamics.
-
-App route: `/neuroscience/eeg/` · back to [Neuroscience](/neuroscience)
+---
+{
+  'title': 'Electroencephalography (EEG)',
+  'subtitle':
+    'Scalp voltage from millisecond-scale cortical synchrony — the cheapest,
+    most portable, and most widely used window into human brain dynamics.',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/eeg/interactive',
+        'label': 'ERP & Averaging Simulator',
+        'description':
+          'Build a trial, inject blink, muscle, hum, and drift, then watch
+          averaging cancel noise but keep artefacts.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1016/0013-4694(58)90053-1',
+        'label':
+          'Jasper (1958) — Electroencephalography and Clinical Neurophysiology',
+        'description':
+          'The original 10–20 electrode system that made scalp recording
+          reproducible across laboratories.',
+      },
+      {
+        'href': 'https://doi.org/10.1016/j.clinph.2004.06.001',
+        'label': 'Michel et al. (2004) — Clinical Neurophysiology',
+        'description':
+          'EEG source imaging review: the forward model, the ill-posed inverse
+          problem, and the standard reconstruction families.',
+      },
+      {
+        'href': 'https://mitpress.mit.edu/9780262611863/an-introduction-to-the-event-related-potential-method/',
+        'label':
+          'Luck (2014) — An Introduction to the Event-Related Potential Method,
+          MIT Press',
+        'description':
+          'The reference treatment of ERP methodology: nomenclature, polarity
+          conventions, baseline choice, and component inference.',
+      },
+    ],
+}
+---
 
 ## What it measures
 
@@ -14,9 +54,9 @@ sheets, so thousands of them firing together sum to a field that escapes the
 skull. That synchrony is the signal: a single neuron is invisible, a coherent
 population is not.
 
-The resulting waveforms are on the order of **10–100 &micro;V**. The dynamic
-range matters more than the amplitude: since the same range carries the signal,
-it also sets the noise floor that amplifier quality and referencing must beat.
+The resulting waveforms are on the order of **10–100 µV**. The dynamic range
+matters more than the amplitude: since the same range carries the signal, it
+also sets the noise floor that amplifier quality and referencing must beat.
 
 ## Acquisition
 
@@ -81,21 +121,3 @@ P300 amplitude is largest for rare, task-relevant, attended events — the three
 factors in the _novelty P3_ account. A large P300 to a frequent, ignored
 stimulus usually signals that the task was not attended to as designed, which is
 a finding about the experiment, not the brain.
-
-## Examples
-
-- [ERP & Averaging Simulator](/neuroscience/eeg/interactive) — Build a trial,
-  inject blink, muscle, hum, and drift, then watch averaging cancel noise but
-  keep artefacts.
-
-## References
-
-1. [Jasper (1958) — Electroencephalography and Clinical Neurophysiology](<https://doi.org/10.1016/0013-4694(58)90053-1>)
-   — The original 10–20 electrode system that made scalp recording reproducible
-   across laboratories.
-2. [Michel et al. (2004) — Clinical Neurophysiology](https://doi.org/10.1016/j.clinph.2004.06.001)
-   — EEG source imaging review: the forward model, the ill-posed inverse
-   problem, and the standard reconstruction families.
-3. [Luck (2014) — An Introduction to the Event-Related Potential Method, MIT Press](https://mitpress.mit.edu/9780262611863/an-introduction-to-the-event-related-potential-method/)
-   — The reference treatment of ERP methodology: nomenclature, polarity
-   conventions, baseline choice, and component inference.

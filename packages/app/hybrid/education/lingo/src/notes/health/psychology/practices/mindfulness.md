@@ -1,9 +1,30 @@
-# Mindfulness
-
-> Attention trained toward present-moment experience — what the evidence
-> supports, and what it does not.
-
-App route: `/psychology/mindfulness/` · back to [Psychology](/psychology/)
+---
+{
+  'title': 'Mindfulness',
+  'subtitle':
+    'Attention trained toward present-moment experience — what the evidence
+    supports, and what it does not.',
+  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
+  'links':
+    [
+      {
+        'href': '/psychology/generalized-anxiety-disorder/',
+        'label': 'Generalized Anxiety Disorder (GAD-7)',
+        'description': 'Anxiety symptoms, the most-studied outcome',
+      },
+      {
+        'href': '/psychology/satisfaction-with-life/',
+        'label': 'Satisfaction With Life Scale',
+        'description': 'Broad wellbeing rather than symptom reduction',
+      },
+      {
+        'href': '/psychology/patient-health-questionnaire/',
+        'label': 'Patient Health Questionnaire (PHQ-9)',
+        'description': 'Depressive symptom severity over two weeks',
+      },
+    ],
+}
+---
 
 ## What the practice is
 
@@ -61,12 +82,3 @@ the practice, not a failure of it.
 The scales linked below measure the outcomes people are usually trying to shift,
 and can be used to track whether a practice is making a difference over weeks
 rather than days.
-
-## Examples
-
-- [Generalized Anxiety Disorder (GAD-7)](/psychology/generalized-anxiety-disorder/)
-  — Anxiety symptoms, the most-studied outcome
-- [Satisfaction With Life Scale](/psychology/satisfaction-with-life/) — Broad
-  wellbeing rather than symptom reduction
-- [Patient Health Questionnaire (PHQ-9)](/psychology/patient-health-questionnaire/)
-  — Depressive symptom severity over two weeks

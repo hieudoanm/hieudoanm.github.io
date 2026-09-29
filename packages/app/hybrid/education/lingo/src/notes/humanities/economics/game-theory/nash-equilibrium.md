@@ -1,8 +1,41 @@
-# Nash Equilibrium
-
-> The state where no one regrets their choice—given what everyone else did.
-
-App route: `/economics/nash-equilibrium/`
+---
+{
+  'title': 'Nash Equilibrium',
+  'subtitle':
+    'The state where no one regrets their choice—given what everyone else did.',
+  'links':
+    [
+      {
+        'href': '/economics/nash-equilibrium/solve',
+        'label': 'Nash Equilibrium Solver',
+        'description':
+          'Best-respond to an AI opponent across three classic games and learn
+          to spot Nash equilibria—or when only mixing wins.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Nash_equilibrium',
+        'label': 'Wikipedia: Nash Equilibrium',
+        'description': 'Overview of the concept, its definition, and history.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/n/nash-equilibrium.asp',
+        'label': 'Investopedia: Nash Equilibrium',
+        'description':
+          'How it works in game theory, with worked examples including the
+          Prisoner’s Dilemma.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/1994/nash/facts/',
+        'label': 'Nobel Prize: John Nash (1994)',
+        'description':
+          'Nobel biography of Nash and his contribution to game theory.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -52,19 +85,3 @@ switching—the resulting traffic pattern is a Nash equilibrium, often inefficie
 **Market competition:** Firms choose prices or quantities in light of
 competitors’ actions. The resulting market outcome is a Nash equilibrium in
 strategic form.
-
-## Examples
-
-- [Nash Equilibrium Solver](/economics/nash-equilibrium/solve) — Best-respond to
-  an AI opponent across three classic games and learn to spot Nash equilibria—or
-  when only mixing wins.
-
-## References
-
-1. [Wikipedia: Nash Equilibrium](https://en.wikipedia.org/wiki/Nash_equilibrium)
-   — Overview of the concept, its definition, and history.
-2. [Investopedia: Nash Equilibrium](https://www.investopedia.com/terms/n/nash-equilibrium.asp)
-   — How it works in game theory, with worked examples including the Prisoner’s
-   Dilemma.
-3. [Nobel Prize: John Nash (1994)](https://www.nobelprize.org/prizes/economic-sciences/1994/nash/facts/)
-   — Nobel biography of Nash and his contribution to game theory.

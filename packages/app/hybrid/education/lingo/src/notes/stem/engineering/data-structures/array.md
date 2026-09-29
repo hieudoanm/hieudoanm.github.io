@@ -1,9 +1,32 @@
-# Array
-
-> Contiguous storage: O(1) access by index, and a cache that reads ahead for
-> you.
-
-App route: `/engineering/array/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Array',
+  'subtitle':
+    'Contiguous storage: O(1) access by index, and a cache that reads ahead for
+    you.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/array/interactive',
+        'label': 'Array Playground',
+        'description':
+          'Append and remove values and watch which slots the structure
+          occupies.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Array_data_structure',
+        'label': 'Array data structure',
+        'description':
+          'Contiguous storage, amortised growth, and the shift cost of mid-array
+          edits.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -38,13 +61,3 @@ binary search because the data is already in the order you need to search.
 The structure to prefer instead is one with expensive or impossible random
 access — sparse indices, arbitrary insertion in the middle at high frequency, or
 a working set far larger than memory.
-
-## Examples
-
-- [Array Playground](/engineering/array/interactive) — Append and remove values
-  and watch which slots the structure occupies.
-
-## References
-
-1. [Array data structure](https://en.wikipedia.org/wiki/Array_data_structure) —
-   Contiguous storage, amortised growth, and the shift cost of mid-array edits.

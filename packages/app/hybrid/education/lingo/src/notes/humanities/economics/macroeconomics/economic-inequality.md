@@ -1,8 +1,44 @@
-# Economic Inequality
-
-> How wealth and income are distributed—and why the gap keeps widening.
-
-App route: `/economics/economic-inequality/`
+---
+{
+  'title': 'Economic Inequality',
+  'subtitle':
+    'How wealth and income are distributed—and why the gap keeps widening.',
+  'links':
+    [
+      {
+        'href': '/economics/economic-inequality/lorenz',
+        'label': 'Inequality Explorer',
+        'description':
+          'Tax a ten-person economy and watch the Lorenz curve bend — hit the
+          target Gini and see what redistribution really moves.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Economic_inequality',
+        'label': 'Wikipedia: Economic Inequality',
+        'description':
+          'Comprehensive overview of income and wealth inequality, measurement
+          tools, and causes.',
+      },
+      {
+        'href': 'https://ourworldindata.org/economic-inequality',
+        'label': 'Our World in Data: Economic Inequality',
+        'description':
+          'Data-driven exploration of global inequality trends, causes, and
+          consequences.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/g/gini-index.asp',
+        'label': 'Investopedia: Gini Index',
+        'description':
+          'Entry defining the Gini coefficient and its use in measuring income
+          distribution.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -58,21 +94,3 @@ is hotly debated.
 **A rising global phenomenon:** Within-country inequality is rising in many
 places even as global-between-country inequality falls—both trends matter for
 policy and political dynamics.
-
-## Examples
-
-- [Inequality Explorer](/economics/economic-inequality/lorenz) — Tax a
-  ten-person economy and watch the Lorenz curve bend — hit the target Gini and
-  see what redistribution really moves.
-
-## References
-
-1. [Wikipedia: Economic Inequality](https://en.wikipedia.org/wiki/Economic_inequality)
-   — Comprehensive overview of income and wealth inequality, measurement tools,
-   and causes.
-2. [Our World in Data: Economic Inequality](https://ourworldindata.org/economic-inequality)
-   — Data-driven exploration of global inequality trends, causes, and
-   consequences.
-3. [Investopedia: Gini Index](https://www.investopedia.com/terms/g/gini-index.asp)
-   — Entry defining the Gini coefficient and its use in measuring income
-   distribution.

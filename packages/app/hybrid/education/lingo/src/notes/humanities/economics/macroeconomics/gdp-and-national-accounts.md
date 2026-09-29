@@ -1,8 +1,43 @@
-# GDP & National Accounts
-
-> How economists measure the size and growth of an entire economy.
-
-App route: `/economics/gdp-and-national-accounts/`
+---
+{
+  'title': 'GDP & National Accounts',
+  'subtitle':
+    'How economists measure the size and growth of an entire economy.',
+  'links':
+    [
+      {
+        'href': '/economics/gdp-and-national-accounts/aggregate',
+        'label': 'GDP Explorer',
+        'description':
+          'Build an economy with C + I + G + NX sliders, then hit target GDP
+          figures in a quiz.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Gross_domestic_product',
+        'label': 'Wikipedia: Gross Domestic Product',
+        'description':
+          'Overview of GDP definition, measurement approaches, and limitations.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/g/gdp.asp',
+        'label': 'Investopedia: Gross Domestic Product',
+        'description':
+          'Entry explaining GDP calculation, real vs nominal, and economic
+          significance.',
+      },
+      {
+        'href': 'https://www.bea.gov/resources/methodologies/gdp-dashboard',
+        'label': 'BEA: GDP Dashboard',
+        'description':
+          'U.S. Bureau of Economic Analysis official GDP data and national
+          accounts methodology.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -54,19 +89,3 @@ or sustainability of future output.
 **Alternatives:** Indicators like the Human Development Index and Genuine
 Progress Indicator try to capture broader wellbeing, but GDP remains the
 standard headline measure.
-
-## Examples
-
-- [GDP Explorer](/economics/gdp-and-national-accounts/aggregate) — Build an
-  economy with C + I + G + NX sliders, then hit target GDP figures in a quiz.
-
-## References
-
-1. [Wikipedia: Gross Domestic Product](https://en.wikipedia.org/wiki/Gross_domestic_product)
-   — Overview of GDP definition, measurement approaches, and limitations.
-2. [Investopedia: Gross Domestic Product](https://www.investopedia.com/terms/g/gdp.asp)
-   — Entry explaining GDP calculation, real vs nominal, and economic
-   significance.
-3. [BEA: GDP Dashboard](https://www.bea.gov/resources/methodologies/gdp-dashboard)
-   — U.S. Bureau of Economic Analysis official GDP data and national accounts
-   methodology.

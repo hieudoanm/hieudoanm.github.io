@@ -1,9 +1,45 @@
-# Imperfect Competition
-
-> The real world lies between perfect competition and monopoly—where firms hold
-> some pricing power.
-
-App route: `/economics/imperfect-competition/`
+---
+{
+  'title': 'Imperfect Competition',
+  'subtitle':
+    'The real world lies between perfect competition and monopoly—where firms
+    hold some pricing power.',
+  'links':
+    [
+      {
+        'href': '/economics/imperfect-competition/lab',
+        'label': 'Market Power Lab',
+        'description':
+          'Set product differentiation, price, and output across perfect
+          competition, monopolistic competition, and monopoly.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Imperfect_competition',
+        'label': 'Wikipedia: Imperfect Competition',
+        'description':
+          'Overview of market structures between perfect competition and
+          monopoly.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/i/imperfectcompetition.asp',
+        'label': 'Investopedia: Imperfect Competition',
+        'description':
+          'Entry defining imperfect competition and its types: monopolistic
+          competition and oligopoly.',
+      },
+      {
+        'href': 'https://en.wikipedia.org/wiki/Monopolistic_competition',
+        'label': 'Wikipedia: Monopolistic Competition',
+        'description':
+          'Detailed analysis of monopolistic competition, product
+          differentiation, and long-run equilibrium.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,20 +92,3 @@ exercise, scrutinizing mergers that would reduce competition.
 
 **Most markets:** From coffee shops to airlines, understanding imperfect
 competition is key to real-world pricing and firm strategy.
-
-## Examples
-
-- [Market Power Lab](/economics/imperfect-competition/lab) — Set product
-  differentiation, price, and output across perfect competition, monopolistic
-  competition, and monopoly.
-
-## References
-
-1. [Wikipedia: Imperfect Competition](https://en.wikipedia.org/wiki/Imperfect_competition)
-   — Overview of market structures between perfect competition and monopoly.
-2. [Investopedia: Imperfect Competition](https://www.investopedia.com/terms/i/imperfectcompetition.asp)
-   — Entry defining imperfect competition and its types: monopolistic
-   competition and oligopoly.
-3. [Wikipedia: Monopolistic Competition](https://en.wikipedia.org/wiki/Monopolistic_competition)
-   — Detailed analysis of monopolistic competition, product differentiation, and
-   long-run equilibrium.

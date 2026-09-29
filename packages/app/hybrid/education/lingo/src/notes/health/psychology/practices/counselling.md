@@ -1,9 +1,30 @@
-# Counselling Psychology
-
-> Theories that guide therapy, what the common approaches share, and where a
-> counsellor stops.
-
-App route: `/psychology/counselling/` · back to [Psychology](/psychology/)
+---
+{
+  'title': 'Counselling Psychology',
+  'subtitle':
+    'Theories that guide therapy, what the common approaches share, and where a
+    counsellor stops.',
+  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
+  'links':
+    [
+      {
+        'href': '/psychology/patient-health-questionnaire/',
+        'label': 'Patient Health Questionnaire (PHQ-9)',
+        'description': 'Common first step in screening for depression',
+      },
+      {
+        'href': '/psychology/generalized-anxiety-disorder/',
+        'label': 'Generalized Anxiety Disorder (GAD-7)',
+        'description': 'Screening for generalised anxiety symptoms',
+      },
+      {
+        'href': '/psychology/dyadic-adjustment-scale/',
+        'label': 'Dyadic Adjustment Scale',
+        'description': 'Relationship functioning, a common therapy focus',
+      },
+    ],
+}
+---
 
 ## What counselling is
 
@@ -71,12 +92,3 @@ Access remains the binding constraint. Waiting times, cost and shortages of
 trained practitioners mean the theory here is consistently ahead of what people
 can actually obtain, and the scales linked below exist partly to help someone
 judge whether help is warranted before they reach a clinic.
-
-## Examples
-
-- [Patient Health Questionnaire (PHQ-9)](/psychology/patient-health-questionnaire/)
-  — Common first step in screening for depression
-- [Generalized Anxiety Disorder (GAD-7)](/psychology/generalized-anxiety-disorder/)
-  — Screening for generalised anxiety symptoms
-- [Dyadic Adjustment Scale](/psychology/dyadic-adjustment-scale/) — Relationship
-  functioning, a common therapy focus

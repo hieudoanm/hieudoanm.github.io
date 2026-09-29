@@ -1,8 +1,42 @@
-# Tragedy of the Commons
-
-> Why shared resources get overused—and how communities protect them.
-
-App route: `/economics/tragedy-of-the-commons/`
+---
+{
+  'title': 'Tragedy of the Commons',
+  'subtitle':
+    'Why shared resources get overused—and how communities protect them.',
+  'links':
+    [
+      {
+        'href': '/economics/tragedy-of-the-commons/harvest',
+        'label': 'Commons Harvest',
+        'description':
+          'Graze one shared resource against four villagers and try to avoid
+          collapse.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Tragedy_of_the_commons',
+        'label': 'Wikipedia: Tragedy of the commons',
+        'description':
+          "Hardin's parable of the overexploitation of shared resources.",
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/t/tragedy-of-the-commons.asp',
+        'label': 'Investopedia: Tragedy of the Commons',
+        'description':
+          'The tragedy of the commons and policy responses to resource overuse.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/',
+        'label': 'Nobel Prize: Elinor Ostrom',
+        'description':
+          'The 2009 Nobel Prize recognized the governance of common-pool
+          resources.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,17 +90,3 @@ monitoring, and gradual sanctions.
 
 **Why it matters:** The tragedy is not inevitable. With the right institutions,
 shared resources can be preserved indefinitely.
-
-## Examples
-
-- [Commons Harvest](/economics/tragedy-of-the-commons/harvest) — Graze one
-  shared resource against four villagers and try to avoid collapse.
-
-## References
-
-1. [Wikipedia: Tragedy of the commons](https://en.wikipedia.org/wiki/Tragedy_of_the_commons)
-   — Hardin's parable of the overexploitation of shared resources.
-2. [Investopedia: Tragedy of the Commons](https://www.investopedia.com/terms/t/tragedy-of-the-commons.asp)
-   — The tragedy of the commons and policy responses to resource overuse.
-3. [Nobel Prize: Elinor Ostrom](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/)
-   — The 2009 Nobel Prize recognized the governance of common-pool resources.

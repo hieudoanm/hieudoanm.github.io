@@ -1,9 +1,31 @@
-# Heapsort
-
-> A guaranteed n log n bound with no auxiliary memory, achieved by treating the
-> array as a heap.
-
-App route: `/engineering/heap-sort/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Heapsort',
+  'subtitle':
+    'A guaranteed n log n bound with no auxiliary memory, achieved by treating
+    the array as a heap.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/heap-sort/interactive',
+        'label': 'Heapsort Visualiser',
+        'description':
+          'Step through heapify and the repeated root-to-end swaps of heapsort.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
+        'label': 'Big O notation',
+        'description':
+          'How asymptotic growth classes are defined, and why constants and
+          lower-order terms drop out.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -37,14 +59,3 @@ which are far apart in memory, so every step risks a cache miss. Quicksort's
 sequential scan prefetches beautifully and wins on real hardware by a wide
 margin, while heapsort stays a good choice when worst-case bounds and constant
 memory both matter.
-
-## Examples
-
-- [Heapsort Visualiser](/engineering/heap-sort/interactive) — Step through
-  heapify and the repeated root-to-end swaps of heapsort.
-
-## References
-
-1. [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation) — How
-   asymptotic growth classes are defined, and why constants and lower-order
-   terms drop out.

@@ -1,9 +1,29 @@
-# Queue
-
-> First in, first out: ordering work fairly, and why a naive array wastes
-> memory.
-
-App route: `/engineering/queues/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Queue',
+  'subtitle':
+    'First in, first out: ordering work fairly, and why a naive array wastes
+    memory.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/queues/interactive',
+        'label': 'Queue Playground',
+        'description':
+          'Enqueue and dequeue values and watch the front of the queue advance.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Queue_(abstract_data_type)',
+        'label': 'Queue (abstract data type)',
+        'description': 'FIFO ordering and the ring-buffer implementation.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -37,13 +57,3 @@ A linked-list queue makes the same trade differently: unbounded in size, O(1) at
 both ends if you keep a tail pointer, but it pays a pointer chase and an
 allocation per element instead of getting the cache behaviour of a contiguous
 array.
-
-## Examples
-
-- [Queue Playground](/engineering/queues/interactive) — Enqueue and dequeue
-  values and watch the front of the queue advance.
-
-## References
-
-1. [Queue (abstract data type)](<https://en.wikipedia.org/wiki/Queue_(abstract_data_type)>)
-   — FIFO ordering and the ring-buffer implementation.

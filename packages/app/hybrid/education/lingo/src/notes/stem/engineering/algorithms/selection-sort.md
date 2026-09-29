@@ -1,8 +1,31 @@
-# Selection Sort
-
-> The quadratic sort with the most predictable cost — and no early exit.
-
-App route: `/engineering/selection-sort/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Selection Sort',
+  'subtitle':
+    'The quadratic sort with the most predictable cost — and no early exit.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/selection-sort/interactive',
+        'label': 'Selection Sort Visualiser',
+        'description':
+          'Step through each pass and watch the minimum swap into the front of
+          the unsorted region.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Big_O_notation',
+        'label': 'Big O notation',
+        'description':
+          'How asymptotic growth classes are defined, and why constants and
+          lower-order terms drop out.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -34,15 +57,3 @@ is not preserved.
 The visualiser uses distinct values, so instability is invisible there. It is a
 property of the algorithm rather than of the animation, and it is worth
 remembering when choosing a sort for records that carry a secondary key.
-
-## Examples
-
-- [Selection Sort Visualiser](/engineering/selection-sort/interactive) — Step
-  through each pass and watch the minimum swap into the front of the unsorted
-  region.
-
-## References
-
-1. [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation) — How
-   asymptotic growth classes are defined, and why constants and lower-order
-   terms drop out.

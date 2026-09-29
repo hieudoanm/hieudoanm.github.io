@@ -1,10 +1,46 @@
-# Drift Diffusion Model
-
-> How the brain accumulates noisy evidence over time to reach a binary decision
-> — and why speed and accuracy trade off.
-
-App route: `/neuroscience/drift-diffusion-model/` · back to
-[Neuroscience](/neuroscience)
+---
+{
+  'title': 'Drift Diffusion Model',
+  'subtitle':
+    'How the brain accumulates noisy evidence over time to reach a binary
+    decision — and why speed and accuracy trade off.',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/drift-diffusion-model/interactive',
+        'label': 'DDM Simulator',
+        'description':
+          'Tune drift rate, boundary, and noise in real time and watch evidence
+          accumulate toward a decision.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Diffusion_model',
+        'label': 'Wikipedia: Diffusion model',
+        'description':
+          'Overview of the DDM, its parameters, and key experimental
+          applications.',
+      },
+      {
+        'href': 'https://www.annualreviews.org/doi/10.1146/annurev.psych.51.1.481',
+        'label': 'Ratcliff & Rouder (2000) — Annual Review of Psychology',
+        'description':
+          'Foundational review of the diffusion model applied to recognition
+          memory and choice RT.',
+      },
+      {
+        'href': 'https://www.jneurosci.org/content/28/26/6655',
+        'label': 'Forstmann et al. (2008) — Journal of Neuroscience',
+        'description':
+          'fMRI evidence linking striatal BOLD signal to boundary-separation
+          adjustments during speed stress.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -83,20 +119,3 @@ overhead from word reading.
 **Lexical Decision:** High-frequency words produce higher drift rates than
 low-frequency words or non-words, capturing lexical access speed within the DDM
 framework.
-
-## Examples
-
-- [DDM Simulator](/neuroscience/drift-diffusion-model/interactive) — Tune drift
-  rate, boundary, and noise in real time and watch evidence accumulate toward a
-  decision.
-
-## References
-
-1. [Wikipedia: Diffusion model](https://en.wikipedia.org/wiki/Diffusion_model) —
-   Overview of the DDM, its parameters, and key experimental applications.
-2. [Ratcliff & Rouder (2000) — Annual Review of Psychology](https://www.annualreviews.org/doi/10.1146/annurev.psych.51.1.481)
-   — Foundational review of the diffusion model applied to recognition memory
-   and choice RT.
-3. [Forstmann et al. (2008) — Journal of Neuroscience](https://www.jneurosci.org/content/28/26/6655)
-   — fMRI evidence linking striatal BOLD signal to boundary-separation
-   adjustments during speed stress.

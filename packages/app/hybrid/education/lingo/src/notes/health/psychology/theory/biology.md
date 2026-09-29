@@ -1,9 +1,30 @@
-# Biological Psychology
-
-> How neurons, brains and bodies produce behaviour — and why the body is never
-> out of the loop.
-
-App route: `/psychology/biology/` · back to [Psychology](/psychology/)
+---
+{
+  'title': 'Biological Psychology',
+  'subtitle':
+    'How neurons, brains and bodies produce behaviour — and why the body is
+    never out of the loop.',
+  'parentLink': { 'href': '/psychology/', 'label': 'Psychology' },
+  'links':
+    [
+      {
+        'href': '/psychology/generalized-anxiety-disorder/',
+        'label': 'Generalized Anxiety Disorder (GAD-7)',
+        'description': 'Arousal and worry measured on a validated scale',
+      },
+      {
+        'href': '/psychology/beck-depression-inventory/',
+        'label': 'Beck Depression Inventory (BDI-II)',
+        'description': 'Mood symptoms screened over the last two weeks',
+      },
+      {
+        'href': '/psychology/patient-health-questionnaire/',
+        'label': 'Patient Health Questionnaire (PHQ-9)',
+        'description': 'A brief screen for depressive symptom severity',
+      },
+    ],
+}
+---
 
 ## Neurons and their electricity
 
@@ -57,12 +78,3 @@ which sharpens short-term memory and impairs retrieval; regular aerobic exercise
 increases BDNF and supports neuroplasticity. The vagus nerve carries roughly 80%
 of autonomic afferent traffic, so the body reports constantly — and the brain
 listens.
-
-## Examples
-
-- [Generalized Anxiety Disorder (GAD-7)](/psychology/generalized-anxiety-disorder/)
-  — Arousal and worry measured on a validated scale
-- [Beck Depression Inventory (BDI-II)](/psychology/beck-depression-inventory/) —
-  Mood symptoms screened over the last two weeks
-- [Patient Health Questionnaire (PHQ-9)](/psychology/patient-health-questionnaire/)
-  — A brief screen for depressive symptom severity

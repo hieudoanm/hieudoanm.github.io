@@ -1,9 +1,30 @@
-# Trie
-
-> A tree of prefixes: lookup time depends on the key length, not on how many
-> keys you store.
-
-App route: `/engineering/trie/` · back to [Engineering](/engineering)
+---
+{
+  'title': 'Trie',
+  'subtitle':
+    'A tree of prefixes: lookup time depends on the key length, not on how many
+    keys you store.',
+  'parentLink': { 'href': '/engineering', 'label': 'Engineering' },
+  'links':
+    [
+      {
+        'href': '/engineering/trie/interactive',
+        'label': 'Trie Builder',
+        'description':
+          'Insert words and watch shared prefixes collapse into a single path.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Trie',
+        'label': 'Trie',
+        'description':
+          'Prefix trees, the O(m) lookup bound, and the space trade-off.',
+      },
+    ],
+}
+---
 
 ## The idea
 
@@ -36,13 +57,3 @@ autocomplete cheap.
 It also makes a useful distinction visible. Searching ca in a set containing
 car, cat and cart walks the whole path successfully but finds no terminal node,
 so the answer is correctly not a member — a prefix is not a key.
-
-## Examples
-
-- [Trie Builder](/engineering/trie/interactive) — Insert words and watch shared
-  prefixes collapse into a single path.
-
-## References
-
-1. [Trie](https://en.wikipedia.org/wiki/Trie) — Prefix trees, the O(m) lookup
-   bound, and the space trade-off.

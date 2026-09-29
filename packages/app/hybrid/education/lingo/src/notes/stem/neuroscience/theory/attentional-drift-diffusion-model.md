@@ -1,7 +1,30 @@
-# Attentional Drift Diffusion Model (aDDM)
-
-App route: `/neuroscience/attentional-drift-diffusion-model/` · back to
-[Neuroscience](/neuroscience)
+---
+{
+  'title': 'Attentional Drift Diffusion Model (aDDM)',
+  'subtitle': '',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/attentional-drift-diffusion-model/interactive',
+        'label': 'aDDM Simulator',
+        'description':
+          'Simulate fixations and see how alternating visual attention
+          dynamically shifts the drift rate.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1038/nn.2635',
+        'label': 'Krajbich, Armel, & Rangel (2010) — Nature Neuroscience',
+        'description':
+          'Visual fixations and the computation and comparison of value in
+          simple choice.',
+      },
+    ],
+}
+---
 
 ## Overview
 
@@ -38,15 +61,3 @@ consumer choice and neuroeconomics:
   looking at, even if it has a slightly lower objective value.
 - **Last Fixation Bias:** The chosen item is highly likely to be the item that
   was fixated immediately prior to the decision.
-
-## Examples
-
-- [aDDM Simulator](/neuroscience/attentional-drift-diffusion-model/interactive)
-  — Simulate fixations and see how alternating visual attention dynamically
-  shifts the drift rate.
-
-## References
-
-1. [Krajbich, Armel, & Rangel (2010) — Nature Neuroscience](https://doi.org/10.1038/nn.2635)
-   — Visual fixations and the computation and comparison of value in simple
-   choice.

@@ -1,9 +1,44 @@
-# The IS-LM Model
-
-> A classic framework for how goods markets and money markets interact to set
-> output and rates.
-
-App route: `/economics/is-lm-model/`
+---
+{
+  'title': 'The IS-LM Model',
+  'subtitle':
+    'A classic framework for how goods markets and money markets interact to set
+    output and rates.',
+  'links':
+    [
+      {
+        'href': '/economics/is-lm-model/equilibrium',
+        'label': 'IS-LM Explorer',
+        'description':
+          'Move the IS and LM curves with fiscal and monetary policy to find
+          equilibrium and tackle policy challenges.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/IS%E2%80%93LM_model',
+        'label': 'Wikipedia: IS-LM Model',
+        'description':
+          'Overview of the model developed by Hicks and Hansen and its
+          applications.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/i/is-lm-curve.asp',
+        'label': 'Investopedia: IS-LM Curve',
+        'description':
+          'Entry explaining the IS and LM curves and their intersection.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/IS-LM-model',
+        'label': 'Encyclopedia Britannica: IS-LM Model',
+        'description':
+          'Encyclopedia entry on the IS-LM framework for macroeconomic policy
+          analysis.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -49,19 +84,3 @@ the transmission of policy through interest rates.
 
 **Limitations:** The model uses fixed prices and focuses on the short run; it is
 a teaching tool more than a complete description of modern economies.
-
-## Examples
-
-- [IS-LM Explorer](/economics/is-lm-model/equilibrium) — Move the IS and LM
-  curves with fiscal and monetary policy to find equilibrium and tackle policy
-  challenges.
-
-## References
-
-1. [Wikipedia: IS-LM Model](https://en.wikipedia.org/wiki/IS%E2%80%93LM_model) —
-   Overview of the model developed by Hicks and Hansen and its applications.
-2. [Investopedia: IS-LM Curve](https://www.investopedia.com/terms/i/is-lm-curve.asp)
-   — Entry explaining the IS and LM curves and their intersection.
-3. [Encyclopedia Britannica: IS-LM Model](https://www.britannica.com/topic/IS-LM-model)
-   — Encyclopedia entry on the IS-LM framework for macroeconomic policy
-   analysis.

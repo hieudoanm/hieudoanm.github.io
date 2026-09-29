@@ -1,9 +1,45 @@
-# Game Theory Basics
-
-> The formal study of strategy: how people make choices when the outcome depends
-> on others.
-
-App route: `/economics/game-theory-basics/`
+---
+{
+  'title': 'Game Theory Basics',
+  'subtitle':
+    'The formal study of strategy: how people make choices when the outcome
+    depends on others.',
+  'links':
+    [
+      {
+        'href': '/economics/game-theory-basics/matrix',
+        'label': 'Payoff Matrix Explorer',
+        'description':
+          'Explore six classic 2x2 games: Nash equilibria, dominant strategies,
+          and best responses.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Game_theory',
+        'label': 'Wikipedia: Game Theory',
+        'description':
+          'Comprehensive overview of game theory, solution concepts, and
+          applications.',
+      },
+      {
+        'href': 'https://www.nobelprize.org/prizes/economic-sciences/1994/summary/',
+        'label': 'Nobel Prize: 1994 Economic Sciences',
+        'description':
+          'Nobel citation for John Nash, John Harsanyi, and Reinhard Selten for
+          game theory analysis.',
+      },
+      {
+        'href': 'https://plato.stanford.edu/entries/game-theory/',
+        'label': 'Stanford Encyclopedia of Philosophy: Game Theory',
+        'description':
+          'In-depth philosophical and formal treatment of game theory concepts
+          and debates.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -60,19 +96,3 @@ design of protocols where participants may be self-interested.
 
 **Social science:** Analyzes arms races, deterrence, bargaining in politics, and
 the emergence of social norms.
-
-## Examples
-
-- [Payoff Matrix Explorer](/economics/game-theory-basics/matrix) — Explore six
-  classic 2x2 games: Nash equilibria, dominant strategies, and best responses.
-
-## References
-
-1. [Wikipedia: Game Theory](https://en.wikipedia.org/wiki/Game_theory) —
-   Comprehensive overview of game theory, solution concepts, and applications.
-2. [Nobel Prize: 1994 Economic Sciences](https://www.nobelprize.org/prizes/economic-sciences/1994/summary/)
-   — Nobel citation for John Nash, John Harsanyi, and Reinhard Selten for game
-   theory analysis.
-3. [Stanford Encyclopedia of Philosophy: Game Theory](https://plato.stanford.edu/entries/game-theory/)
-   — In-depth philosophical and formal treatment of game theory concepts and
-   debates.

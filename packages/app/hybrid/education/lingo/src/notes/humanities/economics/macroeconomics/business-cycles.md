@@ -1,9 +1,46 @@
-# Business Cycles
-
-> The recurring pattern of expansion and contraction that every economy
-> experiences.
-
-App route: `/economics/business-cycles/`
+---
+{
+  'title': 'Business Cycles',
+  'subtitle':
+    'The recurring pattern of expansion and contraction that every economy
+    experiences.',
+  'links':
+    [
+      {
+        'href': '/economics/business-cycles/predict',
+        'label': 'Business Cycle Forecaster',
+        'description':
+          'Act as an economic forecaster: use trailing growth, unemployment,
+          confidence and inflation to call the next phase of the cycle before it
+          is revealed.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Business_cycle',
+        'label': 'Wikipedia: Business Cycle',
+        'description':
+          'Overview of the phases of the business cycle and competing theories
+          of its causes.',
+      },
+      {
+        'href': 'https://www.khanacademy.org/economics-finance-domain/macroeconomics/healthy-economy/business-cycles/v/business-cycles-intro',
+        'label': 'Khan Academy: Business Cycles Intro',
+        'description':
+          'Video introduction to expansions, recessions, and stabilization
+          policy.',
+      },
+      {
+        'href': 'https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions',
+        'label': 'NBER: US Business Cycle Dates',
+        'description':
+          'Official chronology of US business cycle peaks and troughs maintained
+          by the NBER.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -53,20 +90,3 @@ automatically cushion income during downturns without new legislation.
 **The limits:** Timing and forecasting are imprecise—policy can lag the cycle,
 potentially worsening it. Modern macroeconomic debate focuses on how actively to
 manage it.
-
-## Examples
-
-- [Business Cycle Forecaster](/economics/business-cycles/predict) — Act as an
-  economic forecaster: use trailing growth, unemployment, confidence and
-  inflation to call the next phase of the cycle before it is revealed.
-
-## References
-
-1. [Wikipedia: Business Cycle](https://en.wikipedia.org/wiki/Business_cycle) —
-   Overview of the phases of the business cycle and competing theories of its
-   causes.
-2. [Khan Academy: Business Cycles Intro](https://www.khanacademy.org/economics-finance-domain/macroeconomics/healthy-economy/business-cycles/v/business-cycles-intro)
-   — Video introduction to expansions, recessions, and stabilization policy.
-3. [NBER: US Business Cycle Dates](https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions)
-   — Official chronology of US business cycle peaks and troughs maintained by
-   the NBER.

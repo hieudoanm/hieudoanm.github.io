@@ -1,8 +1,42 @@
-# Price Discrimination
-
-> Charging different people different prices—for exactly the same product.
-
-App route: `/economics/price-discrimination/`
+---
+{
+  'title': 'Price Discrimination',
+  'subtitle':
+    'Charging different people different prices—for exactly the same product.',
+  'links':
+    [
+      {
+        'href': '/economics/price-discrimination/split',
+        'label': 'Segment Pricing Lab',
+        'description':
+          'Charge one price or two per-segment prices and see third-degree price
+          discrimination raise the take.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Price_discrimination',
+        'label': 'Wikipedia: Price Discrimination',
+        'description':
+          'Overview of the three degrees and how firms capture surplus.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/p/pricediscrimination.asp',
+        'label': 'Investopedia: Price Discrimination',
+        'description':
+          'Entry on the types of price discrimination and real-world examples.',
+      },
+      {
+        'href': 'https://www.britannica.com/topic/price-discrimination',
+        'label': 'Britannica: Price Discrimination',
+        'description':
+          'Article on selling the same product at different prices to different
+          buyers.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -56,19 +90,3 @@ personalization raises privacy worries.
 **Arbitrage limits it:** Discrimination only works if buyers can’t resell
 between segments—which is why travel and services (with identity checks)
 discriminate more than goods.
-
-## Examples
-
-- [Segment Pricing Lab](/economics/price-discrimination/split) — Charge one
-  price or two per-segment prices and see third-degree price discrimination
-  raise the take.
-
-## References
-
-1. [Wikipedia: Price Discrimination](https://en.wikipedia.org/wiki/Price_discrimination)
-   — Overview of the three degrees and how firms capture surplus.
-2. [Investopedia: Price Discrimination](https://www.investopedia.com/terms/p/pricediscrimination.asp)
-   — Entry on the types of price discrimination and real-world examples.
-3. [Britannica: Price Discrimination](https://www.britannica.com/topic/price-discrimination)
-   — Article on selling the same product at different prices to different
-   buyers.

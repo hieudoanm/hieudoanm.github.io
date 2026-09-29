@@ -1,8 +1,44 @@
-# Public Goods Dilemma
-
-> Why things everyone needs are so hard to fund—and how we solve it.
-
-App route: `/economics/public-goods-dilemma/`
+---
+{
+  'title': 'Public Goods Dilemma',
+  'subtitle':
+    'Why things everyone needs are so hard to fund—and how we solve it.',
+  'links':
+    [
+      {
+        'href': '/economics/public-goods-dilemma/contribute',
+        'label': 'Contribute!',
+        'description':
+          'Play a public goods game and watch free riding trump the group
+          optimum.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://en.wikipedia.org/wiki/Public_good',
+        'label': 'Wikipedia: Public good',
+        'description':
+          'Definition of public goods and their characteristics of non-rivalry
+          and non-excludability.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/p/public-good.asp',
+        'label': 'Investopedia: Public Good',
+        'description':
+          'Explanation of public goods with examples and their implications for
+          provision.',
+      },
+      {
+        'href': 'https://www.investopedia.com/terms/f/free_rider_problem.asp',
+        'label': 'Investopedia: Free-Rider Problem',
+        'description':
+          'How free riding arises with public goods and leads to
+          under-provision.',
+      },
+    ],
+}
+---
 
 ## What is it?
 
@@ -55,19 +91,3 @@ subscription tiers for otherwise public digital content.
 **Reputation and altruism:** Recognition, social norms, and warm-glow giving
 motivate enough voluntary contribution to sustain open-source projects and
 crowdfunded goods.
-
-## Examples
-
-- [Contribute!](/economics/public-goods-dilemma/contribute) — Play a public
-  goods game and watch free riding trump the group optimum.
-
-## References
-
-1. [Wikipedia: Public good](https://en.wikipedia.org/wiki/Public_good) —
-   Definition of public goods and their characteristics of non-rivalry and
-   non-excludability.
-2. [Investopedia: Public Good](https://www.investopedia.com/terms/p/public-good.asp)
-   — Explanation of public goods with examples and their implications for
-   provision.
-3. [Investopedia: Free-Rider Problem](https://www.investopedia.com/terms/f/free_rider_problem.asp)
-   — How free riding arises with public goods and leads to under-provision.

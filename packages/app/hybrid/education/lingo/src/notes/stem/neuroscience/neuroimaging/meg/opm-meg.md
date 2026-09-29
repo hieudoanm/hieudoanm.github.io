@@ -1,9 +1,46 @@
-# OPM-MEG (Optically Pumped Magnetometer)
-
-> Room-temperature, on-scalp magnetoencephalography — MEG timing and
-> localization without the cryogenics or the fixed helmet.
-
-App route: `/neuroscience/opm-meg/` · back to [Neuroscience](/neuroscience)
+---
+{
+  'title': 'OPM-MEG (Optically Pumped Magnetometer)',
+  'subtitle':
+    'Room-temperature, on-scalp magnetoencephalography — MEG timing and
+    localization without the cryogenics or the fixed helmet.',
+  'parentLink': { 'href': '/neuroscience', 'label': 'Neuroscience' },
+  'links':
+    [
+      {
+        'href': '/neuroscience/opm-meg/interactive',
+        'label': 'OPM Field & Noise Simulator',
+        'description':
+          'Quantify why 1/r³ makes a 0.5 cm on-scalp sensor incomparable to a 4
+          cm cryogenic helmet, once the ambient field is shielded.',
+      },
+    ],
+  'references':
+    [
+      {
+        'href': 'https://doi.org/10.1038/nn.4374',
+        'label': 'Brooks et al. (2016) — Nature Neuroscience',
+        'description':
+          'First in-vivo demonstration of on-scalp OPM measurement of human
+          evoked fields.',
+      },
+      {
+        'href': 'https://doi.org/10.1016/j.jneumeth.2018.03.019',
+        'label': 'Widmer et al. (2018) — Journal of Neuroscience Methods',
+        'description':
+          'Review of wearable, on-scalp, optically pumped magnetometers and
+          their practical operating regimes.',
+      },
+      {
+        'href': 'https://doi.org/10.1111/ejn.13520',
+        'label': 'Hämäläinen et al. (2017) — European Journal of Neuroscience',
+        'description':
+          'Fifty years of MEG, including the sensor physics that made
+          room-temperature devices possible.',
+      },
+    ],
+}
+---
 
 ## What it is
 
@@ -74,21 +111,3 @@ into the literature.
   of accumulated methodological validation matter more than flexibility.
 - **Either is the wrong instrument** if you need sub-second time resolution —
   that is fMRI, and the two are better combined than chosen between.
-
-## Examples
-
-- [OPM Field & Noise Simulator](/neuroscience/opm-meg/interactive) — Quantify
-  why 1/r³ makes a 0.5 cm on-scalp sensor incomparable to a 4 cm cryogenic
-  helmet, once the ambient field is shielded.
-
-## References
-
-1. [Brooks et al. (2016) — Nature Neuroscience](https://doi.org/10.1038/nn.4374)
-   — First in-vivo demonstration of on-scalp OPM measurement of human evoked
-   fields.
-2. [Widmer et al. (2018) — Journal of Neuroscience Methods](https://doi.org/10.1016/j.jneumeth.2018.03.019)
-   — Review of wearable, on-scalp, optically pumped magnetometers and their
-   practical operating regimes.
-3. [Hämäläinen et al. (2017) — European Journal of Neuroscience](https://doi.org/10.1111/ejn.13520)
-   — Fifty years of MEG, including the sensor physics that made room-temperature
-   devices possible.
