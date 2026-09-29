@@ -3463,8 +3463,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0
       '@types/firefox-webext-browser':
-        specifier: 143.0.0
-        version: 143.0.0
+        specifier: 143.0.1
+        version: 143.0.1
       '@types/node':
         specifier: 26.6.3
         version: 26.6.3
@@ -7967,8 +7967,8 @@ packages:
   '@types/filewriter@0.0.33':
     resolution: {integrity: sha512-xFU8ZXTw4gd358lb2jw25nxY9QAgqn2+bKKjKOYfNCzN4DKCFetK7sPtrlpg66Ywe3vWY9FNxprZawAh9wfJ3g==}
 
-  '@types/firefox-webext-browser@143.0.0':
-    resolution: {integrity: sha512-865dYKMOP0CllFyHmgXV4IQgVL51OSQQCwSoihQ17EwugePKFSAZRc0EI+y7Ly4q7j5KyURlA7LgRpFieO4JOw==}
+  '@types/firefox-webext-browser@143.0.1':
+    resolution: {integrity: sha512-vDoqYr4fe1dqZXmgkzpxki47AhxfwvXD2juY2pADCKykIh10u8Yq2oe3lKZ88s33pxqj7SYULEq6kFW3c6UJzw==}
 
   '@types/gensync@1.0.5':
     resolution: {integrity: sha512-MbsRCT7mTikHwKZ0X+LVUTLRrZZRLipTuXEO9qOYO+zmjMVk81axyClMROf6uoPD9MRVu46bx8zoR0Ad9q3NAg==}
@@ -19746,7 +19746,7 @@ snapshots:
 
   '@types/filewriter@0.0.33': {}
 
-  '@types/firefox-webext-browser@143.0.0': {}
+  '@types/firefox-webext-browser@143.0.1': {}
 
   '@types/gensync@1.0.5': {}
 
