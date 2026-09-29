@@ -1,234 +1,108 @@
 ---
 name: mind-js-best-practices
-description: Best practices for using Mind.js for neural networks in JavaScript/TypeScript. Use when implementing, structuring, or reviewing Mind.js models — covers network architecture, training, and deployment.
+description: Best practices for building neural networks in JS with Mind.js — the lightweight volatile NN conventions for browser/Node. Use when writing, structuring, or reviewing Mind.js — covers net construction, training, activation, serialization, and pitfalls.
 ---
 
 # Mind.js Best Practices
 
-Mind.js is a neural network library for JavaScript that provides a simple API for building and training neural networks. Best practice is to design appropriate network architectures, prepare data properly, train with appropriate parameters, handle overfitting, and follow ML best practices for model performance and generalization.
+Mind.js is a **minimal neural network library for the browser/Node** — `new Mind()` with layers configured via `new Mind().learn(...)`/`predict(...)` and **JSON networks (`new Mind().upload(...)`)**. Practical Mind.js leans on **explicit `constructor`-time configuration (hidden layers, activation) via the `Mind` object, normalized input vectors, and the upload/save JSON path for persistence** — it's a small learning-tool API; the discipline is the data contract + verification, not framework lore.
 
 ---
 
-## 1. Core Concepts
+## 1. Mind Instances
 
-- **Neural networks** — layers of neurons with weighted connections
-- **Architecture** — input, hidden, and output layers
-- **Training** — backpropagation with gradient descent
-- **Activation functions** — sigmoid, tanh, relu
-- **Loss functions** — mean squared error, cross-entropy
+- **Create with configuration; predict on vectors:**
+
+```js
+import Mind from 'mind.js';
+
+const mind = new Mind({ activator: 'sigmoid' });
+mind.learn(
+  [
+    { input: [0, 0], output: [0] },
+    { input: [1, 0], output: [1] },
+  ],
+  { iterations: 1000, learningRate: 0.1 }
+);
+```
+
+- **`learn` (train) + `predict` (infer) as the whole surface — inputs/outputs numeric arrays.**
+- **Geodes: layers/activators configured at construction; mapping fixed across train/predict.**
 
 ---
 
-## 2. Installation
+## 2. Training Data
 
-- **Install Mind.js:**
+- **Inputs normalized (scale to the activation's sweet spot), outputs in the same scale:**
 
-```bash
-npm install mind
+```js
+mind.learn(data, { iterations: 200, learningRate: 0.1, log: true });
 ```
 
-- **For TypeScript:**
-
-```bash
-npm install mind @types/mind
-```
+- **Withhold a validation slice — Mind.js gives no built-in split; you own it.**
+- **Watch console `log` errors; increase iterations only while error actually falls.**
 
 ---
 
-## 3. Basic Network Creation
+## 3. Prediction & Interpretation
 
-- **Create a simple network:**
+- **`predict` outputs in normalized space — decode to the real scale:**
 
-```typescript
-import Mind from 'mind';
-
-// Create a simple perceptron
-const net = new Mind();
-
-// Create a network with hidden layers
-const net = new Mind({
-  hiddenLayers: [4],
-  activation: 'sigmoid'
-});
+```js
+const raw = mind.predict([0.9, 0.1]);
+const isCat = raw[0] > 0.5;
 ```
 
-- **Specify network architecture:**
-
-```typescript
-const net = new Mind({
-  inputSize: 2,
-  hiddenLayers: [4, 3],
-  outputSize: 1
-});
-```
+- **Thresholds defined per output node; mult-class via argmax over outputs.**
+- **Document the transform both ways: it's lossy if you forget.**
 
 ---
 
-## 4. Training
+## 4. Serialization
 
-- **Train with basic examples:**
+- **Persistence via `save()`/`upload()` — the model JSON is the artifact:**
 
-```typescript
-const trainingData = [
-  { input: [0, 0], output: [0] },
-  { input: [0, 1], output: [1] },
-  { input: [1, 0], output: [1] },
-  { input: [1, 1], output: [0] }
-];
-
-net.train(trainingData, {
-  iterations: 20000,
-  errorThresh: 0.005,
-  log: (stats) => console.log(stats),
-  logPeriod: 100,
-  learningRate: 0.3
-});
+```js
+const json = mind.save();
+const revived = new Mind().upload(json);
 ```
 
-- **Train with custom options:**
-
-```typescript
-const options = {
-  iterations: 10000,
-  errorThresh: 0.01,
-  log: (stats) => console.log(stats),
-  logPeriod: 10,
-  learningRate: 0.1,
-  momentum: 0.1
-};
-
-net.train(trainingData, options);
-```
+- **`save`/`upload` round-trip instead of retraining at runtime.**
+- **Version network shape with the data schema.**
 
 ---
 
-## 5. Network Architectures
+## 5. Performance & Limits
 
-- **LSTM network:**
-
-```typescript
-const net = new Mind.LSTM();
-net.train([
-  { input: [0, 0], output: [0] },
-  { input: [0, 1], output: [1] },
-  { input: [1, 0], output: [1] },
-  { input: [1, 1], output: [0] }
-]);
-```
-
-- **RNN network:**
-
-```typescript
-const net = new Mind.RNN();
-```
+- **Mind.js is a compact/lightweight learner — small parities, not deep nets.**
+- **Batch predictions; avoid per-call reconfig; typed-array friendly when possible.**
+- **For bigger models switch to Brain.js/TensorFlow.js — document the trigger.**
 
 ---
 
-## 6. Activation Functions
+## 6. Testing & Pitfalls
 
-- **Use appropriate activation functions:**
-
-```typescript
-const net = new Mind({
-  hiddenLayers: [4],
-  activation: 'relu', // Options: sigmoid, relu, tanh
-  outputActivation: 'sigmoid'
-});
-```
+- **Determinism: seed where the API allows; test the upload→predict round trip.**
+- **Overfitting on tiny datasets — small iterations + validation judgment.**
+- **Normalization + decoding as the tested contract (unit tests on the mapping).**
 
 ---
 
-## 7. Data Preparation
+## General Rules of Thumb
 
-- **Normalize data:**
-
-```typescript
-function normalize(data: number[]): number[] {
-  const max = Math.max(...data);
-  const min = Math.min(...data);
-  return data.map(x => (x - min) / (max - min));
-}
-
-const normalizedInput = normalize([1, 2, 3, 4, 5]);
-```
-
----
-
-## 8. Model Evaluation
-
-- **Evaluate model performance:**
-
-```typescript
-function evaluate(net: Mind, testData: any[]) {
-  let correct = 0;
-  let total = testData.length;
-
-  for (const item of testData) {
-    const output = net.run(item.input);
-    const predicted = output[0] > 0.5 ? 1 : 0;
-    if (predicted === item.output[0]) {
-      correct++;
-    }
-  }
-
-  return correct / total;
-}
-
-const accuracy = evaluate(net, testData);
-console.log(`Accuracy: ${accuracy}`);
-```
-
----
-
-## 9. Model Persistence
-
-- **Save and load network:**
-
-```typescript
-// Save network
-const json = net.toJSON();
-fs.writeFileSync('network.json', JSON.stringify(json));
-
-// Load network
-const loadedNet = new Mind();
-loadedNet.fromJSON(JSON.parse(json));
-```
-
----
-
-## 10. Prediction
-
-- **Make predictions:**
-
-```typescript
-const input = [0.5, 0.3];
-const output = net.run(input);
-console.log(`Prediction: ${output}`);
-```
-
----
-
-## 11. General Rules of Thumb
-
-- **Data preparation** — normalize and clean data properly
-- **Architecture** — choose appropriate network architecture
-- **Training parameters** — tune learning rate and iterations
-- **Overfitting** — use validation data to prevent overfitting
-- **Activation functions** — use appropriate activation functions
-- **Evaluation** — evaluate model performance properly
-- **Persistence** — save and load models correctly
+- **Configure at construction; learn + predict the only verbs.**
+- **Normalize in, decode out — the tested contract.**
+- **Own the validation split; watch the error curve.**
+- **`save`/`upload` as the deploy path.**
+- **Small nets; version the schema.**
 
 ---
 
 ## Quick-Start Checklist
 
-- [ ] Mind.js installed with TypeScript types
-- [ ] Data normalized and prepared
-- [ ] Appropriate network architecture chosen
-- [ ] Training parameters configured
-- [ ] Training with proper validation
-- [ ] Model evaluation metrics calculated
-- [ ] Model saved for deployment
-- [ ] Prediction API implemented
-- [ ] Performance optimized
-- [ ] Documentation complete
+- [ ] `new Mind(...)` configured (activator/layers) once
+- [ ] Inputs normalized; predict outputs decoded consistently
+- [ ] `learn` with iteration/rate caps; error log watched
+- [ ] Validation slice withheld; generalization judged
+- [ ] `save`/`upload` persistence round-trips verified
+- [ ] Normalization mapping unit-tested; schema versioned

@@ -263,6 +263,24 @@ services:
 
 ## 8. Development vs Production
 
+- **Use `profiles` to fence off optional services** — tag dev-only or on-demand services so a bare `docker compose up` starts only what production needs, and opt in explicitly when you want the rest:
+
+```yaml
+services:
+  app:
+    build: .
+  mailhog:
+    image: mailhog/mailhog # only starts under the "dev" profile
+    profiles: ['dev']
+
+# docker compose up              -> app only
+# docker compose --profile dev up -> app + mailhog
+```
+
+Profiles keep optional infrastructure in the same file as production without polluting the default
+bring-up, which is why they are usually better than a separate `docker-compose.override.yml` for
+anything other than plain local mounts.
+
 - **Development Compose** — optimize for development:
 
 ```yaml

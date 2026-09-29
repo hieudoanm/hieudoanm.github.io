@@ -1,251 +1,112 @@
 ---
 name: brain-js-best-practices
-description: Best practices for using Brain.js for neural networks in JavaScript/TypeScript. Use when implementing, structuring, or reviewing Brain.js models — covers network architecture, training, and deployment.
+description: Best practices for neural networks in JS with Brain.js — the simple fixed-topology NN conventions for browser/Node. Use when writing, structuring, or reviewing Brain.js — covers net types, training data, options, serialization, and performance.
 ---
 
 # Brain.js Best Practices
 
-Brain.js is a neural network library for JavaScript that runs in both browser and Node.js. Best practice is to design appropriate network architectures, prepare data properly, train with appropriate parameters, handle overfitting, and follow ML best practices for model performance and generalization.
+Brain.js is a **simple neural network library for JS** — `new brain.NeuralNetwork()`/`brain.recurrent.LSTM` trained on `input`/`output` arrays with JSON serialization built in. Practical Brain.js leans on **`input`→`output` array mapping (normalize!), training with `tolerance`/`iterations` and observed `error`, and `toJSON`/`fromJSON` for deploying trained nets — plus the pragmatic ceiling: small fixed-topology nets** — it's the HTML5-era simplicity; data normalization and validation are where the craft lives.
 
 ---
 
-## 1. Core Concepts
+## 1. Network Types
 
-- **Neural networks** — layers of neurons with weighted connections
-- **Architecture** — input, hidden, and output layers
-- **Training** — backpropagation with gradient descent
-- **Activation functions** — sigmoid, tanh, relu, leaky-relu
-- **Loss functions** — mean squared error, cross-entropy
+- **Pick per task:**
 
----
-
-## 2. Installation
-
-- **Install Brain.js:**
-
-```bash
-npm install brain.js
-```
-
-- **For TypeScript:**
-
-```bash
-npm install brain.js @types/brain.js
-```
-
----
-
-## 3. Basic Network Creation
-
-- **Create a simple network:**
-
-```typescript
+```js
 import brain from 'brain.js';
 
-// Create a simple perceptron
-const net = new brain.NeuralNetwork();
-
-// Create a network with hidden layers
-const net = new brain.NeuralNetwork({
-  hiddenLayers: [4],
-  activation: 'sigmoid'
-});
+const net = new brain.NeuralNetwork(); // feedforward
+const lstm = new brain.recurrent.LSTM(); // sequences/text
 ```
 
-- **Specify input and output sizes:**
-
-```typescript
-const net = new brain.NeuralNetwork({
-  inputSize: 2,
-  hiddenLayers: [4, 3],
-  outputSize: 1
-});
-```
+- **`NeuralNetwork` default; `LSTM` for time/text; `KNN`-style only where the API matches.**
+- **`brain.networks` extendable — stick to the supported surface.**
 
 ---
 
-## 4. Training
+## 2. Training Data & Format
 
-- **Train with basic examples:**
+- **Inputs/outputs as arrays of numbers (normalized, not raw booleans only):**
 
-```typescript
-const trainingData = [
-  { input: [0, 0], output: [0] },
-  { input: [0, 1], output: [1] },
-  { input: [1, 0], output: [1] },
-  { input: [1, 1], output: [0] }
-];
+```js
+net.train(
+  [
+    { input: [0, 0], output: [0] },
+    { input: [1, 0], output: [1] },
+  ],
+  { iterations: 5000, errorThresh: 0.01, log: false }
+);
+```
 
-net.train(trainingData, {
+- **Normalization to `[0,1]`/`[-1,1]` — decode identically at predict.**
+- **Class imbalance: more samples for rarer classes; validation split withheld.**
+
+---
+
+## 3. Training Options & Monitoring
+
+- **Options deliberate: `iterations`, `errorThresh`, `learningRate`, `log`:**
+
+```js
+net.train(data, {
   iterations: 20000,
   errorThresh: 0.005,
-  log: (stats) => console.log(stats),
-  logPeriod: 100,
-  learningRate: 0.3
+  learningRate: 0.2,
+  log: (e) => track(e.error),
 });
 ```
 
-- **Train with custom options:**
-
-```typescript
-const options = {
-  iterations: 10000,
-  errorThresh: 0.01,
-  log: (stats: any) => console.log(stats),
-  logPeriod: 10,
-  learningRate: 0.1,
-  momentum: 0.1,
-  callback: (epoch: any) => console.log('Epoch:', epoch)
-};
-
-net.train(trainingData, options);
-```
+- **Watch `error` curve — stop when it flattens (use errorThresh + iteration cap).**
+- **Small learning rates with more iterations beat spikes; seeded reproducibility documented.**
 
 ---
 
-## 5. Network Architectures
+## 4. Serialization & Deployment
 
-- **LSTM network:**
+- **The trained net is a JSON object:**
 
-```typescript
-const net = new brain.recurrent.LSTM();
-net.train([
-  { input: [0, 0], output: [0] },
-  { input: [0, 1], output: [1] },
-  { input: [1, 0], output: [1] },
-  { input: [1, 1], output: [0] }
-]);
+```js
+const model = net.toJSON();
+const deployed = new brain.NeuralNetwork().fromJSON(model);
 ```
 
-- **GRU network:**
-
-```typescript
-const net = new brain.recurrent.GRU();
-```
-
-- **RNN network:**
-
-```typescript
-const net = new brain.recurrent.RNN();
-```
+- **Save the JSON as a deploy artifact; `fromJSON` loads without retraining.**
+- **Input schema + normalization transform travels with the model (versioned).**
 
 ---
 
-## 6. Activation Functions
+## 5. Performance & Limits
 
-- **Use appropriate activation functions:**
-
-```typescript
-const net = new brain.NeuralNetwork({
-  hiddenLayers: [4],
-  activation: 'relu', // Options: sigmoid, relu, leaky-relu, tanh
-  outputActivation: 'sigmoid'
-});
-```
+- **Brain.js fits small fixed-topology nets — not ResNet-scale.**
+- **Batch predictions in typed arrays; avoid per-call object churn.**
+- **For heavier duty switch to TensorFlow.js/tfjs-wasm; document the migration trigger.**
 
 ---
 
-## 7. Data Preparation
+## 6. Testing & Pitfalls
 
-- **Normalize data:**
-
-```typescript
-function normalize(data: number[]): number[] {
-  const max = Math.max(...data);
-  const min = Math.min(...data);
-  return data.map(x => (x - min) / (max - min));
-}
-
-const normalizedInput = normalize([1, 2, 3, 4, 5]);
-```
-
-- **One-hot encoding:**
-
-```typescript
-function oneHotEncode(value: number, classes: number): number[] {
-  const encoded = new Array(classes).fill(0);
-  encoded[value] = 1;
-  return encoded;
-}
-```
+- **Determinism: same seeds where supported; compare `error` curves in tests.**
+- **Golden tests: serialize → load → equal outputs on fixed inputs.**
+- **Overfitting: hidden-layer count + validation, not raw accuracy on training.**
 
 ---
 
-## 8. Model Evaluation
+## General Rules of Thumb
 
-- **Evaluate model performance:**
-
-```typescript
-function evaluate(net: brain.NeuralNetwork, testData: any[]) {
-  let correct = 0;
-  let total = testData.length;
-
-  for (const item of testData) {
-    const output = net.run(item.input);
-    const predicted = output[0] > 0.5 ? 1 : 0;
-    if (predicted === item.output[0]) {
-      correct++;
-    }
-  }
-
-  return correct / total;
-}
-
-const accuracy = evaluate(net, testData);
-console.log(`Accuracy: ${accuracy}`);
-```
-
----
-
-## 9. Model Persistence
-
-- **Save and load network:**
-
-```typescript
-// Save network
-const json = net.toJSON();
-fs.writeFileSync('network.json', JSON.stringify(json));
-
-// Load network
-const loadedNet = new brain.NeuralNetwork();
-loadedNet.fromJSON(JSON.parse(json));
-```
-
----
-
-## 10. Prediction
-
-- **Make predictions:**
-
-```typescript
-const input = [0.5, 0.3];
-const output = net.run(input);
-console.log(`Prediction: ${output}`);
-```
-
----
-
-## 11. General Rules of Thumb
-
-- **Data preparation** — normalize and clean data properly
-- **Architecture** — choose appropriate network architecture
-- **Training parameters** — tune learning rate and iterations
-- **Overfitting** — use validation data to prevent overfitting
-- **Activation functions** — use appropriate activation functions
-- **Evaluation** — evaluate model performance properly
-- **Persistence** — save and load models correctly
+- **`input`/`output` arrays normalized; decode consistently.**
+- **Watch `error`; tolerance + iteration caps.**
+- **`toJSON`/`fromJSON` = deploy path.**
+- **Small nets; typed-array batching.**
+- **Withheld validation; schema + normalization versioned.**
 
 ---
 
 ## Quick-Start Checklist
 
-- [ ] Brain.js installed with TypeScript types
-- [ ] Data normalized and prepared
-- [ ] Appropriate network architecture chosen
-- [ ] Training parameters configured
-- [ ] Training with proper validation
-- [ ] Model evaluation metrics calculated
-- [ ] Model saved for deployment
-- [ ] Prediction API implemented
-- [ ] Performance optimized
-- [ ] Documentation complete
+- [ ] `brain.NeuralNetwork`/`LSTM` per task; topology deliberate
+- [ ] Inputs/outputs normalized; decode identical at predict
+- [ ] `train` with iterations/errorThresh; error curve tracked
+- [ ] Training/validation split; generalization observed
+- [ ] `toJSON`/`fromJSON` persistence; schema versioned
+- [ ] Deterministic seeds; golden output tests

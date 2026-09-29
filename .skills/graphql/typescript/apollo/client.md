@@ -17,6 +17,22 @@ Apollo Client is the **industry-standard GraphQL client** for TypeScript/JS apps
 
 - Dependencies: `@apollo/client` (+ `graphql`), transport: HTTP (`HttpLink`) or WebSocket (`GraphQLWsLink`).
 - Create `ApolloClient({ uri, cache: new InMemoryCache({ typePolicies }) })`.
+
+```ts
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
+import { setContext } from '@apollo/client/link/context'
+
+const httpLink = new HttpLink({ uri: '/graphql' })
+const authLink = setContext((_operation, { headers }) => ({
+  headers: { ...headers, authorization: `Bearer ${sessionStorage.getItem('token') ?? ''}` },
+}))
+
+export const client = new ApolloClient({
+  link: authLink.concat(httpLink), // request -> auth header -> network
+  cache: new InMemoryCache({ typePolicies: { User: { keyFields: ['id'] } } }),
+})
+```
+
 - Wrap app in `<ApolloProvider client={client}>`.
 - React helpers: `useQuery(MY_QUERY, { variables })` returns `{ data, loading, error, refetch, ... }`.
 
@@ -24,6 +40,27 @@ Apollo Client is the **industry-standard GraphQL client** for TypeScript/JS apps
 
 - Write queries with **fragments** and **`useQuery`** for reuse and cache-update safety.
 - Pass variables: `useQuery(GET_USER, { variables: { id } })`.
+
+```tsx
+const USER_FIELDS = gql`fragment UserFields on User { id name email }`
+
+const GET_USER = gql`
+  query GetUser($id: ID!) {
+    user(id: $id) {
+      ...UserFields
+      posts(first: 10) { id title } # every Post needs its id for cache identity
+    }
+  }
+  ${USER_FIELDS}
+`
+
+const { data, loading, error, refetch } = useQuery(GET_USER, {
+  variables: { id },
+  fetchPolicy: 'cache-and-network',
+  skip: !id,
+})
+```
+
 - `pollInterval` for periodic refresh; `skip` for conditional queries.
 - `fetchPolicy` (cache-first default): `cache-only`, `cache-and-network`, `network-only`, `no-cache`.
 - **Refetch**: `refetch({ newVars })` re-executes the query; `refetchQueries`.
@@ -36,6 +73,19 @@ Apollo Client is the **industry-standard GraphQL client** for TypeScript/JS apps
 - **Error handling**: Apollo surfaces `graphQLErrors` (server) vs `networkError` (link); define ErrorLink for global handling.
 - `refetchQueries` after mutations that invalidate lists.
 
+```tsx
+const [createPost] = useMutation(CREATE_POST, {
+  variables: { input },
+  // Painted before the server answers; rolled back automatically on error
+  optimisticResponse: { createPost: { __typename: 'Post', id: 'temp', title: input.title } },
+  update: (cache, { data }) => {
+    // Re-read the cached list, then write it back with the new item prepended
+    const list = cache.readQuery<GetPosts>({ query: GET_POSTS })
+    if (list && data) cache.writeQuery({ query: GET_POSTS, data: { posts: [data.createPost, ...list.posts] } })
+  },
+})
+```
+
 ## 5. Cache & Normalization
 
 - Normalized cache stores objects by `__typename:id` keys; `keyFields` override for composite/synthetic keys.
@@ -46,6 +96,24 @@ Apollo Client is the **industry-standard GraphQL client** for TypeScript/JS apps
 ## 6. Subscriptions
 
 - HTTP+WS link: `split` to route subscription operations to `GraphQLWsLink`.
+
+```ts
+import { split } from '@apollo/client'
+import { GraphQLWsLink } from '@apollo/client/link/subscriptions'
+import { getMainDefinition } from '@apollo/client/utilities'
+import { createClient } from 'graphql-ws'
+
+const wsLink = new GraphQLWsLink(createClient({ url: 'ws://localhost:4000/graphql', retryAttempts: 5 }))
+const link = split(
+  ({ query }) => {
+    const definition = getMainDefinition(query)
+    return definition.kind === 'OperationDefinition' && definition.operation === 'subscription'
+  },
+  wsLink,
+  authLink.concat(httpLink), // everything else keeps going over HTTP
+)
+```
+
 - `useSubscription` with `onData`; update cache in response to events.
 - Reconnect: `retry` policy on the websocket.
 - Prefer **loose coupling** for real-time — combine with queries where volume is high.

@@ -132,7 +132,28 @@ func WithTimeout(d time.Duration) Option { ... }
 ```
 
 - **Zero values should be useful.** Design structs so `var s Server` is either immediately usable or clearly documented as requiring `New()`.
+- **Guard clauses over nested `if`** — return early instead of indenting the happy path:
+
+```go
+if err != nil {
+	return err // bail out before the nesting starts
+}
+// happy path stays at one indent level
+```
+
 - **Don't over-use generics.** Reach for them when you'd otherwise duplicate identical logic across types (e.g. a `Map[T, U]` helper) — not as a default for every function signature.
+- **Compose with the `net/http` middleware pattern** — cross-cutting concerns (auth, logging, tracing, rate limits) stack as linear layers rather than being sprinkled through handlers:
+
+```go
+func withLogging(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		log.Printf("%s %s", r.Method, r.URL.Path)
+		next.ServeHTTP(w, r) // the linear chain is visible in one place
+	})
+}
+
+// auth := withLogging(rateLimit(withAuth(mux)))
+```
 
 ---
 

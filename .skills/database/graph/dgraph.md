@@ -20,12 +20,60 @@ Dgraph is a **distributed, horizontally scalable graph database** that exposes *
 - Mutations: `add`, `update`, `delete` with nested mutation support.
 - Use `@cascade` to return only fully-joined results; combine with `filter` for required-relations.
 
+```graphql
+type User @id @index(hash) @index(trigram) {
+  name: String!
+  email: String! @unique
+  friends: [User] @reverse
+}
+
+type Post @id @index(hash) @index(fulltext) @index(term) {
+  title: String!
+  body: String
+  author: User! @reverse
+  publishedAt: DateTime @index(hour)
+}
+
+mutation placeOrder($input: AddPostInput!) {
+  addPost(input: $input) @id {
+    posts { id title author { name } }
+  }
+}
+```
+
 ## 3. DQL (Native Query Language)
 
 - DQL is JSON-like and closer to the data model: `query { user(func: eq(name, "Alice")) { name friends { name } } }`.
 - Supports filters, pagination, sorting, and deep traversals with `@recurse(depth: N)`.
 - Use `has()` for existence checks, `uid()` for specific nodes.
 - DQL is useful for advanced graph patterns where GraphQL's type-centric model becomes limiting.
+
+```graphql
+query RecentPosts($authorId: ID!, $first: Int = 20) {
+  queryPost(
+    filter: { author: { id: [{ eq: $authorId }] } }
+    order: { publishedAt: DESC }
+    first: $first
+  ) @cascade {
+    title
+    author {
+      name
+    }
+  }
+}
+```
+
+```graphql
+mutation upsertProfile($uid: ID!, $name: String!, $email: String!) {
+  updateUser(input: { uid: $uid, set: { name: $name, email: $email } }) @id {
+    user {
+      id
+      name
+      email
+    }
+  }
+}
+```
 
 ## 4. Schema and Indexing
 

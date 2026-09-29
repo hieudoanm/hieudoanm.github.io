@@ -27,7 +27,7 @@ cargo build --release
 
 ## Coding Conventions
 
-Follow the repo-wide [Rust conventions](../../../../../AGENTS.md#-rust-rs):
+Follow the repo-wide [Rust conventions](../../../../../../../.skills/languages/rust/rust.md):
 
 - `Result<T, E>` for fallible functions, never `panic!`
 - `Option<T>` over sentinel values (`-1`, `null`, empty strings)

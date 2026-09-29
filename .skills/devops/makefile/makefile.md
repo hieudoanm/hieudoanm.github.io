@@ -15,6 +15,12 @@ Make is a build automation tool that uses a syntax of tab-indented recipes. Well
 - **Default target first** — the first target in the file is the default when running `make` bare; document it with a `help` target.
 - **Use `.` for the current directory** — avoid absolute paths; use relative paths from the Makefile's location.
 - **Tab-indented recipes** — Make requires real tab characters for recipe lines, not spaces.
+- **Break long prerequisite lists with `\`** — a trailing backslash continues a target definition onto the next line (with a tab before the continuation), keeping wide rules readable:
+
+```makefile
+build: $(BIN_DIR)/app $(BIN_DIR)/worker \
+	$(GO) build -o $(BIN_DIR)/ ./cmd/...
+```
 
 ```makefile
 .PHONY: all clean test lint fmt

@@ -1,254 +1,109 @@
 ---
-name: synaptic-js-best-practices
-description: Best practices for using Synaptic.js for neural networks in JavaScript/TypeScript. Use when implementing, structuring, or reviewing Synaptic.js models — covers network architecture, training, and deployment.
+name: synaptic-best-practices
+description: Best practices for building neural networks in JS with Synaptic — the network-architecture conventions for browser/Node. Use when writing, structuring, or reviewing Synaptic — covers networks, architect objects, training, serialization, and performance.
 ---
 
-# Synaptic.js Best Practices
+# Synaptic Best Practices
 
-Synaptic.js is a neural network library for JavaScript that runs in both browser and Node.js. Best practice is to design appropriate network architectures, prepare data properly, train with appropriate parameters, and follow ML best practices for model performance and generalization.
-
----
-
-## 1. Core Concepts
-
-- **Neural networks** — layers of neurons with weighted connections
-- **Architecture** — input, hidden, and output layers
-- **Training** — backpropagation with gradient descent
-- **Activation functions** — sigmoid, tanh, relu, etc.
-- **Loss functions** — mean squared error, cross-entropy
+Synaptic is a **JavaScript neural network library** — `new Architect.Perceptron`, `Network`, layers and trainers with a small VM-style API. Practical Synaptic leans on **declarative architect objects for the network shape, `trainer.XOR`-style or custom `network.activate` + `trainer.train` for learning, explicit `toJSON`/`fromJSON` serialization for persistence, and input/output normalization discipline** — the network is a function you train; data into `[0,1]`/normalized in, predictions out.
 
 ---
 
-## 2. Installation
+## 1. Network Construction
 
-- **Install Synaptic.js:**
+- **Architect factories for standard shapes:**
 
-```bash
-npm install synaptic
+```js
+import { Architect, Network, Trainer } from 'synaptic';
+
+const net = new Architect.Perceptron(2, 4, 1); // input, hidden, output
+const net2 = new Architect.LSTM(3, 5, 1);
 ```
 
-- **For TypeScript:**
-
-```bash
-npm install synaptic @types/synaptic
-```
+- **Perceptron/`LSTM`/`Hopfield` per task (feedforward, sequences, associative).**
+- **Layer sizes deliberate — depth vs width tuned for the data budget.**
 
 ---
 
-## 3. Basic Network Creation
+## 2. Activation & Prediction
 
-- **Create a simple network:**
+- **`activator` on normalized inputs:**
 
-```typescript
-import { Architect, Layer, Network } from 'synaptic';
-
-// Create a simple perceptron
-const perceptron = new Architect.Perceptron(2, 1);
-const network = perceptron.network;
-
-// Create a multi-layer network
-const network = new Architect.Perceptron(2, 3, 1).network;
+```js
+const out = net.activate([0.1, 0.9]);
 ```
 
-- **Create custom network:**
-
-```typescript
-const network = new Network({
-  input: 2,
-  hidden: [4, 3],
-  output: 1
-});
-```
+- **Inputs normalized (scaled to the activation range); outputs interpreted via the same mapping.**
+- **Bias/layers config explicit in the architect call; keep the mapping constant across train/predict.**
 
 ---
 
-## 4. Training
+## 3. Training
 
-- **Train with basic examples:**
+- **Trainer for supervised learning; data pairs normalized:**
 
-```typescript
-const trainingData = [
-  { input: [0, 0], output: [0] },
-  { input: [0, 1], output: [1] },
-  { input: [1, 0], output: [1] },
-  { input: [1, 1], output: [0] }
-];
-
-network.trainer.train(trainingData, {
-  iterations: 20000,
-  error: 0.005,
-  rate: 0.3,
-  shuffle: true
-});
+```js
+const trainer = new Trainer(net);
+trainer.train(
+  [
+    { input: [0, 0], output: [0] },
+    { input: [1, 0], output: [1] },
+  ],
+  { iterations: 5000, error: 0.01, log: 50, rate: 0.1 }
+);
 ```
 
-- **Train with custom options:**
-
-```typescript
-const options = {
-  iterations: 10000,
-  error: 0.01,
-  rate: 0.1,
-  rate_decay: 0.999,
-  shuffle: true,
-  log: (stats: any) => console.log(stats)
-};
-
-network.trainer.train(trainingData, options);
-```
+- **Small `rate` + iteration cap for stability; watch `error` convergence (not raw iterations).**
+- **Training data separate from validation — check generalization on a withheld set.**
 
 ---
 
-## 5. Network Architectures
+## 4. Serialization
 
-- **LSTM network:**
+- **Network state is a plain JSON blob — persist it:**
 
-```typescript
-const lstm = new Architect.LSTM(1, 10, 1).network;
-
-// Train LSTM
-lstm.trainer.train(trainingData, {
-  iterations: 1000,
-  error: 0.01
-});
+```js
+const json = net.toJSON();
+// store json
+const restored = Network.fromJSON(json);
 ```
 
-- **GRU network:**
-
-```typescript
-const gru = new Architect.GRU(1, 8, 1).network;
-```
-
-- **Perceptron:**
-
-```typescript
-const perceptron = new Architect.Perceptron(3, 1).network;
-```
+- **Save/restore round-trips for deployment — never rebuild by re-training at runtime.**
+- **Version the network shape with the data schema (inputs/architecture).**
 
 ---
 
-## 6. Activation Functions
+## 5. Performance
 
-- **Use appropriate activation functions:**
-
-```typescript
-const network = new Network({
-  input: 2,
-  hidden: [4],
-  output: 1,
-  options: {
-    hidden: { activation: 'relu' },
-    output: { activation: 'sigmoid' }
-  }
-});
-```
-
-- **Available activations:** `sigmoid`, `tanh`, `relu`, `leaky-relu`, `linear`
+- **JS engines fine for small nets; batch inference in typed-array loops.**
+- **For larger/dense workloads, consider WebAssembly/tensor backends (Synaptic is a learning tool — 100s of params, not millions).**
+- **Avoid per-call allocation churn; preallocate activation arrays.**
 
 ---
 
-## 7. Data Preparation
+## 6. Testing & Pitfalls
 
-- **Normalize data:**
-
-```typescript
-function normalize(data: number[]): number[] {
-  const max = Math.max(...data);
-  const min = Math.min(...data);
-  return data.map(x => (x - min) / (max - min));
-}
-
-const normalizedInput = normalize([1, 2, 3, 4, 5]);
-```
-
-- **Split data for training and testing:**
-
-```typescript
-function splitData(data: any[], testRatio: number = 0.2) {
-  const splitIndex = Math.floor(data.length * (1 - testRatio));
-  return {
-    train: data.slice(0, splitIndex),
-    test: data.slice(splitIndex)
-  };
-}
-```
+- **Determinism: seed-based trainers/`random` where supported; snapshot tests on JSON.**
+- **Watch overfitting — tiny datasets → validation split + early stop.**
+- **Document the normalization transform; predictions interpreted in the original scale.**
 
 ---
 
-## 8. Model Evaluation
+## General Rules of Thumb
 
-- **Evaluate model performance:**
-
-```typescript
-function evaluate(network: Network, testData: any[]) {
-  let correct = 0;
-  let total = testData.length;
-
-  for (const item of testData) {
-    const output = network.activate(item.input);
-    const predicted = output[0] > 0.5 ? 1 : 0;
-    if (predicted === item.output[0]) {
-      correct++;
-    }
-  }
-
-  return correct / total;
-}
-
-const accuracy = evaluate(network, testData);
-console.log(`Accuracy: ${accuracy}`);
-```
-
----
-
-## 9. Model Persistence
-
-- **Save and load network:**
-
-```typescript
-// Save network
-const json = network.toJSON();
-fs.writeFileSync('network.json', JSON.stringify(json));
-
-// Load network
-const loadedNetwork = Network.fromJSON(JSON.parse(json));
-```
-
----
-
-## 10. Prediction
-
-- **Make predictions:**
-
-```typescript
-const input = [0.5, 0.3];
-const output = network.activate(input);
-console.log(`Prediction: ${output}`);
-```
-
----
-
-## 11. General Rules of Thumb
-
-- **Data preparation** — normalize and clean data properly
-- **Architecture** — choose appropriate network architecture
-- **Training parameters** — tune learning rate and iterations
-- **Overfitting** — use validation data to prevent overfitting
-- **Activation functions** — use appropriate activation functions
-- **Evaluation** — evaluate model performance properly
-- **Persistence** — save and load models correctly
+- **Architect for shape; normalize in/out.**
+- **Trainer holds the loop; watch `error` convergence.**
+- **Serialization is the deploy artifact (`toJSON`/`fromJSON`).**
+- **Small nets — batch inference; preallocate.**
+- **Withheld validation; seeds for determinism.**
 
 ---
 
 ## Quick-Start Checklist
 
-- [ ] Synaptic.js installed with TypeScript types
-- [ ] Data normalized and prepared
-- [ ] Appropriate network architecture chosen
-- [ ] Training parameters configured
-- [ ] Training with proper validation
-- [ ] Model evaluation metrics calculated
-- [ ] Model saved for deployment
-- [ ] Prediction API implemented
-- [ ] Performance optimized
-- [ ] Documentation complete
+- [ ] `Architect` network (Perceptron/LSTM) sized to the problem
+- [ ] Inputs/outputs normalized to the activation range
+- [ ] Trainer with small rate + iteration/error caps; convergence tracked
+- [ ] Training/validation split; generalization checked
+- [ ] `toJSON`/`fromJSON` persistence; shape versioned
+- [ ] Deterministic seeds; normalization documented

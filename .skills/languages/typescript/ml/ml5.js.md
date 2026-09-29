@@ -1,285 +1,115 @@
 ---
-name: ml5-js-best-practices
-description: Best practices for using ml5.js for machine learning in JavaScript. Use when implementing, structuring, or reviewing ml5.js applications — covers neural networks, image classification, and creative coding.
+name: ml5-best-practices
+description: Best practices for machine learning in the browser with ml5.js — the friendly-ML conventions for education and creative coding. Use when writing, structuring, or reviewing ml5.js — covers models (image classification, pose, transfer learning), load/ready, inference, and browser constraints.
 ---
 
 # ml5.js Best Practices
 
-ml5.js is a friendly machine learning library for the web that wraps TensorFlow.js. Best practice is to use ml5.js for creative coding and prototyping, understand its limitations compared to direct TensorFlow.js, handle model loading properly, and follow web ML best practices for performance and user experience.
+ml5.js is **a friendly ML layer over TensorFlow.js for the browser** — pre-trained models (image classification, object detection, pose estimation) with simple `ml5.x(..., modelReady)` callbacks. Practical ml5.js leans on **model loading once plus `ready` handlers, `p5.js`-style callbacks (`results`) for inference, async-friendly `await` patterns, and browser constraints respected (model weights → network/cache, device memory)** — the models are magic; the discipline is loading, caching, and callback structure.
 
 ---
 
-## 1. Core Concepts
+## 1. Loading Models
 
-- **Wrapper library** — ml5.js wraps TensorFlow.js for easier ML in the browser
-- **Pre-trained models** — access to models like MobileNet, DoodleNet, PoseNet
-- **Neural networks** — simple neural network implementation
-- **Image classification** — classify images using pre-trained models
-- **Creative coding** — ML for creative and artistic applications
+- **Load once per page; act in the `ready`/`getPromise` callback:**
 
----
-
-## 2. Installation
-
-- **Install ml5.js:**
-
-```bash
-npm install ml5
+```js
+const classifier = ml5.imageClassifier('MobileNet', () => {
+  console.log('model loaded');
+});
+// or
+const lib = ml5.imageClassifier('MobileNet');
+await lib.load(); // explicit await world
 ```
 
-- **Include via CDN:**
-
-```html
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-```
+- **Models fetched from CDN — cached; offline caps pre-bundle the weights.**
+- **One classifier per model per page (no repeated loads).**
 
 ---
 
-## 3. Image Classification
+## 2. Inference
 
-- **Use pre-trained MobileNet:**
+- **`classify(image, gotResult)` or await:**
 
-```javascript
-let classifier;
+```js
+classifier.classify(img).then((results) => {
+  console.log(results[0].label, results[0].confidence);
+});
+// p5 mode
+classifier.classify(img, (err, results) => { if (results) … });
+```
 
-function preload() {
+- **Results arrays sorted by confidence — take the top-N genuinely useful.**
+- **Error callbacks handled (never silent); inputs as elements/canvas/frames per model contract.**
+
+---
+
+## 3. Transfer Learning & Feature Extraction
+
+- **`featureExtractor` + `classifier` for custom classes on top of a pretrained trunk:**
+
+```js
+const extractor = ml5.featureExtractor("MobileNet", modelReady);
+const classifierFuture = extractor.classification(modelReady);
+classifierFuture.addImage(images, "cat");
+classifierFuture.train((loss) => …);
+```
+
+- **Collect balanced samples per class; train with a small `loss` watch.**
+- **Save/load trained classifiers (`save()`/`load()` — JSON/weights artifacts).**
+
+---
+
+## 4. Browser & Performance Constraints
+
+- **Weights load over network — bundle/cache for production; CDN pinned.**
+- **Inference on the main thread can jank — `requestAnimationFrame` throttling for video.**
+- **Memory: destroy classifiers not in use; cap continuous inference.**
+
+---
+
+## 5. p5.js Integration
+
+- **`setup()` loads; `draw()` runs inference throttled:**
+
+```js
+function setup() {
   classifier = ml5.imageClassifier('MobileNet');
+  classifier.classify(canvas, got);
 }
-
-function setup() {
-  createCanvas(400, 400);
-}
-
 function draw() {
-  image(video, 0, 0);
-}
-
-function classifyImage() {
-  classifier.classify(canvas, (err, results) => {
-    console.log(results);
-  });
+  if (frameCount % 10 === 0) classifier.classify(canvas, got);
 }
 ```
 
-- **Use custom image classification:**
-
-```javascript
-function customClassify() {
-  classifier.classify(img, (err, results) => {
-    console.log('Label:', results[0].label);
-    console.log('Confidence:', results[0].confidence);
-  });
-}
-```
+- **Draw overlays (keypoints/bounding boxes) via p5 primitives — keep loop cheap.**
+- **Asynchronous results — never block `draw()` awaiting classify synchronously.**
 
 ---
 
-## 4. Neural Networks
+## 6. Ethics & Pitfalls
 
-- **Create a simple neural network:**
-
-```javascript
-let nn;
-
-function setup() {
-  nn = new ml5.neuralNetwork({
-    inputs: 2,
-    outputs: 1,
-    hidden: [4],
-    task: 'regression'
-  });
-}
-
-function trainNetwork() {
-  const trainingData = [
-    { inputs: [0, 0], outputs: [0] },
-    { inputs: [0, 1], outputs: [1] },
-    { inputs: [1, 0], outputs: [1] },
-    { inputs: [1, 1], outputs: [0] }
-  ];
-
-  nn.train(trainingData, (epoch) => {
-    console.log('Epoch:', epoch);
-  });
-}
-```
-
-- **Make predictions:**
-
-```javascript
-function predict(input) {
-  const output = nn.predict(input);
-  console.log('Prediction:', output);
-}
-```
+- **Pretrained biases documented — model cards/caveats acknowledged in projects.**
+- **No real-time personal data storage without consent; demos sanitized.**
+- **Version pin `ml5` + TensorFlow deps; tests machine hands-down only (no visual asserts).**
 
 ---
 
-## 5. Pose Detection
+## General Rules of Thumb
 
-- **Use PoseNet for pose detection:**
-
-```javascript
-let poseNet;
-
-function preload() {
-  poseNet = ml5.poseNet();
-}
-
-function setup() {
-  createCanvas(640, 480);
-  video = createCapture(VIDEO);
-  video.hide();
-}
-
-function draw() {
-  image(video, 0, 0);
-
-  poseNet.singlePose(video, (err, pose) => {
-    drawKeypoints(pose);
-  });
-}
-```
-
----
-
-## 6. Style Transfer
-
-- **Use style transfer:**
-
-```javascript
-let styleTransfer;
-
-function preload() {
-  styleTransfer = ml5.styleTransfer('models/wave');
-}
-
-function setup() {
-  createCanvas(640, 480);
-  video = createCapture(VIDEO);
-  video.hide();
-}
-
-function draw() {
-  styleTransfer.transfer(video, (err, result) => {
-    image(result, 0, 0);
-  });
-}
-```
-
----
-
-## 7. Face Detection
-
-- **Use face detection:**
-
-```javascript
-let faceApi;
-
-function preload() {
-  faceApi = ml5.faceApi();
-}
-
-function setup() {
-  createCanvas(640, 480);
-  video = createCapture(VIDEO);
-  video.hide();
-}
-
-function draw() {
-  image(video, 0, 0);
-
-  faceApi.detectSingleFace(video, (err, result) => {
-    if (result) {
-      drawFace(result);
-    }
-  });
-}
-```
-
----
-
-## 8. Model Loading
-
-- **Handle model loading asynchronously:**
-
-```javascript
-let model;
-
-function preload() {
-  model = ml5.imageClassifier('MobileNet', modelLoaded);
-}
-
-function modelLoaded() {
-  console.log('Model loaded!');
-  classifyImage();
-}
-```
-
----
-
-## 9. Performance Optimization
-
-- **Use GPU acceleration:**
-
-```javascript
-function setup() {
-  const options = {
-    backend: 'webgl'
-  };
-  ml5.setBackend(options);
-}
-```
-
-- **Optimize for mobile:**
-
-```javascript
-const options = {
-  version: 1,
-  alpha: 0.5
-};
-```
-
----
-
-## 10. Error Handling
-
-- **Handle errors gracefully:**
-
-```javascript
-function classifyImage() {
-  classifier.classify(canvas, (err, results) => {
-    if (err) {
-      console.error('Classification error:', err);
-      return;
-    }
-    console.log(results);
-  });
-}
-```
-
----
-
-## 11. General Rules of Thumb
-
-- **Model loading** — handle async model loading properly
-- **Performance** — optimize for browser performance
-- **Error handling** — handle errors gracefully
-- **Mobile support** — optimize for mobile devices
-- **Creative coding** — use for creative and artistic applications
-- **Prototyping** — use for quick ML prototyping
+- **Load models once; callbacks/await structure clear.**
+- **`classify` results sorted; top-N read deliberately.**
+- **Transfer learning for custom classes; balanced samples.**
+- **Throttle inference; cache weights; destroy when idle.**
+- **Bias caveats; consent for personal data.**
 
 ---
 
 ## Quick-Start Checklist
 
-- [ ] ml5.js installed via npm or CDN
-- [ ] Appropriate model selected for task
-- [ ] Model loading handled asynchronously
-- [ ] Error handling implemented
-- [ ] Performance optimized for browser
-- [ ] Mobile support considered
-- [ ] User experience optimized
-- [ ] Models tested across browsers
-- [ ] Documentation complete
-- [ ] Creative use case identified
+- [ ] Model loaded once with `ready`/await; pinned CDN weights
+- [ ] Infer with `classify(img, results)`; errors handled
+- [ ] Transfer learning with balanced per-class samples; `train` watched
+- [ ] Inference throttled (`frame % N`); canvas loops cheap
+- [ ] Trained classifiers saved/loaded as artifacts
+- [ ] Bias caveats documented; consent respected

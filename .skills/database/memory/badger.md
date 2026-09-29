@@ -21,6 +21,38 @@ Badger is a **fast, embeddable Go key-value store** built on an **LSM tree with 
 - Writes: use `txn.Set(key, value)` then `txn.Commit()`.
 - Iteration: `txn.NewIterator(opts)` + `prefix.Seek(key)` for range scans.
 
+```go
+db, err := badger.Open(badger.DefaultOptions("/var/lib/badger"))
+if err != nil {
+    return fmt.Errorf("open badger: %w", err)
+}
+defer db.Close()
+
+err = db.Update(func(txn *badger.Txn) error {
+    // commit: apply or discard; the txn owns the entry memory
+    return txn.Set([]byte("order:1001:status"), []byte("paid"))
+})
+if err != nil {
+    return fmt.Errorf("set status: %w", err)
+}
+
+err = db.View(func(txn *badger.Txn) error {
+    item, err := txn.Get([]byte("order:1001:status")) // errors.ErrKeyNotFound is normal
+    if err != nil {
+        return err
+    }
+    value, err := item.ValueCopy(nil) // copy out before the txn closes
+    if err != nil {
+        return fmt.Errorf("copy value: %w", err)
+    }
+    log.Printf("status=%s", value)
+    return nil
+})
+if err != nil {
+    return fmt.Errorf("read status: %w", err)
+}
+```
+
 ## 3. Value Log and Performance Tuning
 
 - Large values stored in the vLog improve write throughput; keys stay in the LSM tree.
@@ -34,6 +66,33 @@ Badger is a **fast, embeddable Go key-value store** built on an **LSM tree with 
 - Use `Discard()` after `Commit()` to release resources; defer it to prevent leaks.
 - Read-only transactions: `db.NewTransaction(false)` with `defer txn.Discard()`.
 - Badger does not support distributed transactions — it is a single-node embedded store.
+
+```go
+func reserveStock(db *badger.DB, sku string, qty int64) error {
+    for attempt := range 3 { // ErrConflict means someone else committed first
+        err := db.Update(func(txn *badger.Txn) error {
+            item, err := txn.Get([]byte("stock:" + sku))
+            if err != nil {
+                return fmt.Errorf("get stock: %w", err)
+            }
+            available, err := item.Int64()
+            if err != nil {
+                return fmt.Errorf("decode stock: %w", err)
+            }
+            if available < qty {
+                return fmt.Errorf("insufficient stock for %s: %d left", sku, available)
+            }
+            remaining, _ := json.Marshal(available - qty)
+            return txn.Set([]byte("stock:"+sku), remaining)
+        })
+        if err == nil || !errors.Is(err, badger.ErrConflict) {
+            return err
+        }
+        log.Printf("write conflict on %s, retry %d", sku, attempt)
+    }
+    return errors.New("reserve stock: exhausted retries")
+}
+```
 
 ## 5. Operations and Pitfalls
 

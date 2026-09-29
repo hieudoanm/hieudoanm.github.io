@@ -90,8 +90,6 @@
 │   │   │   └── [unreal.md](./languages/cpp/game/unreal.md)
 │   │   └── [cpp.md](./languages/cpp/cpp.md)
 │   ├── csharp/
-│   │   ├── backend/
-│   │   │   └── [dotnet.md](./languages/csharp/backend/dotnet.md)
 │   │   ├── game/
 │   │   │   └── [unity.md](./languages/csharp/game/unity.md)
 │   │   ├── [csharp.md](./languages/csharp/csharp.md)
@@ -246,11 +244,6 @@
 │       │   ├── [commander.md](./languages/typescript/cli/commander.md)
 │       │   ├── [oclif.md](./languages/typescript/cli/oclif.md)
 │       │   └── [yargs.md](./languages/typescript/cli/yargs.md)
-│       ├── data/
-│       │   ├── [brain.js.md](./languages/typescript/data/brain.js.md)
-│       │   ├── [mind.js.md](./languages/typescript/data/mind.js.md)
-│       │   ├── [ml5.js.md](./languages/typescript/data/ml5.js.md)
-│       │   └── [synaptic.js.md](./languages/typescript/data/synaptic.js.md)
 │       ├── engine/
 │       │   ├── [hermes.md](./languages/typescript/engine/hermes.md)
 │       │   ├── [javascript-core.md](./languages/typescript/engine/javascript-core.md)

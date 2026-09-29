@@ -23,12 +23,45 @@ RocksDB is a **high-performance embedded key-value store** developed by Facebook
 - `bloom_locality`, `filter_policy`: use `NewBloomFilterPolicy(10)` for point reads.
 - `compaction_style`: `kCompactionStyleLevel` (default), `kCompactionStyleUniversal`, or `kCompactionStyleFIFO` (time-to-live).
 
+```go
+opts := rocksdb.NewDefaultOptions()
+opts.SetCreateIfMissing(true)
+opts.SetWriteBufferSize(64 << 20)    // 64 MB memtable
+opts.SetMaxWriteBufferNumber(4)      // stall L0 once 4 memtables are queued
+opts.SetTargetFileSizeBase(64 << 20) // 64 MB SSTable baseline
+opts.SetCompression(rocksdb.SnappyCompression)
+opts.SetBlockCache(rocksdb.NewLRUCache(256 << 20)) // ~1/3 of a 1 GB container
+opts.SetFilterPolicy(rocksdb.NewBloomFilterPolicy(10))
+opts.SetPrefixExtractor(rocksdb.NewFixedPrefixTransform(8)) // "order:" length
+
+db, err := rocksdb.Open(opts, "/var/lib/rocksdb")
+if err != nil {
+    return fmt.Errorf("open rocksdb: %w", err)
+}
+defer db.Close()
+```
+
 ## 3. Write Amplification and Tuning
 
 - **Write amplification (WA)** comes from compaction; larger multilevel targets reduce it at the cost of RAM.
 - Universal compaction is better for write-heavy/append-only workloads; level compaction better for mixed.
 - Tune with `compaction_options_universal.*` and `*_compaction_concurrency`.
 - Use **`WriteBatch`** to batch many key changes in one write.
+
+```go
+batch := rocksdb.NewWriteBatch()
+defer batch.Destroy()
+
+batch.Put([]byte("order:1001:status"), []byte("paid"))
+batch.Put([]byte("order:1001:total"), []byte("99.00"))
+batch.Delete([]byte("order:1001:note"))
+
+wo := rocksdb.NewDefaultWriteOptions()
+wo.SetSync(false) // buffered WAL; set true only for durability-critical writes
+if err := db.Write(wo, batch); err != nil {
+    return fmt.Errorf("write batch: %w", err)
+}
+```
 
 ## 4. Reads, Iterators, and Prefix
 

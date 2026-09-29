@@ -55,6 +55,28 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
+- **Pin base image digests** for reproducible, auditable builds — a mutable tag (`node:18-alpine`) can point at new content under you, and `latest` can move under a running build:
+
+```dockerfile
+# Good - tag for readability, digest for reproducibility
+FROM node:18-alpine@sha256:3f4b1b2c8e9a... AS base
+```
+
+- **`LABEL` images for provenance** — tie an image back to its source so a running container can be traced to a commit:
+
+```dockerfile
+LABEL org.opencontainers.image.source="https://github.com/hieudoanm/hieudoanm.github.io" \
+      org.opencontainers.image.revision="${VCS_REF}" \
+      org.opencontainers.image.licenses="MIT"
+```
+
+- **`COPY --chown=` instead of a chmod `RUN`** — ownership is metadata on the copy, so it adds no extra layer the way a `RUN chown` does:
+
+```dockerfile
+COPY --chown=app:app ./dist ./dist      # Good - no extra layer
+RUN chown -R app:app ./dist             # Avoid - creates a whole extra layer
+```
+
 - **Layer ordering** — order instructions to maximize caching:
 
 ```dockerfile
