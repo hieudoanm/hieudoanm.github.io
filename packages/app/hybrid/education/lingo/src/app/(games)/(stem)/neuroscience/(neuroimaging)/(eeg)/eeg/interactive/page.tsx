@@ -1,4 +1,4 @@
-import { ErpSimulator } from '@/games/stem/neuroscience/eeg';
+import { ErpSimulator } from '@/games/stem/neuroscience/neuroimaging/eeg/eeg';
 
 export default function EegInteractivePage() {
   return (

@@ -160,9 +160,9 @@ const MriPage: FC = () => (
     ]}
     references={[
       {
-        href: 'https://doi.org/10.1073/pnas.87.15.5678',
+        href: 'https://doi.org/10.1073/pnas.87.24.9868',
         label:
-          'Ogawa, Lee, Kay & Tank (1990) — Proceedings of the National Academy of Sciences',
+          'Ogawa, Honda, Kawai et al. (1990) — Proceedings of the National Academy of Sciences',
         description:
           'The original demonstration of intrinsic BOLD contrast in the human brain during activation.',
       },

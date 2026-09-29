@@ -1,4 +1,4 @@
-import { MegForwardSimulator } from '@/games/stem/neuroscience/meg';
+import { MegForwardSimulator } from '@/games/stem/neuroscience/neuroimaging/meg/meg';
 
 export default function MegInteractivePage() {
   return (

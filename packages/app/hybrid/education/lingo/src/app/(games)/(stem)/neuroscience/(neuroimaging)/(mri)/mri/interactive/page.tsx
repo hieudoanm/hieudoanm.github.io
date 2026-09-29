@@ -1,4 +1,4 @@
-import { BoldSimulator } from '@/games/stem/neuroscience/mri';
+import { BoldSimulator } from '@/games/stem/neuroscience/neuroimaging/mri/mri';
 
 export default function MriInteractivePage() {
   return (

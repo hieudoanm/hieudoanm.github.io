@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { HDDMSimulator } from '@/games/stem/neuroscience/hierarchical-drift-diffusion-model';
+import { HDDMSimulator } from '@/games/stem/neuroscience/theory/hierarchical-drift-diffusion-model';
 
 const HDDMSimulatorPage: FC = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 p-4 md:p-8">

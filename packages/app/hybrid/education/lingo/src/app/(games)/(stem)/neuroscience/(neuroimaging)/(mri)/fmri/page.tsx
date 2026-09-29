@@ -81,7 +81,7 @@ const FmriPage: FC = () => (
     ]}
     references={[
       {
-        href: 'https://doi.org/10.1073/pnas.87.15.5678',
+        href: 'https://doi.org/10.1073/pnas.87.24.9868',
         label: 'Ogawa et al. (1990) — PNAS',
         description:
           'The original observation that deoxyhaemoglobin changes T2* and produces the BOLD contrast.',

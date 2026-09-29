@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { LCASimulator } from '@/games/stem/neuroscience/leaky-competing-accumulator';
+import { LCASimulator } from '@/games/stem/neuroscience/theory/leaky-competing-accumulator';
 
 const LCAPage: FC = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 p-4 md:p-8">

@@ -57,13 +57,13 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 ## Structure
 
 ```txt
-src/app/            # App Router pages — /languages /music /maths /colors /history /economics /geography /psychology /ophthalmology + info routes
+src/app/            # App Router pages — /languages /music /maths /colors /history /economics /geography /psychology /neuroscience /ophthalmology + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   organisms/        # Header
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/content/        # about/download/version copy
-src/games/          # languages (incl. sign/, english/), music, colors, history, economics, geography, psychology, ophthalmology
+src/games/          # languages (incl. sign/, english/), music, colors, history, economics, geography, psychology, neuroscience (grouped anatomy/ neuroimaging/ theory/ + shared/), ophthalmology
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
@@ -120,6 +120,35 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
   - `/maths/prime-numbers` — sieve of Eratosthenes, prime gaps, twin primes
 - `/music` — ear-training game (migrated from the `music` app)
   - `/music/pitch` — pitch training
+- `/neuroscience` — neuroscience hub
+  - `/neuroscience/brain-atlas` — anatomical index; one page per division
+  - `/neuroscience/brain-atlas/<division>` — cerebral-cortex, white-matter,
+    basal-ganglia, limbic-structures, corpus-callosum, diencephalon, cerebellum,
+    brainstem
+  - `/neuroscience/brain-atlas/interactive` — depth-scrub explorer over the same
+    anatomical tree (`src/games/stem/neuroscience/anatomy/brain-atlas/`)
+  - `/neuroscience/<model>` — theory: drift-diffusion-model (plus hierarchical-,
+    leaky-competing-, linear-ballistic-, attentional- variants) and race-models
+  - `/neuroscience/<model>/interactive` — interactive per model
+  - `/neuroscience/eeg`, `/neuroscience/qeeg` — EEG and its quantitative
+    counterpart, each with `/interactive`
+  - `/neuroscience/meg`, `/neuroscience/opm-meg` — MEG and optically pumped MEG,
+    each with `/interactive`
+  - `/neuroscience/mri`, `/neuroscience/fmri`, `/neuroscience/fnirs` — MRI
+    structural/functional and near-infrared spectroscopy; `/mri` has
+    `/interactive`
+  - `/neuroscience/<task>` — experimental tasks: flanker, lexical-decision,
+    memory-recognition, numerical-comparison, random-dot-motion, stroop,
+    visual-search
+
+  Its games mirror these groups one-for-one under
+  `src/games/stem/neuroscience/`: `anatomy/`, `neuroimaging/{eeg,meg,mri}/`,
+  `theory/`, plus `shared/` for components used across groups. Route groups are
+  `(anatomy)` and friends; the games drop the parentheses because nothing routes
+  there. Two asymmetries are expected: the `(tasks)` routes have no game code,
+  and `qeeg`/`fmri`/`fnirs` are reference-only. A game folder that needs another
+  game's internals is a signal to promote the piece to `shared/`.
+
 - `/ophthalmology` — migrated from the `eyes` app as standalone components under
   `src/games/ophthalmology/`
   - `/ophthalmology/vision` — theory

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { ADDMSimulator } from '@/games/stem/neuroscience/attentional-drift-diffusion-model';
+import { ADDMSimulator } from '@/games/stem/neuroscience/theory/attentional-drift-diffusion-model';
 
 const ADDMSimulatorPage: FC = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 p-4 md:p-8">

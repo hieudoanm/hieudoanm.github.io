@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { RaceSimulator } from '@/games/stem/neuroscience/race-models';
+import { RaceSimulator } from '@/games/stem/neuroscience/theory/race-models';
 
 const RaceModelsInteractivePage: FC = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 p-4 md:p-8">

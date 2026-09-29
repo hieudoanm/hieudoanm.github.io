@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { DDMSimulator } from '@/games/stem/neuroscience/drift-diffusion-model';
+import { DDMSimulator } from '@/games/stem/neuroscience/theory/drift-diffusion-model';
 
 const DDMInteractivePage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

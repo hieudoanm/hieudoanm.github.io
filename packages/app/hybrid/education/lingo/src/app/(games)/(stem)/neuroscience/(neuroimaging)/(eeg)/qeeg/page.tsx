@@ -96,9 +96,9 @@ const QeegPage: FC = () => (
     ]}
     references={[
       {
-        href: 'https://doi.org/10.1016/j.clinph.2009.06.042',
+        href: 'https://doi.org/10.1038/nrn3241',
         label:
-          'Buzsáki et al. — The origin of extracellular fields and currents',
+          'Buzsáki, Anastassiou & Koch (2012) — Nature Reviews Neuroscience',
         description:
           'Why scalp oscillations reflect coordinated population activity, and the physical limits on localising them.',
       },

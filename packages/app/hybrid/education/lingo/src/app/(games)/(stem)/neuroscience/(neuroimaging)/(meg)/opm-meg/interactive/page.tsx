@@ -1,4 +1,4 @@
-import { OpmSimulator } from '@/games/stem/neuroscience/opm-meg';
+import { OpmSimulator } from '@/games/stem/neuroscience/neuroimaging/meg/opm-meg';
 
 export default function OpmMegInteractivePage() {
   return (

@@ -70,8 +70,8 @@ const RaceModelsPage: FC = () => (
     ]}
     references={[
       {
-        href: 'https://doi.org/10.1016/0010-0285(70)90013-4',
-        label: 'Vickers (1970) — Cognitive Psychology',
+        href: 'https://doi.org/10.1080/00140137008931117',
+        label: 'Vickers (1970) — Ergonomics',
         description:
           'Evidence for an accumulator model of psychophysical discrimination.',
       },

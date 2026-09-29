@@ -123,6 +123,15 @@ const ITEMS: GameItem[] = [
     group: 'Cognitive Tasks',
   },
   {
+    testId: 'neuroscience-brain-atlas',
+    name: 'Brain Atlas',
+    description:
+      'Cortex to brainstem in 24 structures — scrub a cut by depth and see what each division actually contains.',
+    icon: PiBrain,
+    href: '/neuroscience/brain-atlas/',
+    group: 'Neuroanatomy',
+  },
+  {
     testId: 'neuroscience-eeg',
     name: 'Electroencephalography (EEG)',
     description:
