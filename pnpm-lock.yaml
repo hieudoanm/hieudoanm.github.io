@@ -1371,7 +1371,7 @@ importers:
         specifier: 8.71.0
         version: 8.71.0(eslint@10.11.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
 
-  packages/app/hybrid/graphics-design/exibit:
+  packages/app/hybrid/graphics-design/exhibit:
     dependencies:
       '@tauri-apps/api':
         specifier: 2.12.0
