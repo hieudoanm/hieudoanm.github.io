@@ -21,12 +21,6 @@ describe('Header', () => {
   it('renders navigation links', () => {
     render(<Header />);
     expect(
-      screen.getAllByRole('link', { name: 'Showcase' }).length
-    ).toBeGreaterThanOrEqual(1);
-    expect(
-      screen.getAllByRole('link', { name: 'POS' }).length
-    ).toBeGreaterThanOrEqual(1);
-    expect(
       screen.getAllByRole('link', { name: 'About' }).length
     ).toBeGreaterThanOrEqual(1);
     expect(
@@ -35,6 +29,29 @@ describe('Header', () => {
     expect(
       screen.getAllByRole('link', { name: 'Version' }).length
     ).toBeGreaterThanOrEqual(1);
+  });
+
+  it('points navigation links at their routes', () => {
+    render(<Header />);
+    const expectAllLinks = (label: string, href: string) => {
+      screen.getAllByText(label).forEach((node) => {
+        expect(node.closest('a')).toHaveAttribute('href', href);
+      });
+    };
+    expectAllLinks('About', '/about');
+    expectAllLinks('Downloads', '/downloads');
+    expectAllLinks('Version', '/version');
+  });
+
+  it('renders nav links in the mobile menu', () => {
+    render(<Header />);
+    const menu = screen.getByRole('menu');
+    expect(menu).toBeInTheDocument();
+    ['About', 'Downloads', 'Version'].forEach((label) => {
+      expect(
+        screen.getAllByRole('link', { name: label }).length
+      ).toBeGreaterThanOrEqual(2);
+    });
   });
 
   it('links title to home', () => {

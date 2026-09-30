@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import RootLayout, { metadata } from '@/app/layout';
 
 jest.mock('@/styles/globals.css', () => ({}));
-jest.mock('@/components/pos/organisms', () => ({
+jest.mock('@/components/shared/organisms/Header', () => ({
   Header: () => <div data-testid="header">Header</div>,
 }));
 

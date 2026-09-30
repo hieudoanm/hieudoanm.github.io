@@ -35,6 +35,20 @@
 │   └── wide-column/
 │       ├── [apache-cassandra.md](./database/wide-column/apache-cassandra.md)
 │       └── [apache-hbase.md](./database/wide-column/apache-hbase.md)
+├── design/
+│   ├── brand/
+│   │   ├── [atlassian.md](./design/brand/atlassian.md)
+│   │   ├── [carbon.md](./design/brand/carbon.md)
+│   │   ├── [google.md](./design/brand/google.md)
+│   │   ├── [lightning.md](./design/brand/lightning.md)
+│   │   ├── [nothing.md](./design/brand/nothing.md)
+│   │   ├── [polaris.md](./design/brand/polaris.md)
+│   │   └── [spectrum.md](./design/brand/spectrum.md)
+│   └── philosophy/
+│       ├── [brutalism.md](./design/philosophy/brutalism.md)
+│       ├── [flat.md](./design/philosophy/flat.md)
+│       ├── [maximalism.md](./design/philosophy/maximalism.md)
+│       └── [minimalism.md](./design/philosophy/minimalism.md)
 ├── development/
 │   ├── architecture/
 │   │   ├── [cqrs.md](./development/architecture/cqrs.md)
@@ -418,4 +432,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-117 directories, 297 files
+120 directories, 309 files
