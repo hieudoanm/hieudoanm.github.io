@@ -1,7 +1,7 @@
 # Packaging
 
-> Landify (Kotlin) ships as a launcher script plus a `lib/` directory of jars.
-> There is no container image.
+> Landify (Kotlin) ships as a launcher script plus a `lib/` directory of jars,
+> with a container image for self-hosting the preview server.
 
 ## Distribution
 
@@ -55,6 +55,26 @@ make install
 This copies the distribution to `~/.landify` and symlinks
 `~/.landify/bin/landify` into `~/bin/landify`. Re-running it replaces the
 previous copy atomically.
+
+## Container
+
+`Dockerfile` builds on `eclipse-temurin:25-jdk-alpine` and runs on
+`eclipse-temurin:25-jre-alpine` as user `landify` (uid 10001). The whole
+`installDist` tree is copied to `/opt/landify`, because the launcher only works
+when `lib/` sits beside `bin/` — the same constraint described under
+[Distribution](#distribution).
+
+```bash
+docker build -t landify .
+docker run --rm landify themes
+
+# serve a built site, mounting it at /site
+docker run --rm -p 8080:8080 -v "$PWD/public:/site:ro" landify
+```
+
+The default command is `serve --bind 0.0.0.0 --dir /site`. The bound address
+must be `0.0.0.0`; the CLI default of `127.0.0.1` is unreachable from outside
+the container.
 
 ## Version
 

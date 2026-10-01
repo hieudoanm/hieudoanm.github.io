@@ -1,0 +1,47 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the Vectify CLI workflow:
+inspect the palette, trace, reduce to two colours, dump the pipeline stages, and
+serve over HTTP. Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:01.300
+Command: vectify info logo.png
+
+00:01.500 --> 00:02.100
+Output: 500 by 129 pixels, palette of 8 colours
+
+00:02.500 --> 00:02.900
+Output: three swatches shown, each with its pixel population
+
+00:03.300 --> 00:04.100
+Note: index 0 is the lightest, so it becomes the background
+
+00:04.100 --> 00:04.900
+Command: vectify logo.png logo.svg
+
+00:04.900 --> 00:05.700
+Output: 8 colours, 7148 bytes of SVG
+
+00:05.700 --> 00:06.500
+Command: vectify logo.png logo.svg --colors 2
+
+00:06.500 --> 00:07.300
+Output: 2 colours, 2973 bytes of SVG
+
+00:07.300 --> 00:08.100
+Command: vectify logo.png out.svg --debug-dir ./trace
+
+00:08.100 --> 00:08.500
+Output: debug stages written to ./trace
+
+00:08.500 --> 00:09.500
+Files: 01-quantized, 02-regions, 03-curves, 04-curves.svg
+
+00:09.500 --> 00:10.300
+Command: vectify serve
+
+00:10.300 --> 00:11.100
+Output: serving on http://127.0.0.1:8080
+
+00:11.100 --> 00:14.800
+Routes: POST /vectify, GET /health, GET /info. Blank prompt.

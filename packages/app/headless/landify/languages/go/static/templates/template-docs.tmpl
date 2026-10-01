@@ -94,7 +94,21 @@
           <pre><code>{{.Docs.Sample}}</code></pre>
         </div>
         {{end}}
-      </section>
+      </section>{{if .Demo.Video.Src}}
+
+      <section id="demo" class="block">
+        {{if or .Demo.Heading .Demo.Sub}}
+        <div class="block-head">
+          <h2>{{.Demo.Heading}}</h2>
+          {{if .Demo.Sub}}<p class="sub">{{.Demo.Sub}}</p>{{end}}
+        </div>
+        {{end}}
+        <video class="demo-media" controls preload="metadata"{{if .Demo.Video.Poster}} poster="{{.Demo.Video.Poster}}"{{end}}>
+          <source src="{{.Demo.Video.Src}}" type="video/mp4" />
+          {{if .Demo.Video.Track}}<track kind="descriptions" label="English descriptions" srclang="en" src="{{.Demo.Video.Track}}" default />{{end}}
+          Your browser does not support the video tag.
+        </video>
+      </section>{{end}}
 
       {{if .CTA.Heading}}
       <section id="cta" class="block">

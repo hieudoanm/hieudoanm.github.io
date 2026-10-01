@@ -1,0 +1,44 @@
+[package]
+name = "vectify"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Raster to vector image tracer: PNG/JPG in, SVG out"
+license = "MIT"
+readme = "README.md"
+
+[lib]
+name = "vectify"
+path = "src/lib.rs"
+
+[[bin]]
+name = "vectify"
+path = "src/bin/vectify.rs"
+
+[features]
+default = []
+# The render-and-compare harness (`.agents/OPTIMIZATION.md`). Off by default so the
+# tracer binary and image never link a full SVG rasterizer.
+eval = ["dep:resvg"]
+
+[dependencies]
+anyhow = "=1.0.102"
+axum = { version = "=0.8.9", features = ["multipart"] }
+base64 = "=0.23.1"
+clap = { version = "=4.6.7", features = ["derive"] }
+clap_complete = "=4.6.1"
+image = { version = "=0.25.10", default-features = false, features = ["png", "jpeg"] }
+resvg = { version = "=0.45.1", default-features = false, optional = true }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+thiserror = "=2.0.18"
+tokio = { version = "=1.53.1", features = ["rt-multi-thread", "macros", "net", "signal"] }
+tower-http = { version = "=0.7.1", features = ["cors", "limit", "trace"] }
+
+[dev-dependencies]
+http-body-util = "=0.1.5"
+image = { version = "=0.25.10", default-features = false, features = ["png", "jpeg"] }
+tower = { version = "=0.5.3", features = ["util"] }
+
+[lints.rust]
+unsafe_code = "forbid"

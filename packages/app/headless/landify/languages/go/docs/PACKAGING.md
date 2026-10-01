@@ -1,6 +1,7 @@
 # Packaging
 
-Landify ships as a single static Go binary. There is no container image.
+Landify ships as a single static Go binary, with a container image for
+self-hosting the preview server.
 
 ## Binary
 
@@ -16,8 +17,28 @@ with `//go:embed`, so the resulting binary is self-contained and needs no
 external assets. The `landify tui` terminal editor (bubbletea) is a plain
 dependency and ships in this single artifact with no build tag. The optional
 `studio` fyne GUI is the only CGO binary, produced separately by
-`make build-gui` as `bin/landify-gui`. There is no Dockerfile for landify; it
-is intended to be run standalone or embedded in other tooling.
+`make build-gui` as `bin/landify-gui`. The binary is meant to run standalone or
+embedded in other tooling; the container is for the `serve` use case only.
+
+## Container
+
+`Dockerfile` builds on `golang:1.27.1-alpine` and ships the binary on
+`alpine:3.22` as user `landify` (uid 10001). `ENTRYPOINT` is the binary, so
+every subcommand is reachable:
+
+```bash
+docker build -t landify .
+docker run --rm landify themes
+
+# serve a built site, mounting it at /site
+docker run --rm -p 8080:8080 -v "$PWD/public:/site:ro" landify
+```
+
+The default command is `serve --bind 0.0.0.0 --dir /site`, bound to all
+interfaces because the default `127.0.0.1` is unreachable from outside the
+container. `docker/Dockerfile` is a second, slimmer variant that downloads the
+published release binary instead of compiling; use it when you want the
+released artifact rather than the working tree.
 
 ## CI Pipeline
 

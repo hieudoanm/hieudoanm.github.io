@@ -94,7 +94,21 @@
           <pre><code>{{ config.docs.sample }}</code></pre>
         </div>
         {% endif %}
-      </section>
+      </section>{% if config.demo.video.src %}
+
+      <section id="demo" class="block">
+        {% if config.demo.heading or config.demo.sub %}
+        <div class="block-head">
+          <h2>{{ config.demo.heading }}</h2>
+          {% if config.demo.sub %}<p class="sub">{{ config.demo.sub }}</p>{% endif %}
+        </div>
+        {% endif %}
+        <video class="demo-media" controls preload="metadata"{% if config.demo.video.poster %} poster="{{ config.demo.video.poster }}"{% endif %}>
+          <source src="{{ config.demo.video.src }}" type="video/mp4" />
+          {% if config.demo.video.track %}<track kind="descriptions" label="English descriptions" srclang="en" src="{{ config.demo.video.track }}" default />{% endif %}
+          Your browser does not support the video tag.
+        </video>
+      </section>{% endif %}
 
       {% if config.cta.heading %}
       <section id="cta" class="block">

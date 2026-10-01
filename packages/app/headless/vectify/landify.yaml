@@ -1,0 +1,130 @@
+# landify.yaml — the single content source for the Vectify landing page.
+#
+#   landify validate   # check that this file is valid
+#   landify build      # generate index.html from this file
+#
+# Layout: "product", the same one Landify's own page uses — hero image, feature
+# grid, demo video, closing CTA. An earlier revision chose "docs" because the
+# hero image and demo video did not exist yet; both are now committed under
+# public/, so the reason for that choice is gone.
+#
+# Consequence: feature cards are plain text, not links. The docs stay reachable
+# through the navbar, the footer, and the repository itself.
+#
+# Colors: theme is the only design input. Every other CSS token is derived from
+# these eight values plus the corner radius.
+
+type: product
+
+theme:
+  base: "#f6f7f9"         #   backgrounds and surface family
+  primary: "#0f766e"      #   brand accent
+  secondary: "#4f46e5"    #   secondary accent
+  neutral: "#4b5563"      #   muted text and hairline base
+  info: "#2563eb"
+  warning: "#d97706"
+  success: "#16a34a"
+  error: "#dc2626"
+  radius: "8px"           #   corner radius (not a color)
+
+site:
+  name: Vectify
+  mark: "🔷"
+  description: >-
+    A raster-to-vector tracer written from scratch in Rust. PNG and JPEG in, SVG
+    out — pixels to regions to contours to Bezier curves.
+  nav:
+    - label: Pipeline
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Source
+      href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust"
+
+hero:
+  badge: "🦀 Rust · GPL-3.0"
+  headline: Pixels, on purpose.
+  subheadline: >-
+    Vectify traces flat art into SVG by implementing the whole chain itself —
+    quantisation, region growing, boundary walking, simplification, and
+    least-squares Bezier fitting. No tracing library underneath.
+  primary:
+    label: Read the architecture
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/blob/master/packages/app/headless/vectify/languages/rust/docs/ARCHITECTURE.md"
+  secondary:
+    label: Source on GitHub
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust"
+  image:
+    src: "demo.png"
+    alt: "Vectify terminal: info, a default trace, a two-colour trace, the debug artefacts, and the HTTP routes"
+
+features:
+  heading: The pipeline
+  sub: One card per stage of the tracer, in the order the data flows.
+  items:
+    - icon: "🎨"
+      title: Quantise
+      body: >-
+        A luminance threshold, or a median-cut palette assigned to the nearest
+        swatch. Deterministic, and flattened onto the backdrop first so a
+        transparent pixel cannot leak a bogus colour.
+    - icon: "🧩"
+      title: Segment
+      body: >-
+        An 8-connected flood fill groups pixels into regions, dropping any
+        below the area floor. Traced per region, so two blobs sharing a colour
+        never inherit each other's outlines.
+    - icon: "✏️"
+      title: Contour
+      body: >-
+        Boundary edges are emitted per exposed side, then chained into closed
+        loops. Direction is preserved so holes cut out without relying on
+        winding order.
+    - icon: "📉"
+      title: Simplify
+      body: >-
+        Douglas–Peucker over each closed loop, with a fallback split at the
+        point furthest from the start so the loop can recurse into open chains.
+    - icon: "📈"
+      title: Fit
+      body: >-
+        Least-squares fit, measure, split. With both end tangents fixed the fit
+        is linear, so the optimal control points come from one small solve.
+    - icon: "✅"
+      title: Measure it
+      body: >-
+        The emitted SVG is rasterized by an independent renderer and scored
+        against the source: MAE, SSIM, edge similarity, and the primitive count
+        it cost.
+
+demo:
+  heading: Watch it trace
+  sub: >-
+    Five commands, roughly fifteen seconds. The CLI is a thin shell over the
+    same library the HTTP API serves, so nothing here is a mock.
+  video:
+    src: "demo.mp4"
+    poster: "demo.png"
+    track: "demo-en-descriptions.vtt"
+
+cta:
+  icon: "🧮"
+  heading: Start from the pixels.
+  body: >-
+    Build the binary, point it at a flat logo, and compare the SVG next to the
+    original. If the shapes are wrong, open 02-regions.png first.
+  button:
+    label: Clone and build
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust"
+
+footer:
+  copyright: "© 2026 Vectify"
+  links:
+    - label: Pipeline
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Source
+      href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust"
+    - label: License
+      href: "https://github.com/hieudoanm/hieudoanm.github.io/blob/master/LICENSE"
