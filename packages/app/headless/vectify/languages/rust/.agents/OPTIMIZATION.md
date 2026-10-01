@@ -1107,3 +1107,111 @@ The ultimate goal is:
 > **Find a compact geometric representation that preserves the important information contained in the original raster image.**
 
 That principle should guide future algorithmic and architectural decisions.
+
+---
+
+# 28. Competent Optimization Protocol
+
+The built-in `sweep` command varies one parameter while holding all other
+settings fixed. Its result is conditional on that configuration; it is not a
+global optimum. Use sweeps to find promising ranges, then measure combinations
+explicitly.
+
+## 28.1 Search in Two Passes
+
+1. **Record an exact baseline.** Save the input, command/configuration, metrics,
+   geometry counts, SVG bytes, and rendered artifacts.
+2. **Sweep stage families.** First choose the active color mode: test
+   `threshold` for binary tracing (`colors` 1 or 2), or `colors` for palette
+   tracing (`colors` greater than 2). Then test `min-area` in either mode, and
+   explore geometric controls such as `simplify-tolerance` and
+   `bezier-tolerance` against promising configurations.
+3. **Refine around useful values.** Run a coarse sweep, then test smaller steps
+   around the best and the Pareto-efficient results. Do not assume the response
+   is smooth: integer region cutoffs and palette splits can change the output
+   abruptly.
+4. **Measure combinations directly.** For every candidate worth keeping, run
+   `eval` with the complete explicit configuration. A parameter sweep does not
+   test interactions with parameters it is holding fixed.
+5. **Inspect the candidate render and difference image.** Metrics locate a
+   change; artifacts explain whether it is a color, missing-region, or boundary
+   error.
+6. **Keep a Pareto set.** Compare MAE, SSIM, edge similarity, primitives, and
+   bytes together. A candidate is dominated when another is at least as good on
+   every metric and better on one. Choose among the remaining trade-offs for
+   the use case; the combined loss is a ranking aid, not a substitute for
+   inspecting the component metrics.
+7. **Guard shared algorithm changes with the golden suite.** A per-image SVG
+   may use explicit settings tuned for that image. Do not change crate-wide
+   defaults based on one logo; check the golden suite and record any deliberate
+   baseline changes.
+
+## 28.2 Treat Region Filtering as a Quality Parameter
+
+`min-area` often changes reconstruction more than curve tolerance. Lowering it
+can preserve anti-aliased edge fragments and small details, while multiplying
+the number of regions and paths. Sweep values around the current setting,
+including `0` or `1` when full detail is requested, and measure the cost. Never
+infer the best value from the name of a detail preset alone.
+
+Likewise, test color counts around a promising value rather than assuming that
+more colors improve the result. Median-cut splits and nearest-swatch assignment
+are discrete; an intermediate count can outperform both a smaller and a larger
+palette.
+
+## 28.3 Record Reproducible Commands
+
+For a shipped example, record the source image, exact tracing flags, renderer,
+and report. Keep its settings local to that artifact. A report that says only
+“tolerance 0.8” is incomplete if color count, detail, and minimum area also
+affect the output.
+
+### Example: VietinBank SVG Variants
+
+These measurements are for the 500×129
+`examples/images/vietinbank.png`, rendered by the eval harness with resvg. They
+illustrate three different objectives, not a universal default. The monochrome
+variant cannot reproduce the source palette, so compare its structural scores
+and complexity as well as its higher pixel error.
+
+| Output                | Explicit settings                                                                        |    MAE |   SSIM |   Edge | Primitives | SVG bytes |
+| --------------------- | ---------------------------------------------------------------------------------------- | -----: | -----: | -----: | ---------: | --------: |
+| `vietinbank.svg`      | `--colors 6 --detail full --min-area 4 --simplify-tolerance 0.97 --bezier-tolerance 0.1` | 0.650% | 0.9824 | 0.9891 |        605 |    11,313 |
+| `vietinbank-bold.svg` | `--colors 5 --detail bold --simplify-tolerance 1.4`                                      | 1.085% | 0.9570 | 0.9796 |        161 |     2,390 |
+| `vietinbank-bw.svg`   | `--colors 2 --threshold 111 --detail full`                                               | 9.333% | 0.8085 | 0.9645 |        212 |     2,845 |
+
+Compared with the previous measured examples, the full-color variant reduced
+MAE from 0.737% to 0.650%, primitives from 827 to 605, and SVG size from 13,938
+to 11,313 bytes. The bold variant reduced MAE from 1.096% to 1.085% with one
+additional primitive. For the monochrome variant, threshold 111 gave the best
+pixel and structural scores in the narrow 106–112 sweep; threshold 108 used
+four fewer primitives with nearly the same MAE. That is a real trade-off, so
+retain the chosen threshold with its reason instead of presenting it as an
+absolute optimum.
+
+The full-color result has a nearby Pareto alternative: lowering `min-area` to
+3 scores 0.639% MAE and 0.9827 SSIM, with 725 primitives and a 13,521-byte SVG.
+The recorded `min-area 4` result gives up 0.011 percentage points of MAE and
+0.0003 SSIM while saving 120 primitives and 2,208 bytes. Keep the more compact
+point for the example; choose the lower-area point when the extra fidelity is
+worth the size.
+
+The sweeps also exposed interactions that single-parameter tuning missed:
+with 6 colors, lowering the minimum area and tightening Bézier tolerance
+improved the full-color result. Below a 0.2 px Bézier tolerance, the score
+stopped changing for this candidate, so a still tighter fit was unnecessary.
+
+Reproduce a row by passing its flags to both the converter and evaluator. For
+example:
+
+```bash
+cargo run --release -- \
+  --colors 6 --detail full --min-area 4 \
+  --simplify-tolerance 0.97 --bezier-tolerance 0.1 \
+  ../../examples/images/vietinbank.png ../../examples/svg/vietinbank.svg
+
+cargo run --release --features eval -- \
+  --colors 6 --detail full --min-area 4 \
+  --simplify-tolerance 0.97 --bezier-tolerance 0.1 \
+  eval ../../examples/images/vietinbank.png
+```

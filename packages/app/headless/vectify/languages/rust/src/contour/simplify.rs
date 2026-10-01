@@ -14,10 +14,10 @@ pub fn simplify_closed(points: &[Point], tolerance: f64) -> Vec<Point> {
     let (first, second) = farthest_pair(points);
     let mut left = simplify_open(&points[first..=second], tolerance);
     let mut right = points[second..].to_vec();
-    right.extend(points[..first].iter().copied());
+    right.extend(points[..=first].iter().copied());
+    let mut right = simplify_open(&right, tolerance);
+    right.remove(0);
     right.pop();
-    let right = simplify_open(&right, tolerance);
-    left.pop();
     left.extend(right);
     left
 }
@@ -136,5 +136,29 @@ mod tests {
         let simplified = simplify_closed(&circle, 2.0);
         assert!(simplified.len() < circle.len());
         assert!(simplified.len() >= 3);
+    }
+
+    #[test]
+    fn a_tight_closed_loop_keeps_its_boundary_area() {
+        let points = vec![
+            Point::new(0.0, 0.0),
+            Point::new(4.0, 0.0),
+            Point::new(5.0, 2.0),
+            Point::new(4.0, 5.0),
+            Point::new(1.0, 6.0),
+            Point::new(-1.0, 3.0),
+        ];
+
+        let simplified = simplify_closed(&points, 0.1);
+
+        assert_eq!(polygon_area(&simplified), polygon_area(&points));
+    }
+
+    fn polygon_area(points: &[Point]) -> f64 {
+        let pairs = points
+            .iter()
+            .zip(points.iter().cycle().skip(1))
+            .take(points.len());
+        pairs.map(|(a, b)| a.x * b.y - b.x * a.y).sum::<f64>() / 2.0
     }
 }
