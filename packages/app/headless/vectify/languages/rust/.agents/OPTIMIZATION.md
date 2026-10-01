@@ -1215,3 +1215,35 @@ cargo run --release --features eval -- \
   --simplify-tolerance 0.97 --bezier-tolerance 0.1 \
   eval ../../examples/images/vietinbank.png
 ```
+
+### Example: HSBC with Transparent Artwork
+
+`examples/optimization/original/hsbc.svg` contains both transparent canvas and
+an opaque white shape inside the mark. Rendering it onto white before tracing
+merges those two meanings. Render with alpha preserved, then choose a near-white
+backdrop key that is distinct from the opaque white fill. Inspect the palette
+with `vectify info` and set `background-index` to the key's palette index so
+only the canvas is omitted from the output SVG.
+
+At 4× scale the PNG is 1569×340. With a `#f7f7f7` key, the 7-color palette puts
+the key at index 1 and retains white, red, and black artwork. The measured
+candidate is 0.428% MAE, 0.9779 SSIM, 0.9916 edge similarity, 195 primitives,
+and 3,009 SVG bytes. The metrics compare against the source composited onto the
+same `#f7f7f7` key; edge colors therefore describe that backdrop.
+
+```bash
+rsvg-convert --zoom 4 \
+  --output ../../examples/optimization/png/hsbc.png \
+  ../../examples/optimization/original/hsbc.svg
+
+cargo run --release -- \
+  --colors 7 --detail full --background-index 1 --backdrop '#f7f7f7' \
+  --min-area 384 --simplify-tolerance 1.2 --bezier-tolerance 0.75 \
+  ../../examples/optimization/png/hsbc.png \
+  ../../examples/optimization/svg/hsbc.svg
+
+cargo run --release --features eval -- \
+  --colors 7 --detail full --background-index 1 --backdrop '#f7f7f7' \
+  --min-area 384 --simplify-tolerance 1.2 --bezier-tolerance 0.75 \
+  eval ../../examples/optimization/png/hsbc.png
+```

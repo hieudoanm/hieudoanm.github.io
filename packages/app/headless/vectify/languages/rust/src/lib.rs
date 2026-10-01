@@ -31,6 +31,7 @@ pub mod contour;
 pub mod core;
 #[cfg(feature = "eval")]
 pub mod eval;
+pub mod mcp;
 pub mod pipeline;
 pub mod preprocess;
 pub mod segment;

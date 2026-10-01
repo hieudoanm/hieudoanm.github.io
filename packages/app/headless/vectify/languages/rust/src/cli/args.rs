@@ -94,6 +94,11 @@ pub struct Cli {
 
 #[derive(Debug, Subcommand)]
 pub enum Command {
+    /// Serve raster-to-SVG tracing over the Model Context Protocol on stdio.
+    Mcp {
+        #[command(subcommand)]
+        command: McpCommand,
+    },
     /// Print image and palette information without tracing.
     Info {
         /// Image to inspect (PNG or JPEG).
@@ -174,6 +179,12 @@ pub enum Command {
     },
 }
 
+#[derive(Debug, Subcommand)]
+pub enum McpCommand {
+    /// Start the MCP server using newline-delimited JSON-RPC on stdin/stdout.
+    Serve,
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -235,6 +246,17 @@ mod tests {
             panic!("expected the info subcommand");
         };
         assert_eq!(input.to_str(), Some("logo.png"));
+    }
+
+    #[test]
+    fn parses_mcp_serve_command() {
+        let cli = Cli::try_parse_from(["vectify", "mcp", "serve"]).expect("valid");
+        assert!(matches!(
+            cli.command,
+            Some(Command::Mcp {
+                command: McpCommand::Serve
+            })
+        ));
     }
 
     #[test]

@@ -31,6 +31,7 @@ vectify photo.jpg out.svg --threshold 140    # binary mode
 vectify logo.png logo.svg --detail bold      # keep only the largest shapes
 vectify logo.png logo.svg --debug-dir ./trace
 vectify info logo.png                        # palette, no tracing
+vectify mcp serve                            # MCP tools over stdio
 ```
 
 Omit the output path to print SVG to stdout, which is what makes `vectify`
@@ -107,6 +108,15 @@ vectify serve --bind 0.0.0.0:8080
 
 Handlers only decode, apply per-request overrides, and call the same `trace`
 the CLI uses, so the two surfaces cannot drift.
+
+## MCP server
+
+`vectify mcp serve` speaks newline-delimited JSON-RPC over stdin/stdout and
+advertises a `vectify_trace` tool. Supply PNG or JPEG bytes as base64 in the
+`image_base64` argument; optional tracing settings mirror the CLI flags. The
+tool returns the SVG and trace statistics as text. No filesystem paths are
+accepted, so an MCP client only grants access to image bytes it explicitly
+provides.
 
 ## Library
 

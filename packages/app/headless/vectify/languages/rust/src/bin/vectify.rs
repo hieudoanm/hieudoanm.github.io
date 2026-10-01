@@ -40,6 +40,12 @@ fn run(cli: &Cli) -> Result<bool> {
             serve(bind, TracingArgs::from_cli(cli))?;
             true
         }
+        Some(Command::Mcp {
+            command: vectify::cli::McpCommand::Serve,
+        }) => {
+            vectify::mcp::serve_stdio()?;
+            true
+        }
         Some(Command::Completion { shell }) => {
             completion(*shell)?;
             true

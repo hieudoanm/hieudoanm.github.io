@@ -11,4 +11,4 @@ pub mod measure;
 #[cfg(feature = "eval")]
 pub mod sweep;
 
-pub use args::{Cli, Command, Detail};
+pub use args::{Cli, Command, Detail, McpCommand};
