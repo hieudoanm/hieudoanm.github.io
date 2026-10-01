@@ -38,7 +38,7 @@
 
 ---
 
-### Headless (5)
+### Headless (6)
 
 | No  | Platform | Category        | Name           | Open                        | Releases                            |
 | --- | -------- | --------------- | -------------- | --------------------------- | ----------------------------------- |
@@ -47,20 +47,21 @@
 | 6   | Headless | Developer Tools | J.A.C.K.       | [Open][open-jack]           | [Releases][releases-jack]           |
 | 7   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
 | 8   | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
+| 9   | Headless | Developer Tools | Vectify        | [Open][open-vectify]        | [Releases][releases-vectify]        |
 
 ---
 
-### Hybrid (28)
+### Hybrid (27)
 
 #### Developer Tools (5)
 
 | No  | Platform | Category        | Name        | Open                     | Releases                         |
 | --- | -------- | --------------- | ----------- | ------------------------ | -------------------------------- |
-| 9   | Hybrid   | Developer Tools | API         | [Open][open-api]         | [Releases][releases-api]         |
-| 10  | Hybrid   | Developer Tools | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
-| 11  | Hybrid   | Developer Tools | Code        | [Open][open-code]        | [Releases][releases-code]        |
-| 12  | Hybrid   | Developer Tools | Database    | [Open][open-database]    | [Releases][releases-database]    |
-| 13  | Hybrid   | Developer Tools | Diagram     | [Open][open-diagram]     | [Releases][releases-diagram]     |
+| 10  | Hybrid   | Developer Tools | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 11  | Hybrid   | Developer Tools | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 12  | Hybrid   | Developer Tools | Code        | [Open][open-code]        | [Releases][releases-code]        |
+| 13  | Hybrid   | Developer Tools | Database    | [Open][open-database]    | [Releases][releases-database]    |
+| 14  | Hybrid   | Developer Tools | Diagram     | [Open][open-diagram]     | [Releases][releases-diagram]     |
 
 ---
 
@@ -68,17 +69,16 @@
 
 | No  | Platform | Category  | Name  | Open               | Releases                   |
 | --- | -------- | --------- | ----- | ------------------ | -------------------------- |
-| 14  | Hybrid   | Education | DOI   | [Open][open-doi]   | [Releases][releases-doi]   |
-| 15  | Hybrid   | Education | Lingo | [Open][open-lingo] | [Releases][releases-lingo] |
+| 15  | Hybrid   | Education | DOI   | [Open][open-doi]   | [Releases][releases-doi]   |
+| 16  | Hybrid   | Education | Lingo | [Open][open-lingo] | [Releases][releases-lingo] |
 
 ---
 
-#### Finance (2)
+#### Finance (1)
 
-| No  | Platform | Category | Name   | Open                | Releases                    |
-| --- | -------- | -------- | ------ | ------------------- | --------------------------- |
-| 16  | Hybrid   | Finance  | Tax    | [Open][open-tax]    | [Releases][releases-tax]    |
-| 17  | Hybrid   | Finance  | Wallet | [Open][open-wallet] | [Releases][releases-wallet] |
+| No  | Platform | Category | Name | Open             | Releases                 |
+| --- | -------- | -------- | ---- | ---------------- | ------------------------ |
+| 17  | Hybrid   | Finance  | Tax  | [Open][open-tax] | [Releases][releases-tax] |
 
 ---
 
@@ -98,7 +98,7 @@
 
 ---
 
-#### Graphics & Design (3)
+#### Graphics & Design (4)
 
 | No  | Platform | Category          | Name    | Open                 | Releases                     |
 | --- | -------- | ----------------- | ------- | -------------------- | ---------------------------- |
@@ -109,7 +109,7 @@
 
 ---
 
-#### Medical (3)
+#### Medical (2)
 
 | No  | Platform | Category | Name     | Open                  | Releases                      |
 | --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
@@ -177,7 +177,6 @@
 [open-lingo]: https://hieudoanm.github.io/open/lingo/
 [open-doi]: https://hieudoanm.github.io/open/doi/
 [open-tax]: https://hieudoanm.github.io/open/tax/
-[open-wallet]: https://hieudoanm.github.io/open/wallet/
 [open-foody]: https://hieudoanm.github.io/open/foody/
 [open-memory]: https://hieudoanm.github.io/open/memory/
 [open-photo]: https://hieudoanm.github.io/open/photo/
@@ -202,6 +201,7 @@
 [open-macosx]: https://hieudoanm.github.io/open/macosx/
 [open-kevin]: https://hieudoanm.github.io/open/kevin/
 [open-landify]: https://hieudoanm.github.io/open/landify/
+[open-vectify]: https://hieudoanm.github.io/open/vectify/
 
 <!-- Releases -->
 
@@ -214,7 +214,6 @@
 [releases-lingo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest
 [releases-doi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-doi-latest
 [releases-tax]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-finance-tax-latest
-[releases-wallet]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-finance-wallet-latest
 [releases-foody]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest
 [releases-memory]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-memory-latest
 [releases-photo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-photo-latest
@@ -241,3 +240,4 @@
 [releases-kevin]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
 [releases-landify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest
 [releases-browserx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-browserx-latest
+[releases-vectify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-vectify-latest

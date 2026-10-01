@@ -2,9 +2,13 @@
 
 import { type FC, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { FiUser, FiEye, FiEyeOff } from 'react-icons/fi';
+import { useWalletSession } from '@/hooks/wallet/useWalletSession';
 
 const SignUpPage: FC = () => {
+  const router = useRouter();
+  const { signInWallet } = useWalletSession();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,6 +29,8 @@ const SignUpPage: FC = () => {
     }
     setError('');
     setSubmitted(true);
+    const next = signInWallet();
+    if (next) router.push(next);
   };
 
   return (

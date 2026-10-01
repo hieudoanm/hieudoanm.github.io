@@ -1,7 +1,8 @@
 # Roadmap
 
 These phases track the **POS** app (`/pos`). Menu (`/menu`) and Chat (`/chat`)
-are feature-complete demos and are not tracked here.
+are feature-complete demos; Wallet (`/wallet`) is a vendored UI showcase and is
+not tracked here.
 
 ## Phase 1 — Core
 

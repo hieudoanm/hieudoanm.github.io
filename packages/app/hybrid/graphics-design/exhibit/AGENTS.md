@@ -25,6 +25,12 @@ Reference docs live in `docs/`:
 - No global/singleton state — pure functions in `lib/` accept inputs and return
   outputs
 - `console.*` stripped in production via `compiler.removeConsole`
+- Vendored apps live in a namespace (`wallet/`) under `components`, `data`,
+  `hooks`, `lib`, `providers`, and `types`; nothing crosses back into the shell
+- Theming belongs to the shared shell — vendored apps must not write
+  `data-theme` or their own theme key
+- Client-only session state goes through `lib/<app>/session.ts` so the shared
+  `/sign-in` page can establish it
 
 ## Project Structure
 
@@ -34,6 +40,8 @@ src/
 │   ├── page.tsx          # Showcase home page
 │   ├── pos/              # POS application (migrated from business/pos)
 │   │   └── page.tsx
+│   ├── (app)/
+│   │   └── wallet/       # Wallet application (migrated from finance/wallet)
 │   ├── layout.tsx        # Root layout with theme
 │   ├── loading.tsx
 │   ├── error.tsx
@@ -65,13 +73,15 @@ src/
 
 ## Applications Showcased
 
-| App          | Category        | Status      | Path     |
-| ------------ | --------------- | ----------- | -------- |
-| POS          | Business        | Ready       | `/pos`   |
-| Menu         | Business        | Coming Soon | `/menu`  |
-| Photo Editor | Graphics Design | Ready       | External |
-| SVG Tools    | Graphics Design | Ready       | External |
-| Video Tools  | Graphics Design | In Progress | External |
+| App          | Category        | Status      | Path      |
+| ------------ | --------------- | ----------- | --------- |
+| POS          | Business        | Ready       | `/pos`    |
+| Menu         | Business        | Coming Soon | `/menu`   |
+| Wallet       | Finance         | Ready       | `/wallet` |
+| Chat         | Social          | Ready       | `/chat`   |
+| Photo Editor | Graphics Design | Ready       | External  |
+| SVG Tools    | Graphics Design | Ready       | External  |
+| Video Tools  | Graphics Design | In Progress | External  |
 
 ## Development
 

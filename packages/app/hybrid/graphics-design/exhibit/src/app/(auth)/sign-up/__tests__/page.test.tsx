@@ -1,7 +1,19 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import SignUpPage from '../page';
 
+const push = jest.fn();
+
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({ push }),
+}));
+
 describe('SignUpPage', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    localStorage.clear();
+    window.history.replaceState({}, '', '/sign-up');
+  });
+
   it('renders the sign-up form', () => {
     render(<SignUpPage />);
     expect(
@@ -73,5 +85,24 @@ describe('SignUpPage', () => {
     expect(
       screen.getByText('Account created successfully.')
     ).toBeInTheDocument();
+  });
+
+  it('starts a wallet session and redirects into the wallet app', () => {
+    render(<SignUpPage />);
+    fireEvent.change(screen.getByLabelText('Full name'), {
+      target: { value: 'Ada Lovelace' },
+    });
+    fireEvent.change(screen.getByLabelText('Email'), {
+      target: { value: 'you@example.com' },
+    });
+    fireEvent.change(screen.getByLabelText('Password'), {
+      target: { value: 'secret' },
+    });
+    fireEvent.change(screen.getByLabelText('Confirm password'), {
+      target: { value: 'secret' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Create account' }));
+    expect(localStorage.getItem('wallet-auth')).toBe('true');
+    expect(push).toHaveBeenCalledWith('/wallet');
   });
 });

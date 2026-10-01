@@ -1,8 +1,8 @@
 # Contributing
 
 Thanks for contributing to **Exibit**, a hybrid app that ships as a web app
-(browser), desktop app (Tauri), and mobile app (Tauri Mobile). It showcases
-three demo applications — POS, Menu, and Chat — behind one showcase shell.
+(browser), desktop app (Tauri), and mobile app (Tauri Mobile). It showcases four
+demo applications — POS, Menu, Chat, and Wallet — behind one showcase shell.
 
 ## Getting Started
 
@@ -109,6 +109,9 @@ be duplicated into `tsconfig.json` and `jest.config.ts`.
    a template and keep route state in a colocated `use*` hook.
 4. Share app-agnostic UI through `components/shared/templates`, never by
    importing across apps (`pos` must not import from `chat`).
+5. Vendored apps follow the same shape for `data`, `hooks`, `lib`, `providers`,
+   `types`, and `test-helpers` (`wallet/` in each). They keep their own
+   namespace and never write `data-theme` — the shell owns theming.
 
 ## Testing Conventions
 

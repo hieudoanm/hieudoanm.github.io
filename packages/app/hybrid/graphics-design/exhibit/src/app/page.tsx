@@ -10,6 +10,7 @@ import {
   FiStar,
   FiSearch,
   FiMessageSquare,
+  FiCreditCard,
 } from 'react-icons/fi';
 
 interface App {
@@ -41,6 +42,16 @@ const apps: App[] = [
     href: '/menu',
     status: 'coming-soon',
     category: 'Business',
+  },
+  {
+    id: 'wallet',
+    name: 'Wallet',
+    description:
+      'Personal banking with accounts, cards, payments, budgets, and reports',
+    icon: <FiCreditCard className="size-8" />,
+    href: '/wallet',
+    status: 'ready',
+    category: 'Finance',
   },
   {
     id: 'chat',

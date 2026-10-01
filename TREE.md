@@ -14679,505 +14679,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/finance/tax/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/finance/tax/tsconfig.json)
 │   │   │   │   ├── wallet/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/finance/wallet/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/finance/wallet/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/finance/wallet/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/finance/wallet/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/finance/wallet/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/finance/wallet/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [auth-guard.spec.ts](./packages/app/hybrid/finance/wallet/e2e/auth-guard.spec.ts)
-│   │   │   │   │   │   ├── [auth.spec.ts](./packages/app/hybrid/finance/wallet/e2e/auth.spec.ts)
-│   │   │   │   │   │   ├── [budget-notifications.spec.ts](./packages/app/hybrid/finance/wallet/e2e/budget-notifications.spec.ts)
-│   │   │   │   │   │   ├── [cards.spec.ts](./packages/app/hybrid/finance/wallet/e2e/cards.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/finance/wallet/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [exchange.spec.ts](./packages/app/hybrid/finance/wallet/e2e/exchange.spec.ts)
-│   │   │   │   │   │   ├── [helpers.ts](./packages/app/hybrid/finance/wallet/e2e/helpers.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/finance/wallet/e2e/home.spec.ts)
-│   │   │   │   │   │   ├── [index.spec.ts](./packages/app/hybrid/finance/wallet/e2e/index.spec.ts)
-│   │   │   │   │   │   ├── [navigation.spec.ts](./packages/app/hybrid/finance/wallet/e2e/navigation.spec.ts)
-│   │   │   │   │   │   ├── [pages.spec.ts](./packages/app/hybrid/finance/wallet/e2e/pages.spec.ts)
-│   │   │   │   │   │   ├── [pay.spec.ts](./packages/app/hybrid/finance/wallet/e2e/pay.spec.ts)
-│   │   │   │   │   │   ├── [profile.spec.ts](./packages/app/hybrid/finance/wallet/e2e/profile.spec.ts)
-│   │   │   │   │   │   ├── [transactions.spec.ts](./packages/app/hybrid/finance/wallet/e2e/transactions.spec.ts)
-│   │   │   │   │   │   ├── [transfer.spec.ts](./packages/app/hybrid/finance/wallet/e2e/transfer.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/finance/wallet/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/finance/wallet/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/finance/wallet/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/finance/wallet/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/finance/wallet/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/finance/wallet/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/finance/wallet/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/finance/wallet/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/finance/wallet/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/finance/wallet/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/finance/wallet/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/finance/wallet/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/finance/wallet/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/finance/wallet/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/finance/wallet/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/finance/wallet/public/icons/icon.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/finance/wallet/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/finance/wallet/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/finance/wallet/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/finance/wallet/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/finance/wallet/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/finance/wallet/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (dashboard)/
-│   │   │   │   │   │   │   │   ├── (banking)/
-│   │   │   │   │   │   │   │   │   ├── card-rewards/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/card-rewards/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/card-rewards/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── fixed-deposits/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/fixed-deposits/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/fixed-deposits/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── insurance/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/insurance/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/insurance/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── recurring-deposits/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/recurring-deposits/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/recurring-deposits/page.tsx)
-│   │   │   │   │   │   │   │   │   └── savings-goals/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/savings-goals/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(banking)/savings-goals/page.tsx)
-│   │   │   │   │   │   │   │   ├── (budgeting)/
-│   │   │   │   │   │   │   │   │   ├── bills/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/bills/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/bills/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── budget/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/budget/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/budget/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── currency-alerts/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/currency-alerts/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/currency-alerts/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── rates/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/rates/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/rates/page.tsx)
-│   │   │   │   │   │   │   │   │   └── recurring-transfers/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/recurring-transfers/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(budgeting)/recurring-transfers/page.tsx)
-│   │   │   │   │   │   │   │   ├── (financial)/
-│   │   │   │   │   │   │   │   │   ├── accounts/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/accounts/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── checking/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/accounts/checking/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/accounts/checking/page.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── credit/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/accounts/credit/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/accounts/credit/page.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── savings/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/accounts/savings/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/accounts/savings/page.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/accounts/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── exchange/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/exchange/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/exchange/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── reports/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/reports/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/reports/page.tsx)
-│   │   │   │   │   │   │   │   │   └── transactions/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/transactions/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(financial)/transactions/page.tsx)
-│   │   │   │   │   │   │   │   ├── (payments)/
-│   │   │   │   │   │   │   │   │   ├── cards/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/cards/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/cards/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── contacts/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/contacts/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/contacts/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── loans/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/loans/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/loans/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── pay/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/pay/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/pay/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── payment-requests/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/payment-requests/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/payment-requests/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── split-bill/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/split-bill/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/split-bill/page.tsx)
-│   │   │   │   │   │   │   │   │   └── transfer/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/transfer/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/(payments)/transfer/page.tsx)
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(dashboard)/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── (notifications)/
-│   │   │   │   │   │   │   │   └── notifications/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(notifications)/notifications/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(notifications)/notifications/page.tsx)
-│   │   │   │   │   │   │   ├── (profile)/
-│   │   │   │   │   │   │   │   └── settings/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(profile)/settings/page.tsx)
-│   │   │   │   │   │   │   ├── (settings)/
-│   │   │   │   │   │   │   │   ├── help-support/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(settings)/help-support/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(settings)/help-support/page.tsx)
-│   │   │   │   │   │   │   │   ├── privacy-policy/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(settings)/privacy-policy/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(settings)/privacy-policy/page.tsx)
-│   │   │   │   │   │   │   │   └── terms-of-service/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/wallet/src/app/(settings)/terms-of-service/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/wallet/src/app/(settings)/terms-of-service/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [cards.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/cards.test.tsx)
-│   │   │   │   │   │   │   │   ├── [dashboard.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/dashboard.test.tsx)
-│   │   │   │   │   │   │   │   ├── [default.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/default.test.tsx)
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/finance/wallet/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   ├── [transfer.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/transfer.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/finance/wallet/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/finance/wallet/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/finance/wallet/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/finance/wallet/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/finance/wallet/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/finance/wallet/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/finance/wallet/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/finance/wallet/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/finance/wallet/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/finance/wallet/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/finance/wallet/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/finance/wallet/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [RouteGuard.test.tsx](./packages/app/hybrid/finance/wallet/src/components/__tests__/RouteGuard.test.tsx)
-│   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AccountCard.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/AccountCard.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [AccountDetail.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/AccountDetail.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BalanceCard.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/BalanceCard.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BillItem.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/BillItem.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BudgetCategoryCard.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/BudgetCategoryCard.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CardActions.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/CardActions.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CardDetail.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/CardDetail.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CardItem.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/CardItem.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CardSpending.branches.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/CardSpending.branches.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CardSpending.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/CardSpending.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [NotificationItem.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/NotificationItem.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [RateItem.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/RateItem.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Skeleton.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/Skeleton.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SpendingChart.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/SpendingChart.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SwipeableTransactionItem.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/SwipeableTransactionItem.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [TransactionItem.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/TransactionItem.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [UserCard.test.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/__tests__/UserCard.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AccountCard.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/AccountCard.tsx)
-│   │   │   │   │   │   │   │   ├── [AccountDetail.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/AccountDetail.tsx)
-│   │   │   │   │   │   │   │   ├── [BalanceCard.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/BalanceCard.tsx)
-│   │   │   │   │   │   │   │   ├── [BillItem.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/BillItem.tsx)
-│   │   │   │   │   │   │   │   ├── [BudgetCategoryCard.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/BudgetCategoryCard.tsx)
-│   │   │   │   │   │   │   │   ├── [CardActions.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/CardActions.tsx)
-│   │   │   │   │   │   │   │   ├── [CardDetail.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/CardDetail.tsx)
-│   │   │   │   │   │   │   │   ├── [CardItem.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/CardItem.tsx)
-│   │   │   │   │   │   │   │   ├── [CardSpending.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/CardSpending.tsx)
-│   │   │   │   │   │   │   │   ├── [NotificationItem.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/NotificationItem.tsx)
-│   │   │   │   │   │   │   │   ├── [RateItem.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/RateItem.tsx)
-│   │   │   │   │   │   │   │   ├── [Skeleton.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/Skeleton.tsx)
-│   │   │   │   │   │   │   │   ├── [SpendingChart.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/SpendingChart.tsx)
-│   │   │   │   │   │   │   │   ├── [SwipeableTransactionItem.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/SwipeableTransactionItem.tsx)
-│   │   │   │   │   │   │   │   ├── [TransactionItem.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/TransactionItem.tsx)
-│   │   │   │   │   │   │   │   ├── [UserCard.tsx](./packages/app/hybrid/finance/wallet/src/components/atoms/UserCard.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/finance/wallet/src/components/atoms/index.ts)
-│   │   │   │   │   │   │   ├── molecules/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [BudgetSummary.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/BudgetSummary.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CurrencyConverter.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/CurrencyConverter.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [QRCodeActions.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/QRCodeActions.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [QRCodeModal.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/QRCodeModal.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [QuickActions.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/QuickActions.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [QuickPayForm.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/QuickPayForm.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [RateList.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/RateList.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ThemePicker.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/ThemePicker.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [TransactionFilters.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/TransactionFilters.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [TransferConfirmation.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/TransferConfirmation.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [TransferForm.test.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/__tests__/TransferForm.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AddAccountModal.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/AddAccountModal.tsx)
-│   │   │   │   │   │   │   │   ├── [AddBillModal.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/AddBillModal.tsx)
-│   │   │   │   │   │   │   │   ├── [BudgetSummary.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/BudgetSummary.tsx)
-│   │   │   │   │   │   │   │   ├── [ContactList.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/ContactList.tsx)
-│   │   │   │   │   │   │   │   ├── [CurrencyAlerts.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/CurrencyAlerts.tsx)
-│   │   │   │   │   │   │   │   ├── [CurrencyConverter.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/CurrencyConverter.tsx)
-│   │   │   │   │   │   │   │   ├── [QRCodeActions.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/QRCodeActions.tsx)
-│   │   │   │   │   │   │   │   ├── [QRCodeModal.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/QRCodeModal.tsx)
-│   │   │   │   │   │   │   │   ├── [QuickActions.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/QuickActions.tsx)
-│   │   │   │   │   │   │   │   ├── [QuickPayForm.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/QuickPayForm.tsx)
-│   │   │   │   │   │   │   │   ├── [RateList.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/RateList.tsx)
-│   │   │   │   │   │   │   │   ├── [SplitBill.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/SplitBill.tsx)
-│   │   │   │   │   │   │   │   ├── [ThemePicker.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/ThemePicker.tsx)
-│   │   │   │   │   │   │   │   ├── [TransactionFilters.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/TransactionFilters.tsx)
-│   │   │   │   │   │   │   │   ├── [TransferConfirmation.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/TransferConfirmation.tsx)
-│   │   │   │   │   │   │   │   ├── [TransferForm.tsx](./packages/app/hybrid/finance/wallet/src/components/molecules/TransferForm.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/finance/wallet/src/components/molecules/index.ts)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [BottomNav.test.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/__tests__/BottomNav.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Header.test.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/__tests__/Header.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SettingsSection.test.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/__tests__/SettingsSection.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [Sidebar.test.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/__tests__/Sidebar.test.tsx)
-│   │   │   │   │   │   │   │   ├── [BottomNav.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/BottomNav.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   ├── [ProfileForm.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/ProfileForm.tsx)
-│   │   │   │   │   │   │   │   ├── [SettingsSection.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/SettingsSection.tsx)
-│   │   │   │   │   │   │   │   ├── [Sidebar.tsx](./packages/app/hybrid/finance/wallet/src/components/organisms/Sidebar.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/finance/wallet/src/components/organisms/index.ts)
-│   │   │   │   │   │   │   ├── templates/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [AuthTemplate.test.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/__tests__/AuthTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DashboardTemplate.test.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/__tests__/DashboardTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AboutTemplate.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [AuthTemplate.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/AuthTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [DashboardTemplate.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/DashboardTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [DownloadsTemplate.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [ErrorTemplate.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [VersionTemplate.tsx](./packages/app/hybrid/finance/wallet/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/finance/wallet/src/components/templates/index.ts)
-│   │   │   │   │   │   │   ├── [OfflineBanner.tsx](./packages/app/hybrid/finance/wallet/src/components/OfflineBanner.tsx)
-│   │   │   │   │   │   │   ├── [PageTransition.tsx](./packages/app/hybrid/finance/wallet/src/components/PageTransition.tsx)
-│   │   │   │   │   │   │   ├── [RouteGuard.tsx](./packages/app/hybrid/finance/wallet/src/components/RouteGuard.tsx)
-│   │   │   │   │   │   │   └── [SkipToContent.tsx](./packages/app/hybrid/finance/wallet/src/components/SkipToContent.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/finance/wallet/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/finance/wallet/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/finance/wallet/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── [mock.ts](./packages/app/hybrid/finance/wallet/src/data/mock.ts)
-│   │   │   │   │   │   │   └── [nav.ts](./packages/app/hybrid/finance/wallet/src/data/nav.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [useEntitySync.test.tsx](./packages/app/hybrid/finance/wallet/src/hooks/__tests__/useEntitySync.test.tsx)
-│   │   │   │   │   │   │   │   ├── [useHaptic.test.ts](./packages/app/hybrid/finance/wallet/src/hooks/__tests__/useHaptic.test.ts)
-│   │   │   │   │   │   │   │   ├── [useMediaQuery.test.ts](./packages/app/hybrid/finance/wallet/src/hooks/__tests__/useMediaQuery.test.ts)
-│   │   │   │   │   │   │   │   ├── [usePullToRefresh.test.tsx](./packages/app/hybrid/finance/wallet/src/hooks/__tests__/usePullToRefresh.test.tsx)
-│   │   │   │   │   │   │   │   ├── [useSWRegister.test.ts](./packages/app/hybrid/finance/wallet/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   │   │   │   │   │   └── [useTheme.test.ts](./packages/app/hybrid/finance/wallet/src/hooks/__tests__/useTheme.test.ts)
-│   │   │   │   │   │   │   ├── [useEntitySync.ts](./packages/app/hybrid/finance/wallet/src/hooks/useEntitySync.ts)
-│   │   │   │   │   │   │   ├── [useHaptic.ts](./packages/app/hybrid/finance/wallet/src/hooks/useHaptic.ts)
-│   │   │   │   │   │   │   ├── [useMediaQuery.ts](./packages/app/hybrid/finance/wallet/src/hooks/useMediaQuery.ts)
-│   │   │   │   │   │   │   ├── [usePullToRefresh.ts](./packages/app/hybrid/finance/wallet/src/hooks/usePullToRefresh.ts)
-│   │   │   │   │   │   │   ├── [useSWRegister.ts](./packages/app/hybrid/finance/wallet/src/hooks/useSWRegister.ts)
-│   │   │   │   │   │   │   └── [useTheme.ts](./packages/app/hybrid/finance/wallet/src/hooks/useTheme.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/finance/wallet/src/lib/__tests__/db.test.ts)
-│   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/finance/wallet/src/lib/__tests__/seed.test.ts)
-│   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/finance/wallet/src/lib/db.ts)
-│   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/finance/wallet/src/lib/seed.ts)
-│   │   │   │   │   │   ├── providers/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [DataProvider.crud.test.tsx](./packages/app/hybrid/finance/wallet/src/providers/__tests__/DataProvider.crud.test.tsx)
-│   │   │   │   │   │   │   │   ├── [DataProvider.loading.test.tsx](./packages/app/hybrid/finance/wallet/src/providers/__tests__/DataProvider.loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/finance/wallet/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/finance/wallet/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   │   │   │   │   ├── auth/
-│   │   │   │   │   │   │   │   └── [AuthProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/auth/AuthProvider.tsx)
-│   │   │   │   │   │   │   ├── entities/
-│   │   │   │   │   │   │   │   ├── [AccountsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/AccountsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [BillsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/BillsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [BudgetProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/BudgetProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [CardsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/CardsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [ContactsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/ContactsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [CurrencyAlertsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/CurrencyAlertsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [CurrencyRatesProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/CurrencyRatesProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [FDsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/FDsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [GoalsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/GoalsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [InsuranceProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/InsuranceProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [LoansProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/LoansProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [NotificationsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/NotificationsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [PaymentRequestsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/PaymentRequestsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [RDsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/RDsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [RecurringTransfersProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/RecurringTransfersProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [RewardsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/RewardsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [TransactionsProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/TransactionsProvider.tsx)
-│   │   │   │   │   │   │   │   └── [UserProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/entities/UserProvider.tsx)
-│   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/DataProvider.tsx)
-│   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/finance/wallet/src/providers/Providers.tsx)
-│   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/SWProvider.tsx)
-│   │   │   │   │   │   │   └── [ToastProvider.tsx](./packages/app/hybrid/finance/wallet/src/providers/ToastProvider.tsx)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/finance/wallet/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/finance/wallet/src/styles/themes.css)
-│   │   │   │   │   │   ├── test-helpers/
-│   │   │   │   │   │   │   ├── [db-mock.ts](./packages/app/hybrid/finance/wallet/src/test-helpers/db-mock.ts)
-│   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/finance/wallet/src/test-helpers/index.ts)
-│   │   │   │   │   │   │   ├── [nav-mock.ts](./packages/app/hybrid/finance/wallet/src/test-helpers/nav-mock.ts)
-│   │   │   │   │   │   │   └── [render.tsx](./packages/app/hybrid/finance/wallet/src/test-helpers/render.tsx)
-│   │   │   │   │   │   ├── types/
-│   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/finance/wallet/src/types/index.ts)
-│   │   │   │   │   │   │   └── [theme.ts](./packages/app/hybrid/finance/wallet/src/types/theme.ts)
-│   │   │   │   │   │   └── utils/
-│   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │       │   ├── [export.test.ts](./packages/app/hybrid/finance/wallet/src/utils/__tests__/export.test.ts)
-│   │   │   │   │   │       │   ├── [format.test.ts](./packages/app/hybrid/finance/wallet/src/utils/__tests__/format.test.ts)
-│   │   │   │   │   │       │   └── [iconMap.test.ts](./packages/app/hybrid/finance/wallet/src/utils/__tests__/iconMap.test.ts)
-│   │   │   │   │   │       ├── [export.ts](./packages/app/hybrid/finance/wallet/src/utils/export.ts)
-│   │   │   │   │   │       ├── [format.ts](./packages/app/hybrid/finance/wallet/src/utils/format.ts)
-│   │   │   │   │   │       └── [iconMap.ts](./packages/app/hybrid/finance/wallet/src/utils/iconMap.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/finance/wallet/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── gen/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/finance/wallet/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/finance/wallet/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/finance/wallet/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/finance/wallet/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/finance/wallet/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/finance/wallet/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/finance/wallet/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/finance/wallet/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/finance/wallet/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/finance/wallet/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/finance/wallet/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/finance/wallet/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/finance/wallet/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/finance/wallet/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/finance/wallet/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/finance/wallet/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/finance/wallet/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/finance/wallet/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/finance/wallet/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/finance/wallet/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/finance/wallet/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/finance/wallet/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/finance/wallet/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/finance/wallet/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/finance/wallet/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/finance/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/finance/TREE.md)
 │   │   │   ├── food-drink/
@@ -16144,6 +15645,308 @@
 │   │   │   │   ├── [README.md](./packages/app/hybrid/games/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/games/TREE.md)
 │   │   │   ├── graphics-design/
+│   │   │   │   ├── exhibit/
+│   │   │   │   │   ├── e2e/
+│   │   │   │   │   │   └── wallet/
+│   │   │   │   │   │       ├── [auth-guard.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/auth-guard.spec.ts)
+│   │   │   │   │   │       ├── [cards.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/cards.spec.ts)
+│   │   │   │   │   │       ├── [exchange.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/exchange.spec.ts)
+│   │   │   │   │   │       ├── [helpers.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/helpers.ts)
+│   │   │   │   │   │       ├── [index.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/index.spec.ts)
+│   │   │   │   │   │       ├── [navigation.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/navigation.spec.ts)
+│   │   │   │   │   │       ├── [pay.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/pay.spec.ts)
+│   │   │   │   │   │       ├── [profile.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/profile.spec.ts)
+│   │   │   │   │   │       ├── [transactions.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/transactions.spec.ts)
+│   │   │   │   │   │       └── [transfer.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/transfer.spec.ts)
+│   │   │   │   │   └── src/
+│   │   │   │   │       ├── app/
+│   │   │   │   │       │   └── (app)/
+│   │   │   │   │       │       └── wallet/
+│   │   │   │   │       │           ├── __tests__/
+│   │   │   │   │       │           │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/__tests__/page.test.tsx)
+│   │   │   │   │       │           ├── accounts/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   ├── checking/
+│   │   │   │   │       │           │   │   ├── __tests__/
+│   │   │   │   │       │           │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/checking/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/checking/page.tsx)
+│   │   │   │   │       │           │   ├── credit/
+│   │   │   │   │       │           │   │   ├── __tests__/
+│   │   │   │   │       │           │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/credit/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/credit/page.tsx)
+│   │   │   │   │       │           │   ├── savings/
+│   │   │   │   │       │           │   │   ├── __tests__/
+│   │   │   │   │       │           │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/savings/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/savings/page.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/page.tsx)
+│   │   │   │   │       │           ├── bills/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/bills/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/bills/page.tsx)
+│   │   │   │   │       │           ├── budget/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/budget/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/budget/page.tsx)
+│   │   │   │   │       │           ├── card-rewards/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/card-rewards/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/card-rewards/page.tsx)
+│   │   │   │   │       │           ├── cards/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/cards/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/cards/page.tsx)
+│   │   │   │   │       │           ├── contacts/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/contacts/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/contacts/page.tsx)
+│   │   │   │   │       │           ├── currency-alerts/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/currency-alerts/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/currency-alerts/page.tsx)
+│   │   │   │   │       │           ├── exchange/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/exchange/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/exchange/page.tsx)
+│   │   │   │   │       │           ├── fixed-deposits/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/fixed-deposits/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/fixed-deposits/page.tsx)
+│   │   │   │   │       │           ├── help-support/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/help-support/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/help-support/page.tsx)
+│   │   │   │   │       │           ├── insurance/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/insurance/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/insurance/page.tsx)
+│   │   │   │   │       │           ├── loans/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loans/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loans/page.tsx)
+│   │   │   │   │       │           ├── notifications/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/notifications/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/notifications/page.tsx)
+│   │   │   │   │       │           ├── pay/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/pay/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/pay/page.tsx)
+│   │   │   │   │       │           ├── payment-requests/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/payment-requests/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/payment-requests/page.tsx)
+│   │   │   │   │       │           ├── privacy-policy/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/privacy-policy/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/privacy-policy/page.tsx)
+│   │   │   │   │       │           ├── profile/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/profile/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/profile/page.tsx)
+│   │   │   │   │       │           ├── rates/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/rates/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/rates/page.tsx)
+│   │   │   │   │       │           ├── recurring-deposits/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-deposits/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-deposits/page.tsx)
+│   │   │   │   │       │           ├── recurring-transfers/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-transfers/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-transfers/page.tsx)
+│   │   │   │   │       │           ├── reports/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/reports/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/reports/page.tsx)
+│   │   │   │   │       │           ├── savings-goals/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/savings-goals/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/savings-goals/page.tsx)
+│   │   │   │   │       │           ├── settings/
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/settings/page.tsx)
+│   │   │   │   │       │           ├── split-bill/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/split-bill/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/split-bill/page.tsx)
+│   │   │   │   │       │           ├── terms-of-service/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/terms-of-service/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/terms-of-service/page.tsx)
+│   │   │   │   │       │           ├── transactions/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transactions/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transactions/page.tsx)
+│   │   │   │   │       │           ├── transfer/
+│   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transfer/__tests__/page.test.tsx)
+│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transfer/page.tsx)
+│   │   │   │   │       │           ├── [layout.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/layout.tsx)
+│   │   │   │   │       │           ├── [loading.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loading.tsx)
+│   │   │   │   │       │           ├── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/page.tsx)
+│   │   │   │   │       │           └── [template.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/template.tsx)
+│   │   │   │   │       ├── components/
+│   │   │   │   │       │   ├── shared/
+│   │   │   │   │       │   │   ├── organisms/
+│   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │       │   │   │   │   └── [Header.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/__tests__/Header.test.tsx)
+│   │   │   │   │       │   │   │   └── [Header.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/Header.tsx)
+│   │   │   │   │       │   │   └── templates/
+│   │   │   │   │       │   │       ├── __tests__/
+│   │   │   │   │       │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/AboutTemplate.test.tsx)
+│   │   │   │   │       │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/DownloadsTemplate.test.tsx)
+│   │   │   │   │       │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/ErrorTemplate.test.tsx)
+│   │   │   │   │       │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/VersionTemplate.test.tsx)
+│   │   │   │   │       │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/AboutTemplate.tsx)
+│   │   │   │   │       │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/DownloadsTemplate.tsx)
+│   │   │   │   │       │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/ErrorTemplate.tsx)
+│   │   │   │   │       │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/VersionTemplate.tsx)
+│   │   │   │   │       │   └── wallet/
+│   │   │   │   │       │       ├── atoms/
+│   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │       │       │   │   ├── [AccountCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/AccountCard.test.tsx)
+│   │   │   │   │       │       │   │   ├── [AccountDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/AccountDetail.test.tsx)
+│   │   │   │   │       │       │   │   ├── [BalanceCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BalanceCard.test.tsx)
+│   │   │   │   │       │       │   │   ├── [BillItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BillItem.test.tsx)
+│   │   │   │   │       │       │   │   ├── [BudgetCategoryCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BudgetCategoryCard.test.tsx)
+│   │   │   │   │       │       │   │   ├── [CardActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardActions.test.tsx)
+│   │   │   │   │       │       │   │   ├── [CardDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardDetail.test.tsx)
+│   │   │   │   │       │       │   │   ├── [CardItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardItem.test.tsx)
+│   │   │   │   │       │       │   │   ├── [CardSpending.branches.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardSpending.branches.test.tsx)
+│   │   │   │   │       │       │   │   ├── [CardSpending.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardSpending.test.tsx)
+│   │   │   │   │       │       │   │   ├── [NotificationItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/NotificationItem.test.tsx)
+│   │   │   │   │       │       │   │   ├── [RateItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/RateItem.test.tsx)
+│   │   │   │   │       │       │   │   ├── [Skeleton.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/Skeleton.test.tsx)
+│   │   │   │   │       │       │   │   ├── [SpendingChart.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/SpendingChart.test.tsx)
+│   │   │   │   │       │       │   │   ├── [SwipeableTransactionItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/SwipeableTransactionItem.test.tsx)
+│   │   │   │   │       │       │   │   ├── [TransactionItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/TransactionItem.test.tsx)
+│   │   │   │   │       │       │   │   └── [UserCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/UserCard.test.tsx)
+│   │   │   │   │       │       │   ├── [AccountCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/AccountCard.tsx)
+│   │   │   │   │       │       │   ├── [AccountDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/AccountDetail.tsx)
+│   │   │   │   │       │       │   ├── [BalanceCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BalanceCard.tsx)
+│   │   │   │   │       │       │   ├── [BillItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BillItem.tsx)
+│   │   │   │   │       │       │   ├── [BudgetCategoryCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BudgetCategoryCard.tsx)
+│   │   │   │   │       │       │   ├── [CardActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardActions.tsx)
+│   │   │   │   │       │       │   ├── [CardDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardDetail.tsx)
+│   │   │   │   │       │       │   ├── [CardItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardItem.tsx)
+│   │   │   │   │       │       │   ├── [CardSpending.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardSpending.tsx)
+│   │   │   │   │       │       │   ├── [NotificationItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/NotificationItem.tsx)
+│   │   │   │   │       │       │   ├── [RateItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/RateItem.tsx)
+│   │   │   │   │       │       │   ├── [Skeleton.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/Skeleton.tsx)
+│   │   │   │   │       │       │   ├── [SpendingChart.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/SpendingChart.tsx)
+│   │   │   │   │       │       │   ├── [SwipeableTransactionItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/SwipeableTransactionItem.tsx)
+│   │   │   │   │       │       │   ├── [TransactionItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/TransactionItem.tsx)
+│   │   │   │   │       │       │   ├── [UserCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/UserCard.tsx)
+│   │   │   │   │       │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/index.ts)
+│   │   │   │   │       │       ├── molecules/
+│   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │       │       │   │   ├── [BudgetSummary.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/BudgetSummary.test.tsx)
+│   │   │   │   │       │       │   │   ├── [CurrencyConverter.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/CurrencyConverter.test.tsx)
+│   │   │   │   │       │       │   │   ├── [QRCodeActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QRCodeActions.test.tsx)
+│   │   │   │   │       │       │   │   ├── [QRCodeModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QRCodeModal.test.tsx)
+│   │   │   │   │       │       │   │   ├── [QuickActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QuickActions.test.tsx)
+│   │   │   │   │       │       │   │   ├── [QuickPayForm.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QuickPayForm.test.tsx)
+│   │   │   │   │       │       │   │   ├── [RateList.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/RateList.test.tsx)
+│   │   │   │   │       │       │   │   ├── [TransactionFilters.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransactionFilters.test.tsx)
+│   │   │   │   │       │       │   │   ├── [TransferConfirmation.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransferConfirmation.test.tsx)
+│   │   │   │   │       │       │   │   └── [TransferForm.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransferForm.test.tsx)
+│   │   │   │   │       │       │   ├── [AddAccountModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/AddAccountModal.tsx)
+│   │   │   │   │       │       │   ├── [AddBillModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/AddBillModal.tsx)
+│   │   │   │   │       │       │   ├── [BudgetSummary.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/BudgetSummary.tsx)
+│   │   │   │   │       │       │   ├── [ContactList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/ContactList.tsx)
+│   │   │   │   │       │       │   ├── [CurrencyAlerts.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/CurrencyAlerts.tsx)
+│   │   │   │   │       │       │   ├── [CurrencyConverter.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/CurrencyConverter.tsx)
+│   │   │   │   │       │       │   ├── [QRCodeActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QRCodeActions.tsx)
+│   │   │   │   │       │       │   ├── [QRCodeModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QRCodeModal.tsx)
+│   │   │   │   │       │       │   ├── [QuickActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QuickActions.tsx)
+│   │   │   │   │       │       │   ├── [QuickPayForm.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QuickPayForm.tsx)
+│   │   │   │   │       │       │   ├── [RateList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/RateList.tsx)
+│   │   │   │   │       │       │   ├── [SplitBill.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/SplitBill.tsx)
+│   │   │   │   │       │       │   ├── [TransactionFilters.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransactionFilters.tsx)
+│   │   │   │   │       │       │   ├── [TransferConfirmation.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransferConfirmation.tsx)
+│   │   │   │   │       │       │   ├── [TransferForm.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransferForm.tsx)
+│   │   │   │   │       │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/index.ts)
+│   │   │   │   │       │       ├── organisms/
+│   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │       │       │   │   ├── [BottomNav.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/BottomNav.test.tsx)
+│   │   │   │   │       │       │   │   ├── [SettingsSection.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/SettingsSection.test.tsx)
+│   │   │   │   │       │       │   │   └── [Sidebar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/Sidebar.test.tsx)
+│   │   │   │   │       │       │   ├── [BottomNav.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/BottomNav.tsx)
+│   │   │   │   │       │       │   ├── [SettingsSection.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/SettingsSection.tsx)
+│   │   │   │   │       │       │   ├── [Sidebar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/Sidebar.tsx)
+│   │   │   │   │       │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/index.ts)
+│   │   │   │   │       │       ├── templates/
+│   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │       │       │   │   └── [DashboardTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/__tests__/DashboardTemplate.test.tsx)
+│   │   │   │   │       │       │   ├── [DashboardTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/DashboardTemplate.tsx)
+│   │   │   │   │       │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/index.ts)
+│   │   │   │   │       │       ├── [OfflineBanner.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/OfflineBanner.tsx)
+│   │   │   │   │       │       ├── [PageTransition.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/PageTransition.tsx)
+│   │   │   │   │       │       ├── [RouteGuard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/RouteGuard.tsx)
+│   │   │   │   │       │       └── [SkipToContent.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/SkipToContent.tsx)
+│   │   │   │   │       ├── data/
+│   │   │   │   │       │   └── wallet/
+│   │   │   │   │       │       ├── [mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/wallet/mock.ts)
+│   │   │   │   │       │       └── [nav.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/wallet/nav.ts)
+│   │   │   │   │       ├── hooks/
+│   │   │   │   │       │   └── wallet/
+│   │   │   │   │       │       ├── [useEntitySync.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useEntitySync.ts)
+│   │   │   │   │       │       ├── [useHaptic.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useHaptic.ts)
+│   │   │   │   │       │       ├── [useMediaQuery.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useMediaQuery.ts)
+│   │   │   │   │       │       ├── [usePullToRefresh.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/usePullToRefresh.ts)
+│   │   │   │   │       │       ├── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useSWRegister.ts)
+│   │   │   │   │       │       └── [useWalletSession.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useWalletSession.ts)
+│   │   │   │   │       ├── lib/
+│   │   │   │   │       │   └── wallet/
+│   │   │   │   │       │       ├── [db.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/db.ts)
+│   │   │   │   │       │       ├── [export.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/export.ts)
+│   │   │   │   │       │       ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/format.ts)
+│   │   │   │   │       │       ├── [iconMap.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/iconMap.ts)
+│   │   │   │   │       │       ├── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/seed.ts)
+│   │   │   │   │       │       └── [session.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/session.ts)
+│   │   │   │   │       ├── providers/
+│   │   │   │   │       │   └── wallet/
+│   │   │   │   │       │       ├── __tests__/
+│   │   │   │   │       │       │   ├── [DataProvider.crud.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.crud.test.tsx)
+│   │   │   │   │       │       │   ├── [DataProvider.loading.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.loading.test.tsx)
+│   │   │   │   │       │       │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.test.tsx)
+│   │   │   │   │       │       │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/ToastProvider.test.tsx)
+│   │   │   │   │       │       ├── auth/
+│   │   │   │   │       │       │   └── [AuthProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/auth/AuthProvider.tsx)
+│   │   │   │   │       │       ├── entities/
+│   │   │   │   │       │       │   ├── [AccountsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/AccountsProvider.tsx)
+│   │   │   │   │       │       │   ├── [BillsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/BillsProvider.tsx)
+│   │   │   │   │       │       │   ├── [BudgetProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/BudgetProvider.tsx)
+│   │   │   │   │       │       │   ├── [CardsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CardsProvider.tsx)
+│   │   │   │   │       │       │   ├── [ContactsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/ContactsProvider.tsx)
+│   │   │   │   │       │       │   ├── [CurrencyAlertsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CurrencyAlertsProvider.tsx)
+│   │   │   │   │       │       │   ├── [CurrencyRatesProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CurrencyRatesProvider.tsx)
+│   │   │   │   │       │       │   ├── [FDsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/FDsProvider.tsx)
+│   │   │   │   │       │       │   ├── [GoalsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/GoalsProvider.tsx)
+│   │   │   │   │       │       │   ├── [InsuranceProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/InsuranceProvider.tsx)
+│   │   │   │   │       │       │   ├── [LoansProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/LoansProvider.tsx)
+│   │   │   │   │       │       │   ├── [NotificationsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/NotificationsProvider.tsx)
+│   │   │   │   │       │       │   ├── [PaymentRequestsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/PaymentRequestsProvider.tsx)
+│   │   │   │   │       │       │   ├── [RDsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RDsProvider.tsx)
+│   │   │   │   │       │       │   ├── [RecurringTransfersProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RecurringTransfersProvider.tsx)
+│   │   │   │   │       │       │   ├── [RewardsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RewardsProvider.tsx)
+│   │   │   │   │       │       │   ├── [TransactionsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/TransactionsProvider.tsx)
+│   │   │   │   │       │       │   └── [UserProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/UserProvider.tsx)
+│   │   │   │   │       │       ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/DataProvider.tsx)
+│   │   │   │   │       │       ├── [Providers.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/Providers.tsx)
+│   │   │   │   │       │       ├── [SWProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/SWProvider.tsx)
+│   │   │   │   │       │       ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/ToastProvider.tsx)
+│   │   │   │   │       │       └── [WalletProviders.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/WalletProviders.tsx)
+│   │   │   │   │       ├── test-helpers/
+│   │   │   │   │       │   └── wallet/
+│   │   │   │   │       │       ├── [db-mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/db-mock.ts)
+│   │   │   │   │       │       ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/index.ts)
+│   │   │   │   │       │       ├── [nav-mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/nav-mock.ts)
+│   │   │   │   │       │       └── [render.tsx](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/render.tsx)
+│   │   │   │   │       └── types/
+│   │   │   │   │           └── wallet/
+│   │   │   │   │               └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/wallet/index.ts)
 │   │   │   │   ├── photo/
 │   │   │   │   │   ├── docs/
 │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/graphics-design/photo/docs/ARCHITECTURE.md)
@@ -27303,4 +27106,4 @@
 └── [turbo.json](./turbo.json)
 ```
 
-5922 directories, 21378 files
+5889 directories, 21214 files

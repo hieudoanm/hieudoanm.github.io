@@ -1,5 +1,5 @@
-import { defineConfig, globalIgnores } from 'eslint/config';
 import next from 'eslint-config-next/typescript';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 const eslintConfig = defineConfig([
   ...next,
@@ -22,6 +22,8 @@ const eslintConfig = defineConfig([
     rules: {
       // Test doubles legitimately stand in for framework internals.
       '@typescript-eslint/no-explicit-any': 'off',
+      // `require()` is how a few suites reach modules jest.mock cannot hoist.
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
   {

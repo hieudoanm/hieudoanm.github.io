@@ -5,7 +5,8 @@
 - Hybrid app that runs as a **web app** (browser), **desktop app** (Tauri), and
   **mobile app** (Tauri Mobile)
 - Static export for offline-first PWA support
-- Showcase of self-contained demo applications (**POS**, **Menu**, **Chat**)
+- Showcase of self-contained demo applications (**POS**, **Menu**, **Chat**,
+  **Wallet**)
 - Type-safe throughout with strict TypeScript
 
 ## Tech Stack
@@ -23,11 +24,12 @@
 
 ## Applications
 
-| App  | Route   | Domain                   | Tiers                        |
-| ---- | ------- | ------------------------ | ---------------------------- |
-| POS  | `/pos`  | Business — point of sale | `atoms` → `templates`        |
-| Menu | `/menu` | Business — digital menus | flat under `components/menu` |
-| Chat | `/chat` | Social — messaging       | `atoms` → `templates`        |
+| App    | Route     | Domain                     | Tiers                              |
+| ------ | --------- | -------------------------- | ---------------------------------- |
+| POS    | `/pos`    | Business — point of sale   | `atoms` → `templates`              |
+| Menu   | `/menu`   | Business — digital menus   | flat under `components/menu`       |
+| Chat   | `/chat`   | Social — messaging         | `atoms` → `templates`              |
+| Wallet | `/wallet` | Finance — personal banking | `atoms` → `templates` (namespaced) |
 
 Shared, app-agnostic UI lives in `components/shared/templates`.
 
@@ -36,7 +38,7 @@ Shared, app-agnostic UI lives in `components/shared/templates`.
 ```txt
 src/
 ├── app/                # App Router: routes, layouts, error boundaries
-│   ├── (app)/          # Main apps: chat, menu, pos
+│   ├── (app)/          # Main apps: chat, menu, pos, wallet
 │   ├── (auth)/         # sign-in, sign-up, profile, password flows
 │   ├── (info)/         # about, downloads, version
 │   ├── error.tsx       # Runtime error boundary
@@ -48,15 +50,17 @@ src/
 │   ├── chat/           # atoms, molecules, organisms, templates
 │   ├── menu/           # flat components
 │   ├── pos/            # atoms, molecules, organisms, templates
+│   ├── wallet/         # atoms, molecules, organisms, templates (vendored)
 │   └── shared/         # templates/ — ErrorTemplate and friends
 ├── lib/                # Pure logic, no React
 │   ├── chat/           # crypto, db, format, selectors, url, webrtc
+│   ├── wallet/         # db, export, format, iconMap, seed, session, utils
 │   ├── menu/
 │   └── pos/            # money, cart, discounts, payment, reports, …
-├── hooks/              # Reusable hooks (chat/, menu/)
-├── providers/          # React context providers (chat/)
-├── data/               # Seed/fixture data (chat/)
-├── types/              # Shared types (chat/, menu/, pos/)
+├── hooks/              # Reusable hooks (chat/, menu/, wallet/)
+├── providers/          # React context providers (chat/, wallet/)
+├── data/               # Seed/fixture data (chat/, wallet/)
+├── types/              # Shared types (chat/, menu/, pos/, wallet/)
 ├── content/            # Build-time content (version string)
 ├── styles/             # globals.css (entry) + themes.css
 └── __tests__/          # Tests for root-level app files
@@ -107,6 +111,8 @@ Flat routes with route groups — no dynamic `[id]` or `[slug]` segments.
 | `/menu`            | `(app)/menu/page.tsx`             | Yes    | Menu application          |
 | `/chat`            | `(app)/chat/page.tsx`             | Yes    | Chat application          |
 | `/chat/settings`   | `(app)/chat/settings/page.tsx`    | Yes    | Chat preferences          |
+| `/wallet`          | `(app)/wallet/page.tsx`           | Yes    | Wallet dashboard          |
+| `/wallet/*`        | nested under `(app)/wallet/`      | Yes    | All wallet features       |
 | `/about`           | `(info)/about/page.tsx`           | No     | App info and tech stack   |
 | `/downloads`       | `(info)/downloads/page.tsx`       | No     | Platform download links   |
 | `/version`         | `(info)/version/page.tsx`         | Yes    | Build version display     |
