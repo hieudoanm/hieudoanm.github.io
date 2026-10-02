@@ -25,7 +25,7 @@ RUN touch src/lib.rs src/bin/vectify.rs \
     && cargo build --release --locked --bin vectify
 
 # --- Final Stage ---
-FROM alpine:3.22
+FROM alpine:3.24
 
 # wget (busybox) backs the health check; the tracer itself needs nothing else.
 RUN apk add --no-cache ca-certificates \
