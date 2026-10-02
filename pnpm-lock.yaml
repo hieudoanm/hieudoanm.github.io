@@ -3135,8 +3135,8 @@ importers:
         specifier: 10.11.0
         version: 10.11.0(jiti@2.7.0)(supports-color@10.2.2)
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       prettier:
         specifier: 3.9.9
         version: 3.9.9
@@ -3201,8 +3201,8 @@ importers:
         specifier: 6.2.5
         version: 6.2.5
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -3256,8 +3256,8 @@ importers:
         specifier: 6.2.5
         version: 6.2.5
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -3382,8 +3382,8 @@ importers:
         specifier: 6.2.5
         version: 6.2.5
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -3452,8 +3452,8 @@ importers:
         specifier: 7.37.5
         version: 7.37.5(eslint@10.11.0(jiti@2.7.0)(supports-color@10.2.2))
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -3510,8 +3510,8 @@ importers:
         specifier: 10.11.0
         version: 10.11.0(jiti@2.7.0)(supports-color@10.2.2)
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       prettier:
         specifier: 3.9.9
         version: 3.9.9
@@ -3546,8 +3546,8 @@ importers:
         specifier: 10.11.0
         version: 10.11.0(jiti@2.7.0)(supports-color@10.2.2)
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -3592,8 +3592,8 @@ importers:
         specifier: 10.11.0
         version: 10.11.0(jiti@2.7.0)(supports-color@10.2.2)
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -3756,8 +3756,8 @@ importers:
         specifier: 7.37.5
         version: 7.37.5(eslint@10.11.0(jiti@2.7.0)(supports-color@10.2.2))
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -3805,8 +3805,8 @@ importers:
         specifier: 10.11.0
         version: 10.11.0(jiti@2.7.0)(supports-color@10.2.2)
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -3860,8 +3860,8 @@ importers:
         specifier: 10.11.0
         version: 10.11.0(jiti@2.7.0)(supports-color@10.2.2)
       globals:
-        specifier: 17.12.0
-        version: 17.12.0
+        specifier: 17.13.0
+        version: 17.13.0
       jest:
         specifier: 30.5.2
         version: 30.5.2(@types/node@26.6.3)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.6.3)(typescript@6.0.3))
@@ -10218,8 +10218,8 @@ packages:
     resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
     engines: {node: '>=18'}
 
-  globals@17.12.0:
-    resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
+  globals@17.13.0:
+    resolution: {integrity: sha512-RwMTC61u7hrG3ZJMkZQOK4JLJrKS8QtoTii63EmWvFXHqycY9FObBJQCbsLxSO8kjKhWE5kV1GC+Vb1g3RI0Zg==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -22570,7 +22570,7 @@ snapshots:
 
   globals@16.4.0: {}
 
-  globals@17.12.0: {}
+  globals@17.13.0: {}
 
   globalthis@1.0.4:
     dependencies:
