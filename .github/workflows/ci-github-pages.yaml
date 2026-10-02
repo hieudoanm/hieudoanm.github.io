@@ -8,6 +8,7 @@ on:
       - 'packages/app/hybrid/**/*'
       - 'packages/app/headless/*/public/**'
       - 'packages/app/native/*/public/**'
+      - 'packages/data/uob/research-project/projects/public/**'
       - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
       - 'turbo.json'

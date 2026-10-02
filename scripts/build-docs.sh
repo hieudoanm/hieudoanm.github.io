@@ -99,6 +99,23 @@ copy_landing_pages() {
     done
 }
 
+copy_data_public() {
+    local src_dir="$ROOT_DIR/packages/data/uob/research-project/projects/public"
+    local dest_dir="$DOCS_DIR/uob/research-projects"
+
+    if [[ ! -f "$src_dir/index.html" ]]; then
+        echo "Skipping UOB research projects: $src_dir/index.html not found."
+        echo "Run 'make' in packages/data/uob/research-project/projects first."
+        return
+    fi
+
+    echo "Copying $src_dir -> $dest_dir"
+    rm -rf "$dest_dir"
+    mkdir -p "$dest_dir"
+    cp -R "$src_dir"/. "$dest_dir"
+    touch "$dest_dir/.nojekyll"
+}
+
 init_docsify() {
     local docsify_lib="$ROOT_DIR/node_modules/docsify/lib"
     local open_dir="$DOCS_DIR/open"
@@ -219,6 +236,8 @@ build_hybrid_apps
 copy_landing_pages "$ROOT_DIR/packages/app/headless"
 copy_landing_pages "$ROOT_DIR/packages/app/native"
 copy_landing_pages "$ROOT_DIR/packages/extensions/browser"
+
+copy_data_public
 
 init_docsify
 
