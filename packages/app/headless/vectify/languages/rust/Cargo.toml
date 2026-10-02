@@ -28,7 +28,7 @@ base64 = "=0.23.1"
 clap = { version = "=4.6.7", features = ["derive"] }
 clap_complete = "=4.6.11"
 image = { version = "=0.25.10", default-features = false, features = ["png", "jpeg"] }
-resvg = { version = "=0.45.1", default-features = false, optional = true }
+resvg = { version = "=0.48.1", default-features = false, optional = true }
 serde = { version = "=1.0.229", features = ["derive"] }
 serde_json = "=1.0.151"
 thiserror = "=2.0.21"
