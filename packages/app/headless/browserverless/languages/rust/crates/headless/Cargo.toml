@@ -11,6 +11,6 @@ thiserror = { workspace = true }
 url = { workspace = true }
 log = { workspace = true }
 image = { workspace = true }
-libc = "=0.2.189"
+libc = "=0.2.190"
 
 [dev-dependencies]
