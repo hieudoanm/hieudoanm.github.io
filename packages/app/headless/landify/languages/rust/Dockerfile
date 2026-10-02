@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # --- Build Stage ---
-FROM rust:1.98.1-alpine AS builder
+FROM rust:1.99.0-alpine AS builder
 
 # musl-dev is required for the static-libc link that lets the binary run on a
 # minimal runtime.
@@ -27,7 +27,7 @@ RUN touch src/main.rs src/lib.rs \
     && cargo build --release --locked --bin landify
 
 # --- Final Stage ---
-FROM alpine:3.22
+FROM alpine:3.24
 
 RUN apk add --no-cache ca-certificates \
     && addgroup -S -g 10001 landify \
