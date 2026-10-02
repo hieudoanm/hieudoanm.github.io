@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # --- Build Stage ---
-FROM rust:1.98.1-alpine AS builder
+FROM rust:1.99.0-alpine AS builder
 
 # musl-dev is required for the static-libc link that lets the binary run on a
 # minimal runtime.
