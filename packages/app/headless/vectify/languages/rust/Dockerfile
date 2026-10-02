@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # --- Build Stage ---
-FROM rust:1.98.1-alpine AS builder
+FROM rust:1.99.0-alpine AS builder
 
 # musl-dev is required for the static-libc link that lets the binary run on a
 # scratch-like runtime.
@@ -25,7 +25,7 @@ RUN touch src/lib.rs src/bin/vectify.rs \
     && cargo build --release --locked --bin vectify
 
 # --- Final Stage ---
-FROM alpine:3.22
+FROM alpine:3.24
 
 # wget (busybox) backs the health check; the tracer itself needs nothing else.
 RUN apk add --no-cache ca-certificates \
