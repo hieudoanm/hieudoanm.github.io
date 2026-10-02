@@ -27,7 +27,7 @@ RUN touch src/main.rs src/lib.rs \
     && cargo build --release --locked --bin landify
 
 # --- Final Stage ---
-FROM alpine:3.22
+FROM alpine:3.24
 
 RUN apk add --no-cache ca-certificates \
     && addgroup -S -g 10001 landify \
