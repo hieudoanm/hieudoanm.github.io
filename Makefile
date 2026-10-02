@@ -31,17 +31,11 @@ start-football:
 start-foody:
 	pnpm run dev --filter=@hieudoanm.github.io/foody
 
-start-keynotes:
-	pnpm run dev --filter=@hieudoanm.github.io/keynotes
-
 start-lingo:
 	pnpm run dev --filter=@hieudoanm.github.io/lingo
 
 start-memory:
 	pnpm run dev --filter=@hieudoanm.github.io/memory
-
-start-messaging:
-	pnpm run dev --filter=@hieudoanm.github.io/messaging
 
 start-mri:
 	pnpm run dev --filter=@hieudoanm.github.io/mri
@@ -54,9 +48,6 @@ start-pdf:
 
 start-photo:
 	pnpm run dev --filter=@hieudoanm.github.io/photo
-
-start-pos:
-	pnpm run dev --filter=@hieudoanm.github.io/pos
 
 start-resume:
 	pnpm run dev --filter=@hieudoanm.github.io/resume
@@ -72,6 +63,3 @@ start-tourney:
 
 start-video:
 	pnpm run dev --filter=@hieudoanm.github.io/video
-
-start-wallet:
-	pnpm run dev --filter=@hieudoanm.github.io/wallet

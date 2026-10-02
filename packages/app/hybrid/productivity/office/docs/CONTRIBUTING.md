@@ -39,8 +39,9 @@ filter prefix if you prefer.
 ## Project Structure
 
 Follow the directory structure in [ARCHITECTURE.md](./ARCHITECTURE.md).
-Each feature (calendar, csv, md, tasks) is confined to its own `src/components/<feature>/`,
-`src/lib/<feature>/`, and `src/data/<feature>/` folders.
+Each feature (calendar, csv, md, tasks, keynotes) is confined to its own
+`src/components/<feature>/`, `src/lib/<feature>/`, `src/hooks/<feature>/`, and
+`src/data/<feature>/` folders.
 
 ## Code Style
 
@@ -71,7 +72,12 @@ Each feature (calendar, csv, md, tasks) is confined to its own `src/components/<
 - Calendar events live in `src/data/calendar/events.ts`
 - Tasks seed data lives in `src/data/tasks/` (`models.ts`, `seed.ts`)
 - Markdown seed content lives in `src/data/md/seed.ts`
+- Keynotes templates, themes, charts, and icon sets live in `src/data/keynotes/`
 - The Tasks sub-app persists to IndexedDB under the `office-db` database
+- The Keynotes sub-app persists to IndexedDB under the `office-keynotes-db`
+  database. Its `idb` access goes through `@/lib/keynotes/idb` so Jest can swap
+  in the in-memory mock from `src/lib/keynotes/__mocks__/idb.ts` — never import
+  `idb` directly from Keynotes code
 
 ## Running Tests
 

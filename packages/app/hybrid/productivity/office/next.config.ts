@@ -29,6 +29,13 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  turbopack: {
+    resolveAlias: {
+      fs: './src/lib/keynotes/stubs/node-builtins.ts',
+      path: './src/lib/keynotes/stubs/node-builtins.ts',
+      crypto: './src/lib/keynotes/stubs/node-builtins.ts',
+    },
+  },
 };
 
 export default nextConfig;

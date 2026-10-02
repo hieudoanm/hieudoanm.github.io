@@ -3,8 +3,9 @@
 | About                            | Links                                                                             |
 | -------------------------------- | --------------------------------------------------------------------------------- |
 | Languages (Data Science)         | [Python][python]                                                                  |
+| Languages (Web Development)      | [TypeScript][ts]                                                                  |
 | Languages (Headless Development) | [Go][go] - [Rust][rust]                                                           |
-| Languages (Software Development) | [TypeScript][ts] - [Kotlin][kotlin] - [Swift][swift]                              |
+| Languages (Native Development)   | [Kotlin][kotlin] - [Swift][swift]                                                 |
 | Profile                          | [LinkedIn][linkedin] - [Twitter][twitter] - [Instagram][instagram]                |
 | Monorepo                         | [hieudoanm/hieudoanm.github.io](https://github.com/hieudoanm/hieudoanm.github.io) |
 
@@ -26,7 +27,7 @@
 
 ---
 
-## [Open Releases (36)](https://hieudoanm.github.io/open)
+## [Open Releases (35)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions and Native Apps (3)
 
@@ -118,14 +119,13 @@
 
 ---
 
-#### Productivity (4)
+#### Productivity (3)
 
-| No  | Platform | Category     | Name     | Open                  | Releases                      |
-| --- | -------- | ------------ | -------- | --------------------- | ----------------------------- |
-| 26  | Hybrid   | Productivity | Office   | [Open][open-office]   | [Releases][releases-office]   |
-| 27  | Hybrid   | Productivity | Keynotes | [Open][open-keynotes] | [Releases][releases-keynotes] |
-| 28  | Hybrid   | Productivity | PDF      | [Open][open-pdf]      | [Releases][releases-pdf]      |
-| 29  | Hybrid   | Productivity | Resume   | [Open][open-resume]   | [Releases][releases-resume]   |
+| No  | Platform | Category     | Name   | Open                | Releases                    |
+| --- | -------- | ------------ | ------ | ------------------- | --------------------------- |
+| 26  | Hybrid   | Productivity | Office | [Open][open-office] | [Releases][releases-office] |
+| 27  | Hybrid   | Productivity | PDF    | [Open][open-pdf]    | [Releases][releases-pdf]    |
+| 28  | Hybrid   | Productivity | Resume | [Open][open-resume] | [Releases][releases-resume] |
 
 ---
 
@@ -133,7 +133,7 @@
 
 | No  | Platform | Category | Name  | Open               | Releases                   |
 | --- | -------- | -------- | ----- | ------------------ | -------------------------- |
-| 30  | Hybrid   | Shopping | Store | [Open][open-store] | [Releases][releases-store] |
+| 29  | Hybrid   | Shopping | Store | [Open][open-store] | [Releases][releases-store] |
 
 ---
 
@@ -141,7 +141,7 @@
 
 | No  | Platform | Category          | Name | Open              | Releases                  |
 | --- | -------- | ----------------- | ---- | ----------------- | ------------------------- |
-| 31  | Hybrid   | Social Networking | Chat | [Open][open-chat] | [Releases][releases-chat] |
+| 30  | Hybrid   | Social Networking | Chat | [Open][open-chat] | [Releases][releases-chat] |
 
 ---
 
@@ -149,9 +149,9 @@
 
 | No  | Platform | Category | Name     | Open                  | Releases                      |
 | --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
-| 32  | Hybrid   | Sports   | Chess    | [Open][open-chess]    | [Releases][releases-chess]    |
-| 33  | Hybrid   | Sports   | Football | [Open][open-football] | [Releases][releases-football] |
-| 34  | Hybrid   | Sports   | Tourney  | [Open][open-tourney]  | [Releases][releases-tourney]  |
+| 31  | Hybrid   | Sports   | Chess    | [Open][open-chess]    | [Releases][releases-chess]    |
+| 32  | Hybrid   | Sports   | Football | [Open][open-football] | [Releases][releases-football] |
+| 33  | Hybrid   | Sports   | Tourney  | [Open][open-tourney]  | [Releases][releases-tourney]  |
 
 ---
 
@@ -159,8 +159,8 @@
 
 | No  | Platform | Category  | Name     | Open                  | Releases                      |
 | --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
-| 35  | Hybrid   | Utilities | Docs     | [Open][open-docs]     | [Releases][releases-docs]     |
-| 36  | Hybrid   | Utilities | Password | [Open][open-password] | [Releases][releases-password] |
+| 34  | Hybrid   | Utilities | Docs     | [Open][open-docs]     | [Releases][releases-docs]     |
+| 35  | Hybrid   | Utilities | Password | [Open][open-password] | [Releases][releases-password] |
 
 ---
 
@@ -185,7 +185,6 @@
 [open-brainbow]: https://hieudoanm.github.io/open/brainbow/
 [open-mri]: https://hieudoanm.github.io/open/mri/
 [open-office]: https://hieudoanm.github.io/open/office/
-[open-keynotes]: https://hieudoanm.github.io/open/keynotes/
 [open-pdf]: https://hieudoanm.github.io/open/pdf/
 [open-resume]: https://hieudoanm.github.io/open/resume/
 [open-store]: https://hieudoanm.github.io/open/store/
@@ -222,7 +221,6 @@
 [releases-brainbow]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-brainbow-latest
 [releases-mri]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-mri-latest
 [releases-office]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-office-latest
-[releases-keynotes]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-keynotes-latest
 [releases-pdf]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-pdf-latest
 [releases-resume]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-resume-latest
 [releases-store]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-shopping-store-latest

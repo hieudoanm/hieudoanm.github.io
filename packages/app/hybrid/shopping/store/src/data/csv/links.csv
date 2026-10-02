@@ -143,14 +143,6 @@ office,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/ap
 office,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.rpm
 office,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.msi
 office,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.exe
-keynotes,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.aab
-keynotes,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.apk
-keynotes,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.dmg
-keynotes,appimage,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.AppImage
-keynotes,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.deb
-keynotes,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.rpm
-keynotes,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.msi
-keynotes,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.exe
 pdf,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.aab
 pdf,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.apk
 pdf,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.dmg

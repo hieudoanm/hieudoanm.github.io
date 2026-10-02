@@ -17,6 +17,7 @@ const config = {
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/lib/keynotes/idb$': '<rootDir>/src/lib/keynotes/__mocks__/idb.ts',
   },
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage',
