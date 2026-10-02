@@ -10,6 +10,7 @@ final class MemoryViewModel: ObservableObject {
     @Published private(set) var memoryPressure: MemoryPressureStatus = .unknown
     @Published var refreshInterval: TimeInterval
     @Published var menuBarDisplay: MenuBarDisplay
+    @Published var menuBarMetrics: MenuBarMetrics
 
     private let memoryMonitor = MemoryMonitor()
     private let diskMonitor = DiskMonitor()
@@ -20,13 +21,14 @@ final class MemoryViewModel: ObservableObject {
     private let settingsStore: SettingsStore
     private var refreshTimer: Timer?
     private var visibilityObservation: NSObjectProtocol?
-    private var isPanelVisible: Bool
+    private var isLiveSurfaceVisible: Bool
 
     init(settingsStore: SettingsStore = SettingsStore()) {
         self.settingsStore = settingsStore
         self.refreshInterval = settingsStore.refreshInterval
         self.menuBarDisplay = settingsStore.menuBarDisplay
-        self.isPanelVisible = PanelVisibilityMonitor.shared.isPanelVisible
+        self.menuBarMetrics = settingsStore.menuBarMetrics
+        self.isLiveSurfaceVisible = SurfaceVisibilityMonitor.shared.isLiveSurfaceVisible
 
         if case let .success(info) = systemMonitor.read() {
             systemInfo = info
@@ -34,7 +36,8 @@ final class MemoryViewModel: ObservableObject {
 
         refresh()
         startAutoRefresh()
-        visibilityObservation = PanelVisibilityMonitor.shared.observeVisibilityChange { [weak self] visible in
+        let monitor = SurfaceVisibilityMonitor.shared
+        visibilityObservation = monitor.observeVisibilityChange { [weak self] visible in
             DispatchQueue.main.async {
                 self?.handleVisibilityChange(visible)
             }
@@ -77,21 +80,6 @@ final class MemoryViewModel: ObservableObject {
         cpuStats.map { $0.loadAverageText }
     }
 
-    var diskUsedText: String? {
-        diskStats.map { ByteFormatter.humanReadable($0.usedBytes) }
-    }
-
-    var menuBarDiskText: String {
-        switch menuBarDisplay {
-        case .percentage:
-            return diskPercentText
-        case .value:
-            return diskUsedText ?? "--"
-        case .usedOverTotal:
-            return diskValueText ?? "--"
-        }
-    }
-
     func refresh() {
         if case let .success(stats) = memoryMonitor.read() {
             memoryStats = stats
@@ -115,6 +103,11 @@ final class MemoryViewModel: ObservableObject {
         settingsStore.menuBarDisplay = display
     }
 
+    func updateMenuBarMetrics(_ metrics: MenuBarMetrics) {
+        menuBarMetrics = metrics
+        settingsStore.menuBarMetrics = metrics
+    }
+
     func updateRefreshInterval(_ interval: TimeInterval) {
         guard interval >= 0.5 else { return }
         refreshInterval = interval
@@ -134,18 +127,18 @@ final class MemoryViewModel: ObservableObject {
     }
 
     private func handleVisibilityChange(_ visible: Bool) {
-        isPanelVisible = visible
+        isLiveSurfaceVisible = visible
         if visible {
             refresh()
         }
         restartAutoRefresh()
     }
 
-    /// While the panel is closed only the menu-bar label needs data, so the
-    /// ticker slows down (never faster than 2s, never slower than 5s) and
-    /// resumes the user-selected interval as soon as the panel opens.
+    /// While no surface is showing metrics only the menu-bar label needs data,
+    /// so the ticker slows down (never faster than 2s, never slower than 5s) and
+    /// resumes the user-selected interval as soon as a surface opens.
     private func effectiveInterval() -> TimeInterval {
-        isPanelVisible ? refreshInterval : max(min(refreshInterval * 2, 5), 2)
+        isLiveSurfaceVisible ? refreshInterval : max(min(refreshInterval * 2, 5), 2)
     }
 
     deinit {

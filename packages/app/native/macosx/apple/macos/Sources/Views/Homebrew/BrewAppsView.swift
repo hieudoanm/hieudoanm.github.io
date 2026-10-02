@@ -7,7 +7,14 @@ import SwiftUI
 /// Move to Trash).
 struct BrewAppsView: View {
     @ObservedObject var viewModel: HomebrewViewModel
-    @State private var searchText = ""
+    /// Pre-fills the search when the sidebar search sent the user here.
+    @State private var searchText: String
+
+    init(viewModel: HomebrewViewModel, initialQuery: String = "") {
+        self.viewModel = viewModel
+        _searchText = State(initialValue: initialQuery)
+    }
+
     @State private var candidate: InstalledApp?
     @State private var showingConfirmation = false
     @State private var layout: Layout = .list
@@ -44,7 +51,7 @@ struct BrewAppsView: View {
                 Spacer()
                 layoutPicker
             }
-            .padding(12)
+            .padding(Spacing.md)
 
             Divider()
 
@@ -81,30 +88,11 @@ struct BrewAppsView: View {
                 .foregroundStyle(.secondary)
             Spacer()
         }
-        .padding(20)
+        .padding(Spacing.xl)
     }
 
     private var searchField: some View {
-        HStack(spacing: 6) {
-            Image(systemName: "magnifyingglass")
-                .foregroundStyle(.secondary)
-                .accessibilityHidden(true)
-            TextField("Search apps", text: $searchText)
-                .textFieldStyle(.plain)
-                .accessibilityLabel("Search installed apps")
-            if !searchText.isEmpty {
-                Button {
-                    searchText = ""
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundStyle(.secondary)
-                        .accessibilityLabel("Clear search")
-                }
-                .buttonStyle(.borderless)
-            }
-        }
-        .padding(8)
-        .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 8))
+        SearchField(prompt: "Search apps", text: $searchText)
     }
 
     private var layoutPicker: some View {
@@ -133,28 +121,28 @@ struct BrewAppsView: View {
 
     private var contentGrid: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: Spacing.xxl) {
                 ForEach(groupedApps, id: \.category) { group in
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: Spacing.compact) {
                         Text(group.category.rawValue)
                             .font(.headline)
-                            .padding(.horizontal, 20)
+                            .padding(.horizontal, Spacing.xl)
 
                         LazyVGrid(
                             columns: [
-                                GridItem(.adaptive(minimum: 100), spacing: 12),
+                                GridItem(.adaptive(minimum: 100), spacing: Spacing.md),
                             ],
-                            spacing: 12
+                            spacing: Spacing.md
                         ) {
                             ForEach(group.apps) { app in
                                 tile(app)
                             }
                         }
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, Spacing.xl)
                     }
                 }
             }
-            .padding(.vertical, 16)
+            .padding(.vertical, Spacing.lg)
         }
     }
 
@@ -211,9 +199,9 @@ struct BrewAppsView: View {
     }
 
     private var emptyView: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: Spacing.md) {
             Image(systemName: "macwindow")
-                .font(.system(size: 44))
+                .font(Typography.emptyStateTitle)
                 .foregroundStyle(.secondary)
             Text("No apps found")
                 .font(.headline)

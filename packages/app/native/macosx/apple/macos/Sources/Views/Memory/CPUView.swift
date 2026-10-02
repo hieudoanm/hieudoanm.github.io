@@ -7,7 +7,7 @@ struct CPUView: View {
     var body: some View {
         if let stats {
             let threshold = ThresholdMonitor.status(for: stats.usage)
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: Spacing.tight) {
                 HStack {
                     Text("CPU")
                         .font(.caption)

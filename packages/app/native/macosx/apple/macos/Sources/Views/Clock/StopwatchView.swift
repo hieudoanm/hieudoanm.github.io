@@ -6,13 +6,13 @@ struct StopwatchView: View {
     @ObservedObject var viewModel: StopwatchViewModel
 
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: Spacing.xl) {
             Spacer()
 
             Text(viewModel.timeText)
-                .font(.system(size: 40, weight: .regular, design: .monospaced))
+                .font(Typography.ringReadout)
                 .monospacedDigit()
-                .animation(.linear(duration: 0.02), value: viewModel.elapsedMilliseconds)
+                .animation(Motion.linear(Motion.tick), value: viewModel.elapsedMilliseconds)
 
             controls
 
@@ -24,17 +24,17 @@ struct StopwatchView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(.vertical, 12)
+        .padding(.vertical, Spacing.md)
     }
 
     private var controls: some View {
-        HStack(spacing: 24) {
-            circleButton(systemImage: "flag.fill", size: 46, color: .gray) {
+        HStack(spacing: Spacing.xxl) {
+            CircleIconButton(systemImage: "flag.fill", size: 46, color: .gray) {
                 viewModel.lap()
             }
             .disabled(!viewModel.isRunning)
 
-            circleButton(
+            CircleIconButton(
                 systemImage: viewModel.isRunning ? "pause.fill" : "play.fill",
                 size: 70,
                 color: viewModel.isRunning ? .red : .accentColor
@@ -46,12 +46,12 @@ struct StopwatchView: View {
                 }
             }
 
-            circleButton(systemImage: "stop.fill", size: 46, color: .gray) {
+            CircleIconButton(systemImage: "stop.fill", size: 46, color: .gray) {
                 viewModel.stop()
             }
             .disabled(!viewModel.isRunning)
 
-            circleButton(systemImage: "arrow.counterclockwise", size: 46, color: .gray) {
+            CircleIconButton(systemImage: "arrow.counterclockwise", size: 46, color: .gray) {
                 viewModel.reset()
             }
             .disabled(!viewModel.canReset)
@@ -75,7 +75,7 @@ struct StopwatchView: View {
                             .foregroundColor(.primary)
                     }
                     .font(.system(.body, design: .monospaced))
-                    .padding(.vertical, 5)
+                    .padding(.vertical, Spacing.tight)
                     .accessibilityElement(children: .combine)
                     .accessibilityLabel(
                         "Lap \(lap.index), \(ClockFormatter.stopwatch(lap.elapsedMilliseconds))"
@@ -86,14 +86,4 @@ struct StopwatchView: View {
         .frame(maxHeight: 220)
     }
 
-    private func circleButton(systemImage: String, size: CGFloat, color: Color, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Image(systemName: systemImage)
-                .font(.system(size: size >= 60 ? 22 : 15, weight: .semibold))
-                .foregroundColor(.white)
-                .frame(width: size, height: size)
-                .background(color, in: Circle())
-        }
-        .buttonStyle(.plain)
-    }
 }

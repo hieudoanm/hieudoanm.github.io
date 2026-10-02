@@ -2,14 +2,27 @@ import AppKit
 import MacOSXCore
 import SwiftUI
 
-/// The Resources tab: CPU, Memory, Storage, Swap, Battery, and System Info.
+/// The Resources section: CPU, Memory, Storage, Swap, Battery, and System Info.
+///
+/// Surface-level actions (Settings, Dashboard, Quit) belong to the panel footer
+/// and the window toolbar, so they are reachable from every section.
 struct ResourcesView: View {
     @ObservedObject var memoryViewModel: MemoryViewModel
     @ObservedObject var batteryViewModel: BatteryViewModel
 
-    @Environment(\.openWindow) private var openWindow
+    let layout: ContentLayout
 
-    private enum Section: Hashable {
+    init(
+        memoryViewModel: MemoryViewModel,
+        batteryViewModel: BatteryViewModel,
+        layout: ContentLayout = .panel
+    ) {
+        self.memoryViewModel = memoryViewModel
+        self.batteryViewModel = batteryViewModel
+        self.layout = layout
+    }
+
+    private enum Section: Hashable, CaseIterable {
         case overview
         case memory
         case disk
@@ -17,11 +30,32 @@ struct ResourcesView: View {
         case swap
         case battery
         case system
+
+        var title: String {
+            switch self {
+            case .overview: return "Overview"
+            case .memory: return "Memory"
+            case .disk: return "Disk"
+            case .cpu: return "CPU"
+            case .swap: return "Swap"
+            case .battery: return "Battery"
+            case .system: return "System"
+            }
+        }
     }
 
     @State private var section: Section = .overview
 
     var body: some View {
+        switch layout {
+        case .panel:
+            panelLayout
+        case .window:
+            windowLayout
+        }
+    }
+
+    private var panelLayout: some View {
         VStack(alignment: .leading, spacing: 0) {
             header
 
@@ -31,14 +65,16 @@ struct ResourcesView: View {
 
             Divider()
 
-            content
+            sectionContent(section)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-
-            Divider()
-
-            footer
         }
-        .padding(14)
+        .padding(Spacing.inset)
+    }
+
+    private var windowLayout: some View {
+        SectionGrid(items: Section.allCases, title: \.title, minimumColumnWidth: 300) { item in
+            sectionContent(item)
+        }
     }
 
     private var header: some View {
@@ -56,18 +92,14 @@ struct ResourcesView: View {
             .buttonStyle(.borderless)
             .help("Refresh")
         }
-        .padding(.bottom, 16)
+        .padding(.bottom, Spacing.lg)
     }
 
     private var sectionPicker: some View {
         Picker("Section", selection: $section) {
-            Text("Overview").tag(Section.overview)
-            Text("Memory").tag(Section.memory)
-            Text("Disk").tag(Section.disk)
-            Text("CPU").tag(Section.cpu)
-            Text("Swap").tag(Section.swap)
-            Text("Battery").tag(Section.battery)
-            Text("System").tag(Section.system)
+            ForEach(Section.allCases, id: \.self) { item in
+                Text(item.title).tag(item)
+            }
         }
         .pickerStyle(.segmented)
         .labelsHidden()
@@ -75,37 +107,30 @@ struct ResourcesView: View {
     }
 
     @ViewBuilder
-    private var content: some View {
+    private func sectionContent(_ section: Section) -> some View {
         switch section {
         case .overview:
             OverviewView(
                 memoryViewModel: memoryViewModel,
                 batteryViewModel: batteryViewModel
             )
-            .transition(.opacity)
         case .memory:
             memorySection
-                .transition(.opacity)
         case .disk:
             DiskView(stats: memoryViewModel.diskStats)
-                .transition(.opacity)
         case .cpu:
             CPUView(stats: memoryViewModel.cpuStats)
-                .transition(.opacity)
         case .swap:
             SwapView(stats: memoryViewModel.swapStats)
-                .transition(.opacity)
         case .battery:
             BatterySectionView(viewModel: batteryViewModel)
-                .transition(.opacity)
         case .system:
             SystemInfoView(info: memoryViewModel.systemInfo)
-                .transition(.opacity)
         }
     }
 
     private var memorySection: some View {
-        VStack(alignment: .leading, spacing: 14) {
+        VStack(alignment: .leading, spacing: Spacing.inset) {
             MemoryView(stats: memoryViewModel.memoryStats)
 
             pressureRow
@@ -137,35 +162,8 @@ struct ResourcesView: View {
         }
     }
 
-    private var footer: some View {
-        HStack {
-            Button(action: openSettings) {
-                Label("Settings", systemImage: "gear")
-                    .font(.caption)
-                    .frame(height: 24)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(.borderless)
-            Spacer()
-            Button("Quit") {
-                NSApplication.shared.terminate(nil)
-            }
-            .buttonStyle(.borderless)
-            .font(.caption)
-        }
-        .padding(.top, 10)
-    }
-
     private func refreshAll() {
         memoryViewModel.refresh()
         batteryViewModel.refresh()
-    }
-
-    private func openSettings() {
-        NSApp.setActivationPolicy(.regular)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            NSApp.activate(ignoringOtherApps: true)
-            openWindow(id: SettingsView.windowID)
-        }
     }
 }

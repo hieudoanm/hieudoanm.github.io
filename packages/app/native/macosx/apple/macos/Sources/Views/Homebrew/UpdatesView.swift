@@ -21,7 +21,7 @@ struct UpdatesView: View {
 
     private var header: some View {
         HStack {
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: Spacing.xxs) {
                 Text("Updates")
                     .font(.largeTitle.bold())
                 Text(summaryText)
@@ -43,7 +43,7 @@ struct UpdatesView: View {
                 .disabled(viewModel.isLoading)
             }
         }
-        .padding(20)
+        .padding(Spacing.xl)
     }
 
     private var summaryText: String {
@@ -54,10 +54,10 @@ struct UpdatesView: View {
     private var outdatedList: some View {
         List(viewModel.outdatedPackages) { package in
             HStack {
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: Spacing.hairline) {
                     Text(package.name)
                         .font(.headline)
-                    HStack(spacing: 6) {
+                    HStack(spacing: Spacing.xs) {
                         Text(package.installedVersion ?? "unknown")
                             .strikethrough()
                             .foregroundStyle(.secondary)
@@ -77,14 +77,14 @@ struct UpdatesView: View {
                 }
                 .disabled(viewModel.isLoading)
             }
-            .padding(.vertical, 4)
+            .padding(.vertical, Spacing.xxs)
         }
     }
 
     private var upToDateView: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: Spacing.md) {
             Image(systemName: "checkmark.seal")
-                .font(.system(size: 44))
+                .font(Typography.emptyStateTitle)
                 .foregroundStyle(.green)
             Text("All packages are up to date")
                 .font(.headline)

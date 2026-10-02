@@ -3,95 +3,78 @@ import SwiftUI
 
 @main
 struct MacOSXApp: App {
-    @StateObject private var clipboardViewModel = AppDelegate.clipboardViewModel
-    @StateObject private var clockViewModel = AppDelegate.clockViewModel
-    @StateObject private var ipViewModel = AppDelegate.ipViewModel
-    @StateObject private var viewModel = AppDelegate.viewModel
-    @StateObject private var networkViewModel = AppDelegate.networkViewModel
-    @StateObject private var portsViewModel = AppDelegate.portsViewModel
-    @StateObject private var appsViewModel = AppDelegate.appsViewModel
-    @StateObject private var workspacesViewModel = AppDelegate.workspacesViewModel
-    @StateObject private var homebrewViewModel = AppDelegate.homebrewViewModel
-    @StateObject private var batteryViewModel = AppDelegate.batteryViewModel
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+
+    /// Built once and shared by every scene, so the menu-bar panel and the
+    /// dashboard window always show the same live data.
+    private let models = AppViewModels.shared
 
     var body: some Scene {
         MenuBarExtra {
-            MenuBarView(
-                clipboardViewModel: clipboardViewModel,
-                clockViewModel: clockViewModel,
-                memoryViewModel: viewModel,
-                batteryViewModel: batteryViewModel,
-                networkViewModel: networkViewModel,
-                portsViewModel: portsViewModel,
-                ipViewModel: ipViewModel,
-                appsViewModel: appsViewModel,
-                workspacesViewModel: workspacesViewModel
-            )
+            MenuBarView(models: models)
         } label: {
-            MenuBarIcon(viewModel: viewModel)
+            MenuBarIcon(viewModel: models.memory)
         }
         .menuBarExtraStyle(.window)
 
+        Window(DashboardView.windowTitle, id: DashboardView.windowID) {
+            DashboardView(models: models)
+        }
+        .defaultSize(
+            width: SurfaceLayout.windowDefaultWidth,
+            height: SurfaceLayout.windowDefaultHeight
+        )
+        .windowResizability(.contentMinSize)
+
         Window(SettingsView.windowTitle, id: SettingsView.windowID) {
-            SettingsView(viewModel: viewModel, clipboardViewModel: clipboardViewModel)
+            SettingsView(
+                memoryViewModel: models.memory,
+                clipboardViewModel: models.clipboard
+            )
         }
         .windowResizability(.contentSize)
 
-        Window(HomebrewView.windowTitle, id: HomebrewView.windowID) {
-            HomebrewView(viewModel: homebrewViewModel)
+        .commands {
+            CommandMenu("Monitor") {
+                Button("Refresh All") {
+                    AppViewModels.shared.refreshAll()
+                }
+                .keyboardShortcut("r", modifiers: .command)
+
+                Button("Open Dashboard") {
+                    AppViewModels.shared.openDashboard()
+                }
+                .keyboardShortcut("d", modifiers: [.command, .shift])
+
+                Button("Applications Manager…") {
+                    AppViewModels.shared.openApplications()
+                }
+                .keyboardShortcut("a", modifiers: [.command, .shift])
+
+                Button("Settings…") {
+                    AppViewModels.shared.openSettings()
+                }
+                .keyboardShortcut(",", modifiers: .command)
+            }
         }
-        .defaultSize(width: 1100, height: 700)
     }
 }
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
     @MainActor
-    static let settingsStore = SettingsStore()
-
-    @MainActor
-    static let clipboardViewModel = ClipboardViewModel()
-
-    @MainActor
-    static let clockViewModel = ClockViewModel()
-
-    @MainActor
-    static let ipViewModel = IPViewModel()
-
-    @MainActor
-    static let viewModel = MemoryViewModel(settingsStore: settingsStore)
-
-    @MainActor
-    static let networkViewModel = NetworkViewModel(settingsStore: settingsStore)
-
-    @MainActor
-    static let portsViewModel = PortsViewModel(settingsStore: settingsStore)
-
-    @MainActor
-    static let appsViewModel = AppsViewModel()
-
-    @MainActor
-    static let workspacesViewModel = WorkspacesViewModel()
-
-    @MainActor
-    static let homebrewViewModel = HomebrewViewModel()
-
-    @MainActor
-    static let batteryViewModel = BatteryViewModel(settingsStore: settingsStore)
-
-    @MainActor
     static let menuBarPanelPositioner = MenuBarPanelPositioner.shared
 
     @MainActor
-    static let panelVisibilityMonitor = PanelVisibilityMonitor.shared
+    static let surfaceVisibilityMonitor = SurfaceVisibilityMonitor.shared
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         Task { @MainActor in
-            Self.panelVisibilityMonitor.start()
-            Self.networkViewModel.start()
-            Self.portsViewModel.start()
-            Self.batteryViewModel.start()
+            let models = AppViewModels.shared
+            Self.surfaceVisibilityMonitor.start()
+            models.network.start()
+            models.ports.start()
+            models.battery.start()
             Self.menuBarPanelPositioner.start()
         }
     }

@@ -7,7 +7,7 @@ struct PortRow: View {
     let onForceKill: () -> Void
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: Spacing.md) {
             Text(String(port.endpoint.port))
                 .font(.system(.title3, design: .rounded))
                 .fontWeight(.semibold)
@@ -15,7 +15,7 @@ struct PortRow: View {
                 .frame(minWidth: 48, alignment: .leading)
                 .accessibilityLabel("Port \(port.endpoint.port)")
 
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: Spacing.hairline) {
                 Text(port.processName)
                     .font(.callout)
                     .foregroundColor(.primary)
@@ -28,7 +28,7 @@ struct PortRow: View {
 
             Spacer()
 
-            VStack(alignment: .trailing, spacing: 2) {
+            VStack(alignment: .trailing, spacing: Spacing.hairline) {
                 Text("PID \(port.pid)")
                     .font(.caption)
                     .monospacedDigit()
@@ -38,8 +38,8 @@ struct PortRow: View {
                     .foregroundColor(.secondary)
             }
         }
-        .padding(.vertical, 6)
-        .padding(.horizontal, 10)
+        .padding(.vertical, Spacing.xs)
+        .padding(.horizontal, Spacing.compact)
         .contextMenu {
             Button("Copy Address") {
                 copy(port.endpoint.addressString)

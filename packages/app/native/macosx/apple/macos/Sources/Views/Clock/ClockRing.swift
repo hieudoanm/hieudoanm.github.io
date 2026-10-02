@@ -1,7 +1,11 @@
 import SwiftUI
 
-/// Circular countdown ring shared by the Timer and Pomodoro sub-tabs.
+/// Circular countdown ring shared by the Timer and Pomodoro screens.
+///
+/// `size` follows the surface: 160 points in the menu-bar panel, as much as
+/// the window screen allows.
 struct ClockRing<Center: View>: View {
+    var size: CGFloat = 160
     let progress: Double
     let color: Color
     @ViewBuilder var center: () -> Center
@@ -9,7 +13,7 @@ struct ClockRing<Center: View>: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(Color.primary.opacity(0.12), lineWidth: 8)
+                .stroke(Palette.track, lineWidth: 8)
             Circle()
                 .trim(from: 0, to: max(0, min(1, progress)))
                 .stroke(
@@ -17,9 +21,9 @@ struct ClockRing<Center: View>: View {
                     style: StrokeStyle(lineWidth: 8, lineCap: .round)
                 )
                 .rotationEffect(.degrees(-90))
-                .animation(.linear(duration: 0.5), value: progress)
+                .animation(Motion.linear(Motion.ring), value: progress)
             center()
         }
-        .frame(width: 160, height: 160)
+        .frame(width: size, height: size)
     }
 }

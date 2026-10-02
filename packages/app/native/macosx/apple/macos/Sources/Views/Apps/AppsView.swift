@@ -1,19 +1,54 @@
 import MacOSXCore
 import SwiftUI
 
-/// The Apps tab: running apps and saved workspaces.
+/// The Apps section: running apps and saved workspaces.
 struct AppsView: View {
     @ObservedObject var appsViewModel: AppsViewModel
     @ObservedObject var workspacesViewModel: WorkspacesViewModel
 
-    private enum Section: Hashable {
+    let layout: ContentLayout
+
+    init(
+        appsViewModel: AppsViewModel,
+        workspacesViewModel: WorkspacesViewModel,
+        layout: ContentLayout = .panel
+    ) {
+        self.appsViewModel = appsViewModel
+        self.workspacesViewModel = workspacesViewModel
+        self.layout = layout
+    }
+
+    private enum Section: Hashable, CaseIterable {
         case running
         case workspaces
+
+        var title: String {
+            switch self {
+            case .running: return "Running"
+            case .workspaces: return "Workspaces"
+            }
+        }
+
+        var systemImage: String {
+            switch self {
+            case .running: return "macwindow"
+            case .workspaces: return "square.grid.2x2"
+            }
+        }
     }
 
     @State private var section: Section = .running
 
     var body: some View {
+        switch layout {
+        case .panel:
+            panelLayout
+        case .window:
+            windowLayout
+        }
+    }
+
+    private var panelLayout: some View {
         VStack(alignment: .leading, spacing: 0) {
             header
 
@@ -23,15 +58,20 @@ struct AppsView: View {
 
             Divider()
 
-            content
+            sectionContent(section)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
-        .padding(14)
-        .task {
-            appsViewModel.start()
-        }
-        .onDisappear {
-            appsViewModel.stop()
+        .padding(Spacing.inset)
+    }
+
+    private var windowLayout: some View {
+        SectionGrid(
+            items: Section.allCases,
+            title: \.title,
+            minimumColumnWidth: 340,
+            cardHeight: 420
+        ) { item in
+            sectionContent(item)
         }
     }
 
@@ -50,13 +90,14 @@ struct AppsView: View {
             .buttonStyle(.borderless)
             .help("Refresh")
         }
-        .padding(.bottom, 16)
+        .padding(.bottom, Spacing.lg)
     }
 
     private var sectionPicker: some View {
         Picker("Section", selection: $section) {
-            Text("Running").tag(Section.running)
-            Text("Workspaces").tag(Section.workspaces)
+            ForEach(Section.allCases, id: \.self) { item in
+                Text(item.title).tag(item)
+            }
         }
         .pickerStyle(.segmented)
         .labelsHidden()
@@ -64,14 +105,12 @@ struct AppsView: View {
     }
 
     @ViewBuilder
-    private var content: some View {
+    private func sectionContent(_ section: Section) -> some View {
         switch section {
         case .running:
             RunningAppsSectionView(viewModel: appsViewModel)
-                .transition(.opacity)
         case .workspaces:
             WorkspacesSectionView(viewModel: workspacesViewModel)
-                .transition(.opacity)
         }
     }
 

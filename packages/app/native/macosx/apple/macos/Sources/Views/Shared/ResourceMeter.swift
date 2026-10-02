@@ -23,7 +23,7 @@ struct ResourceMeter: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
+        VStack(alignment: .leading, spacing: Spacing.tight) {
             HStack {
                 Text(title)
                     .font(.caption)

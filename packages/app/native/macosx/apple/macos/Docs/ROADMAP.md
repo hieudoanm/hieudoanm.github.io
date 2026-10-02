@@ -159,3 +159,42 @@
 - [x] `Battery unavailable` state on Macs without a readable battery
 - [ ] Charge history / time-series chart
 - [ ] Low-battery and charge-limit notifications
+
+## Phase 13 — Dashboard Window
+
+> A window-based UI for long-lived monitoring, with room to show more at once
+> than the panel can.
+
+- [x] `SurfaceSection` section model (single source of truth for the menu-bar
+      tabs and the window sidebar) with unit tests
+- [x] `DashboardView` window: `NavigationSplitView` sidebar + full-size content,
+      reusing every existing section view
+- [x] Shared `AppViewModels` container so both surfaces drive the same view
+      models instead of separate instances
+- [x] Per-surface refresh gating: `SurfaceVisibilityMonitor` treats the panel or
+      the dashboard window (`MacOSX.dashboard`) as a live surface
+- [x] `⇧⌘D` dashboard, `⇧⌘A` Applications Manager, `⌘,` settings, `⌘R`
+      refresh-all commands; the app still launches with no Dock icon and
+      promotes itself only while a window is open
+- [x] One window instead of two: the Applications Manager moved into the
+      dashboard sidebar (`DashboardRoute`, `ApplicationsSidebarGroup`) and the
+      standalone Homebrew window with its nested sidebar was removed
+- [x] No tab strip in the window; `ContentLayout.window` + `SectionGrid` lay each
+      section's sub-sections out side by side as cards
+- [x] Clipboard keeps its segmented control in the window because it filters one
+      list rather than navigating
+- [ ] Window remembers per-section toolbar state (e.g. sort order, search filters)
+- [ ] Optional "open window instead of panel" menu-bar click preference
+
+## Phase 14 — Menu Bar Polish
+
+> Make a menu-bar glance sufficient on its own.
+
+- [x] Configurable metric set (`MenuBarMetric` / `MenuBarMetrics`): CPU, Memory,
+      Storage, Network, Battery, persisted, deduplicated, never empty
+- [x] `MenuBarDisplay` (percentage / GB / ratio) applies to every metric, not
+      only disk
+- [x] Threshold tinting in the menu bar (orange ≥ 70%, red ≥ 90%)
+- [x] Single shared Settings / Quit footer instead of per-tab duplicates
+- [ ] Menu-bar item shows the highest-priority metric when space is tight
+- [ ] Option-click the menu-bar item to cycle metrics without opening Settings

@@ -7,13 +7,13 @@ struct AppTile: View {
     let app: InstalledApp
 
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Spacing.sm) {
             Image(nsImage: icon)
                 .resizable()
                 .frame(width: 56, height: 56)
                 .accessibilityHidden(true)
 
-            VStack(spacing: 3) {
+            VStack(spacing: Spacing.iconGap) {
                 Text(app.name)
                     .font(.caption.weight(.semibold))
                     .lineLimit(1)
@@ -29,12 +29,12 @@ struct AppTile: View {
             }
         }
         .frame(maxWidth: .infinity)
-        .padding(12)
+        .padding(Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 10)
-                .fill(.quaternary.opacity(0.4))
+            RoundedRectangle(cornerRadius: Radius.large)
+                .fill(Palette.quietFill)
         )
-        .contentShape(RoundedRectangle(cornerRadius: 10))
+        .contentShape(RoundedRectangle(cornerRadius: Radius.large))
     }
 
     private var icon: NSImage {

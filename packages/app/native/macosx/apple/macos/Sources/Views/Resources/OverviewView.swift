@@ -7,7 +7,7 @@ struct OverviewView: View {
     @ObservedObject var batteryViewModel: BatteryViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: Spacing.md) {
             row(
                 icon: "cpu",
                 title: "CPU",
@@ -46,12 +46,12 @@ struct OverviewView: View {
     }
 
     private var batteryRow: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: Spacing.md) {
             Image(systemName: "battery.100percent")
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
 
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: Spacing.hairline) {
                 Text("Battery")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -104,12 +104,12 @@ struct OverviewView: View {
         valueText: String?,
         threshold: UsageThreshold
     ) -> some View {
-        HStack(spacing: 12) {
+        HStack(spacing: Spacing.md) {
             Image(systemName: icon)
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
 
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: Spacing.hairline) {
                 Text(title)
                     .font(.caption)
                     .foregroundColor(.secondary)

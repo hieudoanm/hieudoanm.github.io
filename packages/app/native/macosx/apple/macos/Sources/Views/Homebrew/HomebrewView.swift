@@ -1,26 +1,24 @@
 import MacOSXCore
 import SwiftUI
 
+/// The Applications Manager content, hosted in the dashboard window's detail
+/// column. Navigation lives in the window sidebar, so this view only renders the
+/// selected destination.
 struct HomebrewView: View {
-    static let windowID = "homebrew"
-    static let windowTitle = "Homebrew"
-
     @ObservedObject var viewModel: HomebrewViewModel
+
+    let section: HomebrewViewModel.Section
 
     var body: some View {
         Group {
             if viewModel.homebrewMissing {
                 HomebrewMissingView(onRetry: { Task { await viewModel.checkHomebrew() } })
             } else {
-                NavigationSplitView {
-                    SidebarView(viewModel: viewModel)
-                } detail: {
-                    detailView
-                }
+                detail
             }
         }
         .task {
-            await viewModel.start()
+            await viewModel.startIfNeeded()
         }
         .alert("Homebrew", isPresented: alertPresented) {
             Button("OK", role: .cancel) {}
@@ -30,28 +28,10 @@ struct HomebrewView: View {
     }
 
     @ViewBuilder
-    private var detailView: some View {
-        switch viewModel.selectedSection.group {
-        case .applications:
-            applicationsDetail
-        case .homebrew:
-            homebrewDetail
-        }
-    }
-
-    @ViewBuilder
-    private var applicationsDetail: some View {
-        switch viewModel.selectedSection {
+    private var detail: some View {
+        switch section {
         case .apps:
             BrewAppsView(viewModel: viewModel)
-        default:
-            EmptyView()
-        }
-    }
-
-    @ViewBuilder
-    private var homebrewDetail: some View {
-        switch viewModel.selectedSection {
         case .discover:
             DiscoverView(viewModel: viewModel)
         case .installed:
@@ -60,8 +40,6 @@ struct HomebrewView: View {
             UpdatesView(viewModel: viewModel)
         case .services:
             ServicesView(viewModel: viewModel)
-        case .apps:
-            EmptyView()
         }
     }
 

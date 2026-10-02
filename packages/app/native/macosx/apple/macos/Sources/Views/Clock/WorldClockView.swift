@@ -34,7 +34,7 @@ struct WorldClockView: View {
     }
 
     private var searchField: some View {
-        HStack(spacing: 6) {
+        HStack(spacing: Spacing.xs) {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
@@ -52,7 +52,7 @@ struct WorldClockView: View {
                 .help("Clear search")
             }
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.sm)
     }
 
     private var cityList: some View {
@@ -74,9 +74,9 @@ struct WorldClockView: View {
     }
 
     private var emptyState: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Spacing.sm) {
             Image(systemName: "globe")
-                .font(.system(size: 28, weight: .regular))
+                .font(Typography.emptyStateIcon)
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
             Text("No cities match \"\(viewModel.searchQuery)\"")
@@ -85,7 +85,7 @@ struct WorldClockView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 40)
+        .padding(.vertical, Spacing.huge)
         .accessibilityElement(children: .combine)
     }
 
@@ -93,9 +93,9 @@ struct WorldClockView: View {
         Text("Weather via Open-Meteo · 10 min")
             .font(.system(.caption2, design: .monospaced))
             .tracking(1)
-            .foregroundColor(Color.secondary.opacity(0.6))
+            .foregroundColor(Palette.quietText)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 6)
+            .padding(.vertical, Spacing.xs)
     }
 }
 
@@ -106,28 +106,28 @@ private struct CityClockRow: View {
 
     var body: some View {
         HStack {
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 6) {
+            VStack(alignment: .leading, spacing: Spacing.hairline) {
+                HStack(spacing: Spacing.xs) {
                     Text(city.label.uppercased())
                         .font(.caption2)
                         .tracking(1)
-                        .foregroundColor(Color.primary.opacity(0.6))
+                        .foregroundColor(Palette.muted)
                     Text(city.country)
                         .font(.caption2)
-                        .foregroundColor(Color.secondary.opacity(0.4))
+                        .foregroundColor(Palette.dimmed)
                 }
                 Text(time)
                     .font(.system(.title3, design: .monospaced))
                     .monospacedDigit()
                     .foregroundColor(.primary)
-                    .animation(.linear(duration: 1), value: time)
+                    .animation(Motion.linear(Motion.face), value: time)
             }
 
             Spacer()
 
             WeatherBadgeView(weather: weather)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.sm)
         .accessibilityElement(children: .combine)
         .accessibilityLabel(
             "\(city.label), \(time), "
@@ -142,7 +142,7 @@ private struct WeatherBadgeView: View {
 
     var body: some View {
         if let weather {
-            VStack(alignment: .trailing, spacing: 2) {
+            VStack(alignment: .trailing, spacing: Spacing.hairline) {
                 Text("\(Int(weather.temperatureCelsius.rounded()))°C")
                     .font(.system(.title3, design: .monospaced))
                     .monospacedDigit()

@@ -17,6 +17,7 @@ struct SettingsStoreTests {
         let (store, dir) = makeStore()
         #expect(store.refreshInterval == 1.0)
         #expect(store.menuBarDisplay == .percentage)
+        #expect(store.menuBarMetrics == .standard)
         try? FileManager.default.removeItem(at: dir)
     }
 
@@ -25,9 +26,11 @@ struct SettingsStoreTests {
         let (store, dir) = makeStore()
         store.refreshInterval = 5.0
         store.menuBarDisplay = .usedOverTotal
+        store.menuBarMetrics = MenuBarMetrics([.memory])
         let loaded = SettingsStore(directoryURL: dir)
         #expect(loaded.refreshInterval == 5.0)
         #expect(loaded.menuBarDisplay == .usedOverTotal)
+        #expect(loaded.menuBarMetrics == MenuBarMetrics([.memory]))
         try? FileManager.default.removeItem(at: dir)
     }
 
@@ -40,6 +43,7 @@ struct SettingsStoreTests {
         let store = SettingsStore(directoryURL: dir)
         #expect(store.refreshInterval == 1.0)
         #expect(store.menuBarDisplay == .percentage)
+        #expect(store.menuBarMetrics == .standard)
         try? FileManager.default.removeItem(at: dir)
     }
 
@@ -52,6 +56,7 @@ struct SettingsStoreTests {
         let store = SettingsStore(directoryURL: dir)
         #expect(store.refreshInterval == 2.0)
         #expect(store.menuBarDisplay == .percentage)
+        #expect(store.menuBarMetrics == .standard)
         try? FileManager.default.removeItem(at: dir)
     }
 }

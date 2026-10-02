@@ -1,21 +1,52 @@
 import MacOSXCore
 import SwiftUI
 
-/// The Network tab: live traffic, listening ports, and IP / DNS lookups.
+/// The Network section: live traffic, listening ports, and IP / DNS lookups.
 struct NetworkView: View {
     @ObservedObject var networkViewModel: NetworkViewModel
     @ObservedObject var portsViewModel: PortsViewModel
     @ObservedObject var ipViewModel: IPViewModel
 
-    private enum Section: Hashable {
+    let layout: ContentLayout
+
+    init(
+        networkViewModel: NetworkViewModel,
+        portsViewModel: PortsViewModel,
+        ipViewModel: IPViewModel,
+        layout: ContentLayout = .panel
+    ) {
+        self.networkViewModel = networkViewModel
+        self.portsViewModel = portsViewModel
+        self.ipViewModel = ipViewModel
+        self.layout = layout
+    }
+
+    private enum Section: Hashable, CaseIterable {
         case traffic
         case ports
         case ip
+
+        var title: String {
+            switch self {
+            case .traffic: return "Traffic"
+            case .ports: return "Ports"
+            case .ip: return "IP & DNS"
+            }
+        }
     }
 
     @State private var section: Section = .traffic
 
     var body: some View {
+        switch layout {
+        case .panel:
+            panelLayout
+        case .window:
+            windowLayout
+        }
+    }
+
+    private var panelLayout: some View {
         VStack(alignment: .leading, spacing: 0) {
             header
 
@@ -25,10 +56,21 @@ struct NetworkView: View {
 
             Divider()
 
-            content
+            sectionContent(section)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
-        .padding(14)
+        .padding(Spacing.inset)
+    }
+
+    private var windowLayout: some View {
+        SectionGrid(
+            items: Section.allCases,
+            title: \.title,
+            minimumColumnWidth: 340,
+            cardHeight: 380
+        ) { item in
+            sectionContent(item)
+        }
     }
 
     private var header: some View {
@@ -46,14 +88,14 @@ struct NetworkView: View {
             .buttonStyle(.borderless)
             .help("Refresh")
         }
-        .padding(.bottom, 16)
+        .padding(.bottom, Spacing.lg)
     }
 
     private var sectionPicker: some View {
         Picker("Section", selection: $section) {
-            Text("Traffic").tag(Section.traffic)
-            Text("Ports").tag(Section.ports)
-            Text("IP & DNS").tag(Section.ip)
+            ForEach(Section.allCases, id: \.self) { item in
+                Text(item.title).tag(item)
+            }
         }
         .pickerStyle(.segmented)
         .labelsHidden()
@@ -61,17 +103,14 @@ struct NetworkView: View {
     }
 
     @ViewBuilder
-    private var content: some View {
+    private func sectionContent(_ section: Section) -> some View {
         switch section {
         case .traffic:
             TrafficView(viewModel: networkViewModel)
-                .transition(.opacity)
         case .ports:
             PortsSectionView(viewModel: portsViewModel)
-                .transition(.opacity)
         case .ip:
-            IPSectionView(viewModel: ipViewModel)
-                .transition(.opacity)
+            IPSectionView(viewModel: ipViewModel, layout: layout)
         }
     }
 
