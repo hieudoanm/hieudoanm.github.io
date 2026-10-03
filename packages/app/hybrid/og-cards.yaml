@@ -1,0 +1,454 @@
+# Social cards for the hybrid apps, rendered by landify's card pipeline into
+# each app's public/og/. One entry per app that has a public/ dir.
+#
+# Regenerate with:
+#   cd packages/app/headless/landify/languages/go
+#   go run ./cmd/ogcard ../../../../hybrid/og-cards.yaml ../../../../hybrid
+#   cd ../../../../hybrid && for d in */*/public/og; do rsvg-convert -o "$d/og.png" "$d/og.svg"; done
+#
+# name and description come from the app's own metadata export in
+# src/app/layout.tsx; theme comes from the light daisyUI theme its layout names
+# with data-theme; kicker and tags describe what the app actually does. url is
+# the app's public address, as listed in packages/app/hybrid/README.md.
+cards:
+  - app: developer-tools/api
+    url: 'https://hieudoanm.github.io/open/api/'
+    name: API Client
+    kicker: 'Every protocol, one client'
+    title: 'Debug any API in the browser'
+    description: 'REST, GraphQL, gRPC, WebSocket and MQTT in one client, with collections and saved history.'
+    tags: ['REST & GraphQL', 'gRPC', 'WebSocket & MQTT', 'Collections']
+    theme:
+      base: '#ffffff'
+      content: '#1b1b1f'
+      primary: '#ff6c37'
+      secondary: '#7347c1'
+      info: '#2563eb'
+      warning: '#d97706'
+      success: '#16a34a'
+      error: '#dc2626'
+
+  - app: developer-tools/boilerplate
+    url: 'https://hieudoanm.github.io/open/boilerplate/'
+    name: Boilerplate
+    kicker: 'A starter, not a blank page'
+    title: '260+ screens, already built'
+    description: 'Next.js boilerplate covering app, CRM, developer, finance, health, mail, media, store and travel.'
+    tags: ['Next.js 16', 'Tailwind 4 + daisyUI', 'Tauri desktop', 'PWA ready']
+    theme:
+      base: '#ffffff'
+      content: '#1a1a1a'
+      primary: '#ff0030'
+      secondary: '#1f1f1f'
+      info: '#4da3ff'
+      warning: '#ffb000'
+      success: '#00c853'
+      error: '#ff0030'
+
+  - app: developer-tools/code
+    url: 'https://hieudoanm.github.io/open/code/'
+    name: Code Editor
+    kicker: 'CodeMirror 6, no server'
+    title: 'A code editor in the tab'
+    description: 'A web-based code editor with highlighting for JavaScript, TypeScript, Python, Rust and more.'
+    tags: ['CodeMirror 6', 'JS · TS · Python · Rust', 'Markdown · JSON', 'Runs client-side']
+    theme:
+      base: '#f8fafc'
+      content: '#0b1220'
+      primary: '#3b82f6'
+      secondary: '#0ea5e9'
+      info: '#06b6d4'
+      warning: '#f59e0b'
+      success: '#10b981'
+      error: '#ef4444'
+
+  - app: developer-tools/database
+    url: 'https://hieudoanm.github.io/open/database/'
+    name: SQLite Manager
+    kicker: 'SQLite, compiled to WASM'
+    title: 'Open a database, edit rows'
+    description: 'A modern SQLite database manager: run queries, browse tables and edit rows in the browser.'
+    tags: ['sql.js · WASM', 'Query editor', 'Table browser', 'IndexedDB']
+    theme:
+      base: '#f0fdfa'
+      content: '#0f2e27'
+      primary: '#0d9488'
+      secondary: '#10b981'
+      info: '#0891b2'
+      warning: '#d97706'
+      success: '#059669'
+      error: '#dc2626'
+
+  - app: developer-tools/diagram
+    url: 'https://hieudoanm.github.io/open/diagram/'
+    name: Diagram
+    kicker: 'Text in, diagram out'
+    title: 'A diagram editor you type'
+    description: 'A minimal text-driven diagram editor: write the DSL, watch a styled SVG preview update live.'
+    tags: ['Live SVG preview', '128 examples', 'Sequence & ER', 'Web · desktop · mobile']
+    theme:
+      base: '#ffffff'
+      content: '#1e1b4b'
+      primary: '#7c3aed'
+      secondary: '#06b6d4'
+      info: '#3b82f6'
+      warning: '#f59e0b'
+      success: '#10b981'
+      error: '#ef4444'
+
+  - app: education/doi
+    url: 'https://hieudoanm.github.io/open/doi/'
+    name: DOI
+    kicker: 'Crossref as a graph'
+    title: 'Explore the citation network'
+    description: 'Explore the Crossref citation network interactively: search works, trace references, follow clusters.'
+    tags: ['Force-directed graph', 'Crossref data', 'Search & filters', 'Cluster view']
+    theme:
+      base: '#fafaff'
+      content: '#1f2140'
+      primary: '#4f46e5'
+      secondary: '#0ea5e9'
+      info: '#0891b2'
+      warning: '#d97706'
+      success: '#059669'
+      error: '#dc2626'
+
+  - app: education/lingo
+    url: 'https://hieudoanm.github.io/open/lingo/'
+    name: Lingo
+    kicker: '12 subjects, 275 pages'
+    title: 'Learn by playing'
+    description: 'Vocabulary, economics, neuroscience, maths and engineering with calculators, visualisers and quizzes.'
+    tags: ['12 subjects', '275 interactive pages', 'Vocabulary & sign', 'Quizzes & labs']
+    theme:
+      base: '#ffffff'
+      content: '#4b4b4b'
+      primary: '#58cc02'
+      secondary: '#1cb0f6'
+      info: '#1cb0f6'
+      warning: '#ffc800'
+      success: '#58cc02'
+      error: '#ff4b4b'
+
+  - app: finance/tax
+    url: 'https://hieudoanm.github.io/open/tax/'
+    name: Tax
+    kicker: 'Vietnamese tax, sorted'
+    title: 'Personal and business tax'
+    description: 'Vietnamese tax management: a personal calculator, business submissions and an audit trail.'
+    tags: ['Personal calculator', 'Business filing', 'Audit trail']
+    theme:
+      base: '#f8fafc'
+      content: '#0f172a'
+      primary: '#0f766e'
+      secondary: '#b45309'
+      info: '#2563eb'
+      warning: '#d97706'
+      success: '#16a34a'
+      error: '#dc2626'
+
+  - app: food-drink/foody
+    url: 'https://hieudoanm.github.io/open/foody/'
+    name: Foody
+    kicker: 'Let fate choose'
+    title: 'Spin the wheel, eat better'
+    description: 'Spin the reel and let fate pick your next meal, with a weekly schedule and a reusable dish list.'
+    tags: ['Spin the wheel', 'Random picker', 'Weekly schedule', 'Dish lists']
+    theme:
+      base: '#fffaf3'
+      content: '#43302b'
+      primary: '#e2543f'
+      secondary: '#6da34d'
+      info: '#3d8fd1'
+      warning: '#f0a202'
+      success: '#6da34d'
+      error: '#d7263d'
+
+  - app: games/memory
+    url: 'https://hieudoanm.github.io/open/memory/'
+    name: Memory
+    kicker: '41 games, no install'
+    title: 'Trains, puzzles and odds'
+    description: 'Memory match, n-back, sudoku, 2048, 8-bit arcade and card odds — all in the browser.'
+    tags: ['Memory & n-back', 'Sudoku & puzzles', '8-bit arcade', 'Card odds']
+    theme:
+      base: '#faf8ff'
+      content: '#1f1440'
+      primary: '#8b5cf6'
+      secondary: '#f472b6'
+      info: '#6366f1'
+      warning: '#f59e0b'
+      success: '#10b981'
+      error: '#e11d48'
+
+  - app: graphics-design/exhibit
+    url: 'https://hieudoanm.github.io/open/exhibit/'
+    name: Exhibit
+    kicker: 'Screens worth copying'
+    title: 'A UI component showcase'
+    description: 'A showcase of UI applications: a full banking wallet, a point of sale, a chat and a menu builder.'
+    tags: ['Wallet & banking', 'Point of sale', 'Chat UI', 'Menu builder']
+    theme:
+      base: '#ffffff'
+      content: '#1c1c1c'
+      primary: '#7c3aed'
+      secondary: '#06b6d4'
+      info: '#0288d1'
+      warning: '#f9a825'
+      success: '#2e7d32'
+      error: '#d32f2f'
+
+  - app: graphics-design/photo
+    url: 'https://hieudoanm.github.io/open/photo/'
+    name: Photo
+    kicker: 'Layers, crop, albums'
+    title: 'An image editor in the tab'
+    description: 'A powerful image editor: a non-destructive layer stack, cropping and albums, all client-side.'
+    tags: ['Layer stack', 'Crop & resize', 'Albums', 'IndexedDB']
+    theme:
+      base: '#f7f7f3'
+      content: '#1f2b2b'
+      primary: '#4f772d'
+      secondary: '#31572c'
+      info: '#3b82f6'
+      warning: '#d97706'
+      success: '#65a30d'
+      error: '#b91c1c'
+
+  - app: graphics-design/svg
+    url: 'https://hieudoanm.github.io/open/svg/'
+    name: SVG
+    kicker: 'Canvas and code, side by side'
+    title: 'Draw vectors, read the source'
+    description: 'A modern vector graphics editor: shape tools on a canvas with the SVG source open beside it.'
+    tags: ['Shape tools', 'Live SVG source', 'Canvas + code', 'Export SVG']
+    theme:
+      base: '#fff5fb'
+      content: '#3b0a2b'
+      primary: '#ec4899'
+      secondary: '#06b6d4'
+      info: '#3b82f6'
+      warning: '#f59e0b'
+      success: '#10b981'
+      error: '#e11d48'
+
+  - app: graphics-design/video
+    url: 'https://hieudoanm.github.io/open/video/'
+    name: Video
+    kicker: '51 tools, nothing uploaded'
+    title: 'Video and audio, converted'
+    description: 'Browser-based video and audio processing: convert between formats, edit and extract audio locally.'
+    tags: ['51 tools', 'Convert & extract', 'Runs in-browser', 'No upload']
+    theme:
+      base: '#f4f4f5'
+      content: '#18181b'
+      primary: '#dc2626'
+      secondary: '#18181b'
+      info: '#3b82f6'
+      warning: '#d97706'
+      success: '#16a34a'
+      error: '#b91c1c'
+
+  - app: medical/brainbow
+    url: 'https://hieudoanm.github.io/open/brainbow/'
+    name: Brainbow
+    kicker: 'Channels, stacks, annotations'
+    title: 'Microscopy, annotated in place'
+    description: 'A microscopy image viewer and annotator for multi-channel rasters, z-stacks and large images.'
+    tags: ['Multi-channel', 'Z-stacks', 'Annotations', 'Large images']
+    theme:
+      base: '#faf9ff'
+      content: '#201a3a'
+      primary: '#7c3aed'
+      secondary: '#06b6d4'
+      info: '#6366f1'
+      warning: '#f59e0b'
+      success: '#10b981'
+      error: '#e11d48'
+
+  - app: medical/mri
+    url: 'https://hieudoanm.github.io/open/mri/'
+    name: MRI
+    kicker: 'From scan to result'
+    title: 'An MRI research workspace'
+    description: 'MRI research workspace and orchestration layer: studies, protocols, pipelines, models and a viewer.'
+    tags: ['DICOMweb', 'Pipelines', 'Protocols', 'Model library']
+    theme:
+      base: '#f8fafc'
+      content: '#0f1a26'
+      primary: '#2563eb'
+      secondary: '#64748b'
+      info: '#0284c7'
+      warning: '#d97706'
+      success: '#16a34a'
+      error: '#dc2626'
+
+  - app: productivity/office
+    url: 'https://hieudoanm.github.io/open/office/'
+    name: Office
+    kicker: 'Docs, sheets and slides'
+    title: 'A productivity suite, local'
+    description: 'A suite of productivity tools: calendar, tasks, CSV, Markdown and keynotes with a presenter view.'
+    tags: ['Calendar & tasks', 'CSV & Markdown', 'Keynotes', 'Presenter view']
+    theme:
+      base: '#ffffff'
+      content: '#202124'
+      primary: '#1a73e8'
+      secondary: '#188038'
+      info: '#1a73e8'
+      warning: '#f9ab00'
+      success: '#188038'
+      error: '#d93025'
+
+  - app: productivity/pdf
+    url: 'https://hieudoanm.github.io/open/pdf/'
+    name: PDF
+    kicker: 'Read, merge, compare'
+    title: 'A PDF viewer and editor'
+    description: 'A modern PDF viewer and editor: annotate, merge and compare files, with a toolbox of page tools.'
+    tags: ['Viewer & editor', 'Merge & compare', 'Page tools', 'Client-side']
+    theme:
+      base: '#fdf7f7'
+      content: '#2b1313'
+      primary: '#b91c1c'
+      secondary: '#374151'
+      info: '#2563eb'
+      warning: '#d97706'
+      success: '#16a34a'
+      error: '#b91c1c'
+
+  - app: productivity/resume
+    url: 'https://hieudoanm.github.io/open/resume/'
+    name: Resume
+    kicker: '64 templates, one export'
+    title: 'A resume builder that exports'
+    description: 'A free resume builder with 64 templates, live preview and PDF export.'
+    tags: ['64 templates', 'Live preview', 'PDF export']
+    theme:
+      base: '#fdfbf7'
+      content: '#1a2530'
+      primary: '#1e3a5f'
+      secondary: '#b08d2e'
+      info: '#2563eb'
+      warning: '#b45309'
+      success: '#1e8449'
+      error: '#9f1239'
+
+  - app: shopping/store
+    url: 'https://hieudoanm.github.io/open/store/'
+    name: Store
+    kicker: 'The whole shelf'
+    title: 'Browse and download apps'
+    description: 'Browse the collection and download each app for the web, desktop or mobile.'
+    tags: ['35 apps & extensions', 'Every platform', 'Signed releases', 'Version tracking']
+    theme:
+      base: '#ffffff'
+      content: '#1c1c1e'
+      primary: '#0071e3'
+      secondary: '#5e5ce6'
+      info: '#0a84ff'
+      warning: '#ff9f0a'
+      success: '#34c759'
+      error: '#ff3b30'
+
+  - app: social-networking/chat
+    url: 'https://hieudoanm.github.io/open/chat/'
+    name: Chat
+    kicker: 'Your models, your prompts'
+    title: 'An AI chat you control'
+    description: 'A modern AI chat interface with streaming replies, model switching and system prompt templates.'
+    tags: ['Streaming replies', 'Model switcher', 'Prompt templates', 'Local history']
+    theme:
+      base: '#f7faff'
+      content: '#0c1c33'
+      primary: '#2563eb'
+      secondary: '#0ea5e9'
+      info: '#0284c7'
+      warning: '#d97706'
+      success: '#16a34a'
+      error: '#e11d48'
+
+  - app: sports/chess
+    url: 'https://hieudoanm.github.io/open/chess/'
+    name: Chess
+    kicker: 'A full chess toolbox'
+    title: 'Board, clock and analysis'
+    description: 'A minimal chess toolbox: play on a board, run a clock, track Elo, review games and study openings.'
+    tags: ['Board & clock', 'Elo tracker', 'Game review', 'Opening library']
+    theme:
+      base: '#f6f3eb'
+      content: '#241c10'
+      primary: '#1f513f'
+      secondary: '#9b7f3f'
+      info: '#2f6f9e'
+      warning: '#a16207'
+      success: '#1e8449'
+      error: '#b91c1c'
+
+  - app: sports/football
+    url: 'https://hieudoanm.github.io/open/football/'
+    name: Football
+    kicker: 'Pick, place, plan'
+    title: 'Build a football squad'
+    description: 'Pick a formation, assign your squad, and manage your team through a season of tournaments.'
+    tags: ['Formations', 'Squad builder', 'Knock-out brackets', 'Match history']
+    theme:
+      base: '#f4fbf4'
+      content: '#0d2b12'
+      primary: '#16a34a'
+      secondary: '#f8fafc'
+      info: '#0284c7'
+      warning: '#d97706'
+      success: '#15803d'
+      error: '#dc2626'
+
+  - app: sports/tourney
+    url: 'https://hieudoanm.github.io/open/tourney/'
+    name: Tourney
+    kicker: 'Brackets that fill themselves'
+    title: 'Run a tournament'
+    description: 'Create and manage tournaments across multiple formats, from participants to standings and brackets.'
+    tags: ['Multiple formats', 'Auto brackets', 'Live standings', 'Match entry']
+    theme:
+      base: '#fffbeb'
+      content: '#33260a'
+      primary: '#ca8a04'
+      secondary: '#1e3a5f'
+      info: '#0284c7'
+      warning: '#d97706'
+      success: '#16a34a'
+      error: '#dc2626'
+
+  - app: utilities/docs
+    url: 'https://hieudoanm.github.io/open/docs/'
+    name: Hieu Doan
+    kicker: 'Notes and small tools'
+    title: 'A start page that works'
+    description: 'A start page with a calculator, clocks, data converters, developer utilities and a writing space.'
+    tags: ['Calculator', 'Clocks & timers', 'Data converters', 'Developer tools']
+    theme:
+      base: '#000000'
+      content: '#f5f5f5'
+      primary: '#ff0030'
+      secondary: '#f5f5f5'
+      info: '#4da3ff'
+      warning: '#ffb000'
+      success: '#00c853'
+      error: '#ff0030'
+
+  - app: utilities/password
+    url: 'https://hieudoanm.github.io/open/password/'
+    name: Password
+    kicker: 'Stored on device'
+    title: 'A password manager, local'
+    description: 'A secure password manager with a generator, a health audit and a vault you can lock and export.'
+    tags: ['Generator', 'Health audit', 'Vault lock', 'Encrypted export']
+    theme:
+      base: '#faf7ff'
+      content: '#241240'
+      primary: '#6d28d9'
+      secondary: '#0e7490'
+      info: '#2563eb'
+      warning: '#d97706'
+      success: '#16a34a'
+      error: '#dc2626'

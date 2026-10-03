@@ -167,6 +167,9 @@ func hex(r, g, b int) string {
 
 // contrastingText picks the readable foreground for a background: near-black
 // on light backgrounds, white on dark ones, using WCAG relative luminance.
+// The 0.5 cut is a page-level rule, so a color just above the WCAG crossover
+// point (luminance 0.179) still gets white. The card does not want that: its
+// monogram is large, so ogInkOn compares the two ratios instead.
 func contrastingText(r, g, b int) string {
 	if luminance(r, g, b) >= 0.5 {
 		return "#181d25"

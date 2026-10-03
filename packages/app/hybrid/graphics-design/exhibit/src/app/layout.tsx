@@ -6,6 +6,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Exibit - UI Exhibition',
   description: 'Showcase of UI Applications',
+  metadataBase: new URL('https://hieudoanm.github.io/open/exhibit/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Exhibit',
+    url: 'https://hieudoanm.github.io/open/exhibit/',
+    title: 'A UI component showcase',
+    description:
+      'A showcase of UI applications: a full banking wallet, a point of sale, a chat and a menu builder.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Exhibit — A UI component showcase',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'A UI component showcase',
+    description:
+      'A showcase of UI applications: a full banking wallet, a point of sale, a chat and a menu builder.',
+    images: ['/og/og.png'],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',

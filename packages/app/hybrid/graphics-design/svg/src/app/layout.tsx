@@ -7,6 +7,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'SVG - Vector Editor',
   description: 'A modern vector graphics editor built with Next.js',
+  metadataBase: new URL('https://hieudoanm.github.io/open/svg/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'SVG',
+    url: 'https://hieudoanm.github.io/open/svg/',
+    title: 'Draw vectors, read the source',
+    description:
+      'A modern vector graphics editor: shape tools on a canvas with the SVG source open beside it.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'SVG — Draw vectors, read the source',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Draw vectors, read the source',
+    description:
+      'A modern vector graphics editor: shape tools on a canvas with the SVG source open beside it.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

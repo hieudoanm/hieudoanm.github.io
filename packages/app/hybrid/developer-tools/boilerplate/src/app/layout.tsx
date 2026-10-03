@@ -8,6 +8,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Boilerplate',
   description: 'Next.js boilerplate',
+  metadataBase: new URL('https://hieudoanm.github.io/open/boilerplate/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Boilerplate',
+    url: 'https://hieudoanm.github.io/open/boilerplate/',
+    title: '260+ screens, already built',
+    description:
+      'Next.js boilerplate covering app, CRM, developer, finance, health, mail, media, store and travel.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Boilerplate — 260+ screens, already built',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '260+ screens, already built',
+    description:
+      'Next.js boilerplate covering app, CRM, developer, finance, health, mail, media, store and travel.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

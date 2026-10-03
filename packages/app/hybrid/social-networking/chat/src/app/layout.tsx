@@ -7,6 +7,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Chat - AI Chat Interface',
   description: 'A modern AI chat interface built with Next.js',
+  metadataBase: new URL('https://hieudoanm.github.io/open/chat/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Chat',
+    url: 'https://hieudoanm.github.io/open/chat/',
+    title: 'An AI chat you control',
+    description:
+      'A modern AI chat interface with streaming replies, model switching and system prompt templates.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Chat — An AI chat you control',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'An AI chat you control',
+    description:
+      'A modern AI chat interface with streaming replies, model switching and system prompt templates.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

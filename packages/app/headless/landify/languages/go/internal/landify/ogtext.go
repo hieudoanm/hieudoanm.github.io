@@ -3,6 +3,7 @@ package landify
 import (
 	"strings"
 	"unicode"
+	"unicode/utf8"
 )
 
 // Card geometry, in the 1200 × 630 frame every Open Graph card uses. The layout
@@ -34,22 +35,23 @@ const (
 	// Body: the copy fills the left column, the identity panel the right one.
 	// Both stop at ogTextBottom, so the panel's foot lines up with the last
 	// description line.
-	ogColumn     = ogPanelX - ogPad - ogGutter
-	ogTextTop    = 202
-	ogTextBottom = 584
-	ogKickerSize = 17
-	ogKickerStep = 30
-	ogTitleSize  = 58
-	ogTitleStep  = 62
-	ogTitleLines = 3
-	ogDescSize   = 25
-	ogDescStep   = 35
-	ogDescLines  = 3
-	ogGap        = 52 // last title baseline → first description baseline
-	ogKickerCap  = 12 // cap height of the kicker
-	ogAscender   = 45 // cap height of the title
-	ogTitleDesc  = 14 // descender of the title
-	ogDescDepth  = 7  // descender of the description
+	ogColumn      = ogPanelX - ogPad - ogGutter
+	ogTextTop     = 202
+	ogTextBottom  = 584
+	ogKickerSize  = 17
+	ogKickerStep  = 30
+	ogKickerTrack = 0.16 // letter-spacing, in ems
+	ogTitleSize   = 58
+	ogTitleStep   = 62
+	ogTitleLines  = 3
+	ogDescSize    = 25
+	ogDescStep    = 35
+	ogDescLines   = 3
+	ogGap         = 52 // last title baseline → first description baseline
+	ogKickerCap   = 12 // cap height of the kicker
+	ogAscender    = 45 // cap height of the title
+	ogTitleDesc   = 14 // descender of the title
+	ogDescDepth   = 7  // descender of the description
 
 	// Identity panel.
 	ogPanelX        = 748
@@ -74,8 +76,13 @@ const (
 	ogPillFrame = 2*ogPillPadX + ogPillDot + ogPillTextGap
 )
 
-// ogMinContrast is the WCAG AA ratio every run of card text has to clear.
-const ogMinContrast = 4.5
+// Contrast floors, WCAG AA. Text at 24px or larger, or 18.66px bold and up, is
+// large text and only has to clear 3:1; the monogram is the card's only run that
+// qualifies, at 26px bold in the header and 42px on the panel.
+const (
+	ogMinContrast      = 4.5
+	ogLargeMinContrast = 3.0
+)
 
 // Advance widths per rune class, as a fraction of the font size. Wrapping only
 // needs an estimate, and it has to stay deliberately generous: a line that
@@ -111,6 +118,24 @@ func ogTextWidth(s string, size float64) float64 {
 		total += ogRuneWidth(r, size)
 	}
 	return total
+}
+
+// ogTrackWidth is ogTextWidth plus letter-spacing, which SVG adds after every
+// glyph including the last. The kicker is tracked, so it needs this.
+func ogTrackWidth(s string, size, tracking float64) float64 {
+	return ogTextWidth(s, size) + float64(utf8.RuneCountInString(s))*tracking*size
+}
+
+// ogClampTrack cuts s to maxWidth at the given tracking, for text drawn on a
+// single line that has to fit beside the identity panel.
+func ogClampTrack(s string, size, tracking, maxWidth float64) string {
+	if ogTrackWidth(s, size, tracking) <= maxWidth {
+		return s
+	}
+	for s != "" && ogTrackWidth(s+"…", size, tracking) > maxWidth {
+		s = strings.TrimRight(s[:len(s)-1], " ")
+	}
+	return s + "…"
 }
 
 // ogWrap breaks s into at most maxLines lines that each fit maxWidth, cutting

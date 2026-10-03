@@ -7,6 +7,30 @@ import { Header } from '@/components/organisms/Header';
 export const metadata: Metadata = {
   title: 'Tax',
   description: 'Vietnamese tax management app',
+  metadataBase: new URL('https://hieudoanm.github.io/open/tax/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Tax',
+    url: 'https://hieudoanm.github.io/open/tax/',
+    title: 'Personal and business tax',
+    description:
+      'Vietnamese tax management: a personal calculator, business submissions and an audit trail.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Tax — Personal and business tax',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Personal and business tax',
+    description:
+      'Vietnamese tax management: a personal calculator, business submissions and an audit trail.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

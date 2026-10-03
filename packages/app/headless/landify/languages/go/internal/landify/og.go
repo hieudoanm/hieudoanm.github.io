@@ -84,7 +84,7 @@ func ogCard(cfg *Config) (OGCard, error) {
 		Panel:    ogPanelBox(),
 		Site:     cfg.Site.Name,
 		Monogram: ogMonogram(cfg.Site.Name),
-		Kicker:   strings.ToUpper(strings.TrimSpace(og.Kicker)),
+		Kicker:   ogKicker(og.Kicker),
 		Host:     ogHost(og.URL),
 		Title:    title,
 		Lines:    ogWrap(title, ogTitleSize, ogColumn, ogTitleLines),
@@ -96,6 +96,14 @@ func ogCard(cfg *Config) (OGCard, error) {
 	ogCenterText(&card)
 	ogPills(&card)
 	return card, nil
+}
+
+// ogKicker upper-cases the kicker and cuts it to the copy column, so a long
+// one cannot run under the identity panel. The card draws it on one line with
+// wide tracking, which the width estimate does not model; the column is padded
+// by the extra tracking a full line would need.
+func ogKicker(kicker string) string {
+	return ogClampTrack(strings.ToUpper(strings.TrimSpace(kicker)), ogKickerSize, ogKickerTrack, ogColumn)
 }
 
 // ogTrimDescription flattens a folded or multi-line description onto the

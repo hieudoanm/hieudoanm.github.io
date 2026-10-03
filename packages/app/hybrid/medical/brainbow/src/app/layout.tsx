@@ -8,6 +8,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Brainbow',
   description: 'Brainbow microscopy image viewer and annotator',
+  metadataBase: new URL('https://hieudoanm.github.io/open/brainbow/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Brainbow',
+    url: 'https://hieudoanm.github.io/open/brainbow/',
+    title: 'Microscopy, annotated in place',
+    description:
+      'A microscopy image viewer and annotator for multi-channel rasters, z-stacks and large images.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Brainbow — Microscopy, annotated in place',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Microscopy, annotated in place',
+    description:
+      'A microscopy image viewer and annotator for multi-channel rasters, z-stacks and large images.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

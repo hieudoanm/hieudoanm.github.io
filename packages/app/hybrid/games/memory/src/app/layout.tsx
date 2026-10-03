@@ -6,6 +6,30 @@ import { Header } from '@/components/organisms/Header';
 export const metadata: Metadata = {
   title: 'Memory Games',
   description: 'Memory games: Memory Match, Pi, N-Back, Recall',
+  metadataBase: new URL('https://hieudoanm.github.io/open/memory/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Memory',
+    url: 'https://hieudoanm.github.io/open/memory/',
+    title: 'Trains, puzzles and odds',
+    description:
+      'Memory match, n-back, sudoku, 2048, 8-bit arcade and card odds — all in the browser.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Memory — Trains, puzzles and odds',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Trains, puzzles and odds',
+    description:
+      'Memory match, n-back, sudoku, 2048, 8-bit arcade and card odds — all in the browser.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

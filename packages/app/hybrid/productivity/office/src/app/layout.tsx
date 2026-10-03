@@ -7,6 +7,30 @@ import { Header } from '@/components/shared/organisms/Header';
 export const metadata: Metadata = {
   title: 'Office - Productivity',
   description: 'A suite of productivity tools for planning your work',
+  metadataBase: new URL('https://hieudoanm.github.io/open/office/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Office',
+    url: 'https://hieudoanm.github.io/open/office/',
+    title: 'A productivity suite, local',
+    description:
+      'A suite of productivity tools: calendar, tasks, CSV, Markdown and keynotes with a presenter view.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Office — A productivity suite, local',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'A productivity suite, local',
+    description:
+      'A suite of productivity tools: calendar, tasks, CSV, Markdown and keynotes with a presenter view.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

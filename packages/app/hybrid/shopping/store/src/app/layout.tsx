@@ -6,16 +6,35 @@ import type { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Store',
   description: 'Apps Store - Browse and download apps',
+  metadataBase: new URL('https://hieudoanm.github.io/open/store/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Store',
+    url: 'https://hieudoanm.github.io/open/store/',
+    title: 'Browse and download apps',
+    description:
+      'Browse the collection and download each app for the web, desktop or mobile.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Store — Browse and download apps',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Browse and download apps',
+    description:
+      'Browse the collection and download each app for the web, desktop or mobile.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
     title: 'Store',
-  },
-  openGraph: {
-    title: 'Store',
-    description: 'Apps Store - Browse and download apps',
-    type: 'website',
   },
 };
 

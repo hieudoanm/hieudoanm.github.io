@@ -7,6 +7,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Photo - Image Editor',
   description: 'A powerful image editor',
+  metadataBase: new URL('https://hieudoanm.github.io/open/photo/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Photo',
+    url: 'https://hieudoanm.github.io/open/photo/',
+    title: 'An image editor in the tab',
+    description:
+      'A powerful image editor: a non-destructive layer stack, cropping and albums, all client-side.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Photo — An image editor in the tab',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'An image editor in the tab',
+    description:
+      'A powerful image editor: a non-destructive layer stack, cropping and albums, all client-side.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

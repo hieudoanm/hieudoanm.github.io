@@ -434,23 +434,118 @@ func TestOGColorsMeetContrast(t *testing.T) {
 			t.Fatal(err)
 		}
 		for _, c := range []struct {
-			name, fg, bg string
+			name  string
+			fg    string
+			bgs   []string
+			ratio float64
 		}{
-			{"kicker", colors.AccentInk, colors.Base},
-			{"title", colors.Ink, colors.Base},
-			{"description", colors.Muted, colors.Base},
-			{"pill label", colors.Ink, colors.Pill},
-			{"tile label", colors.AccentOnDark, colors.Accent},
+			{"kicker", colors.AccentInk, []string{colors.Base}, ogMinContrast},
+			{"title", colors.Ink, []string{colors.Base}, ogMinContrast},
+			{"description", colors.Muted, []string{colors.Base}, ogMinContrast},
+			{"pill label", colors.Ink, []string{colors.Pill}, ogMinContrast},
+			{"tile label", colors.AccentOnDark, []string{colors.Accent, colors.AccentDeep}, ogLargeMinContrast},
 		} {
-			ratio, err := contrastRatio(c.fg, c.bg)
+			for _, bg := range c.bgs {
+				ratio, err := contrastRatio(c.fg, bg)
+				if err != nil {
+					t.Fatal(err)
+				}
+				if ratio < c.ratio {
+					t.Errorf("%s on %s: %s on %s is %.2f:1, want %.1f:1",
+						themeName, c.name, c.fg, bg, ratio, c.ratio)
+				}
+			}
+		}
+	}
+}
+
+// A daisyUI-style theme passes a near-white neutral, which is a surface tone
+// rather than the muted text landify's neutral slot is for. The card has to darken
+// it or the description prints almost invisibly on a light base.
+func TestOGMutedOutranksASurfaceToneNeutral(t *testing.T) {
+	theme := DefaultTheme()
+	theme.Base, theme.Primary, theme.Neutral = "#ffffff", "#0d9488", "#e5e5e5"
+	tokens, err := Tokens(theme)
+	if err != nil {
+		t.Fatal(err)
+	}
+	colors, err := ogColors(tokens)
+	if err != nil {
+		t.Fatal(err)
+	}
+	ratio, err := contrastRatio(colors.Muted, colors.Base)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if ratio < ogMinContrast {
+		t.Errorf("muted %s on %s is %.2f:1, want %.1f:1", colors.Muted, colors.Base, ratio, ogMinContrast)
+	}
+	if colors.Muted == "#e5e5e5" {
+		t.Error("muted is the theme's raw neutral, want it darkened")
+	}
+}
+
+// The tile is painted with the accent gradient, so the ink has to read on both
+// ends of it: white disappears on a dark end, dark ink on a bright one.
+func TestOGInkOnReadsOnBothEndsOfTheTile(t *testing.T) {
+	for _, tc := range []struct {
+		name         string
+		accent, deep string
+		want         string
+	}{
+		{"bright orange takes dark ink", "#ff6c37", "#d95527", ogInk},
+		{"lime takes dark ink", "#58cc02", "#4aad02", ogInk},
+		{"slate keeps white", "#1e293b", "#1a2233", "#ffffff"},
+		{"deep red keeps white", "#b91c1c", "#9d1717", "#ffffff"},
+	} {
+		got, err := ogInkOn(tc.accent, tc.deep)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if got != tc.want {
+			t.Errorf("%s: ogInkOn(%s, %s) = %s, want %s", tc.name, tc.accent, tc.deep, got, tc.want)
+		}
+		for _, bg := range []string{tc.accent, tc.deep} {
+			ratio, err := contrastRatio(got, bg)
 			if err != nil {
 				t.Fatal(err)
 			}
-			if ratio < ogMinContrast {
-				t.Errorf("%s on %s: %s on %s is %.2f:1, want %.1f:1",
-					themeName, c.name, c.fg, c.bg, ratio, ogMinContrast)
+			if ratio < ogLargeMinContrast {
+				t.Errorf("%s: %s on %s is %.2f:1, want %.1f:1", tc.name, got, bg, ratio, ogLargeMinContrast)
 			}
 		}
+	}
+}
+
+// A mid-tone accent can clear the floor with either ink on its lighter end, so
+// the darker end is what decides; a bright orange keeps white and lands at 3:1.
+func TestOGInkOnPicksTheWorseEndNotTheAverage(t *testing.T) {
+	ink, err := ogInkOn("#ff0030", "#d90029")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if ink != "#ffffff" {
+		t.Fatalf("ink = %s, want #ffffff", ink)
+	}
+	ratio, err := contrastRatio(ink, "#d90029")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if ratio < ogLargeMinContrast {
+		t.Errorf("white on #d90029 is %.2f:1, want %.1f:1", ratio, ogLargeMinContrast)
+	}
+}
+
+func TestOGKicker(t *testing.T) {
+	if got := ogKicker("  a starter, not a blank page  "); got != "A STARTER, NOT A BLANK PAGE" {
+		t.Errorf("ogKicker = %q, want upper-cased and trimmed", got)
+	}
+	long := ogKicker(strings.Repeat("a very long kicker ", 8))
+	if ogTrackWidth(long, ogKickerSize, ogKickerTrack) > ogColumn {
+		t.Errorf("ogKicker cut is %v wide, want at most %v", ogTrackWidth(long, ogKickerSize, ogKickerTrack), ogColumn)
+	}
+	if !strings.HasSuffix(long, "…") {
+		t.Errorf("ogKicker = %q, want the cut marked", long)
 	}
 }
 

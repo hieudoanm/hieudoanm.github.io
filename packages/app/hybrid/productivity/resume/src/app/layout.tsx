@@ -8,6 +8,30 @@ export const metadata: Metadata = {
   title: 'Resume - Free Resume Builder',
   description:
     'A free resume builder with 64 templates, live preview and PDF export.',
+  metadataBase: new URL('https://hieudoanm.github.io/open/resume/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Resume',
+    url: 'https://hieudoanm.github.io/open/resume/',
+    title: 'A resume builder that exports',
+    description:
+      'A free resume builder with 64 templates, live preview and PDF export.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Resume — A resume builder that exports',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'A resume builder that exports',
+    description:
+      'A free resume builder with 64 templates, live preview and PDF export.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

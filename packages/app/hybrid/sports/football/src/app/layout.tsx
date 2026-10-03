@@ -6,6 +6,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Football Manager',
   description: 'Pick a formation, assign your squad, and manage your team',
+  metadataBase: new URL('https://hieudoanm.github.io/open/football/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Football',
+    url: 'https://hieudoanm.github.io/open/football/',
+    title: 'Build a football squad',
+    description:
+      'Pick a formation, assign your squad, and manage your team through a season of tournaments.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Football — Build a football squad',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Build a football squad',
+    description:
+      'Pick a formation, assign your squad, and manage your team through a season of tournaments.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

@@ -13,6 +13,30 @@ const beVietnamPro = Be_Vietnam_Pro({
 export const metadata: Metadata = {
   title: 'Hieu Doan',
   description: 'Start Page',
+  metadataBase: new URL('https://hieudoanm.github.io/open/docs/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Hieu Doan',
+    url: 'https://hieudoanm.github.io/open/docs/',
+    title: 'A start page that works',
+    description:
+      'A start page with a calculator, clocks, data converters, developer utilities and a writing space.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Hieu Doan — A start page that works',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'A start page that works',
+    description:
+      'A start page with a calculator, clocks, data converters, developer utilities and a writing space.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

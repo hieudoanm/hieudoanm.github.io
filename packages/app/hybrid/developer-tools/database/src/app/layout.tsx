@@ -7,6 +7,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Database - SQLite Manager',
   description: 'A modern SQLite database manager',
+  metadataBase: new URL('https://hieudoanm.github.io/open/database/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'SQLite Manager',
+    url: 'https://hieudoanm.github.io/open/database/',
+    title: 'Open a database, edit rows',
+    description:
+      'A modern SQLite database manager: run queries, browse tables and edit rows in the browser.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'SQLite Manager — Open a database, edit rows',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Open a database, edit rows',
+    description:
+      'A modern SQLite database manager: run queries, browse tables and edit rows in the browser.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
