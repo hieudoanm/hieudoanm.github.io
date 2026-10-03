@@ -22,5 +22,5 @@ wasm-bindgen-futures = "=0.4.79"
 serde-wasm-bindgen = "=0.6.5"
 
 [dev-dependencies]
-tokio = { version = "=1.53.1", features = ["full"] }
+tokio = { version = "=1.53.2", features = ["full"] }
 wiremock = "=0.6.5"
