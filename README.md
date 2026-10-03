@@ -1,31 +1,17 @@
 # 👨‍💻 I'm [Hieu Doan][hieudoanm]
 
-| About                            | Links                                                                             |
-| -------------------------------- | --------------------------------------------------------------------------------- |
-| Languages (Data Science)         | [Python][python]                                                                  |
-| Languages (Web Development)      | [TypeScript][ts]                                                                  |
-| Languages (Headless Development) | [Go][go] - [Rust][rust]                                                           |
-| Languages (Native Development)   | [Kotlin][kotlin] - [Swift][swift]                                                 |
-| Profile                          | [LinkedIn][linkedin] - [Twitter][twitter] - [Instagram][instagram]                |
-| Monorepo                         | [hieudoanm/hieudoanm.github.io](https://github.com/hieudoanm/hieudoanm.github.io) |
+| About    | Links                                                                                 |
+| -------- | ------------------------------------------------------------------------------------- |
+| Monorepo | [hieudoanm/hieudoanm.github.io](https://github.com/hieudoanm/hieudoanm.github.io)     |
+| Profile  | [Resume][resume] - [LinkedIn][linkedin] - [Twitter][twitter] - [Instagram][instagram] |
 
 <!-- Profile -->
 
 [hieudoanm]: https://hieudoanm.github.io
+[resume]: https://github.com/hieudoanm/hieudoanm.github.io/blob/master/RESUME.md
 [linkedin]: https://www.linkedin.com/in/hieudoanm/
 [twitter]: https://x.com/hieudoanm
 [instagram]: https://instagram.com/hieudoanm.github.io
-
-<!-- Languages  -->
-
-[ts]: https://www.typescriptlang.org/
-[go]: https://go.dev/
-[rust]: https://www.rust-lang.org/
-[kotlin]: https://kotlinlang.org/
-[swift]: https://www.swift.org/
-[python]: https://www.python.org/
-
----
 
 ## [Open Releases (33)](https://hieudoanm.github.io/open)
 
@@ -54,111 +40,32 @@
 
 ### Hybrid (24)
 
-#### Developer Tools (5)
-
-| No  | Platform | Category        | Name        | Open                     | Releases                         |
-| --- | -------- | --------------- | ----------- | ------------------------ | -------------------------------- |
-| 10  | Hybrid   | Developer Tools | API         | [Open][open-api]         | [Releases][releases-api]         |
-| 11  | Hybrid   | Developer Tools | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
-| 12  | Hybrid   | Developer Tools | Code        | [Open][open-code]        | [Releases][releases-code]        |
-| 13  | Hybrid   | Developer Tools | Database    | [Open][open-database]    | [Releases][releases-database]    |
-| 14  | Hybrid   | Developer Tools | Diagram     | [Open][open-diagram]     | [Releases][releases-diagram]     |
-
----
-
-#### Education (2)
-
-| No  | Platform | Category  | Name  | Open               | Releases                   |
-| --- | -------- | --------- | ----- | ------------------ | -------------------------- |
-| 15  | Hybrid   | Education | DOI   | [Open][open-doi]   | [Releases][releases-doi]   |
-| 16  | Hybrid   | Education | Lingo | [Open][open-lingo] | [Releases][releases-lingo] |
-
----
-
-#### Finance (1)
-
-| No  | Platform | Category | Name | Open             | Releases                 |
-| --- | -------- | -------- | ---- | ---------------- | ------------------------ |
-| 17  | Hybrid   | Finance  | Tax  | [Open][open-tax] | [Releases][releases-tax] |
-
----
-
-#### Food & Drink (1)
-
-| No  | Platform | Category     | Name  | Open               | Releases                   |
-| --- | -------- | ------------ | ----- | ------------------ | -------------------------- |
-| 18  | Hybrid   | Food & Drink | Foody | [Open][open-foody] | [Releases][releases-foody] |
-
----
-
-#### Games (1)
-
-| No  | Platform | Category | Name   | Open                | Releases                    |
-| --- | -------- | -------- | ------ | ------------------- | --------------------------- |
-| 19  | Hybrid   | Games    | Memory | [Open][open-memory] | [Releases][releases-memory] |
-
----
-
-#### Graphics & Design (3)
-
-| No  | Platform | Category          | Name    | Open                 | Releases                     |
-| --- | -------- | ----------------- | ------- | -------------------- | ---------------------------- |
-| 20  | Hybrid   | Graphics & Design | Exhibit | [Open][open-exhibit] | [Releases][releases-exhibit] |
-| 21  | Hybrid   | Graphics & Design | Photo   | [Open][open-photo]   | [Releases][releases-photo]   |
-| 22  | Hybrid   | Graphics & Design | SVG     | [Open][open-svg]     | [Releases][releases-svg]     |
-
----
-
-#### Medical (2)
-
-| No  | Platform | Category | Name     | Open                  | Releases                      |
-| --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
-| 23  | Hybrid   | Medical  | Brainbow | [Open][open-brainbow] | [Releases][releases-brainbow] |
-| 24  | Hybrid   | Medical  | MRI      | [Open][open-mri]      | [Releases][releases-mri]      |
-
----
-
-#### Productivity (3)
-
-| No  | Platform | Category     | Name   | Open                | Releases                    |
-| --- | -------- | ------------ | ------ | ------------------- | --------------------------- |
-| 25  | Hybrid   | Productivity | Office | [Open][open-office] | [Releases][releases-office] |
-| 26  | Hybrid   | Productivity | PDF    | [Open][open-pdf]    | [Releases][releases-pdf]    |
-| 27  | Hybrid   | Productivity | Resume | [Open][open-resume] | [Releases][releases-resume] |
-
----
-
-#### Shopping (1)
-
-| No  | Platform | Category | Name  | Open               | Releases                   |
-| --- | -------- | -------- | ----- | ------------------ | -------------------------- |
-| 28  | Hybrid   | Shopping | Store | [Open][open-store] | [Releases][releases-store] |
-
----
-
-#### Social Networking (1)
-
-| No  | Platform | Category          | Name | Open              | Releases                  |
-| --- | -------- | ----------------- | ---- | ----------------- | ------------------------- |
-| 29  | Hybrid   | Social Networking | Chat | [Open][open-chat] | [Releases][releases-chat] |
-
----
-
-#### Sports (3)
-
-| No  | Platform | Category | Name     | Open                  | Releases                      |
-| --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
-| 30  | Hybrid   | Sports   | Chess    | [Open][open-chess]    | [Releases][releases-chess]    |
-| 31  | Hybrid   | Sports   | Football | [Open][open-football] | [Releases][releases-football] |
-| 32  | Hybrid   | Sports   | Tourney  | [Open][open-tourney]  | [Releases][releases-tourney]  |
-
----
-
-#### Utilities (1)
-
-| No  | Platform | Category  | Name | Open              | Releases                  |
-| --- | -------- | --------- | ---- | ----------------- | ------------------------- |
-| 33  | Hybrid   | Utilities | Docs | [Open][open-docs] | [Releases][releases-docs] |
+| No  | Platform | Category          | Name        | Open                     | Releases                         |
+| --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
+| 10  | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 11  | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 12  | Hybrid   | Developer Tools   | Code        | [Open][open-code]        | [Releases][releases-code]        |
+| 13  | Hybrid   | Developer Tools   | Database    | [Open][open-database]    | [Releases][releases-database]    |
+| 14  | Hybrid   | Developer Tools   | Diagram     | [Open][open-diagram]     | [Releases][releases-diagram]     |
+| 15  | Hybrid   | Education         | DOI         | [Open][open-doi]         | [Releases][releases-doi]         |
+| 16  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
+| 17  | Hybrid   | Finance           | Tax         | [Open][open-tax]         | [Releases][releases-tax]         |
+| 18  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
+| 19  | Hybrid   | Games             | Memory      | [Open][open-memory]      | [Releases][releases-memory]      |
+| 20  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
+| 21  | Hybrid   | Graphics & Design | Photo       | [Open][open-photo]       | [Releases][releases-photo]       |
+| 22  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
+| 23  | Hybrid   | Medical           | Brainbow    | [Open][open-brainbow]    | [Releases][releases-brainbow]    |
+| 24  | Hybrid   | Medical           | MRI         | [Open][open-mri]         | [Releases][releases-mri]         |
+| 25  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
+| 26  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
+| 27  | Hybrid   | Productivity      | Resume      | [Open][open-resume]      | [Releases][releases-resume]      |
+| 28  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
+| 29  | Hybrid   | Social Networking | Chat        | [Open][open-chat]        | [Releases][releases-chat]        |
+| 30  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 31  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 32  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 33  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 

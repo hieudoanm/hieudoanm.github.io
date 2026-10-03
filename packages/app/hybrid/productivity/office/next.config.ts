@@ -32,7 +32,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     resolveAlias: {
       fs: './src/lib/keynotes/stubs/node-builtins.ts',
-      path: './src/lib/keynotes/stubs/node-builtins.ts',
       crypto: './src/lib/keynotes/stubs/node-builtins.ts',
     },
   },
