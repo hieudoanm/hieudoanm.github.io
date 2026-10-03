@@ -13,7 +13,7 @@
 [twitter]: https://x.com/hieudoanm
 [instagram]: https://instagram.com/hieudoanm.github.io
 
-## [Open Releases (33)](https://hieudoanm.github.io/open)
+## [Open Releases (32)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions and Native Apps (3)
 
