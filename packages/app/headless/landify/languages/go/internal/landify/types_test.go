@@ -927,7 +927,7 @@ func TestBuildFileWaitlistWritesPage(t *testing.T) {
 		t.Fatalf("write input: %v", err)
 	}
 	out := dir + "/index.html"
-	if err := BuildFile(in, out, ""); err != nil {
+	if _, err := BuildFile(in, out, ""); err != nil {
 		t.Fatalf("BuildFile: %v", err)
 	}
 	html, err := os.ReadFile(out)

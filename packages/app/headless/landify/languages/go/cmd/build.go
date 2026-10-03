@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"strings"
+
 	"github.com/spf13/cobra"
 
 	"landify/internal/landify"
@@ -26,10 +28,16 @@ current directory by default.`,
 		if err != nil {
 			return err
 		}
-		if err := landify.BuildFile(file, output, themeName); err != nil {
+		result, err := landify.BuildFile(file, output, themeName)
+		if err != nil {
 			return err
 		}
-		cmd.Printf("Built %s from %s\n", output, file)
+		cmd.Printf("Built %s from %s\n", result.Page, file)
+		if result.Card != "" {
+			png := strings.TrimSuffix(result.Card, ".svg") + ".png"
+			cmd.Printf("Built %s\n", result.Card)
+			cmd.Printf("Rasterize the card: rsvg-convert -o %s %s\n", png, result.Card)
+		}
 		return nil
 	},
 }

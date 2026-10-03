@@ -104,6 +104,65 @@ type Site struct {
 	Mark        string    `yaml:"mark"`
 	Description string    `yaml:"description"`
 	Nav         []NavItem `yaml:"nav"`
+	OpenGraph   OpenGraph `yaml:"og,omitempty"`
+}
+
+// OpenGraph holds the social-card metadata rendered as <meta> tags plus the
+// copy the generated card draws. Every field is optional: og:title,
+// og:description and og:site_name fall back to the site values, and the image
+// is only emitted when one is configured. Kicker and Tags have no standard
+// counterpart — they are card-only, and give the image a per-app identity the
+// meta tags have no room for.
+type OpenGraph struct {
+	Title       string   `yaml:"title,omitempty"`
+	Description string   `yaml:"description,omitempty"`
+	Image       string   `yaml:"image,omitempty"`
+	ImageAlt    string   `yaml:"image_alt,omitempty"`
+	URL         string   `yaml:"url,omitempty"`
+	Type        string   `yaml:"type,omitempty"`
+	SiteName    string   `yaml:"site_name,omitempty"`
+	TwitterCard string   `yaml:"twitter_card,omitempty"`
+	Kicker      string   `yaml:"kicker,omitempty"`
+	Tags        []string `yaml:"tags,omitempty"`
+}
+
+// Configured reports whether the site asks for a card at all: without it,
+// BuildFile leaves og/og.svg alone and the templates emit only the tags that
+// need no input. It cannot be a struct comparison because Tags is a slice.
+func (o OpenGraph) Configured() bool {
+	return o.Title != "" || o.Description != "" || o.Image != "" ||
+		o.ImageAlt != "" || o.URL != "" || o.Type != "" ||
+		o.SiteName != "" || o.TwitterCard != "" || o.Kicker != "" ||
+		len(o.Tags) > 0
+}
+
+// Resolved returns a copy of og with every empty field filled from the site
+// block, so a card that only sets an image still carries a title, a
+// description and a site name. TwitterCard defaults to summary_large_image
+// because the generated card is 1200 × 630.
+func (o OpenGraph) Resolved(s Site) OpenGraph {
+	if o.Title == "" {
+		o.Title = s.Name
+	}
+	if o.Description == "" {
+		o.Description = s.Description
+	}
+	if o.SiteName == "" {
+		o.SiteName = s.Name
+	}
+	if o.Type == "" {
+		o.Type = "website"
+	}
+	if o.TwitterCard == "" {
+		o.TwitterCard = "summary_large_image"
+	}
+	return o
+}
+
+// Social returns the Open Graph metadata for the page with every field
+// resolved against the site block.
+func (c *Config) Social() OpenGraph {
+	return c.Site.OpenGraph.Resolved(c.Site)
 }
 
 // NavItem is a single link shown in the navbar and footer.

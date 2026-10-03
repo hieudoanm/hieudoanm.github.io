@@ -43,6 +43,7 @@ type col struct {
 
 var collections = []col{
 	{"site.nav", "Navigation links", []string{"label", "href"}, map[string]any{"label": "", "href": ""}, false},
+	{"site.og.tags", "Card tags", []string{""}, nil, true},
 	{"footer.links", "Footer links", []string{"label", "href"}, map[string]any{"label": "", "href": ""}, false},
 	{"features.items", "Feature cards", []string{"icon", "title", "body"}, map[string]any{"icon": "", "title": "", "body": ""}, false},
 	{"pricing.tiers", "Pricing tiers", []string{"name", "price", "period", "tag", "cta.label", "cta.href"}, map[string]any{"name": "", "price": "", "period": "", "tag": "", "cta": map[string]any{"label": "", "href": ""}}, false},
@@ -145,7 +146,16 @@ func ContentSections(typ string) []Section {
 			{"site.name", "Site name", FieldText, nil},
 			{"site.mark", "Mark (emoji)", FieldText, nil},
 			{"site.description", "Description", FieldArea, nil},
-		}, Collections: []string{"site.nav"}},
+			{"site.og.title", "OG title", FieldText, nil},
+			{"site.og.description", "OG description", FieldArea, nil},
+			{"site.og.image", "OG image", FieldText, nil},
+			{"site.og.image_alt", "OG image alt", FieldText, nil},
+			{"site.og.url", "OG url", FieldText, nil},
+			{"site.og.type", "OG type", FieldText, nil},
+			{"site.og.site_name", "OG site name", FieldText, nil},
+			{"site.og.twitter_card", "Twitter card", FieldText, nil},
+			{"site.og.kicker", "Card kicker", FieldText, nil},
+		}, Collections: []string{"site.nav", "site.og.tags"}},
 		{Key: "footer", Label: "Footer", Fields: []Field{
 			{"footer.copyright", "Copyright", FieldText, nil},
 		}, Collections: []string{"footer.links"}},

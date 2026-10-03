@@ -147,7 +147,7 @@ func TestBuildFileWritesOutput(t *testing.T) {
 		t.Fatalf("write input: %v", err)
 	}
 	out := dir + "/index.html"
-	if err := BuildFile(in, out, ""); err != nil {
+	if _, err := BuildFile(in, out, ""); err != nil {
 		t.Fatalf("BuildFile: %v", err)
 	}
 	html, err := os.ReadFile(out)
@@ -165,7 +165,7 @@ func TestBuildFileRejectsUnknownTheme(t *testing.T) {
 	if err := os.WriteFile(in, []byte(validDoc), 0o644); err != nil {
 		t.Fatalf("write input: %v", err)
 	}
-	err := BuildFile(in, dir+"/index.html", "not-a-theme")
+	_, err := BuildFile(in, dir+"/index.html", "not-a-theme")
 	if err == nil || !strings.Contains(err.Error(), "unknown theme") {
 		t.Fatalf("BuildFile with unknown theme: want error, got %v", err)
 	}
@@ -178,7 +178,7 @@ func TestBuildFileAppliesThemePreset(t *testing.T) {
 		t.Fatalf("write input: %v", err)
 	}
 	out := dir + "/index.html"
-	if err := BuildFile(in, out, "midnight"); err != nil {
+	if _, err := BuildFile(in, out, "midnight"); err != nil {
 		t.Fatalf("BuildFile: %v", err)
 	}
 	html, err := os.ReadFile(out)

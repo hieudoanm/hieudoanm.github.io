@@ -20,6 +20,13 @@
 # Media: only the "product" layout requires a hero image and demo video.
 # Both render in the same 16:9 frame (1280 × 720).
 #
+# Open Graph: the optional site.og block fills the <head> so a shared link
+# renders a card. title, description and site_name fall back to the site
+# values, and url and image only appear when you set them. `landify build`
+# also writes a 1200 × 630 public/og/og.svg from the card copy and the theme
+# below; convert it to the PNG that image points at, e.g.
+# rsvg-convert -o public/og/og.png public/og/og.svg
+#
 # Colors: theme is the only design input. List the eight base colors (and,
 # optionally, the corner radius); every other CSS token the page uses —
 # surfaces (base-100/200/300, base-content), accent shades and tints
@@ -52,6 +59,20 @@ site: # used in the navbar, <title>, and meta description
       href: '#demo'
     - label: Get started
       href: '#cta'
+
+  og: # social card: build writes public/og/og.svg, image below is its PNG
+    title: 'A flat landing page from one YAML file.'
+    kicker: 'One YAML file, one page'
+    tags:
+      - 'Zero build step'
+      - '12 layouts'
+      - 'HTML + CSS only'
+      - 'Serve anywhere'
+    description: >-
+      A flat, dependency-free landing page generated from a single YAML file.
+    image: 'https://hieudoanm.github.io/packages/app/headless/landify/public/og/og.png'
+    image_alt: 'Landify — a flat landing page from one YAML file.'
+    url: 'https://hieudoanm.github.io/packages/app/headless/landify/public/'
 
 hero: # the first thing visitors see
   badge: '🚀 New' # [optional] small pill above the headline

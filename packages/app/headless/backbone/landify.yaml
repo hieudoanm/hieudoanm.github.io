@@ -23,6 +23,21 @@ site:
     - label: Get started
       href: '#cta'
 
+  og: # social card: build writes public/og/og.svg, image below is its PNG
+    title: 'Your own back-end as a service.'
+    kicker: 'Self-hosted back end'
+    tags:
+      - 'Auth & JWT'
+      - 'SQLite or RDS'
+      - 'Cron jobs'
+      - 'Webhooks'
+    description: >-
+      A self-hosted back-end as a service with auth, a database, cron jobs, and
+      webhooks.
+    image: 'https://hieudoanm.github.io/packages/app/headless/backbone/public/og/og.png'
+    image_alt: 'Backbone — Your own back-end as a service.'
+    url: 'https://hieudoanm.github.io/packages/app/headless/backbone/public/'
+
 hero:
   badge: '🖥️ Self-hosted'
   headline: Your own back-end as a service.

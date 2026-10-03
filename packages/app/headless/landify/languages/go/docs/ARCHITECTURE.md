@@ -41,6 +41,11 @@ go/
 │   ├── color.go         # Tokens(): 19 :root tokens derived from 8 base colors
 │   ├── themes.go        # namedThemes: exactly 64 presets + lookup helpers
 │   ├── build.go         # Render, BuildFile, themeCSS, @LANDIFY_THEME@ splice
+│   ├── og.go            # OGCard model, RenderOG, the resolution pipeline
+│   ├── ogpalette.go     # OGColor: the card palette derived from Tokens
+│   ├── ogtext.go        # card geometry, rune-width estimate, wrapping, monogram
+│   ├── oglayout.go      # optical centring of the copy block and the chip stack
+│   ├── color_test.go    # contrastRatio, readableOn, blend
 │   ├── placeholder.go   # WritePlaceholder (landify new scaffolding)
 │   └── serve.go         # Serve(ctx, dir, ln): static file server
 ├── internal/gui/        # Desktop studio (fyne, gated behind gui build tag)
@@ -73,7 +78,8 @@ go/
 ├── static/              # Embedded templates, partials, examples
 │   ├── templates/       # template-<type>.tmpl — one per page type (12)
 │   ├── partials/        # base-css, header, footer
-│   └── examples/        # example-<type>.yaml — annotated placeholders (12)
+│   ├── examples/        # example-<type>.yaml — annotated placeholders (12)
+│   └── og.tmpl          # the social card SVG
 └── docs/                # This documentation set
 ```
 
@@ -88,6 +94,7 @@ valid Config ─(Render)──► pick template-<type>.tmpl ─(html/template)�
                 │ ParseFS(templates, partials)         splice @LANDIFY_THEME@
                 └────────────── Tokens(Theme) ──► themeCSS ────────┘
 HTML ─(BuildFile)──► write index.html (or -o path)
+       └─ site.og set ─(RenderOG)──► write og/og.svg beside the page
 ```
 
 ## Modules
@@ -99,6 +106,53 @@ per page type (all `*T`, nil when absent). `Theme` is exactly eight colors +
 `radius`; empty fields merge from `DefaultTheme()`. `Load` uses
 `yaml.NewDecoder` with `dec.KnownFields(true)`, so unknown YAML fields are
 rejected.
+
+### Social metadata (`internal/landify/config.go`)
+
+`Site.OpenGraph` (YAML `site.og`) holds eight optional strings — `title`,
+`description`, `image`, `image_alt`, `url`, `type`, `site_name`,
+`twitter_card` — plus two card-only fields, `kicker` (a string) and `tags`
+(a `[]string`), which have no Open Graph counterpart because the meta tags
+have no room for them. `OpenGraph.Resolved(site)` fills the empty ones from the
+site block (`type` → `website`, `twitter_card` → `summary_large_image`), and
+`Config.Social()` is the method the templates call. Keeping the fallbacks in
+Go rather than in the template means all 12 layouts share one rule, and
+`og:url`/`og:image` are emitted only when configured. `Configured()` reports
+whether a card was asked for; it is a method rather than a struct comparison
+because `Tags` is a slice.
+
+### Social card
+
+`RenderOG(cfg)` fills `static/og.tmpl` with an `OGCard`: the copy resolved from
+`site.og`, the palette derived from `Tokens`, and the geometry the template
+draws. The card is a fixed two-column composition in a 1200 × 630 frame:
+
+| Region                    | Contents                                                      |
+| ------------------------- | ------------------------------------------------------------- |
+| Background                | `base-100`→`base-200` gradient, accent glow, 12px accent rail |
+| Header (y 84)             | Monogram tile, site name, host of `og:url`, hairline at y 176 |
+| Copy column (96…700)      | Kicker, title (3 lines), description (3 lines)                |
+| Identity panel (748…1104) | Monogram tile over up to 4 tag chips                          |
+
+All of the numbers live in `ogtext.go`, and the two placement functions in
+`oglayout.go`. Advance widths are estimated per rune class (`iljtIf` narrow,
+`mwMW` wide, uppercase mid) because the card has to wrap text without a font
+library, and the estimate is deliberately generous. `ogCenterText` centres the
+painted box — not the baselines — inside the copy region, so a one-line and a
+three-line card land in the same optical spot; `ogPills` centres the chip stack
+in the panel and clamps a tag that cannot fit rather than dropping it. The tile
+and the chips share the panel's padding edge (`Panel.TileX`), so the stack reads
+as one left-aligned column instead of a tile bleeding into the panel border.
+`ogMonogram` derives the
+tile letter from `site.name` (emoji do not survive rasterising, so `site.mark`
+is not used). Accent-colored text goes through `readableOn`, which shifts the
+color until it clears 4.5:1 on the background, so a theme's `primary` can carry
+small type without an accessibility failure.
+
+`BuildFile` writes the card to `og/og.svg` next to the page — only when
+`site.og` is configured (`OpenGraph.Configured`) — and `OGCardPath` is the
+single source of truth for that path. The PNG is left to an external
+rasterizer.
 
 ### Validation (`internal/landify/validate.go`)
 

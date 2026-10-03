@@ -41,6 +41,20 @@ site:
     - label: Source
       href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust"
 
+  og: # social card: build writes public/og/og.svg, image below is its PNG
+    title: "Pixels, on purpose."
+    kicker: 'Raster to vector, in Rust'
+    tags:
+      - 'PNG / JPEG in'
+      - 'SVG out'
+      - 'No tracing library'
+    description: >-
+      A raster-to-vector tracer written from scratch in Rust. PNG and JPEG in,
+      SVG out — pixels to regions to contours to Bezier curves.
+    image: "https://hieudoanm.github.io/packages/app/headless/vectify/public/og/og.png"
+    image_alt: "Vectify — Pixels, on purpose."
+    url: "https://hieudoanm.github.io/packages/app/headless/vectify/public/"
+
 hero:
   badge: "🦀 Rust · GPL-3.0"
   headline: Pixels, on purpose.

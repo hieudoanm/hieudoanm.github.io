@@ -103,9 +103,10 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
     workspace (`helpers_test.go`), so framing, dispatch, sandboxing and every
     tool are covered end to end. `cmd/mcp_test.go` covers flag wiring.
 - Tests: colocated `*_test.go`, table-driven, behaviour-spec names.
-  `config_test.go`, `build_test.go`, `themes_test.go`, `placeholder_test.go`,
-  `serve_test.go` and `internal/tui/tui_test.go` cover parsing, rendering,
-  themes, scaffolding, the file server and the terminal editor.
+  `config_test.go`, `build_test.go`, `og_test.go`, `themes_test.go`,
+  `placeholder_test.go`, `serve_test.go` and `internal/tui/tui_test.go` cover
+  parsing, rendering, social metadata, themes, scaffolding, the file server and
+  the terminal editor.
 - `.gitignore` excludes `bin/`, `index.html`, and `landify.yaml` (all build
   output or generated scaffolding) plus `.DS_Store`.
 
@@ -131,6 +132,27 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 - Only `product` requires media assets: `hero.image.src` and `demo.video.src`,
   both rendered in the shared 16:9 frame (1280 × 720). App screenshots use
   `aspect-ratio: 9 / 16`.
+- The optional `site.og` block is the social-card input, shared by every layout
+  (no per-type requirements, nothing added to `Errors()`). `Config.Social()`
+  resolves it once — `title`/`description`/`site_name` fall back to the site
+  values, `type` → `website`, `twitter_card` → `summary_large_image` — and every
+  template renders the result with one `$og := .Social` block. `og:url`,
+  `og:image` (+ `:width`/`:height`/`:alt`) and `twitter:image` are emitted only
+  when configured, so a config without an image gets no broken image tag.
+- `og.kicker` (a string) and `og.tags` (`[]string`, first 4 drawn) are
+  card-only: no meta tag corresponds to them, and they are what gives each
+  card its own content. `site.name` supplies the monogram on the two accent
+  tiles, since `site.mark` is emoji and does not survive rasterising.
+- The same block is what makes `build` write `og/og.svg` next to the page:
+  `RenderOG` fills `static/og.tmpl` from the card copy and the theme tokens,
+  and `ogtext.go` + `oglayout.go` hold every card measurement — the two-column geometry, the
+  wrapping (estimated rune width, generous on purpose, capped at three lines
+  with an ellipsis), the optical centring of the copy block and the chip stack.
+  Accent-colored text goes through `readableOn`, which shifts it until it
+  clears 4.5:1 on the background. The PNG is left to an external rasterizer —
+  `site.og.image` points at it, so
+  `landify build && rsvg-convert -o public/og/og.png public/og/og.svg` is the
+  full loop (the headless apps keep the result in `public/og/`).
 - `theme` stores exactly eight base colors (`base`, `primary`, `secondary`,
   `neutral`, `info`, `warning`, `success`, `error`) plus `radius`. Empty
   fields merge from `DefaultTheme()` (primary `#0d9488`, radius `10px`, base
@@ -154,15 +176,17 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
   one folder per theme under `examples/themes/` (`showcase.yaml` + embedded
   `demo.*` media). Regenerate them with `landify build`.
 - `landify build` writes `index.html` in the current directory by default
-  (`-o` to override); parent directories are auto-created (`os.MkdirAll`).
+  (`-o` to override); parent directories are auto-created (`os.MkdirAll`). It
+  returns a `*BuildResult` so the command can report the page and the card.
 
 ## Data
 
 - Files read: `landify.yaml` (`-f/--file` to override); `static/` templates,
   partials and `examples/` are embedded at build time, not read from disk.
-- Files written: `index.html` (default `build` output), `landify.yaml`
-  (created by `new`, refuses to overwrite without `--force`). The MCP tools
-  read and write only inside the `--root` given to `mcp serve` (default `.`).
+- Files written: `index.html` (default `build` output), `og/og.svg` beside it
+  (only when the config has a `site.og` block), `landify.yaml` (created by
+  `new`, refuses to overwrite without `--force`). The MCP tools read and write
+  only inside the `--root` given to `mcp serve` (default `.`).
 - No environment variables; no network calls; no external services.
 
 ## Documentation

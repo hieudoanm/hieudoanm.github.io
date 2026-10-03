@@ -23,6 +23,20 @@ site:
     - label: Get started
       href: '#cta'
 
+  og: # social card: build writes public/og/og.svg, image below is its PNG
+    title: 'A tiny key/value store that speaks Redis.'
+    kicker: 'In-memory key/value store'
+    tags:
+      - 'Redis protocol'
+      - 'C · C++ · Go · Rust'
+      - 'Server or library'
+    description: >-
+      An in-memory key/value store with a Redis-style protocol, written in C,
+      C++, Go, and Rust.
+    image: 'https://hieudoanm.github.io/packages/app/headless/kevin/public/og/og.png'
+    image_alt: 'KeVIN — A tiny key/value store that speaks Redis.'
+    url: 'https://hieudoanm.github.io/packages/app/headless/kevin/public/'
+
 hero:
   badge: '⚡ In-memory'
   headline: A tiny key/value store that speaks Redis.

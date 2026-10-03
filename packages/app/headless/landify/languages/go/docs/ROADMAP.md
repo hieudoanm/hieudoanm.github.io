@@ -52,7 +52,13 @@
 
 - [x] MCP server (`landify mcp serve`) — six sandboxed tools over stdio for
       LLM clients: scaffold, validate, build, types, themes, theme tokens
-- [ ] Configurable favicon / social meta (Open Graph, Twitter cards)
+- [x] Social meta (`site.og`) — Open Graph + Twitter card tags in every layout,
+      with site-level fallbacks for title, description and site name
+- [x] Generated social card (`og/og.svg`) — 1200 × 630 SVG from the theme and
+      the card copy, written beside the page on every build
+- [x] Card identity copy (`og.kicker`, `og.tags`) — per-card eyebrow and chip
+      list in the identity panel, card-only fields with no meta tag
+- [ ] Configurable favicon
 - [ ] Custom fonts and typography scale options in `theme:`
 - [ ] Analytical components (countdown, announcement bar, lead form handler)
 - [ ] Accessibility audit (keyboard nav, focus states, contrast ratios)
