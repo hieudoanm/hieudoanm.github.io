@@ -33,5 +33,5 @@ tauri-plugin-dialog = "=2.8.1"
 tauri-plugin-log = "=2.10.0"
 tauri-plugin-notification = "=2.5.1"
 tauri-plugin-updater = "=2.13.1"
-uuid = { version = "=1.26.1", features = ["v4"] }
+uuid = { version = "=1.27.0", features = ["v4"] }
 ureq = { version = "=3.4.2", default-features = false, features = ["rustls", "gzip"] }
