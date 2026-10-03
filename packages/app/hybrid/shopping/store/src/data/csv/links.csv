@@ -207,14 +207,6 @@ docs,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-
 docs,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.rpm
 docs,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.msi
 docs,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.exe
-password,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.aab
-password,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.apk
-password,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.dmg
-password,appimage,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.AppImage
-password,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.deb
-password,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.rpm
-password,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.msi
-password,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.exe
 backbone,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-amd64
 backbone,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-arm64
 backbone,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-amd64

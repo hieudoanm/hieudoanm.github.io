@@ -436,19 +436,3 @@ cards:
       success: '#00c853'
       error: '#ff0030'
 
-  - app: utilities/password
-    url: 'https://hieudoanm.github.io/open/password/'
-    name: Password
-    kicker: 'Stored on device'
-    title: 'A password manager, local'
-    description: 'A secure password manager with a generator, a health audit and a vault you can lock and export.'
-    tags: ['Generator', 'Health audit', 'Vault lock', 'Encrypted export']
-    theme:
-      base: '#faf7ff'
-      content: '#241240'
-      primary: '#6d28d9'
-      secondary: '#0e7490'
-      info: '#2563eb'
-      warning: '#d97706'
-      success: '#16a34a'
-      error: '#dc2626'

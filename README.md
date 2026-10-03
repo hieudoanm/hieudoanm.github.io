@@ -52,7 +52,7 @@
 
 ---
 
-### Hybrid (27)
+### Hybrid (25)
 
 #### Developer Tools (5)
 
@@ -155,12 +155,11 @@
 
 ---
 
-#### Utilities (2)
+#### Utilities (1)
 
-| No  | Platform | Category  | Name     | Open                  | Releases                      |
-| --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
-| 34  | Hybrid   | Utilities | Docs     | [Open][open-docs]     | [Releases][releases-docs]     |
-| 35  | Hybrid   | Utilities | Password | [Open][open-password] | [Releases][releases-password] |
+| No  | Platform | Category  | Name | Open              | Releases                  |
+| --- | -------- | --------- | ---- | ----------------- | ------------------------- |
+| 34  | Hybrid   | Utilities | Docs | [Open][open-docs] | [Releases][releases-docs] |
 
 ---
 
@@ -193,7 +192,6 @@
 [open-football]: https://hieudoanm.github.io/open/football/
 [open-tourney]: https://hieudoanm.github.io/open/tourney/
 [open-docs]: https://hieudoanm.github.io/
-[open-password]: https://hieudoanm.github.io/open/password/
 [open-jack]: https://hieudoanm.github.io/open/jack/
 [open-browserverless]: https://hieudoanm.github.io/open/browserverless/
 [open-backbone]: https://hieudoanm.github.io/open/backbone/
@@ -229,7 +227,6 @@
 [releases-football]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-football-latest
 [releases-tourney]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-tourney-latest
 [releases-docs]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-docs-latest
-[releases-password]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-password-latest
 [releases-macosx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-macosx-latest
 [releases-androidx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-androidx-latest
 [releases-browserverless]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest

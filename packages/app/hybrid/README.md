@@ -18,16 +18,15 @@
 | 14  | video       | [Video Tools][video]       | CapCut                                                                       | No       | DONE   | Graphics & Design | Photo & Video      |
 | 15  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                                 | No       | DONE   | Medical           | Health & Fitness   |
 | 16  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                                | No       | DONE   | Medical           | Health & Fitness   |
-| 17  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes                  | No       | DONE   | Productivity      | Education          |
-| 19  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
-| 20  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
-| 21  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
-| 22  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
-| 23  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
-| 24  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
-| 25  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
-| 26  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
-| 27  | password    | [Password][password]       | BitWarden / 1Password                                                        | Required | DONE   | Utilities         | Productivity       |
+| 17  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes                | No       | DONE   | Productivity      | Education          |
+| 18  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
+| 19  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
+| 20  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
+| 21  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
+| 22  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
+| 23  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
+| 24  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
+| 25  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/
@@ -53,5 +52,4 @@
 [football]: https://hieudoanm.github.io/open/football/
 [tourney]: https://hieudoanm.github.io/open/tourney/
 [docs]: https://hieudoanm.github.io/open/docs/
-[password]: https://hieudoanm.github.io/open/password/
 [doi]: https://hieudoanm.github.io/open/doi/

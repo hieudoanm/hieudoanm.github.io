@@ -1,16 +1,17 @@
 'use client';
 
-import { type FC, useState } from 'react';
 import Link from 'next/link';
+import { useState, type FC } from 'react';
 import {
-  FiShoppingCart,
   FiCoffee,
+  FiCreditCard,
   FiGrid,
   FiList,
-  FiStar,
-  FiSearch,
+  FiLock,
   FiMessageSquare,
-  FiCreditCard,
+  FiSearch,
+  FiShoppingCart,
+  FiStar,
 } from 'react-icons/fi';
 
 interface App {
@@ -62,6 +63,16 @@ const apps: App[] = [
     href: '/chat',
     status: 'ready',
     category: 'Social Networking',
+  },
+  {
+    id: 'password',
+    name: 'Password',
+    description:
+      'Secure password manager with generator, vault, and health checks',
+    icon: <FiLock className="size-8" />,
+    href: '/password',
+    status: 'ready',
+    category: 'Security',
   },
 ];
 

@@ -25,8 +25,9 @@ Reference docs live in `docs/`:
 - No global/singleton state — pure functions in `lib/` accept inputs and return
   outputs
 - `console.*` stripped in production via `compiler.removeConsole`
-- Vendored apps live in a namespace (`wallet/`) under `components`, `data`,
-  `hooks`, `lib`, `providers`, and `types`; nothing crosses back into the shell
+- Vendored apps live in a namespace (`wallet/`, `password/`) under `components`,
+  `data`, `hooks`, `lib`, `providers`, `types`, and `utils`; nothing crosses
+  back into the shell
 - Theming belongs to the shared shell — vendored apps must not write
   `data-theme` or their own theme key
 - Client-only session state goes through `lib/<app>/session.ts` so the shared
@@ -38,10 +39,18 @@ Reference docs live in `docs/`:
 src/
 ├── app/
 │   ├── page.tsx          # Showcase home page
-│   ├── pos/              # POS application (migrated from business/pos)
-│   │   └── page.tsx
 │   ├── (app)/
-│   │   └── wallet/       # Wallet application (migrated from finance/wallet)
+│   │   ├── pos/          # POS application (migrated from business/pos)
+│   │   ├── chat/         # Chat application
+│   │   ├── menu/         # Menu application
+│   │   ├── wallet/       # Wallet application (migrated from finance/wallet)
+│   │   └── password/     # Password vault (migrated from utilities/password)
+│   │       ├── page.tsx  # Vault home
+│   │       ├── generator/
+│   │       ├── health/
+│   │       ├── item/
+│   │       ├── settings/
+│   │       └── trash/
 │   ├── layout.tsx        # Root layout with theme
 │   ├── loading.tsx
 │   ├── error.tsx
@@ -59,29 +68,35 @@ src/
 │       ├── reset-password/page.tsx
 │       └── profile/page.tsx
 ├── components/
-│   ├── organisms/
-│   │   └── Header.tsx
-│   └── templates/
+│   ├── chat/
+│   ├── menu/
+│   ├── pos/
+│   ├── wallet/
+│   ├── password/         # molecules, organisms (vendored)
+│   └── shared/           # organisms/Header.tsx + templates/
 ├── styles/
 │   ├── globals.css
 │   └── themes.css
 ├── data/
+├── hooks/
 ├── lib/
 ├── types/
+├── utils/
 └── providers/
 ```
 
 ## Applications Showcased
 
-| App          | Category        | Status      | Path      |
-| ------------ | --------------- | ----------- | --------- |
-| POS          | Business        | Ready       | `/pos`    |
-| Menu         | Business        | Coming Soon | `/menu`   |
-| Wallet       | Finance         | Ready       | `/wallet` |
-| Chat         | Social          | Ready       | `/chat`   |
-| Photo Editor | Graphics Design | Ready       | External  |
-| SVG Tools    | Graphics Design | Ready       | External  |
-| Video Tools  | Graphics Design | In Progress | External  |
+| App          | Category        | Status      | Path        |
+| ------------ | --------------- | ----------- | ----------- |
+| POS          | Business        | Ready       | `/pos`      |
+| Menu         | Business        | Coming Soon | `/menu`     |
+| Wallet       | Finance         | Ready       | `/wallet`   |
+| Chat         | Social          | Ready       | `/chat`     |
+| Password     | Utilities       | Ready       | `/password` |
+| Photo Editor | Graphics Design | Ready       | External    |
+| SVG Tools    | Graphics Design | Ready       | External    |
+| Video Tools  | Graphics Design | In Progress | External    |
 
 ## Development
 
