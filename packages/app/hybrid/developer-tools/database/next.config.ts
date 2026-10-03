@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     resolveAlias: {
       fs: nodeBuiltinStub,
-      path: nodeBuiltinStub,
       crypto: nodeBuiltinStub,
     },
   },
