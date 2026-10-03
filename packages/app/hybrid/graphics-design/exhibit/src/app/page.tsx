@@ -12,6 +12,7 @@ import {
   FiSearch,
   FiShoppingCart,
   FiStar,
+  FiVideo,
 } from 'react-icons/fi';
 
 interface App {
@@ -73,6 +74,16 @@ const apps: App[] = [
     href: '/password',
     status: 'ready',
     category: 'Security',
+  },
+  {
+    id: 'video',
+    name: 'Video',
+    description:
+      'Video toolbox with compress, trim, merge, crop, convert, and subtitles',
+    icon: <FiVideo className="size-8" />,
+    href: '/video',
+    status: 'ready',
+    category: 'Graphics Design',
   },
 ];
 

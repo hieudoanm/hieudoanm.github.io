@@ -44,13 +44,14 @@ src/
 │   │   ├── chat/         # Chat application
 │   │   ├── menu/         # Menu application
 │   │   ├── wallet/       # Wallet application (migrated from finance/wallet)
-│   │   └── password/     # Password vault (migrated from utilities/password)
-│   │       ├── page.tsx  # Vault home
-│   │       ├── generator/
-│   │       ├── health/
-│   │       ├── item/
-│   │       ├── settings/
-│   │       └── trash/
+│   │   ├── password/     # Password vault (migrated from utilities/password)
+│   │   │   ├── page.tsx  # Vault home
+│   │   │   ├── generator/
+│   │   │   ├── health/
+│   │   │   ├── item/
+│   │   │   ├── settings/
+│   │   │   └── trash/
+│   │   └── video/        # Video toolbox (migrated from graphics-design/video)
 │   ├── layout.tsx        # Root layout with theme
 │   ├── loading.tsx
 │   ├── error.tsx
@@ -94,9 +95,9 @@ src/
 | Wallet       | Finance         | Ready       | `/wallet`   |
 | Chat         | Social          | Ready       | `/chat`     |
 | Password     | Utilities       | Ready       | `/password` |
+| Video        | Graphics Design | Ready       | `/video`    |
 | Photo Editor | Graphics Design | Ready       | External    |
 | SVG Tools    | Graphics Design | Ready       | External    |
-| Video Tools  | Graphics Design | In Progress | External    |
 
 ## Development
 

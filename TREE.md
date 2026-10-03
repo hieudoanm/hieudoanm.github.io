@@ -1266,6 +1266,9 @@
 │   │   │   │   │   │   └── [README.md](./packages/app/headless/backbone/languages/rust/README.md)
 │   │   │   │   │   └── [README.md](./packages/app/headless/backbone/languages/README.md)
 │   │   │   │   ├── public/
+│   │   │   │   │   ├── og/
+│   │   │   │   │   │   ├── [og.png](./packages/app/headless/backbone/public/og/og.png)
+│   │   │   │   │   │   └── [og.svg](./packages/app/headless/backbone/public/og/og.svg)
 │   │   │   │   │   ├── [demo-en-descriptions.vtt](./packages/app/headless/backbone/public/demo-en-descriptions.vtt)
 │   │   │   │   │   ├── [demo.mp4](./packages/app/headless/backbone/public/demo.mp4)
 │   │   │   │   │   ├── [demo.png](./packages/app/headless/backbone/public/demo.png)
@@ -1505,6 +1508,9 @@
 │   │   │   │   │   │   └── [docker-compose.yaml](./packages/app/headless/browserverless/languages/rust/docker-compose.yaml)
 │   │   │   │   │   └── [README.md](./packages/app/headless/browserverless/languages/README.md)
 │   │   │   │   ├── public/
+│   │   │   │   │   ├── og/
+│   │   │   │   │   │   ├── [og.png](./packages/app/headless/browserverless/public/og/og.png)
+│   │   │   │   │   │   └── [og.svg](./packages/app/headless/browserverless/public/og/og.svg)
 │   │   │   │   │   ├── [demo-en-descriptions.vtt](./packages/app/headless/browserverless/public/demo-en-descriptions.vtt)
 │   │   │   │   │   ├── [demo.mp4](./packages/app/headless/browserverless/public/demo.mp4)
 │   │   │   │   │   ├── [demo.png](./packages/app/headless/browserverless/public/demo.png)
@@ -5384,6 +5390,9 @@
 │   │   │   │   │   │   └── [TREE.md](./packages/app/headless/jack/languages/swift/TREE.md)
 │   │   │   │   │   └── [README.md](./packages/app/headless/jack/languages/README.md)
 │   │   │   │   ├── public/
+│   │   │   │   │   ├── og/
+│   │   │   │   │   │   ├── [og.png](./packages/app/headless/jack/public/og/og.png)
+│   │   │   │   │   │   └── [og.svg](./packages/app/headless/jack/public/og/og.svg)
 │   │   │   │   │   ├── [demo-en-descriptions.vtt](./packages/app/headless/jack/public/demo-en-descriptions.vtt)
 │   │   │   │   │   ├── [demo.mp4](./packages/app/headless/jack/public/demo.mp4)
 │   │   │   │   │   ├── [demo.png](./packages/app/headless/jack/public/demo.png)
@@ -5565,6 +5574,7 @@
 │   │   │   │   │   │   │                               ├── [TuiEditingTest.kt](./packages/app/headless/kevin/languages/kotlin/src/test/kotlin/io/github/hieudoanm/kevin/tui/TuiEditingTest.kt)
 │   │   │   │   │   │   │                               └── [TuiReducerTest.kt](./packages/app/headless/kevin/languages/kotlin/src/test/kotlin/io/github/hieudoanm/kevin/tui/TuiReducerTest.kt)
 │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/headless/kevin/languages/kotlin/AGENTS.md)
+│   │   │   │   │   │   ├── [Dockerfile](./packages/app/headless/kevin/languages/kotlin/Dockerfile)
 │   │   │   │   │   │   ├── [LICENSE](./packages/app/headless/kevin/languages/kotlin/LICENSE)
 │   │   │   │   │   │   ├── [Makefile](./packages/app/headless/kevin/languages/kotlin/Makefile)
 │   │   │   │   │   │   ├── [README.md](./packages/app/headless/kevin/languages/kotlin/README.md)
@@ -5627,6 +5637,9 @@
 │   │   │   │   │   │   └── [build.rs](./packages/app/headless/kevin/languages/rust/build.rs)
 │   │   │   │   │   └── [README.md](./packages/app/headless/kevin/languages/README.md)
 │   │   │   │   ├── public/
+│   │   │   │   │   ├── og/
+│   │   │   │   │   │   ├── [og.png](./packages/app/headless/kevin/public/og/og.png)
+│   │   │   │   │   │   └── [og.svg](./packages/app/headless/kevin/public/og/og.svg)
 │   │   │   │   │   ├── [demo-en-descriptions.vtt](./packages/app/headless/kevin/public/demo-en-descriptions.vtt)
 │   │   │   │   │   ├── [demo.mp4](./packages/app/headless/kevin/public/demo.mp4)
 │   │   │   │   │   ├── [demo.png](./packages/app/headless/kevin/public/demo.png)
@@ -5934,8 +5947,14 @@
 │   │   │   │   │   │   │   │   ├── [build.go](./packages/app/headless/landify/languages/go/internal/landify/build.go)
 │   │   │   │   │   │   │   │   ├── [build_test.go](./packages/app/headless/landify/languages/go/internal/landify/build_test.go)
 │   │   │   │   │   │   │   │   ├── [color.go](./packages/app/headless/landify/languages/go/internal/landify/color.go)
+│   │   │   │   │   │   │   │   ├── [color_test.go](./packages/app/headless/landify/languages/go/internal/landify/color_test.go)
 │   │   │   │   │   │   │   │   ├── [config.go](./packages/app/headless/landify/languages/go/internal/landify/config.go)
 │   │   │   │   │   │   │   │   ├── [config_test.go](./packages/app/headless/landify/languages/go/internal/landify/config_test.go)
+│   │   │   │   │   │   │   │   ├── [og.go](./packages/app/headless/landify/languages/go/internal/landify/og.go)
+│   │   │   │   │   │   │   │   ├── [og_test.go](./packages/app/headless/landify/languages/go/internal/landify/og_test.go)
+│   │   │   │   │   │   │   │   ├── [oglayout.go](./packages/app/headless/landify/languages/go/internal/landify/oglayout.go)
+│   │   │   │   │   │   │   │   ├── [ogpalette.go](./packages/app/headless/landify/languages/go/internal/landify/ogpalette.go)
+│   │   │   │   │   │   │   │   ├── [ogtext.go](./packages/app/headless/landify/languages/go/internal/landify/ogtext.go)
 │   │   │   │   │   │   │   │   ├── [placeholder.go](./packages/app/headless/landify/languages/go/internal/landify/placeholder.go)
 │   │   │   │   │   │   │   │   ├── [placeholder_test.go](./packages/app/headless/landify/languages/go/internal/landify/placeholder_test.go)
 │   │   │   │   │   │   │   │   ├── [sections.go](./packages/app/headless/landify/languages/go/internal/landify/sections.go)
@@ -6004,8 +6023,10 @@
 │   │   │   │   │   │   │   │   ├── [template-status.tmpl](./packages/app/headless/landify/languages/go/static/templates/template-status.tmpl)
 │   │   │   │   │   │   │   │   ├── [template-team.tmpl](./packages/app/headless/landify/languages/go/static/templates/template-team.tmpl)
 │   │   │   │   │   │   │   │   └── [template-waitlist.tmpl](./packages/app/headless/landify/languages/go/static/templates/template-waitlist.tmpl)
+│   │   │   │   │   │   │   ├── [og.tmpl](./packages/app/headless/landify/languages/go/static/og.tmpl)
 │   │   │   │   │   │   │   └── [static.go](./packages/app/headless/landify/languages/go/static/static.go)
 │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/headless/landify/languages/go/AGENTS.md)
+│   │   │   │   │   │   ├── [Dockerfile](./packages/app/headless/landify/languages/go/Dockerfile)
 │   │   │   │   │   │   ├── [LICENSE](./packages/app/headless/landify/languages/go/LICENSE)
 │   │   │   │   │   │   ├── [Makefile](./packages/app/headless/landify/languages/go/Makefile)
 │   │   │   │   │   │   ├── [README.md](./packages/app/headless/landify/languages/go/README.md)
@@ -6177,6 +6198,7 @@
 │   │   │   │   │   │   │               ├── [status.html](./packages/app/headless/landify/languages/kotlin/src/test/resources/golden/status.html)
 │   │   │   │   │   │   │               ├── [team.html](./packages/app/headless/landify/languages/kotlin/src/test/resources/golden/team.html)
 │   │   │   │   │   │   │               └── [waitlist.html](./packages/app/headless/landify/languages/kotlin/src/test/resources/golden/waitlist.html)
+│   │   │   │   │   │   ├── [Dockerfile](./packages/app/headless/landify/languages/kotlin/Dockerfile)
 │   │   │   │   │   │   ├── [LICENSE](./packages/app/headless/landify/languages/kotlin/LICENSE)
 │   │   │   │   │   │   ├── [Makefile](./packages/app/headless/landify/languages/kotlin/Makefile)
 │   │   │   │   │   │   ├── [README.md](./packages/app/headless/landify/languages/kotlin/README.md)
@@ -6276,6 +6298,9 @@
 │   │   │   │   │   │   └── [build.rs](./packages/app/headless/landify/languages/rust/build.rs)
 │   │   │   │   │   └── [README.md](./packages/app/headless/landify/languages/README.md)
 │   │   │   │   ├── public/
+│   │   │   │   │   ├── og/
+│   │   │   │   │   │   ├── [og.png](./packages/app/headless/landify/public/og/og.png)
+│   │   │   │   │   │   └── [og.svg](./packages/app/headless/landify/public/og/og.svg)
 │   │   │   │   │   ├── [demo-en-descriptions.vtt](./packages/app/headless/landify/public/demo-en-descriptions.vtt)
 │   │   │   │   │   ├── [demo.mp4](./packages/app/headless/landify/public/demo.mp4)
 │   │   │   │   │   ├── [demo.png](./packages/app/headless/landify/public/demo.png)
@@ -6284,506 +6309,141 @@
 │   │   │   │   ├── [README.md](./packages/app/headless/landify/README.md)
 │   │   │   │   ├── [TREE.md](./packages/app/headless/landify/TREE.md)
 │   │   │   │   └── [landify.yaml](./packages/app/headless/landify/landify.yaml)
+│   │   │   ├── vectify/
+│   │   │   │   ├── examples/
+│   │   │   │   │   └── optimization/
+│   │   │   │   │       ├── original/
+│   │   │   │   │       │   └── [hsbc.svg](./packages/app/headless/vectify/examples/optimization/original/hsbc.svg)
+│   │   │   │   │       ├── png/
+│   │   │   │   │       │   ├── [hsbc.png](./packages/app/headless/vectify/examples/optimization/png/hsbc.png)
+│   │   │   │   │       │   └── [vietinbank.png](./packages/app/headless/vectify/examples/optimization/png/vietinbank.png)
+│   │   │   │   │       └── svg/
+│   │   │   │   │           ├── [hsbc.svg](./packages/app/headless/vectify/examples/optimization/svg/hsbc.svg)
+│   │   │   │   │           └── [vietinbank.svg](./packages/app/headless/vectify/examples/optimization/svg/vietinbank.svg)
+│   │   │   │   ├── languages/
+│   │   │   │   │   ├── go/
+│   │   │   │   │   │   ├── cmd/
+│   │   │   │   │   │   │   └── [root.go](./packages/app/headless/vectify/languages/go/cmd/root.go)
+│   │   │   │   │   │   ├── [AGENTS.md](./packages/app/headless/vectify/languages/go/AGENTS.md)
+│   │   │   │   │   │   ├── [Dockerfile](./packages/app/headless/vectify/languages/go/Dockerfile)
+│   │   │   │   │   │   ├── [LICENSE](./packages/app/headless/vectify/languages/go/LICENSE)
+│   │   │   │   │   │   ├── [Makefile](./packages/app/headless/vectify/languages/go/Makefile)
+│   │   │   │   │   │   ├── [README.md](./packages/app/headless/vectify/languages/go/README.md)
+│   │   │   │   │   │   ├── [go.mod](./packages/app/headless/vectify/languages/go/go.mod)
+│   │   │   │   │   │   ├── [go.sum](./packages/app/headless/vectify/languages/go/go.sum)
+│   │   │   │   │   │   └── [main.go](./packages/app/headless/vectify/languages/go/main.go)
+│   │   │   │   │   ├── rust/
+│   │   │   │   │   │   ├── docs/
+│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/vectify/languages/rust/docs/ARCHITECTURE.md)
+│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/vectify/languages/rust/docs/CONTRIBUTING.md)
+│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/vectify/languages/rust/docs/DOWNLOADS.md)
+│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/vectify/languages/rust/docs/PACKAGING.md)
+│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/vectify/languages/rust/docs/ROADMAP.md)
+│   │   │   │   │   │   ├── src/
+│   │   │   │   │   │   │   ├── bin/
+│   │   │   │   │   │   │   │   └── [vectify.rs](./packages/app/headless/vectify/languages/rust/src/bin/vectify.rs)
+│   │   │   │   │   │   │   ├── cli/
+│   │   │   │   │   │   │   │   ├── [args.rs](./packages/app/headless/vectify/languages/rust/src/cli/args.rs)
+│   │   │   │   │   │   │   │   ├── [baseline.rs](./packages/app/headless/vectify/languages/rust/src/cli/baseline.rs)
+│   │   │   │   │   │   │   │   ├── [measure.rs](./packages/app/headless/vectify/languages/rust/src/cli/measure.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/cli/mod.rs)
+│   │   │   │   │   │   │   │   └── [sweep.rs](./packages/app/headless/vectify/languages/rust/src/cli/sweep.rs)
+│   │   │   │   │   │   │   ├── contour/
+│   │   │   │   │   │   │   │   ├── [bezier.rs](./packages/app/headless/vectify/languages/rust/src/contour/bezier.rs)
+│   │   │   │   │   │   │   │   ├── [boundary.rs](./packages/app/headless/vectify/languages/rust/src/contour/boundary.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/contour/mod.rs)
+│   │   │   │   │   │   │   │   └── [simplify.rs](./packages/app/headless/vectify/languages/rust/src/contour/simplify.rs)
+│   │   │   │   │   │   │   ├── core/
+│   │   │   │   │   │   │   │   ├── [color.rs](./packages/app/headless/vectify/languages/rust/src/core/color.rs)
+│   │   │   │   │   │   │   │   ├── [error.rs](./packages/app/headless/vectify/languages/rust/src/core/error.rs)
+│   │   │   │   │   │   │   │   ├── [geometry.rs](./packages/app/headless/vectify/languages/rust/src/core/geometry.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/core/mod.rs)
+│   │   │   │   │   │   │   │   └── [raster.rs](./packages/app/headless/vectify/languages/rust/src/core/raster.rs)
+│   │   │   │   │   │   │   ├── eval/
+│   │   │   │   │   │   │   │   ├── [artifacts.rs](./packages/app/headless/vectify/languages/rust/src/eval/artifacts.rs)
+│   │   │   │   │   │   │   │   ├── [baseline.rs](./packages/app/headless/vectify/languages/rust/src/eval/baseline.rs)
+│   │   │   │   │   │   │   │   ├── [complexity.rs](./packages/app/headless/vectify/languages/rust/src/eval/complexity.rs)
+│   │   │   │   │   │   │   │   ├── [diff.rs](./packages/app/headless/vectify/languages/rust/src/eval/diff.rs)
+│   │   │   │   │   │   │   │   ├── [difference.rs](./packages/app/headless/vectify/languages/rust/src/eval/difference.rs)
+│   │   │   │   │   │   │   │   ├── [fixtures.rs](./packages/app/headless/vectify/languages/rust/src/eval/fixtures.rs)
+│   │   │   │   │   │   │   │   ├── [golden.rs](./packages/app/headless/vectify/languages/rust/src/eval/golden.rs)
+│   │   │   │   │   │   │   │   ├── [metrics.rs](./packages/app/headless/vectify/languages/rust/src/eval/metrics.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/eval/mod.rs)
+│   │   │   │   │   │   │   │   ├── [perceptual.rs](./packages/app/headless/vectify/languages/rust/src/eval/perceptual.rs)
+│   │   │   │   │   │   │   │   ├── [render.rs](./packages/app/headless/vectify/languages/rust/src/eval/render.rs)
+│   │   │   │   │   │   │   │   ├── [report.rs](./packages/app/headless/vectify/languages/rust/src/eval/report.rs)
+│   │   │   │   │   │   │   │   ├── [shapes.rs](./packages/app/headless/vectify/languages/rust/src/eval/shapes.rs)
+│   │   │   │   │   │   │   │   ├── [ssim.rs](./packages/app/headless/vectify/languages/rust/src/eval/ssim.rs)
+│   │   │   │   │   │   │   │   ├── [suite.rs](./packages/app/headless/vectify/languages/rust/src/eval/suite.rs)
+│   │   │   │   │   │   │   │   └── [sweep.rs](./packages/app/headless/vectify/languages/rust/src/eval/sweep.rs)
+│   │   │   │   │   │   │   ├── mcp/
+│   │   │   │   │   │   │   │   ├── [protocol.rs](./packages/app/headless/vectify/languages/rust/src/mcp/protocol.rs)
+│   │   │   │   │   │   │   │   └── [tool.rs](./packages/app/headless/vectify/languages/rust/src/mcp/tool.rs)
+│   │   │   │   │   │   │   ├── pipeline/
+│   │   │   │   │   │   │   │   ├── [config.rs](./packages/app/headless/vectify/languages/rust/src/pipeline/config.rs)
+│   │   │   │   │   │   │   │   ├── [debug.rs](./packages/app/headless/vectify/languages/rust/src/pipeline/debug.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/pipeline/mod.rs)
+│   │   │   │   │   │   │   │   ├── [options.rs](./packages/app/headless/vectify/languages/rust/src/pipeline/options.rs)
+│   │   │   │   │   │   │   │   └── [trace.rs](./packages/app/headless/vectify/languages/rust/src/pipeline/trace.rs)
+│   │   │   │   │   │   │   ├── preprocess/
+│   │   │   │   │   │   │   │   ├── [label.rs](./packages/app/headless/vectify/languages/rust/src/preprocess/label.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/preprocess/mod.rs)
+│   │   │   │   │   │   │   │   └── [quantize.rs](./packages/app/headless/vectify/languages/rust/src/preprocess/quantize.rs)
+│   │   │   │   │   │   │   ├── segment/
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/segment/mod.rs)
+│   │   │   │   │   │   │   │   └── [regions.rs](./packages/app/headless/vectify/languages/rust/src/segment/regions.rs)
+│   │   │   │   │   │   │   ├── server/
+│   │   │   │   │   │   │   │   ├── [decode.rs](./packages/app/headless/vectify/languages/rust/src/server/decode.rs)
+│   │   │   │   │   │   │   │   ├── [handlers.rs](./packages/app/headless/vectify/languages/rust/src/server/handlers.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/server/mod.rs)
+│   │   │   │   │   │   │   │   └── [types.rs](./packages/app/headless/vectify/languages/rust/src/server/types.rs)
+│   │   │   │   │   │   │   ├── vector/
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/headless/vectify/languages/rust/src/vector/mod.rs)
+│   │   │   │   │   │   │   │   ├── [model.rs](./packages/app/headless/vectify/languages/rust/src/vector/model.rs)
+│   │   │   │   │   │   │   │   └── [svg.rs](./packages/app/headless/vectify/languages/rust/src/vector/svg.rs)
+│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/headless/vectify/languages/rust/src/lib.rs)
+│   │   │   │   │   │   │   └── [mcp.rs](./packages/app/headless/vectify/languages/rust/src/mcp.rs)
+│   │   │   │   │   │   ├── tests/
+│   │   │   │   │   │   │   ├── golden/
+│   │   │   │   │   │   │   │   ├── baselines/
+│   │   │   │   │   │   │   │   ├── images/
+│   │   │   │   │   │   │   │   │   ├── [circle.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/circle.png)
+│   │   │   │   │   │   │   │   │   ├── [ellipse.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/ellipse.png)
+│   │   │   │   │   │   │   │   │   ├── [letter-o.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/letter-o.png)
+│   │   │   │   │   │   │   │   │   ├── [palette.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/palette.png)
+│   │   │   │   │   │   │   │   │   ├── [ring.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/ring.png)
+│   │   │   │   │   │   │   │   │   ├── [square.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/square.png)
+│   │   │   │   │   │   │   │   │   ├── [star.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/star.png)
+│   │   │   │   │   │   │   │   │   ├── [triangle.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/triangle.png)
+│   │   │   │   │   │   │   │   │   ├── [two-color.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/two-color.png)
+│   │   │   │   │   │   │   │   │   └── [wave.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/wave.png)
+│   │   │   │   │   │   │   │   └── [baseline.json](./packages/app/headless/vectify/languages/rust/tests/golden/baseline.json)
+│   │   │   │   │   │   │   ├── [api.rs](./packages/app/headless/vectify/languages/rust/tests/api.rs)
+│   │   │   │   │   │   │   ├── [artifacts.rs](./packages/app/headless/vectify/languages/rust/tests/artifacts.rs)
+│   │   │   │   │   │   │   ├── [end_to_end.rs](./packages/app/headless/vectify/languages/rust/tests/end_to_end.rs)
+│   │   │   │   │   │   │   └── [eval.rs](./packages/app/headless/vectify/languages/rust/tests/eval.rs)
+│   │   │   │   │   │   ├── [AGENTS.md](./packages/app/headless/vectify/languages/rust/AGENTS.md)
+│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/headless/vectify/languages/rust/Cargo.lock)
+│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/headless/vectify/languages/rust/Cargo.toml)
+│   │   │   │   │   │   ├── [Dockerfile](./packages/app/headless/vectify/languages/rust/Dockerfile)
+│   │   │   │   │   │   ├── [LICENSE](./packages/app/headless/vectify/languages/rust/LICENSE)
+│   │   │   │   │   │   ├── [Makefile](./packages/app/headless/vectify/languages/rust/Makefile)
+│   │   │   │   │   │   └── [README.md](./packages/app/headless/vectify/languages/rust/README.md)
+│   │   │   │   │   └── [README.md](./packages/app/headless/vectify/languages/README.md)
+│   │   │   │   ├── public/
+│   │   │   │   │   ├── og/
+│   │   │   │   │   │   ├── [og.png](./packages/app/headless/vectify/public/og/og.png)
+│   │   │   │   │   │   └── [og.svg](./packages/app/headless/vectify/public/og/og.svg)
+│   │   │   │   │   ├── [demo-en-descriptions.vtt](./packages/app/headless/vectify/public/demo-en-descriptions.vtt)
+│   │   │   │   │   ├── [demo.mp4](./packages/app/headless/vectify/public/demo.mp4)
+│   │   │   │   │   ├── [demo.png](./packages/app/headless/vectify/public/demo.png)
+│   │   │   │   │   ├── [demo.svg](./packages/app/headless/vectify/public/demo.svg)
+│   │   │   │   │   └── [index.html](./packages/app/headless/vectify/public/index.html)
+│   │   │   │   ├── [README.md](./packages/app/headless/vectify/README.md)
+│   │   │   │   ├── [TREE.md](./packages/app/headless/vectify/TREE.md)
+│   │   │   │   └── [landify.yaml](./packages/app/headless/vectify/landify.yaml)
 │   │   │   └── [README.md](./packages/app/headless/README.md)
 │   │   ├── hybrid/
-│   │   │   ├── business/
-│   │   │   │   ├── menu/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/business/menu/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/business/menu/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/business/menu/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/business/menu/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/business/menu/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── screenshots/
-│   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/business/menu/e2e/screenshots/about.png)
-│   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/business/menu/e2e/screenshots/downloads.png)
-│   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/business/menu/e2e/screenshots/home.png)
-│   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/business/menu/e2e/screenshots/version.png)
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/business/menu/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/business/menu/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/business/menu/e2e/home.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/business/menu/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/business/menu/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/business/menu/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/business/menu/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/business/menu/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/business/menu/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/business/menu/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/business/menu/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/business/menu/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/business/menu/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/business/menu/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/business/menu/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/business/menu/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/business/menu/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/business/menu/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/business/menu/public/icons/icon.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/business/menu/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/business/menu/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/business/menu/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/business/menu/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/business/menu/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/business/menu/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (app)/
-│   │   │   │   │   │   │   │   └── menu/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(app)/menu/page.tsx)
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/business/menu/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [default.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/default.test.tsx)
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/business/menu/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/business/menu/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/business/menu/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/business/menu/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/business/menu/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/business/menu/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/business/menu/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/business/menu/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/business/menu/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/business/menu/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/business/menu/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/business/menu/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/business/menu/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/business/menu/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [CustomerMenu.test.tsx](./packages/app/hybrid/business/menu/src/components/organisms/__tests__/CustomerMenu.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Header.test.tsx](./packages/app/hybrid/business/menu/src/components/organisms/__tests__/Header.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [MenuManager.test.tsx](./packages/app/hybrid/business/menu/src/components/organisms/__tests__/MenuManager.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [QrShare.test.tsx](./packages/app/hybrid/business/menu/src/components/organisms/__tests__/QrShare.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [RestaurantDashboard.test.tsx](./packages/app/hybrid/business/menu/src/components/organisms/__tests__/RestaurantDashboard.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [RestaurantManager.test.tsx](./packages/app/hybrid/business/menu/src/components/organisms/__tests__/RestaurantManager.test.tsx)
-│   │   │   │   │   │   │   │   ├── [CustomerMenu.tsx](./packages/app/hybrid/business/menu/src/components/organisms/CustomerMenu.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/business/menu/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   ├── [MenuManager.tsx](./packages/app/hybrid/business/menu/src/components/organisms/MenuManager.tsx)
-│   │   │   │   │   │   │   │   ├── [QrShare.tsx](./packages/app/hybrid/business/menu/src/components/organisms/QrShare.tsx)
-│   │   │   │   │   │   │   │   ├── [RestaurantDashboard.tsx](./packages/app/hybrid/business/menu/src/components/organisms/RestaurantDashboard.tsx)
-│   │   │   │   │   │   │   │   ├── [RestaurantManager.tsx](./packages/app/hybrid/business/menu/src/components/organisms/RestaurantManager.tsx)
-│   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/business/menu/src/components/organisms/types.ts)
-│   │   │   │   │   │   │   └── templates/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/business/menu/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/business/menu/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/business/menu/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/business/menu/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/business/menu/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/business/menu/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/business/menu/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/business/menu/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/business/menu/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/business/menu/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/business/menu/src/content/version.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [useMenuStore.test.ts](./packages/app/hybrid/business/menu/src/hooks/__tests__/useMenuStore.test.ts)
-│   │   │   │   │   │   │   └── [useMenuStore.ts](./packages/app/hybrid/business/menu/src/hooks/useMenuStore.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [menu.test.ts](./packages/app/hybrid/business/menu/src/lib/__tests__/menu.test.ts)
-│   │   │   │   │   │   │   │   ├── [seed.test.ts](./packages/app/hybrid/business/menu/src/lib/__tests__/seed.test.ts)
-│   │   │   │   │   │   │   │   └── [storage.test.ts](./packages/app/hybrid/business/menu/src/lib/__tests__/storage.test.ts)
-│   │   │   │   │   │   │   ├── [ids.ts](./packages/app/hybrid/business/menu/src/lib/ids.ts)
-│   │   │   │   │   │   │   ├── [menu.ts](./packages/app/hybrid/business/menu/src/lib/menu.ts)
-│   │   │   │   │   │   │   ├── [qr.ts](./packages/app/hybrid/business/menu/src/lib/qr.ts)
-│   │   │   │   │   │   │   ├── [seed.ts](./packages/app/hybrid/business/menu/src/lib/seed.ts)
-│   │   │   │   │   │   │   └── [storage.ts](./packages/app/hybrid/business/menu/src/lib/storage.ts)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/business/menu/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/business/menu/src/styles/themes.css)
-│   │   │   │   │   │   └── types/
-│   │   │   │   │   │       └── [menu.ts](./packages/app/hybrid/business/menu/src/types/menu.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/business/menu/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/menu/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/business/menu/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/business/menu/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/business/menu/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/business/menu/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/business/menu/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/business/menu/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/business/menu/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/business/menu/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/business/menu/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/business/menu/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/business/menu/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/business/menu/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/business/menu/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/business/menu/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/business/menu/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/business/menu/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/business/menu/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/business/menu/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/business/menu/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/business/menu/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/business/menu/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/business/menu/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/business/menu/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/business/menu/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/business/menu/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/business/menu/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/business/menu/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/business/menu/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/business/menu/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/business/menu/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/business/menu/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/business/menu/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/business/menu/tsconfig.json)
-│   │   │   │   ├── pos/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/business/pos/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/business/pos/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/business/pos/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/business/pos/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/business/pos/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── screenshots/
-│   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/business/pos/e2e/screenshots/about.png)
-│   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/business/pos/e2e/screenshots/downloads.png)
-│   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/business/pos/e2e/screenshots/home.png)
-│   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/business/pos/e2e/screenshots/version.png)
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/business/pos/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/business/pos/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/business/pos/e2e/home.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/business/pos/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/business/pos/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/business/pos/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/business/pos/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/business/pos/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/business/pos/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/business/pos/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/business/pos/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/business/pos/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/business/pos/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/business/pos/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/business/pos/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/business/pos/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/business/pos/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/business/pos/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/business/pos/public/icons/icon.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/business/pos/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/business/pos/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/business/pos/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/business/pos/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/business/pos/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/business/pos/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [about.test.tsx](./packages/app/hybrid/business/pos/src/__tests__/about.test.tsx)
-│   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/business/pos/src/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/business/pos/src/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/business/pos/src/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/business/pos/src/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   └── [version.test.tsx](./packages/app/hybrid/business/pos/src/__tests__/version.test.tsx)
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (app)/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/pos/src/app/(app)/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(app)/page.tsx)
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/business/pos/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/business/pos/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [default.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/default.test.tsx)
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/business/pos/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/business/pos/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/business/pos/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/business/pos/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/business/pos/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/business/pos/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/business/pos/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/business/pos/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/business/pos/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/business/pos/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/business/pos/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/business/pos/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/business/pos/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [Cart.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/Cart.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Checkout.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/Checkout.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DailySummary.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/DailySummary.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DigitalReceipt.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/DigitalReceipt.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DiscountManager.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/DiscountManager.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [GiftCardManager.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/GiftCardManager.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Header.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/Header.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [InventoryManager.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/InventoryManager.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ItemCatalog.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/ItemCatalog.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [PaymentPanel.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/PaymentPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Receipt.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/Receipt.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ReportingDashboard.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/ReportingDashboard.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ShiftManager.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/ShiftManager.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [TaxConfigPanel.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/TaxConfigPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [TransactionHistory.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/TransactionHistory.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [UserManager.test.tsx](./packages/app/hybrid/business/pos/src/components/organisms/__tests__/UserManager.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Cart.tsx](./packages/app/hybrid/business/pos/src/components/organisms/Cart.tsx)
-│   │   │   │   │   │   │   │   ├── [Checkout.tsx](./packages/app/hybrid/business/pos/src/components/organisms/Checkout.tsx)
-│   │   │   │   │   │   │   │   ├── [DailySummary.tsx](./packages/app/hybrid/business/pos/src/components/organisms/DailySummary.tsx)
-│   │   │   │   │   │   │   │   ├── [DigitalReceipt.tsx](./packages/app/hybrid/business/pos/src/components/organisms/DigitalReceipt.tsx)
-│   │   │   │   │   │   │   │   ├── [DiscountManager.tsx](./packages/app/hybrid/business/pos/src/components/organisms/DiscountManager.tsx)
-│   │   │   │   │   │   │   │   ├── [GiftCardManager.tsx](./packages/app/hybrid/business/pos/src/components/organisms/GiftCardManager.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/business/pos/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   ├── [InventoryManager.tsx](./packages/app/hybrid/business/pos/src/components/organisms/InventoryManager.tsx)
-│   │   │   │   │   │   │   │   ├── [ItemCatalog.tsx](./packages/app/hybrid/business/pos/src/components/organisms/ItemCatalog.tsx)
-│   │   │   │   │   │   │   │   ├── [PaymentPanel.tsx](./packages/app/hybrid/business/pos/src/components/organisms/PaymentPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [Receipt.tsx](./packages/app/hybrid/business/pos/src/components/organisms/Receipt.tsx)
-│   │   │   │   │   │   │   │   ├── [ReportingDashboard.tsx](./packages/app/hybrid/business/pos/src/components/organisms/ReportingDashboard.tsx)
-│   │   │   │   │   │   │   │   ├── [ShiftManager.tsx](./packages/app/hybrid/business/pos/src/components/organisms/ShiftManager.tsx)
-│   │   │   │   │   │   │   │   ├── [TaxConfigPanel.tsx](./packages/app/hybrid/business/pos/src/components/organisms/TaxConfigPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [TransactionHistory.tsx](./packages/app/hybrid/business/pos/src/components/organisms/TransactionHistory.tsx)
-│   │   │   │   │   │   │   │   └── [UserManager.tsx](./packages/app/hybrid/business/pos/src/components/organisms/UserManager.tsx)
-│   │   │   │   │   │   │   └── templates/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/business/pos/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/business/pos/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/business/pos/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/business/pos/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/business/pos/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/business/pos/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/business/pos/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/business/pos/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/business/pos/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/business/pos/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/business/pos/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [items.test.ts](./packages/app/hybrid/business/pos/src/data/__tests__/items.test.ts)
-│   │   │   │   │   │   │   └── [items.ts](./packages/app/hybrid/business/pos/src/data/items.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [storage.test.ts](./packages/app/hybrid/business/pos/src/lib/__tests__/storage.test.ts)
-│   │   │   │   │   │   │   └── [storage.ts](./packages/app/hybrid/business/pos/src/lib/storage.ts)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/business/pos/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/business/pos/src/styles/themes.css)
-│   │   │   │   │   │   └── types/
-│   │   │   │   │   │       └── [pos.ts](./packages/app/hybrid/business/pos/src/types/pos.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/business/pos/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/business/pos/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/business/pos/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/business/pos/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/business/pos/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/business/pos/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/business/pos/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/business/pos/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/business/pos/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/business/pos/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/business/pos/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/business/pos/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/business/pos/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/business/pos/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/business/pos/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/business/pos/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/business/pos/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/business/pos/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/business/pos/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/business/pos/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/business/pos/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/business/pos/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/business/pos/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/business/pos/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/business/pos/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/business/pos/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/business/pos/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/business/pos/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/business/pos/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/business/pos/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/business/pos/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/business/pos/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/business/pos/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/business/pos/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/business/pos/tsconfig.json)
-│   │   │   │   ├── [README.md](./packages/app/hybrid/business/README.md)
-│   │   │   │   └── [TREE.md](./packages/app/hybrid/business/TREE.md)
 │   │   │   ├── developer-tools/
 │   │   │   │   ├── api/
 │   │   │   │   │   ├── docs/
@@ -6826,6 +6486,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/developer-tools/api/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/developer-tools/api/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/developer-tools/api/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/developer-tools/api/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/developer-tools/api/public/og/og.svg)
 │   │   │   │   │   │   ├── swagger/
 │   │   │   │   │   │   │   ├── [bored.swagger.yaml](./packages/app/hybrid/developer-tools/api/public/swagger/bored.swagger.yaml)
 │   │   │   │   │   │   │   ├── [chess.swagger.yaml](./packages/app/hybrid/developer-tools/api/public/swagger/chess.swagger.yaml)
@@ -7210,6 +6873,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/developer-tools/boilerplate/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/developer-tools/boilerplate/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/developer-tools/boilerplate/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/developer-tools/boilerplate/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/developer-tools/boilerplate/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/developer-tools/boilerplate/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/developer-tools/boilerplate/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/developer-tools/boilerplate/public/manifest.json)
@@ -10682,6 +10348,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/developer-tools/code/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/developer-tools/code/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/developer-tools/code/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/developer-tools/code/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/developer-tools/code/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/developer-tools/code/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/developer-tools/code/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/developer-tools/code/public/manifest.json)
@@ -10969,6 +10638,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/developer-tools/database/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/developer-tools/database/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/developer-tools/database/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/developer-tools/database/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/developer-tools/database/public/og/og.svg)
 │   │   │   │   │   │   ├── wasm/
 │   │   │   │   │   │   │   └── [sql-wasm.wasm](./packages/app/hybrid/developer-tools/database/public/wasm/sql-wasm.wasm)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/developer-tools/database/public/apple-touch-icon.png)
@@ -11343,6 +11015,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/developer-tools/diagram/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/developer-tools/diagram/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/developer-tools/diagram/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/developer-tools/diagram/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/developer-tools/diagram/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/developer-tools/diagram/public/manifest.json)
@@ -11765,6 +11440,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/education/doi/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/education/doi/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/education/doi/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/education/doi/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/education/doi/public/og/og.svg)
 │   │   │   │   │   │   ├── wasm/
 │   │   │   │   │   │   │   └── [sql-wasm.wasm](./packages/app/hybrid/education/doi/public/wasm/sql-wasm.wasm)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/education/doi/public/apple-touch-icon.png)
@@ -11978,6 +11656,9 @@
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/education/lingo/public/icons/icon.svg)
 │   │   │   │   │   │   ├── models/
 │   │   │   │   │   │   │   └── [sign-model.onnx](./packages/app/hybrid/education/lingo/public/models/sign-model.onnx)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/education/lingo/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/education/lingo/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/education/lingo/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/education/lingo/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/education/lingo/public/manifest.json)
@@ -12156,6 +11837,17 @@
 │   │   │   │   │   │   │   │   │       │   └── satisfaction-with-life/
 │   │   │   │   │   │   │   │   │       │       └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/satisfaction-with-life/page.tsx)
 │   │   │   │   │   │   │   │   │       ├── (theory)/
+│   │   │   │   │   │   │   │   │       │   ├── (cognitive)/
+│   │   │   │   │   │   │   │   │       │   │   ├── attention/
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/attention/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── learning/
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/learning/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── memory/
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/memory/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── perception/
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/perception/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   └── reasoning/
+│   │   │   │   │   │   │   │   │       │   │       └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/reasoning/page.tsx)
 │   │   │   │   │   │   │   │   │       │   ├── biology/
 │   │   │   │   │   │   │   │   │       │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/biology/__tests__/page.test.tsx)
@@ -12488,8 +12180,10 @@
 │   │   │   │   │   │   │   │   └── (stem)/
 │   │   │   │   │   │   │   │       ├── chemistry/
 │   │   │   │   │   │   │   │       │   ├── periodic-table/
-│   │   │   │   │   │   │   │       │   │   ├── __tests__/
-│   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/chemistry/periodic-table/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── interactive/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/chemistry/periodic-table/interactive/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/chemistry/periodic-table/interactive/page.tsx)
 │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/chemistry/periodic-table/page.tsx)
 │   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/chemistry/page.tsx)
 │   │   │   │   │   │   │   │       ├── engineering/
@@ -12784,8 +12478,11 @@
 │   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/education/lingo/src/components/templates/DownloadsTemplate.tsx)
 │   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/education/lingo/src/components/templates/ErrorTemplate.tsx)
 │   │   │   │   │   │   │       ├── [GamesTemplate.tsx](./packages/app/hybrid/education/lingo/src/components/templates/GamesTemplate.tsx)
+│   │   │   │   │   │   │       ├── [NoteBody.tsx](./packages/app/hybrid/education/lingo/src/components/templates/NoteBody.tsx)
+│   │   │   │   │   │   │       ├── [NoteTemplate.tsx](./packages/app/hybrid/education/lingo/src/components/templates/NoteTemplate.tsx)
 │   │   │   │   │   │   │       ├── [TheoryTemplate.tsx](./packages/app/hybrid/education/lingo/src/components/templates/TheoryTemplate.tsx)
-│   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/education/lingo/src/components/templates/VersionTemplate.tsx)
+│   │   │   │   │   │   │       ├── [VersionTemplate.tsx](./packages/app/hybrid/education/lingo/src/components/templates/VersionTemplate.tsx)
+│   │   │   │   │   │   │       └── [noteEmbeds.ts](./packages/app/hybrid/education/lingo/src/components/templates/noteEmbeds.ts)
 │   │   │   │   │   │   ├── content/
 │   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/education/lingo/src/content/about.ts)
 │   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/education/lingo/src/content/download.ts)
@@ -14140,6 +13837,18 @@
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   └── [index.test.ts](./packages/app/hybrid/education/lingo/src/lib/native/__tests__/index.test.ts)
 │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/education/lingo/src/lib/native/index.ts)
+│   │   │   │   │   │   │   ├── notes/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [allNotes.test.ts](./packages/app/hybrid/education/lingo/src/lib/notes/__tests__/allNotes.test.ts)
+│   │   │   │   │   │   │   │   │   └── [note.test.ts](./packages/app/hybrid/education/lingo/src/lib/notes/__tests__/note.test.ts)
+│   │   │   │   │   │   │   │   ├── [frontmatter.ts](./packages/app/hybrid/education/lingo/src/lib/notes/frontmatter.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/education/lingo/src/lib/notes/index.ts)
+│   │   │   │   │   │   │   │   ├── [markdown-segments.ts](./packages/app/hybrid/education/lingo/src/lib/notes/markdown-segments.ts)
+│   │   │   │   │   │   │   │   ├── [markdown.ts](./packages/app/hybrid/education/lingo/src/lib/notes/markdown.ts)
+│   │   │   │   │   │   │   │   ├── [note.ts](./packages/app/hybrid/education/lingo/src/lib/notes/note.ts)
+│   │   │   │   │   │   │   │   ├── [sections.ts](./packages/app/hybrid/education/lingo/src/lib/notes/sections.ts)
+│   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/lib/notes/types.ts)
+│   │   │   │   │   │   │   │   └── [validate.ts](./packages/app/hybrid/education/lingo/src/lib/notes/validate.ts)
 │   │   │   │   │   │   │   ├── [catalog.ts](./packages/app/hybrid/education/lingo/src/lib/catalog.ts)
 │   │   │   │   │   │   │   ├── [progress.ts](./packages/app/hybrid/education/lingo/src/lib/progress.ts)
 │   │   │   │   │   │   │   └── [publicPaths.ts](./packages/app/hybrid/education/lingo/src/lib/publicPaths.ts)
@@ -14160,6 +13869,12 @@
 │   │   │   │   │   │   │   │       │   ├── [journaling.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/practices/journaling.md)
 │   │   │   │   │   │   │   │       │   └── [mindfulness.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/practices/mindfulness.md)
 │   │   │   │   │   │   │   │       └── theory/
+│   │   │   │   │   │   │   │           ├── cognitive/
+│   │   │   │   │   │   │   │           │   ├── [attention.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/theory/cognitive/attention.md)
+│   │   │   │   │   │   │   │           │   ├── [learning.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/theory/cognitive/learning.md)
+│   │   │   │   │   │   │   │           │   ├── [memory.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/theory/cognitive/memory.md)
+│   │   │   │   │   │   │   │           │   ├── [perception.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/theory/cognitive/perception.md)
+│   │   │   │   │   │   │   │           │   └── [reasoning.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/theory/cognitive/reasoning.md)
 │   │   │   │   │   │   │   │           ├── [biology.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/theory/biology.md)
 │   │   │   │   │   │   │   │           ├── [cognitive.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/theory/cognitive.md)
 │   │   │   │   │   │   │   │           ├── [developmental.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/theory/developmental.md)
@@ -14236,6 +13951,8 @@
 │   │   │   │   │   │   │   │           ├── [production-and-costs.md](./packages/app/hybrid/education/lingo/src/notes/humanities/economics/microeconomics/production-and-costs.md)
 │   │   │   │   │   │   │   │           └── [supply-and-demand.md](./packages/app/hybrid/education/lingo/src/notes/humanities/economics/microeconomics/supply-and-demand.md)
 │   │   │   │   │   │   │   ├── stem/
+│   │   │   │   │   │   │   │   ├── chemistry/
+│   │   │   │   │   │   │   │   │   └── [periodic-table.md](./packages/app/hybrid/education/lingo/src/notes/stem/chemistry/periodic-table.md)
 │   │   │   │   │   │   │   │   ├── engineering/
 │   │   │   │   │   │   │   │   │   ├── algorithms/
 │   │   │   │   │   │   │   │   │   │   ├── [binary-search.md](./packages/app/hybrid/education/lingo/src/notes/stem/engineering/algorithms/binary-search.md)
@@ -14285,9 +14002,10 @@
 │   │   │   │   │   │   │   ├── [NativeProvider.tsx](./packages/app/hybrid/education/lingo/src/providers/NativeProvider.tsx)
 │   │   │   │   │   │   │   ├── [QueryProvider.tsx](./packages/app/hybrid/education/lingo/src/providers/QueryProvider.tsx)
 │   │   │   │   │   │   │   └── [SWProvider.tsx](./packages/app/hybrid/education/lingo/src/providers/SWProvider.tsx)
-│   │   │   │   │   │   └── styles/
-│   │   │   │   │   │       ├── [globals.css](./packages/app/hybrid/education/lingo/src/styles/globals.css)
-│   │   │   │   │   │       └── [themes.css](./packages/app/hybrid/education/lingo/src/styles/themes.css)
+│   │   │   │   │   │   ├── styles/
+│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/education/lingo/src/styles/globals.css)
+│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/education/lingo/src/styles/themes.css)
+│   │   │   │   │   │   └── [global.d.ts](./packages/app/hybrid/education/lingo/src/global.d.ts)
 │   │   │   │   │   ├── src-tauri/
 │   │   │   │   │   │   ├── capabilities/
 │   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/education/lingo/src-tauri/capabilities/default.json)
@@ -14370,6 +14088,7 @@
 │   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/education/lingo/docker-compose.yaml)
 │   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/education/lingo/eslint.config.mts)
 │   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/education/lingo/jest.config.ts)
+│   │   │   │   │   ├── [jest.markdown-transform.js](./packages/app/hybrid/education/lingo/jest.markdown-transform.js)
 │   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/education/lingo/jest.setup.ts)
 │   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/education/lingo/next.config.ts)
 │   │   │   │   │   ├── [package.json](./packages/app/hybrid/education/lingo/package.json)
@@ -14411,6 +14130,9 @@
 │   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/finance/tax/public/icons/icon-512x512.png)
 │   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/finance/tax/public/icons/icon-64x64.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/finance/tax/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/finance/tax/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/finance/tax/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/finance/tax/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/finance/tax/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/finance/tax/public/manifest.json)
@@ -14678,7 +14400,6 @@
 │   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/finance/tax/playwright.config.ts)
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/finance/tax/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/finance/tax/tsconfig.json)
-│   │   │   │   ├── wallet/
 │   │   │   │   ├── [README.md](./packages/app/hybrid/finance/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/finance/TREE.md)
 │   │   │   ├── food-drink/
@@ -14716,6 +14437,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/food-drink/foody/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/food-drink/foody/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/food-drink/foody/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/food-drink/foody/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/food-drink/foody/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/food-drink/foody/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/food-drink/foody/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/food-drink/foody/public/manifest.json)
@@ -15019,6 +14743,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/games/memory/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/games/memory/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/games/memory/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/games/memory/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/games/memory/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/games/memory/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/games/memory/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/games/memory/public/manifest.json)
@@ -15646,307 +15373,977 @@
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/games/TREE.md)
 │   │   │   ├── graphics-design/
 │   │   │   │   ├── exhibit/
+│   │   │   │   │   ├── docs/
+│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/graphics-design/exhibit/docs/ARCHITECTURE.md)
+│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/graphics-design/exhibit/docs/CONTRIBUTING.md)
+│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/graphics-design/exhibit/docs/DOWNLOADS.md)
+│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/graphics-design/exhibit/docs/PACKAGING.md)
+│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/graphics-design/exhibit/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   └── wallet/
-│   │   │   │   │   │       ├── [auth-guard.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/auth-guard.spec.ts)
-│   │   │   │   │   │       ├── [cards.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/cards.spec.ts)
-│   │   │   │   │   │       ├── [exchange.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/exchange.spec.ts)
-│   │   │   │   │   │       ├── [helpers.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/helpers.ts)
-│   │   │   │   │   │       ├── [index.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/index.spec.ts)
-│   │   │   │   │   │       ├── [navigation.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/navigation.spec.ts)
-│   │   │   │   │   │       ├── [pay.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/pay.spec.ts)
-│   │   │   │   │   │       ├── [profile.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/profile.spec.ts)
-│   │   │   │   │   │       ├── [transactions.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/transactions.spec.ts)
-│   │   │   │   │   │       └── [transfer.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/transfer.spec.ts)
-│   │   │   │   │   └── src/
-│   │   │   │   │       ├── app/
-│   │   │   │   │       │   └── (app)/
-│   │   │   │   │       │       └── wallet/
-│   │   │   │   │       │           ├── __tests__/
-│   │   │   │   │       │           │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/__tests__/page.test.tsx)
-│   │   │   │   │       │           ├── accounts/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   ├── checking/
-│   │   │   │   │       │           │   │   ├── __tests__/
-│   │   │   │   │       │           │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/checking/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/checking/page.tsx)
-│   │   │   │   │       │           │   ├── credit/
-│   │   │   │   │       │           │   │   ├── __tests__/
-│   │   │   │   │       │           │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/credit/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/credit/page.tsx)
-│   │   │   │   │       │           │   ├── savings/
-│   │   │   │   │       │           │   │   ├── __tests__/
-│   │   │   │   │       │           │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/savings/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/savings/page.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/page.tsx)
-│   │   │   │   │       │           ├── bills/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/bills/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/bills/page.tsx)
-│   │   │   │   │       │           ├── budget/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/budget/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/budget/page.tsx)
-│   │   │   │   │       │           ├── card-rewards/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/card-rewards/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/card-rewards/page.tsx)
-│   │   │   │   │       │           ├── cards/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/cards/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/cards/page.tsx)
-│   │   │   │   │       │           ├── contacts/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/contacts/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/contacts/page.tsx)
-│   │   │   │   │       │           ├── currency-alerts/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/currency-alerts/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/currency-alerts/page.tsx)
-│   │   │   │   │       │           ├── exchange/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/exchange/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/exchange/page.tsx)
-│   │   │   │   │       │           ├── fixed-deposits/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/fixed-deposits/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/fixed-deposits/page.tsx)
-│   │   │   │   │       │           ├── help-support/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/help-support/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/help-support/page.tsx)
-│   │   │   │   │       │           ├── insurance/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/insurance/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/insurance/page.tsx)
-│   │   │   │   │       │           ├── loans/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loans/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loans/page.tsx)
-│   │   │   │   │       │           ├── notifications/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/notifications/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/notifications/page.tsx)
-│   │   │   │   │       │           ├── pay/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/pay/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/pay/page.tsx)
-│   │   │   │   │       │           ├── payment-requests/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/payment-requests/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/payment-requests/page.tsx)
-│   │   │   │   │       │           ├── privacy-policy/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/privacy-policy/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/privacy-policy/page.tsx)
-│   │   │   │   │       │           ├── profile/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/profile/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/profile/page.tsx)
-│   │   │   │   │       │           ├── rates/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/rates/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/rates/page.tsx)
-│   │   │   │   │       │           ├── recurring-deposits/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-deposits/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-deposits/page.tsx)
-│   │   │   │   │       │           ├── recurring-transfers/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-transfers/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-transfers/page.tsx)
-│   │   │   │   │       │           ├── reports/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/reports/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/reports/page.tsx)
-│   │   │   │   │       │           ├── savings-goals/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/savings-goals/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/savings-goals/page.tsx)
-│   │   │   │   │       │           ├── settings/
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/settings/page.tsx)
-│   │   │   │   │       │           ├── split-bill/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/split-bill/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/split-bill/page.tsx)
-│   │   │   │   │       │           ├── terms-of-service/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/terms-of-service/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/terms-of-service/page.tsx)
-│   │   │   │   │       │           ├── transactions/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transactions/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transactions/page.tsx)
-│   │   │   │   │       │           ├── transfer/
-│   │   │   │   │       │           │   ├── __tests__/
-│   │   │   │   │       │           │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transfer/__tests__/page.test.tsx)
-│   │   │   │   │       │           │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transfer/page.tsx)
-│   │   │   │   │       │           ├── [layout.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/layout.tsx)
-│   │   │   │   │       │           ├── [loading.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loading.tsx)
-│   │   │   │   │       │           ├── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/page.tsx)
-│   │   │   │   │       │           └── [template.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/template.tsx)
-│   │   │   │   │       ├── components/
-│   │   │   │   │       │   ├── shared/
-│   │   │   │   │       │   │   ├── organisms/
-│   │   │   │   │       │   │   │   ├── __tests__/
-│   │   │   │   │       │   │   │   │   └── [Header.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/__tests__/Header.test.tsx)
-│   │   │   │   │       │   │   │   └── [Header.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/Header.tsx)
-│   │   │   │   │       │   │   └── templates/
-│   │   │   │   │       │   │       ├── __tests__/
-│   │   │   │   │       │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │       │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │       │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │       │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │       │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/AboutTemplate.tsx)
-│   │   │   │   │       │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/DownloadsTemplate.tsx)
-│   │   │   │   │       │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/ErrorTemplate.tsx)
-│   │   │   │   │       │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/VersionTemplate.tsx)
-│   │   │   │   │       │   └── wallet/
-│   │   │   │   │       │       ├── atoms/
-│   │   │   │   │       │       │   ├── __tests__/
-│   │   │   │   │       │       │   │   ├── [AccountCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/AccountCard.test.tsx)
-│   │   │   │   │       │       │   │   ├── [AccountDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/AccountDetail.test.tsx)
-│   │   │   │   │       │       │   │   ├── [BalanceCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BalanceCard.test.tsx)
-│   │   │   │   │       │       │   │   ├── [BillItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BillItem.test.tsx)
-│   │   │   │   │       │       │   │   ├── [BudgetCategoryCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BudgetCategoryCard.test.tsx)
-│   │   │   │   │       │       │   │   ├── [CardActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardActions.test.tsx)
-│   │   │   │   │       │       │   │   ├── [CardDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardDetail.test.tsx)
-│   │   │   │   │       │       │   │   ├── [CardItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardItem.test.tsx)
-│   │   │   │   │       │       │   │   ├── [CardSpending.branches.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardSpending.branches.test.tsx)
-│   │   │   │   │       │       │   │   ├── [CardSpending.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardSpending.test.tsx)
-│   │   │   │   │       │       │   │   ├── [NotificationItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/NotificationItem.test.tsx)
-│   │   │   │   │       │       │   │   ├── [RateItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/RateItem.test.tsx)
-│   │   │   │   │       │       │   │   ├── [Skeleton.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/Skeleton.test.tsx)
-│   │   │   │   │       │       │   │   ├── [SpendingChart.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/SpendingChart.test.tsx)
-│   │   │   │   │       │       │   │   ├── [SwipeableTransactionItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/SwipeableTransactionItem.test.tsx)
-│   │   │   │   │       │       │   │   ├── [TransactionItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/TransactionItem.test.tsx)
-│   │   │   │   │       │       │   │   └── [UserCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/UserCard.test.tsx)
-│   │   │   │   │       │       │   ├── [AccountCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/AccountCard.tsx)
-│   │   │   │   │       │       │   ├── [AccountDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/AccountDetail.tsx)
-│   │   │   │   │       │       │   ├── [BalanceCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BalanceCard.tsx)
-│   │   │   │   │       │       │   ├── [BillItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BillItem.tsx)
-│   │   │   │   │       │       │   ├── [BudgetCategoryCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BudgetCategoryCard.tsx)
-│   │   │   │   │       │       │   ├── [CardActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardActions.tsx)
-│   │   │   │   │       │       │   ├── [CardDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardDetail.tsx)
-│   │   │   │   │       │       │   ├── [CardItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardItem.tsx)
-│   │   │   │   │       │       │   ├── [CardSpending.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardSpending.tsx)
-│   │   │   │   │       │       │   ├── [NotificationItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/NotificationItem.tsx)
-│   │   │   │   │       │       │   ├── [RateItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/RateItem.tsx)
-│   │   │   │   │       │       │   ├── [Skeleton.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/Skeleton.tsx)
-│   │   │   │   │       │       │   ├── [SpendingChart.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/SpendingChart.tsx)
-│   │   │   │   │       │       │   ├── [SwipeableTransactionItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/SwipeableTransactionItem.tsx)
-│   │   │   │   │       │       │   ├── [TransactionItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/TransactionItem.tsx)
-│   │   │   │   │       │       │   ├── [UserCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/UserCard.tsx)
-│   │   │   │   │       │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/index.ts)
-│   │   │   │   │       │       ├── molecules/
-│   │   │   │   │       │       │   ├── __tests__/
-│   │   │   │   │       │       │   │   ├── [BudgetSummary.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/BudgetSummary.test.tsx)
-│   │   │   │   │       │       │   │   ├── [CurrencyConverter.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/CurrencyConverter.test.tsx)
-│   │   │   │   │       │       │   │   ├── [QRCodeActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QRCodeActions.test.tsx)
-│   │   │   │   │       │       │   │   ├── [QRCodeModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QRCodeModal.test.tsx)
-│   │   │   │   │       │       │   │   ├── [QuickActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QuickActions.test.tsx)
-│   │   │   │   │       │       │   │   ├── [QuickPayForm.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QuickPayForm.test.tsx)
-│   │   │   │   │       │       │   │   ├── [RateList.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/RateList.test.tsx)
-│   │   │   │   │       │       │   │   ├── [TransactionFilters.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransactionFilters.test.tsx)
-│   │   │   │   │       │       │   │   ├── [TransferConfirmation.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransferConfirmation.test.tsx)
-│   │   │   │   │       │       │   │   └── [TransferForm.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransferForm.test.tsx)
-│   │   │   │   │       │       │   ├── [AddAccountModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/AddAccountModal.tsx)
-│   │   │   │   │       │       │   ├── [AddBillModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/AddBillModal.tsx)
-│   │   │   │   │       │       │   ├── [BudgetSummary.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/BudgetSummary.tsx)
-│   │   │   │   │       │       │   ├── [ContactList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/ContactList.tsx)
-│   │   │   │   │       │       │   ├── [CurrencyAlerts.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/CurrencyAlerts.tsx)
-│   │   │   │   │       │       │   ├── [CurrencyConverter.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/CurrencyConverter.tsx)
-│   │   │   │   │       │       │   ├── [QRCodeActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QRCodeActions.tsx)
-│   │   │   │   │       │       │   ├── [QRCodeModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QRCodeModal.tsx)
-│   │   │   │   │       │       │   ├── [QuickActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QuickActions.tsx)
-│   │   │   │   │       │       │   ├── [QuickPayForm.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QuickPayForm.tsx)
-│   │   │   │   │       │       │   ├── [RateList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/RateList.tsx)
-│   │   │   │   │       │       │   ├── [SplitBill.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/SplitBill.tsx)
-│   │   │   │   │       │       │   ├── [TransactionFilters.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransactionFilters.tsx)
-│   │   │   │   │       │       │   ├── [TransferConfirmation.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransferConfirmation.tsx)
-│   │   │   │   │       │       │   ├── [TransferForm.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransferForm.tsx)
-│   │   │   │   │       │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/index.ts)
-│   │   │   │   │       │       ├── organisms/
-│   │   │   │   │       │       │   ├── __tests__/
-│   │   │   │   │       │       │   │   ├── [BottomNav.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/BottomNav.test.tsx)
-│   │   │   │   │       │       │   │   ├── [SettingsSection.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/SettingsSection.test.tsx)
-│   │   │   │   │       │       │   │   └── [Sidebar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/Sidebar.test.tsx)
-│   │   │   │   │       │       │   ├── [BottomNav.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/BottomNav.tsx)
-│   │   │   │   │       │       │   ├── [SettingsSection.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/SettingsSection.tsx)
-│   │   │   │   │       │       │   ├── [Sidebar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/Sidebar.tsx)
-│   │   │   │   │       │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/index.ts)
-│   │   │   │   │       │       ├── templates/
-│   │   │   │   │       │       │   ├── __tests__/
-│   │   │   │   │       │       │   │   └── [DashboardTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/__tests__/DashboardTemplate.test.tsx)
-│   │   │   │   │       │       │   ├── [DashboardTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/DashboardTemplate.tsx)
-│   │   │   │   │       │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/index.ts)
-│   │   │   │   │       │       ├── [OfflineBanner.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/OfflineBanner.tsx)
-│   │   │   │   │       │       ├── [PageTransition.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/PageTransition.tsx)
-│   │   │   │   │       │       ├── [RouteGuard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/RouteGuard.tsx)
-│   │   │   │   │       │       └── [SkipToContent.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/SkipToContent.tsx)
-│   │   │   │   │       ├── data/
-│   │   │   │   │       │   └── wallet/
-│   │   │   │   │       │       ├── [mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/wallet/mock.ts)
-│   │   │   │   │       │       └── [nav.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/wallet/nav.ts)
-│   │   │   │   │       ├── hooks/
-│   │   │   │   │       │   └── wallet/
-│   │   │   │   │       │       ├── [useEntitySync.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useEntitySync.ts)
-│   │   │   │   │       │       ├── [useHaptic.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useHaptic.ts)
-│   │   │   │   │       │       ├── [useMediaQuery.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useMediaQuery.ts)
-│   │   │   │   │       │       ├── [usePullToRefresh.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/usePullToRefresh.ts)
-│   │   │   │   │       │       ├── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useSWRegister.ts)
-│   │   │   │   │       │       └── [useWalletSession.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useWalletSession.ts)
-│   │   │   │   │       ├── lib/
-│   │   │   │   │       │   └── wallet/
-│   │   │   │   │       │       ├── [db.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/db.ts)
-│   │   │   │   │       │       ├── [export.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/export.ts)
-│   │   │   │   │       │       ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/format.ts)
-│   │   │   │   │       │       ├── [iconMap.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/iconMap.ts)
-│   │   │   │   │       │       ├── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/seed.ts)
-│   │   │   │   │       │       └── [session.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/session.ts)
-│   │   │   │   │       ├── providers/
-│   │   │   │   │       │   └── wallet/
-│   │   │   │   │       │       ├── __tests__/
-│   │   │   │   │       │       │   ├── [DataProvider.crud.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.crud.test.tsx)
-│   │   │   │   │       │       │   ├── [DataProvider.loading.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.loading.test.tsx)
-│   │   │   │   │       │       │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.test.tsx)
-│   │   │   │   │       │       │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/ToastProvider.test.tsx)
-│   │   │   │   │       │       ├── auth/
-│   │   │   │   │       │       │   └── [AuthProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/auth/AuthProvider.tsx)
-│   │   │   │   │       │       ├── entities/
-│   │   │   │   │       │       │   ├── [AccountsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/AccountsProvider.tsx)
-│   │   │   │   │       │       │   ├── [BillsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/BillsProvider.tsx)
-│   │   │   │   │       │       │   ├── [BudgetProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/BudgetProvider.tsx)
-│   │   │   │   │       │       │   ├── [CardsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CardsProvider.tsx)
-│   │   │   │   │       │       │   ├── [ContactsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/ContactsProvider.tsx)
-│   │   │   │   │       │       │   ├── [CurrencyAlertsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CurrencyAlertsProvider.tsx)
-│   │   │   │   │       │       │   ├── [CurrencyRatesProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CurrencyRatesProvider.tsx)
-│   │   │   │   │       │       │   ├── [FDsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/FDsProvider.tsx)
-│   │   │   │   │       │       │   ├── [GoalsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/GoalsProvider.tsx)
-│   │   │   │   │       │       │   ├── [InsuranceProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/InsuranceProvider.tsx)
-│   │   │   │   │       │       │   ├── [LoansProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/LoansProvider.tsx)
-│   │   │   │   │       │       │   ├── [NotificationsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/NotificationsProvider.tsx)
-│   │   │   │   │       │       │   ├── [PaymentRequestsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/PaymentRequestsProvider.tsx)
-│   │   │   │   │       │       │   ├── [RDsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RDsProvider.tsx)
-│   │   │   │   │       │       │   ├── [RecurringTransfersProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RecurringTransfersProvider.tsx)
-│   │   │   │   │       │       │   ├── [RewardsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RewardsProvider.tsx)
-│   │   │   │   │       │       │   ├── [TransactionsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/TransactionsProvider.tsx)
-│   │   │   │   │       │       │   └── [UserProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/UserProvider.tsx)
-│   │   │   │   │       │       ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/DataProvider.tsx)
-│   │   │   │   │       │       ├── [Providers.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/Providers.tsx)
-│   │   │   │   │       │       ├── [SWProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/SWProvider.tsx)
-│   │   │   │   │       │       ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/ToastProvider.tsx)
-│   │   │   │   │       │       └── [WalletProviders.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/WalletProviders.tsx)
-│   │   │   │   │       ├── test-helpers/
-│   │   │   │   │       │   └── wallet/
-│   │   │   │   │       │       ├── [db-mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/db-mock.ts)
-│   │   │   │   │       │       ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/index.ts)
-│   │   │   │   │       │       ├── [nav-mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/nav-mock.ts)
-│   │   │   │   │       │       └── [render.tsx](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/render.tsx)
-│   │   │   │   │       └── types/
-│   │   │   │   │           └── wallet/
-│   │   │   │   │               └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/wallet/index.ts)
+│   │   │   │   │   │   ├── wallet/
+│   │   │   │   │   │   │   ├── [auth-guard.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/auth-guard.spec.ts)
+│   │   │   │   │   │   │   ├── [cards.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/cards.spec.ts)
+│   │   │   │   │   │   │   ├── [exchange.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/exchange.spec.ts)
+│   │   │   │   │   │   │   ├── [helpers.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/helpers.ts)
+│   │   │   │   │   │   │   ├── [index.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/index.spec.ts)
+│   │   │   │   │   │   │   ├── [navigation.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/navigation.spec.ts)
+│   │   │   │   │   │   │   ├── [pay.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/pay.spec.ts)
+│   │   │   │   │   │   │   ├── [profile.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/profile.spec.ts)
+│   │   │   │   │   │   │   ├── [transactions.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/transactions.spec.ts)
+│   │   │   │   │   │   │   └── [transfer.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/transfer.spec.ts)
+│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/about.spec.ts)
+│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/downloads.spec.ts)
+│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/home.spec.ts)
+│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/version.spec.ts)
+│   │   │   │   │   ├── public/
+│   │   │   │   │   │   ├── icons/
+│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-128x128.png)
+│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-144x144.png)
+│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-152x152.png)
+│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-16x16.png)
+│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-180x180.png)
+│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-192x192.png)
+│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-256x256.png)
+│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-32x32.png)
+│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-384x384.png)
+│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-48x48.png)
+│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-512x512.png)
+│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-64x64.png)
+│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-72x72.png)
+│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon-96x96.png)
+│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/graphics-design/exhibit/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/graphics-design/exhibit/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/graphics-design/exhibit/public/og/og.svg)
+│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/graphics-design/exhibit/public/apple-touch-icon.png)
+│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/graphics-design/exhibit/public/favicon.ico)
+│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/graphics-design/exhibit/public/manifest.json)
+│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/graphics-design/exhibit/public/robots.txt)
+│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/graphics-design/exhibit/public/sitemap.xml)
+│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/graphics-design/exhibit/public/sw.js)
+│   │   │   │   │   ├── src/
+│   │   │   │   │   │   ├── app/
+│   │   │   │   │   │   │   ├── (app)/
+│   │   │   │   │   │   │   │   ├── chat/
+│   │   │   │   │   │   │   │   │   ├── settings/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/chat/settings/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/chat/settings/page.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/chat/page.tsx)
+│   │   │   │   │   │   │   │   ├── menu/
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/menu/page.tsx)
+│   │   │   │   │   │   │   │   ├── password/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── generator/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/generator/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/generator/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── health/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [health-page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/health/__tests__/health-page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/health/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── item/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [item-page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/item/__tests__/item-page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/item/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── settings/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [settings-page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/settings/__tests__/settings-page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/settings/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── trash/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [trash-page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/trash/__tests__/trash-page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/trash/page.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/page.tsx)
+│   │   │   │   │   │   │   │   ├── pos/
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/pos/page.tsx)
+│   │   │   │   │   │   │   │   ├── video/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/video/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/video/page.tsx)
+│   │   │   │   │   │   │   │   └── wallet/
+│   │   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       ├── accounts/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   ├── checking/
+│   │   │   │   │   │   │   │       │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/checking/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/checking/page.tsx)
+│   │   │   │   │   │   │   │       │   ├── credit/
+│   │   │   │   │   │   │   │       │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/credit/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/credit/page.tsx)
+│   │   │   │   │   │   │   │       │   ├── savings/
+│   │   │   │   │   │   │   │       │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/savings/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/savings/page.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/accounts/page.tsx)
+│   │   │   │   │   │   │   │       ├── bills/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/bills/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/bills/page.tsx)
+│   │   │   │   │   │   │   │       ├── budget/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/budget/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/budget/page.tsx)
+│   │   │   │   │   │   │   │       ├── card-rewards/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/card-rewards/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/card-rewards/page.tsx)
+│   │   │   │   │   │   │   │       ├── cards/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/cards/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/cards/page.tsx)
+│   │   │   │   │   │   │   │       ├── contacts/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/contacts/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/contacts/page.tsx)
+│   │   │   │   │   │   │   │       ├── currency-alerts/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/currency-alerts/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/currency-alerts/page.tsx)
+│   │   │   │   │   │   │   │       ├── exchange/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/exchange/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/exchange/page.tsx)
+│   │   │   │   │   │   │   │       ├── fixed-deposits/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/fixed-deposits/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/fixed-deposits/page.tsx)
+│   │   │   │   │   │   │   │       ├── help-support/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/help-support/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/help-support/page.tsx)
+│   │   │   │   │   │   │   │       ├── insurance/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/insurance/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/insurance/page.tsx)
+│   │   │   │   │   │   │   │       ├── loans/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loans/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loans/page.tsx)
+│   │   │   │   │   │   │   │       ├── notifications/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/notifications/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/notifications/page.tsx)
+│   │   │   │   │   │   │   │       ├── pay/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/pay/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/pay/page.tsx)
+│   │   │   │   │   │   │   │       ├── payment-requests/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/payment-requests/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/payment-requests/page.tsx)
+│   │   │   │   │   │   │   │       ├── privacy-policy/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/privacy-policy/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/privacy-policy/page.tsx)
+│   │   │   │   │   │   │   │       ├── profile/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/profile/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/profile/page.tsx)
+│   │   │   │   │   │   │   │       ├── rates/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/rates/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/rates/page.tsx)
+│   │   │   │   │   │   │   │       ├── recurring-deposits/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-deposits/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-deposits/page.tsx)
+│   │   │   │   │   │   │   │       ├── recurring-transfers/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-transfers/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/recurring-transfers/page.tsx)
+│   │   │   │   │   │   │   │       ├── reports/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/reports/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/reports/page.tsx)
+│   │   │   │   │   │   │   │       ├── savings-goals/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/savings-goals/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/savings-goals/page.tsx)
+│   │   │   │   │   │   │   │       ├── settings/
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/settings/page.tsx)
+│   │   │   │   │   │   │   │       ├── split-bill/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/split-bill/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/split-bill/page.tsx)
+│   │   │   │   │   │   │   │       ├── terms-of-service/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/terms-of-service/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/terms-of-service/page.tsx)
+│   │   │   │   │   │   │   │       ├── transactions/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transactions/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transactions/page.tsx)
+│   │   │   │   │   │   │   │       ├── transfer/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transfer/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/transfer/page.tsx)
+│   │   │   │   │   │   │   │       ├── [layout.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/layout.tsx)
+│   │   │   │   │   │   │   │       ├── [loading.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/loading.tsx)
+│   │   │   │   │   │   │   │       ├── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/page.tsx)
+│   │   │   │   │   │   │   │       └── [template.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/wallet/template.tsx)
+│   │   │   │   │   │   │   ├── (auth)/
+│   │   │   │   │   │   │   │   ├── forget-password/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/forget-password/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/forget-password/page.tsx)
+│   │   │   │   │   │   │   │   ├── profile/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/profile/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/profile/page.tsx)
+│   │   │   │   │   │   │   │   ├── reset-password/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/reset-password/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/reset-password/page.tsx)
+│   │   │   │   │   │   │   │   ├── sign-in/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/sign-in/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/sign-in/page.tsx)
+│   │   │   │   │   │   │   │   └── sign-up/
+│   │   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/sign-up/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(auth)/sign-up/page.tsx)
+│   │   │   │   │   │   │   ├── (info)/
+│   │   │   │   │   │   │   │   ├── about/
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(info)/about/page.tsx)
+│   │   │   │   │   │   │   │   ├── downloads/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(info)/downloads/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(info)/downloads/page.tsx)
+│   │   │   │   │   │   │   │   └── version/
+│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(info)/version/page.tsx)
+│   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   ├── [about.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/about.test.tsx)
+│   │   │   │   │   │   │   │   ├── [default.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/default.test.tsx)
+│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/error.test.tsx)
+│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/forbidden.test.tsx)
+│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/global-error.test.tsx)
+│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/layout.test.tsx)
+│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/loading.test.tsx)
+│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/not-found.test.tsx)
+│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/robots.test.ts)
+│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/template.test.tsx)
+│   │   │   │   │   │   │   │   ├── [unauthorized.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/unauthorized.test.tsx)
+│   │   │   │   │   │   │   │   └── [version.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/__tests__/version.test.tsx)
+│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/default.tsx)
+│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/error.tsx)
+│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/graphics-design/exhibit/src/app/favicon.ico)
+│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/forbidden.tsx)
+│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/global-error.tsx)
+│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/layout.tsx)
+│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/loading.tsx)
+│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/not-found.tsx)
+│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/page.tsx)
+│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/graphics-design/exhibit/src/app/robots.ts)
+│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/template.tsx)
+│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/unauthorized.tsx)
+│   │   │   │   │   │   ├── components/
+│   │   │   │   │   │   │   ├── chat/
+│   │   │   │   │   │   │   │   ├── atoms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [Avatar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/__tests__/Avatar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [Badge.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/__tests__/Badge.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [EmptyState.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/__tests__/EmptyState.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [IconButton.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/__tests__/IconButton.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [StatusDot.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/__tests__/StatusDot.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [TypingIndicator.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/__tests__/TypingIndicator.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Avatar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/Avatar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Badge.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/Badge.tsx)
+│   │   │   │   │   │   │   │   │   ├── [EmptyState.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/EmptyState.tsx)
+│   │   │   │   │   │   │   │   │   ├── [IconButton.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/IconButton.tsx)
+│   │   │   │   │   │   │   │   │   ├── [StatusDot.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/StatusDot.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TypingIndicator.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/TypingIndicator.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/atoms/index.ts)
+│   │   │   │   │   │   │   │   ├── molecules/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [CallControls.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/CallControls.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ChatHeader.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/ChatHeader.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ChatListItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/ChatListItem.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ChatSearchBar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/ChatSearchBar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [Composer.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/Composer.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ContactRow.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/ContactRow.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [DateDivider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/DateDivider.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [EmojiAutocomplete.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/EmojiAutocomplete.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [LinkPreviewCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/LinkPreviewCard.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [MediaComposer.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/MediaComposer.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [MessageBubble.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/MessageBubble.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [MessageContextMenu.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/MessageContextMenu.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ReactionBar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/ReactionBar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ReplyComposer.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/ReplyComposer.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SearchBar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/SearchBar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SecretChatBanner.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/SecretChatBanner.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [StickerPicker.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/StickerPicker.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ToastViewport.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/ToastViewport.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VerificationCodeModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/VerificationCodeModal.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [VoiceRecorder.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/__tests__/VoiceRecorder.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [CallControls.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/CallControls.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ChatHeader.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/ChatHeader.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ChatListItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/ChatListItem.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ChatSearchBar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/ChatSearchBar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Composer.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/Composer.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ContactRow.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/ContactRow.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DateDivider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/DateDivider.tsx)
+│   │   │   │   │   │   │   │   │   ├── [EmojiAutocomplete.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/EmojiAutocomplete.tsx)
+│   │   │   │   │   │   │   │   │   ├── [LinkPreviewCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/LinkPreviewCard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [MediaComposer.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/MediaComposer.tsx)
+│   │   │   │   │   │   │   │   │   ├── [MessageBubble.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/MessageBubble.tsx)
+│   │   │   │   │   │   │   │   │   ├── [MessageContextMenu.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/MessageContextMenu.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ReactionBar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/ReactionBar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ReplyComposer.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/ReplyComposer.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SearchBar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/SearchBar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SecretChatBanner.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/SecretChatBanner.tsx)
+│   │   │   │   │   │   │   │   │   ├── [StickerPicker.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/StickerPicker.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ToastViewport.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/ToastViewport.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VerificationCodeModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/VerificationCodeModal.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VoiceRecorder.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/VoiceRecorder.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/molecules/index.ts)
+│   │   │   │   │   │   │   │   ├── organisms/
+│   │   │   │   │   │   │   │   │   ├── ChatPane/
+│   │   │   │   │   │   │   │   │   │   ├── [MessageList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/ChatPane/MessageList.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [useChatPaneHandlers.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/ChatPane/useChatPaneHandlers.ts)
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [BlockedContactsPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/BlockedContactsPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [CallHistoryPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/CallHistoryPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [CallScreen.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/CallScreen.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ChatPane.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/ChatPane.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ChatSettingsPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/ChatSettingsPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ChatSidebar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/ChatSidebar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [DeviceSyncPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/DeviceSyncPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [DeviceTrustPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/DeviceTrustPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ForwardModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/ForwardModal.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [GroupAdminPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/GroupAdminPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [GroupCallView.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/GroupCallView.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ImageLightbox.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/ImageLightbox.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [IncomingCallModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/IncomingCallModal.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [MediaGallery.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/MediaGallery.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [NewChatModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/NewChatModal.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [PairingModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/PairingModal.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [PinLockScreen.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/PinLockScreen.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [PrivacySettingsPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/__tests__/PrivacySettingsPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [BlockedContactsPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/BlockedContactsPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [CallHistoryPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/CallHistoryPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [CallScreen.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/CallScreen.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ChatPane.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/ChatPane.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ChatSettingsPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/ChatSettingsPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ChatSidebar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/ChatSidebar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DeviceSyncPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/DeviceSyncPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DeviceTrustPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/DeviceTrustPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ForwardModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/ForwardModal.tsx)
+│   │   │   │   │   │   │   │   │   ├── [GroupAdminPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/GroupAdminPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [GroupCallView.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/GroupCallView.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/Header.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ImageLightbox.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/ImageLightbox.tsx)
+│   │   │   │   │   │   │   │   │   ├── [IncomingCallModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/IncomingCallModal.tsx)
+│   │   │   │   │   │   │   │   │   ├── [MediaGallery.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/MediaGallery.tsx)
+│   │   │   │   │   │   │   │   │   ├── [NewChatModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/NewChatModal.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PairingModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/PairingModal.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PinLockScreen.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/PinLockScreen.tsx)
+│   │   │   │   │   │   │   │   │   └── [PrivacySettingsPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/organisms/PrivacySettingsPanel.tsx)
+│   │   │   │   │   │   │   │   ├── templates/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/__tests__/AboutTemplate.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [AppShell.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/__tests__/AppShell.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/__tests__/DownloadsTemplate.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/__tests__/ErrorTemplate.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/__tests__/VersionTemplate.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AboutTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/AboutTemplate.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AppShell.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/AppShell.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DownloadsTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/DownloadsTemplate.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ErrorTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/ErrorTemplate.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VersionTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/VersionTemplate.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/index.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/index.ts)
+│   │   │   │   │   │   │   ├── menu/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [CustomerMenu.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/__tests__/CustomerMenu.test.tsx)
+│   │   │   │   │   │   │   │   ├── [CustomerMenu.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/CustomerMenu.tsx)
+│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/Header.tsx)
+│   │   │   │   │   │   │   │   ├── [MenuManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/MenuManager.tsx)
+│   │   │   │   │   │   │   │   ├── [QrShare.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/QrShare.tsx)
+│   │   │   │   │   │   │   │   ├── [RestaurantDashboard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/RestaurantDashboard.tsx)
+│   │   │   │   │   │   │   │   ├── [RestaurantManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/RestaurantManager.tsx)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/index.ts)
+│   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/types.ts)
+│   │   │   │   │   │   │   ├── molecules/
+│   │   │   │   │   │   │   │   └── __tests__/
+│   │   │   │   │   │   │   ├── password/
+│   │   │   │   │   │   │   │   ├── molecules/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [AccessLogCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/molecules/__tests__/AccessLogCard.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [ShareItemModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/molecules/__tests__/ShareItemModal.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AccessLogCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/molecules/AccessLogCard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ConfirmDialog.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/molecules/ConfirmDialog.tsx)
+│   │   │   │   │   │   │   │   │   ├── [HealthWidgets.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/molecules/HealthWidgets.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ShareItemModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/molecules/ShareItemModal.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VaultItemForm.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/molecules/VaultItemForm.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/password/molecules/index.ts)
+│   │   │   │   │   │   │   │   ├── organisms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [EmergencyAccessCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/__tests__/EmergencyAccessCard.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [FolderManager.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/__tests__/FolderManager.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [LockScreen.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/__tests__/LockScreen.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [RecentlyUsed.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/__tests__/RecentlyUsed.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ToastContainer.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/__tests__/ToastContainer.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [TotpDisplay.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/__tests__/TotpDisplay.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [TransferCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/__tests__/TransferCard.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [EmergencyAccessCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/EmergencyAccessCard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [FolderManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/FolderManager.tsx)
+│   │   │   │   │   │   │   │   │   ├── [LockScreen.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/LockScreen.tsx)
+│   │   │   │   │   │   │   │   │   ├── [MasterPasswordCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/MasterPasswordCard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [RecentlyUsed.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/RecentlyUsed.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SecuritySettingsCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/SecuritySettingsCard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ToastContainer.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/ToastContainer.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TotpDisplay.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/TotpDisplay.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TransferCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/TransferCard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VaultItemCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/VaultItemCard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VaultToolbar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/VaultToolbar.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/password/organisms/index.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/password/index.ts)
+│   │   │   │   │   │   │   ├── pos/
+│   │   │   │   │   │   │   │   ├── atoms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [EmptyState.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/__tests__/EmptyState.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [IconButton.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/__tests__/IconButton.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [Money.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/__tests__/Money.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [StatusBadge.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/__tests__/StatusBadge.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [SuccessMark.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/__tests__/SuccessMark.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [EmptyState.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/EmptyState.tsx)
+│   │   │   │   │   │   │   │   │   ├── [IconButton.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/IconButton.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Money.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/Money.tsx)
+│   │   │   │   │   │   │   │   │   ├── [StatusBadge.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/StatusBadge.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SuccessMark.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/SuccessMark.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/atoms/index.ts)
+│   │   │   │   │   │   │   │   ├── molecules/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [CodeApplyField.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/CodeApplyField.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [FilterTabs.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/FilterTabs.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [LineItemRow.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/LineItemRow.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [MoneyRow.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/MoneyRow.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [PanelHeader.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/PanelHeader.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [PaymentBreakdown.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/PaymentBreakdown.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SearchField.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/SearchField.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [TransactionDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/TransactionDetail.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ViewToolbar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/ViewToolbar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [reportPieces.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/__tests__/reportPieces.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AdjustmentList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/AdjustmentList.tsx)
+│   │   │   │   │   │   │   │   │   ├── [CodeApplyField.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/CodeApplyField.tsx)
+│   │   │   │   │   │   │   │   │   ├── [FilterTabs.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/FilterTabs.tsx)
+│   │   │   │   │   │   │   │   │   ├── [FormCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/FormCard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [LineItemRow.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/LineItemRow.tsx)
+│   │   │   │   │   │   │   │   │   ├── [MoneyRow.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/MoneyRow.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PanelHeader.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/PanelHeader.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PaymentBreakdown.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/PaymentBreakdown.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SearchField.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/SearchField.tsx)
+│   │   │   │   │   │   │   │   │   ├── [StatBlock.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/StatBlock.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TopItemsList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/TopItemsList.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TransactionDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/TransactionDetail.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TransactionTotals.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/TransactionTotals.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ViewToolbar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/ViewToolbar.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/molecules/index.ts)
+│   │   │   │   │   │   │   │   ├── organisms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [Cart.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/Cart.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [Checkout.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/Checkout.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [DailySummary.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/DailySummary.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [DigitalReceipt.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/DigitalReceipt.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [DiscountManager.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/DiscountManager.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [GiftCardManager.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/GiftCardManager.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [InventoryManager.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/InventoryManager.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ItemCatalog.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/ItemCatalog.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [PaymentPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/PaymentPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [Receipt.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/Receipt.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ReportingDashboard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/ReportingDashboard.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ShiftManager.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/ShiftManager.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [TaxConfigPanel.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/TaxConfigPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [TransactionHistory.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/TransactionHistory.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [UserManager.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/__tests__/UserManager.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Cart.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/Cart.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Checkout.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/Checkout.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DailySummary.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/DailySummary.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DigitalReceipt.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/DigitalReceipt.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DiscountManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/DiscountManager.tsx)
+│   │   │   │   │   │   │   │   │   ├── [GiftCardManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/GiftCardManager.tsx)
+│   │   │   │   │   │   │   │   │   ├── [InventoryManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/InventoryManager.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ItemCatalog.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/ItemCatalog.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PaymentPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/PaymentPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Receipt.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/Receipt.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ReportingDashboard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/ReportingDashboard.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ShiftManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/ShiftManager.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TaxConfigPanel.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/TaxConfigPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TransactionHistory.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/TransactionHistory.tsx)
+│   │   │   │   │   │   │   │   │   ├── [UserManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/UserManager.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/organisms/index.ts)
+│   │   │   │   │   │   │   │   ├── templates/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [PosTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/templates/__tests__/PosTemplate.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PosTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/templates/PosTemplate.tsx)
+│   │   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/templates/index.ts)
+│   │   │   │   │   │   │   │   │   └── [usePosState.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/templates/usePosState.ts)
+│   │   │   │   │   │   │   │   ├── [UserManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/UserManager.tsx)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/index.ts)
+│   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/pos/types.ts)
+│   │   │   │   │   │   │   ├── shared/
+│   │   │   │   │   │   │   │   ├── organisms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [Header.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/__tests__/Header.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [Header.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/Header.tsx)
+│   │   │   │   │   │   │   │   └── templates/
+│   │   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/AboutTemplate.test.tsx)
+│   │   │   │   │   │   │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/DownloadsTemplate.test.tsx)
+│   │   │   │   │   │   │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/ErrorTemplate.test.tsx)
+│   │   │   │   │   │   │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/VersionTemplate.test.tsx)
+│   │   │   │   │   │   │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/AboutTemplate.tsx)
+│   │   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/DownloadsTemplate.tsx)
+│   │   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/ErrorTemplate.tsx)
+│   │   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/VersionTemplate.tsx)
+│   │   │   │   │   │   │   ├── video/
+│   │   │   │   │   │   │   │   ├── atoms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [VideoFileUpload.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/atoms/__tests__/VideoFileUpload.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoFileUpload.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/atoms/VideoFileUpload.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/video/atoms/index.ts)
+│   │   │   │   │   │   │   │   ├── molecules/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [AudioTranscribeTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/AudioTranscribeTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [GenerateSubtitleTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/GenerateSubtitleTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoCompressTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoCompressTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoConvertTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoConvertTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoCropTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoCropTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoDownloadTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoDownloadTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoExtractAudioTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoExtractAudioTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoExtractFramesTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoExtractFramesTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoMergeTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoMergeTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoMuteTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoMuteTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoResizeTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoResizeTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoSpeedTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoSpeedTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [VideoStabilizeTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoStabilizeTool.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [VideoTrimTool.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/__tests__/VideoTrimTool.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AudioTranscribeTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/AudioTranscribeTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [GenerateSubtitleTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/GenerateSubtitleTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoCompressTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoCompressTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoConvertTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoConvertTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoCropTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoCropTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoDownloadTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoDownloadTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoExtractAudioTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoExtractAudioTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoExtractFramesTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoExtractFramesTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoMergeTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoMergeTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoMuteTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoMuteTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoResizeTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoResizeTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoSpeedTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoSpeedTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoStabilizeTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoStabilizeTool.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoTrimTool.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/VideoTrimTool.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/video/molecules/index.ts)
+│   │   │   │   │   │   │   │   ├── templates/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [VideoToolsPage.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/templates/__tests__/VideoToolsPage.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [VideoToolsPage.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/video/templates/VideoToolsPage.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/video/templates/index.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/video/index.ts)
+│   │   │   │   │   │   │   └── wallet/
+│   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │       │   └── [RouteGuard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/__tests__/RouteGuard.test.tsx)
+│   │   │   │   │   │   │       ├── atoms/
+│   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │       │   │   ├── [AccountCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/AccountCard.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [AccountDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/AccountDetail.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [BalanceCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BalanceCard.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [BillItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BillItem.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [BudgetCategoryCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/BudgetCategoryCard.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [CardActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardActions.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [CardDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardDetail.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [CardItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardItem.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [CardSpending.branches.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardSpending.branches.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [CardSpending.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/CardSpending.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [NotificationItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/NotificationItem.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [RateItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/RateItem.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [Skeleton.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/Skeleton.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [SpendingChart.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/SpendingChart.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [SwipeableTransactionItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/SwipeableTransactionItem.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [TransactionItem.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/TransactionItem.test.tsx)
+│   │   │   │   │   │   │       │   │   └── [UserCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/UserCard.test.tsx)
+│   │   │   │   │   │   │       │   ├── [AccountCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/AccountCard.tsx)
+│   │   │   │   │   │   │       │   ├── [AccountDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/AccountDetail.tsx)
+│   │   │   │   │   │   │       │   ├── [BalanceCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BalanceCard.tsx)
+│   │   │   │   │   │   │       │   ├── [BillItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BillItem.tsx)
+│   │   │   │   │   │   │       │   ├── [BudgetCategoryCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/BudgetCategoryCard.tsx)
+│   │   │   │   │   │   │       │   ├── [CardActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardActions.tsx)
+│   │   │   │   │   │   │       │   ├── [CardDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardDetail.tsx)
+│   │   │   │   │   │   │       │   ├── [CardItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardItem.tsx)
+│   │   │   │   │   │   │       │   ├── [CardSpending.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/CardSpending.tsx)
+│   │   │   │   │   │   │       │   ├── [NotificationItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/NotificationItem.tsx)
+│   │   │   │   │   │   │       │   ├── [RateItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/RateItem.tsx)
+│   │   │   │   │   │   │       │   ├── [Skeleton.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/Skeleton.tsx)
+│   │   │   │   │   │   │       │   ├── [SpendingChart.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/SpendingChart.tsx)
+│   │   │   │   │   │   │       │   ├── [SwipeableTransactionItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/SwipeableTransactionItem.tsx)
+│   │   │   │   │   │   │       │   ├── [TransactionItem.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/TransactionItem.tsx)
+│   │   │   │   │   │   │       │   ├── [UserCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/UserCard.tsx)
+│   │   │   │   │   │   │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/index.ts)
+│   │   │   │   │   │   │       ├── molecules/
+│   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │       │   │   ├── [BudgetSummary.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/BudgetSummary.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [CurrencyConverter.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/CurrencyConverter.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [QRCodeActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QRCodeActions.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [QRCodeModal.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QRCodeModal.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [QuickActions.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QuickActions.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [QuickPayForm.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/QuickPayForm.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [RateList.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/RateList.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [TransactionFilters.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransactionFilters.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [TransferConfirmation.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransferConfirmation.test.tsx)
+│   │   │   │   │   │   │       │   │   └── [TransferForm.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/__tests__/TransferForm.test.tsx)
+│   │   │   │   │   │   │       │   ├── [AddAccountModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/AddAccountModal.tsx)
+│   │   │   │   │   │   │       │   ├── [AddBillModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/AddBillModal.tsx)
+│   │   │   │   │   │   │       │   ├── [BudgetSummary.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/BudgetSummary.tsx)
+│   │   │   │   │   │   │       │   ├── [ContactList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/ContactList.tsx)
+│   │   │   │   │   │   │       │   ├── [CurrencyAlerts.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/CurrencyAlerts.tsx)
+│   │   │   │   │   │   │       │   ├── [CurrencyConverter.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/CurrencyConverter.tsx)
+│   │   │   │   │   │   │       │   ├── [QRCodeActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QRCodeActions.tsx)
+│   │   │   │   │   │   │       │   ├── [QRCodeModal.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QRCodeModal.tsx)
+│   │   │   │   │   │   │       │   ├── [QuickActions.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QuickActions.tsx)
+│   │   │   │   │   │   │       │   ├── [QuickPayForm.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/QuickPayForm.tsx)
+│   │   │   │   │   │   │       │   ├── [RateList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/RateList.tsx)
+│   │   │   │   │   │   │       │   ├── [SplitBill.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/SplitBill.tsx)
+│   │   │   │   │   │   │       │   ├── [TransactionFilters.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransactionFilters.tsx)
+│   │   │   │   │   │   │       │   ├── [TransferConfirmation.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransferConfirmation.tsx)
+│   │   │   │   │   │   │       │   ├── [TransferForm.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/TransferForm.tsx)
+│   │   │   │   │   │   │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/molecules/index.ts)
+│   │   │   │   │   │   │       ├── organisms/
+│   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │       │   │   ├── [BottomNav.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/BottomNav.test.tsx)
+│   │   │   │   │   │   │       │   │   ├── [SettingsSection.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/SettingsSection.test.tsx)
+│   │   │   │   │   │   │       │   │   └── [Sidebar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/__tests__/Sidebar.test.tsx)
+│   │   │   │   │   │   │       │   ├── [BottomNav.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/BottomNav.tsx)
+│   │   │   │   │   │   │       │   ├── [SettingsSection.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/SettingsSection.tsx)
+│   │   │   │   │   │   │       │   ├── [Sidebar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/Sidebar.tsx)
+│   │   │   │   │   │   │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/organisms/index.ts)
+│   │   │   │   │   │   │       ├── templates/
+│   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │       │   │   └── [DashboardTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/__tests__/DashboardTemplate.test.tsx)
+│   │   │   │   │   │   │       │   ├── [DashboardTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/DashboardTemplate.tsx)
+│   │   │   │   │   │   │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/index.ts)
+│   │   │   │   │   │   │       ├── [OfflineBanner.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/OfflineBanner.tsx)
+│   │   │   │   │   │   │       ├── [PageTransition.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/PageTransition.tsx)
+│   │   │   │   │   │   │       ├── [RouteGuard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/RouteGuard.tsx)
+│   │   │   │   │   │   │       └── [SkipToContent.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/SkipToContent.tsx)
+│   │   │   │   │   │   ├── content/
+│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/graphics-design/exhibit/src/content/about.ts)
+│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/graphics-design/exhibit/src/content/download.ts)
+│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/graphics-design/exhibit/src/content/version.ts)
+│   │   │   │   │   │   ├── data/
+│   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   └── [items.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/__tests__/items.test.ts)
+│   │   │   │   │   │   │   ├── chat/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/__tests__/models.test.ts)
+│   │   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/__tests__/seed.test.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/index.ts)
+│   │   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/models.ts)
+│   │   │   │   │   │   │   │   ├── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/seed.ts)
+│   │   │   │   │   │   │   │   └── [stickers.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/stickers.ts)
+│   │   │   │   │   │   │   ├── password/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/__tests__/models.test.ts)
+│   │   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/__tests__/seed.test.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/index.ts)
+│   │   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/models.ts)
+│   │   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/seed.ts)
+│   │   │   │   │   │   │   ├── video/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [video-tools.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/video/__tests__/video-tools.test.ts)
+│   │   │   │   │   │   │   │   └── [video-tools.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/video/video-tools.ts)
+│   │   │   │   │   │   │   ├── wallet/
+│   │   │   │   │   │   │   │   ├── [mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/wallet/mock.ts)
+│   │   │   │   │   │   │   │   └── [nav.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/wallet/nav.ts)
+│   │   │   │   │   │   │   └── [items.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/items.ts)
+│   │   │   │   │   │   ├── hooks/
+│   │   │   │   │   │   │   ├── chat/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [useSWRegister.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/__tests__/useSWRegister.test.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/index.ts)
+│   │   │   │   │   │   │   │   ├── [useAuthActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useAuthActions.ts)
+│   │   │   │   │   │   │   │   ├── [useCallActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useCallActions.ts)
+│   │   │   │   │   │   │   │   ├── [useChatActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useChatActions.ts)
+│   │   │   │   │   │   │   │   ├── [useDataEffects.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useDataEffects.ts)
+│   │   │   │   │   │   │   │   ├── [useMessageActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useMessageActions.ts)
+│   │   │   │   │   │   │   │   ├── [usePeerActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/usePeerActions.ts)
+│   │   │   │   │   │   │   │   ├── [usePrivacyActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/usePrivacyActions.ts)
+│   │   │   │   │   │   │   │   ├── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useSWRegister.ts)
+│   │   │   │   │   │   │   │   └── [useSettingsActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useSettingsActions.ts)
+│   │   │   │   │   │   │   ├── menu/
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/menu/index.ts)
+│   │   │   │   │   │   │   │   └── [useMenuStore.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/menu/useMenuStore.ts)
+│   │   │   │   │   │   │   ├── password/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [useSWRegister.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/hooks/password/__tests__/useSWRegister.test.tsx)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/password/index.ts)
+│   │   │   │   │   │   │   │   └── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/password/useSWRegister.ts)
+│   │   │   │   │   │   │   └── wallet/
+│   │   │   │   │   │   │       ├── [useEntitySync.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useEntitySync.ts)
+│   │   │   │   │   │   │       ├── [useHaptic.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useHaptic.ts)
+│   │   │   │   │   │   │       ├── [useMediaQuery.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useMediaQuery.ts)
+│   │   │   │   │   │   │       ├── [usePullToRefresh.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/usePullToRefresh.ts)
+│   │   │   │   │   │   │       ├── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useSWRegister.ts)
+│   │   │   │   │   │   │       └── [useWalletSession.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useWalletSession.ts)
+│   │   │   │   │   │   ├── lib/
+│   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   └── [storage.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/__tests__/storage.test.ts)
+│   │   │   │   │   │   │   ├── chat/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [crypto.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/__tests__/crypto.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/__tests__/db.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [format.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/__tests__/format.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [selectors.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/__tests__/selectors.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [url.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/__tests__/url.test.ts)
+│   │   │   │   │   │   │   │   │   └── [webrtc.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/__tests__/webrtc.test.ts)
+│   │   │   │   │   │   │   │   ├── [crypto.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/crypto.ts)
+│   │   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/db.ts)
+│   │   │   │   │   │   │   │   ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/format.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/index.ts)
+│   │   │   │   │   │   │   │   ├── [selectors.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/selectors.ts)
+│   │   │   │   │   │   │   │   ├── [url.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/url.ts)
+│   │   │   │   │   │   │   │   └── [webrtc.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/webrtc.ts)
+│   │   │   │   │   │   │   ├── menu/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [menu.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/menu/__tests__/menu.test.ts)
+│   │   │   │   │   │   │   │   ├── [ids.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/menu/ids.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/menu/index.ts)
+│   │   │   │   │   │   │   │   ├── [menu.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/menu/menu.ts)
+│   │   │   │   │   │   │   │   ├── [qr.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/menu/qr.ts)
+│   │   │   │   │   │   │   │   ├── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/menu/seed.ts)
+│   │   │   │   │   │   │   │   └── [storage.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/menu/storage.ts)
+│   │   │   │   │   │   │   ├── password/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/__tests__/db.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [health.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/__tests__/health.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [security.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/__tests__/security.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [totp.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/__tests__/totp.test.ts)
+│   │   │   │   │   │   │   │   │   └── [transfer.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/__tests__/transfer.test.ts)
+│   │   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/db.ts)
+│   │   │   │   │   │   │   │   ├── [health.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/health.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/index.ts)
+│   │   │   │   │   │   │   │   ├── [security.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/security.ts)
+│   │   │   │   │   │   │   │   ├── [totp.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/totp.ts)
+│   │   │   │   │   │   │   │   └── [transfer.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/password/transfer.ts)
+│   │   │   │   │   │   │   ├── pos/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [cart.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/__tests__/cart.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [discounts.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/__tests__/discounts.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [export.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/__tests__/export.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [money.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/__tests__/money.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [payment.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/__tests__/payment.test.ts)
+│   │   │   │   │   │   │   │   │   └── [reports.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/__tests__/reports.test.ts)
+│   │   │   │   │   │   │   │   ├── [cart.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/cart.ts)
+│   │   │   │   │   │   │   │   ├── [discounts.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/discounts.ts)
+│   │   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/download.ts)
+│   │   │   │   │   │   │   │   ├── [export.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/export.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/index.ts)
+│   │   │   │   │   │   │   │   ├── [inventory.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/inventory.ts)
+│   │   │   │   │   │   │   │   ├── [money.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/money.ts)
+│   │   │   │   │   │   │   │   ├── [payment.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/payment.ts)
+│   │   │   │   │   │   │   │   ├── [reports.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/reports.ts)
+│   │   │   │   │   │   │   │   └── [transactions.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/transactions.ts)
+│   │   │   │   │   │   │   ├── video/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [video-tools.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/video/__tests__/video-tools.test.ts)
+│   │   │   │   │   │   │   │   └── [video-tools.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/video/video-tools.ts)
+│   │   │   │   │   │   │   ├── wallet/
+│   │   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/db.ts)
+│   │   │   │   │   │   │   │   ├── [export.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/export.ts)
+│   │   │   │   │   │   │   │   ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/format.ts)
+│   │   │   │   │   │   │   │   ├── [iconMap.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/iconMap.ts)
+│   │   │   │   │   │   │   │   ├── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/seed.ts)
+│   │   │   │   │   │   │   │   └── [session.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/session.ts)
+│   │   │   │   │   │   │   └── [storage.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/storage.ts)
+│   │   │   │   │   │   ├── providers/
+│   │   │   │   │   │   │   ├── chat/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Providers.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/__tests__/Providers.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SWProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/__tests__/SWProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/__tests__/ToastProvider.test.tsx)
+│   │   │   │   │   │   │   │   ├── [DataContext.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/DataContext.ts)
+│   │   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/DataProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/Providers.tsx)
+│   │   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/SWProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/ToastProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [data-helpers.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/data-helpers.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/index.ts)
+│   │   │   │   │   │   │   ├── password/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SWProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/__tests__/SWProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SecurityProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/__tests__/SecurityProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/__tests__/ToastProvider.test.tsx)
+│   │   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/DataProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/Providers.tsx)
+│   │   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/SWProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [SecurityProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/SecurityProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/ToastProvider.tsx)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/index.ts)
+│   │   │   │   │   │   │   └── wallet/
+│   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │       │   ├── [DataProvider.crud.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.crud.test.tsx)
+│   │   │   │   │   │   │       │   ├── [DataProvider.loading.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.loading.test.tsx)
+│   │   │   │   │   │   │       │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   │   │       │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/ToastProvider.test.tsx)
+│   │   │   │   │   │   │       ├── auth/
+│   │   │   │   │   │   │       │   └── [AuthProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/auth/AuthProvider.tsx)
+│   │   │   │   │   │   │       ├── entities/
+│   │   │   │   │   │   │       │   ├── [AccountsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/AccountsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [BillsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/BillsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [BudgetProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/BudgetProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [CardsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CardsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [ContactsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/ContactsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [CurrencyAlertsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CurrencyAlertsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [CurrencyRatesProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/CurrencyRatesProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [FDsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/FDsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [GoalsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/GoalsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [InsuranceProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/InsuranceProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [LoansProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/LoansProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [NotificationsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/NotificationsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [PaymentRequestsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/PaymentRequestsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [RDsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RDsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [RecurringTransfersProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RecurringTransfersProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [RewardsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/RewardsProvider.tsx)
+│   │   │   │   │   │   │       │   ├── [TransactionsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/TransactionsProvider.tsx)
+│   │   │   │   │   │   │       │   └── [UserProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/entities/UserProvider.tsx)
+│   │   │   │   │   │   │       ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/DataProvider.tsx)
+│   │   │   │   │   │   │       ├── [Providers.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/Providers.tsx)
+│   │   │   │   │   │   │       ├── [SWProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/SWProvider.tsx)
+│   │   │   │   │   │   │       ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/ToastProvider.tsx)
+│   │   │   │   │   │   │       └── [WalletProviders.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/WalletProviders.tsx)
+│   │   │   │   │   │   ├── styles/
+│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/graphics-design/exhibit/src/styles/globals.css)
+│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/graphics-design/exhibit/src/styles/themes.css)
+│   │   │   │   │   │   ├── test-helpers/
+│   │   │   │   │   │   │   ├── password/
+│   │   │   │   │   │   │   │   ├── [fakeDb.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/password/fakeDb.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/password/index.ts)
+│   │   │   │   │   │   │   └── wallet/
+│   │   │   │   │   │   │       ├── [db-mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/db-mock.ts)
+│   │   │   │   │   │   │       ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/index.ts)
+│   │   │   │   │   │   │       ├── [nav-mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/nav-mock.ts)
+│   │   │   │   │   │   │       └── [render.tsx](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/render.tsx)
+│   │   │   │   │   │   ├── types/
+│   │   │   │   │   │   │   ├── chat/
+│   │   │   │   │   │   │   │   ├── [call.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/call.ts)
+│   │   │   │   │   │   │   │   ├── [chat.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/chat.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/index.ts)
+│   │   │   │   │   │   │   │   ├── [message.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/message.ts)
+│   │   │   │   │   │   │   │   ├── [peer.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/peer.ts)
+│   │   │   │   │   │   │   │   ├── [settings.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/settings.ts)
+│   │   │   │   │   │   │   │   └── [user.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/user.ts)
+│   │   │   │   │   │   │   ├── menu/
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/menu/index.ts)
+│   │   │   │   │   │   │   │   └── [menu.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/menu/menu.ts)
+│   │   │   │   │   │   │   ├── password/
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/password/index.ts)
+│   │   │   │   │   │   │   ├── pos/
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/pos/index.ts)
+│   │   │   │   │   │   │   ├── video/
+│   │   │   │   │   │   │   │   └── [speech-recognition.d.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/video/speech-recognition.d.ts)
+│   │   │   │   │   │   │   └── wallet/
+│   │   │   │   │   │   │       └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/wallet/index.ts)
+│   │   │   │   │   │   └── utils/
+│   │   │   │   │   │       └── password/
+│   │   │   │   │   │           ├── __tests__/
+│   │   │   │   │   │           │   └── [format.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/__tests__/format.test.ts)
+│   │   │   │   │   │           ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/format.ts)
+│   │   │   │   │   │           └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/index.ts)
+│   │   │   │   │   ├── src-tauri/
+│   │   │   │   │   │   ├── capabilities/
+│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/graphics-design/exhibit/src-tauri/capabilities/default.json)
+│   │   │   │   │   │   ├── icons/
+│   │   │   │   │   │   │   ├── android/
+│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   │   │   │   │   └── values/
+│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   │   │   │   │   ├── ios/
+│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
+│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/128x128.png)
+│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/128x128@2x.png)
+│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/256x256.png)
+│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/32x32.png)
+│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/64x64.png)
+│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square107x107Logo.png)
+│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square142x142Logo.png)
+│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square150x150Logo.png)
+│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square284x284Logo.png)
+│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square30x30Logo.png)
+│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square310x310Logo.png)
+│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square44x44Logo.png)
+│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square71x71Logo.png)
+│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/Square89x89Logo.png)
+│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/StoreLogo.png)
+│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/create-icons.sh)
+│   │   │   │   │   │   │   ├── [icon-1024.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/icon-1024.png)
+│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/icon.icns)
+│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/icon.ico)
+│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/graphics-design/exhibit/src-tauri/icons/icon.png)
+│   │   │   │   │   │   ├── src/
+│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/graphics-design/exhibit/src-tauri/src/lib.rs)
+│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/graphics-design/exhibit/src-tauri/src/main.rs)
+│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/graphics-design/exhibit/src-tauri/Cargo.lock)
+│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/graphics-design/exhibit/src-tauri/Cargo.toml)
+│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/graphics-design/exhibit/src-tauri/build.rs)
+│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/graphics-design/exhibit/src-tauri/tauri.conf.json)
+│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/graphics-design/exhibit/AGENTS.md)
+│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/graphics-design/exhibit/Dockerfile)
+│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/graphics-design/exhibit/LICENSE)
+│   │   │   │   │   ├── [README.md](./packages/app/hybrid/graphics-design/exhibit/README.md)
+│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/graphics-design/exhibit/TREE.md)
+│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/graphics-design/exhibit/docker-compose.yaml)
+│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/graphics-design/exhibit/eslint.config.mts)
+│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/graphics-design/exhibit/jest.config.ts)
+│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/graphics-design/exhibit/jest.setup.ts)
+│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/graphics-design/exhibit/next.config.ts)
+│   │   │   │   │   ├── [package.json](./packages/app/hybrid/graphics-design/exhibit/package.json)
+│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/graphics-design/exhibit/playwright.config.ts)
+│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/graphics-design/exhibit/postcss.config.mjs)
+│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/graphics-design/exhibit/tsconfig.json)
 │   │   │   │   ├── photo/
 │   │   │   │   │   ├── docs/
 │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/graphics-design/photo/docs/ARCHITECTURE.md)
@@ -15983,6 +16380,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/graphics-design/photo/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/graphics-design/photo/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/graphics-design/photo/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/graphics-design/photo/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/graphics-design/photo/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/graphics-design/photo/public/manifest.json)
@@ -16377,6 +16777,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/graphics-design/svg/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/graphics-design/svg/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/graphics-design/svg/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/graphics-design/svg/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/graphics-design/svg/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/graphics-design/svg/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/graphics-design/svg/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/graphics-design/svg/public/manifest.json)
@@ -16612,256 +17015,6 @@
 │   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/graphics-design/svg/playwright.config.ts)
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/graphics-design/svg/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/graphics-design/svg/tsconfig.json)
-│   │   │   │   ├── video/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/graphics-design/video/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/graphics-design/video/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/graphics-design/video/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/graphics-design/video/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/graphics-design/video/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── screenshots/
-│   │   │   │   │   │   │   └── [about.png](./packages/app/hybrid/graphics-design/video/e2e/screenshots/about.png)
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/graphics-design/video/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/graphics-design/video/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/graphics-design/video/e2e/home.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/graphics-design/video/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/graphics-design/video/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/graphics-design/video/public/icons/icon.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/graphics-design/video/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/graphics-design/video/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/graphics-design/video/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/graphics-design/video/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/graphics-design/video/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/graphics-design/video/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/graphics-design/video/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── tools/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/video/src/app/tools/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/tools/page.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/graphics-design/video/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/graphics-design/video/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/graphics-design/video/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/graphics-design/video/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/graphics-design/video/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/graphics-design/video/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/graphics-design/video/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/graphics-design/video/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/graphics-design/video/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/graphics-design/video/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/graphics-design/video/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/graphics-design/video/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [VideoFileUpload.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/atoms/__tests__/VideoFileUpload.test.tsx)
-│   │   │   │   │   │   │   │   └── [VideoFileUpload.tsx](./packages/app/hybrid/graphics-design/video/src/components/atoms/VideoFileUpload.tsx)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   └── [Header.tsx](./packages/app/hybrid/graphics-design/video/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   ├── templates/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AboutTemplate.tsx](./packages/app/hybrid/graphics-design/video/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [DownloadsTemplate.tsx](./packages/app/hybrid/graphics-design/video/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [ErrorTemplate.tsx](./packages/app/hybrid/graphics-design/video/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │   │   └── [VersionTemplate.tsx](./packages/app/hybrid/graphics-design/video/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   │   └── tools/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AudioTranscribeTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/AudioTranscribeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [GenerateSubtitleTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/GenerateSubtitleTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoCompressTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoCompressTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoConvertTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoConvertTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoCropTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoCropTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoDownloadTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoDownloadTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoExtractAudioTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoExtractAudioTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoExtractFramesTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoExtractFramesTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoMergeTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoMergeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoMuteTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoMuteTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoResizeTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoResizeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoSpeedTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoSpeedTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoStabilizeTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoStabilizeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VideoToolsPage.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoToolsPage.test.tsx)
-│   │   │   │   │   │   │       │   └── [VideoTrimTool.test.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/__tests__/VideoTrimTool.test.tsx)
-│   │   │   │   │   │   │       ├── [AudioTranscribeTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/AudioTranscribeTool.tsx)
-│   │   │   │   │   │   │       ├── [GenerateSubtitleTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/GenerateSubtitleTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoCompressTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoCompressTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoConvertTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoConvertTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoCropTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoCropTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoDownloadTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoDownloadTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoExtractAudioTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoExtractAudioTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoExtractFramesTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoExtractFramesTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoMergeTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoMergeTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoMuteTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoMuteTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoResizeTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoResizeTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoSpeedTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoSpeedTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoStabilizeTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoStabilizeTool.tsx)
-│   │   │   │   │   │   │       ├── [VideoToolsPage.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoToolsPage.tsx)
-│   │   │   │   │   │   │       └── [VideoTrimTool.tsx](./packages/app/hybrid/graphics-design/video/src/components/tools/VideoTrimTool.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/graphics-design/video/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/graphics-design/video/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/graphics-design/video/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [video-tools.test.ts](./packages/app/hybrid/graphics-design/video/src/data/__tests__/video-tools.test.ts)
-│   │   │   │   │   │   │   └── [video-tools.ts](./packages/app/hybrid/graphics-design/video/src/data/video-tools.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [video-tools.test.ts](./packages/app/hybrid/graphics-design/video/src/lib/__tests__/video-tools.test.ts)
-│   │   │   │   │   │   │   └── [video-tools.ts](./packages/app/hybrid/graphics-design/video/src/lib/video-tools.ts)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/graphics-design/video/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/graphics-design/video/src/styles/themes.css)
-│   │   │   │   │   │   └── types/
-│   │   │   │   │   │       └── [speech-recognition.d.ts](./packages/app/hybrid/graphics-design/video/src/types/speech-recognition.d.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/graphics-design/video/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/graphics-design/video/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/graphics-design/video/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/graphics-design/video/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/graphics-design/video/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/graphics-design/video/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/graphics-design/video/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/graphics-design/video/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/graphics-design/video/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/graphics-design/video/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/graphics-design/video/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/graphics-design/video/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/graphics-design/video/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/graphics-design/video/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/graphics-design/video/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/graphics-design/video/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/graphics-design/video/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/graphics-design/video/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/graphics-design/video/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/graphics-design/video/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/graphics-design/video/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/graphics-design/video/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/graphics-design/video/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/graphics-design/video/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/graphics-design/video/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/graphics-design/video/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/graphics-design/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/graphics-design/TREE.md)
 │   │   │   ├── medical/
@@ -16901,6 +17054,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/medical/brainbow/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/medical/brainbow/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/medical/brainbow/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/medical/brainbow/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/medical/brainbow/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/medical/brainbow/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/medical/brainbow/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/medical/brainbow/public/manifest.json)
@@ -17295,6 +17451,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/medical/mri/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/medical/mri/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/medical/mri/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/medical/mri/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/medical/mri/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/medical/mri/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/medical/mri/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/medical/mri/public/manifest.json)
@@ -17571,408 +17730,6 @@
 │   │   │   │   ├── [README.md](./packages/app/hybrid/medical/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/medical/TREE.md)
 │   │   │   ├── productivity/
-│   │   │   │   ├── keynotes/
-│   │   │   │   │   ├── __mocks__/
-│   │   │   │   │   │   └── [idb.ts](./packages/app/hybrid/productivity/keynotes/__mocks__/idb.ts)
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/productivity/keynotes/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/productivity/keynotes/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/productivity/keynotes/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/productivity/keynotes/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/productivity/keynotes/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── screenshots/
-│   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/productivity/keynotes/e2e/screenshots/about.png)
-│   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/productivity/keynotes/e2e/screenshots/downloads.png)
-│   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/productivity/keynotes/e2e/screenshots/version.png)
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/productivity/keynotes/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/productivity/keynotes/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/productivity/keynotes/e2e/home.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/productivity/keynotes/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/productivity/keynotes/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/productivity/keynotes/public/icons/icon.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/productivity/keynotes/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/productivity/keynotes/public/favicon.ico)
-│   │   │   │   │   │   ├── [icon.svg](./packages/app/hybrid/productivity/keynotes/public/icon.svg)
-│   │   │   │   │   │   ├── [manifest.webmanifest](./packages/app/hybrid/productivity/keynotes/public/manifest.webmanifest)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/productivity/keynotes/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/productivity/keynotes/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/productivity/keynotes/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (app)/
-│   │   │   │   │   │   │   │   ├── editor/
-│   │   │   │   │   │   │   │   │   └── [id]/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   ├── [EditorInteractions.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/editor/[id]/__tests__/EditorInteractions.test.tsx)
-│   │   │   │   │   │   │   │   │       │   ├── [EditorPage.coverage.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/editor/[id]/__tests__/EditorPage.coverage.test.tsx)
-│   │   │   │   │   │   │   │   │       │   └── [EditorPage.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/editor/[id]/__tests__/EditorPage.test.tsx)
-│   │   │   │   │   │   │   │   │       ├── [EditorPage.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/editor/[id]/EditorPage.tsx)
-│   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/editor/[id]/page.tsx)
-│   │   │   │   │   │   │   │   ├── handouts/
-│   │   │   │   │   │   │   │   │   └── [id]/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   └── [HandoutsPage.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/handouts/[id]/__tests__/HandoutsPage.test.tsx)
-│   │   │   │   │   │   │   │   │       ├── [HandoutsPage.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/handouts/[id]/HandoutsPage.tsx)
-│   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/handouts/[id]/page.tsx)
-│   │   │   │   │   │   │   │   ├── present/
-│   │   │   │   │   │   │   │   │   ├── [id]/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [PresentPage.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/present/[id]/__tests__/PresentPage.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [PresentPage.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/present/[id]/PresentPage.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/present/[id]/page.tsx)
-│   │   │   │   │   │   │   │   │   └── __tests__/
-│   │   │   │   │   │   │   │   │       └── [PresentPage.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/present/__tests__/PresentPage.test.tsx)
-│   │   │   │   │   │   │   │   ├── presenter/
-│   │   │   │   │   │   │   │   │   └── [id]/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   └── [PresenterView.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/presenter/[id]/__tests__/PresenterView.test.tsx)
-│   │   │   │   │   │   │   │   │       ├── [PresenterView.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/presenter/[id]/PresenterView.tsx)
-│   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/presenter/[id]/page.tsx)
-│   │   │   │   │   │   │   │   ├── print/
-│   │   │   │   │   │   │   │   │   └── [id]/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   └── [PrintPage.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/print/[id]/__tests__/PrintPage.test.tsx)
-│   │   │   │   │   │   │   │   │       ├── [PrintPage.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/print/[id]/PrintPage.tsx)
-│   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/print/[id]/page.tsx)
-│   │   │   │   │   │   │   │   └── templates/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(app)/templates/page.tsx)
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/productivity/keynotes/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/productivity/keynotes/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/productivity/keynotes/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/productivity/keynotes/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/productivity/keynotes/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/productivity/keynotes/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/productivity/keynotes/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/productivity/keynotes/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/productivity/keynotes/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/productivity/keynotes/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/productivity/keynotes/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/productivity/keynotes/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/productivity/keynotes/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [FormControls.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/atoms/__tests__/FormControls.test.tsx)
-│   │   │   │   │   │   │   │   ├── [FormControls.tsx](./packages/app/hybrid/productivity/keynotes/src/components/atoms/FormControls.tsx)
-│   │   │   │   │   │   │   │   ├── [IconButton.tsx](./packages/app/hybrid/productivity/keynotes/src/components/atoms/IconButton.tsx)
-│   │   │   │   │   │   │   │   ├── [LiveRegion.tsx](./packages/app/hybrid/productivity/keynotes/src/components/atoms/LiveRegion.tsx)
-│   │   │   │   │   │   │   │   ├── [SkipLink.tsx](./packages/app/hybrid/productivity/keynotes/src/components/atoms/SkipLink.tsx)
-│   │   │   │   │   │   │   │   └── [ThemeToggle.tsx](./packages/app/hybrid/productivity/keynotes/src/components/atoms/ThemeToggle.tsx)
-│   │   │   │   │   │   │   ├── canvas/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [ObjectRenderer.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/canvas/__tests__/ObjectRenderer.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SlideCanvas.coverage.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/canvas/__tests__/SlideCanvas.coverage.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SlideCanvas.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/canvas/__tests__/SlideCanvas.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [canvasOps.test.ts](./packages/app/hybrid/productivity/keynotes/src/components/canvas/__tests__/canvasOps.test.ts)
-│   │   │   │   │   │   │   │   ├── [ObjectRenderer.tsx](./packages/app/hybrid/productivity/keynotes/src/components/canvas/ObjectRenderer.tsx)
-│   │   │   │   │   │   │   │   ├── [Rulers.tsx](./packages/app/hybrid/productivity/keynotes/src/components/canvas/Rulers.tsx)
-│   │   │   │   │   │   │   │   ├── [SelectionOverlay.tsx](./packages/app/hybrid/productivity/keynotes/src/components/canvas/SelectionOverlay.tsx)
-│   │   │   │   │   │   │   │   ├── [SlideCanvas.tsx](./packages/app/hybrid/productivity/keynotes/src/components/canvas/SlideCanvas.tsx)
-│   │   │   │   │   │   │   │   ├── [SlidePreview.tsx](./packages/app/hybrid/productivity/keynotes/src/components/canvas/SlidePreview.tsx)
-│   │   │   │   │   │   │   │   └── [canvasOps.ts](./packages/app/hybrid/productivity/keynotes/src/components/canvas/canvasOps.ts)
-│   │   │   │   │   │   │   ├── home/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [DeckThumb.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/home/__tests__/DeckThumb.test.tsx)
-│   │   │   │   │   │   │   │   ├── [DeckThumb.tsx](./packages/app/hybrid/productivity/keynotes/src/components/home/DeckThumb.tsx)
-│   │   │   │   │   │   │   │   └── [ImportMenu.tsx](./packages/app/hybrid/productivity/keynotes/src/components/home/ImportMenu.tsx)
-│   │   │   │   │   │   │   ├── objects/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [ObjectContent.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/objects/__tests__/ObjectContent.test.tsx)
-│   │   │   │   │   │   │   │   └── [ObjectContent.tsx](./packages/app/hybrid/productivity/keynotes/src/components/objects/ObjectContent.tsx)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [EditorToolbar.coverage.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/__tests__/EditorToolbar.coverage.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ExportMenu.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/__tests__/ExportMenu.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [InsertToolbar.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/__tests__/InsertToolbar.test.tsx)
-│   │   │   │   │   │   │   │   ├── panels/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [AnimationsPanel.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/AnimationsPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [CommentsPanel.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/CommentsPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [FooterControls.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/FooterControls.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [FormatPanel.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/FormatPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [MasterPanel.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/MasterPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [ReuseSlidesModal.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/ReuseSlidesModal.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [SectionGroup.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/SectionGroup.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [SlideBackgroundPicker.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/SlideBackgroundPicker.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [SlidesPanel.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/__tests__/SlidesPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── animations/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [AnimationOrderList.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/animations/__tests__/AnimationOrderList.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [AnimationOrderList.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/animations/AnimationOrderList.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [AnimationPreview.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/animations/AnimationPreview.tsx)
-│   │   │   │   │   │   │   │   │   ├── [AnimationsPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/AnimationsPanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ArrangePanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/ArrangePanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CommentsPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/CommentsPanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [FooterControls.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/FooterControls.tsx)
-│   │   │   │   │   │   │   │   │   ├── [FormatPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/FormatPanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [LeftPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/LeftPanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [MasterPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/MasterPanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [NotesPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/NotesPanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [OutlinePanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/OutlinePanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ReuseSlidesModal.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/ReuseSlidesModal.tsx)
-│   │   │   │   │   │   │   │   │   ├── [RightPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/RightPanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SectionGroup.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/SectionGroup.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SlideBackgroundPicker.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/SlideBackgroundPicker.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SlideThumb.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/SlideThumb.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SlidesPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/SlidesPanel.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ThemePanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/ThemePanel.tsx)
-│   │   │   │   │   │   │   │   │   └── [TransitionsPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/panels/TransitionsPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [DiagnosticsPanel.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/DiagnosticsPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [EditorToolbar.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/EditorToolbar.tsx)
-│   │   │   │   │   │   │   │   ├── [ExportMenu.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/ExportMenu.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   ├── [InsertToolbar.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/InsertToolbar.tsx)
-│   │   │   │   │   │   │   │   └── [ToastContainer.tsx](./packages/app/hybrid/productivity/keynotes/src/components/organisms/ToastContainer.tsx)
-│   │   │   │   │   │   │   ├── present/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AnnotationOverlay.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/__tests__/AnnotationOverlay.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [PresentSlide.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/__tests__/PresentSlide.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [presentSteps.test.ts](./packages/app/hybrid/productivity/keynotes/src/components/present/__tests__/presentSteps.test.ts)
-│   │   │   │   │   │   │   │   ├── [AnnotationOverlay.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/AnnotationOverlay.tsx)
-│   │   │   │   │   │   │   │   ├── [AnnotationToolbar.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/AnnotationToolbar.tsx)
-│   │   │   │   │   │   │   │   ├── [BlackoutOverlay.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/BlackoutOverlay.tsx)
-│   │   │   │   │   │   │   │   ├── [CaptionsBar.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/CaptionsBar.tsx)
-│   │   │   │   │   │   │   │   ├── [PresentSlide.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/PresentSlide.tsx)
-│   │   │   │   │   │   │   │   ├── [PresentTools.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/PresentTools.tsx)
-│   │   │   │   │   │   │   │   ├── [RehearsalSummary.tsx](./packages/app/hybrid/productivity/keynotes/src/components/present/RehearsalSummary.tsx)
-│   │   │   │   │   │   │   │   └── [presentSteps.ts](./packages/app/hybrid/productivity/keynotes/src/components/present/presentSteps.ts)
-│   │   │   │   │   │   │   ├── templates/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/productivity/keynotes/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AboutTemplate.tsx](./packages/app/hybrid/productivity/keynotes/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [DownloadsTemplate.tsx](./packages/app/hybrid/productivity/keynotes/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [ErrorTemplate.tsx](./packages/app/hybrid/productivity/keynotes/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │   │   └── [VersionTemplate.tsx](./packages/app/hybrid/productivity/keynotes/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   │   └── [PwaRegister.tsx](./packages/app/hybrid/productivity/keynotes/src/components/PwaRegister.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/productivity/keynotes/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/productivity/keynotes/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/productivity/keynotes/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [themes.test.ts](./packages/app/hybrid/productivity/keynotes/src/data/__tests__/themes.test.ts)
-│   │   │   │   │   │   │   ├── [charts.ts](./packages/app/hybrid/productivity/keynotes/src/data/charts.ts)
-│   │   │   │   │   │   │   ├── [icons.ts](./packages/app/hybrid/productivity/keynotes/src/data/icons.ts)
-│   │   │   │   │   │   │   ├── [presets.ts](./packages/app/hybrid/productivity/keynotes/src/data/presets.ts)
-│   │   │   │   │   │   │   ├── [templates.ts](./packages/app/hybrid/productivity/keynotes/src/data/templates.ts)
-│   │   │   │   │   │   │   └── [themes.ts](./packages/app/hybrid/productivity/keynotes/src/data/themes.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [useCaptions.test.tsx](./packages/app/hybrid/productivity/keynotes/src/hooks/__tests__/useCaptions.test.tsx)
-│   │   │   │   │   │   │   │   ├── [useObjectKeyboard.test.tsx](./packages/app/hybrid/productivity/keynotes/src/hooks/__tests__/useObjectKeyboard.test.tsx)
-│   │   │   │   │   │   │   │   └── [useTheme.test.tsx](./packages/app/hybrid/productivity/keynotes/src/hooks/__tests__/useTheme.test.tsx)
-│   │   │   │   │   │   │   ├── [useCaptions.ts](./packages/app/hybrid/productivity/keynotes/src/hooks/useCaptions.ts)
-│   │   │   │   │   │   │   ├── [useObjectKeyboard.ts](./packages/app/hybrid/productivity/keynotes/src/hooks/useObjectKeyboard.ts)
-│   │   │   │   │   │   │   └── [useTheme.ts](./packages/app/hybrid/productivity/keynotes/src/hooks/useTheme.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [db.test.ts](./packages/app/hybrid/productivity/keynotes/src/lib/__tests__/db.test.ts)
-│   │   │   │   │   │   │   ├── stubs/
-│   │   │   │   │   │   │   │   └── [node-builtins.ts](./packages/app/hybrid/productivity/keynotes/src/lib/stubs/node-builtins.ts)
-│   │   │   │   │   │   │   └── [db.ts](./packages/app/hybrid/productivity/keynotes/src/lib/db.ts)
-│   │   │   │   │   │   ├── providers/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [DeckProvider.test.tsx](./packages/app/hybrid/productivity/keynotes/src/providers/__tests__/DeckProvider.test.tsx)
-│   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/productivity/keynotes/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   │   │   │   │   ├── [DeckProvider.tsx](./packages/app/hybrid/productivity/keynotes/src/providers/DeckProvider.tsx)
-│   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/productivity/keynotes/src/providers/Providers.tsx)
-│   │   │   │   │   │   │   └── [ToastProvider.tsx](./packages/app/hybrid/productivity/keynotes/src/providers/ToastProvider.tsx)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/productivity/keynotes/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/productivity/keynotes/src/styles/themes.css)
-│   │   │   │   │   │   ├── test/
-│   │   │   │   │   │   │   └── [helpers.tsx](./packages/app/hybrid/productivity/keynotes/src/test/helpers.tsx)
-│   │   │   │   │   │   ├── types/
-│   │   │   │   │   │   │   └── [deck.ts](./packages/app/hybrid/productivity/keynotes/src/types/deck.ts)
-│   │   │   │   │   │   └── utils/
-│   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │       │   ├── [animations.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/animations.test.ts)
-│   │   │   │   │   │       │   ├── [annotations.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/annotations.test.ts)
-│   │   │   │   │   │       │   ├── [capture.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/capture.test.ts)
-│   │   │   │   │   │       │   ├── [color.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/color.test.ts)
-│   │   │   │   │   │       │   ├── [deckFactory.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/deckFactory.test.ts)
-│   │   │   │   │   │       │   ├── [diagnostics.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/diagnostics.test.ts)
-│   │   │   │   │   │       │   ├── [exporters.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/exporters.test.ts)
-│   │   │   │   │   │       │   ├── [format.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/format.test.ts)
-│   │   │   │   │   │       │   ├── [geometry.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/geometry.test.ts)
-│   │   │   │   │   │       │   ├── [highlight.test.tsx](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/highlight.test.tsx)
-│   │   │   │   │   │       │   ├── [importers.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/importers.test.ts)
-│   │   │   │   │   │       │   ├── [markdown.test.tsx](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/markdown.test.tsx)
-│   │   │   │   │   │       │   ├── [master.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/master.test.ts)
-│   │   │   │   │   │       │   ├── [recentColors.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/recentColors.test.ts)
-│   │   │   │   │   │       │   ├── [rehearsal.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/rehearsal.test.ts)
-│   │   │   │   │   │       │   ├── [reuse.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/reuse.test.ts)
-│   │   │   │   │   │       │   ├── [sections.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/sections.test.ts)
-│   │   │   │   │   │       │   ├── [shapes.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/shapes.test.ts)
-│   │   │   │   │   │       │   ├── [shortcuts.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/shortcuts.test.ts)
-│   │   │   │   │   │       │   └── [slideBg.test.ts](./packages/app/hybrid/productivity/keynotes/src/utils/__tests__/slideBg.test.ts)
-│   │   │   │   │   │       ├── [animations.ts](./packages/app/hybrid/productivity/keynotes/src/utils/animations.ts)
-│   │   │   │   │   │       ├── [annotations.ts](./packages/app/hybrid/productivity/keynotes/src/utils/annotations.ts)
-│   │   │   │   │   │       ├── [capture.ts](./packages/app/hybrid/productivity/keynotes/src/utils/capture.ts)
-│   │   │   │   │   │       ├── [color.ts](./packages/app/hybrid/productivity/keynotes/src/utils/color.ts)
-│   │   │   │   │   │       ├── [deckFactory.ts](./packages/app/hybrid/productivity/keynotes/src/utils/deckFactory.ts)
-│   │   │   │   │   │       ├── [diagnostics.ts](./packages/app/hybrid/productivity/keynotes/src/utils/diagnostics.ts)
-│   │   │   │   │   │       ├── [exporters.ts](./packages/app/hybrid/productivity/keynotes/src/utils/exporters.ts)
-│   │   │   │   │   │       ├── [format.ts](./packages/app/hybrid/productivity/keynotes/src/utils/format.ts)
-│   │   │   │   │   │       ├── [geometry.ts](./packages/app/hybrid/productivity/keynotes/src/utils/geometry.ts)
-│   │   │   │   │   │       ├── [highlight.tsx](./packages/app/hybrid/productivity/keynotes/src/utils/highlight.tsx)
-│   │   │   │   │   │       ├── [id.ts](./packages/app/hybrid/productivity/keynotes/src/utils/id.ts)
-│   │   │   │   │   │       ├── [importers.ts](./packages/app/hybrid/productivity/keynotes/src/utils/importers.ts)
-│   │   │   │   │   │       ├── [markdown.tsx](./packages/app/hybrid/productivity/keynotes/src/utils/markdown.tsx)
-│   │   │   │   │   │       ├── [master.ts](./packages/app/hybrid/productivity/keynotes/src/utils/master.ts)
-│   │   │   │   │   │       ├── [recentColors.ts](./packages/app/hybrid/productivity/keynotes/src/utils/recentColors.ts)
-│   │   │   │   │   │       ├── [rehearsal.ts](./packages/app/hybrid/productivity/keynotes/src/utils/rehearsal.ts)
-│   │   │   │   │   │       ├── [reuse.ts](./packages/app/hybrid/productivity/keynotes/src/utils/reuse.ts)
-│   │   │   │   │   │       ├── [sections.ts](./packages/app/hybrid/productivity/keynotes/src/utils/sections.ts)
-│   │   │   │   │   │       ├── [shapes.ts](./packages/app/hybrid/productivity/keynotes/src/utils/shapes.ts)
-│   │   │   │   │   │       ├── [shortcuts.ts](./packages/app/hybrid/productivity/keynotes/src/utils/shortcuts.ts)
-│   │   │   │   │   │       └── [slideBg.ts](./packages/app/hybrid/productivity/keynotes/src/utils/slideBg.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/productivity/keynotes/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/productivity/keynotes/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/productivity/keynotes/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/productivity/keynotes/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/productivity/keynotes/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/productivity/keynotes/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/productivity/keynotes/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/productivity/keynotes/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/productivity/keynotes/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/productivity/keynotes/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/productivity/keynotes/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/productivity/keynotes/README.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/productivity/keynotes/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/productivity/keynotes/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/productivity/keynotes/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/productivity/keynotes/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/productivity/keynotes/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/productivity/keynotes/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/productivity/keynotes/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/productivity/keynotes/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/productivity/keynotes/tsconfig.json)
 │   │   │   │   ├── office/
 │   │   │   │   │   ├── docs/
 │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/productivity/office/docs/ARCHITECTURE.md)
@@ -18007,6 +17764,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/productivity/office/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/productivity/office/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/productivity/office/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/productivity/office/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/productivity/office/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/productivity/office/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/productivity/office/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/productivity/office/public/manifest.json)
@@ -18047,6 +17807,47 @@
 │   │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/csv/__tests__/page.test.tsx)
 │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/csv/page.tsx)
+│   │   │   │   │   │   │   │   ├── keynotes/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── editor/
+│   │   │   │   │   │   │   │   │   │   └── [id]/
+│   │   │   │   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │   │   │   │       │   ├── [EditorInteractions.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/editor/[id]/__tests__/EditorInteractions.test.tsx)
+│   │   │   │   │   │   │   │   │   │       │   ├── [EditorPage.coverage.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/editor/[id]/__tests__/EditorPage.coverage.test.tsx)
+│   │   │   │   │   │   │   │   │   │       │   └── [EditorPage.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/editor/[id]/__tests__/EditorPage.test.tsx)
+│   │   │   │   │   │   │   │   │   │       ├── [EditorPage.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/editor/[id]/EditorPage.tsx)
+│   │   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/editor/[id]/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── handouts/
+│   │   │   │   │   │   │   │   │   │   └── [id]/
+│   │   │   │   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │   │   │   │       │   └── [HandoutsPage.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/handouts/[id]/__tests__/HandoutsPage.test.tsx)
+│   │   │   │   │   │   │   │   │   │       ├── [HandoutsPage.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/handouts/[id]/HandoutsPage.tsx)
+│   │   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/handouts/[id]/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── present/
+│   │   │   │   │   │   │   │   │   │   ├── [id]/
+│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   │   └── [PresentPage.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/present/[id]/__tests__/PresentPage.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [PresentPage.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/present/[id]/PresentPage.tsx)
+│   │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/present/[id]/page.tsx)
+│   │   │   │   │   │   │   │   │   │   └── __tests__/
+│   │   │   │   │   │   │   │   │   │       └── [PresentPage.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/present/__tests__/PresentPage.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── presenter/
+│   │   │   │   │   │   │   │   │   │   └── [id]/
+│   │   │   │   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │   │   │   │       │   └── [PresenterView.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/presenter/[id]/__tests__/PresenterView.test.tsx)
+│   │   │   │   │   │   │   │   │   │       ├── [PresenterView.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/presenter/[id]/PresenterView.tsx)
+│   │   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/presenter/[id]/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── print/
+│   │   │   │   │   │   │   │   │   │   └── [id]/
+│   │   │   │   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │   │   │   │       │   └── [PrintPage.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/print/[id]/__tests__/PrintPage.test.tsx)
+│   │   │   │   │   │   │   │   │   │       ├── [PrintPage.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/print/[id]/PrintPage.tsx)
+│   │   │   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/print/[id]/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── templates/
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/templates/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/layout.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/keynotes/page.tsx)
 │   │   │   │   │   │   │   │   ├── md/
 │   │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/productivity/office/src/app/(app)/md/__tests__/page.test.tsx)
@@ -18174,6 +17975,87 @@
 │   │   │   │   │   │   │   │   │   ├── [LiteSheet.tsx](./packages/app/hybrid/productivity/office/src/components/csv/organisms/LiteSheet.tsx)
 │   │   │   │   │   │   │   │   │   └── [Sheet.tsx](./packages/app/hybrid/productivity/office/src/components/csv/organisms/Sheet.tsx)
 │   │   │   │   │   │   │   │   └── templates/
+│   │   │   │   │   │   │   ├── keynotes/
+│   │   │   │   │   │   │   │   ├── atoms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [FormControls.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/atoms/__tests__/FormControls.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [FormControls.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/atoms/FormControls.tsx)
+│   │   │   │   │   │   │   │   │   ├── [IconButton.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/atoms/IconButton.tsx)
+│   │   │   │   │   │   │   │   │   └── [LiveRegion.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/atoms/LiveRegion.tsx)
+│   │   │   │   │   │   │   │   ├── molecules/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [AnnotationOverlay.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/__tests__/AnnotationOverlay.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [DeckThumb.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/__tests__/DeckThumb.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [PresentSlide.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/__tests__/PresentSlide.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AnnotationOverlay.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/AnnotationOverlay.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AnnotationToolbar.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/AnnotationToolbar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [BlackoutOverlay.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/BlackoutOverlay.tsx)
+│   │   │   │   │   │   │   │   │   ├── [CaptionsBar.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/CaptionsBar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DeckThumb.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/DeckThumb.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ImportMenu.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/ImportMenu.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PresentSlide.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/PresentSlide.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PresentTools.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/PresentTools.tsx)
+│   │   │   │   │   │   │   │   │   └── [RehearsalSummary.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/molecules/RehearsalSummary.tsx)
+│   │   │   │   │   │   │   │   ├── organisms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [DeckProvider.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/DeckProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [EditorToolbar.coverage.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/EditorToolbar.coverage.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ExportMenu.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/ExportMenu.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [InsertToolbar.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/InsertToolbar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ObjectContent.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/ObjectContent.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ObjectRenderer.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/ObjectRenderer.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SlideCanvas.coverage.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/SlideCanvas.coverage.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SlideCanvas.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/SlideCanvas.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ToastProvider.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/ToastProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [canvasOps.test.ts](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/__tests__/canvasOps.test.ts)
+│   │   │   │   │   │   │   │   │   ├── panels/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   ├── [AnimationsPanel.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/AnimationsPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [CommentsPanel.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/CommentsPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [FooterControls.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/FooterControls.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [FormatPanel.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/FormatPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [MasterPanel.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/MasterPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [ReuseSlidesModal.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/ReuseSlidesModal.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [SectionGroup.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/SectionGroup.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [SlideBackgroundPicker.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/SlideBackgroundPicker.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   └── [SlidesPanel.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/__tests__/SlidesPanel.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── animations/
+│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   │   └── [AnimationOrderList.test.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/animations/__tests__/AnimationOrderList.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   ├── [AnimationOrderList.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/animations/AnimationOrderList.tsx)
+│   │   │   │   │   │   │   │   │   │   │   └── [AnimationPreview.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/animations/AnimationPreview.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [AnimationsPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/AnimationsPanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ArrangePanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/ArrangePanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [CommentsPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/CommentsPanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [FooterControls.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/FooterControls.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [FormatPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/FormatPanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [LeftPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/LeftPanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [MasterPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/MasterPanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [NotesPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/NotesPanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [OutlinePanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/OutlinePanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ReuseSlidesModal.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/ReuseSlidesModal.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [RightPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/RightPanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SectionGroup.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/SectionGroup.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SlideBackgroundPicker.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/SlideBackgroundPicker.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SlideThumb.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/SlideThumb.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SlidesPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/SlidesPanel.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ThemePanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/ThemePanel.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [TransitionsPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/panels/TransitionsPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DeckProvider.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/DeckProvider.tsx)
+│   │   │   │   │   │   │   │   │   ├── [DiagnosticsPanel.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/DiagnosticsPanel.tsx)
+│   │   │   │   │   │   │   │   │   ├── [EditorToolbar.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/EditorToolbar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ExportMenu.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/ExportMenu.tsx)
+│   │   │   │   │   │   │   │   │   ├── [InsertToolbar.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/InsertToolbar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ObjectContent.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/ObjectContent.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ObjectRenderer.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/ObjectRenderer.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Rulers.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/Rulers.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SelectionOverlay.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/SelectionOverlay.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SlideCanvas.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/SlideCanvas.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SlidePreview.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/SlidePreview.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ToastContainer.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/ToastContainer.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ToastProvider.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/ToastProvider.tsx)
+│   │   │   │   │   │   │   │   │   └── [canvasOps.ts](./packages/app/hybrid/productivity/office/src/components/keynotes/organisms/canvasOps.ts)
+│   │   │   │   │   │   │   │   └── [Providers.tsx](./packages/app/hybrid/productivity/office/src/components/keynotes/Providers.tsx)
 │   │   │   │   │   │   │   ├── md/
 │   │   │   │   │   │   │   │   ├── atoms/
 │   │   │   │   │   │   │   │   ├── molecules/
@@ -18343,6 +18225,14 @@
 │   │   │   │   │   │   │   │   ├── [web-frameworks.csv](./packages/app/hybrid/productivity/office/src/data/csv/web-frameworks.csv)
 │   │   │   │   │   │   │   │   ├── [web-styling.csv](./packages/app/hybrid/productivity/office/src/data/csv/web-styling.csv)
 │   │   │   │   │   │   │   │   └── [yearly-resolutions.csv](./packages/app/hybrid/productivity/office/src/data/csv/yearly-resolutions.csv)
+│   │   │   │   │   │   │   ├── keynotes/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [themes.test.ts](./packages/app/hybrid/productivity/office/src/data/keynotes/__tests__/themes.test.ts)
+│   │   │   │   │   │   │   │   ├── [charts.ts](./packages/app/hybrid/productivity/office/src/data/keynotes/charts.ts)
+│   │   │   │   │   │   │   │   ├── [icons.ts](./packages/app/hybrid/productivity/office/src/data/keynotes/icons.ts)
+│   │   │   │   │   │   │   │   ├── [presets.ts](./packages/app/hybrid/productivity/office/src/data/keynotes/presets.ts)
+│   │   │   │   │   │   │   │   ├── [templates.ts](./packages/app/hybrid/productivity/office/src/data/keynotes/templates.ts)
+│   │   │   │   │   │   │   │   └── [themes.ts](./packages/app/hybrid/productivity/office/src/data/keynotes/themes.ts)
 │   │   │   │   │   │   │   ├── md/
 │   │   │   │   │   │   │   │   ├── [cheat-sheet.ts](./packages/app/hybrid/productivity/office/src/data/md/cheat-sheet.ts)
 │   │   │   │   │   │   │   │   ├── [seed.gen.json](./packages/app/hybrid/productivity/office/src/data/md/seed.gen.json)
@@ -18358,6 +18248,12 @@
 │   │   │   │   │   │   │   │   │   └── [useEditor.test.ts](./packages/app/hybrid/productivity/office/src/hooks/csv/__tests__/useEditor.test.ts)
 │   │   │   │   │   │   │   │   ├── [useCsvState.ts](./packages/app/hybrid/productivity/office/src/hooks/csv/useCsvState.ts)
 │   │   │   │   │   │   │   │   └── [useEditor.ts](./packages/app/hybrid/productivity/office/src/hooks/csv/useEditor.ts)
+│   │   │   │   │   │   │   ├── keynotes/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [useCaptions.test.tsx](./packages/app/hybrid/productivity/office/src/hooks/keynotes/__tests__/useCaptions.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [useObjectKeyboard.test.tsx](./packages/app/hybrid/productivity/office/src/hooks/keynotes/__tests__/useObjectKeyboard.test.tsx)
+│   │   │   │   │   │   │   │   ├── [useCaptions.ts](./packages/app/hybrid/productivity/office/src/hooks/keynotes/useCaptions.ts)
+│   │   │   │   │   │   │   │   └── [useObjectKeyboard.ts](./packages/app/hybrid/productivity/office/src/hooks/keynotes/useObjectKeyboard.ts)
 │   │   │   │   │   │   │   ├── md/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   ├── [useCodeMirror.test.ts](./packages/app/hybrid/productivity/office/src/hooks/md/__tests__/useCodeMirror.test.ts)
@@ -18404,6 +18300,59 @@
 │   │   │   │   │   │   │   │   ├── [workbook.ts](./packages/app/hybrid/productivity/office/src/lib/csv/workbook.ts)
 │   │   │   │   │   │   │   │   ├── [xlsx.ts](./packages/app/hybrid/productivity/office/src/lib/csv/xlsx.ts)
 │   │   │   │   │   │   │   │   └── [xml.ts](./packages/app/hybrid/productivity/office/src/lib/csv/xml.ts)
+│   │   │   │   │   │   │   ├── keynotes/
+│   │   │   │   │   │   │   │   ├── __mocks__/
+│   │   │   │   │   │   │   │   │   └── [idb.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__mocks__/idb.ts)
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [animations.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/animations.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [annotations.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/annotations.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [capture.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/capture.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [color.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/color.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [deckFactory.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/deckFactory.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [diagnostics.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/diagnostics.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [exporters.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/exporters.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [format.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/format.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [geometry.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/geometry.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [highlight.test.tsx](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/highlight.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [importers.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/importers.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [markdown.test.tsx](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/markdown.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [master.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/master.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [recentColors.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/recentColors.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [rehearsal.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/rehearsal.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [reuse.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/reuse.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [sections.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/sections.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [shapes.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/shapes.test.ts)
+│   │   │   │   │   │   │   │   │   │   ├── [shortcuts.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/shortcuts.test.ts)
+│   │   │   │   │   │   │   │   │   │   └── [slideBg.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/__tests__/slideBg.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/db.test.ts)
+│   │   │   │   │   │   │   │   │   └── [presentSteps.test.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/__tests__/presentSteps.test.ts)
+│   │   │   │   │   │   │   │   ├── stubs/
+│   │   │   │   │   │   │   │   │   └── [node-builtins.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/stubs/node-builtins.ts)
+│   │   │   │   │   │   │   │   ├── [animations.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/animations.ts)
+│   │   │   │   │   │   │   │   ├── [annotations.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/annotations.ts)
+│   │   │   │   │   │   │   │   ├── [capture.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/capture.ts)
+│   │   │   │   │   │   │   │   ├── [color.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/color.ts)
+│   │   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/db.ts)
+│   │   │   │   │   │   │   │   ├── [deckFactory.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/deckFactory.ts)
+│   │   │   │   │   │   │   │   ├── [diagnostics.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/diagnostics.ts)
+│   │   │   │   │   │   │   │   ├── [exporters.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/exporters.ts)
+│   │   │   │   │   │   │   │   ├── [format.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/format.ts)
+│   │   │   │   │   │   │   │   ├── [geometry.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/geometry.ts)
+│   │   │   │   │   │   │   │   ├── [highlight.tsx](./packages/app/hybrid/productivity/office/src/lib/keynotes/highlight.tsx)
+│   │   │   │   │   │   │   │   ├── [id.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/id.ts)
+│   │   │   │   │   │   │   │   ├── [idb.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/idb.ts)
+│   │   │   │   │   │   │   │   ├── [importers.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/importers.ts)
+│   │   │   │   │   │   │   │   ├── [markdown.tsx](./packages/app/hybrid/productivity/office/src/lib/keynotes/markdown.tsx)
+│   │   │   │   │   │   │   │   ├── [master.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/master.ts)
+│   │   │   │   │   │   │   │   ├── [presentSteps.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/presentSteps.ts)
+│   │   │   │   │   │   │   │   ├── [recentColors.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/recentColors.ts)
+│   │   │   │   │   │   │   │   ├── [rehearsal.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/rehearsal.ts)
+│   │   │   │   │   │   │   │   ├── [reuse.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/reuse.ts)
+│   │   │   │   │   │   │   │   ├── [sections.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/sections.ts)
+│   │   │   │   │   │   │   │   ├── [shapes.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/shapes.ts)
+│   │   │   │   │   │   │   │   ├── [shortcuts.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/shortcuts.ts)
+│   │   │   │   │   │   │   │   └── [slideBg.ts](./packages/app/hybrid/productivity/office/src/lib/keynotes/slideBg.ts)
 │   │   │   │   │   │   │   ├── md/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   ├── [braille.test.ts](./packages/app/hybrid/productivity/office/src/lib/md/__tests__/braille.test.ts)
@@ -18454,28 +18403,26 @@
 │   │   │   │   │   │   │   ├── life/
 │   │   │   │   │   │   │   │   ├── [maslow-hierarchy.md](./packages/app/hybrid/productivity/office/src/notes/life/maslow-hierarchy.md)
 │   │   │   │   │   │   │   │   ├── [monday-fear.md](./packages/app/hybrid/productivity/office/src/notes/life/monday-fear.md)
-│   │   │   │   │   │   │   │   ├── [nothing.md](./packages/app/hybrid/productivity/office/src/notes/life/nothing.md)
 │   │   │   │   │   │   │   │   ├── [sample.md](./packages/app/hybrid/productivity/office/src/notes/life/sample.md)
 │   │   │   │   │   │   │   │   └── [sports.md](./packages/app/hybrid/productivity/office/src/notes/life/sports.md)
-│   │   │   │   │   │   │   ├── marketing/
-│   │   │   │   │   │   │   │   └── copy-writer/
-│   │   │   │   │   │   │   │       └── sites/
-│   │   │   │   │   │   │   │           ├── [acquire.md](./packages/app/hybrid/productivity/office/src/notes/marketing/copy-writer/sites/acquire.md)
-│   │   │   │   │   │   │   │           ├── [hacker-news.md](./packages/app/hybrid/productivity/office/src/notes/marketing/copy-writer/sites/hacker-news.md)
-│   │   │   │   │   │   │   │           ├── [indie-hackers.md](./packages/app/hybrid/productivity/office/src/notes/marketing/copy-writer/sites/indie-hackers.md)
-│   │   │   │   │   │   │   │           └── [product-hunt.md](./packages/app/hybrid/productivity/office/src/notes/marketing/copy-writer/sites/product-hunt.md)
 │   │   │   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/productivity/office/src/notes/TREE.md)
 │   │   │   │   │   │   │   ├── [bored.md](./packages/app/hybrid/productivity/office/src/notes/bored.md)
 │   │   │   │   │   │   │   ├── [engineering.md](./packages/app/hybrid/productivity/office/src/notes/engineering.md)
 │   │   │   │   │   │   │   ├── [intro.md](./packages/app/hybrid/productivity/office/src/notes/intro.md)
 │   │   │   │   │   │   │   ├── [me.md](./packages/app/hybrid/productivity/office/src/notes/me.md)
-│   │   │   │   │   │   │   ├── [minimalism.md](./packages/app/hybrid/productivity/office/src/notes/minimalism.md)
 │   │   │   │   │   │   │   └── [resume.md](./packages/app/hybrid/productivity/office/src/notes/resume.md)
 │   │   │   │   │   │   ├── styles/
 │   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/productivity/office/src/styles/globals.css)
+│   │   │   │   │   │   │   ├── [keynotes-animations.css](./packages/app/hybrid/productivity/office/src/styles/keynotes-animations.css)
+│   │   │   │   │   │   │   ├── [keynotes-utilities.css](./packages/app/hybrid/productivity/office/src/styles/keynotes-utilities.css)
 │   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/productivity/office/src/styles/themes.css)
-│   │   │   │   │   │   └── test/
-│   │   │   │   │   │       └── [style-mock.js](./packages/app/hybrid/productivity/office/src/test/style-mock.js)
+│   │   │   │   │   │   ├── test/
+│   │   │   │   │   │   │   ├── keynotes/
+│   │   │   │   │   │   │   │   └── [helpers.tsx](./packages/app/hybrid/productivity/office/src/test/keynotes/helpers.tsx)
+│   │   │   │   │   │   │   └── [style-mock.js](./packages/app/hybrid/productivity/office/src/test/style-mock.js)
+│   │   │   │   │   │   └── types/
+│   │   │   │   │   │       └── keynotes/
+│   │   │   │   │   │           └── [deck.ts](./packages/app/hybrid/productivity/office/src/types/keynotes/deck.ts)
 │   │   │   │   │   ├── src-tauri/
 │   │   │   │   │   │   ├── capabilities/
 │   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/productivity/office/src-tauri/capabilities/default.json)
@@ -18601,6 +18548,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/productivity/pdf/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/productivity/pdf/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/productivity/pdf/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/productivity/pdf/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/productivity/pdf/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/productivity/pdf/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/productivity/pdf/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/productivity/pdf/public/manifest.json)
@@ -18924,6 +18874,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/productivity/resume/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/productivity/resume/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/productivity/resume/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/productivity/resume/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/productivity/resume/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/productivity/resume/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/productivity/resume/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/productivity/resume/public/manifest.json)
@@ -19391,6 +19344,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/shopping/store/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/shopping/store/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/shopping/store/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/shopping/store/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/shopping/store/public/og/og.svg)
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── androidx/
 │   │   │   │   │   │   │   │   └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/androidx/home.png)
@@ -19450,6 +19406,11 @@
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/doi/downloads.png)
 │   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/doi/home.png)
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/doi/version.png)
+│   │   │   │   │   │   │   ├── exhibit/
+│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/exhibit/about.png)
+│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/exhibit/downloads.png)
+│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/exhibit/home.png)
+│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/exhibit/version.png)
 │   │   │   │   │   │   │   ├── foody/
 │   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/foody/about.png)
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/foody/downloads.png)
@@ -19464,11 +19425,6 @@
 │   │   │   │   │   │   │   │   └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/jack/home.png)
 │   │   │   │   │   │   │   ├── kevin/
 │   │   │   │   │   │   │   │   └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/kevin/home.png)
-│   │   │   │   │   │   │   ├── keynotes/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/keynotes/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/keynotes/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/keynotes/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/keynotes/version.png)
 │   │   │   │   │   │   │   ├── landify/
 │   │   │   │   │   │   │   │   └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/landify/home.png)
 │   │   │   │   │   │   │   ├── lingo/
@@ -19483,16 +19439,6 @@
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/memory/downloads.png)
 │   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/memory/home.png)
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/memory/version.png)
-│   │   │   │   │   │   │   ├── menu/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/menu/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/menu/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/menu/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/menu/version.png)
-│   │   │   │   │   │   │   ├── messaging/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/messaging/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/messaging/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/messaging/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/messaging/version.png)
 │   │   │   │   │   │   │   ├── mri/
 │   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/mri/about.png)
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/mri/downloads.png)
@@ -19518,11 +19464,6 @@
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/photo/downloads.png)
 │   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/photo/home.png)
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/photo/version.png)
-│   │   │   │   │   │   │   ├── pos/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/pos/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/pos/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/pos/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/pos/version.png)
 │   │   │   │   │   │   │   ├── resume/
 │   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/resume/about.png)
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/resume/downloads.png)
@@ -19548,16 +19489,13 @@
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/tourney/downloads.png)
 │   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/tourney/home.png)
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/tourney/version.png)
-│   │   │   │   │   │   │   ├── video/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/video/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/video/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/video/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/video/version.png)
-│   │   │   │   │   │   │   └── wallet/
-│   │   │   │   │   │   │       ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/wallet/about.png)
-│   │   │   │   │   │   │       ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/wallet/downloads.png)
-│   │   │   │   │   │   │       ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/wallet/home.png)
-│   │   │   │   │   │   │       └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/wallet/version.png)
+│   │   │   │   │   │   │   ├── vectify/
+│   │   │   │   │   │   │   │   └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/vectify/home.png)
+│   │   │   │   │   │   │   └── video/
+│   │   │   │   │   │   │       ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/video/about.png)
+│   │   │   │   │   │   │       ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/video/downloads.png)
+│   │   │   │   │   │   │       ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/video/home.png)
+│   │   │   │   │   │   │       └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/video/version.png)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/shopping/store/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/shopping/store/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/shopping/store/public/manifest.json)
@@ -19870,6 +19808,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/social-networking/chat/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/social-networking/chat/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/social-networking/chat/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/social-networking/chat/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/social-networking/chat/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/social-networking/chat/public/manifest.json)
@@ -20186,372 +20127,6 @@
 │   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/social-networking/chat/playwright.config.ts)
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/social-networking/chat/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/social-networking/chat/tsconfig.json)
-│   │   │   │   ├── messaging/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/social-networking/messaging/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/social-networking/messaging/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/social-networking/messaging/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/social-networking/messaging/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/social-networking/messaging/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── screenshots/
-│   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/social-networking/messaging/e2e/screenshots/about.png)
-│   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/social-networking/messaging/e2e/screenshots/downloads.png)
-│   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/social-networking/messaging/e2e/screenshots/home.png)
-│   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/social-networking/messaging/e2e/screenshots/version.png)
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/social-networking/messaging/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/social-networking/messaging/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/social-networking/messaging/e2e/home.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/social-networking/messaging/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/social-networking/messaging/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/social-networking/messaging/public/icons/icon.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/social-networking/messaging/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/social-networking/messaging/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/social-networking/messaging/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/social-networking/messaging/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/social-networking/messaging/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/social-networking/messaging/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (app)/
-│   │   │   │   │   │   │   │   └── settings/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(app)/settings/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(app)/settings/page.tsx)
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [error-page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/error-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found-page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/not-found-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/social-networking/messaging/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/social-networking/messaging/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/social-networking/messaging/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/social-networking/messaging/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/social-networking/messaging/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/social-networking/messaging/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/social-networking/messaging/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/social-networking/messaging/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/social-networking/messaging/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/social-networking/messaging/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/social-networking/messaging/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/social-networking/messaging/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/social-networking/messaging/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [Avatar.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/__tests__/Avatar.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Badge.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/__tests__/Badge.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [EmptyState.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/__tests__/EmptyState.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [IconButton.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/__tests__/IconButton.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [StatusDot.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/__tests__/StatusDot.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [TypingIndicator.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/__tests__/TypingIndicator.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Avatar.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/Avatar.tsx)
-│   │   │   │   │   │   │   │   ├── [Badge.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/Badge.tsx)
-│   │   │   │   │   │   │   │   ├── [EmptyState.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/EmptyState.tsx)
-│   │   │   │   │   │   │   │   ├── [IconButton.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/IconButton.tsx)
-│   │   │   │   │   │   │   │   ├── [StatusDot.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/StatusDot.tsx)
-│   │   │   │   │   │   │   │   └── [TypingIndicator.tsx](./packages/app/hybrid/social-networking/messaging/src/components/atoms/TypingIndicator.tsx)
-│   │   │   │   │   │   │   ├── molecules/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [CallControls.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/CallControls.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ChatHeader.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/ChatHeader.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ChatListItem.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/ChatListItem.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ChatSearchBar.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/ChatSearchBar.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Composer.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/Composer.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ContactRow.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/ContactRow.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DateDivider.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/DateDivider.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [EmojiAutocomplete.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/EmojiAutocomplete.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [LinkPreviewCard.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/LinkPreviewCard.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [MediaComposer.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/MediaComposer.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [MessageBubble.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/MessageBubble.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [MessageContextMenu.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/MessageContextMenu.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ReactionBar.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/ReactionBar.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ReplyComposer.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/ReplyComposer.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SearchBar.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/SearchBar.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SecretChatBanner.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/SecretChatBanner.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [StickerPicker.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/StickerPicker.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ToastViewport.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/ToastViewport.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [VerificationCodeModal.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/VerificationCodeModal.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [VoiceRecorder.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/__tests__/VoiceRecorder.test.tsx)
-│   │   │   │   │   │   │   │   ├── [CallControls.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/CallControls.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatHeader.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/ChatHeader.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatListItem.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/ChatListItem.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatSearchBar.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/ChatSearchBar.tsx)
-│   │   │   │   │   │   │   │   ├── [Composer.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/Composer.tsx)
-│   │   │   │   │   │   │   │   ├── [ContactRow.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/ContactRow.tsx)
-│   │   │   │   │   │   │   │   ├── [DateDivider.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/DateDivider.tsx)
-│   │   │   │   │   │   │   │   ├── [EmojiAutocomplete.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/EmojiAutocomplete.tsx)
-│   │   │   │   │   │   │   │   ├── [LinkPreviewCard.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/LinkPreviewCard.tsx)
-│   │   │   │   │   │   │   │   ├── [MediaComposer.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/MediaComposer.tsx)
-│   │   │   │   │   │   │   │   ├── [MessageBubble.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/MessageBubble.tsx)
-│   │   │   │   │   │   │   │   ├── [MessageContextMenu.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/MessageContextMenu.tsx)
-│   │   │   │   │   │   │   │   ├── [ReactionBar.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/ReactionBar.tsx)
-│   │   │   │   │   │   │   │   ├── [ReplyComposer.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/ReplyComposer.tsx)
-│   │   │   │   │   │   │   │   ├── [SearchBar.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/SearchBar.tsx)
-│   │   │   │   │   │   │   │   ├── [SecretChatBanner.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/SecretChatBanner.tsx)
-│   │   │   │   │   │   │   │   ├── [StickerPicker.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/StickerPicker.tsx)
-│   │   │   │   │   │   │   │   ├── [ToastViewport.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/ToastViewport.tsx)
-│   │   │   │   │   │   │   │   ├── [VerificationCodeModal.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/VerificationCodeModal.tsx)
-│   │   │   │   │   │   │   │   └── [VoiceRecorder.tsx](./packages/app/hybrid/social-networking/messaging/src/components/molecules/VoiceRecorder.tsx)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── ChatPane/
-│   │   │   │   │   │   │   │   │   ├── [MessageList.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/ChatPane/MessageList.tsx)
-│   │   │   │   │   │   │   │   │   └── [useChatPaneHandlers.ts](./packages/app/hybrid/social-networking/messaging/src/components/organisms/ChatPane/useChatPaneHandlers.ts)
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [BlockedContactsPanel.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/BlockedContactsPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CallHistoryPanel.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/CallHistoryPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CallScreen.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/CallScreen.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ChatPane.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/ChatPane.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ChatSettingsPanel.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/ChatSettingsPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ChatSidebar.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/ChatSidebar.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DeviceSyncPanel.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/DeviceSyncPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DeviceTrustPanel.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/DeviceTrustPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ForwardModal.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/ForwardModal.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [GroupAdminPanel.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/GroupAdminPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [GroupCallView.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/GroupCallView.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ImageLightbox.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/ImageLightbox.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [IncomingCallModal.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/IncomingCallModal.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [MediaGallery.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/MediaGallery.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [NewChatModal.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/NewChatModal.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [PairingModal.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/PairingModal.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [PinLockScreen.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/PinLockScreen.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [PrivacySettingsPanel.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/__tests__/PrivacySettingsPanel.test.tsx)
-│   │   │   │   │   │   │   │   ├── [BlockedContactsPanel.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/BlockedContactsPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [CallHistoryPanel.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/CallHistoryPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [CallScreen.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/CallScreen.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatPane.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/ChatPane.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatSettingsPanel.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/ChatSettingsPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatSidebar.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/ChatSidebar.tsx)
-│   │   │   │   │   │   │   │   ├── [DeviceSyncPanel.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/DeviceSyncPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [DeviceTrustPanel.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/DeviceTrustPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [ForwardModal.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/ForwardModal.tsx)
-│   │   │   │   │   │   │   │   ├── [GroupAdminPanel.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/GroupAdminPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [GroupCallView.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/GroupCallView.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   ├── [ImageLightbox.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/ImageLightbox.tsx)
-│   │   │   │   │   │   │   │   ├── [IncomingCallModal.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/IncomingCallModal.tsx)
-│   │   │   │   │   │   │   │   ├── [MediaGallery.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/MediaGallery.tsx)
-│   │   │   │   │   │   │   │   ├── [NewChatModal.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/NewChatModal.tsx)
-│   │   │   │   │   │   │   │   ├── [PairingModal.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/PairingModal.tsx)
-│   │   │   │   │   │   │   │   ├── [PinLockScreen.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/PinLockScreen.tsx)
-│   │   │   │   │   │   │   │   └── [PrivacySettingsPanel.tsx](./packages/app/hybrid/social-networking/messaging/src/components/organisms/PrivacySettingsPanel.tsx)
-│   │   │   │   │   │   │   └── templates/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AppShell.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/__tests__/AppShell.test.tsx)
-│   │   │   │   │   │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │       ├── [AppShell.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/AppShell.tsx)
-│   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/social-networking/messaging/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/social-networking/messaging/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/social-networking/messaging/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/social-networking/messaging/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/social-networking/messaging/src/data/__tests__/models.test.ts)
-│   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/social-networking/messaging/src/data/__tests__/seed.test.ts)
-│   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/social-networking/messaging/src/data/models.ts)
-│   │   │   │   │   │   │   ├── [seed.ts](./packages/app/hybrid/social-networking/messaging/src/data/seed.ts)
-│   │   │   │   │   │   │   └── [stickers.ts](./packages/app/hybrid/social-networking/messaging/src/data/stickers.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [useSWRegister.test.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   │   │   │   │   ├── [useAuthActions.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/useAuthActions.ts)
-│   │   │   │   │   │   │   ├── [useCallActions.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/useCallActions.ts)
-│   │   │   │   │   │   │   ├── [useChatActions.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/useChatActions.ts)
-│   │   │   │   │   │   │   ├── [useDataEffects.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/useDataEffects.ts)
-│   │   │   │   │   │   │   ├── [useMessageActions.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/useMessageActions.ts)
-│   │   │   │   │   │   │   ├── [usePeerActions.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/usePeerActions.ts)
-│   │   │   │   │   │   │   ├── [usePrivacyActions.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/usePrivacyActions.ts)
-│   │   │   │   │   │   │   ├── [useSWRegister.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/useSWRegister.ts)
-│   │   │   │   │   │   │   └── [useSettingsActions.ts](./packages/app/hybrid/social-networking/messaging/src/hooks/useSettingsActions.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [crypto.test.ts](./packages/app/hybrid/social-networking/messaging/src/lib/__tests__/crypto.test.ts)
-│   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/social-networking/messaging/src/lib/__tests__/db.test.ts)
-│   │   │   │   │   │   │   │   ├── [format.test.ts](./packages/app/hybrid/social-networking/messaging/src/lib/__tests__/format.test.ts)
-│   │   │   │   │   │   │   │   ├── [selectors.test.ts](./packages/app/hybrid/social-networking/messaging/src/lib/__tests__/selectors.test.ts)
-│   │   │   │   │   │   │   │   ├── [url.test.ts](./packages/app/hybrid/social-networking/messaging/src/lib/__tests__/url.test.ts)
-│   │   │   │   │   │   │   │   └── [webrtc.test.ts](./packages/app/hybrid/social-networking/messaging/src/lib/__tests__/webrtc.test.ts)
-│   │   │   │   │   │   │   ├── [crypto.ts](./packages/app/hybrid/social-networking/messaging/src/lib/crypto.ts)
-│   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/social-networking/messaging/src/lib/db.ts)
-│   │   │   │   │   │   │   ├── [format.ts](./packages/app/hybrid/social-networking/messaging/src/lib/format.ts)
-│   │   │   │   │   │   │   ├── [selectors.ts](./packages/app/hybrid/social-networking/messaging/src/lib/selectors.ts)
-│   │   │   │   │   │   │   ├── [url.ts](./packages/app/hybrid/social-networking/messaging/src/lib/url.ts)
-│   │   │   │   │   │   │   └── [webrtc.ts](./packages/app/hybrid/social-networking/messaging/src/lib/webrtc.ts)
-│   │   │   │   │   │   ├── providers/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/social-networking/messaging/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Providers.test.tsx](./packages/app/hybrid/social-networking/messaging/src/providers/__tests__/Providers.test.tsx)
-│   │   │   │   │   │   │   │   ├── [SWProvider.test.tsx](./packages/app/hybrid/social-networking/messaging/src/providers/__tests__/SWProvider.test.tsx)
-│   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/social-networking/messaging/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   │   │   │   │   ├── [DataContext.ts](./packages/app/hybrid/social-networking/messaging/src/providers/DataContext.ts)
-│   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/social-networking/messaging/src/providers/DataProvider.tsx)
-│   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/social-networking/messaging/src/providers/Providers.tsx)
-│   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/social-networking/messaging/src/providers/SWProvider.tsx)
-│   │   │   │   │   │   │   ├── [ToastProvider.tsx](./packages/app/hybrid/social-networking/messaging/src/providers/ToastProvider.tsx)
-│   │   │   │   │   │   │   └── [data-helpers.ts](./packages/app/hybrid/social-networking/messaging/src/providers/data-helpers.ts)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/social-networking/messaging/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/social-networking/messaging/src/styles/themes.css)
-│   │   │   │   │   │   └── types/
-│   │   │   │   │   │       ├── [call.ts](./packages/app/hybrid/social-networking/messaging/src/types/call.ts)
-│   │   │   │   │   │       ├── [chat.ts](./packages/app/hybrid/social-networking/messaging/src/types/chat.ts)
-│   │   │   │   │   │       ├── [index.ts](./packages/app/hybrid/social-networking/messaging/src/types/index.ts)
-│   │   │   │   │   │       ├── [message.ts](./packages/app/hybrid/social-networking/messaging/src/types/message.ts)
-│   │   │   │   │   │       ├── [peer.ts](./packages/app/hybrid/social-networking/messaging/src/types/peer.ts)
-│   │   │   │   │   │       ├── [settings.ts](./packages/app/hybrid/social-networking/messaging/src/types/settings.ts)
-│   │   │   │   │   │       └── [user.ts](./packages/app/hybrid/social-networking/messaging/src/types/user.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/social-networking/messaging/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/social-networking/messaging/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/social-networking/messaging/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/social-networking/messaging/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/social-networking/messaging/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/social-networking/messaging/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/social-networking/messaging/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/social-networking/messaging/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── tests/
-│   │   │   │   │   │   └── [fake-indexeddb.d.ts](./packages/app/hybrid/social-networking/messaging/tests/fake-indexeddb.d.ts)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/social-networking/messaging/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/social-networking/messaging/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/social-networking/messaging/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/social-networking/messaging/README.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/social-networking/messaging/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/social-networking/messaging/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/social-networking/messaging/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/social-networking/messaging/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/social-networking/messaging/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/social-networking/messaging/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/social-networking/messaging/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/social-networking/messaging/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/social-networking/messaging/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/social-networking/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/social-networking/TREE.md)
 │   │   │   ├── sports/
@@ -20593,6 +20168,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/sports/chess/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/sports/chess/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/sports/chess/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/sports/chess/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/sports/chess/public/og/og.svg)
 │   │   │   │   │   │   ├── workers/
 │   │   │   │   │   │   │   └── [gif.worker.js](./packages/app/hybrid/sports/chess/public/workers/gif.worker.js)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/sports/chess/public/apple-touch-icon.png)
@@ -21062,6 +20640,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/sports/football/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/sports/football/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/sports/football/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/sports/football/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/sports/football/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/sports/football/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/sports/football/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/sports/football/public/manifest.json)
@@ -21786,6 +21367,9 @@
 │   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/sports/tourney/public/icons/icon-72x72.png)
 │   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/sports/tourney/public/icons/icon-96x96.png)
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/sports/tourney/public/icons/icon.svg)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/sports/tourney/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/sports/tourney/public/og/og.svg)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/sports/tourney/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/sports/tourney/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/sports/tourney/public/manifest.json)
@@ -22221,6 +21805,9 @@
 │   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/utilities/docs/public/icons/icon.svg)
 │   │   │   │   │   │   ├── models/
 │   │   │   │   │   │   │   └── [invoice-parser.onnx](./packages/app/hybrid/utilities/docs/public/models/invoice-parser.onnx)
+│   │   │   │   │   │   ├── og/
+│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/utilities/docs/public/og/og.png)
+│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/utilities/docs/public/og/og.svg)
 │   │   │   │   │   │   ├── workers/
 │   │   │   │   │   │   │   └── [pdf.worker.min.js](./packages/app/hybrid/utilities/docs/public/workers/pdf.worker.min.js)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/utilities/docs/public/apple-touch-icon.png)
@@ -24124,307 +23711,10 @@
 │   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/utilities/docs/playwright.config.ts)
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/utilities/docs/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/utilities/docs/tsconfig.json)
-│   │   │   │   ├── password/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/utilities/password/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/utilities/password/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/utilities/password/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/utilities/password/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/utilities/password/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/utilities/password/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/utilities/password/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [filter-search.spec.ts](./packages/app/hybrid/utilities/password/e2e/filter-search.spec.ts)
-│   │   │   │   │   │   ├── [generator.spec.ts](./packages/app/hybrid/utilities/password/e2e/generator.spec.ts)
-│   │   │   │   │   │   ├── [health.spec.ts](./packages/app/hybrid/utilities/password/e2e/health.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/utilities/password/e2e/home.spec.ts)
-│   │   │   │   │   │   ├── [navigation.spec.ts](./packages/app/hybrid/utilities/password/e2e/navigation.spec.ts)
-│   │   │   │   │   │   ├── [new-item.spec.ts](./packages/app/hybrid/utilities/password/e2e/new-item.spec.ts)
-│   │   │   │   │   │   ├── [profile.spec.ts](./packages/app/hybrid/utilities/password/e2e/profile.spec.ts)
-│   │   │   │   │   │   ├── [settings.spec.ts](./packages/app/hybrid/utilities/password/e2e/settings.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/utilities/password/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/utilities/password/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/utilities/password/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/utilities/password/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/utilities/password/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/utilities/password/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/utilities/password/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/utilities/password/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/utilities/password/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/utilities/password/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/utilities/password/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/utilities/password/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/utilities/password/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/utilities/password/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/utilities/password/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/utilities/password/public/icons/icon.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/utilities/password/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/utilities/password/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/utilities/password/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/utilities/password/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/utilities/password/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/utilities/password/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (app)/
-│   │   │   │   │   │   │   │   ├── generator/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [generator-page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/generator/__tests__/generator-page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/generator/page.tsx)
-│   │   │   │   │   │   │   │   ├── health/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [health-page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/health/__tests__/health-page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/health/page.tsx)
-│   │   │   │   │   │   │   │   ├── item/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [item-page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/item/__tests__/item-page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/item/page.tsx)
-│   │   │   │   │   │   │   │   ├── settings/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [settings-page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/settings/__tests__/settings-page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/settings/page.tsx)
-│   │   │   │   │   │   │   │   └── trash/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [trash-page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/trash/__tests__/trash-page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(app)/trash/page.tsx)
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/utilities/password/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/utilities/password/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/utilities/password/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/utilities/password/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/utilities/password/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/utilities/password/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/utilities/password/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/utilities/password/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/utilities/password/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/utilities/password/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/utilities/password/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/utilities/password/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/utilities/password/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/utilities/password/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/utilities/password/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [SWProvider.test.tsx](./packages/app/hybrid/utilities/password/src/components/__tests__/SWProvider.test.tsx)
-│   │   │   │   │   │   │   ├── molecules/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AccessLogCard.test.tsx](./packages/app/hybrid/utilities/password/src/components/molecules/__tests__/AccessLogCard.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [ShareItemModal.test.tsx](./packages/app/hybrid/utilities/password/src/components/molecules/__tests__/ShareItemModal.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AccessLogCard.tsx](./packages/app/hybrid/utilities/password/src/components/molecules/AccessLogCard.tsx)
-│   │   │   │   │   │   │   │   ├── [ConfirmDialog.tsx](./packages/app/hybrid/utilities/password/src/components/molecules/ConfirmDialog.tsx)
-│   │   │   │   │   │   │   │   ├── [HealthWidgets.tsx](./packages/app/hybrid/utilities/password/src/components/molecules/HealthWidgets.tsx)
-│   │   │   │   │   │   │   │   ├── [ShareItemModal.tsx](./packages/app/hybrid/utilities/password/src/components/molecules/ShareItemModal.tsx)
-│   │   │   │   │   │   │   │   └── [VaultItemForm.tsx](./packages/app/hybrid/utilities/password/src/components/molecules/VaultItemForm.tsx)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [EmergencyAccessCard.test.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/__tests__/EmergencyAccessCard.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [FolderManager.test.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/__tests__/FolderManager.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [LockScreen.test.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/__tests__/LockScreen.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [RecentlyUsed.test.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/__tests__/RecentlyUsed.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ToastContainer.test.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/__tests__/ToastContainer.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [TotpDisplay.test.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/__tests__/TotpDisplay.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [TransferCard.test.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/__tests__/TransferCard.test.tsx)
-│   │   │   │   │   │   │   │   ├── [EmergencyAccessCard.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/EmergencyAccessCard.tsx)
-│   │   │   │   │   │   │   │   ├── [FolderManager.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/FolderManager.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   ├── [LockScreen.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/LockScreen.tsx)
-│   │   │   │   │   │   │   │   ├── [MasterPasswordCard.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/MasterPasswordCard.tsx)
-│   │   │   │   │   │   │   │   ├── [RecentlyUsed.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/RecentlyUsed.tsx)
-│   │   │   │   │   │   │   │   ├── [SecuritySettingsCard.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/SecuritySettingsCard.tsx)
-│   │   │   │   │   │   │   │   ├── [ToastContainer.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/ToastContainer.tsx)
-│   │   │   │   │   │   │   │   ├── [TotpDisplay.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/TotpDisplay.tsx)
-│   │   │   │   │   │   │   │   ├── [TransferCard.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/TransferCard.tsx)
-│   │   │   │   │   │   │   │   ├── [VaultItemCard.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/VaultItemCard.tsx)
-│   │   │   │   │   │   │   │   └── [VaultToolbar.tsx](./packages/app/hybrid/utilities/password/src/components/organisms/VaultToolbar.tsx)
-│   │   │   │   │   │   │   └── templates/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/utilities/password/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/utilities/password/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/utilities/password/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/utilities/password/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/utilities/password/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/utilities/password/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/utilities/password/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/utilities/password/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/utilities/password/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/utilities/password/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/utilities/password/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/utilities/password/src/data/__tests__/models.test.ts)
-│   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/utilities/password/src/data/__tests__/seed.test.ts)
-│   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/utilities/password/src/data/models.ts)
-│   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/utilities/password/src/data/seed.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [useSWRegister.test.tsx](./packages/app/hybrid/utilities/password/src/hooks/__tests__/useSWRegister.test.tsx)
-│   │   │   │   │   │   │   └── [useSWRegister.ts](./packages/app/hybrid/utilities/password/src/hooks/useSWRegister.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/utilities/password/src/lib/__tests__/db.test.ts)
-│   │   │   │   │   │   │   │   ├── [health.test.ts](./packages/app/hybrid/utilities/password/src/lib/__tests__/health.test.ts)
-│   │   │   │   │   │   │   │   ├── [security.test.ts](./packages/app/hybrid/utilities/password/src/lib/__tests__/security.test.ts)
-│   │   │   │   │   │   │   │   ├── [totp.test.ts](./packages/app/hybrid/utilities/password/src/lib/__tests__/totp.test.ts)
-│   │   │   │   │   │   │   │   └── [transfer.test.ts](./packages/app/hybrid/utilities/password/src/lib/__tests__/transfer.test.ts)
-│   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/utilities/password/src/lib/db.ts)
-│   │   │   │   │   │   │   ├── [health.ts](./packages/app/hybrid/utilities/password/src/lib/health.ts)
-│   │   │   │   │   │   │   ├── [security.ts](./packages/app/hybrid/utilities/password/src/lib/security.ts)
-│   │   │   │   │   │   │   ├── [totp.ts](./packages/app/hybrid/utilities/password/src/lib/totp.ts)
-│   │   │   │   │   │   │   └── [transfer.ts](./packages/app/hybrid/utilities/password/src/lib/transfer.ts)
-│   │   │   │   │   │   ├── providers/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/utilities/password/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   │   │   │   │   ├── [SecurityProvider.test.tsx](./packages/app/hybrid/utilities/password/src/providers/__tests__/SecurityProvider.test.tsx)
-│   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/utilities/password/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/utilities/password/src/providers/DataProvider.tsx)
-│   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/utilities/password/src/providers/Providers.tsx)
-│   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/utilities/password/src/providers/SWProvider.tsx)
-│   │   │   │   │   │   │   ├── [SecurityProvider.tsx](./packages/app/hybrid/utilities/password/src/providers/SecurityProvider.tsx)
-│   │   │   │   │   │   │   └── [ToastProvider.tsx](./packages/app/hybrid/utilities/password/src/providers/ToastProvider.tsx)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/utilities/password/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/utilities/password/src/styles/themes.css)
-│   │   │   │   │   │   ├── test-utils/
-│   │   │   │   │   │   │   └── [fakeDb.ts](./packages/app/hybrid/utilities/password/src/test-utils/fakeDb.ts)
-│   │   │   │   │   │   ├── types/
-│   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/utilities/password/src/types/index.ts)
-│   │   │   │   │   │   └── utils/
-│   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │       │   └── [format.test.ts](./packages/app/hybrid/utilities/password/src/utils/__tests__/format.test.ts)
-│   │   │   │   │   │       └── [format.ts](./packages/app/hybrid/utilities/password/src/utils/format.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/password/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/utilities/password/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/utilities/password/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/utilities/password/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/utilities/password/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/utilities/password/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/utilities/password/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/utilities/password/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/utilities/password/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/utilities/password/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/utilities/password/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/utilities/password/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/utilities/password/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/utilities/password/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/utilities/password/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/utilities/password/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/utilities/password/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/utilities/password/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/password/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/utilities/password/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/utilities/password/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/utilities/password/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/utilities/password/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/utilities/password/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/utilities/password/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/utilities/password/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/utilities/password/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/utilities/password/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/utilities/password/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/utilities/password/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/utilities/password/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/utilities/password/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/utilities/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/utilities/TREE.md)
-│   │   │   └── [README.md](./packages/app/hybrid/README.md)
+│   │   │   ├── [README.md](./packages/app/hybrid/README.md)
+│   │   │   └── [og-cards.yaml](./packages/app/hybrid/og-cards.yaml)
 │   │   ├── native/
 │   │   │   ├── androidx/
 │   │   │   │   ├── android/
@@ -24627,6 +23917,7 @@
 │   │   │   │   │   │   ├── Docs/
 │   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/native/macosx/apple/macos/Docs/ARCHITECTURE.md)
 │   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/native/macosx/apple/macos/Docs/CONTRIBUTING.md)
+│   │   │   │   │   │   │   ├── [DESIGN-SYSTEM.md](./packages/app/native/macosx/apple/macos/Docs/DESIGN-SYSTEM.md)
 │   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/native/macosx/apple/macos/Docs/DOWNLOADS.md)
 │   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/native/macosx/apple/macos/Docs/PACKAGING.md)
 │   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/native/macosx/apple/macos/Docs/ROADMAP.md)
@@ -24656,17 +23947,24 @@
 │   │   │   │   │   │   │   │   ├── IP/
 │   │   │   │   │   │   │   │   │   └── [IPViewModel.swift](./packages/app/native/macosx/apple/macos/Sources/App/IP/IPViewModel.swift)
 │   │   │   │   │   │   │   │   ├── Memory/
+│   │   │   │   │   │   │   │   │   ├── [MemoryViewModel+MenuBar.swift](./packages/app/native/macosx/apple/macos/Sources/App/Memory/MemoryViewModel+MenuBar.swift)
 │   │   │   │   │   │   │   │   │   └── [MemoryViewModel.swift](./packages/app/native/macosx/apple/macos/Sources/App/Memory/MemoryViewModel.swift)
 │   │   │   │   │   │   │   │   ├── Network/
 │   │   │   │   │   │   │   │   │   └── [NetworkViewModel.swift](./packages/app/native/macosx/apple/macos/Sources/App/Network/NetworkViewModel.swift)
 │   │   │   │   │   │   │   │   ├── Ports/
 │   │   │   │   │   │   │   │   │   └── [PortsViewModel.swift](./packages/app/native/macosx/apple/macos/Sources/App/Ports/PortsViewModel.swift)
 │   │   │   │   │   │   │   │   ├── Shared/
+│   │   │   │   │   │   │   │   │   ├── [AppViewModels.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/AppViewModels.swift)
+│   │   │   │   │   │   │   │   │   ├── [DashboardRoute.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/DashboardRoute.swift)
+│   │   │   │   │   │   │   │   │   ├── [DashboardRouter.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/DashboardRouter.swift)
+│   │   │   │   │   │   │   │   │   ├── [DashboardSidebar.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/DashboardSidebar.swift)
 │   │   │   │   │   │   │   │   │   ├── [LaunchAtLogin.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/LaunchAtLogin.swift)
 │   │   │   │   │   │   │   │   │   ├── [MacOSXApp.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/MacOSXApp.swift)
 │   │   │   │   │   │   │   │   │   ├── [MenuBarIcon.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/MenuBarIcon.swift)
+│   │   │   │   │   │   │   │   │   ├── [MenuBarItemValue.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/MenuBarItemValue.swift)
 │   │   │   │   │   │   │   │   │   ├── [MenuBarPanelPositioner.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/MenuBarPanelPositioner.swift)
-│   │   │   │   │   │   │   │   │   └── [PanelVisibilityMonitor.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/PanelVisibilityMonitor.swift)
+│   │   │   │   │   │   │   │   │   ├── [SurfaceVisibilityMonitor.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/SurfaceVisibilityMonitor.swift)
+│   │   │   │   │   │   │   │   │   └── [WindowPresenter.swift](./packages/app/native/macosx/apple/macos/Sources/App/Shared/WindowPresenter.swift)
 │   │   │   │   │   │   │   │   └── Workspaces/
 │   │   │   │   │   │   │   │       └── [WorkspacesViewModel.swift](./packages/app/native/macosx/apple/macos/Sources/App/Workspaces/WorkspacesViewModel.swift)
 │   │   │   │   │   │   │   ├── Core/
@@ -24705,6 +24003,9 @@
 │   │   │   │   │   │   │   │   │   │   └── [PortInfo.swift](./packages/app/native/macosx/apple/macos/Sources/Core/Models/Ports/PortInfo.swift)
 │   │   │   │   │   │   │   │   │   ├── Shared/
 │   │   │   │   │   │   │   │   │   │   ├── [MenuBarDisplay.swift](./packages/app/native/macosx/apple/macos/Sources/Core/Models/Shared/MenuBarDisplay.swift)
+│   │   │   │   │   │   │   │   │   │   ├── [MenuBarMetric.swift](./packages/app/native/macosx/apple/macos/Sources/Core/Models/Shared/MenuBarMetric.swift)
+│   │   │   │   │   │   │   │   │   │   ├── [MenuBarMetrics.swift](./packages/app/native/macosx/apple/macos/Sources/Core/Models/Shared/MenuBarMetrics.swift)
+│   │   │   │   │   │   │   │   │   │   ├── [SurfaceSection.swift](./packages/app/native/macosx/apple/macos/Sources/Core/Models/Shared/SurfaceSection.swift)
 │   │   │   │   │   │   │   │   │   │   └── [UsageThreshold.swift](./packages/app/native/macosx/apple/macos/Sources/Core/Models/Shared/UsageThreshold.swift)
 │   │   │   │   │   │   │   │   │   └── Workspaces/
 │   │   │   │   │   │   │   │   │       ├── [NormalizedRect.swift](./packages/app/native/macosx/apple/macos/Sources/Core/Models/Workspaces/NormalizedRect.swift)
@@ -24792,9 +24093,13 @@
 │   │   │   │   │   │   │       │   └── [BatteryView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Battery/BatteryView.swift)
 │   │   │   │   │   │   │       ├── Clipboard/
 │   │   │   │   │   │   │       │   ├── [ClipboardItemList.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clipboard/ClipboardItemList.swift)
+│   │   │   │   │   │   │       │   ├── [ClipboardListPane.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clipboard/ClipboardListPane.swift)
+│   │   │   │   │   │   │       │   ├── [ClipboardSidebarGroup.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clipboard/ClipboardSidebarGroup.swift)
 │   │   │   │   │   │   │       │   └── [ClipboardView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clipboard/ClipboardView.swift)
 │   │   │   │   │   │   │       ├── Clock/
+│   │   │   │   │   │   │       │   ├── [ClockFaceSizing.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clock/ClockFaceSizing.swift)
 │   │   │   │   │   │   │       │   ├── [ClockRing.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clock/ClockRing.swift)
+│   │   │   │   │   │   │       │   ├── [ClockSidebarGroup.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clock/ClockSidebarGroup.swift)
 │   │   │   │   │   │   │       │   ├── [ClockView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clock/ClockView.swift)
 │   │   │   │   │   │   │       │   ├── [PomodoroView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clock/PomodoroView.swift)
 │   │   │   │   │   │   │       │   ├── [StopwatchView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Clock/StopwatchView.swift)
@@ -24807,6 +24112,7 @@
 │   │   │   │   │   │   │       │   └── [RunningAppsSectionView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Front/RunningAppsSectionView.swift)
 │   │   │   │   │   │   │       ├── Homebrew/
 │   │   │   │   │   │   │       │   ├── [AppTile.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/AppTile.swift)
+│   │   │   │   │   │   │       │   ├── [ApplicationsSidebarGroup.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/ApplicationsSidebarGroup.swift)
 │   │   │   │   │   │   │       │   ├── [BrewAppRow.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/BrewAppRow.swift)
 │   │   │   │   │   │   │       │   ├── [BrewAppsView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/BrewAppsView.swift)
 │   │   │   │   │   │   │       │   ├── [DiscoverView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/DiscoverView.swift)
@@ -24816,10 +24122,13 @@
 │   │   │   │   │   │   │       │   ├── [PackageDetailView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/PackageDetailView.swift)
 │   │   │   │   │   │   │       │   ├── [PackageRow.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/PackageRow.swift)
 │   │   │   │   │   │   │       │   ├── [ServicesView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/ServicesView.swift)
-│   │   │   │   │   │   │       │   ├── [SidebarView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/SidebarView.swift)
 │   │   │   │   │   │   │       │   └── [UpdatesView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Homebrew/UpdatesView.swift)
 │   │   │   │   │   │   │       ├── IP/
-│   │   │   │   │   │   │       │   └── [IPView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/IP/IPView.swift)
+│   │   │   │   │   │   │       │   ├── [IPDNSLookupView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/IP/IPDNSLookupView.swift)
+│   │   │   │   │   │   │       │   ├── [IPDetailsView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/IP/IPDetailsView.swift)
+│   │   │   │   │   │   │       │   ├── [IPView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/IP/IPView.swift)
+│   │   │   │   │   │   │       │   ├── [InfoRow.swift](./packages/app/native/macosx/apple/macos/Sources/Views/IP/InfoRow.swift)
+│   │   │   │   │   │   │       │   └── [JSONText.swift](./packages/app/native/macosx/apple/macos/Sources/Views/IP/JSONText.swift)
 │   │   │   │   │   │   │       ├── Memory/
 │   │   │   │   │   │   │       │   ├── [CPUView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Memory/CPUView.swift)
 │   │   │   │   │   │   │       │   ├── [DiskView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Memory/DiskView.swift)
@@ -24837,12 +24146,28 @@
 │   │   │   │   │   │   │       │   ├── [OverviewView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Resources/OverviewView.swift)
 │   │   │   │   │   │   │       │   └── [ResourcesView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Resources/ResourcesView.swift)
 │   │   │   │   │   │   │       ├── Shared/
+│   │   │   │   │   │   │       │   ├── DesignSystem/
+│   │   │   │   │   │   │       │   │   ├── [CapsuleBadge.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/CapsuleBadge.swift)
+│   │   │   │   │   │   │       │   │   ├── [ChipButton.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/ChipButton.swift)
+│   │   │   │   │   │   │       │   │   ├── [CircleIconButton.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/CircleIconButton.swift)
+│   │   │   │   │   │   │       │   │   ├── [Motion.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/Motion.swift)
+│   │   │   │   │   │   │       │   │   ├── [Palette.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/Palette.swift)
+│   │   │   │   │   │   │       │   │   ├── [Radius.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/Radius.swift)
+│   │   │   │   │   │   │       │   │   ├── [SearchField.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/SearchField.swift)
+│   │   │   │   │   │   │       │   │   ├── [Spacing.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/Spacing.swift)
+│   │   │   │   │   │   │       │   │   ├── [SurfaceMetrics.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/SurfaceMetrics.swift)
+│   │   │   │   │   │   │       │   │   └── [Typography.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DesignSystem/Typography.swift)
+│   │   │   │   │   │   │       │   ├── [ContentLayout.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/ContentLayout.swift)
+│   │   │   │   │   │   │       │   ├── [DashboardView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/DashboardView.swift)
 │   │   │   │   │   │   │       │   ├── [MenuBarView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/MenuBarView.swift)
 │   │   │   │   │   │   │       │   ├── [ResourceMeter.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/ResourceMeter.swift)
+│   │   │   │   │   │   │       │   ├── [SectionCard.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/SectionCard.swift)
+│   │   │   │   │   │   │       │   ├── [SectionGrid.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/SectionGrid.swift)
 │   │   │   │   │   │   │       │   ├── [SettingsView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/SettingsView.swift)
-│   │   │   │   │   │   │       │   ├── [TabLayout.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/TabLayout.swift)
+│   │   │   │   │   │   │       │   ├── [SurfaceLayout.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/SurfaceLayout.swift)
 │   │   │   │   │   │   │       │   ├── [UnavailableView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/UnavailableView.swift)
-│   │   │   │   │   │   │       │   └── [UsageThresholdColor.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/UsageThresholdColor.swift)
+│   │   │   │   │   │   │       │   ├── [UsageThresholdColor.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/UsageThresholdColor.swift)
+│   │   │   │   │   │   │       │   └── [WindowIdentifierTag.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Shared/WindowIdentifierTag.swift)
 │   │   │   │   │   │   │       └── Workspaces/
 │   │   │   │   │   │   │           ├── [WorkspaceRow.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Workspaces/WorkspaceRow.swift)
 │   │   │   │   │   │   │           └── [WorkspacesView.swift](./packages/app/native/macosx/apple/macos/Sources/Views/Workspaces/WorkspacesView.swift)
@@ -24871,6 +24196,9 @@
 │   │   │   │   │   │   │       │   │   └── [PortTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/Models/Ports/PortTests.swift)
 │   │   │   │   │   │   │       │   ├── Shared/
 │   │   │   │   │   │   │       │   │   ├── [MenuBarDisplayTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/Models/Shared/MenuBarDisplayTests.swift)
+│   │   │   │   │   │   │       │   │   ├── [MenuBarMetricTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/Models/Shared/MenuBarMetricTests.swift)
+│   │   │   │   │   │   │       │   │   ├── [MenuBarMetricsTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/Models/Shared/MenuBarMetricsTests.swift)
+│   │   │   │   │   │   │       │   │   ├── [SurfaceSectionTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/Models/Shared/SurfaceSectionTests.swift)
 │   │   │   │   │   │   │       │   │   └── [UsageThresholdTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/Models/Shared/UsageThresholdTests.swift)
 │   │   │   │   │   │   │       │   └── Workspaces/
 │   │   │   │   │   │   │       │       ├── [NormalizedRectTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/Models/Workspaces/NormalizedRectTests.swift)
@@ -24898,6 +24226,7 @@
 │   │   │   │   │   │   │       │       └── [WorkspaceWindowBuilderTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/Services/Workspaces/WorkspaceWindowBuilderTests.swift)
 │   │   │   │   │   │   │       ├── [ByteFormatterTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/ByteFormatterTests.swift)
 │   │   │   │   │   │   │       ├── [ClockFormatterTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/ClockFormatterTests.swift)
+│   │   │   │   │   │   │       ├── [DesignSystemTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/DesignSystemTests.swift)
 │   │   │   │   │   │   │       └── [SettingsStoreTests.swift](./packages/app/native/macosx/apple/macos/Tests/Core/SettingsStoreTests.swift)
 │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/native/macosx/apple/macos/AGENTS.md)
 │   │   │   │   │   │   ├── [LICENSE](./packages/app/native/macosx/apple/macos/LICENSE)
@@ -25552,6 +24881,652 @@
 │   │   │   ├── [main.py](./packages/data/scrum.org/main.py)
 │   │   │   ├── [pyproject.toml](./packages/data/scrum.org/pyproject.toml)
 │   │   │   └── [uv.lock](./packages/data/scrum.org/uv.lock)
+│   │   ├── uob/
+│   │   │   ├── research-project/
+│   │   │   │   ├── projects/
+│   │   │   │   │   ├── data/
+│   │   │   │   │   │   ├── csv/
+│   │   │   │   │   │   │   ├── [projects.csv](./packages/data/uob/research-project/projects/data/csv/projects.csv)
+│   │   │   │   │   │   │   ├── [projects_categories.csv](./packages/data/uob/research-project/projects/data/csv/projects_categories.csv)
+│   │   │   │   │   │   │   ├── [projects_feasibility.csv](./packages/data/uob/research-project/projects/data/csv/projects_feasibility.csv)
+│   │   │   │   │   │   │   ├── [projects_method_weights.csv](./packages/data/uob/research-project/projects/data/csv/projects_method_weights.csv)
+│   │   │   │   │   │   │   ├── [projects_profile.csv](./packages/data/uob/research-project/projects/data/csv/projects_profile.csv)
+│   │   │   │   │   │   │   ├── [projects_rankings.csv](./packages/data/uob/research-project/projects/data/csv/projects_rankings.csv)
+│   │   │   │   │   │   │   ├── [projects_supervisors.csv](./packages/data/uob/research-project/projects/data/csv/projects_supervisors.csv)
+│   │   │   │   │   │   │   ├── [projects_weights.csv](./packages/data/uob/research-project/projects/data/csv/projects_weights.csv)
+│   │   │   │   │   │   │   ├── [ranking_weights.csv](./packages/data/uob/research-project/projects/data/csv/ranking_weights.csv)
+│   │   │   │   │   │   │   └── [supervisors_alignment.csv](./packages/data/uob/research-project/projects/data/csv/supervisors_alignment.csv)
+│   │   │   │   │   │   └── md/
+│   │   │   │   │   │       ├── projects/
+│   │   │   │   │   │       │   ├── [index.md](./packages/data/uob/research-project/projects/data/md/projects/index.md)
+│   │   │   │   │   │       │   ├── [project-002-understanding-health-promoting-behaviour-motivations-engagement-and-live.md](./packages/data/uob/research-project/projects/data/md/projects/project-002-understanding-health-promoting-behaviour-motivations-engagement-and-live.md)
+│   │   │   │   │   │       │   ├── [project-003-childhood-neurodiversity-mental-health-educational-and-social-outcomes.md](./packages/data/uob/research-project/projects/data/md/projects/project-003-childhood-neurodiversity-mental-health-educational-and-social-outcomes.md)
+│   │   │   │   │   │       │   ├── [project-004-effects-of-removing-high-fat-high-sugar-foods-on-appetite-and-memory.md](./packages/data/uob/research-project/projects/data/md/projects/project-004-effects-of-removing-high-fat-high-sugar-foods-on-appetite-and-memory.md)
+│   │   │   │   │   │       │   ├── [project-005-effortful-reminder-and-memory-reconsolidation.md](./packages/data/uob/research-project/projects/data/md/projects/project-005-effortful-reminder-and-memory-reconsolidation.md)
+│   │   │   │   │   │       │   ├── [project-006-psychopathy-and-brain-correlates-of-mate-poaching.md](./packages/data/uob/research-project/projects/data/md/projects/project-006-psychopathy-and-brain-correlates-of-mate-poaching.md)
+│   │   │   │   │   │       │   ├── [project-007-predicting-recovery-from-post-stroke-mri-using-deep-learning-and-explain.md](./packages/data/uob/research-project/projects/data/md/projects/project-007-predicting-recovery-from-post-stroke-mri-using-deep-learning-and-explain.md)
+│   │   │   │   │   │       │   ├── [project-008-perception-on-the-fringe-of-awareness-with-application-to-forensics-and.md](./packages/data/uob/research-project/projects/data/md/projects/project-008-perception-on-the-fringe-of-awareness-with-application-to-forensics-and.md)
+│   │   │   │   │   │       │   ├── [project-009-impact-of-reward-predictability-on-motor-learning-performance.md](./packages/data/uob/research-project/projects/data/md/projects/project-009-impact-of-reward-predictability-on-motor-learning-performance.md)
+│   │   │   │   │   │       │   ├── [project-010-testing-the-double-empathy-framework-autistic-and-non-autistic-communica.md](./packages/data/uob/research-project/projects/data/md/projects/project-010-testing-the-double-empathy-framework-autistic-and-non-autistic-communica.md)
+│   │   │   │   │   │       │   ├── [project-011-using-eye-tracking-to-understand-the-role-of-attention-in-decision-makin.md](./packages/data/uob/research-project/projects/data/md/projects/project-011-using-eye-tracking-to-understand-the-role-of-attention-in-decision-makin.md)
+│   │   │   │   │   │       │   ├── [project-012-examining-brain-state-variability-with-fnirs-and-fmri.md](./packages/data/uob/research-project/projects/data/md/projects/project-012-examining-brain-state-variability-with-fnirs-and-fmri.md)
+│   │   │   │   │   │       │   ├── [project-013-scout-self-control-over-time.md](./packages/data/uob/research-project/projects/data/md/projects/project-013-scout-self-control-over-time.md)
+│   │   │   │   │   │       │   ├── [project-014-reshaping-behavioural-interventions-for-sleep-in-neurogenetic-syndromes.md](./packages/data/uob/research-project/projects/data/md/projects/project-014-reshaping-behavioural-interventions-for-sleep-in-neurogenetic-syndromes.md)
+│   │   │   │   │   │       │   ├── [project-015-understanding-the-dynamics-of-fatigue-in-health-and-neurological-disease.md](./packages/data/uob/research-project/projects/data/md/projects/project-015-understanding-the-dynamics-of-fatigue-in-health-and-neurological-disease.md)
+│   │   │   │   │   │       │   ├── [project-016-stochastic-resonance-in-touch-for-perception-and-action-stritpa2.md](./packages/data/uob/research-project/projects/data/md/projects/project-016-stochastic-resonance-in-touch-for-perception-and-action-stritpa2.md)
+│   │   │   │   │   │       │   ├── [project-017-tactile-control-of-in-hand-manipulation.md](./packages/data/uob/research-project/projects/data/md/projects/project-017-tactile-control-of-in-hand-manipulation.md)
+│   │   │   │   │   │       │   ├── [project-018-understanding-the-computations-underlying-competitive-effort.md](./packages/data/uob/research-project/projects/data/md/projects/project-018-understanding-the-computations-underlying-competitive-effort.md)
+│   │   │   │   │   │       │   ├── [project-019-digital-consumption-and-well-being-the-role-of-self-control-and-happines.md](./packages/data/uob/research-project/projects/data/md/projects/project-019-digital-consumption-and-well-being-the-role-of-self-control-and-happines.md)
+│   │   │   │   │   │       │   ├── [project-020-thinking-believing-and-deciding-cognitive-and-personality-predictors-of.md](./packages/data/uob/research-project/projects/data/md/projects/project-020-thinking-believing-and-deciding-cognitive-and-personality-predictors-of.md)
+│   │   │   │   │   │       │   ├── [project-021-in-the-eye-of-the-beholder-s-goal-neural-and-computational-mechanisms-un.md](./packages/data/uob/research-project/projects/data/md/projects/project-021-in-the-eye-of-the-beholder-s-goal-neural-and-computational-mechanisms-un.md)
+│   │   │   │   │   │       │   ├── [project-022-how-much-error-can-virtual-hands-tolerate-tracking-accuracy-performance.md](./packages/data/uob/research-project/projects/data/md/projects/project-022-how-much-error-can-virtual-hands-tolerate-tracking-accuracy-performance.md)
+│   │   │   │   │   │       │   ├── [project-023-can-a-virtual-musician-keep-you-in-time-synchronisation-and-social-prese.md](./packages/data/uob/research-project/projects/data/md/projects/project-023-can-a-virtual-musician-keep-you-in-time-synchronisation-and-social-prese.md)
+│   │   │   │   │   │       │   ├── [project-024-seeing-is-not-enough-how-active-exploration-shapes-the-perception-of-vir.md](./packages/data/uob/research-project/projects/data/md/projects/project-024-seeing-is-not-enough-how-active-exploration-shapes-the-perception-of-vir.md)
+│   │   │   │   │   │       │   ├── [project-025-from-papers-to-evidence-can-ai-build-a-reliable-research-vault.md](./packages/data/uob/research-project/projects/data/md/projects/project-025-from-papers-to-evidence-can-ai-build-a-reliable-research-vault.md)
+│   │   │   │   │   │       │   ├── [project-026-beyond-the-mugshot-improving-how-witnesses-identify-faces.md](./packages/data/uob/research-project/projects/data/md/projects/project-026-beyond-the-mugshot-improving-how-witnesses-identify-faces.md)
+│   │   │   │   │   │       │   ├── [project-027-memory-under-pressure-can-digital-evidence-distort-eyewitness-testimony.md](./packages/data/uob/research-project/projects/data/md/projects/project-027-memory-under-pressure-can-digital-evidence-distort-eyewitness-testimony.md)
+│   │   │   │   │   │       │   ├── [project-028-exploring-structural-markers-of-brain-and-cognitive-decline-in-associati.md](./packages/data/uob/research-project/projects/data/md/projects/project-028-exploring-structural-markers-of-brain-and-cognitive-decline-in-associati.md)
+│   │   │   │   │   │       │   ├── [project-029-make-virtual-objects-feel-real-can-simple-vibrations-create-convincing-m.md](./packages/data/uob/research-project/projects/data/md/projects/project-029-make-virtual-objects-feel-real-can-simple-vibrations-create-convincing-m.md)
+│   │   │   │   │   │       │   ├── [project-030-characterizing-the-first-night-effect-in-human-sleep-with-quantitative-e.md](./packages/data/uob/research-project/projects/data/md/projects/project-030-characterizing-the-first-night-effect-in-human-sleep-with-quantitative-e.md)
+│   │   │   │   │   │       │   ├── [project-031-examining-the-factor-structure-and-internal-validity-of-a-feelings-about.md](./packages/data/uob/research-project/projects/data/md/projects/project-031-examining-the-factor-structure-and-internal-validity-of-a-feelings-about.md)
+│   │   │   │   │   │       │   ├── [project-032-assessing-reading-motivation-in-young-people-using-experimental-measures.md](./packages/data/uob/research-project/projects/data/md/projects/project-032-assessing-reading-motivation-in-young-people-using-experimental-measures.md)
+│   │   │   │   │   │       │   ├── [project-033-inner-voice-during-silent-reading.md](./packages/data/uob/research-project/projects/data/md/projects/project-033-inner-voice-during-silent-reading.md)
+│   │   │   │   │   │       │   ├── [project-034-belonging-in-higher-education-exploring-students-experiences-and-constru.md](./packages/data/uob/research-project/projects/data/md/projects/project-034-belonging-in-higher-education-exploring-students-experiences-and-constru.md)
+│   │   │   │   │   │       │   ├── [project-035-do-opms-tell-us-more-about-brain-activity-than-eeg.md](./packages/data/uob/research-project/projects/data/md/projects/project-035-do-opms-tell-us-more-about-brain-activity-than-eeg.md)
+│   │   │   │   │   │       │   ├── [project-036-evaluation-of-a-new-opm-lab.md](./packages/data/uob/research-project/projects/data/md/projects/project-036-evaluation-of-a-new-opm-lab.md)
+│   │   │   │   │   │       │   ├── [project-037-cognitive-development-in-monolingual-and-multilingual-toddlers-born-pret.md](./packages/data/uob/research-project/projects/data/md/projects/project-037-cognitive-development-in-monolingual-and-multilingual-toddlers-born-pret.md)
+│   │   │   │   │   │       │   ├── [project-038-the-relationship-of-theory-of-mind-cognition-and-language-skills-in-mono.md](./packages/data/uob/research-project/projects/data/md/projects/project-038-the-relationship-of-theory-of-mind-cognition-and-language-skills-in-mono.md)
+│   │   │   │   │   │       │   ├── [project-039-dissociating-neural-pathways-for-selective-attention.md](./packages/data/uob/research-project/projects/data/md/projects/project-039-dissociating-neural-pathways-for-selective-attention.md)
+│   │   │   │   │   │       │   ├── [project-040-decoding-speech-meaning-and-narrative-from-the-human-brain.md](./packages/data/uob/research-project/projects/data/md/projects/project-040-decoding-speech-meaning-and-narrative-from-the-human-brain.md)
+│   │   │   │   │   │       │   ├── [project-041-neurobehavioural-responses-to-music-and-multimedia-in-neurodivergent-chi.md](./packages/data/uob/research-project/projects/data/md/projects/project-041-neurobehavioural-responses-to-music-and-multimedia-in-neurodivergent-chi.md)
+│   │   │   │   │   │       │   ├── [project-042-a-computational-model-of-memory-formation-and-removal.md](./packages/data/uob/research-project/projects/data/md/projects/project-042-a-computational-model-of-memory-formation-and-removal.md)
+│   │   │   │   │   │       │   ├── [project-043-how-social-media-use-affects-social-skills-and-wellbeing-in-young-adoles.md](./packages/data/uob/research-project/projects/data/md/projects/project-043-how-social-media-use-affects-social-skills-and-wellbeing-in-young-adoles.md)
+│   │   │   │   │   │       │   ├── [project-044-generalisation-of-movement-sequence-planning-across-movement-types.md](./packages/data/uob/research-project/projects/data/md/projects/project-044-generalisation-of-movement-sequence-planning-across-movement-types.md)
+│   │   │   │   │   │       │   ├── [project-045-multimodal-imaging-of-neural-representations-in-action-planning.md](./packages/data/uob/research-project/projects/data/md/projects/project-045-multimodal-imaging-of-neural-representations-in-action-planning.md)
+│   │   │   │   │   │       │   ├── [project-046-developing-resources-for-feedback-literacy-in-higher-education.md](./packages/data/uob/research-project/projects/data/md/projects/project-046-developing-resources-for-feedback-literacy-in-higher-education.md)
+│   │   │   │   │   │       │   ├── [project-047-visual-cues-in-attention.md](./packages/data/uob/research-project/projects/data/md/projects/project-047-visual-cues-in-attention.md)
+│   │   │   │   │   │       │   ├── [project-048-improving-co-registration-methods-for-opm-meg-neuroimaging.md](./packages/data/uob/research-project/projects/data/md/projects/project-048-improving-co-registration-methods-for-opm-meg-neuroimaging.md)
+│   │   │   │   │   │       │   ├── [project-049-embodied-gamma-gamma-oscillations-and-their-relationship-to-non-neuronal.md](./packages/data/uob/research-project/projects/data/md/projects/project-049-embodied-gamma-gamma-oscillations-and-their-relationship-to-non-neuronal.md)
+│   │   │   │   │   │       │   ├── [project-050-developing-a-python-toolkit-for-realistic-simulation-and-optimisation-of.md](./packages/data/uob/research-project/projects/data/md/projects/project-050-developing-a-python-toolkit-for-realistic-simulation-and-optimisation-of.md)
+│   │   │   │   │   │       │   ├── [project-051-innovation-creativity-and-problem-solving.md](./packages/data/uob/research-project/projects/data/md/projects/project-051-innovation-creativity-and-problem-solving.md)
+│   │   │   │   │   │       │   ├── [project-052-modelling-human-reaching-using-neurobiologically-inspired-robotics-model.md](./packages/data/uob/research-project/projects/data/md/projects/project-052-modelling-human-reaching-using-neurobiologically-inspired-robotics-model.md)
+│   │   │   │   │   │       │   ├── [project-053-modelling-autism-and-dyslexia-with-diffusion-models.md](./packages/data/uob/research-project/projects/data/md/projects/project-053-modelling-autism-and-dyslexia-with-diffusion-models.md)
+│   │   │   │   │   │       │   ├── [project-054-modelling-of-eeg-data-from-a-flanker-study.md](./packages/data/uob/research-project/projects/data/md/projects/project-054-modelling-of-eeg-data-from-a-flanker-study.md)
+│   │   │   │   │   │       │   ├── [project-055-deep-neural-networks-in-psychology.md](./packages/data/uob/research-project/projects/data/md/projects/project-055-deep-neural-networks-in-psychology.md)
+│   │   │   │   │   │       │   ├── [project-056-how-can-genai-support-the-development-of-critical-thinking-skills-in-lea.md](./packages/data/uob/research-project/projects/data/md/projects/project-056-how-can-genai-support-the-development-of-critical-thinking-skills-in-lea.md)
+│   │   │   │   │   │       │   ├── [project-057-what-makes-ai-generated-faces-look-real-investigating-the-role-of-spatia.md](./packages/data/uob/research-project/projects/data/md/projects/project-057-what-makes-ai-generated-faces-look-real-investigating-the-role-of-spatia.md)
+│   │   │   │   │   │       │   ├── [project-058-digital-health-tools-for-cognitive-assessment.md](./packages/data/uob/research-project/projects/data/md/projects/project-058-digital-health-tools-for-cognitive-assessment.md)
+│   │   │   │   │   │       │   ├── [project-059-human-sequence-planning-common-or-specialized-mechanisms.md](./packages/data/uob/research-project/projects/data/md/projects/project-059-human-sequence-planning-common-or-specialized-mechanisms.md)
+│   │   │   │   │   │       │   ├── [project-060-experiences-of-independence-in-neurodivergent-adults.md](./packages/data/uob/research-project/projects/data/md/projects/project-060-experiences-of-independence-in-neurodivergent-adults.md)
+│   │   │   │   │   │       │   ├── [project-061-measuring-experiences-of-the-double-empathy-problem.md](./packages/data/uob/research-project/projects/data/md/projects/project-061-measuring-experiences-of-the-double-empathy-problem.md)
+│   │   │   │   │   │       │   ├── [project-062-what-helps-make-for-a-good-second-year-at-university.md](./packages/data/uob/research-project/projects/data/md/projects/project-062-what-helps-make-for-a-good-second-year-at-university.md)
+│   │   │   │   │   │       │   ├── [project-063-what-does-ai-think-of-me-how-ai-generated-feedback-shapes-self-beliefs.md](./packages/data/uob/research-project/projects/data/md/projects/project-063-what-does-ai-think-of-me-how-ai-generated-feedback-shapes-self-beliefs.md)
+│   │   │   │   │   │       │   ├── [project-064-more-or-less-are-the-general-factor-of-personality-and-hexaco-models-val.md](./packages/data/uob/research-project/projects/data/md/projects/project-064-more-or-less-are-the-general-factor-of-personality-and-hexaco-models-val.md)
+│   │   │   │   │   │       │   ├── [project-065-how-does-speaking-two-languages-change-what-we-expect-to-hear-next.md](./packages/data/uob/research-project/projects/data/md/projects/project-065-how-does-speaking-two-languages-change-what-we-expect-to-hear-next.md)
+│   │   │   │   │   │       │   ├── [project-066-how-do-meaningful-gestures-support-language-comprehension.md](./packages/data/uob/research-project/projects/data/md/projects/project-066-how-do-meaningful-gestures-support-language-comprehension.md)
+│   │   │   │   │   │       │   ├── [project-067-visual-discomfort-in-autistic-and-non-autistic-children-and-adults.md](./packages/data/uob/research-project/projects/data/md/projects/project-067-visual-discomfort-in-autistic-and-non-autistic-children-and-adults.md)
+│   │   │   │   │   │       │   ├── [project-068-the-past-shapes-choice-repetition-attention-and-decision-making.md](./packages/data/uob/research-project/projects/data/md/projects/project-068-the-past-shapes-choice-repetition-attention-and-decision-making.md)
+│   │   │   │   │   │       │   ├── [project-069-expecting-distraction-how-expectations-shape-visual-selection.md](./packages/data/uob/research-project/projects/data/md/projects/project-069-expecting-distraction-how-expectations-shape-visual-selection.md)
+│   │   │   │   │   │       │   ├── [project-070-unseen-but-influential-how-invisible-primes-shape-visual-detection.md](./packages/data/uob/research-project/projects/data/md/projects/project-070-unseen-but-influential-how-invisible-primes-shape-visual-detection.md)
+│   │   │   │   │   │       │   └── [project-071-watching-neural-competition-unfold-in-the-real-world.md](./packages/data/uob/research-project/projects/data/md/projects/project-071-watching-neural-competition-unfold-in-the-real-world.md)
+│   │   │   │   │   │       └── supervisors/
+│   │   │   │   │   │           ├── [alan-wing.md](./packages/data/uob/research-project/projects/data/md/supervisors/alan-wing.md)
+│   │   │   │   │   │           ├── [andrea-krott.md](./packages/data/uob/research-project/projects/data/md/supervisors/andrea-krott.md)
+│   │   │   │   │   │           ├── [andrew-bagshaw.md](./packages/data/uob/research-project/projects/data/md/supervisors/andrew-bagshaw.md)
+│   │   │   │   │   │           ├── [andrew-olson.md](./packages/data/uob/research-project/projects/data/md/supervisors/andrew-olson.md)
+│   │   │   │   │   │           ├── [andrew-quinn.md](./packages/data/uob/research-project/projects/data/md/supervisors/andrew-quinn.md)
+│   │   │   │   │   │           ├── [andrew-surtees.md](./packages/data/uob/research-project/projects/data/md/supervisors/andrew-surtees.md)
+│   │   │   │   │   │           ├── [anke-buttner.md](./packages/data/uob/research-project/projects/data/md/supervisors/anke-buttner.md)
+│   │   │   │   │   │           ├── [anna-kowalczyk.md](./packages/data/uob/research-project/projects/data/md/supervisors/anna-kowalczyk.md)
+│   │   │   │   │   │           ├── [arkady-konovalov.md](./packages/data/uob/research-project/projects/data/md/supervisors/arkady-konovalov.md)
+│   │   │   │   │   │           ├── [artur-brzozowski.md](./packages/data/uob/research-project/projects/data/md/supervisors/artur-brzozowski.md)
+│   │   │   │   │   │           ├── [benjamin-crossey.md](./packages/data/uob/research-project/projects/data/md/supervisors/benjamin-crossey.md)
+│   │   │   │   │   │           ├── [blessing-marandure.md](./packages/data/uob/research-project/projects/data/md/supervisors/blessing-marandure.md)
+│   │   │   │   │   │           ├── [cathy-manning.md](./packages/data/uob/research-project/projects/data/md/supervisors/cathy-manning.md)
+│   │   │   │   │   │           ├── [charlotte-marshall.md](./packages/data/uob/research-project/projects/data/md/supervisors/charlotte-marshall.md)
+│   │   │   │   │   │           ├── [clare-anderson.md](./packages/data/uob/research-project/projects/data/md/supervisors/clare-anderson.md)
+│   │   │   │   │   │           ├── [clayton-hickey.md](./packages/data/uob/research-project/projects/data/md/supervisors/clayton-hickey.md)
+│   │   │   │   │   │           ├── [daniel-perez.md](./packages/data/uob/research-project/projects/data/md/supervisors/daniel-perez.md)
+│   │   │   │   │   │           ├── [dietmar-heinke.md](./packages/data/uob/research-project/projects/data/md/supervisors/dietmar-heinke.md)
+│   │   │   │   │   │           ├── [emma-preece.md](./packages/data/uob/research-project/projects/data/md/supervisors/emma-preece.md)
+│   │   │   │   │   │           ├── [heather-flowe.md](./packages/data/uob/research-project/projects/data/md/supervisors/heather-flowe.md)
+│   │   │   │   │   │           ├── [howard-bowman.md](./packages/data/uob/research-project/projects/data/md/supervisors/howard-bowman.md)
+│   │   │   │   │   │           ├── [hyojin-park.md](./packages/data/uob/research-project/projects/data/md/supervisors/hyojin-park.md)
+│   │   │   │   │   │           ├── [jonathan-lee.md](./packages/data/uob/research-project/projects/data/md/supervisors/jonathan-lee.md)
+│   │   │   │   │   │           ├── [joseph-galea.md](./packages/data/uob/research-project/projects/data/md/supervisors/joseph-galea.md)
+│   │   │   │   │   │           ├── [katia-vione.md](./packages/data/uob/research-project/projects/data/md/supervisors/katia-vione.md)
+│   │   │   │   │   │           ├── [katja-kornysheva.md](./packages/data/uob/research-project/projects/data/md/supervisors/katja-kornysheva.md)
+│   │   │   │   │   │           ├── [lei-zhang.md](./packages/data/uob/research-project/projects/data/md/supervisors/lei-zhang.md)
+│   │   │   │   │   │           ├── [magda-chechlacz.md](./packages/data/uob/research-project/projects/data/md/supervisors/magda-chechlacz.md)
+│   │   │   │   │   │           ├── [massimiliano-di-luca.md](./packages/data/uob/research-project/projects/data/md/supervisors/massimiliano-di-luca.md)
+│   │   │   │   │   │           ├── [matthew-apps.md](./packages/data/uob/research-project/projects/data/md/supervisors/matthew-apps.md)
+│   │   │   │   │   │           ├── [melissa-colloff.md](./packages/data/uob/research-project/projects/data/md/supervisors/melissa-colloff.md)
+│   │   │   │   │   │           ├── [paul-muhle-karbe.md](./packages/data/uob/research-project/projects/data/md/supervisors/paul-muhle-karbe.md)
+│   │   │   │   │   │           ├── [paul-pope.md](./packages/data/uob/research-project/projects/data/md/supervisors/paul-pope.md)
+│   │   │   │   │   │           ├── [romy-froemer.md](./packages/data/uob/research-project/projects/data/md/supervisors/romy-froemer.md)
+│   │   │   │   │   │           ├── [rory-devine.md](./packages/data/uob/research-project/projects/data/md/supervisors/rory-devine.md)
+│   │   │   │   │   │           ├── [sanne-van-der-kleij.md](./packages/data/uob/research-project/projects/data/md/supervisors/sanne-van-der-kleij.md)
+│   │   │   │   │   │           ├── [sarah-beck.md](./packages/data/uob/research-project/projects/data/md/supervisors/sarah-beck.md)
+│   │   │   │   │   │           ├── [sophie-sowden-carvalho.md](./packages/data/uob/research-project/projects/data/md/supervisors/sophie-sowden-carvalho.md)
+│   │   │   │   │   │           ├── [stacey-bissell.md](./packages/data/uob/research-project/projects/data/md/supervisors/stacey-bissell.md)
+│   │   │   │   │   │           ├── [stephane-de-brito.md](./packages/data/uob/research-project/projects/data/md/supervisors/stephane-de-brito.md)
+│   │   │   │   │   │           ├── [steven-frisson.md](./packages/data/uob/research-project/projects/data/md/supervisors/steven-frisson.md)
+│   │   │   │   │   │           ├── [suzanne-higgs.md](./packages/data/uob/research-project/projects/data/md/supervisors/suzanne-higgs.md)
+│   │   │   │   │   │           ├── [tamara-swaab.md](./packages/data/uob/research-project/projects/data/md/supervisors/tamara-swaab.md)
+│   │   │   │   │   │           └── [wieske-van-zoest.md](./packages/data/uob/research-project/projects/data/md/supervisors/wieske-van-zoest.md)
+│   │   │   │   │   ├── notes/
+│   │   │   │   │   │   └── [top-10.md](./packages/data/uob/research-project/projects/notes/top-10.md)
+│   │   │   │   │   ├── public/
+│   │   │   │   │   │   ├── [index.html](./packages/data/uob/research-project/projects/public/index.html)
+│   │   │   │   │   │   ├── [og.png](./packages/data/uob/research-project/projects/public/og.png)
+│   │   │   │   │   │   ├── [og.svg](./packages/data/uob/research-project/projects/public/og.svg)
+│   │   │   │   │   │   ├── [research.sqlite](./packages/data/uob/research-project/projects/public/research.sqlite)
+│   │   │   │   │   │   ├── [scripts.js](./packages/data/uob/research-project/projects/public/scripts.js)
+│   │   │   │   │   │   └── [styles.css](./packages/data/uob/research-project/projects/public/styles.css)
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   │   ├── [build.py](./packages/data/uob/research-project/projects/scripts/build.py)
+│   │   │   │   │   │   ├── [config.py](./packages/data/uob/research-project/projects/scripts/config.py)
+│   │   │   │   │   │   ├── [config_inputs.py](./packages/data/uob/research-project/projects/scripts/config_inputs.py)
+│   │   │   │   │   │   ├── [dashboard.py](./packages/data/uob/research-project/projects/scripts/dashboard.py)
+│   │   │   │   │   │   ├── [db.py](./packages/data/uob/research-project/projects/scripts/db.py)
+│   │   │   │   │   │   ├── [eligibility_js.py](./packages/data/uob/research-project/projects/scripts/eligibility_js.py)
+│   │   │   │   │   │   ├── [export.py](./packages/data/uob/research-project/projects/scripts/export.py)
+│   │   │   │   │   │   ├── [ingest.py](./packages/data/uob/research-project/projects/scripts/ingest.py)
+│   │   │   │   │   │   ├── [loaders.py](./packages/data/uob/research-project/projects/scripts/loaders.py)
+│   │   │   │   │   │   ├── [og_image.py](./packages/data/uob/research-project/projects/scripts/og_image.py)
+│   │   │   │   │   │   ├── [preferences.py](./packages/data/uob/research-project/projects/scripts/preferences.py)
+│   │   │   │   │   │   ├── [preferences_js.py](./packages/data/uob/research-project/projects/scripts/preferences_js.py)
+│   │   │   │   │   │   ├── [ranking_js.py](./packages/data/uob/research-project/projects/scripts/ranking_js.py)
+│   │   │   │   │   │   ├── [runs.py](./packages/data/uob/research-project/projects/scripts/runs.py)
+│   │   │   │   │   │   ├── [schema.sql](./packages/data/uob/research-project/projects/scripts/schema.sql)
+│   │   │   │   │   │   ├── [scoring.py](./packages/data/uob/research-project/projects/scripts/scoring.py)
+│   │   │   │   │   │   ├── [scoring_js.py](./packages/data/uob/research-project/projects/scripts/scoring_js.py)
+│   │   │   │   │   │   ├── [script.py](./packages/data/uob/research-project/projects/scripts/script.py)
+│   │   │   │   │   │   ├── [style.py](./packages/data/uob/research-project/projects/scripts/style.py)
+│   │   │   │   │   │   ├── [taxonomy.py](./packages/data/uob/research-project/projects/scripts/taxonomy.py)
+│   │   │   │   │   │   ├── [template.py](./packages/data/uob/research-project/projects/scripts/template.py)
+│   │   │   │   │   │   ├── [ui_harness.js](./packages/data/uob/research-project/projects/scripts/ui_harness.js)
+│   │   │   │   │   │   ├── [ui_ranking.js](./packages/data/uob/research-project/projects/scripts/ui_ranking.js)
+│   │   │   │   │   │   ├── [ui_smoke.js](./packages/data/uob/research-project/projects/scripts/ui_smoke.js)
+│   │   │   │   │   │   └── [verify_js.py](./packages/data/uob/research-project/projects/scripts/verify_js.py)
+│   │   │   │   │   ├── [Makefile](./packages/data/uob/research-project/projects/Makefile)
+│   │   │   │   │   └── [README.md](./packages/data/uob/research-project/projects/README.md)
+│   │   │   │   └── [README.md](./packages/data/uob/research-project/README.md)
+│   │   │   ├── sem-01/
+│   │   │   │   ├── cognitive-neuroscience-methods-and-applications/
+│   │   │   │   │   └── [README.md](./packages/data/uob/sem-01/cognitive-neuroscience-methods-and-applications/README.md)
+│   │   │   │   ├── data-science-for-brain-and-behaviour/
+│   │   │   │   │   ├── homeworks/
+│   │   │   │   │   │   ├── [homework-1.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/homeworks/homework-1.ipynb)
+│   │   │   │   │   │   └── [homework-2.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/homeworks/homework-2.ipynb)
+│   │   │   │   │   ├── modules/
+│   │   │   │   │   │   ├── module-01/
+│   │   │   │   │   │   │   └── [dracula.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/modules/module-01/dracula.ipynb)
+│   │   │   │   │   │   ├── module-02/
+│   │   │   │   │   │   │   └── [module.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/modules/module-02/module.ipynb)
+│   │   │   │   │   │   ├── module-03/
+│   │   │   │   │   │   │   └── [module.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/modules/module-03/module.ipynb)
+│   │   │   │   │   │   ├── module-04/
+│   │   │   │   │   │   │   └── [module.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/modules/module-04/module.ipynb)
+│   │   │   │   │   │   ├── module-05/
+│   │   │   │   │   │   │   └── [module.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/modules/module-05/module.ipynb)
+│   │   │   │   │   │   └── module-06/
+│   │   │   │   │   │       └── [module.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/modules/module-06/module.ipynb)
+│   │   │   │   │   ├── project/
+│   │   │   │   │   │   ├── data/
+│   │   │   │   │   │   │   ├── processed/
+│   │   │   │   │   │   │   │   ├── [README.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/processed/README.md)
+│   │   │   │   │   │   │   │   ├── [enni_inventory.csv](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/processed/enni_inventory.csv)
+│   │   │   │   │   │   │   │   ├── [mlcu_provisional.csv](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/processed/mlcu_provisional.csv)
+│   │   │   │   │   │   │   │   ├── [mlcu_question_sensitivity.csv](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/processed/mlcu_question_sensitivity.csv)
+│   │   │   │   │   │   │   │   └── [mlcu_scoring_template.csv](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/processed/mlcu_scoring_template.csv)
+│   │   │   │   │   │   │   └── raw/
+│   │   │   │   │   │   │       ├── ENNI/
+│   │   │   │   │   │   │       │   ├── SLI/
+│   │   │   │   │   │   │       │   │   ├── A/
+│   │   │   │   │   │   │       │   │   │   ├── 0noaudio/
+│   │   │   │   │   │   │       │   │   │   │   ├── [474.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/474.cha)
+│   │   │   │   │   │   │       │   │   │   │   ├── [475.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/475.cha)
+│   │   │   │   │   │   │       │   │   │   │   ├── [476.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/476.cha)
+│   │   │   │   │   │   │       │   │   │   │   ├── [477.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/477.cha)
+│   │   │   │   │   │   │       │   │   │   │   ├── [478.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/478.cha)
+│   │   │   │   │   │   │       │   │   │   │   ├── [482.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/482.cha)
+│   │   │   │   │   │   │       │   │   │   │   ├── [523.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/523.cha)
+│   │   │   │   │   │   │       │   │   │   │   ├── [575.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/575.cha)
+│   │   │   │   │   │   │       │   │   │   │   └── [613.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/0noaudio/613.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [413.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/413.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [444.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/444.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [479.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/479.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [529.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/529.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [568.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/568.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [570.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/570.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [572.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/572.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [574.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/574.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [607.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/607.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [609.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/609.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [617.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/617.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [625.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/625.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [678.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/678.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [717.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/717.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [721.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/721.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [725.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/725.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [729.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/729.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [733.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/733.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [777.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/777.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [817.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/817.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [821.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/821.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [825.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/825.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [829.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/829.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [871.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/871.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [878.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/878.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [880.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/880.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [922.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/922.cha)
+│   │   │   │   │   │   │       │   │   │   ├── [926.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/926.cha)
+│   │   │   │   │   │   │       │   │   │   └── [973.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/A/973.cha)
+│   │   │   │   │   │   │       │   │   └── B/
+│   │   │   │   │   │   │       │   │       ├── [427.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/427.cha)
+│   │   │   │   │   │   │       │   │       ├── [480.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/480.cha)
+│   │   │   │   │   │   │       │   │       ├── [527.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/527.cha)
+│   │   │   │   │   │   │       │   │       ├── [531.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/531.cha)
+│   │   │   │   │   │   │       │   │       ├── [535.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/535.cha)
+│   │   │   │   │   │   │       │   │       ├── [567.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/567.cha)
+│   │   │   │   │   │   │       │   │       ├── [569.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/569.cha)
+│   │   │   │   │   │   │       │   │       ├── [576.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/576.cha)
+│   │   │   │   │   │   │       │   │       ├── [611.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/611.cha)
+│   │   │   │   │   │   │       │   │       ├── [667.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/667.cha)
+│   │   │   │   │   │   │       │   │       ├── [673.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/673.cha)
+│   │   │   │   │   │   │       │   │       ├── [679.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/679.cha)
+│   │   │   │   │   │   │       │   │       ├── [680.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/680.cha)
+│   │   │   │   │   │   │       │   │       ├── [723.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/723.cha)
+│   │   │   │   │   │   │       │   │       ├── [727.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/727.cha)
+│   │   │   │   │   │   │       │   │       ├── [731.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/731.cha)
+│   │   │   │   │   │   │       │   │       ├── [735.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/735.cha)
+│   │   │   │   │   │   │       │   │       ├── [739.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/739.cha)
+│   │   │   │   │   │   │       │   │       ├── [774.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/774.cha)
+│   │   │   │   │   │   │       │   │       ├── [778.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/778.cha)
+│   │   │   │   │   │   │       │   │       ├── [819.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/819.cha)
+│   │   │   │   │   │   │       │   │       ├── [823.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/823.cha)
+│   │   │   │   │   │   │       │   │       ├── [827.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/827.cha)
+│   │   │   │   │   │   │       │   │       ├── [831.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/831.cha)
+│   │   │   │   │   │   │       │   │       ├── [870.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/870.cha)
+│   │   │   │   │   │   │       │   │       ├── [872.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/872.cha)
+│   │   │   │   │   │   │       │   │       ├── [874.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/874.cha)
+│   │   │   │   │   │   │       │   │       ├── [875.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/875.cha)
+│   │   │   │   │   │   │       │   │       ├── [877.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/877.cha)
+│   │   │   │   │   │   │       │   │       ├── [879.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/879.cha)
+│   │   │   │   │   │   │       │   │       ├── [903.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/903.cha)
+│   │   │   │   │   │   │       │   │       ├── [920.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/920.cha)
+│   │   │   │   │   │   │       │   │       ├── [924.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/924.cha)
+│   │   │   │   │   │   │       │   │       ├── [928.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/928.cha)
+│   │   │   │   │   │   │       │   │       ├── [932.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/932.cha)
+│   │   │   │   │   │   │       │   │       ├── [934.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/934.cha)
+│   │   │   │   │   │   │       │   │       └── [935.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/SLI/B/935.cha)
+│   │   │   │   │   │   │       │   └── TD/
+│   │   │   │   │   │   │       │       ├── A/
+│   │   │   │   │   │   │       │       │   ├── [401.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/401.cha)
+│   │   │   │   │   │   │       │       │   ├── [402.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/402.cha)
+│   │   │   │   │   │   │       │       │   ├── [405.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/405.cha)
+│   │   │   │   │   │   │       │       │   ├── [406.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/406.cha)
+│   │   │   │   │   │   │       │       │   ├── [409.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/409.cha)
+│   │   │   │   │   │   │       │       │   ├── [410.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/410.cha)
+│   │   │   │   │   │   │       │       │   ├── [414.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/414.cha)
+│   │   │   │   │   │   │       │       │   ├── [417.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/417.cha)
+│   │   │   │   │   │   │       │       │   ├── [418.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/418.cha)
+│   │   │   │   │   │   │       │       │   ├── [421.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/421.cha)
+│   │   │   │   │   │   │       │       │   ├── [425.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/425.cha)
+│   │   │   │   │   │   │       │       │   ├── [429.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/429.cha)
+│   │   │   │   │   │   │       │       │   ├── [441.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/441.cha)
+│   │   │   │   │   │   │       │       │   ├── [448.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/448.cha)
+│   │   │   │   │   │   │       │       │   ├── [452.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/452.cha)
+│   │   │   │   │   │   │       │       │   ├── [456.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/456.cha)
+│   │   │   │   │   │   │       │       │   ├── [457.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/457.cha)
+│   │   │   │   │   │   │       │       │   ├── [460.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/460.cha)
+│   │   │   │   │   │   │       │       │   ├── [464.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/464.cha)
+│   │   │   │   │   │   │       │       │   ├── [468.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/468.cha)
+│   │   │   │   │   │   │       │       │   ├── [471.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/471.cha)
+│   │   │   │   │   │   │       │       │   ├── [501.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/501.cha)
+│   │   │   │   │   │   │       │       │   ├── [502.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/502.cha)
+│   │   │   │   │   │   │       │       │   ├── [505.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/505.cha)
+│   │   │   │   │   │   │       │       │   ├── [506.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/506.cha)
+│   │   │   │   │   │   │       │       │   ├── [509.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/509.cha)
+│   │   │   │   │   │   │       │       │   ├── [510.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/510.cha)
+│   │   │   │   │   │   │       │       │   ├── [513.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/513.cha)
+│   │   │   │   │   │   │       │       │   ├── [514.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/514.cha)
+│   │   │   │   │   │   │       │       │   ├── [517.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/517.cha)
+│   │   │   │   │   │   │       │       │   ├── [518.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/518.cha)
+│   │   │   │   │   │   │       │       │   ├── [522.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/522.cha)
+│   │   │   │   │   │   │       │       │   ├── [526.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/526.cha)
+│   │   │   │   │   │   │       │       │   ├── [530.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/530.cha)
+│   │   │   │   │   │   │       │       │   ├── [538.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/538.cha)
+│   │   │   │   │   │   │       │       │   ├── [541.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/541.cha)
+│   │   │   │   │   │   │       │       │   ├── [544.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/544.cha)
+│   │   │   │   │   │   │       │       │   ├── [545.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/545.cha)
+│   │   │   │   │   │   │       │       │   ├── [548.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/548.cha)
+│   │   │   │   │   │   │       │       │   ├── [549.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/549.cha)
+│   │   │   │   │   │   │       │       │   ├── [553.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/553.cha)
+│   │   │   │   │   │   │       │       │   ├── [555.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/555.cha)
+│   │   │   │   │   │   │       │       │   ├── [559.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/559.cha)
+│   │   │   │   │   │   │       │       │   ├── [561.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/561.cha)
+│   │   │   │   │   │   │       │       │   ├── [562.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/562.cha)
+│   │   │   │   │   │   │       │       │   ├── [564.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/564.cha)
+│   │   │   │   │   │   │       │       │   ├── [601.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/601.cha)
+│   │   │   │   │   │   │       │       │   ├── [602.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/602.cha)
+│   │   │   │   │   │   │       │       │   ├── [605.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/605.cha)
+│   │   │   │   │   │   │       │       │   ├── [606.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/606.cha)
+│   │   │   │   │   │   │       │       │   ├── [610.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/610.cha)
+│   │   │   │   │   │   │       │       │   ├── [614.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/614.cha)
+│   │   │   │   │   │   │       │       │   ├── [618.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/618.cha)
+│   │   │   │   │   │   │       │       │   ├── [622.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/622.cha)
+│   │   │   │   │   │   │       │       │   ├── [626.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/626.cha)
+│   │   │   │   │   │   │       │       │   ├── [630.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/630.cha)
+│   │   │   │   │   │   │       │       │   ├── [634.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/634.cha)
+│   │   │   │   │   │   │       │       │   ├── [637.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/637.cha)
+│   │   │   │   │   │   │       │       │   ├── [641.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/641.cha)
+│   │   │   │   │   │   │       │       │   ├── [645.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/645.cha)
+│   │   │   │   │   │   │       │       │   ├── [649.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/649.cha)
+│   │   │   │   │   │   │       │       │   ├── [650.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/650.cha)
+│   │   │   │   │   │   │       │       │   ├── [653.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/653.cha)
+│   │   │   │   │   │   │       │       │   ├── [654.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/654.cha)
+│   │   │   │   │   │   │       │       │   ├── [657.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/657.cha)
+│   │   │   │   │   │   │       │       │   ├── [660.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/660.cha)
+│   │   │   │   │   │   │       │       │   ├── [661.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/661.cha)
+│   │   │   │   │   │   │       │       │   ├── [665.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/665.cha)
+│   │   │   │   │   │   │       │       │   ├── [670.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/670.cha)
+│   │   │   │   │   │   │       │       │   ├── [671.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/671.cha)
+│   │   │   │   │   │   │       │       │   ├── [677.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/677.cha)
+│   │   │   │   │   │   │       │       │   ├── [701.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/701.cha)
+│   │   │   │   │   │   │       │       │   ├── [702.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/702.cha)
+│   │   │   │   │   │   │       │       │   ├── [705.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/705.cha)
+│   │   │   │   │   │   │       │       │   ├── [706.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/706.cha)
+│   │   │   │   │   │   │       │       │   ├── [709.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/709.cha)
+│   │   │   │   │   │   │       │       │   ├── [713.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/713.cha)
+│   │   │   │   │   │   │       │       │   ├── [714.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/714.cha)
+│   │   │   │   │   │   │       │       │   ├── [718.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/718.cha)
+│   │   │   │   │   │   │       │       │   ├── [722.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/722.cha)
+│   │   │   │   │   │   │       │       │   ├── [726.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/726.cha)
+│   │   │   │   │   │   │       │       │   ├── [730.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/730.cha)
+│   │   │   │   │   │   │       │       │   ├── [737.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/737.cha)
+│   │   │   │   │   │   │       │       │   ├── [738.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/738.cha)
+│   │   │   │   │   │   │       │       │   ├── [746.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/746.cha)
+│   │   │   │   │   │   │       │       │   ├── [752.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/752.cha)
+│   │   │   │   │   │   │       │       │   ├── [756.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/756.cha)
+│   │   │   │   │   │   │       │       │   ├── [757.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/757.cha)
+│   │   │   │   │   │   │       │       │   ├── [761.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/761.cha)
+│   │   │   │   │   │   │       │       │   ├── [762.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/762.cha)
+│   │   │   │   │   │   │       │       │   ├── [765.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/765.cha)
+│   │   │   │   │   │   │       │       │   ├── [766.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/766.cha)
+│   │   │   │   │   │   │       │       │   ├── [767.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/767.cha)
+│   │   │   │   │   │   │       │       │   ├── [769.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/769.cha)
+│   │   │   │   │   │   │       │       │   ├── [771.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/771.cha)
+│   │   │   │   │   │   │       │       │   ├── [773.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/773.cha)
+│   │   │   │   │   │   │       │       │   ├── [801.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/801.cha)
+│   │   │   │   │   │   │       │       │   ├── [802.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/802.cha)
+│   │   │   │   │   │   │       │       │   ├── [805.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/805.cha)
+│   │   │   │   │   │   │       │       │   ├── [806.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/806.cha)
+│   │   │   │   │   │   │       │       │   ├── [809.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/809.cha)
+│   │   │   │   │   │   │       │       │   ├── [810.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/810.cha)
+│   │   │   │   │   │   │       │       │   ├── [813.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/813.cha)
+│   │   │   │   │   │   │       │       │   ├── [818.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/818.cha)
+│   │   │   │   │   │   │       │       │   ├── [830.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/830.cha)
+│   │   │   │   │   │   │       │       │   ├── [836.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/836.cha)
+│   │   │   │   │   │   │       │       │   ├── [837.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/837.cha)
+│   │   │   │   │   │   │       │       │   ├── [840.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/840.cha)
+│   │   │   │   │   │   │       │       │   ├── [844.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/844.cha)
+│   │   │   │   │   │   │       │       │   ├── [845.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/845.cha)
+│   │   │   │   │   │   │       │       │   ├── [848.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/848.cha)
+│   │   │   │   │   │   │       │       │   ├── [849.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/849.cha)
+│   │   │   │   │   │   │       │       │   ├── [852.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/852.cha)
+│   │   │   │   │   │   │       │       │   ├── [853.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/853.cha)
+│   │   │   │   │   │   │       │       │   ├── [856.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/856.cha)
+│   │   │   │   │   │   │       │       │   ├── [865.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/865.cha)
+│   │   │   │   │   │   │       │       │   ├── [869.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/869.cha)
+│   │   │   │   │   │   │       │       │   ├── [902.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/902.cha)
+│   │   │   │   │   │   │       │       │   ├── [905.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/905.cha)
+│   │   │   │   │   │   │       │       │   ├── [906.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/906.cha)
+│   │   │   │   │   │   │       │       │   ├── [909.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/909.cha)
+│   │   │   │   │   │   │       │       │   ├── [910.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/910.cha)
+│   │   │   │   │   │   │       │       │   ├── [913.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/913.cha)
+│   │   │   │   │   │   │       │       │   ├── [914.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/914.cha)
+│   │   │   │   │   │   │       │       │   ├── [917.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/917.cha)
+│   │   │   │   │   │   │       │       │   ├── [918.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/918.cha)
+│   │   │   │   │   │   │       │       │   ├── [921.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/921.cha)
+│   │   │   │   │   │   │       │       │   ├── [925.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/925.cha)
+│   │   │   │   │   │   │       │       │   ├── [929.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/929.cha)
+│   │   │   │   │   │   │       │       │   ├── [933.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/933.cha)
+│   │   │   │   │   │   │       │       │   ├── [937.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/937.cha)
+│   │   │   │   │   │   │       │       │   ├── [941.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/941.cha)
+│   │   │   │   │   │   │       │       │   ├── [945.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/945.cha)
+│   │   │   │   │   │   │       │       │   ├── [953.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/953.cha)
+│   │   │   │   │   │   │       │       │   ├── [957.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/957.cha)
+│   │   │   │   │   │   │       │       │   ├── [958.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/958.cha)
+│   │   │   │   │   │   │       │       │   ├── [961.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/961.cha)
+│   │   │   │   │   │   │       │       │   ├── [962.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/962.cha)
+│   │   │   │   │   │   │       │       │   ├── [966.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/966.cha)
+│   │   │   │   │   │   │       │       │   ├── [968.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/968.cha)
+│   │   │   │   │   │   │       │       │   ├── [970.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/970.cha)
+│   │   │   │   │   │   │       │       │   └── [972.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/A/972.cha)
+│   │   │   │   │   │   │       │       └── B/
+│   │   │   │   │   │   │       │           ├── [403.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/403.cha)
+│   │   │   │   │   │   │       │           ├── [404.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/404.cha)
+│   │   │   │   │   │   │       │           ├── [407.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/407.cha)
+│   │   │   │   │   │   │       │           ├── [408.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/408.cha)
+│   │   │   │   │   │   │       │           ├── [411.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/411.cha)
+│   │   │   │   │   │   │       │           ├── [412.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/412.cha)
+│   │   │   │   │   │   │       │           ├── [415.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/415.cha)
+│   │   │   │   │   │   │       │           ├── [416.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/416.cha)
+│   │   │   │   │   │   │       │           ├── [419.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/419.cha)
+│   │   │   │   │   │   │       │           ├── [423.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/423.cha)
+│   │   │   │   │   │   │       │           ├── [439.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/439.cha)
+│   │   │   │   │   │   │       │           ├── [443.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/443.cha)
+│   │   │   │   │   │   │       │           ├── [446.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/446.cha)
+│   │   │   │   │   │   │       │           ├── [450.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/450.cha)
+│   │   │   │   │   │   │       │           ├── [454.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/454.cha)
+│   │   │   │   │   │   │       │           ├── [455.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/455.cha)
+│   │   │   │   │   │   │       │           ├── [458.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/458.cha)
+│   │   │   │   │   │   │       │           ├── [459.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/459.cha)
+│   │   │   │   │   │   │       │           ├── [461.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/461.cha)
+│   │   │   │   │   │   │       │           ├── [463.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/463.cha)
+│   │   │   │   │   │   │       │           ├── [465.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/465.cha)
+│   │   │   │   │   │   │       │           ├── [466.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/466.cha)
+│   │   │   │   │   │   │       │           ├── [469.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/469.cha)
+│   │   │   │   │   │   │       │           ├── [472.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/472.cha)
+│   │   │   │   │   │   │       │           ├── [503.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/503.cha)
+│   │   │   │   │   │   │       │           ├── [504.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/504.cha)
+│   │   │   │   │   │   │       │           ├── [507.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/507.cha)
+│   │   │   │   │   │   │       │           ├── [508.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/508.cha)
+│   │   │   │   │   │   │       │           ├── [511.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/511.cha)
+│   │   │   │   │   │   │       │           ├── [512.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/512.cha)
+│   │   │   │   │   │   │       │           ├── [515.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/515.cha)
+│   │   │   │   │   │   │       │           ├── [516.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/516.cha)
+│   │   │   │   │   │   │       │           ├── [520.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/520.cha)
+│   │   │   │   │   │   │       │           ├── [523.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/523.cha)
+│   │   │   │   │   │   │       │           ├── [524.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/524.cha)
+│   │   │   │   │   │   │       │           ├── [528.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/528.cha)
+│   │   │   │   │   │   │       │           ├── [532.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/532.cha)
+│   │   │   │   │   │   │       │           ├── [533.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/533.cha)
+│   │   │   │   │   │   │       │           ├── [536.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/536.cha)
+│   │   │   │   │   │   │       │           ├── [539.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/539.cha)
+│   │   │   │   │   │   │       │           ├── [543.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/543.cha)
+│   │   │   │   │   │   │       │           ├── [547.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/547.cha)
+│   │   │   │   │   │   │       │           ├── [551.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/551.cha)
+│   │   │   │   │   │   │       │           ├── [557.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/557.cha)
+│   │   │   │   │   │   │       │           ├── [565.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/565.cha)
+│   │   │   │   │   │   │       │           ├── [571.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/571.cha)
+│   │   │   │   │   │   │       │           ├── [603.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/603.cha)
+│   │   │   │   │   │   │       │           ├── [604.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/604.cha)
+│   │   │   │   │   │   │       │           ├── [608.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/608.cha)
+│   │   │   │   │   │   │       │           ├── [612.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/612.cha)
+│   │   │   │   │   │   │       │           ├── [615.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/615.cha)
+│   │   │   │   │   │   │       │           ├── [616.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/616.cha)
+│   │   │   │   │   │   │       │           ├── [620.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/620.cha)
+│   │   │   │   │   │   │       │           ├── [624.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/624.cha)
+│   │   │   │   │   │   │       │           ├── [628.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/628.cha)
+│   │   │   │   │   │   │       │           ├── [632.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/632.cha)
+│   │   │   │   │   │   │       │           ├── [636.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/636.cha)
+│   │   │   │   │   │   │       │           ├── [639.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/639.cha)
+│   │   │   │   │   │   │       │           ├── [647.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/647.cha)
+│   │   │   │   │   │   │       │           ├── [648.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/648.cha)
+│   │   │   │   │   │   │       │           ├── [651.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/651.cha)
+│   │   │   │   │   │   │       │           ├── [652.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/652.cha)
+│   │   │   │   │   │   │       │           ├── [655.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/655.cha)
+│   │   │   │   │   │   │       │           ├── [656.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/656.cha)
+│   │   │   │   │   │   │       │           ├── [658.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/658.cha)
+│   │   │   │   │   │   │       │           ├── [659.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/659.cha)
+│   │   │   │   │   │   │       │           ├── [663.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/663.cha)
+│   │   │   │   │   │   │       │           ├── [664.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/664.cha)
+│   │   │   │   │   │   │       │           ├── [669.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/669.cha)
+│   │   │   │   │   │   │       │           ├── [676.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/676.cha)
+│   │   │   │   │   │   │       │           ├── [704.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/704.cha)
+│   │   │   │   │   │   │       │           ├── [707.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/707.cha)
+│   │   │   │   │   │   │       │           ├── [708.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/708.cha)
+│   │   │   │   │   │   │       │           ├── [711.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/711.cha)
+│   │   │   │   │   │   │       │           ├── [712.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/712.cha)
+│   │   │   │   │   │   │       │           ├── [716.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/716.cha)
+│   │   │   │   │   │   │       │           ├── [720.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/720.cha)
+│   │   │   │   │   │   │       │           ├── [724.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/724.cha)
+│   │   │   │   │   │   │       │           ├── [728.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/728.cha)
+│   │   │   │   │   │   │       │           ├── [732.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/732.cha)
+│   │   │   │   │   │   │       │           ├── [736.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/736.cha)
+│   │   │   │   │   │   │       │           ├── [743.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/743.cha)
+│   │   │   │   │   │   │       │           ├── [744.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/744.cha)
+│   │   │   │   │   │   │       │           ├── [748.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/748.cha)
+│   │   │   │   │   │   │       │           ├── [750.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/750.cha)
+│   │   │   │   │   │   │       │           ├── [754.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/754.cha)
+│   │   │   │   │   │   │       │           ├── [755.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/755.cha)
+│   │   │   │   │   │   │       │           ├── [758.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/758.cha)
+│   │   │   │   │   │   │       │           ├── [759.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/759.cha)
+│   │   │   │   │   │   │       │           ├── [760.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/760.cha)
+│   │   │   │   │   │   │       │           ├── [763.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/763.cha)
+│   │   │   │   │   │   │       │           ├── [764.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/764.cha)
+│   │   │   │   │   │   │       │           ├── [768.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/768.cha)
+│   │   │   │   │   │   │       │           ├── [770.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/770.cha)
+│   │   │   │   │   │   │       │           ├── [772.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/772.cha)
+│   │   │   │   │   │   │       │           ├── [803.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/803.cha)
+│   │   │   │   │   │   │       │           ├── [804.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/804.cha)
+│   │   │   │   │   │   │       │           ├── [808.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/808.cha)
+│   │   │   │   │   │   │       │           ├── [811.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/811.cha)
+│   │   │   │   │   │   │       │           ├── [812.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/812.cha)
+│   │   │   │   │   │   │       │           ├── [815.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/815.cha)
+│   │   │   │   │   │   │       │           ├── [816.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/816.cha)
+│   │   │   │   │   │   │       │           ├── [820.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/820.cha)
+│   │   │   │   │   │   │       │           ├── [822.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/822.cha)
+│   │   │   │   │   │   │       │           ├── [824.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/824.cha)
+│   │   │   │   │   │   │       │           ├── [826.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/826.cha)
+│   │   │   │   │   │   │       │           ├── [828.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/828.cha)
+│   │   │   │   │   │   │       │           ├── [834.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/834.cha)
+│   │   │   │   │   │   │       │           ├── [838.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/838.cha)
+│   │   │   │   │   │   │       │           ├── [842.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/842.cha)
+│   │   │   │   │   │   │       │           ├── [843.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/843.cha)
+│   │   │   │   │   │   │       │           ├── [847.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/847.cha)
+│   │   │   │   │   │   │       │           ├── [850.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/850.cha)
+│   │   │   │   │   │   │       │           ├── [851.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/851.cha)
+│   │   │   │   │   │   │       │           ├── [854.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/854.cha)
+│   │   │   │   │   │   │       │           ├── [863.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/863.cha)
+│   │   │   │   │   │   │       │           ├── [866.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/866.cha)
+│   │   │   │   │   │   │       │           ├── [867.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/867.cha)
+│   │   │   │   │   │   │       │           ├── [868.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/868.cha)
+│   │   │   │   │   │   │       │           ├── [904.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/904.cha)
+│   │   │   │   │   │   │       │           ├── [907.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/907.cha)
+│   │   │   │   │   │   │       │           ├── [908.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/908.cha)
+│   │   │   │   │   │   │       │           ├── [911.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/911.cha)
+│   │   │   │   │   │   │       │           ├── [912.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/912.cha)
+│   │   │   │   │   │   │       │           ├── [915.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/915.cha)
+│   │   │   │   │   │   │       │           ├── [916.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/916.cha)
+│   │   │   │   │   │   │       │           ├── [919.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/919.cha)
+│   │   │   │   │   │   │       │           ├── [923.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/923.cha)
+│   │   │   │   │   │   │       │           ├── [927.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/927.cha)
+│   │   │   │   │   │   │       │           ├── [931.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/931.cha)
+│   │   │   │   │   │   │       │           ├── [939.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/939.cha)
+│   │   │   │   │   │   │       │           ├── [947.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/947.cha)
+│   │   │   │   │   │   │       │           ├── [949.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/949.cha)
+│   │   │   │   │   │   │       │           ├── [951.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/951.cha)
+│   │   │   │   │   │   │       │           ├── [955.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/955.cha)
+│   │   │   │   │   │   │       │           ├── [956.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/956.cha)
+│   │   │   │   │   │   │       │           ├── [959.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/959.cha)
+│   │   │   │   │   │   │       │           ├── [960.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/960.cha)
+│   │   │   │   │   │   │       │           ├── [963.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/963.cha)
+│   │   │   │   │   │   │       │           ├── [964.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/964.cha)
+│   │   │   │   │   │   │       │           ├── [967.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/967.cha)
+│   │   │   │   │   │   │       │           ├── [969.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/969.cha)
+│   │   │   │   │   │   │       │           ├── [971.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/971.cha)
+│   │   │   │   │   │   │       │           └── [974.cha](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/ENNI/TD/B/974.cha)
+│   │   │   │   │   │   │       └── [README.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/data/raw/README.md)
+│   │   │   │   │   │   ├── notebooks/
+│   │   │   │   │   │   │   └── [analysis.ipynb](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/notebooks/analysis.ipynb)
+│   │   │   │   │   │   ├── report/
+│   │   │   │   │   │   │   ├── figures/
+│   │   │   │   │   │   │   │   ├── [age_distribution.png](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/figures/age_distribution.png)
+│   │   │   │   │   │   │   │   ├── [age_distribution.svg](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/figures/age_distribution.svg)
+│   │   │   │   │   │   │   │   ├── [age_mlcu_provisional.png](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/figures/age_mlcu_provisional.png)
+│   │   │   │   │   │   │   │   ├── [age_mlcu_provisional.svg](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/figures/age_mlcu_provisional.svg)
+│   │   │   │   │   │   │   │   ├── [permutation_null_provisional.png](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/figures/permutation_null_provisional.png)
+│   │   │   │   │   │   │   │   └── [permutation_null_provisional.svg](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/figures/permutation_null_provisional.svg)
+│   │   │   │   │   │   │   ├── [notes.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/notes.md)
+│   │   │   │   │   │   │   ├── [outline.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/outline.md)
+│   │   │   │   │   │   │   └── [references.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/report/references.md)
+│   │   │   │   │   │   ├── requirements/
+│   │   │   │   │   │   │   ├── [project-information.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/requirements/project-information.md)
+│   │   │   │   │   │   │   └── [project-marking-rubric.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/requirements/project-marking-rubric.md)
+│   │   │   │   │   │   ├── research/
+│   │   │   │   │   │   │   ├── [analysis-plan.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/analysis-plan.md)
+│   │   │   │   │   │   │   ├── [assumptions.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/assumptions.md)
+│   │   │   │   │   │   │   ├── [background.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/background.md)
+│   │   │   │   │   │   │   ├── [dataset.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/dataset.md)
+│   │   │   │   │   │   │   ├── [decisions.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/decisions.md)
+│   │   │   │   │   │   │   ├── [limitations.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/limitations.md)
+│   │   │   │   │   │   │   ├── [literature.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/literature.md)
+│   │   │   │   │   │   │   ├── [permutation-analysis.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/permutation-analysis.md)
+│   │   │   │   │   │   │   ├── [provisional-results.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/provisional-results.md)
+│   │   │   │   │   │   │   ├── [research-question.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/research-question.md)
+│   │   │   │   │   │   │   └── [variables.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/research/variables.md)
+│   │   │   │   │   │   ├── scripts/
+│   │   │   │   │   │   │   ├── __pycache__/
+│   │   │   │   │   │   │   │   ├── [analyse_enni.cpython-314.pyc](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/scripts/__pycache__/analyse_enni.cpython-314.pyc)
+│   │   │   │   │   │   │   │   └── [audit_enni.cpython-314.pyc](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/scripts/__pycache__/audit_enni.cpython-314.pyc)
+│   │   │   │   │   │   │   ├── [analyse_enni.py](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/scripts/analyse_enni.py)
+│   │   │   │   │   │   │   ├── [audit_enni.py](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/scripts/audit_enni.py)
+│   │   │   │   │   │   │   └── [download_enni.py](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/scripts/download_enni.py)
+│   │   │   │   │   │   ├── submission/
+│   │   │   │   │   │   │   ├── [reflection.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/submission/reflection.md)
+│   │   │   │   │   │   │   └── [report.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/submission/report.md)
+│   │   │   │   │   │   ├── [AGENTS.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/AGENTS.md)
+│   │   │   │   │   │   └── [README.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/project/README.md)
+│   │   │   │   │   ├── reflective/
+│   │   │   │   │   │   ├── requirements/
+│   │   │   │   │   │   │   └── [assessment.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/reflective/requirements/assessment.md)
+│   │   │   │   │   │   ├── [bibliography.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/reflective/bibliography.md)
+│   │   │   │   │   │   ├── [draft.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/reflective/draft.md)
+│   │   │   │   │   │   └── [outline.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/reflective/outline.md)
+│   │   │   │   │   └── [README.md](./packages/data/uob/sem-01/data-science-for-brain-and-behaviour/README.md)
+│   │   │   │   ├── research-methods-and-skills-in-psychology/
+│   │   │   │   │   ├── assignments/
+│   │   │   │   │   │   ├── research-methods-summary/
+│   │   │   │   │   │   │   ├── docs/
+│   │   │   │   │   │   │   │   ├── [criteria.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/docs/criteria.md)
+│   │   │   │   │   │   │   │   ├── [requirements.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/docs/requirements.md)
+│   │   │   │   │   │   │   │   └── [submission-and-genai-form.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/docs/submission-and-genai-form.md)
+│   │   │   │   │   │   │   ├── [bibliography.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/bibliography.md)
+│   │   │   │   │   │   │   ├── [draft.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/draft.md)
+│   │   │   │   │   │   │   └── [outline.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/outline.md)
+│   │   │   │   │   │   └── research-practical-report/
+│   │   │   │   │   │       ├── docs/
+│   │   │   │   │   │       │   ├── [assessment-brief.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/docs/assessment-brief.md)
+│   │   │   │   │   │       │   ├── [ddm-paper-reading-guide.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/docs/ddm-paper-reading-guide.md)
+│   │   │   │   │   │       │   ├── [genai-form.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/docs/genai-form.md)
+│   │   │   │   │   │       │   └── [marking-criteria.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/docs/marking-criteria.md)
+│   │   │   │   │   │       ├── [bibliography.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/bibliography.md)
+│   │   │   │   │   │       ├── [draft.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/draft.md)
+│   │   │   │   │   │       └── [outline.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/outline.md)
+│   │   │   │   │   └── [README.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/README.md)
+│   │   │   │   └── [README.md](./packages/data/uob/sem-01/README.md)
+│   │   │   └── sem-02/
+│   │   │       ├── magnetic-resonance-imaging-in-cognitive-neuroscience/
+│   │   │       │   └── [README.md](./packages/data/uob/sem-02/magnetic-resonance-imaging-in-cognitive-neuroscience/README.md)
+│   │   │       ├── mind-brain-models/
+│   │   │       │   └── [README.md](./packages/data/uob/sem-02/mind-brain-models/README.md)
+│   │   │       ├── proposing-research-in-psychology/
+│   │   │       │   └── [README.md](./packages/data/uob/sem-02/proposing-research-in-psychology/README.md)
+│   │   │       └── [README.md](./packages/data/uob/sem-02/README.md)
 │   │   ├── vietnam/
 │   │   │   ├── dragon-capital/
 │   │   │   │   ├── [history.csv](./packages/data/vietnam/dragon-capital/history.csv)
@@ -25638,6 +25613,7 @@
 │   │   │   │   │   ├── lib/
 │   │   │   │   │   │   ├── [ads.ts](./packages/extensions/browser/browserx/src/lib/ads.ts)
 │   │   │   │   │   │   ├── [audio.ts](./packages/extensions/browser/browserx/src/lib/audio.ts)
+│   │   │   │   │   │   ├── [backtotop.ts](./packages/extensions/browser/browserx/src/lib/backtotop.ts)
 │   │   │   │   │   │   ├── [block.ts](./packages/extensions/browser/browserx/src/lib/block.ts)
 │   │   │   │   │   │   ├── [chess.ts](./packages/extensions/browser/browserx/src/lib/chess.ts)
 │   │   │   │   │   │   ├── [claude.ts](./packages/extensions/browser/browserx/src/lib/claude.ts)
@@ -27098,6 +27074,7 @@
 ├── [LICENSE](./LICENSE)
 ├── [Makefile](./Makefile)
 ├── [README.md](./README.md)
+├── [TODO.md](./TODO.md)
 ├── [TREE.md](./TREE.md)
 ├── [package.json](./package.json)
 ├── [pnpm-lock.yaml](./pnpm-lock.yaml)
@@ -27106,4 +27083,4 @@
 └── [turbo.json](./turbo.json)
 ```
 
-5889 directories, 21214 files
+5784 directories, 21296 files

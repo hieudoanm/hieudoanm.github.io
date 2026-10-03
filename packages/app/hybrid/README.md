@@ -15,18 +15,17 @@
 | 11  | exhibit     | [Exhibit][exhibit]         | UI Showcase                                                                  | Required | DONE   | Graphics & Design | Photo & Video      |
 | 12  | photo       | [Photo][photo]             | Adobe Photoshop                                                              | No       | DONE   | Graphics & Design | Photo & Video      |
 | 13  | svg         | [SVG][svg]                 | Adobe Illustrator / CorelDRAW                                                | No       | DONE   | Graphics & Design | Photo & Video      |
-| 14  | video       | [Video Tools][video]       | CapCut                                                                       | No       | DONE   | Graphics & Design | Photo & Video      |
-| 15  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                                 | No       | DONE   | Medical           | Health & Fitness   |
-| 16  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                                | No       | DONE   | Medical           | Health & Fitness   |
-| 17  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes                | No       | DONE   | Productivity      | Education          |
-| 18  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
-| 19  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
-| 20  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
-| 21  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
-| 22  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
-| 23  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
-| 24  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
-| 25  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
+| 14  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                                 | No       | DONE   | Medical           | Health & Fitness   |
+| 15  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                                | No       | DONE   | Medical           | Health & Fitness   |
+| 16  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes                | No       | DONE   | Productivity      | Education          |
+| 17  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
+| 18  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
+| 19  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
+| 20  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
+| 21  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
+| 22  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
+| 23  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
+| 24  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/
@@ -40,7 +39,6 @@
 [memory]: https://hieudoanm.github.io/open/memory/
 [photo]: https://hieudoanm.github.io/open/photo/
 [svg]: https://hieudoanm.github.io/open/svg/
-[video]: https://hieudoanm.github.io/open/video/
 [brainbow]: https://hieudoanm.github.io/open/brainbow/
 [mri]: https://hieudoanm.github.io/open/mri/
 [office]: https://hieudoanm.github.io/open/office/

@@ -13,6 +13,7 @@ const eslintConfig = defineConfig([
     'node_modules/**',
     'out/**',
     'playwright-report/**',
+    'src/**/*.d.ts',
     'test-results/**',
     'src-tauri/**',
     'src-tauri/target/**',
