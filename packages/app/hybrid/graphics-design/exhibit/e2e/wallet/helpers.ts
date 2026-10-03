@@ -2,7 +2,7 @@ import { Page } from '@playwright/test';
 
 export const WALLET_ROOT = '/wallet';
 
-/** Wallet is gated by a session that Exhibit's shared `/sign-in` sets. */
+/** Wallet is open; signing in is optional and only used by session demos. */
 export const login = async (page: Page) => {
   await page.goto(`/sign-in?next=${WALLET_ROOT}`);
   await page.getByPlaceholder('you@example.com').fill('test@example.com');

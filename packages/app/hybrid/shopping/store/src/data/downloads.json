@@ -386,50 +386,6 @@
         ]
       },
       {
-        "label": "Tax",
-        "primaryCategory": "Finance",
-        "secondaryCategory": "Business",
-        "icon": "PiReceipt",
-        "href": "https://hieudoanm.github.io/open/tax",
-        "version": "latest",
-        "lastUpdated": "2026-08-27",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.exe"
-          }
-        ]
-      },
-      {
         "label": "Foody",
         "primaryCategory": "Food & Drink",
         "secondaryCategory": "Health & Fitness",

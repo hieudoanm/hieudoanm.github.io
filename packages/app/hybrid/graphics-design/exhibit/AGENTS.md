@@ -32,6 +32,8 @@ Reference docs live in `docs/`:
   `data-theme` or their own theme key
 - Client-only session state goes through `lib/<app>/session.ts` so the shared
   `/sign-in` page can establish it
+- Every showcase is open — no route guards. Do not reintroduce a `RouteGuard` or
+  a redirect to `/sign-in`; session helpers exist only for the sign-in demo
 
 ## Project Structure
 
@@ -52,6 +54,7 @@ src/
 │   │   │   ├── settings/
 │   │   │   └── trash/
 │   │   └── video/        # Video toolbox (migrated from graphics-design/video)
+│   │   └── tax/          # Vietnamese PIT showcase (migrated from finance/tax)
 │   ├── layout.tsx        # Root layout with theme
 │   ├── loading.tsx
 │   ├── error.tsx
@@ -72,6 +75,7 @@ src/
 │   ├── chat/
 │   ├── menu/
 │   ├── pos/
+│   ├── tax/              # organisms, templates (vendored)
 │   ├── wallet/
 │   ├── password/         # molecules, organisms (vendored)
 │   └── shared/           # organisms/Header.tsx + templates/
@@ -93,6 +97,7 @@ src/
 | POS          | Business        | Ready       | `/pos`      |
 | Menu         | Business        | Coming Soon | `/menu`     |
 | Wallet       | Finance         | Ready       | `/wallet`   |
+| Tax          | Finance         | Ready       | `/tax`      |
 | Chat         | Social          | Ready       | `/chat`     |
 | Password     | Utilities       | Ready       | `/password` |
 | Video        | Graphics Design | Ready       | `/video`    |

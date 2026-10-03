@@ -51,7 +51,13 @@ cards:
     kicker: 'CodeMirror 6, no server'
     title: 'A code editor in the tab'
     description: 'A web-based code editor with highlighting for JavaScript, TypeScript, Python, Rust and more.'
-    tags: ['CodeMirror 6', 'JS · TS · Python · Rust', 'Markdown · JSON', 'Runs client-side']
+    tags:
+      [
+        'CodeMirror 6',
+        'JS · TS · Python · Rust',
+        'Markdown · JSON',
+        'Runs client-side',
+      ]
     theme:
       base: '#f8fafc'
       content: '#0b1220'
@@ -85,7 +91,13 @@ cards:
     kicker: 'Text in, diagram out'
     title: 'A diagram editor you type'
     description: 'A minimal text-driven diagram editor: write the DSL, watch a styled SVG preview update live.'
-    tags: ['Live SVG preview', '128 examples', 'Sequence & ER', 'Web · desktop · mobile']
+    tags:
+      [
+        'Live SVG preview',
+        '128 examples',
+        'Sequence & ER',
+        'Web · desktop · mobile',
+      ]
     theme:
       base: '#ffffff'
       content: '#1e1b4b'
@@ -102,7 +114,13 @@ cards:
     kicker: 'Crossref as a graph'
     title: 'Explore the citation network'
     description: 'Explore the Crossref citation network interactively: search works, trace references, follow clusters.'
-    tags: ['Force-directed graph', 'Crossref data', 'Search & filters', 'Cluster view']
+    tags:
+      [
+        'Force-directed graph',
+        'Crossref data',
+        'Search & filters',
+        'Cluster view',
+      ]
     theme:
       base: '#fafaff'
       content: '#1f2140'
@@ -119,7 +137,13 @@ cards:
     kicker: '12 subjects, 275 pages'
     title: 'Learn by playing'
     description: 'Vocabulary, economics, neuroscience, maths and engineering with calculators, visualisers and quizzes.'
-    tags: ['12 subjects', '275 interactive pages', 'Vocabulary & sign', 'Quizzes & labs']
+    tags:
+      [
+        '12 subjects',
+        '275 interactive pages',
+        'Vocabulary & sign',
+        'Quizzes & labs',
+      ]
     theme:
       base: '#ffffff'
       content: '#4b4b4b'
@@ -129,23 +153,6 @@ cards:
       warning: '#ffc800'
       success: '#58cc02'
       error: '#ff4b4b'
-
-  - app: finance/tax
-    url: 'https://hieudoanm.github.io/open/tax/'
-    name: Tax
-    kicker: 'Vietnamese tax, sorted'
-    title: 'Personal and business tax'
-    description: 'Vietnamese tax management: a personal calculator, business submissions and an audit trail.'
-    tags: ['Personal calculator', 'Business filing', 'Audit trail']
-    theme:
-      base: '#f8fafc'
-      content: '#0f172a'
-      primary: '#0f766e'
-      secondary: '#b45309'
-      info: '#2563eb'
-      warning: '#d97706'
-      success: '#16a34a'
-      error: '#dc2626'
 
   - app: food-drink/foody
     url: 'https://hieudoanm.github.io/open/foody/'
@@ -231,23 +238,6 @@ cards:
       warning: '#f59e0b'
       success: '#10b981'
       error: '#e11d48'
-
-  - app: graphics-design/video
-    url: 'https://hieudoanm.github.io/open/video/'
-    name: Video
-    kicker: '51 tools, nothing uploaded'
-    title: 'Video and audio, converted'
-    description: 'Browser-based video and audio processing: convert between formats, edit and extract audio locally.'
-    tags: ['51 tools', 'Convert & extract', 'Runs in-browser', 'No upload']
-    theme:
-      base: '#f4f4f5'
-      content: '#18181b'
-      primary: '#dc2626'
-      secondary: '#18181b'
-      info: '#3b82f6'
-      warning: '#d97706'
-      success: '#16a34a'
-      error: '#b91c1c'
 
   - app: medical/brainbow
     url: 'https://hieudoanm.github.io/open/brainbow/'
@@ -340,7 +330,13 @@ cards:
     kicker: 'The whole shelf'
     title: 'Browse and download apps'
     description: 'Browse the collection and download each app for the web, desktop or mobile.'
-    tags: ['35 apps & extensions', 'Every platform', 'Signed releases', 'Version tracking']
+    tags:
+      [
+        '35 apps & extensions',
+        'Every platform',
+        'Signed releases',
+        'Version tracking',
+      ]
     theme:
       base: '#ffffff'
       content: '#1c1c1e'
@@ -357,7 +353,13 @@ cards:
     kicker: 'Your models, your prompts'
     title: 'An AI chat you control'
     description: 'A modern AI chat interface with streaming replies, model switching and system prompt templates.'
-    tags: ['Streaming replies', 'Model switcher', 'Prompt templates', 'Local history']
+    tags:
+      [
+        'Streaming replies',
+        'Model switcher',
+        'Prompt templates',
+        'Local history',
+      ]
     theme:
       base: '#f7faff'
       content: '#0c1c33'
@@ -425,7 +427,8 @@ cards:
     kicker: 'Notes and small tools'
     title: 'A start page that works'
     description: 'A start page with a calculator, clocks, data converters, developer utilities and a writing space.'
-    tags: ['Calculator', 'Clocks & timers', 'Data converters', 'Developer tools']
+    tags:
+      ['Calculator', 'Clocks & timers', 'Data converters', 'Developer tools']
     theme:
       base: '#000000'
       content: '#f5f5f5'
@@ -435,4 +438,3 @@ cards:
       warning: '#ffb000'
       success: '#00c853'
       error: '#ff0030'
-

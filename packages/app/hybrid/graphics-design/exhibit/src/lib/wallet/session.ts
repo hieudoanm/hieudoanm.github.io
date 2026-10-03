@@ -4,7 +4,7 @@
  * Wallet keeps its own auth state in `localStorage` because its data lives
  * client-side in IndexedDB. Exhibit's shared `/sign-in` and `/sign-up` pages
  * are static demos with no session store, so they call into here to establish a
- * wallet session; `RouteGuard` then reads it back to gate `/wallet/*`.
+ * wallet session; showcases no longer gate on it, but the sign-in demo still writes it.
  */
 
 const WALLET_SESSION_KEY = 'wallet-auth';

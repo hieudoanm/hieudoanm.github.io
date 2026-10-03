@@ -9,23 +9,22 @@
 | 05  | diagram     | [Diagram][diagram]         | Diagram Editor                                                               | No       | DONE   | Developer Tools   | Graphics & Design  |
 | 06  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                                         | No       | DONE   | Education         | Developer Tools    |
 | 07  | lingo       | [Lingo][lingo]             | Duolingo / Flashcards / Sign Language                                        | No       | DONE   | Education         | Games              |
-| 08  | tax         | [Tax][tax]                 | Tax Utilities                                                                | Required | DONE   | Finance           | Business           |
-| 09  | foody       | [Foody][foody]             | Random Food Suggestion                                                       | No       | DONE   | Food & Drink      | Health & Fitness   |
-| 10  | memory      | [Memory][memory]           | Memory Match / Pi / N-Back / Recall / Puzzles / Nikoli / Tic-Tac-Toe / 8-Bit | No       | DONE   | Games             | Entertainment      |
-| 11  | exhibit     | [Exhibit][exhibit]         | UI Showcase                                                                  | Required | DONE   | Graphics & Design | Photo & Video      |
-| 12  | photo       | [Photo][photo]             | Adobe Photoshop                                                              | No       | DONE   | Graphics & Design | Photo & Video      |
-| 13  | svg         | [SVG][svg]                 | Adobe Illustrator / CorelDRAW                                                | No       | DONE   | Graphics & Design | Photo & Video      |
-| 14  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                                 | No       | DONE   | Medical           | Health & Fitness   |
-| 15  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                                | No       | DONE   | Medical           | Health & Fitness   |
-| 16  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes                | No       | DONE   | Productivity      | Education          |
-| 17  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
-| 18  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
-| 19  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
-| 20  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
-| 21  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
-| 22  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
-| 23  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
-| 24  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
+| 08  | foody       | [Foody][foody]             | Random Food Suggestion                                                       | No       | DONE   | Food & Drink      | Health & Fitness   |
+| 09  | memory      | [Memory][memory]           | Memory Match / Pi / N-Back / Recall / Puzzles / Nikoli / Tic-Tac-Toe / 8-Bit | No       | DONE   | Games             | Entertainment      |
+| 10  | exhibit     | [Exhibit][exhibit]         | UI Showcase                                                                  | Required | DONE   | Graphics & Design | Photo & Video      |
+| 11  | photo       | [Photo][photo]             | Adobe Photoshop                                                              | No       | DONE   | Graphics & Design | Photo & Video      |
+| 12  | svg         | [SVG][svg]                 | Adobe Illustrator / CorelDRAW                                                | No       | DONE   | Graphics & Design | Photo & Video      |
+| 13  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                                 | No       | DONE   | Medical           | Health & Fitness   |
+| 14  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                                | No       | DONE   | Medical           | Health & Fitness   |
+| 15  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes                | No       | DONE   | Productivity      | Education          |
+| 16  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
+| 17  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
+| 18  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
+| 19  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
+| 20  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
+| 21  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
+| 22  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
+| 23  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/
@@ -33,7 +32,6 @@
 [database]: https://hieudoanm.github.io/open/database/
 [diagram]: https://hieudoanm.github.io/open/diagram/
 [lingo]: https://hieudoanm.github.io/open/lingo/
-[tax]: https://hieudoanm.github.io/open/tax/
 [exhibit]: https://hieudoanm.github.io/open/exhibit/
 [foody]: https://hieudoanm.github.io/open/foody/
 [memory]: https://hieudoanm.github.io/open/memory/
