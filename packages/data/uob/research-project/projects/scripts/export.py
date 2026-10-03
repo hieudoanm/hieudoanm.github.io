@@ -43,7 +43,7 @@ RANKING_COLUMNS = (
     ("method_match", "Method fit (%)"), ("supervisor_focus_match", "Supervisor focus fit (%)"),
     ("feasibility", "Feasibility (%)"),
     ("information_completeness", "Information completeness (%)"),
-    ("programme_fit", "Programme fit (%)"), ("project_type_fit", "Project type fit (%)"),
+    ("programme_fit", "Programme relevance (%)"), ("project_type_fit", "Project type fit (%)"),
     ("active_dimensions", "Active dimensions"),
     ("matching_interests", "Matching interests"), ("matching_methods", "Matching methods"),
     ("matching_supervisor_focus", "Matching supervisor focus"),

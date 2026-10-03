@@ -28,7 +28,8 @@ The full normalised dataset is published alongside this page as
 SETUP_PANEL = """
 <section>
   <h2>Your degree</h2>
-  <p class="muted">Programme fit scores a project 100 when it is open to the programme you pick.
+  <p class="muted">Programme relevance scores a project 100 when it is open to the programme
+  you pick, 50 when the degree matches a different route, and 0 otherwise.
   Choose <b>Any programme</b> to drop the dimension from the ranking entirely.</p>
   <label>Degree or programme<select id="programme"></select></label>
 </section>

@@ -128,7 +128,7 @@ function dimensionScores(project, entries, cfg, feasibilityEnabled) {
     "Method match": method.score,
     "Supervisor focus match": focus.score,
     "Feasibility": feasibilityEnabled ? meanFeasibility(project) : null,
-    "Programme fit": programmeFit(project, cfg),
+    "Programme relevance": programmeFit(project, cfg),
     "Project type fit": projectTypeFit(project, cfg),
   };
   return { scores, interest, method, focus };

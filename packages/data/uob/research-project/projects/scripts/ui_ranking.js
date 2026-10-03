@@ -100,7 +100,7 @@ function checkPushingOut(window) {
   const active = document.getElementById("active-dimensions").textContent;
   check(active.includes("Interest match"),
     `Interest match stays active while rows remain ranked (now: ${active})`);
-  check(active.includes("Programme fit"), "Programme fit stays active because a degree is still chosen");
+  check(active.includes("Programme relevance"), "Programme relevance stays active because a degree is still chosen");
   const counted = (scope) => [...window.document.querySelectorAll(`#${scope}-list li`)]
     .filter((li) => li.querySelector(".weight").textContent !== "0").length;
   const summary = document.getElementById("setup-summary").textContent;

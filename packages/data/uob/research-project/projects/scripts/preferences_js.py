@@ -134,7 +134,7 @@ function applyPreferences(){const cfg=currentConfig();
 function viewModel(project,row){return {...project,ratings:project.feasibility||{},rank:row.rank,
   interest_match:row.scores['Interest match'],method_match:row.scores['Method match'],
   supervisor_focus_match:row.scores['Supervisor focus match'],
-  feasibility:row.scores.Feasibility,programme_fit:row.scores['Programme fit'],
+  feasibility:row.scores.Feasibility,programme_fit:row.scores['Programme relevance'],
   matching_interests:row.interest.matched.join('; '),
   matching_methods:row.method.matched.join('; '),
   matching_supervisor_focus:row.focus.matched.join('; '),

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import re
+
 import taxonomy as T
 from config import Configuration
 
@@ -10,8 +12,10 @@ INTEREST = "Interest match"
 METHOD = "Method match"
 SUPERVISOR_FOCUS = "Supervisor focus match"
 FEASIBILITY = "Feasibility"
-PROGRAMME = "Programme fit"
+PROGRAMME = "Programme relevance"
 PROJECT_TYPE = "Project type fit"
+
+PROGRAMME_STOPWORDS = frozenset({"msc", "mres", "bsc", "and", "&", "of", "the", "in", "a"})
 
 COMPLETENESS_FIELDS = ("project_type", "ethics_status", "skills_requirements",
                        "recommended_practical", "recommended_data_module")
@@ -78,12 +82,40 @@ def mean_feasibility(config: Configuration, project_id: int) -> float | None:
     return 20 * sum(ratings.values()) / len(ratings) if ratings else None
 
 
+def programme_tokens(value: str) -> frozenset[str]:
+    """Tokenise a programme name, dropping punctuation and filler words."""
+    return frozenset(re.findall(r"[a-z0-9]+", value.casefold())) - PROGRAMME_STOPWORDS
+
+
+def split_programme(value: str) -> tuple[frozenset[str], frozenset[str]]:
+    """Split a programme into its base degree and the route after the dash."""
+    base, _, route = value.partition(" - ")
+    return programme_tokens(base), programme_tokens(route)
+
+
 def programme_fit(project: dict, config: Configuration) -> float | None:
-    """Score the programme field against the programme you entered."""
+    """Score the programme field against the programme you entered (graded).
+
+    100 when the degree and route agree, or the project leaves the route open;
+    50 when the degree matches a different route or shares a stem; else 0. The
+    'COMPUTATIONAL neuroscience' suffix is a route, so it never forces a miss.
+    """
     if not config.programme:
         return None
-    target = config.programme.casefold()
-    return 100.0 if any(target in name.casefold() for name in project["programmes"]) else 0.0
+    target_base, target_route = split_programme(config.programme)
+    if not target_base:
+        return None
+    best = 0.0
+    for name in project.get("programmes") or []:
+        base, route = split_programme(name)
+        if not base:
+            continue
+        if base == target_base:
+            open_route = not route or route == target_route
+            best = max(best, 100.0 if open_route else 50.0)
+        elif len(base & target_base) >= 2:
+            best = max(best, 50.0)
+    return best
 
 
 def project_type_fit(project: dict, config: Configuration) -> float | None:

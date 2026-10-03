@@ -25,7 +25,7 @@ DIMENSIONS = (("interest_match", "Interest match"),
               ("method_match", "Method match"),
               ("supervisor_focus_match", "Supervisor focus match"),
               ("feasibility", "Feasibility"),
-              ("programme_fit", "Programme fit"),
+              ("programme_fit", "Programme relevance"),
               ("project_type_fit", "Project type fit"))
 
 DRIVER = """

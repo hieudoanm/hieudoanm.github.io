@@ -27,7 +27,7 @@
 
 ---
 
-## [Open Releases (35)](https://hieudoanm.github.io/open)
+## [Open Releases (34)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions and Native Apps (3)
 
