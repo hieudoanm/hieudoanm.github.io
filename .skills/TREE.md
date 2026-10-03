@@ -2,434 +2,717 @@
 
 ```text
 ├── database/
+│   ├── cache/
+│   │   ├── badger/
+│   │   │   └── [SKILL.md](./database/cache/badger/SKILL.md)
+│   │   ├── leveldb/
+│   │   │   └── [SKILL.md](./database/cache/leveldb/SKILL.md)
+│   │   ├── memcached/
+│   │   │   └── [SKILL.md](./database/cache/memcached/SKILL.md)
+│   │   ├── redis/
+│   │   │   └── [SKILL.md](./database/cache/redis/SKILL.md)
+│   │   ├── rocksdb/
+│   │   │   └── [SKILL.md](./database/cache/rocksdb/SKILL.md)
+│   │   └── valkey/
+│   │       └── [SKILL.md](./database/cache/valkey/SKILL.md)
 │   ├── document/
-│   │   ├── [couchbase.md](./database/document/couchbase.md)
-│   │   ├── [couchdb.md](./database/document/couchdb.md)
-│   │   ├── [dynamodb.md](./database/document/dynamodb.md)
-│   │   ├── [mongodb.md](./database/document/mongodb.md)
-│   │   └── [rethinkdb.md](./database/document/rethinkdb.md)
+│   │   ├── couchbase/
+│   │   │   └── [SKILL.md](./database/document/couchbase/SKILL.md)
+│   │   ├── couchdb/
+│   │   │   └── [SKILL.md](./database/document/couchdb/SKILL.md)
+│   │   ├── dynamodb/
+│   │   │   └── [SKILL.md](./database/document/dynamodb/SKILL.md)
+│   │   ├── mongodb/
+│   │   │   └── [SKILL.md](./database/document/mongodb/SKILL.md)
+│   │   └── rethinkdb/
+│   │       └── [SKILL.md](./database/document/rethinkdb/SKILL.md)
 │   ├── graph/
-│   │   ├── [dgraph.md](./database/graph/dgraph.md)
-│   │   └── [neo4j.md](./database/graph/neo4j.md)
-│   ├── memory/
-│   │   ├── [badger.md](./database/memory/badger.md)
-│   │   ├── [leveldb.md](./database/memory/leveldb.md)
-│   │   ├── [memcached.md](./database/memory/memcached.md)
-│   │   ├── [redis.md](./database/memory/redis.md)
-│   │   ├── [rocksdb.md](./database/memory/rocksdb.md)
-│   │   └── [valkey.md](./database/memory/valkey.md)
+│   │   ├── dgraph/
+│   │   │   └── [SKILL.md](./database/graph/dgraph/SKILL.md)
+│   │   └── neo4j/
+│   │       └── [SKILL.md](./database/graph/neo4j/SKILL.md)
 │   ├── multi/
-│   │   └── [fauna.md](./database/multi/fauna.md)
+│   │   └── fauna/
+│   │       └── [SKILL.md](./database/multi/fauna/SKILL.md)
 │   ├── search/
-│   │   ├── [apache-solr.md](./database/search/apache-solr.md)
-│   │   ├── [elasticsearch.md](./database/search/elasticsearch.md)
-│   │   └── [opensearch.md](./database/search/opensearch.md)
+│   │   ├── apache-solr/
+│   │   │   └── [SKILL.md](./database/search/apache-solr/SKILL.md)
+│   │   ├── elasticsearch/
+│   │   │   └── [SKILL.md](./database/search/elasticsearch/SKILL.md)
+│   │   └── opensearch/
+│   │       └── [SKILL.md](./database/search/opensearch/SKILL.md)
 │   ├── sql/
-│   │   ├── [cockroachdb.md](./database/sql/cockroachdb.md)
-│   │   ├── [libsql.md](./database/sql/libsql.md)
-│   │   ├── [mariadb.md](./database/sql/mariadb.md)
-│   │   ├── [mssql.md](./database/sql/mssql.md)
-│   │   ├── [mysql.md](./database/sql/mysql.md)
-│   │   ├── [postgresql.md](./database/sql/postgresql.md)
-│   │   └── [sqlite.md](./database/sql/sqlite.md)
+│   │   ├── cockroachdb/
+│   │   │   └── [SKILL.md](./database/sql/cockroachdb/SKILL.md)
+│   │   ├── libsql/
+│   │   │   └── [SKILL.md](./database/sql/libsql/SKILL.md)
+│   │   ├── mariadb/
+│   │   │   └── [SKILL.md](./database/sql/mariadb/SKILL.md)
+│   │   ├── mssql/
+│   │   │   └── [SKILL.md](./database/sql/mssql/SKILL.md)
+│   │   ├── mysql/
+│   │   │   └── [SKILL.md](./database/sql/mysql/SKILL.md)
+│   │   ├── postgresql/
+│   │   │   └── [SKILL.md](./database/sql/postgresql/SKILL.md)
+│   │   └── sqlite/
+│   │       └── [SKILL.md](./database/sql/sqlite/SKILL.md)
 │   └── wide-column/
-│       ├── [apache-cassandra.md](./database/wide-column/apache-cassandra.md)
-│       └── [apache-hbase.md](./database/wide-column/apache-hbase.md)
+│       ├── apache-cassandra/
+│       │   └── [SKILL.md](./database/wide-column/apache-cassandra/SKILL.md)
+│       └── apache-hbase/
+│           └── [SKILL.md](./database/wide-column/apache-hbase/SKILL.md)
 ├── design/
 │   ├── brand/
-│   │   ├── [atlassian.md](./design/brand/atlassian.md)
-│   │   ├── [carbon.md](./design/brand/carbon.md)
-│   │   ├── [google.md](./design/brand/google.md)
-│   │   ├── [lightning.md](./design/brand/lightning.md)
-│   │   ├── [nothing.md](./design/brand/nothing.md)
-│   │   ├── [polaris.md](./design/brand/polaris.md)
-│   │   └── [spectrum.md](./design/brand/spectrum.md)
+│   │   ├── atlassian/
+│   │   │   └── [SKILL.md](./design/brand/atlassian/SKILL.md)
+│   │   ├── carbon/
+│   │   │   └── [SKILL.md](./design/brand/carbon/SKILL.md)
+│   │   ├── google/
+│   │   │   └── [SKILL.md](./design/brand/google/SKILL.md)
+│   │   ├── lightning/
+│   │   │   └── [SKILL.md](./design/brand/lightning/SKILL.md)
+│   │   ├── nothing/
+│   │   │   └── [SKILL.md](./design/brand/nothing/SKILL.md)
+│   │   ├── polaris/
+│   │   │   └── [SKILL.md](./design/brand/polaris/SKILL.md)
+│   │   └── spectrum/
+│   │       └── [SKILL.md](./design/brand/spectrum/SKILL.md)
 │   └── philosophy/
-│       ├── [brutalism.md](./design/philosophy/brutalism.md)
-│       ├── [flat.md](./design/philosophy/flat.md)
-│       ├── [maximalism.md](./design/philosophy/maximalism.md)
-│       └── [minimalism.md](./design/philosophy/minimalism.md)
+│       ├── brutalism/
+│       │   └── [SKILL.md](./design/philosophy/brutalism/SKILL.md)
+│       ├── flat/
+│       │   └── [SKILL.md](./design/philosophy/flat/SKILL.md)
+│       ├── maximalism/
+│       │   └── [SKILL.md](./design/philosophy/maximalism/SKILL.md)
+│       └── minimalism/
+│           └── [SKILL.md](./design/philosophy/minimalism/SKILL.md)
 ├── development/
 │   ├── architecture/
-│   │   ├── [cqrs.md](./development/architecture/cqrs.md)
-│   │   ├── [event-driven.md](./development/architecture/event-driven.md)
-│   │   ├── [hexagonal.md](./development/architecture/hexagonal.md)
-│   │   ├── [microservices.md](./development/architecture/microservices.md)
-│   │   └── [monolith.md](./development/architecture/monolith.md)
+│   │   ├── cqrs/
+│   │   │   └── [SKILL.md](./development/architecture/cqrs/SKILL.md)
+│   │   ├── event-driven/
+│   │   │   └── [SKILL.md](./development/architecture/event-driven/SKILL.md)
+│   │   ├── hexagonal/
+│   │   │   └── [SKILL.md](./development/architecture/hexagonal/SKILL.md)
+│   │   ├── microservices/
+│   │   │   └── [SKILL.md](./development/architecture/microservices/SKILL.md)
+│   │   └── monolith/
+│   │       └── [SKILL.md](./development/architecture/monolith/SKILL.md)
 │   ├── linux/
-│   │   ├── [arch.md](./development/linux/arch.md)
-│   │   ├── [debian.md](./development/linux/debian.md)
-│   │   ├── [mint.md](./development/linux/mint.md)
-│   │   └── [ubuntu.md](./development/linux/ubuntu.md)
+│   │   ├── arch/
+│   │   │   └── [SKILL.md](./development/linux/arch/SKILL.md)
+│   │   ├── debian/
+│   │   │   └── [SKILL.md](./development/linux/debian/SKILL.md)
+│   │   ├── mint/
+│   │   │   └── [SKILL.md](./development/linux/mint/SKILL.md)
+│   │   └── ubuntu/
+│   │       └── [SKILL.md](./development/linux/ubuntu/SKILL.md)
 │   ├── security/
-│   │   ├── [jwt.md](./development/security/jwt.md)
-│   │   ├── [oauth2.md](./development/security/oauth2.md)
-│   │   └── [oidc.md](./development/security/oidc.md)
+│   │   ├── jwt/
+│   │   │   └── [SKILL.md](./development/security/jwt/SKILL.md)
+│   │   ├── oauth2/
+│   │   │   └── [SKILL.md](./development/security/oauth2/SKILL.md)
+│   │   └── oidc/
+│   │       └── [SKILL.md](./development/security/oidc/SKILL.md)
 │   └── tools/
 │       ├── api/
-│       │   ├── [bruno.md](./development/tools/api/bruno.md)
-│       │   ├── [insomnia.md](./development/tools/api/insomnia.md)
-│       │   └── [postman.md](./development/tools/api/postman.md)
+│       │   ├── bruno/
+│       │   │   └── [SKILL.md](./development/tools/api/bruno/SKILL.md)
+│       │   ├── insomnia/
+│       │   │   └── [SKILL.md](./development/tools/api/insomnia/SKILL.md)
+│       │   └── postman/
+│       │       └── [SKILL.md](./development/tools/api/postman/SKILL.md)
 │       ├── editor/
-│       │   ├── [antigravity.md](./development/tools/editor/antigravity.md)
-│       │   ├── [cursor.md](./development/tools/editor/cursor.md)
-│       │   ├── [neovim.md](./development/tools/editor/neovim.md)
-│       │   ├── [vscode.md](./development/tools/editor/vscode.md)
-│       │   └── [zed.md](./development/tools/editor/zed.md)
-│       ├── [renovate.md](./development/tools/renovate.md)
-│       └── [snyk.md](./development/tools/snyk.md)
+│       │   ├── antigravity/
+│       │   │   └── [SKILL.md](./development/tools/editor/antigravity/SKILL.md)
+│       │   ├── cursor/
+│       │   │   └── [SKILL.md](./development/tools/editor/cursor/SKILL.md)
+│       │   ├── neovim/
+│       │   │   └── [SKILL.md](./development/tools/editor/neovim/SKILL.md)
+│       │   ├── vscode/
+│       │   │   └── [SKILL.md](./development/tools/editor/vscode/SKILL.md)
+│       │   └── zed/
+│       │       └── [SKILL.md](./development/tools/editor/zed/SKILL.md)
+│       ├── renovate/
+│       │   └── [SKILL.md](./development/tools/renovate/SKILL.md)
+│       └── snyk/
+│           └── [SKILL.md](./development/tools/snyk/SKILL.md)
 ├── devops/
 │   ├── ci/
-│   │   ├── [circle-ci.md](./devops/ci/circle-ci.md)
-│   │   ├── [github-actions.md](./devops/ci/github-actions.md)
-│   │   ├── [gitlab-ci.md](./devops/ci/gitlab-ci.md)
-│   │   ├── [harness.md](./devops/ci/harness.md)
-│   │   ├── [jenkins.md](./devops/ci/jenkins.md)
-│   │   └── [travis-ci.md](./devops/ci/travis-ci.md)
+│   │   ├── circle-ci/
+│   │   │   └── [SKILL.md](./devops/ci/circle-ci/SKILL.md)
+│   │   ├── github-actions/
+│   │   │   └── [SKILL.md](./devops/ci/github-actions/SKILL.md)
+│   │   ├── gitlab-ci/
+│   │   │   └── [SKILL.md](./devops/ci/gitlab-ci/SKILL.md)
+│   │   ├── harness/
+│   │   │   └── [SKILL.md](./devops/ci/harness/SKILL.md)
+│   │   ├── jenkins/
+│   │   │   └── [SKILL.md](./devops/ci/jenkins/SKILL.md)
+│   │   └── travis-ci/
+│   │       └── [SKILL.md](./devops/ci/travis-ci/SKILL.md)
 │   ├── docker/
-│   │   ├── [docker-compose.md](./devops/docker/docker-compose.md)
-│   │   └── [docker.md](./devops/docker/docker.md)
+│   │   ├── docker-compose/
+│   │   │   └── [SKILL.md](./devops/docker/docker-compose/SKILL.md)
+│   │   └── [SKILL.md](./devops/docker/SKILL.md)
 │   ├── kubernetes/
-│   │   └── [kubernetes.md](./devops/kubernetes/kubernetes.md)
+│   │   └── [SKILL.md](./devops/kubernetes/SKILL.md)
 │   ├── makefile/
-│   │   └── [makefile.md](./devops/makefile/makefile.md)
+│   │   └── [SKILL.md](./devops/makefile/SKILL.md)
 │   └── server/
-│       ├── [apache-server.md](./devops/server/apache-server.md)
-│       └── [nginx.md](./devops/server/nginx.md)
+│       ├── apache-server/
+│       │   └── [SKILL.md](./devops/server/apache-server/SKILL.md)
+│       └── nginx/
+│           └── [SKILL.md](./devops/server/nginx/SKILL.md)
 ├── events/
-│   ├── [activemq.md](./events/activemq.md)
-│   ├── [apache-kafka.md](./events/apache-kafka.md)
-│   ├── [apache-pulsar.md](./events/apache-pulsar.md)
-│   └── [rabbitmq.md](./events/rabbitmq.md)
+│   ├── activemq/
+│   │   └── [SKILL.md](./events/activemq/SKILL.md)
+│   ├── apache-kafka/
+│   │   └── [SKILL.md](./events/apache-kafka/SKILL.md)
+│   ├── apache-pulsar/
+│   │   └── [SKILL.md](./events/apache-pulsar/SKILL.md)
+│   └── rabbitmq/
+│       └── [SKILL.md](./events/rabbitmq/SKILL.md)
 ├── graphql/
 │   ├── go/
-│   │   └── [graphql-go.md](./graphql/go/graphql-go.md)
+│   │   └── graphql-go/
+│   │       └── [SKILL.md](./graphql/go/graphql-go/SKILL.md)
 │   ├── typescript/
 │   │   ├── apollo/
-│   │   │   ├── [client.md](./graphql/typescript/apollo/client.md)
-│   │   │   └── [server.md](./graphql/typescript/apollo/server.md)
-│   │   ├── [garph.md](./graphql/typescript/garph.md)
-│   │   ├── [mercurius.md](./graphql/typescript/mercurius.md)
-│   │   └── [yoga.md](./graphql/typescript/yoga.md)
-│   └── [graphql.md](./graphql/graphql.md)
+│   │   │   ├── client/
+│   │   │   │   └── [SKILL.md](./graphql/typescript/apollo/client/SKILL.md)
+│   │   │   └── server/
+│   │   │       └── [SKILL.md](./graphql/typescript/apollo/server/SKILL.md)
+│   │   ├── garph/
+│   │   │   └── [SKILL.md](./graphql/typescript/garph/SKILL.md)
+│   │   ├── mercurius/
+│   │   │   └── [SKILL.md](./graphql/typescript/mercurius/SKILL.md)
+│   │   └── yoga/
+│   │       └── [SKILL.md](./graphql/typescript/yoga/SKILL.md)
+│   └── [SKILL.md](./graphql/SKILL.md)
 ├── languages/
 │   ├── bash/
-│   │   └── [bash.md](./languages/bash/bash.md)
+│   │   └── [SKILL.md](./languages/bash/SKILL.md)
 │   ├── c/
+│   │   ├── cpp/
+│   │   │   └── [SKILL.md](./languages/c/cpp/SKILL.md)
 │   │   ├── game/
-│   │   │   └── [unreal.md](./languages/c/game/unreal.md)
+│   │   │   └── unreal/
+│   │   │       └── [SKILL.md](./languages/c/game/unreal/SKILL.md)
 │   │   ├── ide/
-│   │   │   └── [clion.md](./languages/c/ide/clion.md)
-│   │   ├── [c.md](./languages/c/c.md)
-│   │   └── [cpp.md](./languages/c/cpp.md)
+│   │   │   └── clion/
+│   │   │       └── [SKILL.md](./languages/c/ide/clion/SKILL.md)
+│   │   └── [SKILL.md](./languages/c/SKILL.md)
 │   ├── csharp/
+│   │   ├── dotnet/
+│   │   │   └── [SKILL.md](./languages/csharp/dotnet/SKILL.md)
 │   │   ├── game/
-│   │   │   └── [unity.md](./languages/csharp/game/unity.md)
+│   │   │   └── unity/
+│   │   │       └── [SKILL.md](./languages/csharp/game/unity/SKILL.md)
 │   │   ├── ide/
-│   │   │   ├── [rider.md](./languages/csharp/ide/rider.md)
-│   │   │   └── [visual-studio.md](./languages/csharp/ide/visual-studio.md)
+│   │   │   ├── rider/
+│   │   │   │   └── [SKILL.md](./languages/csharp/ide/rider/SKILL.md)
+│   │   │   └── visual-studio/
+│   │   │       └── [SKILL.md](./languages/csharp/ide/visual-studio/SKILL.md)
 │   │   ├── ui/
-│   │   │   └── [windows.md](./languages/csharp/ui/windows.md)
-│   │   ├── [csharp.md](./languages/csharp/csharp.md)
-│   │   └── [dotnet.md](./languages/csharp/dotnet.md)
+│   │   │   └── windows/
+│   │   │       └── [SKILL.md](./languages/csharp/ui/windows/SKILL.md)
+│   │   └── [SKILL.md](./languages/csharp/SKILL.md)
 │   ├── css/
 │   │   ├── components/
-│   │   │   ├── [bootstrap.md](./languages/css/components/bootstrap.md)
-│   │   │   ├── [bulma.md](./languages/css/components/bulma.md)
-│   │   │   ├── [daisyui.md](./languages/css/components/daisyui.md)
-│   │   │   ├── [materializecss.md](./languages/css/components/materializecss.md)
-│   │   │   ├── [tailwindcss-plus.md](./languages/css/components/tailwindcss-plus.md)
-│   │   │   └── [uikit.md](./languages/css/components/uikit.md)
+│   │   │   ├── bootstrap/
+│   │   │   │   └── [SKILL.md](./languages/css/components/bootstrap/SKILL.md)
+│   │   │   ├── bulma/
+│   │   │   │   └── [SKILL.md](./languages/css/components/bulma/SKILL.md)
+│   │   │   ├── daisyui/
+│   │   │   │   └── [SKILL.md](./languages/css/components/daisyui/SKILL.md)
+│   │   │   ├── materializecss/
+│   │   │   │   └── [SKILL.md](./languages/css/components/materializecss/SKILL.md)
+│   │   │   ├── tailwindcss-plus/
+│   │   │   │   └── [SKILL.md](./languages/css/components/tailwindcss-plus/SKILL.md)
+│   │   │   └── uikit/
+│   │   │       └── [SKILL.md](./languages/css/components/uikit/SKILL.md)
 │   │   ├── js/
-│   │   │   ├── [emotion.md](./languages/css/js/emotion.md)
-│   │   │   ├── [styled-components.md](./languages/css/js/styled-components.md)
-│   │   │   └── [stylex.md](./languages/css/js/stylex.md)
+│   │   │   ├── emotion/
+│   │   │   │   └── [SKILL.md](./languages/css/js/emotion/SKILL.md)
+│   │   │   ├── styled-components/
+│   │   │   │   └── [SKILL.md](./languages/css/js/styled-components/SKILL.md)
+│   │   │   └── stylex/
+│   │   │       └── [SKILL.md](./languages/css/js/stylex/SKILL.md)
 │   │   ├── preprocessor/
-│   │   │   ├── [less.md](./languages/css/preprocessor/less.md)
-│   │   │   └── [sass.md](./languages/css/preprocessor/sass.md)
+│   │   │   ├── less/
+│   │   │   │   └── [SKILL.md](./languages/css/preprocessor/less/SKILL.md)
+│   │   │   └── sass/
+│   │   │       └── [SKILL.md](./languages/css/preprocessor/sass/SKILL.md)
 │   │   ├── utilities/
-│   │   │   ├── [tailwindcss.md](./languages/css/utilities/tailwindcss.md)
-│   │   │   └── [unocss.md](./languages/css/utilities/unocss.md)
-│   │   └── [css.md](./languages/css/css.md)
+│   │   │   ├── tailwindcss/
+│   │   │   │   └── [SKILL.md](./languages/css/utilities/tailwindcss/SKILL.md)
+│   │   │   └── unocss/
+│   │   │       └── [SKILL.md](./languages/css/utilities/unocss/SKILL.md)
+│   │   └── [SKILL.md](./languages/css/SKILL.md)
 │   ├── dart/
 │   │   ├── ui/
-│   │   │   └── [flutter.md](./languages/dart/ui/flutter.md)
-│   │   └── [dart.md](./languages/dart/dart.md)
+│   │   │   └── flutter/
+│   │   │       └── [SKILL.md](./languages/dart/ui/flutter/SKILL.md)
+│   │   └── [SKILL.md](./languages/dart/SKILL.md)
 │   ├── gdscript/
 │   │   ├── game/
-│   │   │   └── [godot.md](./languages/gdscript/game/godot.md)
-│   │   └── [gdscript.md](./languages/gdscript/gdscript.md)
+│   │   │   └── godot/
+│   │   │       └── [SKILL.md](./languages/gdscript/game/godot/SKILL.md)
+│   │   └── [SKILL.md](./languages/gdscript/SKILL.md)
 │   ├── go/
 │   │   ├── backend/
-│   │   │   ├── [beego.md](./languages/go/backend/beego.md)
-│   │   │   ├── [chi.md](./languages/go/backend/chi.md)
-│   │   │   ├── [echo.md](./languages/go/backend/echo.md)
-│   │   │   ├── [gin.md](./languages/go/backend/gin.md)
-│   │   │   └── [gorilla.md](./languages/go/backend/gorilla.md)
+│   │   │   ├── beego/
+│   │   │   │   └── [SKILL.md](./languages/go/backend/beego/SKILL.md)
+│   │   │   ├── chi/
+│   │   │   │   └── [SKILL.md](./languages/go/backend/chi/SKILL.md)
+│   │   │   ├── echo/
+│   │   │   │   └── [SKILL.md](./languages/go/backend/echo/SKILL.md)
+│   │   │   ├── gin/
+│   │   │   │   └── [SKILL.md](./languages/go/backend/gin/SKILL.md)
+│   │   │   └── gorilla/
+│   │   │       └── [SKILL.md](./languages/go/backend/gorilla/SKILL.md)
 │   │   ├── cli/
-│   │   │   ├── [bubbletea.md](./languages/go/cli/bubbletea.md)
-│   │   │   └── [cobra.md](./languages/go/cli/cobra.md)
-│   │   ├── ui/
-│   │   │   └── [fyne.md](./languages/go/ui/fyne.md)
-│   │   └── [golang.md](./languages/go/golang.md)
+│   │   │   ├── bubbletea/
+│   │   │   │   └── [SKILL.md](./languages/go/cli/bubbletea/SKILL.md)
+│   │   │   └── cobra/
+│   │   │       └── [SKILL.md](./languages/go/cli/cobra/SKILL.md)
+│   │   ├── golang/
+│   │   │   └── [SKILL.md](./languages/go/golang/SKILL.md)
+│   │   └── ui/
+│   │       └── fyne/
+│   │           └── [SKILL.md](./languages/go/ui/fyne/SKILL.md)
 │   ├── groovy/
-│   │   └── [groovy.md](./languages/groovy/groovy.md)
+│   │   └── [SKILL.md](./languages/groovy/SKILL.md)
 │   ├── java/
 │   │   ├── backend/
-│   │   │   ├── [helidon.md](./languages/java/backend/helidon.md)
-│   │   │   ├── [javalin.md](./languages/java/backend/javalin.md)
-│   │   │   ├── [micronaut.md](./languages/java/backend/micronaut.md)
-│   │   │   ├── [quarkus.md](./languages/java/backend/quarkus.md)
-│   │   │   └── [spring-boot.md](./languages/java/backend/spring-boot.md)
+│   │   │   ├── helidon/
+│   │   │   │   └── [SKILL.md](./languages/java/backend/helidon/SKILL.md)
+│   │   │   ├── javalin/
+│   │   │   │   └── [SKILL.md](./languages/java/backend/javalin/SKILL.md)
+│   │   │   ├── micronaut/
+│   │   │   │   └── [SKILL.md](./languages/java/backend/micronaut/SKILL.md)
+│   │   │   ├── quarkus/
+│   │   │   │   └── [SKILL.md](./languages/java/backend/quarkus/SKILL.md)
+│   │   │   └── spring-boot/
+│   │   │       └── [SKILL.md](./languages/java/backend/spring-boot/SKILL.md)
 │   │   ├── ide/
-│   │   │   └── [idea.md](./languages/java/ide/idea.md)
-│   │   └── [java.md](./languages/java/java.md)
+│   │   │   └── idea/
+│   │   │       └── [SKILL.md](./languages/java/ide/idea/SKILL.md)
+│   │   └── [SKILL.md](./languages/java/SKILL.md)
 │   ├── kotlin/
 │   │   ├── backend/
-│   │   │   └── [ktor.md](./languages/kotlin/backend/ktor.md)
+│   │   │   └── ktor/
+│   │   │       └── [SKILL.md](./languages/kotlin/backend/ktor/SKILL.md)
 │   │   ├── cli/
-│   │   │   ├── [clikt.md](./languages/kotlin/cli/clikt.md)
-│   │   │   └── [mordant.md](./languages/kotlin/cli/mordant.md)
+│   │   │   ├── clikt/
+│   │   │   │   └── [SKILL.md](./languages/kotlin/cli/clikt/SKILL.md)
+│   │   │   └── mordant/
+│   │   │       └── [SKILL.md](./languages/kotlin/cli/mordant/SKILL.md)
 │   │   ├── ide/
-│   │   │   └── [android-studio.md](./languages/kotlin/ide/android-studio.md)
+│   │   │   └── android-studio/
+│   │   │       └── [SKILL.md](./languages/kotlin/ide/android-studio/SKILL.md)
 │   │   ├── ui/
-│   │   │   ├── [android.md](./languages/kotlin/ui/android.md)
-│   │   │   ├── [compose.md](./languages/kotlin/ui/compose.md)
-│   │   │   └── [material-design-m3.md](./languages/kotlin/ui/material-design-m3.md)
-│   │   └── [kotlin.md](./languages/kotlin/kotlin.md)
+│   │   │   ├── android/
+│   │   │   │   └── [SKILL.md](./languages/kotlin/ui/android/SKILL.md)
+│   │   │   ├── compose/
+│   │   │   │   └── [SKILL.md](./languages/kotlin/ui/compose/SKILL.md)
+│   │   │   └── material-design-m3/
+│   │   │       └── [SKILL.md](./languages/kotlin/ui/material-design-m3/SKILL.md)
+│   │   └── [SKILL.md](./languages/kotlin/SKILL.md)
 │   ├── matlab/
-│   │   └── [matlab.md](./languages/matlab/matlab.md)
+│   │   └── [SKILL.md](./languages/matlab/SKILL.md)
 │   ├── php/
 │   │   ├── backend/
-│   │   │   └── [laravel.md](./languages/php/backend/laravel.md)
+│   │   │   └── laravel/
+│   │   │       └── [SKILL.md](./languages/php/backend/laravel/SKILL.md)
 │   │   ├── ide/
-│   │   │   └── [php-storm.md](./languages/php/ide/php-storm.md)
-│   │   └── [php.md](./languages/php/php.md)
+│   │   │   └── php-storm/
+│   │   │       └── [SKILL.md](./languages/php/ide/php-storm/SKILL.md)
+│   │   └── [SKILL.md](./languages/php/SKILL.md)
 │   ├── power-shell/
-│   │   └── [power-shell.md](./languages/power-shell/power-shell.md)
+│   │   └── [SKILL.md](./languages/power-shell/SKILL.md)
 │   ├── python/
 │   │   ├── backend/
-│   │   │   ├── [django.md](./languages/python/backend/django.md)
-│   │   │   ├── [fastapi.md](./languages/python/backend/fastapi.md)
-│   │   │   ├── [flask.md](./languages/python/backend/flask.md)
-│   │   │   ├── [pyramid.md](./languages/python/backend/pyramid.md)
-│   │   │   └── [tonardo.md](./languages/python/backend/tonardo.md)
+│   │   │   ├── django/
+│   │   │   │   └── [SKILL.md](./languages/python/backend/django/SKILL.md)
+│   │   │   ├── fastapi/
+│   │   │   │   └── [SKILL.md](./languages/python/backend/fastapi/SKILL.md)
+│   │   │   ├── flask/
+│   │   │   │   └── [SKILL.md](./languages/python/backend/flask/SKILL.md)
+│   │   │   ├── pyramid/
+│   │   │   │   └── [SKILL.md](./languages/python/backend/pyramid/SKILL.md)
+│   │   │   └── tornado/
+│   │   │       └── [SKILL.md](./languages/python/backend/tornado/SKILL.md)
 │   │   ├── cli/
-│   │   │   ├── [argparse.md](./languages/python/cli/argparse.md)
-│   │   │   └── [click.md](./languages/python/cli/click.md)
+│   │   │   ├── argparse/
+│   │   │   │   └── [SKILL.md](./languages/python/cli/argparse/SKILL.md)
+│   │   │   └── click/
+│   │   │       └── [SKILL.md](./languages/python/cli/click/SKILL.md)
 │   │   ├── data/
 │   │   │   ├── analyst/
-│   │   │   │   ├── [matplotlib.md](./languages/python/data/analyst/matplotlib.md)
-│   │   │   │   ├── [numpy.md](./languages/python/data/analyst/numpy.md)
-│   │   │   │   ├── [pandas.md](./languages/python/data/analyst/pandas.md)
-│   │   │   │   └── [statsmodels.md](./languages/python/data/analyst/statsmodels.md)
+│   │   │   │   ├── matplotlib/
+│   │   │   │   │   └── [SKILL.md](./languages/python/data/analyst/matplotlib/SKILL.md)
+│   │   │   │   ├── numpy/
+│   │   │   │   │   └── [SKILL.md](./languages/python/data/analyst/numpy/SKILL.md)
+│   │   │   │   ├── pandas/
+│   │   │   │   │   └── [SKILL.md](./languages/python/data/analyst/pandas/SKILL.md)
+│   │   │   │   └── statsmodels/
+│   │   │   │       └── [SKILL.md](./languages/python/data/analyst/statsmodels/SKILL.md)
 │   │   │   ├── engineer/
-│   │   │   │   ├── [apache-airflow.md](./languages/python/data/engineer/apache-airflow.md)
-│   │   │   │   ├── [apache-iceberg.md](./languages/python/data/engineer/apache-iceberg.md)
-│   │   │   │   ├── [apache-spark.md](./languages/python/data/engineer/apache-spark.md)
-│   │   │   │   └── [apache-trino.md](./languages/python/data/engineer/apache-trino.md)
+│   │   │   │   ├── apache-airflow/
+│   │   │   │   │   └── [SKILL.md](./languages/python/data/engineer/apache-airflow/SKILL.md)
+│   │   │   │   ├── apache-iceberg/
+│   │   │   │   │   └── [SKILL.md](./languages/python/data/engineer/apache-iceberg/SKILL.md)
+│   │   │   │   ├── apache-spark/
+│   │   │   │   │   └── [SKILL.md](./languages/python/data/engineer/apache-spark/SKILL.md)
+│   │   │   │   └── apache-trino/
+│   │   │   │       └── [SKILL.md](./languages/python/data/engineer/apache-trino/SKILL.md)
 │   │   │   └── science/
-│   │   │       ├── [hugging-face.md](./languages/python/data/science/hugging-face.md)
-│   │   │       ├── [lightgbm.md](./languages/python/data/science/lightgbm.md)
-│   │   │       ├── [pytorch.md](./languages/python/data/science/pytorch.md)
-│   │   │       ├── [scikit-learn.md](./languages/python/data/science/scikit-learn.md)
-│   │   │       ├── [tensorflow.md](./languages/python/data/science/tensorflow.md)
-│   │   │       └── [xgboost.md](./languages/python/data/science/xgboost.md)
+│   │   │       ├── hugging-face/
+│   │   │       │   └── [SKILL.md](./languages/python/data/science/hugging-face/SKILL.md)
+│   │   │       ├── lightgbm/
+│   │   │       │   └── [SKILL.md](./languages/python/data/science/lightgbm/SKILL.md)
+│   │   │       ├── pytorch/
+│   │   │       │   └── [SKILL.md](./languages/python/data/science/pytorch/SKILL.md)
+│   │   │       ├── scikit-learn/
+│   │   │       │   └── [SKILL.md](./languages/python/data/science/scikit-learn/SKILL.md)
+│   │   │       ├── tensorflow/
+│   │   │       │   └── [SKILL.md](./languages/python/data/science/tensorflow/SKILL.md)
+│   │   │       └── xgboost/
+│   │   │           └── [SKILL.md](./languages/python/data/science/xgboost/SKILL.md)
 │   │   ├── ide/
-│   │   │   └── [pycharm.md](./languages/python/ide/pycharm.md)
+│   │   │   └── pycharm/
+│   │   │       └── [SKILL.md](./languages/python/ide/pycharm/SKILL.md)
 │   │   ├── orm/
-│   │   │   └── [sql-alchemy.md](./languages/python/orm/sql-alchemy.md)
-│   │   └── [python.md](./languages/python/python.md)
+│   │   │   └── sql-alchemy/
+│   │   │       └── [SKILL.md](./languages/python/orm/sql-alchemy/SKILL.md)
+│   │   └── [SKILL.md](./languages/python/SKILL.md)
 │   ├── qml/
 │   │   ├── ui/
-│   │   │   └── [qt.md](./languages/qml/ui/qt.md)
-│   │   └── [qml.md](./languages/qml/qml.md)
+│   │   │   └── qt/
+│   │   │       └── [SKILL.md](./languages/qml/ui/qt/SKILL.md)
+│   │   └── [SKILL.md](./languages/qml/SKILL.md)
 │   ├── r/
-│   │   └── [r.md](./languages/r/r.md)
+│   │   └── [SKILL.md](./languages/r/SKILL.md)
 │   ├── ruby/
 │   │   ├── backend/
-│   │   │   └── [rails.md](./languages/ruby/backend/rails.md)
+│   │   │   └── rails/
+│   │   │       └── [SKILL.md](./languages/ruby/backend/rails/SKILL.md)
 │   │   ├── ide/
-│   │   │   └── [ruby-mine.md](./languages/ruby/ide/ruby-mine.md)
-│   │   └── [ruby.md](./languages/ruby/ruby.md)
+│   │   │   └── ruby-mine/
+│   │   │       └── [SKILL.md](./languages/ruby/ide/ruby-mine/SKILL.md)
+│   │   └── [SKILL.md](./languages/ruby/SKILL.md)
 │   ├── rust/
 │   │   ├── backend/
-│   │   │   ├── [actix.md](./languages/rust/backend/actix.md)
-│   │   │   ├── [axum.md](./languages/rust/backend/axum.md)
-│   │   │   ├── [gotham.md](./languages/rust/backend/gotham.md)
-│   │   │   ├── [hyper.md](./languages/rust/backend/hyper.md)
-│   │   │   ├── [rocket.md](./languages/rust/backend/rocket.md)
-│   │   │   └── [wrap.md](./languages/rust/backend/wrap.md)
+│   │   │   ├── actix/
+│   │   │   │   └── [SKILL.md](./languages/rust/backend/actix/SKILL.md)
+│   │   │   ├── axum/
+│   │   │   │   └── [SKILL.md](./languages/rust/backend/axum/SKILL.md)
+│   │   │   ├── gotham/
+│   │   │   │   └── [SKILL.md](./languages/rust/backend/gotham/SKILL.md)
+│   │   │   ├── hyper/
+│   │   │   │   └── [SKILL.md](./languages/rust/backend/hyper/SKILL.md)
+│   │   │   ├── rocket/
+│   │   │   │   └── [SKILL.md](./languages/rust/backend/rocket/SKILL.md)
+│   │   │   └── warp/
+│   │   │       └── [SKILL.md](./languages/rust/backend/warp/SKILL.md)
 │   │   ├── cli/
-│   │   │   ├── [argh.md](./languages/rust/cli/argh.md)
-│   │   │   ├── [clap.md](./languages/rust/cli/clap.md)
-│   │   │   └── [ratatui.md](./languages/rust/cli/ratatui.md)
+│   │   │   ├── argh/
+│   │   │   │   └── [SKILL.md](./languages/rust/cli/argh/SKILL.md)
+│   │   │   ├── clap/
+│   │   │   │   └── [SKILL.md](./languages/rust/cli/clap/SKILL.md)
+│   │   │   └── ratatui/
+│   │   │       └── [SKILL.md](./languages/rust/cli/ratatui/SKILL.md)
 │   │   ├── ide/
-│   │   │   └── [rust-rover.md](./languages/rust/ide/rust-rover.md)
+│   │   │   └── rust-rover/
+│   │   │       └── [SKILL.md](./languages/rust/ide/rust-rover/SKILL.md)
 │   │   ├── ui/
-│   │   │   ├── [slint.material.md](./languages/rust/ui/slint.material.md)
-│   │   │   └── [tauri.md](./languages/rust/ui/tauri.md)
-│   │   └── [rust.md](./languages/rust/rust.md)
+│   │   │   ├── slint/
+│   │   │   │   └── [SKILL.md](./languages/rust/ui/slint/SKILL.md)
+│   │   │   └── tauri/
+│   │   │       └── [SKILL.md](./languages/rust/ui/tauri/SKILL.md)
+│   │   └── [SKILL.md](./languages/rust/SKILL.md)
 │   ├── scala/
 │   │   ├── backend/
-│   │   │   ├── [akka.md](./languages/scala/backend/akka.md)
-│   │   │   ├── [http4s.md](./languages/scala/backend/http4s.md)
-│   │   │   └── [play.md](./languages/scala/backend/play.md)
-│   │   └── [scala.md](./languages/scala/scala.md)
+│   │   │   ├── akka/
+│   │   │   │   └── [SKILL.md](./languages/scala/backend/akka/SKILL.md)
+│   │   │   ├── http4s/
+│   │   │   │   └── [SKILL.md](./languages/scala/backend/http4s/SKILL.md)
+│   │   │   └── play/
+│   │   │       └── [SKILL.md](./languages/scala/backend/play/SKILL.md)
+│   │   └── [SKILL.md](./languages/scala/SKILL.md)
 │   ├── swift/
 │   │   ├── cli/
-│   │   │   └── [swift-argument-parser.md](./languages/swift/cli/swift-argument-parser.md)
+│   │   │   └── swift-argument-parser/
+│   │   │       └── [SKILL.md](./languages/swift/cli/swift-argument-parser/SKILL.md)
 │   │   ├── ide/
-│   │   │   └── [xcode.md](./languages/swift/ide/xcode.md)
+│   │   │   └── xcode/
+│   │   │       └── [SKILL.md](./languages/swift/ide/xcode/SKILL.md)
 │   │   ├── ui/
-│   │   │   ├── [ios.md](./languages/swift/ui/ios.md)
-│   │   │   ├── [ipados.md](./languages/swift/ui/ipados.md)
-│   │   │   ├── [macos.md](./languages/swift/ui/macos.md)
-│   │   │   └── [swiftui.md](./languages/swift/ui/swiftui.md)
-│   │   └── [swift.md](./languages/swift/swift.md)
+│   │   │   ├── ios/
+│   │   │   │   └── [SKILL.md](./languages/swift/ui/ios/SKILL.md)
+│   │   │   ├── ipados/
+│   │   │   │   └── [SKILL.md](./languages/swift/ui/ipados/SKILL.md)
+│   │   │   ├── macos/
+│   │   │   │   └── [SKILL.md](./languages/swift/ui/macos/SKILL.md)
+│   │   │   └── swiftui/
+│   │   │       └── [SKILL.md](./languages/swift/ui/swiftui/SKILL.md)
+│   │   └── [SKILL.md](./languages/swift/SKILL.md)
 │   └── typescript/
 │       ├── backend/
-│       │   ├── [express.js.md](./languages/typescript/backend/express.js.md)
-│       │   ├── [fastify.js.md](./languages/typescript/backend/fastify.js.md)
-│       │   ├── [hapi.js.md](./languages/typescript/backend/hapi.js.md)
-│       │   ├── [hono.js.md](./languages/typescript/backend/hono.js.md)
-│       │   ├── [koa.js.md](./languages/typescript/backend/koa.js.md)
-│       │   ├── [nest.js.md](./languages/typescript/backend/nest.js.md)
-│       │   └── [trpc.md](./languages/typescript/backend/trpc.md)
+│       │   ├── express.js/
+│       │   │   └── [SKILL.md](./languages/typescript/backend/express.js/SKILL.md)
+│       │   ├── fastify.js/
+│       │   │   └── [SKILL.md](./languages/typescript/backend/fastify.js/SKILL.md)
+│       │   ├── hapi.js/
+│       │   │   └── [SKILL.md](./languages/typescript/backend/hapi.js/SKILL.md)
+│       │   ├── hono.js/
+│       │   │   └── [SKILL.md](./languages/typescript/backend/hono.js/SKILL.md)
+│       │   ├── koa.js/
+│       │   │   └── [SKILL.md](./languages/typescript/backend/koa.js/SKILL.md)
+│       │   ├── nest.js/
+│       │   │   └── [SKILL.md](./languages/typescript/backend/nest.js/SKILL.md)
+│       │   └── trpc/
+│       │       └── [SKILL.md](./languages/typescript/backend/trpc/SKILL.md)
 │       ├── cli/
-│       │   ├── [commander.md](./languages/typescript/cli/commander.md)
-│       │   ├── [oclif.md](./languages/typescript/cli/oclif.md)
-│       │   └── [yargs.md](./languages/typescript/cli/yargs.md)
+│       │   ├── commander/
+│       │   │   └── [SKILL.md](./languages/typescript/cli/commander/SKILL.md)
+│       │   ├── oclif/
+│       │   │   └── [SKILL.md](./languages/typescript/cli/oclif/SKILL.md)
+│       │   └── yargs/
+│       │       └── [SKILL.md](./languages/typescript/cli/yargs/SKILL.md)
 │       ├── engine/
-│       │   ├── [hermes.md](./languages/typescript/engine/hermes.md)
-│       │   ├── [javascript-core.md](./languages/typescript/engine/javascript-core.md)
-│       │   ├── [quick.js.md](./languages/typescript/engine/quick.js.md)
-│       │   ├── [spider-monkey.md](./languages/typescript/engine/spider-monkey.md)
-│       │   └── [v8.md](./languages/typescript/engine/v8.md)
+│       │   ├── hermes/
+│       │   │   └── [SKILL.md](./languages/typescript/engine/hermes/SKILL.md)
+│       │   ├── javascript-core/
+│       │   │   └── [SKILL.md](./languages/typescript/engine/javascript-core/SKILL.md)
+│       │   ├── quick.js/
+│       │   │   └── [SKILL.md](./languages/typescript/engine/quick.js/SKILL.md)
+│       │   ├── spider-monkey/
+│       │   │   └── [SKILL.md](./languages/typescript/engine/spider-monkey/SKILL.md)
+│       │   └── v8/
+│       │       └── [SKILL.md](./languages/typescript/engine/v8/SKILL.md)
 │       ├── frontend/
 │       │   ├── auth/
-│       │   │   ├── [auth.js.md](./languages/typescript/frontend/auth/auth.js.md)
-│       │   │   └── [better-auth.md](./languages/typescript/frontend/auth/better-auth.md)
+│       │   │   ├── auth.js/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/auth/auth.js/SKILL.md)
+│       │   │   └── better-auth/
+│       │   │       └── [SKILL.md](./languages/typescript/frontend/auth/better-auth/SKILL.md)
 │       │   ├── charts/
-│       │   │   ├── [chart.js.md](./languages/typescript/frontend/charts/chart.js.md)
-│       │   │   ├── [chartist.md](./languages/typescript/frontend/charts/chartist.md)
-│       │   │   ├── [d3.js.md](./languages/typescript/frontend/charts/d3.js.md)
-│       │   │   ├── [google-charts.md](./languages/typescript/frontend/charts/google-charts.md)
-│       │   │   ├── [highcharts.md](./languages/typescript/frontend/charts/highcharts.md)
-│       │   │   ├── [plotly.md](./languages/typescript/frontend/charts/plotly.md)
-│       │   │   ├── [recharts.md](./languages/typescript/frontend/charts/recharts.md)
-│       │   │   └── [tanstack-charts.md](./languages/typescript/frontend/charts/tanstack-charts.md)
+│       │   │   ├── chart.js/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/charts/chart.js/SKILL.md)
+│       │   │   ├── chartist/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/charts/chartist/SKILL.md)
+│       │   │   ├── d3.js/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/charts/d3.js/SKILL.md)
+│       │   │   ├── google-charts/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/charts/google-charts/SKILL.md)
+│       │   │   ├── highcharts/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/charts/highcharts/SKILL.md)
+│       │   │   ├── plotly/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/charts/plotly/SKILL.md)
+│       │   │   ├── recharts/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/charts/recharts/SKILL.md)
+│       │   │   └── tanstack-charts/
+│       │   │       └── [SKILL.md](./languages/typescript/frontend/charts/tanstack-charts/SKILL.md)
 │       │   ├── frameworks/
 │       │   │   ├── hybrid/
-│       │   │   │   ├── [electron.md](./languages/typescript/frontend/frameworks/hybrid/electron.md)
-│       │   │   │   ├── [ionic.md](./languages/typescript/frontend/frameworks/hybrid/ionic.md)
-│       │   │   │   ├── [lynx.md](./languages/typescript/frontend/frameworks/hybrid/lynx.md)
-│       │   │   │   └── [react-native.md](./languages/typescript/frontend/frameworks/hybrid/react-native.md)
+│       │   │   │   ├── electron/
+│       │   │   │   │   └── [SKILL.md](./languages/typescript/frontend/frameworks/hybrid/electron/SKILL.md)
+│       │   │   │   ├── ionic/
+│       │   │   │   │   └── [SKILL.md](./languages/typescript/frontend/frameworks/hybrid/ionic/SKILL.md)
+│       │   │   │   ├── lynx/
+│       │   │   │   │   └── [SKILL.md](./languages/typescript/frontend/frameworks/hybrid/lynx/SKILL.md)
+│       │   │   │   └── react-native/
+│       │   │   │       └── [SKILL.md](./languages/typescript/frontend/frameworks/hybrid/react-native/SKILL.md)
 │       │   │   └── web/
-│       │   │       ├── [angular.md](./languages/typescript/frontend/frameworks/web/angular.md)
-│       │   │       ├── [astro.md](./languages/typescript/frontend/frameworks/web/astro.md)
-│       │   │       ├── [docusaurus.md](./languages/typescript/frontend/frameworks/web/docusaurus.md)
-│       │   │       ├── [gatsby.md](./languages/typescript/frontend/frameworks/web/gatsby.md)
-│       │   │       ├── [next.md](./languages/typescript/frontend/frameworks/web/next.md)
-│       │   │       ├── [nuxt.md](./languages/typescript/frontend/frameworks/web/nuxt.md)
-│       │   │       ├── [react.md](./languages/typescript/frontend/frameworks/web/react.md)
-│       │   │       ├── [solid-start.md](./languages/typescript/frontend/frameworks/web/solid-start.md)
-│       │   │       ├── [solid.md](./languages/typescript/frontend/frameworks/web/solid.md)
-│       │   │       ├── [svelte-kit.md](./languages/typescript/frontend/frameworks/web/svelte-kit.md)
-│       │   │       ├── [svelte.md](./languages/typescript/frontend/frameworks/web/svelte.md)
-│       │   │       ├── [vue.md](./languages/typescript/frontend/frameworks/web/vue.md)
-│       │   │       └── [vuepress.md](./languages/typescript/frontend/frameworks/web/vuepress.md)
+│       │   │       ├── angular/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/angular/SKILL.md)
+│       │   │       ├── astro/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/astro/SKILL.md)
+│       │   │       ├── docusaurus/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/docusaurus/SKILL.md)
+│       │   │       ├── gatsby/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/gatsby/SKILL.md)
+│       │   │       ├── next/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/next/SKILL.md)
+│       │   │       ├── nuxt/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/nuxt/SKILL.md)
+│       │   │       ├── react/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/react/SKILL.md)
+│       │   │       ├── solid/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/solid/SKILL.md)
+│       │   │       ├── solid-start/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/solid-start/SKILL.md)
+│       │   │       ├── svelte/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/svelte/SKILL.md)
+│       │   │       ├── svelte-kit/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/svelte-kit/SKILL.md)
+│       │   │       ├── vue/
+│       │   │       │   └── [SKILL.md](./languages/typescript/frontend/frameworks/web/vue/SKILL.md)
+│       │   │       └── vuepress/
+│       │   │           └── [SKILL.md](./languages/typescript/frontend/frameworks/web/vuepress/SKILL.md)
 │       │   ├── query/
-│       │   │   ├── [apollo-client.md](./languages/typescript/frontend/query/apollo-client.md)
-│       │   │   ├── [axios.md](./languages/typescript/frontend/query/axios.md)
-│       │   │   ├── [swr.md](./languages/typescript/frontend/query/swr.md)
-│       │   │   └── [tanstack-query.md](./languages/typescript/frontend/query/tanstack-query.md)
+│       │   │   ├── apollo-client/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/query/apollo-client/SKILL.md)
+│       │   │   ├── axios/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/query/axios/SKILL.md)
+│       │   │   ├── swr/
+│       │   │   │   └── [SKILL.md](./languages/typescript/frontend/query/swr/SKILL.md)
+│       │   │   └── tanstack-query/
+│       │   │       └── [SKILL.md](./languages/typescript/frontend/query/tanstack-query/SKILL.md)
 │       │   └── state-management/
-│       │       ├── [jotai.md](./languages/typescript/frontend/state-management/jotai.md)
-│       │       ├── [nano-stores.md](./languages/typescript/frontend/state-management/nano-stores.md)
-│       │       ├── [redux.md](./languages/typescript/frontend/state-management/redux.md)
-│       │       ├── [xstate.md](./languages/typescript/frontend/state-management/xstate.md)
-│       │       └── [zustand.md](./languages/typescript/frontend/state-management/zustand.md)
+│       │       ├── jotai/
+│       │       │   └── [SKILL.md](./languages/typescript/frontend/state-management/jotai/SKILL.md)
+│       │       ├── nano-stores/
+│       │       │   └── [SKILL.md](./languages/typescript/frontend/state-management/nano-stores/SKILL.md)
+│       │       ├── redux/
+│       │       │   └── [SKILL.md](./languages/typescript/frontend/state-management/redux/SKILL.md)
+│       │       ├── xstate/
+│       │       │   └── [SKILL.md](./languages/typescript/frontend/state-management/xstate/SKILL.md)
+│       │       └── zustand/
+│       │           └── [SKILL.md](./languages/typescript/frontend/state-management/zustand/SKILL.md)
 │       ├── game/
-│       │   └── [cocos-creator.md](./languages/typescript/game/cocos-creator.md)
+│       │   └── cocos-creator/
+│       │       └── [SKILL.md](./languages/typescript/game/cocos-creator/SKILL.md)
 │       ├── ide/
-│       │   └── [web-storm.md](./languages/typescript/ide/web-storm.md)
+│       │   └── web-storm/
+│       │       └── [SKILL.md](./languages/typescript/ide/web-storm/SKILL.md)
+│       ├── javascript/
+│       │   └── [SKILL.md](./languages/typescript/javascript/SKILL.md)
 │       ├── ml/
-│       │   ├── [brain.js.md](./languages/typescript/ml/brain.js.md)
-│       │   ├── [mind.js.md](./languages/typescript/ml/mind.js.md)
-│       │   ├── [ml5.js.md](./languages/typescript/ml/ml5.js.md)
-│       │   └── [synaptic.js.md](./languages/typescript/ml/synaptic.js.md)
+│       │   ├── brain.js/
+│       │   │   └── [SKILL.md](./languages/typescript/ml/brain.js/SKILL.md)
+│       │   ├── mind.js/
+│       │   │   └── [SKILL.md](./languages/typescript/ml/mind.js/SKILL.md)
+│       │   ├── ml5.js/
+│       │   │   └── [SKILL.md](./languages/typescript/ml/ml5.js/SKILL.md)
+│       │   └── synaptic.js/
+│       │       └── [SKILL.md](./languages/typescript/ml/synaptic.js/SKILL.md)
 │       ├── orm/
-│       │   ├── [drizzle.md](./languages/typescript/orm/drizzle.md)
-│       │   ├── [mikro-orm.md](./languages/typescript/orm/mikro-orm.md)
-│       │   ├── [mongoose.md](./languages/typescript/orm/mongoose.md)
-│       │   ├── [prisma.md](./languages/typescript/orm/prisma.md)
-│       │   ├── [sequelize.md](./languages/typescript/orm/sequelize.md)
-│       │   └── [type-orm.md](./languages/typescript/orm/type-orm.md)
+│       │   ├── drizzle/
+│       │   │   └── [SKILL.md](./languages/typescript/orm/drizzle/SKILL.md)
+│       │   ├── mikro-orm/
+│       │   │   └── [SKILL.md](./languages/typescript/orm/mikro-orm/SKILL.md)
+│       │   ├── mongoose/
+│       │   │   └── [SKILL.md](./languages/typescript/orm/mongoose/SKILL.md)
+│       │   ├── prisma/
+│       │   │   └── [SKILL.md](./languages/typescript/orm/prisma/SKILL.md)
+│       │   ├── sequelize/
+│       │   │   └── [SKILL.md](./languages/typescript/orm/sequelize/SKILL.md)
+│       │   └── type-orm/
+│       │       └── [SKILL.md](./languages/typescript/orm/type-orm/SKILL.md)
 │       ├── package/
 │       │   ├── manager/
-│       │   │   ├── [npm.md](./languages/typescript/package/manager/npm.md)
-│       │   │   ├── [pnpm.md](./languages/typescript/package/manager/pnpm.md)
-│       │   │   ├── [volt.md](./languages/typescript/package/manager/volt.md)
-│       │   │   └── [yarn.md](./languages/typescript/package/manager/yarn.md)
+│       │   │   ├── npm/
+│       │   │   │   └── [SKILL.md](./languages/typescript/package/manager/npm/SKILL.md)
+│       │   │   ├── pnpm/
+│       │   │   │   └── [SKILL.md](./languages/typescript/package/manager/pnpm/SKILL.md)
+│       │   │   ├── volta/
+│       │   │   │   └── [SKILL.md](./languages/typescript/package/manager/volta/SKILL.md)
+│       │   │   └── yarn/
+│       │   │       └── [SKILL.md](./languages/typescript/package/manager/yarn/SKILL.md)
 │       │   └── registry/
-│       │       ├── [github-packages.md](./languages/typescript/package/registry/github-packages.md)
-│       │       └── [jsr.md](./languages/typescript/package/registry/jsr.md)
+│       │       ├── github-packages/
+│       │       │   └── [SKILL.md](./languages/typescript/package/registry/github-packages/SKILL.md)
+│       │       └── jsr/
+│       │           └── [SKILL.md](./languages/typescript/package/registry/jsr/SKILL.md)
 │       ├── runtime/
+│       │   ├── bun/
+│       │   │   └── [SKILL.md](./languages/typescript/runtime/bun/SKILL.md)
+│       │   ├── deno/
+│       │   │   └── [SKILL.md](./languages/typescript/runtime/deno/SKILL.md)
+│       │   ├── llrt/
+│       │   │   └── [SKILL.md](./languages/typescript/runtime/llrt/SKILL.md)
 │       │   ├── node/
-│       │   │   ├── [node.md](./languages/typescript/runtime/node/node.md)
-│       │   │   └── [nvm.md](./languages/typescript/runtime/node/nvm.md)
-│       │   ├── [bun.md](./languages/typescript/runtime/bun.md)
-│       │   ├── [deno.md](./languages/typescript/runtime/deno.md)
-│       │   ├── [llrt.md](./languages/typescript/runtime/llrt.md)
-│       │   └── [winter.js.md](./languages/typescript/runtime/winter.js.md)
+│       │   │   ├── nvm/
+│       │   │   │   └── [SKILL.md](./languages/typescript/runtime/node/nvm/SKILL.md)
+│       │   │   └── [SKILL.md](./languages/typescript/runtime/node/SKILL.md)
+│       │   └── winter.js/
+│       │       └── [SKILL.md](./languages/typescript/runtime/winter.js/SKILL.md)
 │       ├── testing/
 │       │   ├── e2e/
-│       │   │   ├── [cypress.md](./languages/typescript/testing/e2e/cypress.md)
-│       │   │   ├── [karma.md](./languages/typescript/testing/e2e/karma.md)
-│       │   │   ├── [playwright.md](./languages/typescript/testing/e2e/playwright.md)
-│       │   │   ├── [puppeteer.md](./languages/typescript/testing/e2e/puppeteer.md)
-│       │   │   └── [selenium.md](./languages/typescript/testing/e2e/selenium.md)
+│       │   │   ├── cypress/
+│       │   │   │   └── [SKILL.md](./languages/typescript/testing/e2e/cypress/SKILL.md)
+│       │   │   ├── karma/
+│       │   │   │   └── [SKILL.md](./languages/typescript/testing/e2e/karma/SKILL.md)
+│       │   │   ├── playwright/
+│       │   │   │   └── [SKILL.md](./languages/typescript/testing/e2e/playwright/SKILL.md)
+│       │   │   ├── puppeteer/
+│       │   │   │   └── [SKILL.md](./languages/typescript/testing/e2e/puppeteer/SKILL.md)
+│       │   │   └── selenium/
+│       │   │       └── [SKILL.md](./languages/typescript/testing/e2e/selenium/SKILL.md)
 │       │   └── unit/
-│       │       ├── [jasmine.js.md](./languages/typescript/testing/unit/jasmine.js.md)
-│       │       ├── [jest.js.md](./languages/typescript/testing/unit/jest.js.md)
-│       │       ├── [mocha.js.md](./languages/typescript/testing/unit/mocha.js.md)
-│       │       ├── [testing-library.md](./languages/typescript/testing/unit/testing-library.md)
-│       │       └── [vitest.md](./languages/typescript/testing/unit/vitest.md)
+│       │       ├── jasmine.js/
+│       │       │   └── [SKILL.md](./languages/typescript/testing/unit/jasmine.js/SKILL.md)
+│       │       ├── jest.js/
+│       │       │   └── [SKILL.md](./languages/typescript/testing/unit/jest.js/SKILL.md)
+│       │       ├── mocha.js/
+│       │       │   └── [SKILL.md](./languages/typescript/testing/unit/mocha.js/SKILL.md)
+│       │       ├── testing-library/
+│       │       │   └── [SKILL.md](./languages/typescript/testing/unit/testing-library/SKILL.md)
+│       │       └── vitest/
+│       │           └── [SKILL.md](./languages/typescript/testing/unit/vitest/SKILL.md)
 │       ├── tools/
-│       │   ├── [biome.md](./languages/typescript/tools/biome.md)
-│       │   ├── [eslint.md](./languages/typescript/tools/eslint.md)
-│       │   ├── [husky.md](./languages/typescript/tools/husky.md)
-│       │   └── [prettier.md](./languages/typescript/tools/prettier.md)
-│       ├── [javascript.md](./languages/typescript/javascript.md)
-│       └── [typescript.md](./languages/typescript/typescript.md)
+│       │   ├── biome/
+│       │   │   └── [SKILL.md](./languages/typescript/tools/biome/SKILL.md)
+│       │   ├── eslint/
+│       │   │   └── [SKILL.md](./languages/typescript/tools/eslint/SKILL.md)
+│       │   ├── husky/
+│       │   │   └── [SKILL.md](./languages/typescript/tools/husky/SKILL.md)
+│       │   └── prettier/
+│       │       └── [SKILL.md](./languages/typescript/tools/prettier/SKILL.md)
+│       └── [SKILL.md](./languages/typescript/SKILL.md)
 ├── saas/
 │   ├── auth/
-│   │   ├── [auth0.md](./saas/auth/auth0.md)
-│   │   ├── [clerk.md](./saas/auth/clerk.md)
-│   │   ├── [keycloak.md](./saas/auth/keycloak.md)
-│   │   ├── [okta.md](./saas/auth/okta.md)
-│   │   ├── [onelogin.md](./saas/auth/onelogin.md)
-│   │   ├── [osso.md](./saas/auth/osso.md)
-│   │   └── [zitadel.md](./saas/auth/zitadel.md)
+│   │   ├── auth0/
+│   │   │   └── [SKILL.md](./saas/auth/auth0/SKILL.md)
+│   │   ├── clerk/
+│   │   │   └── [SKILL.md](./saas/auth/clerk/SKILL.md)
+│   │   ├── keycloak/
+│   │   │   └── [SKILL.md](./saas/auth/keycloak/SKILL.md)
+│   │   ├── okta/
+│   │   │   └── [SKILL.md](./saas/auth/okta/SKILL.md)
+│   │   ├── onelogin/
+│   │   │   └── [SKILL.md](./saas/auth/onelogin/SKILL.md)
+│   │   ├── osso/
+│   │   │   └── [SKILL.md](./saas/auth/osso/SKILL.md)
+│   │   └── zitadel/
+│   │       └── [SKILL.md](./saas/auth/zitadel/SKILL.md)
 │   ├── email/
-│   │   ├── [mailchimp.md](./saas/email/mailchimp.md)
-│   │   ├── [mailgun.md](./saas/email/mailgun.md)
-│   │   ├── [postmark.md](./saas/email/postmark.md)
-│   │   ├── [resend.md](./saas/email/resend.md)
-│   │   └── [sendgrid.md](./saas/email/sendgrid.md)
+│   │   ├── mailchimp/
+│   │   │   └── [SKILL.md](./saas/email/mailchimp/SKILL.md)
+│   │   ├── mailgun/
+│   │   │   └── [SKILL.md](./saas/email/mailgun/SKILL.md)
+│   │   ├── postmark/
+│   │   │   └── [SKILL.md](./saas/email/postmark/SKILL.md)
+│   │   ├── resend/
+│   │   │   └── [SKILL.md](./saas/email/resend/SKILL.md)
+│   │   └── sendgrid/
+│   │       └── [SKILL.md](./saas/email/sendgrid/SKILL.md)
 │   └── payment/
-│       ├── [braintree.md](./saas/payment/braintree.md)
-│       ├── [dodopayments.md](./saas/payment/dodopayments.md)
-│       ├── [klarna.md](./saas/payment/klarna.md)
-│       ├── [lemonsqueezy.md](./saas/payment/lemonsqueezy.md)
-│       ├── [paddle.md](./saas/payment/paddle.md)
-│       ├── [paypal.md](./saas/payment/paypal.md)
-│       ├── [polar.md](./saas/payment/polar.md)
-│       ├── [revenuecat.md](./saas/payment/revenuecat.md)
-│       ├── [square.md](./saas/payment/square.md)
-│       └── [stripe.md](./saas/payment/stripe.md)
+│       ├── braintree/
+│       │   └── [SKILL.md](./saas/payment/braintree/SKILL.md)
+│       ├── dodopayments/
+│       │   └── [SKILL.md](./saas/payment/dodopayments/SKILL.md)
+│       ├── klarna/
+│       │   └── [SKILL.md](./saas/payment/klarna/SKILL.md)
+│       ├── lemonsqueezy/
+│       │   └── [SKILL.md](./saas/payment/lemonsqueezy/SKILL.md)
+│       ├── paddle/
+│       │   └── [SKILL.md](./saas/payment/paddle/SKILL.md)
+│       ├── paypal/
+│       │   └── [SKILL.md](./saas/payment/paypal/SKILL.md)
+│       ├── polar/
+│       │   └── [SKILL.md](./saas/payment/polar/SKILL.md)
+│       ├── revenuecat/
+│       │   └── [SKILL.md](./saas/payment/revenuecat/SKILL.md)
+│       ├── square/
+│       │   └── [SKILL.md](./saas/payment/square/SKILL.md)
+│       └── stripe/
+│           └── [SKILL.md](./saas/payment/stripe/SKILL.md)
 └── [TREE.md](./TREE.md)
 ```
 
-120 directories, 309 files
+403 directories, 309 files
