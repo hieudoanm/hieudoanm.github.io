@@ -211,6 +211,10 @@ landify,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/d
 landify,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-darwin-arm64
 landify,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-amd64
 landify,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-arm64
+pagify,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-darwin-amd64
+pagify,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-darwin-arm64
+pagify,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-linux-amd64
+pagify,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-linux-arm64
 vectify,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-vectify-latest/app-headless-vectify-vectify-darwin-amd64
 vectify,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-vectify-latest/app-headless-vectify-vectify-darwin-arm64
 vectify,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-vectify-latest/app-headless-vectify-vectify-linux-amd64

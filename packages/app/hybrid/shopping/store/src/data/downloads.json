@@ -1236,6 +1236,34 @@
         ]
       },
       {
+        "label": "Pagify",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiMarkdownLogo",
+        "href": "https://hieudoanm.github.io/open/pagify/",
+        "version": "latest",
+        "lastUpdated": "2026-10-04",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-linux-arm64"
+          }
+        ]
+      },
+      {
         "label": "Vectify",
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "",

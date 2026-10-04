@@ -13,7 +13,7 @@
 [twitter]: https://x.com/hieudoanm
 [instagram]: https://instagram.com/hieudoanm.github.io
 
-## [Open Releases (32)](https://hieudoanm.github.io/open)
+## [Open Releases (33)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions and Native Apps (3)
 
@@ -25,7 +25,7 @@
 
 ---
 
-### Headless (6)
+### Headless (7)
 
 | No  | Platform | Category        | Name           | Open                        | Releases                            |
 | --- | -------- | --------------- | -------------- | --------------------------- | ----------------------------------- |
@@ -34,6 +34,7 @@
 | 6   | Headless | Developer Tools | J.A.C.K.       | [Open][open-jack]           | [Releases][releases-jack]           |
 | 7   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
 | 8   | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
+| 9   | Headless | Developer Tools | Pagify         | [Open][open-pagify]         | [Releases][releases-pagify]         |
 | 9   | Headless | Developer Tools | Vectify        | [Open][open-vectify]        | [Releases][releases-vectify]        |
 
 ---
@@ -101,6 +102,7 @@
 [open-macosx]: https://hieudoanm.github.io/open/macosx/
 [open-kevin]: https://hieudoanm.github.io/open/kevin/
 [open-landify]: https://hieudoanm.github.io/open/landify/
+[open-pagify]: https://hieudoanm.github.io/open/pagify/
 [open-vectify]: https://hieudoanm.github.io/open/vectify/
 
 <!-- Releases -->
@@ -135,5 +137,6 @@
 [releases-backbone]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
 [releases-kevin]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
 [releases-landify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest
+[releases-pagify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-pagify-latest
 [releases-browserx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-browserx-latest
 [releases-vectify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-vectify-latest
