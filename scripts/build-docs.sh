@@ -146,6 +146,7 @@ build_pagify_docs() {
 title: hieudoanm.github.io
 language: en
 theme: auto
+basePath: /open
 footer: "© 2026 hieudoanm · Built with pagify"
 ---
 
