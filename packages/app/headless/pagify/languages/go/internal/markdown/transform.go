@@ -3,9 +3,9 @@ package markdown
 import (
 	"strings"
 
-	"github.com/yuin/goldmark/ast"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/text"
+	"github.com/yuin/goldmark/v2/ast"
+	"github.com/yuin/goldmark/v2/parser"
+	"github.com/yuin/goldmark/v2/text"
 )
 
 // attributeCallout stores the callout kind (note, tip, warning, danger) on a
@@ -64,12 +64,14 @@ func (t *transform) visit(node ast.Node) {
 	case *ast.Heading:
 		t.outline = append(t.outline, heading(n, t.source))
 	case *ast.Link:
-		n.Destination = t.destination(n.Destination)
+		dest := n.Destination.Bytes(t.source)
+		n.Destination = text.NewSingleLineValue(t.destination(dest), text.IdentityDecoder)
 	case *ast.Image:
-		n.Destination = t.destination(n.Destination)
+		dest := n.Destination.Bytes(t.source)
+		n.Destination = text.NewSingleLineValue(t.destination(dest), text.IdentityDecoder)
 	case *ast.Blockquote:
 		if kind, ok := t.callout(n); ok {
-			n.SetAttributeString(attributeCallout, kind)
+			n.SetAttribute(attributeCallout, text.NewMultiLineValue(kind, text.IdentityDecoder))
 		}
 	}
 }
@@ -123,15 +125,15 @@ func (t *transform) findCallout(paragraph *ast.Paragraph) (calloutMatch, bool) {
 	var marker strings.Builder
 
 	for child := paragraph.FirstChild(); child != nil; child = child.NextSibling() {
-		text, ok := child.(*ast.Text)
+		textNode, ok := child.(*ast.Text)
 		if !ok {
 			break
 		}
 		// The marker is matched across nodes, but it is trimmed one node at a
 		// time, so remember where the current node begins within the marker.
 		offset := marker.Len()
-		match.nodes = append(match.nodes, text)
-		marker.Write(segmentText(text, t.source))
+		match.nodes = append(match.nodes, textNode)
+		marker.Write(textNode.Value.Bytes(t.source))
 
 		if label, end, done := parseCalloutMarker(marker.String()); done {
 			match.label, match.tail = label, end-offset
@@ -168,9 +170,11 @@ func parseCalloutMarker(marker string) (label string, end int, done bool) {
 // unlinked; a final node holding inline content after the bracket is trimmed.
 func stripCallout(match calloutMatch, source []byte) {
 	for _, node := range match.nodes[:len(match.nodes)-1] {
-		node.Parent().RemoveChild(node.Parent(), node)
+		node.Parent().RemoveChild(node)
 	}
 	last := match.nodes[len(match.nodes)-1]
-	last.Segment = last.Segment.WithStart(last.Segment.Start + match.tail)
-	last.Segment = last.Segment.TrimLeftSpace(source)
+	// Create a new SingleLineValue with the trimmed content
+	newBytes := last.Value.Bytes(source)[match.tail:]
+	trimmed := strings.TrimLeft(string(newBytes), " \t\n\r")
+	last.Value = text.NewSingleLineValue(trimmed, text.IdentityDecoder)
 }

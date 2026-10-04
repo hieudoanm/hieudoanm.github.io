@@ -6,15 +6,13 @@ package markdown
 import (
 	"bytes"
 	"fmt"
+	"io"
 
-	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/ast"
-	"github.com/yuin/goldmark/extension"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/renderer"
-	"github.com/yuin/goldmark/renderer/html"
-	"github.com/yuin/goldmark/text"
-	"github.com/yuin/goldmark/util"
+	"github.com/yuin/goldmark/v2/ast"
+	"github.com/yuin/goldmark/v2/extension"
+	"github.com/yuin/goldmark/v2/parser"
+	"github.com/yuin/goldmark/v2/renderer"
+	"github.com/yuin/goldmark/v2/renderer/html"
 )
 
 // calloutPriority is lower than goldmark's own HTML renderer (1000), so the
@@ -36,43 +34,44 @@ type Document struct {
 	Title string
 }
 
-// Renderer converts Markdown to documents. The goldmark instance holds no
+// Renderer converts Markdown to documents. The parser and renderer hold no
 // per-document state, so one Renderer serves a whole site.
 type Renderer struct {
-	md goldmark.Markdown
+	p parser.Parser
+	r renderer.Renderer[io.Writer]
 }
 
 // NewRenderer returns a Renderer with the extensions pagify enables by
 // default: GitHub-flavoured tables, task lists, strikethrough and autolinks,
 // footnotes, automatic heading ids, and raw HTML passthrough.
 func NewRenderer() *Renderer {
-	return &Renderer{md: goldmark.New(
-		goldmark.WithExtensions(extension.GFM, extension.Footnote),
-		goldmark.WithParserOptions(parser.WithAutoHeadingID()),
-		goldmark.WithRendererOptions(
-			// Authors embed figures, badges and <details> blocks. This is
-			// their own local Markdown, not untrusted input.
-			html.WithUnsafe(),
-			renderer.WithNodeRenderers(
-				util.Prioritized(&calloutRenderer{}, calloutPriority),
-			),
+	p := parser.New(
+		parser.WithExtensions(extension.GFMParser, extension.FootnoteParser),
+		parser.WithAutoHeadingID(),
+	)
+	r := html.New(
+		html.WithExtensions(
+			extension.GFMHTMLRenderer,
+			extension.FootnoteHTMLRenderer,
+			CalloutHTMLExtension(),
 		),
-	)}
+		html.WithUnsafe(),
+	)
+	return &Renderer{p: p, r: r}
 }
 
 // Render converts src to a Document. resolve may be nil, in which case link
 // and image destinations are left exactly as written.
 func (r *Renderer) Render(src []byte, resolve Resolver) (*Document, error) {
-	reader := text.NewReader(src)
-	tree := r.md.Parser().Parse(reader)
+	tree := r.p.Parse(src)
 	doc := tree.(*ast.Document)
 
 	title := takeLeadingTitle(doc, src)
 	walk := newTransform(src, resolve)
-	walk.Transform(doc, reader, parser.NewContext())
+	walk.Transform(doc, nil, parser.NewContext())
 
 	var buf bytes.Buffer
-	if err := r.md.Renderer().Render(&buf, src, tree); err != nil {
+	if err := r.r.Render(&buf, src, tree); err != nil {
 		return nil, fmt.Errorf("render markdown: %w", err)
 	}
 	return &Document{HTML: buf.Bytes(), Outline: walk.outline, Title: title}, nil

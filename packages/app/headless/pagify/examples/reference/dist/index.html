@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Reference · API Reference</title>
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">API Reference</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/"
+    aria-current="page">API Reference</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/build/"
+    >build Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/markdown/"
+    >markdown Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/site/"
+    >site Package</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">API Reference</h1>
+          
+          <p>Complete API reference for pagify's internal packages.</p>
+<h2 id="packages">Packages</h2>
+<ul>
+<li><a href="./build/">build</a> — Site building pipeline</li>
+<li><a href="./markdown/">markdown</a> — Markdown rendering</li>
+<li><a href="./site/">site</a> — Content discovery and navigation</li>
+<li><a href="./theme/">theme</a> — Theme and template system</li>
+<li><a href="./server/">server</a> — Local development server</li>
+</ul>
+<h2 id="quick-reference">Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Build()</code></td>
+<td>build</td>
+<td>Main build entry point</td>
+</tr>
+<tr>
+<td><code>NewRenderer()</code></td>
+<td>markdown</td>
+<td>Create Markdown renderer</td>
+</tr>
+<tr>
+<td><code>Discover()</code></td>
+<td>site</td>
+<td>Find all content files</td>
+</tr>
+<tr>
+<td><code>Default()</code></td>
+<td>theme</td>
+<td>Get default theme</td>
+</tr>
+<tr>
+<td><code>Serve()</code></td>
+<td>server</td>
+<td>Start dev server</td>
+</tr>
+</tbody>
+</table>
+<h2 id="version">Version</h2>
+<p>Current version: <strong>v0.1.0</strong></p>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#packages">Packages</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#quick-reference">Quick Reference</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#version">Version</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 API Reference</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

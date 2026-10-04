@@ -8,29 +8,17 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// configFileName is the optional file that overrides inferred site metadata.
-// Everything in it has a working default, so a site with no config file at all
-// builds exactly as well as one with a full config file.
 const configFileName = "pagify.yaml"
 
-// Config is the optional pagify.yaml at the content root. It exists to give a
-// site a name, a language and a footer without renaming content files.
 type Config struct {
-	// Title is the site name shown in the header and page titles.
-	Title string `yaml:"title"`
-	// Language is the value of the html lang attribute.
-	Language string `yaml:"language"`
-	// BasePath is the URL prefix the site is served under, e.g. "/my-repo" for
-	// a project page on GitHub Pages. Empty means the domain root.
-	BasePath string `yaml:"basePath"`
-	// Theme is the initial colour scheme, "light" or "dark".
-	Theme string `yaml:"theme"`
-	// Footer is an optional line of text below the page content.
-	Footer string `yaml:"footer"`
+	Title     string `yaml:"title"`
+	Language  string `yaml:"language"`
+	BasePath  string `yaml:"basePath"`
+	Theme     string `yaml:"theme"`
+	Footer    string `yaml:"footer"`
+	FromIndex bool
 }
 
-// withDefaults fills unset fields so the rest of the build can treat every
-// field as present.
 func (c Config) withDefaults(fallbackTitle string) Config {
 	if c.Title == "" {
 		c.Title = fallbackTitle
@@ -45,8 +33,6 @@ func (c Config) withDefaults(fallbackTitle string) Config {
 	return c
 }
 
-// normalizeBasePath makes basePath either empty or a slash-delimited prefix
-// with no trailing slash, so joining it onto a URL never doubles a separator.
 func normalizeBasePath(basePath string) string {
 	if basePath == "" || basePath == "/" {
 		return ""
@@ -54,7 +40,6 @@ func normalizeBasePath(basePath string) string {
 	return "/" + trimSlashes(basePath)
 }
 
-// trimSlashes removes leading and trailing slashes.
 func trimSlashes(value string) string {
 	for len(value) > 0 && value[0] == '/' {
 		value = value[1:]
@@ -65,11 +50,26 @@ func trimSlashes(value string) string {
 	return value
 }
 
-// LoadConfig reads pagify.yaml from contentDir. A missing file is not an error:
-// the site falls back to defaults derived from the directory name. A file that
-// exists but cannot be parsed is an error, because silently ignoring a
-// malformed config would be far more confusing than failing the build.
-func LoadConfig(contentDir string) (Config, error) {
+// LoadConfig loads site configuration. It first checks for site-wide frontmatter
+// in the index page (index.md). If not found, it falls back to pagify.yaml.
+// If neither exists, defaults are derived from the directory name.
+func LoadConfig(contentDir string, indexFrontmatter map[string]string) (Config, error) {
+	// If index frontmatter has site fields, use those
+	if indexFrontmatter != nil {
+		if hasSiteFields(indexFrontmatter) {
+			config := Config{
+				Title:     indexFrontmatter["title"],
+				Language:  indexFrontmatter["language"],
+				BasePath:  indexFrontmatter["basePath"],
+				Theme:     indexFrontmatter["theme"],
+				Footer:    indexFrontmatter["footer"],
+				FromIndex: true,
+			}
+			return config.withDefaults(defaultTitle(contentDir)), nil
+		}
+	}
+
+	// Fall back to pagify.yaml
 	path := filepath.Join(contentDir, configFileName)
 	raw, err := os.ReadFile(path)
 	if os.IsNotExist(err) {
@@ -86,8 +86,16 @@ func LoadConfig(contentDir string) (Config, error) {
 	return config.withDefaults(defaultTitle(contentDir)), nil
 }
 
-// defaultTitle turns the content directory's own name into a site title, so
-// `pagify build ./docs` produces a site called "Docs" without any config.
+func hasSiteFields(fm map[string]string) bool {
+	fields := []string{"language", "basePath", "theme", "footer"}
+	for _, field := range fields {
+		if fm[field] != "" {
+			return true
+		}
+	}
+	return false
+}
+
 func defaultTitle(contentDir string) string {
 	absolute, err := filepath.Abs(contentDir)
 	if err != nil {

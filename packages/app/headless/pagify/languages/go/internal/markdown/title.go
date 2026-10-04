@@ -1,7 +1,7 @@
 package markdown
 
 import (
-	"github.com/yuin/goldmark/ast"
+	"github.com/yuin/goldmark/v2/ast"
 )
 
 // titleHeadingLevel is the heading level a document title is taken from. A
@@ -23,6 +23,6 @@ func takeLeadingTitle(doc *ast.Document, source []byte) string {
 		return ""
 	}
 	title := headingText(heading, source)
-	doc.RemoveChild(doc, heading)
+	doc.RemoveChild(heading)
 	return title
 }

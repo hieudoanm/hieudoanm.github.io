@@ -6,6 +6,8 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HYBRID_DIR="$ROOT_DIR/packages/app/hybrid"
 DOCS_DIR="$ROOT_DIR/docs"
 ROOT_APP="utilities/docs"
+PAGIFY_DIR="$ROOT_DIR/packages/app/headless/pagify/languages/go"
+PAGIFY_BIN="$PAGIFY_DIR/bin/pagify"
 
 build_app() {
     local app_path="$1"
@@ -116,48 +118,46 @@ copy_data_public() {
     touch "$dest_dir/.nojekyll"
 }
 
-init_docsify() {
-    local docsify_lib="$ROOT_DIR/node_modules/docsify/lib"
-    local open_dir="$DOCS_DIR/open"
-    local assets_dir="$open_dir/docsify"
-
-    if [[ ! -f "$docsify_lib/docsify.min.js" ]]; then
-        echo "Error: docsify is not installed. Run 'pnpm add -D docsify'." >&2
-        exit 1
+ensure_pagify() {
+    if [[ ! -x "$PAGIFY_BIN" ]]; then
+        echo "Building pagify..."
+        (
+            cd "$PAGIFY_DIR"
+            make build
+        )
     fi
+}
 
-    echo "Initializing docsify at $open_dir..."
-    mkdir -p "$assets_dir"
-    cp "$docsify_lib/docsify.min.js" "$assets_dir/docsify.min.js"
-    cp "$docsify_lib/themes/vue.css" "$assets_dir/vue.css"
+build_pagify_docs() {
+    ensure_pagify
+    local content_dir="$DOCS_DIR/content"
+    local output_dir="$DOCS_DIR/open"
 
-    cat > "$open_dir/index.html" <<'HTML'
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>hieudoanm · Free</title>
-    <link rel="stylesheet" href="./docsify/vue.css" />
-  </head>
-  <body>
-    <div id="app">Loading...</div>
-    <script>
-      window.$docsify = {
-        name: 'hieudoanm',
-        repo: 'https://github.com/hieudoanm/hieudoanm.github.io',
-        loadSidebar: false,
-        maxLevel: 3
-      };
-    </script>
-    <script src="./docsify/docsify.min.js"></script>
-  </body>
-</html>
-HTML
+    echo "Building documentation with pagify..."
 
-    echo "Copying $ROOT_DIR/README.md -> $open_dir/README.md"
-    cp "$ROOT_DIR/README.md" "$open_dir/README.md"
-    touch "$open_dir/.nojekyll"
+    mkdir -p "$content_dir"
+
+    # Copy README.md as index.md (like docsify default)
+    cp "$ROOT_DIR/README.md" "$content_dir/index.md"
+
+    # Add frontmatter to the README
+    cat > "$content_dir/index.md.tmp" <<'EOF'
+---
+title: hieudoanm.github.io
+language: en
+theme: auto
+footer: "© 2026 hieudoanm · Built with pagify"
+---
+
+EOF
+    cat "$content_dir/index.md" >> "$content_dir/index.md.tmp"
+    mv "$content_dir/index.md.tmp" "$content_dir/index.md"
+
+    # Build with pagify
+    "$PAGIFY_BIN" build "$content_dir" --output "$output_dir"
+
+    touch "$output_dir/.nojekyll"
+    echo "Documentation built to $output_dir"
 }
 
 verify_open() {
@@ -239,7 +239,7 @@ copy_landing_pages "$ROOT_DIR/packages/extensions/browser"
 
 copy_data_public
 
-init_docsify
+build_pagify_docs
 
 echo "Done."
 

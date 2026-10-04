@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tips · pagify Blog</title>
+    
+    <meta name="description" content="Tips and tricks for pagify" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">pagify Blog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >pagify Blog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/customizing-your-site/"
+    >Customizing Your Site</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/introducing-pagify-v0-1/"
+    >Introducing pagify v0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/writing-markdown-for-pagify/"
+    >Writing Markdown for pagify</a
+  > 
+</li><li class="nav__item nav__item--group">
+  <span class="nav__heading">Category</span> <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/releases/"
+    >Releases</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/category/tips/"
+    aria-current="page">Tips</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/tutorials/"
+    >Tutorials</a
+  > 
+</li>
+</ul>
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">Tips</h1>
+          
+          <p class="markdown__lede">Tips and tricks for pagify</p>
+          
+          <p>Quick tips and tricks for getting the most out of pagify.</p>
+<h2 id="coming-soon">Coming Soon</h2>
+<p>More tips will be added here.</p>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#coming-soon">Coming Soon</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify Blog</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

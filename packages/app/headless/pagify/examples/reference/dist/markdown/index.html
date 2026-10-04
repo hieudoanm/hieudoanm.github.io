@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>markdown Package · API Reference</title>
+    
+    <meta name="description" content="Markdown rendering with Goldmark" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">API Reference</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >API Reference</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/build/"
+    >build Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/markdown/"
+    aria-current="page">markdown Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/site/"
+    >site Package</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">markdown Package</h1>
+          
+          <p class="markdown__lede">Markdown rendering with Goldmark</p>
+          
+          <p>Markdown rendering using Goldmark v2 with GitHub-flavored extensions.</p>
+<h2 id="types">Types</h2>
+<h3 id="renderer">Renderer</h3>
+<pre><code class="language-go">r := markdown.NewRenderer()
+doc, err := r.Render([]byte(&quot;# Hello&quot;), nil)
+</code></pre>
+<h3 id="document">Document</h3>
+<pre><code class="language-go">type Document struct {
+    HTML    []byte
+    Outline Outline
+    Title   string
+}
+</code></pre>
+<h3 id="resolver">Resolver</h3>
+<pre><code class="language-go">type Resolver func(destination []byte) []byte
+</code></pre>
+<p>Rewrites link/image destinations during rendering.</p>
+<h2 id="extensions-enabled">Extensions Enabled</h2>
+<ul>
+<li>GFM (tables, task lists, strikethrough, autolinks)</li>
+<li>Footnotes</li>
+<li>Auto heading IDs</li>
+<li>Raw HTML passthrough</li>
+<li>Callouts (<code>&gt; [!NOTE]</code>, etc.)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;pagify/internal/markdown&quot;
+)
+
+func main() {
+    r := markdown.NewRenderer()
+
+    src := []byte(`
+# Title
+
+&gt; [!TIP]
+&gt; This is a tip.
+
+## Section
+
+Content here.
+    `)
+
+    doc, err := r.Render(src, nil)
+    if err != nil {
+        panic(err)
+    }
+
+    fmt.Println(string(doc.HTML))
+    fmt.Println(&quot;Title:&quot;, doc.Title)
+    for _, h := range doc.Outline {
+        fmt.Printf(&quot;  H%d: %s (%s)\n&quot;, h.Level, h.Text, h.ID)
+    }
+}
+</code></pre>
+<h2 id="frontmatter">Frontmatter</h2>
+<p>Frontmatter is parsed separately using <code>SplitFrontmatter()</code>:</p>
+<pre><code class="language-go">fm, body, ok, err := markdown.SplitFrontmatter(src)
+</code></pre>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#types">Types</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#renderer">Renderer</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#document">Document</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#resolver">Resolver</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#extensions-enabled">Extensions Enabled</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#example">Example</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#frontmatter">Frontmatter</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 API Reference</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

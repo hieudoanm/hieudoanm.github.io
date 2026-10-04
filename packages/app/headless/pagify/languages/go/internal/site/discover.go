@@ -7,6 +7,8 @@ import (
 	"path"
 	"path/filepath"
 	"strings"
+
+	"pagify/internal/markdown"
 )
 
 // skippedDirs are directory names never descended into: version-control
@@ -52,6 +54,8 @@ type Content struct {
 	Pages Pages
 	// Assets maps a path relative to the content root to its bytes.
 	Assets map[string][]byte
+	// IndexFrontmatter holds site-wide config from the index page's frontmatter.
+	IndexFrontmatter map[string]string
 }
 
 // Discover walks root and returns every Markdown page and asset below it. root
@@ -118,6 +122,11 @@ func (c *Content) file(source, name string, raw []byte) error {
 			return fmt.Errorf("parse %s: %w", source, err)
 		}
 		c.Pages = append(c.Pages, page)
+
+		// If this is the site's index page, extract site-wide frontmatter
+		if page.URL == "/" && c.IndexFrontmatter == nil {
+			c.IndexFrontmatter = extractSiteFrontmatter(raw)
+		}
 		return nil
 	}
 	c.Assets[source] = raw
@@ -148,4 +157,30 @@ func skipDirOrNil(entry fs.DirEntry) error {
 // rather than to the documentation, such as `_sidebar.md` or `pagify.yaml`.
 func isPartial(name string) bool {
 	return strings.HasPrefix(name, "_") || partialNames[name]
+}
+
+// extractSiteFrontmatter parses the frontmatter from the index page's raw
+// content and returns site-wide fields as a map.
+func extractSiteFrontmatter(raw []byte) map[string]string {
+	fm, _, _, err := markdown.SplitFrontmatter(raw)
+	if err != nil {
+		return nil
+	}
+	result := make(map[string]string)
+	if fm.Language != "" {
+		result["language"] = fm.Language
+	}
+	if fm.BasePath != "" {
+		result["basePath"] = fm.BasePath
+	}
+	if fm.Theme != "" {
+		result["theme"] = fm.Theme
+	}
+	if fm.Footer != "" {
+		result["footer"] = fm.Footer
+	}
+	if fm.Title != "" {
+		result["title"] = fm.Title
+	}
+	return result
 }

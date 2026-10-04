@@ -13,12 +13,28 @@ var fence = []byte("---")
 // Frontmatter holds the page metadata read from a leading YAML block. Every
 // field is optional; zero values mean "not set" and let the site builder fall
 // back to conventions derived from the file path.
+//
+// For the index page, additional site-wide fields are supported:
+//
+//	---
+//	title: My Documentation
+//	language: en
+//	basePath: /my-repo
+//	theme: light
+//	footer: "© 2024 Example"
+//	---
 type Frontmatter struct {
 	Title       string `yaml:"title"`
 	Description string `yaml:"description"`
 	Order       *int   `yaml:"order"`
 	Draft       bool   `yaml:"draft"`
 	Label       string `yaml:"label"`
+
+	// Site-wide fields (only read from the index page)
+	Language string `yaml:"language"`
+	BasePath string `yaml:"basePath"`
+	Theme    string `yaml:"theme"`
+	Footer   string `yaml:"footer"`
 }
 
 // TitleOr returns fm.Title when set, otherwise fallback.

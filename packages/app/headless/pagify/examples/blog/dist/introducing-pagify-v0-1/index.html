@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Introducing pagify v0.1 · pagify Blog</title>
+    
+    <meta name="description" content="Announcing the first release of pagify - a zero-config static site generator for documentation" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">pagify Blog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >pagify Blog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/customizing-your-site/"
+    >Customizing Your Site</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/introducing-pagify-v0-1/"
+    aria-current="page">Introducing pagify v0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/writing-markdown-for-pagify/"
+    >Writing Markdown for pagify</a
+  > 
+</li><li class="nav__item nav__item--group">
+  <span class="nav__heading">Category</span> <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/releases/"
+    >Releases</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/tips/"
+    >Tips</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/tutorials/"
+    >Tutorials</a
+  > 
+</li>
+</ul>
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">Introducing pagify v0.1</h1>
+          
+          <p class="markdown__lede">Announcing the first release of pagify - a zero-config static site generator for documentation</p>
+          
+          <p>We're excited to announce the first release of <strong>pagify</strong> — a zero-configuration static site generator designed specifically for documentation.</p>
+<h2 id="why-pagify">Why pagify?</h2>
+<p>Most documentation tools require complex configuration, Node.js dependencies, or a build pipeline. pagify takes a different approach:</p>
+<ul>
+<li><strong>Zero config</strong> — Point it at a directory of Markdown files</li>
+<li><strong>Single binary</strong> — No Node.js, no npm, no Python</li>
+<li><strong>Beautiful by default</strong> — Polished theme with dark mode, search, and responsive design</li>
+<li><strong>Fast</strong> — Builds complete sites in milliseconds</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<pre><code class="language-bash"># Install
+go install github.com/hieudoanm/pagify@latest
+
+# Create a docs folder
+mkdir docs
+echo &quot;# Hello World&quot; &gt; docs/index.md
+
+# Build
+pagify build ./docs
+</code></pre>
+<p>Your site is ready in <code>./dist</code> — deploy anywhere!</p>
+<h2 id="features">Features</h2>
+<h3 id="markdown-first">Markdown First</h3>
+<p>Write content in standard Markdown with GitHub-flavored extensions:</p>
+<ul>
+<li>Tables</li>
+<li>Task lists</li>
+<li>Footnotes</li>
+<li>Callouts (<code>&gt; [!NOTE]</code>, <code>&gt; [!TIP]</code>, etc.)</li>
+<li>Syntax highlighting</li>
+</ul>
+<h3 id="built-in-search">Built-in Search</h3>
+<p>Client-side search index generated at build time. No backend required.</p>
+<h3 id="dark-mode">Dark Mode</h3>
+<p>Automatic OS detection with manual toggle. Preference persists in localStorage.</p>
+<h3 id="responsive-design">Responsive Design</h3>
+<p>Sidebar navigation on desktop, collapsible drawer on mobile.</p>
+<h2 id="whats-next">What's Next</h2>
+<ul>
+<li>More themes</li>
+<li>Plugin system</li>
+<li>Multi-language support</li>
+<li><code>pagify check</code> for link validation</li>
+</ul>
+<h2 id="get-involved">Get Involved</h2>
+<ul>
+<li>⭐ Star us on <a href="https://github.com/hieudoanm/pagify">GitHub</a></li>
+<li>🐛 Report issues</li>
+<li>💡 Request features</li>
+<li>🤝 Contribute code</li>
+</ul>
+<hr>
+<p><em>Happy documenting!</em></p>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#why-pagify">Why pagify?</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#quick-start">Quick Start</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#features">Features</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#markdown-first">Markdown First</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#built-in-search">Built-in Search</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#dark-mode">Dark Mode</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#responsive-design">Responsive Design</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#whats-next">What&#39;s Next</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#get-involved">Get Involved</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify Blog</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

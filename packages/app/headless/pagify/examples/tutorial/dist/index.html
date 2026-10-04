@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pagify Tutorial · pagify Tutorial</title>
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">pagify Tutorial</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/"
+    aria-current="page">pagify Tutorial</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">pagify Tutorial</h1>
+          
+          <p>Learn pagify by building a documentation site step by step.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Go 1.21+ (for building from source)</li>
+<li>No Node.js, npm, or Python required</li>
+</ul>
+<h2 id="step-1-install-pagify">Step 1: Install pagify</h2>
+<pre><code class="language-bash"># Via Go
+go install github.com/hieudoanm/pagify@latest
+
+# Or build from source
+git clone https://github.com/hieudoanm/pagify
+cd pagify
+make build
+./bin/pagify --version
+</code></pre>
+<h2 id="step-2-create-your-content">Step 2: Create Your Content</h2>
+<pre><code class="language-bash">mkdir -p my-docs/docs
+</code></pre>
+<p>Create <code>my-docs/docs/index.md</code>:</p>
+<pre><code class="language-markdown">---
+title: My Project
+theme: auto
+footer: &quot;© 2024 My Project&quot;
+---
+
+# Welcome to My Project
+
+This is the home page of my documentation site.
+
+## Quick Links
+
+- [Getting Started](./getting-started/)
+- [API Reference](./reference/)
+</code></pre>
+<p>Create <code>my-docs/docs/getting-started.md</code>:</p>
+<pre><code class="language-markdown">---
+title: Getting Started
+description: Learn how to get started with My Project
+---
+
+# Getting Started
+
+Welcome! This guide will help you get up and running.
+
+## Installation
+
+```bash
+# Install the CLI
+go install github.com/my/project@latest
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>Create a config file:</p>
+<pre><code class="language-yaml"># config.yaml
+setting: value
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<p>Read the <a href="./reference/">API Reference</a> to learn more.</p>
+<pre><code>
+Create `my-docs/docs/reference/index.md`:
+
+```markdown
+---
+title: API Reference
+---
+
+# API Reference
+
+## Commands
+
+### `my-project run`
+
+Runs the application.
+
+### `my-project build`
+
+Builds the project.
+</code></pre>
+<h2 id="step-3-build-your-site">Step 3: Build Your Site</h2>
+<pre><code class="language-bash">pagify build ./my-docs/docs --output ./my-docs/dist
+</code></pre>
+<h2 id="step-4-preview-locally">Step 4: Preview Locally</h2>
+<pre><code class="language-bash">pagify serve ./my-docs/docs --port 8080
+</code></pre>
+<p>Open http://localhost:8080 in your browser.</p>
+<h2 id="step-5-deploy">Step 5: Deploy</h2>
+<p>Upload the <code>dist/</code> folder to any static host:</p>
+<ul>
+<li><strong>GitHub Pages</strong> — Push to <code>gh-pages</code> branch</li>
+<li><strong>Netlify</strong> — Drag and drop <code>dist/</code> folder</li>
+<li><strong>Vercel</strong> — <code>vercel deploy dist/</code></li>
+<li><strong>Cloudflare Pages</strong> — Connect Git repository</li>
+</ul>
+<h2 id="congratulations-">Congratulations! 🎉</h2>
+<p>You've built and deployed your first pagify site!</p>
+<h2 id="next-steps-1">Next Steps</h2>
+<ul>
+<li>Read the <a href="../blog/customizing-your-site/">Customization Guide</a></li>
+<li>Explore <a href="../blog/writing-markdown-for-pagify/">Markdown Features</a></li>
+<li>Check the <a href="../reference/">API Reference</a></li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#prerequisites">Prerequisites</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#step-1-install-pagify">Step 1: Install pagify</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#step-2-create-your-content">Step 2: Create Your Content</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#configuration">Configuration</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#next-steps">Next Steps</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#step-3-build-your-site">Step 3: Build Your Site</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#step-4-preview-locally">Step 4: Preview Locally</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#step-5-deploy">Step 5: Deploy</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#congratulations-">Congratulations! 🎉</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#next-steps-1">Next Steps</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify Tutorial</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

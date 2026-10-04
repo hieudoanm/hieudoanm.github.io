@@ -14,7 +14,7 @@ import (
 //go:embed default/template.html
 var templateSource embed.FS
 
-//go:embed default/styles.css default/script.js default/search.js default/favicon.svg
+//go:embed default/styles.css default/script.js default/search.js default/favicon.svg default/favicon-light.svg default/favicon-dark.svg
 var assetSource embed.FS
 
 // AssetDir is the output-relative directory theme assets are written to. The

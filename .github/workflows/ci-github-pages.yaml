@@ -41,6 +41,11 @@ jobs:
         uses: actions/setup-node@v7.0.0
         with:
           node-version-file: .nvmrc
+      - name: Install Go
+        uses: actions/setup-go@v7.0.0
+        with:
+          go-version-file: 'packages/app/headless/pagify/languages/go/go.mod'
+          cache-dependency-path: 'packages/app/headless/pagify/languages/go/go.sum'
       - name: Cache pnpm
         uses: actions/cache@v6.1.0
         with:
@@ -50,7 +55,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build Site
-        run: ./scripts/build-docs.sh --all
+        run: ./scripts/build-docs.sh
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v5.0.0
         with:

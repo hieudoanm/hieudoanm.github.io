@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basic Docs · Basic Docs</title>
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">Basic Docs</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/"
+    aria-current="page">Basic Docs</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/getting-started/"
+    >Getting Started</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/guide/"
+    >Guide</a
+  > <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/guide/configuration/"
+    >Configuration</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/guide/installation/"
+    >Installation</a
+  > 
+</li>
+</ul>
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">Basic Docs</h1>
+          
+          <p>This is a minimal <strong>pagify</strong> example showing how to create a documentation site with zero configuration.</p>
+<h2 id="quick-start">Quick Start</h2>
+<pre><code class="language-bash">pagify build ./docs
+</code></pre>
+<p>The output appears in <code>./dist</code> — ready to deploy anywhere.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Zero config</strong> — just Markdown files in a directory</li>
+<li><strong>Clean URLs</strong> — no <code>.html</code> extensions</li>
+<li><strong>Auto navigation</strong> — built from your file tree</li>
+<li><strong>Search</strong> — client-side, no backend needed</li>
+<li><strong>Dark mode</strong> — automatic + manual toggle</li>
+<li><strong>Responsive</strong> — works on mobile, tablet, desktop</li>
+</ul>
+<h2 id="project-structure">Project Structure</h2>
+<pre><code class="language-text">docs/
+├── index.md              # Home page
+├── getting-started.md    # First guide
+├── guide/
+│   ├── index.md          # Section landing
+│   ├── installation.md
+│   └── configuration.md
+└── reference/
+    └── cli.md
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<p>Read the <a href="./getting-started/">Getting Started</a> guide to learn more.</p>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#quick-start">Quick Start</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#features">Features</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#project-structure">Project Structure</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#next-steps">Next Steps</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 Basic Docs Example</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

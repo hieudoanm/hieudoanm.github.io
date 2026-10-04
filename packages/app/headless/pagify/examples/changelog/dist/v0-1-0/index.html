@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>v0.1.0 · Changelog</title>
+    
+    <meta name="description" content="Initial release of pagify" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">Changelog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >Changelog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/v0-1-0/"
+    aria-current="page">v0.1.0</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">v0.1.0</h1>
+          
+          <p class="markdown__lede">Initial release of pagify</p>
+          
+          <p>Released: January 15, 2024</p>
+<h2 id="added">Added</h2>
+<ul>
+<li><strong>Zero-configuration builds</strong> — Point at a directory of Markdown files, get a complete site</li>
+<li><strong>GitHub-flavored Markdown</strong> — Tables, task lists, strikethrough, autolinks, footnotes</li>
+<li><strong>Callouts</strong> — <code>&gt; [!NOTE]</code>, <code>&gt; [!TIP]</code>, <code>&gt; [!WARNING]</code>, <code>&gt; [!DANGER]</code> with aliases</li>
+<li><strong>Built-in search</strong> — Client-side search index, no backend required</li>
+<li><strong>Dark/light theme</strong> — Automatic OS detection, manual toggle, localStorage persistence</li>
+<li><strong>Responsive design</strong> — Sidebar on desktop, drawer on mobile</li>
+<li><strong>Syntax highlighting</strong> — Via CSS, no JavaScript required</li>
+<li><strong>Cross-page links</strong> — <code>.md</code> links rewritten to clean URLs</li>
+<li><strong>Frontmatter</strong> — Page metadata (title, description, order, label, draft)</li>
+<li><strong>Site config via frontmatter</strong> — title, language, basePath, theme, footer in index.md</li>
+<li><strong>Local dev server</strong> — <code>pagify serve</code> with live rebuild</li>
+<li><strong>MCP server</strong> — <code>pagify mcp</code> for AI tool integration</li>
+<li><strong>Single binary</strong> — Embedded assets, no Node.js, no runtime dependencies</li>
+</ul>
+<h2 id="fixed">Fixed</h2>
+<ul>
+<li>N/A (initial release)</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>N/A (initial release)</li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#added">Added</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#fixed">Fixed</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#security">Security</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

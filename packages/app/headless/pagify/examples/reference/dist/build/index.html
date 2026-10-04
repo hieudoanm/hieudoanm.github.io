@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>build Package · API Reference</title>
+    
+    <meta name="description" content="Site building pipeline" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">API Reference</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >API Reference</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/build/"
+    aria-current="page">build Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/markdown/"
+    >markdown Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/site/"
+    >site Package</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">build Package</h1>
+          
+          <p class="markdown__lede">Site building pipeline</p>
+          
+          <p>The <code>build</code> package orchestrates the complete site generation pipeline.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="buildopts-options-result-error">Build(opts Options) (Result, error)</h3>
+<p>Main entry point. Discovers content, renders pages, writes output.</p>
+<pre><code class="language-go">result, err := build.Build(build.Options{
+    ContentDir: &quot;./docs&quot;,
+    OutputDir:  &quot;./dist&quot;,
+})
+</code></pre>
+<h3 id="options">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ContentDir</td>
+<td>string</td>
+<td>Input directory (required)</td>
+</tr>
+<tr>
+<td>OutputDir</td>
+<td>string</td>
+<td>Output directory (required)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result">Result</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pages</td>
+<td>int</td>
+<td>Number of HTML pages generated</td>
+</tr>
+<tr>
+<td>Assets</td>
+<td>int</td>
+<td>Number of assets copied</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pipeline">Pipeline</h2>
+<ol>
+<li><strong>Load Config</strong> — Read site config from index.md frontmatter</li>
+<li><strong>Discover</strong> — Find all Markdown files and assets</li>
+<li><strong>Render</strong> — Convert Markdown to HTML</li>
+<li><strong>Write Pages</strong> — Execute templates, write HTML</li>
+<li><strong>Search Index</strong> — Generate search-index.json</li>
+<li><strong>Copy Assets</strong> — Copy theme assets and user assets</li>
+</ol>
+<h2 id="example">Example</h2>
+<pre><code class="language-go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;pagify/internal/build&quot;
+)
+
+func main() {
+    result, err := build.Build(build.Options{
+        ContentDir: &quot;./docs&quot;,
+        OutputDir:  &quot;./dist&quot;,
+    })
+    if err != nil {
+        panic(err)
+    }
+    fmt.Printf(&quot;Built %d pages, %d assets\n&quot;, result.Pages, result.Assets)
+}
+</code></pre>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#functions">Functions</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#buildopts-options-result-error">Build(opts Options) (Result, error)</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#options">Options</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#result">Result</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#pipeline">Pipeline</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#example">Example</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 API Reference</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

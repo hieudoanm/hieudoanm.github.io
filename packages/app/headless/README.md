@@ -1,9 +1,23 @@
 # Headless
 
-| No  | Headless                            | Primary | Secondary | Alternative |
-| --- | ----------------------------------- | ------- | --------- | ----------- |
-| 1   | [Backbone](./backbone/)             | Go      | Rust      | Kotlin      |
-| 2   | [Browserverless](./browserverless/) | Go      | Rust      |             |
-| 3   | [J.A.C.K.](./jack/)                 | Go      | Rust      | Kotlin      |
-| 4   | [KeVIN](./kevin/)                   | Go      | Rust      | Kotlin      |
-| 5   | [Landify](./landify/)               | Go      | Rust      | Kotlin      |
+## Projects
+
+| No  | Headless                            |
+| --- | ----------------------------------- |
+| 1   | [Backbone](./backbone/)             |
+| 2   | [Browserverless](./browserverless/) |
+| 3   | [J.A.C.K.](./jack/)                 |
+| 4   | [KeVIN](./kevin/)                   |
+| 5   | [Landify](./landify/)               |
+| 6   | [Pagify](./pagify/)                 |
+| 7   | [Vectify](./vectify/)               |
+
+## Techstack
+
+- Go
+  - Cobra CLI
+  - BubbleTea
+- Rust
+  - Clap.rs
+  - RatatUI
+- Kotlin

@@ -33,13 +33,13 @@ type Result struct {
 // Build renders the site described by opts. Config is loaded first because the
 // base path it may declare changes the URLs every page is published at.
 func Build(opts Options) (Result, error) {
-	config, err := LoadConfig(opts.ContentDir)
-	if err != nil {
-		return Result{}, err
-	}
 	content, err := site.Discover(opts.ContentDir)
 	if err != nil {
 		return Result{}, fmt.Errorf("discover content: %w", err)
+	}
+	config, err := LoadConfig(opts.ContentDir, content.IndexFrontmatter)
+	if err != nil {
+		return Result{}, err
 	}
 	selected, err := theme.Default()
 	if err != nil {

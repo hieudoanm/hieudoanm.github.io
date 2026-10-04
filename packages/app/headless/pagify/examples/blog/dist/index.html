@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pagify Blog · pagify Blog</title>
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">pagify Blog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/"
+    aria-current="page">pagify Blog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/customizing-your-site/"
+    >Customizing Your Site</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/introducing-pagify-v0-1/"
+    >Introducing pagify v0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/writing-markdown-for-pagify/"
+    >Writing Markdown for pagify</a
+  > 
+</li><li class="nav__item nav__item--group">
+  <span class="nav__heading">Category</span> <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/releases/"
+    >Releases</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/tips/"
+    >Tips</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/tutorials/"
+    >Tutorials</a
+  > 
+</li>
+</ul>
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">pagify Blog</h1>
+          
+          <p>Welcome to the official pagify blog. Here we share updates, tutorials, and insights about building documentation sites with pagify.</p>
+<h2 id="latest-posts">Latest Posts</h2>
+<h3 id="introducing-pagify-v01introducing-pagify-v0-1"><a href="./introducing-pagify-v0-1/">Introducing pagify v0.1</a></h3>
+<p><em>A new way to build documentation sites</em></p>
+<h3 id="writing-markdown-for-pagifywriting-markdown-for-pagify"><a href="./writing-markdown-for-pagify/">Writing Markdown for pagify</a></h3>
+<p><em>Tips and tricks for authoring content</em></p>
+<h3 id="customizing-your-sitecustomizing-your-site"><a href="./customizing-your-site/">Customizing Your Site</a></h3>
+<p><em>Themes, configuration, and more</em></p>
+<h2 id="categories">Categories</h2>
+<ul>
+<li><a href="./category/releases/">Releases</a></li>
+<li><a href="./category/tutorials/">Tutorials</a></li>
+<li><a href="./category/tips/">Tips</a></li>
+</ul>
+<h2 id="stay-updated">Stay Updated</h2>
+<p>Subscribe to our RSS feed or follow us on <a href="https://github.com/hieudoanm/pagify">GitHub</a> for the latest updates.</p>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#latest-posts">Latest Posts</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#introducing-pagify-v01introducing-pagify-v0-1">Introducing pagify v0.1</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#writing-markdown-for-pagifywriting-markdown-for-pagify">Writing Markdown for pagify</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#customizing-your-sitecustomizing-your-site">Customizing Your Site</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#categories">Categories</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#stay-updated">Stay Updated</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify Blog</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

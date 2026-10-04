@@ -174,3 +174,32 @@ func TestDiscoverFailsOnMissingDirectory(t *testing.T) {
 		t.Fatal("Discover succeeded on a missing directory, want an error")
 	}
 }
+
+func TestDiscoverExtractsSiteFrontmatterFromIndex(t *testing.T) {
+	root := t.TempDir()
+	writeFiles(t, root, map[string]string{
+		"index.md": "---\ntitle: My Site\nlanguage: en\nbasePath: /my-repo\ntheme: dark\nfooter: © 2024\n---\n\n# Home\n",
+		"guide.md": "# Guide\n",
+	})
+
+	content, err := Discover(root)
+	if err != nil {
+		t.Fatalf("Discover: %v", err)
+	}
+
+	if content.IndexFrontmatter == nil {
+		t.Fatal("IndexFrontmatter is nil, expected map with site config")
+	}
+	want := map[string]string{
+		"title":    "My Site",
+		"language": "en",
+		"basePath": "/my-repo",
+		"theme":    "dark",
+		"footer":   "© 2024",
+	}
+	for k, v := range want {
+		if content.IndexFrontmatter[k] != v {
+			t.Errorf("IndexFrontmatter[%q] = %q, want %q", k, content.IndexFrontmatter[k], v)
+		}
+	}
+}

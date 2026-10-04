@@ -41,6 +41,7 @@ No configuration, no theme wiring, no Node.js required.`,
 		newBuildCommand(stdout),
 		newServeCommand(stdout),
 		newInitCommand(stdout),
+		newMCPCommand(stdout),
 	)
 	return root
 }

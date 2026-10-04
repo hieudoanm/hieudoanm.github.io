@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>site Package · API Reference</title>
+    
+    <meta name="description" content="Content discovery and navigation" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">API Reference</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >API Reference</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/build/"
+    >build Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/markdown/"
+    >markdown Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/site/"
+    aria-current="page">site Package</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">site Package</h1>
+          
+          <p class="markdown__lede">Content discovery and navigation</p>
+          
+          <p>Discovers Markdown content, builds navigation tree, and resolves URLs.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="discoverroot-string-content-error">Discover(root string) (*Content, error)</h3>
+<p>Walks content directory, returns pages and assets.</p>
+<pre><code class="language-go">content, err := site.Discover(&quot;./docs&quot;)
+</code></pre>
+<h3 id="content">Content</h3>
+<pre><code class="language-go">type Content struct {
+    Pages  Pages
+    Assets map[string][]byte
+}
+</code></pre>
+<h2 id="page">Page</h2>
+<pre><code class="language-go">type Page struct {
+    Source       string
+    URL          string
+    Output       string
+    Title        string
+    Description  string
+    Label        string
+    Order        *int
+    Content      []byte
+    HTML         string
+    Outline      markdown.Outline
+}
+</code></pre>
+<h2 id="navigation">Navigation</h2>
+<pre><code class="language-go">nav := site.BuildNav(pages)
+</code></pre>
+<p>Returns <code>*Nav</code> with <code>Pages</code> (flat list) and <code>Groups</code> (hierarchical).</p>
+<h2 id="url-resolution">URL Resolution</h2>
+<ul>
+<li><code>URLForSource()</code> — content path → URL</li>
+<li><code>OutputPathForSource()</code> — content path → output file</li>
+<li><code>LinkResolverFor()</code> — resolves cross-references</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;pagify/internal/site&quot;
+)
+
+func main() {
+    content, err := site.Discover(&quot;./docs&quot;)
+    if err != nil {
+        panic(err)
+    }
+
+    fmt.Printf(&quot;Found %d pages:\n&quot;, len(content.Pages))
+    for _, p := range content.Pages {
+        fmt.Printf(&quot;  %s -&gt; %s\n&quot;, p.Source, p.URL)
+    }
+
+    nav := site.BuildNav(content.Pages)
+    fmt.Println(&quot;\nNavigation:&quot;)
+    printNav(nav.Pages, 0)
+}
+
+func printNav(pages []*site.Page, indent int) {
+    for _, p := range pages {
+        fmt.Printf(&quot;%s- %s (%s)\n&quot;, strings.Repeat(&quot;  &quot;, indent), p.Title, p.URL)
+    }
+}
+</code></pre>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#functions">Functions</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#discoverroot-string-content-error">Discover(root string) (\*Content, error)</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#content">Content</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#page">Page</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#navigation">Navigation</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#url-resolution">URL Resolution</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#example">Example</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 API Reference</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

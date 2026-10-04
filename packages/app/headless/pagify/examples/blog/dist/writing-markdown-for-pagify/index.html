@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Writing Markdown for pagify · pagify Blog</title>
+    
+    <meta name="description" content="Tips and best practices for authoring content with pagify" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" id="favicon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" id="favicon-dark" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">pagify Blog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >pagify Blog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/customizing-your-site/"
+    >Customizing Your Site</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/introducing-pagify-v0-1/"
+    >Introducing pagify v0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/writing-markdown-for-pagify/"
+    aria-current="page">Writing Markdown for pagify</a
+  > 
+</li><li class="nav__item nav__item--group">
+  <span class="nav__heading">Category</span> <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/releases/"
+    >Releases</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/tips/"
+    >Tips</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/category/tutorials/"
+    >Tutorials</a
+  > 
+</li>
+</ul>
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">Writing Markdown for pagify</h1>
+          
+          <p class="markdown__lede">Tips and best practices for authoring content with pagify</p>
+          
+          <p>pagify uses <a href="https://github.com/yuin/goldmark">Goldmark</a> with GitHub-flavored Markdown extensions. Here's a guide to writing great content.</p>
+<h2 id="headings">Headings</h2>
+<p>Use standard ATX headings:</p>
+<pre><code class="language-markdown"># H1 - Page title (auto-removed from body)
+
+## H2 - Section
+
+### H3 - Subsection
+</code></pre>
+<p>The first H1 becomes the page title and is rendered in the header, not the body.</p>
+<h2 id="callouts">Callouts</h2>
+<p>Use GitHub-style callouts for notes, tips, warnings:</p>
+<pre><code class="language-markdown">&gt; [!NOTE]
+&gt; This is a note.
+
+&gt; [!TIP]
+&gt; Pro tip!
+
+&gt; [!WARNING]
+&gt; Watch out.
+
+&gt; [!DANGER]
+&gt; Critical issue.
+</code></pre>
+<p>Aliases: <code>info</code>, <code>success</code>, <code>check</code>, <code>caution</code>, <code>attention</code>, <code>error</code>.</p>
+<h2 id="code-blocks">Code Blocks</h2>
+<p>Fenced code blocks with language tags get syntax highlighting:</p>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(&quot;Hello, pagify!&quot;)
+}
+</code></pre>
+<h2 id="tables">Tables</h2>
+<pre><code class="language-markdown">| Feature  | Supported |
+| -------- | --------- |
+| Tables   | ✅        |
+| Math     | ❌        |
+| Diagrams | ❌        |
+</code></pre>
+<h2 id="cross-references">Cross-References</h2>
+<p>Link to other pages using relative paths:</p>
+<pre><code class="language-markdown">[Getting Started](getting-started.md)
+[API Reference](../reference/api.md)
+</code></pre>
+<p>pagify rewrites these to clean URLs automatically.</p>
+<h2 id="frontmatter">Frontmatter</h2>
+<p>Add metadata to your pages:</p>
+<pre><code class="language-yaml">---
+title: Custom Title
+description: SEO description
+order: 1
+label: Short Label
+draft: false
+---
+</code></pre>
+<h2 id="images">Images</h2>
+<p>Place images in your content directory:</p>
+<pre><code class="language-markdown">![Alt text](diagram.png)
+</code></pre>
+<p>Images are copied to <code>assets/</code> and paths rewritten.</p>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>One H1 per page</strong> — Let pagify handle the title</li>
+<li><strong>Use descriptive link text</strong> — Avoid &quot;click here&quot;</li>
+<li><strong>Keep lines under 120 chars</strong> — Easier to review diffs</li>
+<li><strong>Use callouts</strong> — Highlight important information</li>
+<li><strong>Add descriptions</strong> — Improves SEO and search results</li>
+</ol>
+<hr>
+<p><em>Happy writing!</em></p>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#headings">Headings</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#callouts">Callouts</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#code-blocks">Code Blocks</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#tables">Tables</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#cross-references">Cross-References</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#frontmatter">Frontmatter</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#images">Images</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#best-practices">Best Practices</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify Blog</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

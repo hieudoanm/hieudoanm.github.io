@@ -78,7 +78,7 @@ func previewHandler(contentDir, root string) http.Handler {
 // serves the same URLs the generated links point at. An unreadable or absent
 // config means no base path, which matches what the build assumes.
 func basePathOf(contentDir string) string {
-	config, err := build.LoadConfig(contentDir)
+	config, err := build.LoadConfig(contentDir, nil)
 	if err != nil {
 		return ""
 	}

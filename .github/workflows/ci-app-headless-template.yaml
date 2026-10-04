@@ -100,6 +100,7 @@ jobs:
 
   rust:
     name: Rust
+    if: inputs.rustPackage != ''
     runs-on: ubuntu-latest
     timeout-minutes: 90
     defaults:
@@ -173,6 +174,7 @@ jobs:
   publish:
     name: Publish to GitHub Release
     needs: [go]
+    if: inputs.rustPackage == ''
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:

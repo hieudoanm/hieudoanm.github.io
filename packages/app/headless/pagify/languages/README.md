@@ -1,3 +1,5 @@
 # Languages
 
-1. Go
+1. [Go][go]
+
+[go]: https://go.dev

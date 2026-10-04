@@ -1,9 +1,12 @@
 package markdown
 
 import (
-	"github.com/yuin/goldmark/ast"
-	"github.com/yuin/goldmark/renderer"
-	"github.com/yuin/goldmark/util"
+	"io"
+
+	"github.com/yuin/goldmark/v2/ast"
+	"github.com/yuin/goldmark/v2/renderer"
+	"github.com/yuin/goldmark/v2/renderer/html"
+	"github.com/yuin/goldmark/v2/util"
 )
 
 // calloutRenderer replaces the marked callout blockquote's <blockquote>
@@ -14,14 +17,15 @@ import (
 // reproduces the default <blockquote> markup for every unmarked quotation.
 type calloutRenderer struct{}
 
-// RegisterFuncs implements renderer.NodeRenderer.
-func (r *calloutRenderer) RegisterFuncs(reg renderer.NodeRendererFuncRegisterer) {
-	reg.Register(ast.KindBlockquote, r.renderBlockquote)
+// Render implements renderer.NodeRenderer for v2.
+func (r *calloutRenderer) Render(w io.Writer, source []byte, n ast.Node, entering bool, rc renderer.Context) (ast.WalkStatus, error) {
+	buf := w.(util.BufWriter)
+	return r.renderBlockquote(buf, source, n, entering)
 }
 
 // renderBlockquote writes the wrapper for one entry or exit of a blockquote.
 func (r *calloutRenderer) renderBlockquote(w util.BufWriter, _ []byte, node ast.Node, entering bool) (ast.WalkStatus, error) {
-	kind, marked := node.AttributeString(attributeCallout)
+	kind, marked := nodeAttributeString(node, attributeCallout)
 	if !marked {
 		return writeTag(w, "blockquote", entering)
 	}
@@ -46,6 +50,15 @@ func writeTag(w util.BufWriter, tag string, entering bool) (ast.WalkStatus, erro
 		_, _ = w.WriteString("</" + tag + ">\n")
 	}
 	return ast.WalkContinue, nil
+}
+
+// nodeAttributeString gets a string attribute from a node using v2 API.
+func nodeAttributeString(node ast.Node, name string) (any, bool) {
+	val, ok := node.Attribute(name)
+	if !ok {
+		return nil, false
+	}
+	return val.Value(nil), true
 }
 
 // calloutKindsText maps each canonical kind to its visible label.
@@ -80,4 +93,25 @@ func calloutIcon(kind string) string {
 		return icon
 	}
 	return "\u2139"
+}
+
+var _ renderer.NodeRenderer[io.Writer] = (*calloutRenderer)(nil)
+
+// calloutHTMLExtension is an html.Extension that registers the callout renderer.
+// It runs after CommonMark to override the default blockquote renderer.
+type calloutHTMLExtension struct{}
+
+func (e *calloutHTMLExtension) RendererOptions(c *html.Config) []html.Option {
+	return []html.Option{
+		html.WithNodeRenderers(
+			map[ast.NodeKind]renderer.NodeRenderer[io.Writer]{
+				ast.KindBlockquote: &calloutRenderer{},
+			},
+		),
+	}
+}
+
+// CalloutHTMLExtension returns an extension that registers the callout renderer.
+func CalloutHTMLExtension() html.Extension {
+	return &calloutHTMLExtension{}
 }
