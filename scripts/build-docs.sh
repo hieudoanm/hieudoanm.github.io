@@ -132,6 +132,7 @@ build_pagify_docs() {
     ensure_pagify
     local content_dir="$DOCS_DIR/content"
     local output_dir="$DOCS_DIR/open"
+    local temp_dir="$DOCS_DIR/.pagify-tmp"
 
     echo "Building documentation with pagify..."
 
@@ -154,10 +155,17 @@ EOF
     cat "$content_dir/index.md" >> "$content_dir/index.md.tmp"
     mv "$content_dir/index.md.tmp" "$content_dir/index.md"
 
-    # Build with pagify
-    "$PAGIFY_BIN" build "$content_dir" --output "$output_dir"
+    # Build with pagify to a temp directory to avoid cleaning the open/ directory
+    # which already contains Next.js apps from copy_landing_pages
+    rm -rf "$temp_dir"
+    mkdir -p "$temp_dir"
+    "$PAGIFY_BIN" build "$content_dir" --output "$temp_dir"
 
+    # Copy pagify output to open/ (preserving existing Next.js apps)
+    echo "Merging pagify output into $output_dir..."
+    cp -R "$temp_dir"/* "$output_dir"/
     touch "$output_dir/.nojekyll"
+    rm -rf "$temp_dir"
     echo "Documentation built to $output_dir"
 }
 

@@ -35,7 +35,7 @@
 | 7   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
 | 8   | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
 | 9   | Headless | Developer Tools | Pagify         | [Open][open-pagify]         | [Releases][releases-pagify]         |
-| 9   | Headless | Developer Tools | Vectify        | [Open][open-vectify]        | [Releases][releases-vectify]        |
+| 10  | Headless | Developer Tools | Vectify        | [Open][open-vectify]        | [Releases][releases-vectify]        |
 
 ---
 
@@ -43,29 +43,29 @@
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
-| 10  | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
-| 11  | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
-| 12  | Hybrid   | Developer Tools   | Code        | [Open][open-code]        | [Releases][releases-code]        |
-| 13  | Hybrid   | Developer Tools   | Database    | [Open][open-database]    | [Releases][releases-database]    |
-| 14  | Hybrid   | Developer Tools   | Diagram     | [Open][open-diagram]     | [Releases][releases-diagram]     |
-| 15  | Hybrid   | Education         | DOI         | [Open][open-doi]         | [Releases][releases-doi]         |
-| 16  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
-| 17  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
-| 18  | Hybrid   | Games             | Memory      | [Open][open-memory]      | [Releases][releases-memory]      |
-| 19  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
-| 20  | Hybrid   | Graphics & Design | Photo       | [Open][open-photo]       | [Releases][releases-photo]       |
-| 21  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
-| 22  | Hybrid   | Medical           | Brainbow    | [Open][open-brainbow]    | [Releases][releases-brainbow]    |
-| 23  | Hybrid   | Medical           | MRI         | [Open][open-mri]         | [Releases][releases-mri]         |
-| 24  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
-| 25  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
-| 26  | Hybrid   | Productivity      | Resume      | [Open][open-resume]      | [Releases][releases-resume]      |
-| 27  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
-| 28  | Hybrid   | Social Networking | Chat        | [Open][open-chat]        | [Releases][releases-chat]        |
-| 29  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 30  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 31  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 32  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 11  | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 12  | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 13  | Hybrid   | Developer Tools   | Code        | [Open][open-code]        | [Releases][releases-code]        |
+| 14  | Hybrid   | Developer Tools   | Database    | [Open][open-database]    | [Releases][releases-database]    |
+| 15  | Hybrid   | Developer Tools   | Diagram     | [Open][open-diagram]     | [Releases][releases-diagram]     |
+| 16  | Hybrid   | Education         | DOI         | [Open][open-doi]         | [Releases][releases-doi]         |
+| 17  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
+| 18  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
+| 19  | Hybrid   | Games             | Memory      | [Open][open-memory]      | [Releases][releases-memory]      |
+| 20  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
+| 21  | Hybrid   | Graphics & Design | Photo       | [Open][open-photo]       | [Releases][releases-photo]       |
+| 22  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
+| 23  | Hybrid   | Medical           | Brainbow    | [Open][open-brainbow]    | [Releases][releases-brainbow]    |
+| 24  | Hybrid   | Medical           | MRI         | [Open][open-mri]         | [Releases][releases-mri]         |
+| 25  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
+| 26  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
+| 27  | Hybrid   | Productivity      | Resume      | [Open][open-resume]      | [Releases][releases-resume]      |
+| 28  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
+| 29  | Hybrid   | Social Networking | Chat        | [Open][open-chat]        | [Releases][releases-chat]        |
+| 30  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 31  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 32  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 33  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
