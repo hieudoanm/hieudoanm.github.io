@@ -20,7 +20,7 @@ require (
 	github.com/mattn/go-sqlite3 v1.14.52
 	github.com/mdp/qrterminal/v4 v4.0.0
 	github.com/notnil/chess v1.10.0
-	github.com/pdfcpu/pdfcpu v0.16.0
+	github.com/pdfcpu/pdfcpu v0.16.1
 	github.com/shirou/gopsutil/v4 v4.26.9
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10
@@ -53,7 +53,7 @@ require (
 	github.com/go-shiori/dom v0.0.0-20230515143342-73569d674e1c // indirect
 	github.com/gogs/chardet v0.0.0-20211120154057-b7413eaefb8f // indirect
 	github.com/gomarkdown/markdown v0.0.0-20260417124207-7d523f7318df // indirect
-	github.com/hhrutter/tiff v1.0.6 // indirect
+	github.com/hhrutter/tiff v1.0.7 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
 	github.com/kyokomi/emoji/v2 v2.2.13 // indirect
