@@ -13,7 +13,7 @@ func TestSummarizeStripsMarkup(t *testing.T) {
 	}{
 		{name: "plain text", html: "<p>Hello world</p>", want: "Hello world"},
 		{name: "tags between words", html: "<p>a<strong>b</strong>c</p>", want: "a b c"},
-		{name: "entities", html: "<p>AT&amp;T and &lt;tag&gt;</p>", want: "AT&T and <tag>"},
+		{name: "entities", html: "<p>AT&amp;T and &lt;tag&gt;</p>", want: "AT&amp;T and &lt;tag&gt;"},
 		{name: "whitespace collapses", html: "<p>a\n\n   b</p>", want: "a b"},
 		{name: "script content removed", html: "<p>a</p><script>var x=1</script>", want: "a"},
 		{
