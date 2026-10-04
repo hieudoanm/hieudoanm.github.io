@@ -113,17 +113,13 @@ func runMCP(stdout, stderr io.Writer) error {
 }
 
 func handleMCPBuild(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-	args := request.Params.Arguments
-	contentDir, _ := args["content_dir"].(string)
-	if contentDir == "" {
+	contentDir, err := request.RequireString("content_dir")
+	if err != nil {
 		return mcp.NewToolResultError("content_dir is required"), nil
 	}
 
-	outputDir, _ := args["output_dir"].(string)
-	if outputDir == "" {
-		outputDir = "dist"
-	}
-	basePath, _ := args["base_path"].(string)
+	outputDir := request.GetString("output_dir", "dist")
+	basePath := request.GetString("base_path", "")
 
 	cmdArgs := []string{"build", contentDir, "--output", outputDir}
 	if basePath != "" {
@@ -142,20 +138,13 @@ func handleMCPBuild(ctx context.Context, request mcp.CallToolRequest) (*mcp.Call
 }
 
 func handleMCPServe(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-	args := request.Params.Arguments
-	contentDir, _ := args["content_dir"].(string)
-	if contentDir == "" {
+	contentDir, err := request.RequireString("content_dir")
+	if err != nil {
 		return mcp.NewToolResultError("content_dir is required"), nil
 	}
 
-	port := 8080
-	if p, ok := args["port"].(float64); ok {
-		port = int(p)
-	}
-	host, _ := args["host"].(string)
-	if host == "" {
-		host = "127.0.0.1"
-	}
+	port := request.GetInt("port", 8080)
+	host := request.GetString("host", "127.0.0.1")
 
 	cmdArgs := []string{"serve", contentDir, "--port", fmt.Sprintf("%d", port), "--host", host}
 
@@ -163,9 +152,8 @@ func handleMCPServe(ctx context.Context, request mcp.CallToolRequest) (*mcp.Call
 }
 
 func handleMCPInit(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-	args := request.Params.Arguments
-	dir, _ := args["dir"].(string)
-	if dir == "" {
+	dir, err := request.RequireString("dir")
+	if err != nil {
 		return mcp.NewToolResultError("dir is required"), nil
 	}
 
@@ -181,9 +169,8 @@ func handleMCPInit(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallT
 }
 
 func handleMCPValidate(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-	args := request.Params.Arguments
-	contentDir, _ := args["content_dir"].(string)
-	if contentDir == "" {
+	contentDir, err := request.RequireString("content_dir")
+	if err != nil {
 		return mcp.NewToolResultError("content_dir is required"), nil
 	}
 
