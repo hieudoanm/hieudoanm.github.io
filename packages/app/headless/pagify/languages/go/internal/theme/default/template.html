@@ -1,0 +1,151 @@
+{{- /*
+defaultPage renders one page of a pagify site.
+
+A generated page is fully readable without JavaScript: navigation is a list of
+links, the outline is a list of in-page anchors, and the colour scheme lives in
+the data-theme attribute on <html>. script.js only upgrades those into
+interactive controls.
+*/ -}}
+{{ define "page" -}}
+<!doctype html>
+<html lang="{{ .Site.Language }}" data-theme="{{ .Site.Theme }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ if .Page.Title }}{{ .Page.Title }} · {{ end }}{{ .Site.Title }}</title>
+    {{ with .Page.Description }}
+    <meta name="description" content="{{ . }}" />
+    {{ end }}
+    <link rel="stylesheet" href="{{ .Asset "styles.css" }}" />
+    <link rel="icon" href="{{ .Asset "favicon.svg" }}" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        {{ if .Navigation }}
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        {{ end }}
+        <a class="header__title" href="{{ .Site.HomeURL }}">{{ .Site.Title }}</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="{{ .Asset "search-index.json" }}"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout{{ if not .Navigation }} layout--wide{{ end }}">
+      {{ with .Navigation }}
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        {{ template "navList" . }}
+      </nav>
+      {{ end }}
+
+      <main class="main" id="main">
+        <article class="markdown">
+          {{- /* The page title is lifted out of the Markdown, so it is rendered
+          here and the body never repeats it. The id lets other pages link
+          straight to a page's heading. */ -}}
+          <h1 id="page-title" class="markdown__title">{{ .Page.Title }}</h1>
+          {{ with .Page.Description }}
+          <p class="markdown__lede">{{ . }}</p>
+          {{ end }}
+          {{- /* A generated landing page has no Markdown of its own; the
+          navigation is its content. */ -}}
+          {{ if .Index }}
+          <p class="markdown__lede">Everything in this site, in order.</p>
+          <nav class="landing" aria-label="Pages">{{ template "navList" .Navigation }}</nav>
+          {{ else }}
+          {{ .Page.Body }}
+          {{ end }}
+        </article>
+        {{ template "outline" .Page.Outline }}
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify{{ with .Site.Footer }} · {{ . }}{{ end }}</p>
+    </footer>
+
+    <script src="{{ .Asset "script.js" }}" defer></script>
+    <script src="{{ .Asset "search.js" }}" defer></script>
+  </body>
+</html>
+{{- end }}
+
+{{- /* navList renders one level of the navigation tree. Recursion covers any
+depth of directory nesting. */ -}}
+{{ define "navList" -}}
+<ul class="nav">
+  {{ range . }}{{ template "navEntry" . }}{{ end }}
+</ul>
+{{- end }}
+
+{{- /* navSubList is the same list one level in. The extra class indents it, so a
+group's pages read as belonging to it. */ -}}
+{{ define "navSubList" -}}
+<ul class="nav nav--nested">
+  {{ range . }}{{ template "navEntry" . }}{{ end }}
+</ul>
+{{- end }}
+
+{{- /* navEntry renders a leaf link, or a group whose own URL is empty and whose
+children carry the navigation. */ -}}
+{{ define "navEntry" -}}
+<li class="nav__item{{ if not .URL }} nav__item--group{{ end }}">
+  {{ if .URL -}}
+  <a
+    class="nav__link{{ if .Current }} nav__link--current{{ end }}"
+    href="{{ .URL }}"
+    {{ if .Current }}aria-current="page"{{ end }}>{{ .Title }}</a
+  >
+  {{- else -}}
+  <span class="nav__heading">{{ .Title }}</span>
+  {{- end }} {{ with .Children }}{{ template "navSubList" . }}{{ end }}
+</li>
+{{- end }}
+
+{{- /* outline renders the on-page table of contents. The level 1 heading is the
+page title, already shown above the content, so it is left out. */ -}}
+{{ define "outline" -}}
+{{ $hasSubheadings := false -}}
+{{ range . }}{{ if gt .Level 1 }}{{ $hasSubheadings = true }}{{ end }}{{ end -}}
+{{ if $hasSubheadings }}
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    {{ range . }}{{ if gt .Level 1 }}
+    <li class="outline__item outline__item--{{ .Level }}">
+      <a class="outline__link" href="#{{ .ID }}">{{ .Text }}</a>
+    </li>
+    {{ end }}{{ end }}
+  </ul>
+</aside>
+{{ end }}
+{{- end }}
