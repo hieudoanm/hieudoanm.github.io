@@ -143,7 +143,7 @@ build_pagify_docs() {
     # Add frontmatter to the README
     cat > "$content_dir/index.md.tmp" <<'EOF'
 ---
-title: hieudoanm.github.io
+title: 👨‍💻 I'm Hieu Doan
 language: en
 theme: auto
 basePath: /open

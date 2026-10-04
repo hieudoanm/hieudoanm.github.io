@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="8" fill="#2563eb" />
-  <path
-    fill="#ffffff"
-    d="M11 9.5h10a1.5 1.5 0 0 1 0 3h-6.25v2.75h5.5a1.5 1.5 0 0 1 0 3H14.75V22.5H11z"
-  />
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+        font-family="system-ui, -apple-system, sans-serif"
+        font-size="20" font-weight="bold" fill="white">P</text>
 </svg>
