@@ -29,7 +29,7 @@ RUN CGO_ENABLED=0 make build-all
 # -----------------------------------------------------------------------------
 # Runtime stage (distroless-style with Alpine)
 # -----------------------------------------------------------------------------
-FROM alpine:3.20 AS runtime
+FROM alpine:3.24 AS runtime
 
 # Install runtime dependencies
 # ca-certificates for HTTPS, tzdata for timezone support
