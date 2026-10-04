@@ -7,13 +7,36 @@
   "href": "/psychology/"
   "label": "Psychology"
 "links":
+  - "href": "/psychology/attention"
+    "label": "Attention"
+    "description":
+      "Selection under a hard budget — what gets in, and why divided attention
+      costs accuracy."
+  - "href": "/psychology/memory"
+    "label": "Memory"
+    "description":
+      "Encoding, the forgetting curve, and reconstructive recall — with four
+      drills to run them."
+  - "href": "/psychology/learning"
+    "label": "Learning"
+    "description":
+      "Classical and operant conditioning, latent learning, and why feedback
+      beats restatement."
+  - "href": "/psychology/perception"
+    "label": "Perception"
+    "description":
+      "From raw sensation to a stable world, and where the inference goes wrong."
+  - "href": "/psychology/reasoning"
+    "label": "Reasoning"
+    "description":
+      "Deductive rules, inductive heuristics, and the errors that repeat."
   - "href": "/psychology/big-five-inventory/"
     "label": "Big Five Inventory"
     "description": "Trait structure underlying stable cognitive style"
   - "href": "/psychology/satisfaction-with-life/"
     "label": "Satisfaction With Life Scale"
     "description": "A validated measure of cognitive appraisal of life"
-  - "href": "/psychology/patient-health-questionnaire/"
+  - "href": "/psychology/depression/patient-health-questionnaire/"
     "label": "Patient Health Questionnaire (PHQ-9)"
     "description": "Attention and memory symptoms screened clinically"
 ---

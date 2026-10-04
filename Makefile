@@ -7,9 +7,6 @@ start-boilerplate:
 start-brainbow:
 	pnpm run dev --filter=@hieudoanm.github.io/brainbow
 
-start-chat:
-	pnpm run dev --filter=@hieudoanm.github.io/chat
-
 start-chess:
 	pnpm run dev --filter=@hieudoanm.github.io/chess
 
@@ -22,8 +19,14 @@ start-database:
 start-diagram:
 	pnpm run dev --filter=@hieudoanm.github.io/diagram
 
+start-doi:
+	pnpm run dev --filter=@hieudoanm.github.io/doi
+
 start-docs:
 	pnpm run dev --filter=@hieudoanm.github.io/docs
+
+start-exhibit:
+	pnpm run dev --filter=@hieudoanm.github.io/exhibit
 
 start-football:
 	pnpm run dev --filter=@hieudoanm.github.io/football
@@ -34,14 +37,11 @@ start-foody:
 start-lingo:
 	pnpm run dev --filter=@hieudoanm.github.io/lingo
 
-start-memory:
-	pnpm run dev --filter=@hieudoanm.github.io/memory
-
 start-mri:
 	pnpm run dev --filter=@hieudoanm.github.io/mri
 
-start-password:
-	pnpm run dev --filter=@hieudoanm.github.io/password
+start-office:
+	pnpm run dev --filter=@hieudoanm.github.io/office
 
 start-pdf:
 	pnpm run dev --filter=@hieudoanm.github.io/pdf
@@ -60,6 +60,3 @@ start-svg:
 
 start-tourney:
 	pnpm run dev --filter=@hieudoanm.github.io/tourney
-
-start-video:
-	pnpm run dev --filter=@hieudoanm.github.io/video

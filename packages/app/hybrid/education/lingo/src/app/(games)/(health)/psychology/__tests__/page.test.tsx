@@ -42,11 +42,15 @@ describe('PsychologyPage', () => {
     );
   });
 
-  it('still links to the existing scales', () => {
+  it('links to the clinical topics and the remaining scales', () => {
     render(<PsychologyPage />);
-    expect(screen.getByTestId('psychology-bdi')).toHaveAttribute(
+    expect(screen.getByTestId('psychology-depression')).toHaveAttribute(
       'href',
-      '/psychology/beck-depression-inventory'
+      '/psychology/depression'
+    );
+    expect(screen.getByTestId('psychology-anxiety')).toHaveAttribute(
+      'href',
+      '/psychology/anxiety'
     );
     expect(screen.getByTestId('psychology-swls')).toHaveAttribute(
       'href',

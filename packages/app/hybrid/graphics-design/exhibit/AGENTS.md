@@ -43,7 +43,9 @@ src/
 │   ├── page.tsx          # Showcase home page
 │   ├── (app)/
 │   │   ├── pos/          # POS application (migrated from business/pos)
+│   │   ├── ai/           # AI chat application
 │   │   ├── chat/         # Chat application
+│   │   ├── gallery/      # Mobile photo library (migrated from graphics-design/photo)
 │   │   ├── menu/         # Menu application
 │   │   ├── wallet/       # Wallet application (migrated from finance/wallet)
 │   │   ├── password/     # Password vault (migrated from utilities/password)
@@ -72,7 +74,9 @@ src/
 │       ├── reset-password/page.tsx
 │       └── profile/page.tsx
 ├── components/
+│   ├── ai/
 │   ├── chat/
+│   ├── gallery/          # atoms, molecules, organisms (vendored)
 │   ├── menu/
 │   ├── pos/
 │   ├── tax/              # organisms, templates (vendored)
@@ -92,17 +96,18 @@ src/
 
 ## Applications Showcased
 
-| App          | Category        | Status      | Path        |
-| ------------ | --------------- | ----------- | ----------- |
-| POS          | Business        | Ready       | `/pos`      |
-| Menu         | Business        | Coming Soon | `/menu`     |
-| Wallet       | Finance         | Ready       | `/wallet`   |
-| Tax          | Finance         | Ready       | `/tax`      |
-| Chat         | Social          | Ready       | `/chat`     |
-| Password     | Utilities       | Ready       | `/password` |
-| Video        | Graphics Design | Ready       | `/video`    |
-| Photo Editor | Graphics Design | Ready       | External    |
-| SVG Tools    | Graphics Design | Ready       | External    |
+| App       | Category        | Status      | Path        |
+| --------- | --------------- | ----------- | ----------- |
+| POS       | Business        | Ready       | `/pos`      |
+| Menu      | Business        | Coming Soon | `/menu`     |
+| Wallet    | Finance         | Ready       | `/wallet`   |
+| Tax       | Finance         | Ready       | `/tax`      |
+| Chat      | Social          | Ready       | `/chat`     |
+| AI Chat   | AI              | Ready       | `/ai`       |
+| Password  | Utilities       | Ready       | `/password` |
+| Video     | Graphics Design | Ready       | `/video`    |
+| Gallery   | Graphics Design | Ready       | `/gallery`  |
+| SVG Tools | Graphics Design | Ready       | External    |
 
 ## Development
 

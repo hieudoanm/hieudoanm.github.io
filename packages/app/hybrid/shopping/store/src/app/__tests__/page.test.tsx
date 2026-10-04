@@ -74,7 +74,7 @@ describe('HomePage', () => {
 
   it('renders category filter chips', () => {
     render(<HomePage />);
-    expect(screen.getAllByText('Games').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Education').length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText('Utilities').length).toBeGreaterThanOrEqual(1);
     expect(
       screen.getAllByText('Developer Tools').length
@@ -121,14 +121,14 @@ describe('HomePage', () => {
   it('filters by category chip', async () => {
     const user = userEvent.setup();
     render(<HomePage />);
-    await user.click(screen.getByRole('button', { name: 'Games' }));
+    await user.click(screen.getByRole('button', { name: 'Education' }));
     expect(screen.getByText('Clear filters')).toBeTruthy();
   });
 
   it('clears all filters', async () => {
     const user = userEvent.setup();
     render(<HomePage />);
-    await user.click(screen.getByRole('button', { name: 'Games' }));
+    await user.click(screen.getByRole('button', { name: 'Education' }));
     await user.click(screen.getByText('Clear filters'));
     expect(screen.queryByText('Clear filters')).toBeNull();
   });
@@ -136,7 +136,7 @@ describe('HomePage', () => {
   it('shows result count with filters', async () => {
     const user = userEvent.setup();
     render(<HomePage />);
-    await user.click(screen.getByRole('button', { name: 'Games' }));
+    await user.click(screen.getByRole('button', { name: 'Education' }));
     const countRow = screen
       .getByText('Clear filters')
       .closest('div') as HTMLElement;
@@ -209,7 +209,7 @@ describe('HomePage', () => {
   it('clicking category "All" chip resets category', async () => {
     const user = userEvent.setup();
     render(<HomePage />);
-    await user.click(screen.getByRole('button', { name: 'Games' }));
+    await user.click(screen.getByRole('button', { name: 'Education' }));
     const categoryAllChips = screen.getAllByText('All');
     const categoryAllChip = categoryAllChips[categoryAllChips.length - 1];
     await user.click(categoryAllChip);

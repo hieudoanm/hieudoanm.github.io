@@ -47,21 +47,8 @@
     var toggle = document.querySelector("[data-theme-toggle]");
     if (toggle) {
       toggle.setAttribute("aria-pressed", String(theme === "dark"));
-    }
-    updateFavicon(theme);
-  }
-
-  function updateFavicon(theme) {
-    var lightFavicon = document.getElementById("favicon");
-    var darkFavicon = document.getElementById("favicon-dark");
-    if (lightFavicon && darkFavicon) {
-      if (theme === "dark") {
-        lightFavicon.removeAttribute("media");
-        darkFavicon.setAttribute("media", "(prefers-color-scheme: dark)");
-      } else {
-        lightFavicon.setAttribute("media", "(prefers-color-scheme: light)");
-        darkFavicon.removeAttribute("media");
-      }
+      // Use emoji for sun/moon
+      toggle.textContent = theme === "dark" ? "☀️" : "🌙";
     }
   }
 

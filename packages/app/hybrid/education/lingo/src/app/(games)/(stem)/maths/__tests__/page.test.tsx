@@ -27,5 +27,9 @@ describe('MathsPage', () => {
       'href',
       '/maths/kaprekar-constant'
     );
+    expect(screen.getByTestId('maths-probability')).toHaveAttribute(
+      'href',
+      '/maths/probability'
+    );
   });
 });

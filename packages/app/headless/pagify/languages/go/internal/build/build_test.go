@@ -86,7 +86,7 @@ func TestBuildWritesExpectedFiles(t *testing.T) {
 		"reference/cli/index.html",
 		"assets/styles.css",
 		"assets/script.js",
-		"assets/favicon.svg",
+		"assets/favicon.ico",
 		"assets/guide/img/diagram.svg",
 		"assets/search-index.json",
 		"assets/search.js",

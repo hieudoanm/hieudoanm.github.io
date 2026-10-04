@@ -6,7 +6,7 @@
   **mobile app** (Tauri Mobile)
 - Static export for offline-first PWA support
 - Showcase of self-contained demo applications (**POS**, **Menu**, **Chat**,
-  **Wallet**, **Password**)
+  **AI Chat**, **Wallet**, **Password**)
 - Type-safe throughout with strict TypeScript
 
 ## Tech Stack
@@ -29,8 +29,10 @@
 | POS      | `/pos`      | Business — point of sale   | `atoms` → `templates`                  |
 | Menu     | `/menu`     | Business — digital menus   | flat under `components/menu`           |
 | Chat     | `/chat`     | Social — messaging         | `atoms` → `templates`                  |
+| AI Chat  | `/ai`       | AI — chat interface        | `atoms` → `templates` (namespaced)     |
 | Wallet   | `/wallet`   | Finance — personal banking | `atoms` → `templates` (namespaced)     |
 | Password | `/password` | Utilities — password vault | `molecules` → `organisms` (namespaced) |
+| Gallery  | `/gallery`  | Graphics — photo library   | `atoms` → `organisms` (namespaced)     |
 
 Shared, app-agnostic UI lives in `components/shared/templates`.
 
@@ -39,7 +41,7 @@ Shared, app-agnostic UI lives in `components/shared/templates`.
 ```txt
 src/
 ├── app/                # App Router: routes, layouts, error boundaries
-│   ├── (app)/          # Main apps: chat, menu, pos, wallet, password
+│   ├── (app)/          # Main apps: ai, chat, gallery, menu, pos, wallet, password
 │   ├── (auth)/         # sign-in, sign-up, profile, password flows
 │   ├── (info)/         # about, downloads, version
 │   ├── error.tsx       # Runtime error boundary
@@ -48,24 +50,28 @@ src/
 │   ├── loading.tsx     # Route loading UI
 │   └── not-found.tsx   # 404 page
 ├── components/         # UI, organised by app then atomic tier
+│   ├── ai/             # atoms, molecules, organisms, templates (namespaced)
 │   ├── chat/           # atoms, molecules, organisms, templates
+│   ├── gallery/        # atoms, molecules, organisms (vendored)
 │   ├── menu/           # flat components
 │   ├── pos/            # atoms, molecules, organisms, templates
 │   ├── wallet/         # atoms, molecules, organisms, templates (vendored)
 │   ├── password/       # molecules, organisms (vendored)
 │   └── shared/         # templates/ — ErrorTemplate and friends
 ├── lib/                # Pure logic, no React
+│   ├── ai/             # db
 │   ├── chat/           # crypto, db, format, selectors, url, webrtc
 │   ├── wallet/         # db, export, format, iconMap, seed, session, utils
 │   ├── password/       # db, health, security, totp, transfer
+│   ├── gallery/        # db, selectors
 │   ├── menu/
 │   └── pos/            # money, cart, discounts, payment, reports, …
-├── hooks/              # Reusable hooks (chat/, menu/, password/, wallet/)
-├── providers/          # React context providers (chat/, password/, wallet/)
-├── data/               # Seed/fixture data (chat/, password/, wallet/)
-├── types/              # Shared types (chat/, menu/, pos/, password/, wallet/)
-├── utils/              # Formatting helpers (password/)
-├── test-helpers/       # Shared test doubles (password/, wallet/)
+├── hooks/              # Reusable hooks (ai/, chat/, gallery/, menu/, password/, wallet/)
+├── providers/          # React context providers (ai/, chat/, gallery/, password/, wallet/)
+├── data/               # Seed/fixture data (ai/, chat/, gallery/, password/, wallet/)
+├── types/              # Shared types (ai/, chat/, gallery/, menu/, pos/, password/, wallet/)
+├── utils/              # Formatting helpers (ai/, gallery/, password/)
+├── test-helpers/       # Shared test doubles (gallery/, password/, wallet/)
 ├── content/            # Build-time content (version string)
 ├── styles/             # globals.css (entry) + themes.css
 └── __tests__/          # Tests for root-level app files
@@ -116,10 +122,18 @@ Flat routes with route groups — no dynamic `[id]` or `[slug]` segments.
 | `/menu`            | `(app)/menu/page.tsx`             | Yes    | Menu application                         |
 | `/chat`            | `(app)/chat/page.tsx`             | Yes    | Chat application                         |
 | `/chat/settings`   | `(app)/chat/settings/page.tsx`    | Yes    | Chat preferences                         |
+| `/ai`              | `(app)/ai/page.tsx`               | Yes    | AI chat home                             |
+| `/ai/chat`         | `(app)/ai/chat/page.tsx`          | Yes    | AI chat conversation                     |
+| `/ai/settings`     | `(app)/ai/settings/page.tsx`      | Yes    | AI chat preferences                      |
 | `/wallet`          | `(app)/wallet/page.tsx`           | Yes    | Wallet dashboard                         |
 | `/wallet/*`        | nested under `(app)/wallet/`      | Yes    | All wallet features                      |
 | `/password`        | `(app)/password/page.tsx`         | Yes    | Password vault                           |
 | `/password/*`      | nested under `(app)/password/`    | Yes    | generator, health, item, settings, trash |
+| `/gallery`         | `(app)/gallery/page.tsx`          | Yes    | Photo library (Photos tab)               |
+| `/gallery/albums`  | `(app)/gallery/albums/page.tsx`   | Yes    | Album list                               |
+| `/gallery/album`   | `(app)/gallery/album/page.tsx`    | Yes    | Album detail (`?id=`)                    |
+| `/gallery/search`  | `(app)/gallery/search/page.tsx`   | Yes    | Search photos and tags                   |
+| `/gallery/photo`   | `(app)/gallery/photo/page.tsx`    | Yes    | Full-screen photo viewer (`?id=`)        |
 | `/about`           | `(info)/about/page.tsx`           | No     | App info and tech stack                  |
 | `/downloads`       | `(info)/downloads/page.tsx`       | No     | Platform download links                  |
 | `/version`         | `(info)/version/page.tsx`         | Yes    | Build version display                    |

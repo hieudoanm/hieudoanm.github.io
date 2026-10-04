@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neural Responses to Speech</title>
+
+  <style>
+    :root {
+      --background: linear-gradient(180deg, #f4f6f8 0%, #eef2f6 100%);
+      --surface: #ffffff;
+      --surface-alt: #eef2f6;
+      --text: #17202a;
+      --muted: #5f6b76;
+      --accent: #315c8a;
+      --accent-light: #dce8f3;
+      --accent-gradient: linear-gradient(135deg, #315c8a 0%, #4a7ab8 100%);
+      --border: #d7dee5;
+
+      --poster-width: 1189mm;
+      --poster-height: 841mm;
+
+      --space-xs: 4mm;
+      --space-sm: 7mm;
+      --space-md: 11mm;
+      --space-lg: 16mm;
+      --space-xl: 24mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #dfe4e9;
+    }
+
+    body {
+      font-family:
+        Inter,
+        Helvetica,
+        Arial,
+        sans-serif;
+      color: var(--text);
+    }
+
+    .poster {
+      animation: fadeInUp 0.7s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .result-number {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .poster {
+      width: var(--poster-width);
+      height: var(--poster-height);
+      margin: 0 auto;
+      padding: var(--space-lg);
+      background: var(--background);
+
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: var(--space-md);
+
+      overflow: hidden;
+      position: relative;
+    }
+
+    .poster::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3mm;
+      background: var(--accent-gradient);
+    }
+
+    .poster::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 250mm;
+      height: 250mm;
+      background: radial-gradient(circle at top right, rgba(49, 92, 138, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--space-lg);
+      align-items: end;
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin: 0 0 var(--space-xs);
+      color: var(--accent);
+      font-size: 5mm;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 800mm;
+      margin: 0;
+      font-size: 24mm;
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+    }
+
+    .authors {
+      margin: var(--space-sm) 0 0;
+      color: var(--muted);
+      font-size: 5mm;
+    }
+
+    .header-meta {
+      text-align: right;
+      font-size: 4mm;
+      color: var(--muted);
+    }
+
+    .header-meta strong {
+      display: block;
+      color: var(--text);
+      font-size: 5mm;
+    }
+
+    .content {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr 1fr;
+      gap: var(--space-md);
+      align-items: stretch;
+    }
+
+    .column {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      height: 100%;
+    }
+
+    .column:nth-child(1) {
+      animation: slideInLeft 0.6s ease-out 0.1s both;
+    }
+
+    .column:nth-child(2) {
+      animation: slideInUp 0.6s ease-out 0.2s both;
+    }
+
+    .column:nth-child(3) {
+      animation: slideInRight 0.6s ease-out 0.3s both;
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .column .section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 5mm;
+      padding: var(--space-md);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2mm 6mm rgba(49, 92, 138, 0.06);
+    }
+
+    .section:hover {
+      transform: translateY(-2mm);
+      box-shadow: 0 8mm 20mm rgba(49, 92, 138, 0.15);
+    }
+
+    .section h2 {
+      margin: 0 0 var(--space-sm);
+      color: var(--accent);
+      font-size: 7mm;
+      line-height: 1.1;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      margin: 0;
+      font-size: 4.6mm;
+      line-height: 1.42;
+      flex: 1;
+    }
+
+    .section p + p {
+      margin-top: var(--space-sm);
+    }
+
+    .question {
+      background: var(--accent-light);
+      border-color: transparent;
+      border: 2px solid var(--accent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .question::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(49, 92, 138, 0.15) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
+    }
+
+    .question h2 {
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+
+    .question p {
+      font-size: 6mm;
+      line-height: 1.3;
+      font-weight: 650;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pipeline {
+      display: grid;
+      gap: var(--space-xs);
+    }
+
+    .pipeline-step {
+      display: grid;
+      grid-template-columns: 14mm 1fr;
+      gap: var(--space-sm);
+      align-items: center;
+      padding: var(--space-sm);
+      background: var(--surface-alt);
+      border-radius: 3mm;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .pipeline-step:hover {
+      transform: translateX(3mm);
+      background: var(--accent-light);
+    }
+
+    .pipeline-number {
+      width: 11mm;
+      height: 11mm;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-size: 4mm;
+      font-weight: 800;
+    }
+
+    .pipeline-step strong {
+      display: block;
+      font-size: 4.5mm;
+    }
+
+    .pipeline-step span {
+      display: block;
+      margin-top: 1mm;
+      color: var(--muted);
+      font-size: 3.7mm;
+    }
+
+    .result {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+      flex: 1;
+    }
+
+    .result-number {
+      margin: 0;
+      font-size: 28mm;
+      line-height: 0.9;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .result-label {
+      margin: var(--space-xs) 0 0;
+      font-size: 5mm;
+      font-weight: 700;
+    }
+
+    .result-detail {
+      margin-top: var(--space-sm);
+      color: var(--muted);
+      font-size: 4mm;
+      line-height: 1.35;
+    }
+
+    .chart {
+      margin-top: var(--space-md);
+      padding: var(--space-sm);
+      border-radius: 3mm;
+      background: var(--surface-alt);
+      transition: transform 0.3s ease;
+    }
+
+    .chart:hover {
+      transform: scale(1.02);
+    }
+
+    .chart svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .chart svg rect,
+    .chart svg path,
+    .chart svg circle {
+      transition: opacity 0.3s ease;
+    }
+
+    .chart:hover svg rect,
+    .chart:hover svg path,
+    .chart:hover svg circle {
+      opacity: 0.9;
+    }
+
+    .chart-caption {
+      margin: var(--space-xs) 0 0;
+      color: var(--muted);
+      font-size: 3.5mm;
+      line-height: 1.3;
+    }
+
+    .takeaway {
+      padding: var(--space-lg);
+      background: var(--text);
+      color: white;
+      border-radius: 5mm;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4mm 12mm rgba(23, 32, 42, 0.2);
+    }
+
+    .takeaway:hover {
+      transform: translateY(-2mm);
+      box-shadow: 0 8mm 24mm rgba(23, 32, 42, 0.3);
+    }
+
+    .takeaway-label {
+      margin: 0 0 var(--space-xs);
+      color: #c7d8e8;
+      font-size: 4mm;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .takeaway p {
+      margin: 0;
+      font-size: 7mm;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .bullet-list {
+      margin: 0;
+      padding-left: 6mm;
+      font-size: 4.4mm;
+      line-height: 1.45;
+    }
+
+    .bullet-list li + li {
+      margin-top: 2mm;
+    }
+
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--space-md);
+      align-items: center;
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 3.6mm;
+    }
+
+    .footer strong {
+      color: var(--text);
+    }
+
+    .qr-placeholder {
+      width: 28mm;
+      height: 28mm;
+      display: grid;
+      place-items: center;
+      border: 1px dashed var(--muted);
+      border-radius: 2mm;
+      font-size: 3mm;
+      text-align: center;
+    }
+
+    @media print {
+      @page {
+        size: A0 landscape;
+        margin: 0;
+      }
+
+      html,
+      body {
+        width: 1189mm;
+        height: 841mm;
+      }
+
+      .poster {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="poster">
+    <header class="header">
+      <div>
+        <p class="eyebrow">Cognitive Neuroscience</p>
+        <h1>Neural Responses to Speech Reveal Hierarchical Processing of Linguistic Information</h1>
+        <p class="authors">
+          H. Doan · Computational Neuroscience Research Group · University of Birmingham
+        </p>
+      </div>
+
+      <div class="header-meta">
+        <strong>Research Poster</strong>
+        MSc Cognitive Neuroimaging and Data Science
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="column">
+        <section class="section">
+          <h2>Background</h2>
+          <p>
+            Understanding speech requires the brain to integrate information
+            across multiple timescales, from rapidly changing acoustic features
+            (phonemes, syllables) to words, meaning, and broader narrative context.
+            This hierarchical organisation poses a computational challenge: how
+            does the neural system maintain representations at multiple linguistic
+            levels simultaneously while processing a continuous input stream?
+          </p>
+          <p>
+            Neuroimaging studies suggest that linguistic information is
+            represented across distributed neural systems rather than in a
+            single specialised region. Temporal cortex tracks acoustic and
+            phonetic information, while frontal and parietal regions support
+            syntactic and semantic processing. However, the dynamics of how
+            these representations emerge and interact during naturalistic speech
+            comprehension remain unclear.
+          </p>
+          <p>
+            Neural decoding approaches offer a powerful tool for addressing this
+            question. By training models to predict stimulus features from
+            recorded neural activity, we can test what information is available
+            in the neural signal and how it evolves over time. This approach
+            provides a more direct test of representational content than
+            traditional activation-based analyses.
+          </p>
+        </section>
+
+        <section class="section question">
+          <h2>Research question</h2>
+          <p>
+            Can neural activity during naturalistic speech processing be used
+            to distinguish different levels of linguistic information?
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Participants</h2>
+          <p>
+            36 healthy adults (age 19-34, mean 25.3 years, 18 female) participated
+            in an auditory speech experiment. All participants were native English
+            speakers with normal hearing and no history of neurological or
+            psychiatric disorders. The study was approved by the institutional
+            ethics committee, and all participants provided informed consent.
+          </p>
+          <p>
+            Neural responses were recorded using magnetoencephalography (MEG)
+            while participants listened to 10 minutes of continuous spoken narratives
+            (audiobook excerpts). Participants were instructed to listen naturally
+            and were informed that they would answer comprehension questions
+            afterward to maintain attention.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Analysis pipeline</h2>
+
+          <div class="pipeline">
+            <div class="pipeline-step">
+              <div class="pipeline-number">1</div>
+              <div>
+                <strong>Neural recording</strong>
+                <span>Time-resolved neural responses during speech</span>
+              </div>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-number">2</div>
+              <div>
+                <strong>Preprocessing</strong>
+                <span>Artifact removal and temporal alignment</span>
+              </div>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-number">3</div>
+              <div>
+                <strong>Feature extraction</strong>
+                <span>Acoustic and linguistic representations</span>
+              </div>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-number">4</div>
+              <div>
+                <strong>Neural decoding</strong>
+                <span>Predicting stimulus-level information</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="section result">
+          <div>
+            <h2>Results</h2>
+
+            <p class="result-number">+18%</p>
+            <p class="result-label">
+              decoding performance for linguistic features
+            </p>
+
+            <p class="result-detail">
+              Linguistic representations explained additional variance in
+              neural activity beyond low-level acoustic features.
+            </p>
+
+            <div class="chart">
+              <svg viewBox="0 0 700 360" role="img"
+                aria-label="Bar chart comparing acoustic and linguistic decoding performance">
+                <line x1="80" y1="300" x2="650" y2="300"
+                  stroke="#5f6b76" stroke-width="3" />
+
+                <line x1="80" y1="60" x2="80" y2="300"
+                  stroke="#5f6b76" stroke-width="3" />
+
+                <rect x="180" y="145" width="120" height="155"
+                  fill="#9db3c7" />
+                <rect x="420" y="95" width="120" height="205"
+                  fill="#315c8a" />
+
+                <text x="240" y="330"
+                  text-anchor="middle"
+                  font-size="22"
+                  fill="#17202a">
+                  Acoustic
+                </text>
+
+                <text x="480" y="330"
+                  text-anchor="middle"
+                  font-size="22"
+                  fill="#17202a">
+                  Linguistic
+                </text>
+
+                <text x="240" y="130"
+                  text-anchor="middle"
+                  font-size="22"
+                  fill="#17202a">
+                  0.31
+                </text>
+
+                <text x="480" y="80"
+                  text-anchor="middle"
+                  font-size="22"
+                  fill="#17202a">
+                  0.37
+                </text>
+              </svg>
+
+              <p class="chart-caption">
+                Mean cross-validated decoding performance. Values shown are
+                illustrative for this example poster.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Interpretation</h2>
+          <p>
+            The results suggest that neural activity contains information
+            related to linguistic structure that cannot be explained entirely
+            by acoustic properties of the speech signal.
+          </p>
+        </section>
+
+        <section class="takeaway">
+          <p class="takeaway-label">Key finding</p>
+          <p>
+            Neural responses to natural speech contain information at multiple
+            levels of linguistic representation.
+          </p>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="section">
+          <h2>Why it matters</h2>
+          <ul class="bullet-list">
+            <li>
+              Speech is a naturalistic stimulus for studying real-world
+              cognition.
+            </li>
+            <li>
+              Neural decoding provides a quantitative way to test what
+              information is represented in brain activity.
+            </li>
+            <li>
+              Separating acoustic and linguistic information can clarify the
+              computational structure of speech processing.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Discussion</h2>
+          <p>
+            The additional decoding of linguistic features is consistent with
+            hierarchical processing in which neural responses reflect
+            information beyond the immediate acoustic signal.
+          </p>
+          <p>
+            However, decoding performance alone does not establish that a
+            specific brain region causally generates a linguistic
+            representation.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Limitations</h2>
+          <ul class="bullet-list">
+            <li>Cross-sectional experimental design.</li>
+            <li>Limited sample size.</li>
+            <li>Decoding does not directly establish causal mechanisms.</li>
+            <li>Naturalistic stimuli introduce correlated features.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Conclusion</h2>
+          <p>
+            Neural activity during continuous speech contains information
+            associated with both acoustic and higher-level linguistic
+            representations. Computational decoding provides a framework for
+            investigating how these representations evolve over time.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Selected references</h2>
+          <ul class="bullet-list">
+            <li>Huth et al. — Natural speech and cortical semantic representations.</li>
+            <li>Mesgarani et al. — Neural representation of speech.</li>
+            <li>Hamilton et al. — Time-resolved neural representations.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div>
+        <strong>Contact:</strong>
+        h.doe@example.ac.uk
+        ·
+        Computational Neuroscience
+        ·
+        University of Birmingham
+      </div>
+
+      <div class="qr-placeholder">
+        QR<br>
+        PROJECT
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

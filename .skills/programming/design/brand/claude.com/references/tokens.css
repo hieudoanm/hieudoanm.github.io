@@ -1,0 +1,204 @@
+/*
+  Claude design tokens.
+  VERIFIED (Anthropic's claude.ai stylesheet): the semantic token names and the HSL base values
+  below, written as bare "H S% L%" triplets exactly as declared. Use as hsl(var(--token)).
+  PROPOSED: fonts, type scale, spacing, radii, border alpha, motion. Marked inline.
+  Hex equivalents are in comments for convenience (computed from the HSL values).
+*/
+
+:root {
+  /* Base palette (verified) */
+  --_brand-clay: 14.8 63.1% 59.6%; /* #d97757 */
+  --_brand-clay-emphasized: 15.1 54.2% 51.2%; /* #c6613f */
+  --_gray-0: 0 0% 100%; /* #ffffff */
+  --_gray-20: 60 7.7% 97.5%; /* ~#faf9f5 ivory (computed #f9f9f8) */
+  --_gray-40: 60 3.7% 94.7%; /* #f2f2f1 */
+  --_gray-50: 60 3% 93.5%; /* #efefee */
+  --_gray-80: 60 3.8% 89.8%; /* #e6e6e4 */
+  --_gray-100: 60 3.1% 87.5%; /* #e0e0de */
+  --_gray-200: 60 1.6% 75.3%; /* #c1c1bf */
+  --_gray-350: 60 1.4% 57.8%; /* #959592 */
+  --_gray-450: 60 1.7% 46.7%; /* #797975 */
+  --_gray-700: 60 3.7% 21.2%; /* #383834 */
+  --_gray-750: 60 4.8% 16.5%; /* #2c2c28 */
+  --_gray-800: 60 6.5% 12.2%; /* #21211d */
+  --_gray-810: 60 5.3% 11.2%; /* #1e1e1b */
+  --_gray-860: 60 5.6% 7.1%; /* #131311 */
+  --_gray-900: 0 0% 4.3%; /* #0b0b0b */
+  --_violet-450: 247.6 67.2% 62.9%; /* #7161e0 (Pro tier) */
+  --_blue-450: 212.8 67.7% 50.2%; /* #2a78d6 (secondary) */
+
+  /* Semantic tokens, light (verified mapping) */
+  --accent-brand: var(--_brand-clay);
+  --accent-main-000: var(--_brand-clay-emphasized);
+  --accent-main-100: var(--_brand-clay);
+  --accent-main-200: var(--_brand-clay);
+  --accent-pro-100: var(--_violet-450);
+  --accent-secondary-100: var(--_blue-450);
+  --bg-000: var(--_gray-0);
+  --bg-100: var(--_gray-20);
+  --bg-200: var(--_gray-40);
+  --bg-300: var(--_gray-50);
+  --bg-400: var(--_gray-80);
+  --bg-500: var(--_gray-80);
+  --border-100: var(--_gray-810); /* used at low alpha; alpha proposed below */
+  --text-000: var(--_gray-860);
+  --text-100: var(--_gray-860);
+  --text-200: var(--_gray-700);
+  --text-300: var(--_gray-700);
+  --text-400: var(--_gray-450);
+  --text-500: var(--_gray-450);
+
+  /* Proposed */
+  --border-alpha: 0.15;
+  --border-alpha-strong: 0.3;
+
+  --font-serif:
+    Georgia, 'Times New Roman', serif; /* proposed: stand-in for the proprietary brand serif */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial,
+    sans-serif; /* proposed */
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-hero: clamp(2.75rem, 6vw + 0.5rem, 5rem);
+  --fs-h2: clamp(2rem, 3vw + 0.75rem, 3rem);
+  --fs-h3: 1.375rem;
+  --fs-body: 1.0625rem; /* 17px */
+  --fs-small: 0.875rem;
+  --lh-body: 1.6;
+  --lh-head: 1.1;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 9999px;
+  --container: 1200px;
+  --prose: 680px;
+  --section-y: clamp(4rem, 8vw, 6rem);
+  --header-h: 64px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-main-000: var(--_brand-clay);
+    --accent-main-100: var(--_brand-clay-emphasized);
+    --accent-main-200: var(--_brand-clay-emphasized);
+    --bg-000: var(--_gray-750);
+    --bg-100: var(--_gray-800);
+    --bg-200: var(--_gray-810);
+    --bg-300: var(--_gray-860);
+    --bg-400: var(--_gray-900);
+    --bg-500: var(--_gray-900);
+    --border-100: var(--_gray-100);
+    --text-000: var(--_gray-20);
+    --text-100: var(--_gray-20);
+    --text-200: var(--_gray-200);
+    --text-300: var(--_gray-200);
+    --text-400: var(--_gray-350);
+    --text-500: var(--_gray-350);
+  }
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  color-scheme: light dark;
+}
+body {
+  margin: 0;
+  background: hsl(var(--bg-100));
+  color: hsl(var(--text-200));
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: hsl(var(--text-000));
+  line-height: var(--lh-head);
+  letter-spacing: -0.01em;
+}
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+.section {
+  padding-block: var(--section-y);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid hsl(var(--border-100) / var(--border-alpha-strong));
+  background: transparent;
+  color: hsl(var(--text-000));
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 150ms var(--ease);
+}
+.btn:hover {
+  background: hsl(var(--bg-300));
+}
+.btn--primary {
+  background: hsl(var(--text-000));
+  color: hsl(var(--bg-000));
+  border-color: transparent;
+}
+.btn--primary:hover {
+  background: hsl(var(--text-200));
+}
+.btn--clay {
+  background: hsl(var(--accent-main-000));
+  color: #fff;
+  border-color: transparent;
+}
+
+.card {
+  background: hsl(var(--bg-000));
+  border: 1px solid hsl(var(--border-100) / var(--border-alpha));
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid hsl(var(--accent-secondary-100));
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

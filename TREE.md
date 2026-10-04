@@ -147,8 +147,7 @@
 ├── images/
 │   ├── png/
 │   │   ├── [app.png](./images/png/app.png)
-│   │   ├── [cover.png](./images/png/cover.png)
-│   │   └── [hexagon.jpg](./images/png/hexagon.jpg)
+│   │   └── [cover.png](./images/png/cover.png)
 │   └── svg/
 │       ├── maps/
 │       │   ├── hexagon/
@@ -363,12 +362,6 @@
 │   │   │   │   │   ├── go/
 │   │   │   │   │   │   ├── docker/
 │   │   │   │   │   │   │   └── [Dockerfile](./packages/app/headless/backbone/languages/go/docker/Dockerfile)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/backbone/languages/go/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/backbone/languages/go/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/backbone/languages/go/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/backbone/languages/go/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/backbone/languages/go/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── internal/
 │   │   │   │   │   │   │   ├── auth/
 │   │   │   │   │   │   │   │   ├── [auth.go](./packages/app/headless/backbone/languages/go/internal/auth/auth.go)
@@ -1286,12 +1279,6 @@
 │   │   │   │   │   ├── go/
 │   │   │   │   │   │   ├── docker/
 │   │   │   │   │   │   │   └── [Dockerfile](./packages/app/headless/browserverless/languages/go/docker/Dockerfile)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/browserverless/languages/go/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/browserverless/languages/go/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/browserverless/languages/go/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/browserverless/languages/go/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/browserverless/languages/go/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── internal/
 │   │   │   │   │   │   │   ├── headless/
 │   │   │   │   │   │   │   │   ├── [headless.go](./packages/app/headless/browserverless/languages/go/internal/headless/headless.go)
@@ -1456,12 +1443,6 @@
 │   │   │   │   │   │   │       └── [Cargo.toml](./packages/app/headless/browserverless/languages/rust/crates/style/Cargo.toml)
 │   │   │   │   │   │   ├── docker/
 │   │   │   │   │   │   │   └── [Dockerfile](./packages/app/headless/browserverless/languages/rust/docker/Dockerfile)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/browserverless/languages/rust/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/browserverless/languages/rust/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/browserverless/languages/rust/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/browserverless/languages/rust/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/browserverless/languages/rust/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── tasks/
 │   │   │   │   │   │   │   ├── [001-project-scaffolding.md](./packages/app/headless/browserverless/languages/rust/tasks/001-project-scaffolding.md)
 │   │   │   │   │   │   │   ├── [002-dom.md](./packages/app/headless/browserverless/languages/rust/tasks/002-dom.md)
@@ -1524,12 +1505,6 @@
 │   │   │   │   │   ├── go/
 │   │   │   │   │   │   ├── docker/
 │   │   │   │   │   │   │   └── [Dockerfile](./packages/app/headless/jack/languages/go/docker/Dockerfile)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/jack/languages/go/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/jack/languages/go/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/jack/languages/go/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/jack/languages/go/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/jack/languages/go/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── scripts/
 │   │   │   │   │   │   │   └── [install.sh](./packages/app/headless/jack/languages/go/scripts/install.sh)
 │   │   │   │   │   │   ├── src/
@@ -5430,12 +5405,6 @@
 │   │   │   │   │   │   │   └── [serve_test.go](./packages/app/headless/kevin/languages/go/cmd/serve_test.go)
 │   │   │   │   │   │   ├── docker/
 │   │   │   │   │   │   │   └── [Dockerfile](./packages/app/headless/kevin/languages/go/docker/Dockerfile)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/kevin/languages/go/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/kevin/languages/go/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/kevin/languages/go/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/kevin/languages/go/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/kevin/languages/go/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── internal/
 │   │   │   │   │   │   │   ├── db/
 │   │   │   │   │   │   │   │   ├── [bench_test.go](./packages/app/headless/kevin/languages/go/internal/db/bench_test.go)
@@ -5486,12 +5455,6 @@
 │   │   │   │   │   │   ├── [go.sum](./packages/app/headless/kevin/languages/go/go.sum)
 │   │   │   │   │   │   └── [main.go](./packages/app/headless/kevin/languages/go/main.go)
 │   │   │   │   │   ├── kotlin/
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/kevin/languages/kotlin/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/kevin/languages/kotlin/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/kevin/languages/kotlin/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/kevin/languages/kotlin/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/kevin/languages/kotlin/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── gradle/
 │   │   │   │   │   │   │   └── wrapper/
 │   │   │   │   │   │   │       ├── [gradle-wrapper.jar](./packages/app/headless/kevin/languages/kotlin/gradle/wrapper/gradle-wrapper.jar)
@@ -5586,12 +5549,6 @@
 │   │   │   │   │   ├── rust/
 │   │   │   │   │   │   ├── benches/
 │   │   │   │   │   │   │   └── [bench.rs](./packages/app/headless/kevin/languages/rust/benches/bench.rs)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/kevin/languages/rust/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/kevin/languages/rust/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/kevin/languages/rust/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/kevin/languages/rust/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/kevin/languages/rust/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── src/
 │   │   │   │   │   │   │   ├── db/
 │   │   │   │   │   │   │   │   ├── [persist.rs](./packages/app/headless/kevin/languages/rust/src/db/persist.rs)
@@ -5655,10 +5612,6 @@
 │   │   │   │   │   │   │   ├── [app.html](./packages/app/headless/landify/examples/templates/app/app.html)
 │   │   │   │   │   │   │   ├── [app.png](./packages/app/headless/landify/examples/templates/app/app.png)
 │   │   │   │   │   │   │   └── [app.yaml](./packages/app/headless/landify/examples/templates/app/app.yaml)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [docs.html](./packages/app/headless/landify/examples/templates/docs/docs.html)
-│   │   │   │   │   │   │   ├── [docs.png](./packages/app/headless/landify/examples/templates/docs/docs.png)
-│   │   │   │   │   │   │   └── [docs.yaml](./packages/app/headless/landify/examples/templates/docs/docs.yaml)
 │   │   │   │   │   │   ├── download/
 │   │   │   │   │   │   │   ├── [download.html](./packages/app/headless/landify/examples/templates/download/download.html)
 │   │   │   │   │   │   │   ├── [download.png](./packages/app/headless/landify/examples/templates/download/download.png)
@@ -5918,12 +5871,6 @@
 │   │   │   │   │   │   │   └── [validate.go](./packages/app/headless/landify/languages/go/cmd/validate.go)
 │   │   │   │   │   │   ├── docker/
 │   │   │   │   │   │   │   └── [Dockerfile](./packages/app/headless/landify/languages/go/docker/Dockerfile)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/landify/languages/go/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/landify/languages/go/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/landify/languages/go/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/landify/languages/go/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/landify/languages/go/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── internal/
 │   │   │   │   │   │   │   ├── gui/
 │   │   │   │   │   │   │   │   ├── [actions.go](./packages/app/headless/landify/languages/go/internal/gui/actions.go)
@@ -6034,12 +5981,6 @@
 │   │   │   │   │   │   ├── [go.sum](./packages/app/headless/landify/languages/go/go.sum)
 │   │   │   │   │   │   └── [main.go](./packages/app/headless/landify/languages/go/main.go)
 │   │   │   │   │   ├── kotlin/
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/landify/languages/kotlin/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/landify/languages/kotlin/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/landify/languages/kotlin/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/landify/languages/kotlin/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/landify/languages/kotlin/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── gradle/
 │   │   │   │   │   │   │   └── wrapper/
 │   │   │   │   │   │   │       ├── [gradle-wrapper.jar](./packages/app/headless/landify/languages/kotlin/gradle/wrapper/gradle-wrapper.jar)
@@ -6239,12 +6180,6 @@
 │   │   │   │   │   │   │       ├── [template-status.j2](./packages/app/headless/landify/languages/rust/assets/templates/template-status.j2)
 │   │   │   │   │   │   │       ├── [template-team.j2](./packages/app/headless/landify/languages/rust/assets/templates/template-team.j2)
 │   │   │   │   │   │   │       └── [template-waitlist.j2](./packages/app/headless/landify/languages/rust/assets/templates/template-waitlist.j2)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/landify/languages/rust/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/landify/languages/rust/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/landify/languages/rust/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/landify/languages/rust/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/landify/languages/rust/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── src/
 │   │   │   │   │   │   │   ├── gui/
 │   │   │   │   │   │   │   │   ├── [real.rs](./packages/app/headless/landify/languages/rust/src/gui/real.rs)
@@ -6309,6 +6244,96 @@
 │   │   │   │   ├── [README.md](./packages/app/headless/landify/README.md)
 │   │   │   │   ├── [TREE.md](./packages/app/headless/landify/TREE.md)
 │   │   │   │   └── [landify.yaml](./packages/app/headless/landify/landify.yaml)
+│   │   │   ├── pagify/
+│   │   │   │   ├── examples/
+│   │   │   │   │   ├── basic-docs/
+│   │   │   │   │   │   └── dist/
+│   │   │   │   │   │       ├── assets/
+│   │   │   │   │   │       │   ├── [favicon.ico](./packages/app/headless/pagify/examples/basic-docs/dist/assets/favicon.ico)
+│   │   │   │   │   │       │   ├── [script.js](./packages/app/headless/pagify/examples/basic-docs/dist/assets/script.js)
+│   │   │   │   │   │       │   ├── [search-index.json](./packages/app/headless/pagify/examples/basic-docs/dist/assets/search-index.json)
+│   │   │   │   │   │       │   ├── [search.js](./packages/app/headless/pagify/examples/basic-docs/dist/assets/search.js)
+│   │   │   │   │   │       │   └── [styles.css](./packages/app/headless/pagify/examples/basic-docs/dist/assets/styles.css)
+│   │   │   │   │   │       ├── getting-started/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/getting-started/index.html)
+│   │   │   │   │   │       ├── guide/
+│   │   │   │   │   │       │   ├── configuration/
+│   │   │   │   │   │       │   │   └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/guide/configuration/index.html)
+│   │   │   │   │   │       │   ├── installation/
+│   │   │   │   │   │       │   │   └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/guide/installation/index.html)
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/guide/index.html)
+│   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/index.html)
+│   │   │   │   │   ├── blog/
+│   │   │   │   │   │   └── dist/
+│   │   │   │   │   │       ├── assets/
+│   │   │   │   │   │       │   ├── [favicon.ico](./packages/app/headless/pagify/examples/blog/dist/assets/favicon.ico)
+│   │   │   │   │   │       │   ├── [script.js](./packages/app/headless/pagify/examples/blog/dist/assets/script.js)
+│   │   │   │   │   │       │   ├── [search-index.json](./packages/app/headless/pagify/examples/blog/dist/assets/search-index.json)
+│   │   │   │   │   │       │   ├── [search.js](./packages/app/headless/pagify/examples/blog/dist/assets/search.js)
+│   │   │   │   │   │       │   └── [styles.css](./packages/app/headless/pagify/examples/blog/dist/assets/styles.css)
+│   │   │   │   │   │       ├── category/
+│   │   │   │   │   │       │   ├── releases/
+│   │   │   │   │   │       │   │   └── [index.html](./packages/app/headless/pagify/examples/blog/dist/category/releases/index.html)
+│   │   │   │   │   │       │   ├── tips/
+│   │   │   │   │   │       │   │   └── [index.html](./packages/app/headless/pagify/examples/blog/dist/category/tips/index.html)
+│   │   │   │   │   │       │   └── tutorials/
+│   │   │   │   │   │       │       └── [index.html](./packages/app/headless/pagify/examples/blog/dist/category/tutorials/index.html)
+│   │   │   │   │   │       ├── customizing-your-site/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/blog/dist/customizing-your-site/index.html)
+│   │   │   │   │   │       ├── introducing-pagify-v0-1/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/blog/dist/introducing-pagify-v0-1/index.html)
+│   │   │   │   │   │       ├── writing-markdown-for-pagify/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/blog/dist/writing-markdown-for-pagify/index.html)
+│   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/blog/dist/index.html)
+│   │   │   │   │   ├── changelog/
+│   │   │   │   │   │   └── dist/
+│   │   │   │   │   │       ├── assets/
+│   │   │   │   │   │       │   ├── [favicon.ico](./packages/app/headless/pagify/examples/changelog/dist/assets/favicon.ico)
+│   │   │   │   │   │       │   ├── [script.js](./packages/app/headless/pagify/examples/changelog/dist/assets/script.js)
+│   │   │   │   │   │       │   ├── [search-index.json](./packages/app/headless/pagify/examples/changelog/dist/assets/search-index.json)
+│   │   │   │   │   │       │   ├── [search.js](./packages/app/headless/pagify/examples/changelog/dist/assets/search.js)
+│   │   │   │   │   │       │   └── [styles.css](./packages/app/headless/pagify/examples/changelog/dist/assets/styles.css)
+│   │   │   │   │   │       ├── v0-1-0/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v0-1-0/index.html)
+│   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/index.html)
+│   │   │   │   │   ├── reference/
+│   │   │   │   │   │   └── dist/
+│   │   │   │   │   │       ├── assets/
+│   │   │   │   │   │       │   ├── [favicon.ico](./packages/app/headless/pagify/examples/reference/dist/assets/favicon.ico)
+│   │   │   │   │   │       │   ├── [script.js](./packages/app/headless/pagify/examples/reference/dist/assets/script.js)
+│   │   │   │   │   │       │   ├── [search-index.json](./packages/app/headless/pagify/examples/reference/dist/assets/search-index.json)
+│   │   │   │   │   │       │   ├── [search.js](./packages/app/headless/pagify/examples/reference/dist/assets/search.js)
+│   │   │   │   │   │       │   └── [styles.css](./packages/app/headless/pagify/examples/reference/dist/assets/styles.css)
+│   │   │   │   │   │       ├── build/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/reference/dist/build/index.html)
+│   │   │   │   │   │       ├── markdown/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/reference/dist/markdown/index.html)
+│   │   │   │   │   │       ├── site/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/reference/dist/site/index.html)
+│   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/reference/dist/index.html)
+│   │   │   │   │   └── tutorial/
+│   │   │   │   │       └── dist/
+│   │   │   │   │           ├── assets/
+│   │   │   │   │           │   ├── [favicon.ico](./packages/app/headless/pagify/examples/tutorial/dist/assets/favicon.ico)
+│   │   │   │   │           │   ├── [script.js](./packages/app/headless/pagify/examples/tutorial/dist/assets/script.js)
+│   │   │   │   │           │   ├── [search-index.json](./packages/app/headless/pagify/examples/tutorial/dist/assets/search-index.json)
+│   │   │   │   │           │   ├── [search.js](./packages/app/headless/pagify/examples/tutorial/dist/assets/search.js)
+│   │   │   │   │           │   └── [styles.css](./packages/app/headless/pagify/examples/tutorial/dist/assets/styles.css)
+│   │   │   │   │           └── [index.html](./packages/app/headless/pagify/examples/tutorial/dist/index.html)
+│   │   │   │   ├── languages/
+│   │   │   │   │   ├── go/
+│   │   │   │   │   └── [README.md](./packages/app/headless/pagify/languages/README.md)
+│   │   │   │   ├── public/
+│   │   │   │   │   ├── og/
+│   │   │   │   │   │   ├── [og.png](./packages/app/headless/pagify/public/og/og.png)
+│   │   │   │   │   │   └── [og.svg](./packages/app/headless/pagify/public/og/og.svg)
+│   │   │   │   │   ├── [demo-en-descriptions.vtt](./packages/app/headless/pagify/public/demo-en-descriptions.vtt)
+│   │   │   │   │   ├── [demo.mp4](./packages/app/headless/pagify/public/demo.mp4)
+│   │   │   │   │   ├── [demo.png](./packages/app/headless/pagify/public/demo.png)
+│   │   │   │   │   └── [index.html](./packages/app/headless/pagify/public/index.html)
+│   │   │   │   ├── [README.md](./packages/app/headless/pagify/README.md)
+│   │   │   │   ├── [TREE.md](./packages/app/headless/pagify/TREE.md)
+│   │   │   │   └── [landify.yaml](./packages/app/headless/pagify/landify.yaml)
 │   │   │   ├── vectify/
 │   │   │   │   ├── examples/
 │   │   │   │   │   └── optimization/
@@ -6333,12 +6358,6 @@
 │   │   │   │   │   │   ├── [go.sum](./packages/app/headless/vectify/languages/go/go.sum)
 │   │   │   │   │   │   └── [main.go](./packages/app/headless/vectify/languages/go/main.go)
 │   │   │   │   │   ├── rust/
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/headless/vectify/languages/rust/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/headless/vectify/languages/rust/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/headless/vectify/languages/rust/docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/headless/vectify/languages/rust/docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/headless/vectify/languages/rust/docs/ROADMAP.md)
 │   │   │   │   │   │   ├── src/
 │   │   │   │   │   │   │   ├── bin/
 │   │   │   │   │   │   │   │   └── [vectify.rs](./packages/app/headless/vectify/languages/rust/src/bin/vectify.rs)
@@ -6405,7 +6424,6 @@
 │   │   │   │   │   │   │   └── [mcp.rs](./packages/app/headless/vectify/languages/rust/src/mcp.rs)
 │   │   │   │   │   │   ├── tests/
 │   │   │   │   │   │   │   ├── golden/
-│   │   │   │   │   │   │   │   ├── baselines/
 │   │   │   │   │   │   │   │   ├── images/
 │   │   │   │   │   │   │   │   │   ├── [circle.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/circle.png)
 │   │   │   │   │   │   │   │   │   ├── [ellipse.png](./packages/app/headless/vectify/languages/rust/tests/golden/images/ellipse.png)
@@ -6446,12 +6464,6 @@
 │   │   ├── hybrid/
 │   │   │   ├── developer-tools/
 │   │   │   │   ├── api/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/developer-tools/api/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/developer-tools/api/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/developer-tools/api/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/developer-tools/api/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/developer-tools/api/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/developer-tools/api/e2e/screenshots/about.png)
@@ -6827,25 +6839,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/developer-tools/api/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/developer-tools/api/tsconfig.json)
 │   │   │   │   ├── boilerplate/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── api/
-│   │   │   │   │   │   │   ├── [ADDING.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/ADDING.md)
-│   │   │   │   │   │   │   ├── [API.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/API.md)
-│   │   │   │   │   │   │   ├── [ATOMIC.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/ATOMIC.md)
-│   │   │   │   │   │   │   ├── [ATOMS.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/ATOMS.md)
-│   │   │   │   │   │   │   ├── [CONVENTIONS.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/CONVENTIONS.md)
-│   │   │   │   │   │   │   ├── [MOLECULES.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/MOLECULES.md)
-│   │   │   │   │   │   │   ├── [ORGANISMS.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/ORGANISMS.md)
-│   │   │   │   │   │   │   ├── [PAGES.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/PAGES.md)
-│   │   │   │   │   │   │   ├── [README.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/README.md)
-│   │   │   │   │   │   │   ├── [REFERENCES.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/REFERENCES.md)
-│   │   │   │   │   │   │   └── [TEMPLATES.md](./packages/app/hybrid/developer-tools/boilerplate/docs/api/TEMPLATES.md)
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/developer-tools/boilerplate/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/developer-tools/boilerplate/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/developer-tools/boilerplate/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/developer-tools/boilerplate/docs/PACKAGING.md)
-│   │   │   │   │   │   ├── [ROADMAP.md](./packages/app/hybrid/developer-tools/boilerplate/docs/ROADMAP.md)
-│   │   │   │   │   │   └── [SETUP.md](./packages/app/hybrid/developer-tools/boilerplate/docs/SETUP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/developer-tools/boilerplate/e2e/screenshots/about.png)
@@ -10314,12 +10307,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/developer-tools/boilerplate/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/developer-tools/boilerplate/tsconfig.json)
 │   │   │   │   ├── code/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/developer-tools/code/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/developer-tools/code/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/developer-tools/code/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/developer-tools/code/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/developer-tools/code/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/developer-tools/code/e2e/about.spec.ts)
 │   │   │   │   │   │   ├── [activity-bar.spec.ts](./packages/app/hybrid/developer-tools/code/e2e/activity-bar.spec.ts)
@@ -10589,14 +10576,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/developer-tools/code/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/developer-tools/code/tsconfig.json)
 │   │   │   │   ├── database/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── other/
-│   │   │   │   │   │   │   └── [DATABASES.md](./packages/app/hybrid/developer-tools/database/docs/other/DATABASES.md)
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/developer-tools/database/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/developer-tools/database/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/developer-tools/database/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/developer-tools/database/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/developer-tools/database/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/developer-tools/database/e2e/about.spec.ts)
 │   │   │   │   │   │   ├── [connection-management.spec.ts](./packages/app/hybrid/developer-tools/database/e2e/connection-management.spec.ts)
@@ -10977,15 +10956,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/developer-tools/database/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/developer-tools/database/tsconfig.json)
 │   │   │   │   ├── diagram/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── other/
-│   │   │   │   │   │   │   ├── [DIAGRAMS.md](./packages/app/hybrid/developer-tools/diagram/docs/other/DIAGRAMS.md)
-│   │   │   │   │   │   │   └── [SYNTAX.md](./packages/app/hybrid/developer-tools/diagram/docs/other/SYNTAX.md)
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/developer-tools/diagram/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/developer-tools/diagram/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/developer-tools/diagram/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/developer-tools/diagram/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/developer-tools/diagram/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/developer-tools/diagram/e2e/screenshots/about.png)
@@ -11389,12 +11359,6 @@
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/developer-tools/TREE.md)
 │   │   │   ├── education/
 │   │   │   │   ├── doi/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/education/doi/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/education/doi/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/education/doi/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/education/doi/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/education/doi/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   └── [smoke.spec.ts](./packages/app/hybrid/education/doi/e2e/smoke.spec.ts)
 │   │   │   │   │   ├── prisma/
@@ -11408,8 +11372,6 @@
 │   │   │   │   │   │   │   ├── csv/
 │   │   │   │   │   │   │   │   ├── [doi.references.csv](./packages/app/hybrid/education/doi/public/database/csv/doi.references.csv)
 │   │   │   │   │   │   │   │   └── [doi.works.csv](./packages/app/hybrid/education/doi/public/database/csv/doi.works.csv)
-│   │   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   │   └── [swagger.json](./packages/app/hybrid/education/doi/public/database/docs/swagger.json)
 │   │   │   │   │   │   │   ├── images/
 │   │   │   │   │   │   │   │   └── [graph.svg](./packages/app/hybrid/education/doi/public/database/images/graph.svg)
 │   │   │   │   │   │   │   ├── scripts/
@@ -11603,12 +11565,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/education/doi/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/education/doi/tsconfig.json)
 │   │   │   │   ├── lingo/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/education/lingo/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/education/lingo/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/education/lingo/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/education/lingo/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/education/lingo/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/education/lingo/e2e/screenshots/about.png)
@@ -11806,6 +11762,21 @@
 │   │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/ophthalmology/vision/page.tsx)
 │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/ophthalmology/page.tsx)
 │   │   │   │   │   │   │   │   │   └── psychology/
+│   │   │   │   │   │   │   │   │       ├── (clinical)/
+│   │   │   │   │   │   │   │   │       │   ├── anxiety/
+│   │   │   │   │   │   │   │   │       │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(clinical)/anxiety/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── generalized-anxiety-disorder/
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(clinical)/anxiety/generalized-anxiety-disorder/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(clinical)/anxiety/page.tsx)
+│   │   │   │   │   │   │   │   │       │   └── depression/
+│   │   │   │   │   │   │   │   │       │       ├── __tests__/
+│   │   │   │   │   │   │   │   │       │       │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(clinical)/depression/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │       ├── beck-depression-inventory/
+│   │   │   │   │   │   │   │   │       │       │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(clinical)/depression/beck-depression-inventory/page.tsx)
+│   │   │   │   │   │   │   │   │       │       ├── patient-health-questionnaire/
+│   │   │   │   │   │   │   │   │       │       │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(clinical)/depression/patient-health-questionnaire/page.tsx)
+│   │   │   │   │   │   │   │   │       │       └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(clinical)/depression/page.tsx)
 │   │   │   │   │   │   │   │   │       ├── (practices)/
 │   │   │   │   │   │   │   │   │       │   ├── counselling/
 │   │   │   │   │   │   │   │   │       │   │   ├── __tests__/
@@ -11820,34 +11791,17 @@
 │   │   │   │   │   │   │   │   │       │       │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(practices)/mindfulness/__tests__/page.test.tsx)
 │   │   │   │   │   │   │   │   │       │       └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(practices)/mindfulness/page.tsx)
 │   │   │   │   │   │   │   │   │       ├── (scales)/
-│   │   │   │   │   │   │   │   │       │   ├── beck-depression-inventory/
-│   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/beck-depression-inventory/page.tsx)
 │   │   │   │   │   │   │   │   │       │   ├── big-five-inventory/
 │   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/big-five-inventory/page.tsx)
 │   │   │   │   │   │   │   │   │       │   ├── dyadic-adjustment-scale/
 │   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/dyadic-adjustment-scale/page.tsx)
 │   │   │   │   │   │   │   │   │       │   ├── experiences-in-close-relationships/
 │   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/experiences-in-close-relationships/page.tsx)
-│   │   │   │   │   │   │   │   │       │   ├── generalized-anxiety-disorder/
-│   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/generalized-anxiety-disorder/page.tsx)
-│   │   │   │   │   │   │   │   │       │   ├── patient-health-questionnaire/
-│   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/patient-health-questionnaire/page.tsx)
 │   │   │   │   │   │   │   │   │       │   ├── relationship-closeness-inventory/
 │   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/relationship-closeness-inventory/page.tsx)
 │   │   │   │   │   │   │   │   │       │   └── satisfaction-with-life/
 │   │   │   │   │   │   │   │   │       │       └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(scales)/satisfaction-with-life/page.tsx)
 │   │   │   │   │   │   │   │   │       ├── (theory)/
-│   │   │   │   │   │   │   │   │       │   ├── (cognitive)/
-│   │   │   │   │   │   │   │   │       │   │   ├── attention/
-│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/attention/page.tsx)
-│   │   │   │   │   │   │   │   │       │   │   ├── learning/
-│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/learning/page.tsx)
-│   │   │   │   │   │   │   │   │       │   │   ├── memory/
-│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/memory/page.tsx)
-│   │   │   │   │   │   │   │   │       │   │   ├── perception/
-│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/perception/page.tsx)
-│   │   │   │   │   │   │   │   │       │   │   └── reasoning/
-│   │   │   │   │   │   │   │   │       │   │       └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/(cognitive)/reasoning/page.tsx)
 │   │   │   │   │   │   │   │   │       │   ├── biology/
 │   │   │   │   │   │   │   │   │       │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/biology/__tests__/page.test.tsx)
@@ -11855,6 +11809,114 @@
 │   │   │   │   │   │   │   │   │       │   ├── cognitive/
 │   │   │   │   │   │   │   │   │       │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── attention/
+│   │   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/attention/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── dino-run/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/attention/dino-run/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/attention/dino-run/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── rock-paper-scissors/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/attention/rock-paper-scissors/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/attention/rock-paper-scissors/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── snake/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/attention/snake/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/attention/snake/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/attention/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── learning/
+│   │   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/learning/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/learning/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── memory/
+│   │   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── memory-match/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/memory-match/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/memory-match/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── n-back/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/n-back/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/n-back/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── pi/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/pi/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/pi/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── recall/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/recall/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/recall/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/memory/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── perception/
+│   │   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/perception/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/perception/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   ├── reasoning/
+│   │   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [game2048.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/game2048.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [lights-out.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/lights-out.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [maze.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/maze.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [nikoli-fillomino.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/nikoli-fillomino.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [nikoli-heyawake.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/nikoli-heyawake.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [nikoli-masyu.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/nikoli-masyu.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [nikoli-norinori.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/nikoli-norinori.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [nikoli-nurikabe.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/nikoli-nurikabe.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [nikoli-shikaku.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/nikoli-shikaku.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [nikoli-sudoku.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/nikoli-sudoku.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [nikoli.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/nikoli.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [sliding-puzzle.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/sliding-puzzle.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [tic-tac-toe-classic.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/tic-tac-toe-classic.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [tic-tac-toe-duck.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/tic-tac-toe-duck.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [tic-tac-toe-notakto.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/tic-tac-toe-notakto.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [tic-tac-toe-reverse.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/tic-tac-toe-reverse.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [tic-tac-toe-t3.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/tic-tac-toe-t3.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [tic-tac-toe-wild.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/tic-tac-toe-wild.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── [tic-tac-toe.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/tic-tac-toe.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [towers.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/__tests__/towers.test.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── game2048/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/game2048/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── lights-out/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/lights-out/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── maze/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/maze/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── nikoli/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── fillomino/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/nikoli/fillomino/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── heyawake/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/nikoli/heyawake/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── masyu/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/nikoli/masyu/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── norinori/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/nikoli/norinori/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── nurikabe/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/nikoli/nurikabe/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── shikaku/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/nikoli/shikaku/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── sudoku/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/nikoli/sudoku/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/nikoli/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── sliding-puzzle/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/sliding-puzzle/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── tic-tac-toe/
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── classic/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/tic-tac-toe/classic/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── duck/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/tic-tac-toe/duck/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── notakto/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/tic-tac-toe/notakto/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── reverse/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/tic-tac-toe/reverse/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── t3/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/tic-tac-toe/t3/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   ├── wild/
+│   │   │   │   │   │   │   │   │       │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/tic-tac-toe/wild/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/tic-tac-toe/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   ├── towers/
+│   │   │   │   │   │   │   │   │       │   │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/towers/page.tsx)
+│   │   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/reasoning/page.tsx)
 │   │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(health)/psychology/(theory)/cognitive/page.tsx)
 │   │   │   │   │   │   │   │   │       │   ├── developmental/
 │   │   │   │   │   │   │   │   │       │   │   ├── __tests__/
@@ -12180,6 +12242,8 @@
 │   │   │   │   │   │   │   │   └── (stem)/
 │   │   │   │   │   │   │   │       ├── chemistry/
 │   │   │   │   │   │   │   │       │   ├── periodic-table/
+│   │   │   │   │   │   │   │       │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/chemistry/periodic-table/__tests__/page.test.tsx)
 │   │   │   │   │   │   │   │       │   │   ├── interactive/
 │   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/chemistry/periodic-table/interactive/__tests__/page.test.tsx)
@@ -12287,6 +12351,50 @@
 │   │   │   │   │   │   │   │       │   │   ├── __tests__/
 │   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/prime-numbers/__tests__/page.test.tsx)
 │   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/prime-numbers/page.tsx)
+│   │   │   │   │   │   │   │       │   ├── probability/
+│   │   │   │   │   │   │   │       │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── baccarat/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/baccarat/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/baccarat/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── card-counter/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/card-counter/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/card-counter/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── craps/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/craps/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/craps/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── hi-lo/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/hi-lo/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/hi-lo/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── keno/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/keno/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/keno/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── over-under-seven/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/over-under-seven/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/over-under-seven/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── poker-odds/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/poker-odds/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/poker-odds/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── roulette/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/roulette/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/roulette/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── slot-machine/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/slot-machine/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/slot-machine/page.tsx)
+│   │   │   │   │   │   │   │       │   │   ├── war/
+│   │   │   │   │   │   │   │       │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/war/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │       │   │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/war/page.tsx)
+│   │   │   │   │   │   │   │       │   │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/probability/page.tsx)
 │   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/education/lingo/src/app/(games)/(stem)/maths/page.tsx)
 │   │   │   │   │   │   │   │       └── neuroscience/
 │   │   │   │   │   │   │   │           ├── (anatomy)/
@@ -12437,12 +12545,14 @@
 │   │   │   │   │   │   │   ├── atoms/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   ├── [Badge.test.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/__tests__/Badge.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [Button.test.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/__tests__/Button.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Button.test.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/__tests__/Button.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [Dropzone.test.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/__tests__/Dropzone.test.tsx)
 │   │   │   │   │   │   │   │   ├── [AccentBadge.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/AccentBadge.tsx)
 │   │   │   │   │   │   │   │   ├── [Badge.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/Badge.tsx)
 │   │   │   │   │   │   │   │   ├── [Button.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/Button.tsx)
 │   │   │   │   │   │   │   │   ├── [CaretButton.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/CaretButton.tsx)
 │   │   │   │   │   │   │   │   ├── [DifficultyBadge.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/DifficultyBadge.tsx)
+│   │   │   │   │   │   │   │   ├── [Dropzone.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/Dropzone.tsx)
 │   │   │   │   │   │   │   │   ├── [FilterChip.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/FilterChip.tsx)
 │   │   │   │   │   │   │   │   └── [ThemeToggle.tsx](./packages/app/hybrid/education/lingo/src/components/atoms/ThemeToggle.tsx)
 │   │   │   │   │   │   │   ├── molecules/
@@ -12603,22 +12713,6 @@
 │   │   │   │   │   │   │   │   │       ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/ophthalmology/tumbling-e/types.ts)
 │   │   │   │   │   │   │   │   │       └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/ophthalmology/tumbling-e/utils.ts)
 │   │   │   │   │   │   │   │   └── psychology/
-│   │   │   │   │   │   │   │       ├── BeckDepressionInventory/
-│   │   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │       │   ├── components/
-│   │   │   │   │   │   │   │       │   │   ├── __tests__/
-│   │   │   │   │   │   │   │       │   │   │   ├── [OptionsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/components/__tests__/OptionsStep.test.tsx)
-│   │   │   │   │   │   │   │       │   │   │   └── [ResultsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/components/__tests__/ResultsStep.test.tsx)
-│   │   │   │   │   │   │   │       │   │   ├── [OptionsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/components/OptionsStep.tsx)
-│   │   │   │   │   │   │   │       │   │   └── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/components/ResultsStep.tsx)
-│   │   │   │   │   │   │   │       │   ├── docs/
-│   │   │   │   │   │   │   │       │   │   └── [beck-depression-inventory.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/docs/beck-depression-inventory.md)
-│   │   │   │   │   │   │   │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/AGENTS.md)
-│   │   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/index.tsx)
-│   │   │   │   │   │   │   │       │   ├── [items.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/items.ts)
-│   │   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/BeckDepressionInventory/utils.ts)
 │   │   │   │   │   │   │   │       ├── BigFiveInventory/
 │   │   │   │   │   │   │   │       │   ├── __tests__/
 │   │   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BigFiveInventory/__tests__/index.test.tsx)
@@ -12629,8 +12723,6 @@
 │   │   │   │   │   │   │   │       │   │   │   └── [ResultsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BigFiveInventory/components/__tests__/ResultsStep.test.tsx)
 │   │   │   │   │   │   │   │       │   │   ├── [AgreeStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BigFiveInventory/components/AgreeStep.tsx)
 │   │   │   │   │   │   │   │       │   │   └── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BigFiveInventory/components/ResultsStep.tsx)
-│   │   │   │   │   │   │   │       │   ├── docs/
-│   │   │   │   │   │   │   │       │   │   └── [big-five-inventory.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/BigFiveInventory/docs/big-five-inventory.md)
 │   │   │   │   │   │   │   │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/BigFiveInventory/AGENTS.md)
 │   │   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/BigFiveInventory/index.tsx)
 │   │   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/BigFiveInventory/utils.ts)
@@ -12644,8 +12736,6 @@
 │   │   │   │   │   │   │   │       │   │   │   └── [ResultsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/DyadicAdjustmentScale/components/__tests__/ResultsStep.test.tsx)
 │   │   │   │   │   │   │   │       │   │   ├── [OptionsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/DyadicAdjustmentScale/components/OptionsStep.tsx)
 │   │   │   │   │   │   │   │       │   │   └── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/DyadicAdjustmentScale/components/ResultsStep.tsx)
-│   │   │   │   │   │   │   │       │   ├── docs/
-│   │   │   │   │   │   │   │       │   │   └── [dyadic-adjustment-scale.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/DyadicAdjustmentScale/docs/dyadic-adjustment-scale.md)
 │   │   │   │   │   │   │   │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/DyadicAdjustmentScale/AGENTS.md)
 │   │   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/DyadicAdjustmentScale/index.tsx)
 │   │   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/DyadicAdjustmentScale/utils.ts)
@@ -12659,41 +12749,9 @@
 │   │   │   │   │   │   │   │       │   │   │   └── [ScaleStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/ExperiencesInCloseRelationships/components/__tests__/ScaleStep.test.tsx)
 │   │   │   │   │   │   │   │       │   │   ├── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/ExperiencesInCloseRelationships/components/ResultsStep.tsx)
 │   │   │   │   │   │   │   │       │   │   └── [ScaleStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/ExperiencesInCloseRelationships/components/ScaleStep.tsx)
-│   │   │   │   │   │   │   │       │   ├── docs/
-│   │   │   │   │   │   │   │       │   │   └── [experiences-in-close-relationships.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/ExperiencesInCloseRelationships/docs/experiences-in-close-relationships.md)
 │   │   │   │   │   │   │   │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/ExperiencesInCloseRelationships/AGENTS.md)
 │   │   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/ExperiencesInCloseRelationships/index.tsx)
 │   │   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/ExperiencesInCloseRelationships/utils.ts)
-│   │   │   │   │   │   │   │       ├── GeneralizedAnxietyDisorderScale/
-│   │   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │       │   ├── components/
-│   │   │   │   │   │   │   │       │   │   ├── __tests__/
-│   │   │   │   │   │   │   │       │   │   │   ├── [FrequencyStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/components/__tests__/FrequencyStep.test.tsx)
-│   │   │   │   │   │   │   │       │   │   │   └── [ResultsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/components/__tests__/ResultsStep.test.tsx)
-│   │   │   │   │   │   │   │       │   │   ├── [FrequencyStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/components/FrequencyStep.tsx)
-│   │   │   │   │   │   │   │       │   │   └── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/components/ResultsStep.tsx)
-│   │   │   │   │   │   │   │       │   ├── docs/
-│   │   │   │   │   │   │   │       │   │   └── [generalized-anxiety-disorder-scale.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/docs/generalized-anxiety-disorder-scale.md)
-│   │   │   │   │   │   │   │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/AGENTS.md)
-│   │   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/index.tsx)
-│   │   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/GeneralizedAnxietyDisorderScale/utils.ts)
-│   │   │   │   │   │   │   │       ├── PatientHealthQuestionnaire/
-│   │   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │       │   ├── components/
-│   │   │   │   │   │   │   │       │   │   ├── __tests__/
-│   │   │   │   │   │   │   │       │   │   │   ├── [FrequencyStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/components/__tests__/FrequencyStep.test.tsx)
-│   │   │   │   │   │   │   │       │   │   │   └── [ResultsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/components/__tests__/ResultsStep.test.tsx)
-│   │   │   │   │   │   │   │       │   │   ├── [FrequencyStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/components/FrequencyStep.tsx)
-│   │   │   │   │   │   │   │       │   │   └── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/components/ResultsStep.tsx)
-│   │   │   │   │   │   │   │       │   ├── docs/
-│   │   │   │   │   │   │   │       │   │   └── [patient-health-questionnaire.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/docs/patient-health-questionnaire.md)
-│   │   │   │   │   │   │   │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/AGENTS.md)
-│   │   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/index.tsx)
-│   │   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/PatientHealthQuestionnaire/utils.ts)
 │   │   │   │   │   │   │   │       ├── RelationshipClosenessInventory/
 │   │   │   │   │   │   │   │       │   ├── __tests__/
 │   │   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/RelationshipClosenessInventory/__tests__/index.test.tsx)
@@ -12707,23 +12765,317 @@
 │   │   │   │   │   │   │   │       │   │   ├── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/RelationshipClosenessInventory/components/ResultsStep.tsx)
 │   │   │   │   │   │   │   │       │   │   ├── [ScaleStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/RelationshipClosenessInventory/components/ScaleStep.tsx)
 │   │   │   │   │   │   │   │       │   │   └── [TimeStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/RelationshipClosenessInventory/components/TimeStep.tsx)
-│   │   │   │   │   │   │   │       │   ├── docs/
-│   │   │   │   │   │   │   │       │   │   └── [relationship-closeness-inventory-revised.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/RelationshipClosenessInventory/docs/relationship-closeness-inventory-revised.md)
 │   │   │   │   │   │   │   │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/RelationshipClosenessInventory/AGENTS.md)
 │   │   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/RelationshipClosenessInventory/index.tsx)
 │   │   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/RelationshipClosenessInventory/utils.ts)
-│   │   │   │   │   │   │   │       └── SatisfactionWithLifeScale/
-│   │   │   │   │   │   │   │           ├── __tests__/
-│   │   │   │   │   │   │   │           │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │           │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │           ├── components/
-│   │   │   │   │   │   │   │           │   ├── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/components/ResultsStep.tsx)
-│   │   │   │   │   │   │   │           │   └── [ScaleStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/components/ScaleStep.tsx)
-│   │   │   │   │   │   │   │           ├── docs/
-│   │   │   │   │   │   │   │           │   └── [satisfacition-with-life-scale.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/docs/satisfacition-with-life-scale.md)
-│   │   │   │   │   │   │   │           ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/AGENTS.md)
-│   │   │   │   │   │   │   │           ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/index.tsx)
-│   │   │   │   │   │   │   │           └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/utils.ts)
+│   │   │   │   │   │   │   │       ├── SatisfactionWithLifeScale/
+│   │   │   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │       │   ├── components/
+│   │   │   │   │   │   │   │       │   │   ├── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/components/ResultsStep.tsx)
+│   │   │   │   │   │   │   │       │   │   └── [ScaleStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/components/ScaleStep.tsx)
+│   │   │   │   │   │   │   │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/AGENTS.md)
+│   │   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/index.tsx)
+│   │   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/SatisfactionWithLifeScale/utils.ts)
+│   │   │   │   │   │   │   │       ├── clinical/
+│   │   │   │   │   │   │   │       │   ├── anxiety/
+│   │   │   │   │   │   │   │       │   │   └── GeneralizedAnxietyDisorderScale/
+│   │   │   │   │   │   │   │       │   │       ├── __tests__/
+│   │   │   │   │   │   │   │       │   │       │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │       │   │       │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │       │   │       ├── components/
+│   │   │   │   │   │   │   │       │   │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │   │       │   │   ├── [FrequencyStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/components/__tests__/FrequencyStep.test.tsx)
+│   │   │   │   │   │   │   │       │   │       │   │   └── [ResultsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/components/__tests__/ResultsStep.test.tsx)
+│   │   │   │   │   │   │   │       │   │       │   ├── [FrequencyStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/components/FrequencyStep.tsx)
+│   │   │   │   │   │   │   │       │   │       │   └── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/components/ResultsStep.tsx)
+│   │   │   │   │   │   │   │       │   │       ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/AGENTS.md)
+│   │   │   │   │   │   │   │       │   │       ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/index.tsx)
+│   │   │   │   │   │   │   │       │   │       └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/anxiety/GeneralizedAnxietyDisorderScale/utils.ts)
+│   │   │   │   │   │   │   │       │   └── depression/
+│   │   │   │   │   │   │   │       │       ├── BeckDepressionInventory/
+│   │   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │       │       │   ├── components/
+│   │   │   │   │   │   │   │       │       │   │   ├── __tests__/
+│   │   │   │   │   │   │   │       │       │   │   │   ├── [OptionsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/components/__tests__/OptionsStep.test.tsx)
+│   │   │   │   │   │   │   │       │       │   │   │   └── [ResultsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/components/__tests__/ResultsStep.test.tsx)
+│   │   │   │   │   │   │   │       │       │   │   ├── [OptionsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/components/OptionsStep.tsx)
+│   │   │   │   │   │   │   │       │       │   │   └── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/components/ResultsStep.tsx)
+│   │   │   │   │   │   │   │       │       │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/AGENTS.md)
+│   │   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/index.tsx)
+│   │   │   │   │   │   │   │       │       │   ├── [items.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/items.ts)
+│   │   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/BeckDepressionInventory/utils.ts)
+│   │   │   │   │   │   │   │       │       └── PatientHealthQuestionnaire/
+│   │   │   │   │   │   │   │       │           ├── __tests__/
+│   │   │   │   │   │   │   │       │           │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │       │           │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │       │           ├── components/
+│   │   │   │   │   │   │   │       │           │   ├── __tests__/
+│   │   │   │   │   │   │   │       │           │   │   ├── [FrequencyStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/components/__tests__/FrequencyStep.test.tsx)
+│   │   │   │   │   │   │   │       │           │   │   └── [ResultsStep.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/components/__tests__/ResultsStep.test.tsx)
+│   │   │   │   │   │   │   │       │           │   ├── [FrequencyStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/components/FrequencyStep.tsx)
+│   │   │   │   │   │   │   │       │           │   └── [ResultsStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/components/ResultsStep.tsx)
+│   │   │   │   │   │   │   │       │           ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/AGENTS.md)
+│   │   │   │   │   │   │   │       │           ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/index.tsx)
+│   │   │   │   │   │   │   │       │           └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/clinical/depression/PatientHealthQuestionnaire/utils.ts)
+│   │   │   │   │   │   │   │       └── cognitive/
+│   │   │   │   │   │   │   │           ├── attention/
+│   │   │   │   │   │   │   │           │   ├── dino-run/
+│   │   │   │   │   │   │   │           │   │   ├── __tests__/
+│   │   │   │   │   │   │   │           │   │   │   ├── [game.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/__tests__/game.test.ts)
+│   │   │   │   │   │   │   │           │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │           │   │   │   └── [useDinoRun.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/__tests__/useDinoRun.test.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/constants.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [draw.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/draw.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [game.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/game.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/index.tsx)
+│   │   │   │   │   │   │   │           │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/types.ts)
+│   │   │   │   │   │   │   │           │   │   └── [useDinoRun.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/dino-run/useDinoRun.ts)
+│   │   │   │   │   │   │   │           │   ├── rock-paper-scissors/
+│   │   │   │   │   │   │   │           │   │   ├── __tests__/
+│   │   │   │   │   │   │   │           │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/rock-paper-scissors/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │           │   │   │   ├── [useReactionMatch.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/rock-paper-scissors/__tests__/useReactionMatch.test.ts)
+│   │   │   │   │   │   │   │           │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/rock-paper-scissors/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/rock-paper-scissors/constants.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/rock-paper-scissors/index.tsx)
+│   │   │   │   │   │   │   │           │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/rock-paper-scissors/types.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [useReactionMatch.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/rock-paper-scissors/useReactionMatch.ts)
+│   │   │   │   │   │   │   │           │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/rock-paper-scissors/utils.ts)
+│   │   │   │   │   │   │   │           │   └── snake/
+│   │   │   │   │   │   │   │           │       ├── __tests__/
+│   │   │   │   │   │   │   │           │       │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/snake/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │           │       │   ├── [snake.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/snake/__tests__/snake.test.ts)
+│   │   │   │   │   │   │   │           │       │   └── [useSnake.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/snake/__tests__/useSnake.test.ts)
+│   │   │   │   │   │   │   │           │       ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/snake/constants.ts)
+│   │   │   │   │   │   │   │           │       ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/snake/index.tsx)
+│   │   │   │   │   │   │   │           │       ├── [snake.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/snake/snake.ts)
+│   │   │   │   │   │   │   │           │       ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/snake/types.ts)
+│   │   │   │   │   │   │   │           │       └── [useSnake.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/attention/snake/useSnake.ts)
+│   │   │   │   │   │   │   │           ├── memory/
+│   │   │   │   │   │   │   │           │   ├── memory-match/
+│   │   │   │   │   │   │   │           │   │   ├── __tests__/
+│   │   │   │   │   │   │   │           │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/memory-match/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │           │   │   │   ├── [useMemoryMatch.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/memory-match/__tests__/useMemoryMatch.test.ts)
+│   │   │   │   │   │   │   │           │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/memory-match/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/memory-match/constants.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/memory-match/index.tsx)
+│   │   │   │   │   │   │   │           │   │   ├── [useMemoryMatch.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/memory-match/useMemoryMatch.ts)
+│   │   │   │   │   │   │   │           │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/memory-match/utils.ts)
+│   │   │   │   │   │   │   │           │   ├── n-back/
+│   │   │   │   │   │   │   │           │   │   ├── __tests__/
+│   │   │   │   │   │   │   │           │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │           │   │   │   ├── [useNBack.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/__tests__/useNBack.test.ts)
+│   │   │   │   │   │   │   │           │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │           │   │   ├── components/
+│   │   │   │   │   │   │   │           │   │   │   ├── [ReadyStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/components/ReadyStep.tsx)
+│   │   │   │   │   │   │   │           │   │   │   ├── [ResultStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/components/ResultStep.tsx)
+│   │   │   │   │   │   │   │           │   │   │   └── [RunningStep.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/components/RunningStep.tsx)
+│   │   │   │   │   │   │   │           │   │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/constants.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/index.tsx)
+│   │   │   │   │   │   │   │           │   │   ├── [useNBack.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/useNBack.ts)
+│   │   │   │   │   │   │   │           │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/n-back/utils.ts)
+│   │   │   │   │   │   │   │           │   ├── pi/
+│   │   │   │   │   │   │   │           │   │   ├── __tests__/
+│   │   │   │   │   │   │   │           │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/pi/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │           │   │   │   ├── [usePiGame.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/pi/__tests__/usePiGame.test.ts)
+│   │   │   │   │   │   │   │           │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/pi/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/pi/constants.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/pi/index.tsx)
+│   │   │   │   │   │   │   │           │   │   ├── [piDigits.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/pi/piDigits.ts)
+│   │   │   │   │   │   │   │           │   │   ├── [usePiGame.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/pi/usePiGame.ts)
+│   │   │   │   │   │   │   │           │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/pi/utils.ts)
+│   │   │   │   │   │   │   │           │   └── recall/
+│   │   │   │   │   │   │   │           │       ├── __tests__/
+│   │   │   │   │   │   │   │           │       │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/recall/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │           │       │   ├── [useRecall.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/recall/__tests__/useRecall.test.ts)
+│   │   │   │   │   │   │   │           │       │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/recall/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │           │       ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/recall/constants.ts)
+│   │   │   │   │   │   │   │           │       ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/recall/index.tsx)
+│   │   │   │   │   │   │   │           │       ├── [useHighStreak.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/recall/useHighStreak.ts)
+│   │   │   │   │   │   │   │           │       ├── [useRecall.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/recall/useRecall.ts)
+│   │   │   │   │   │   │   │           │       └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/memory/recall/utils.ts)
+│   │   │   │   │   │   │   │           └── reasoning/
+│   │   │   │   │   │   │   │               ├── game2048/
+│   │   │   │   │   │   │   │               │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   ├── [Game2048.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/game2048/__tests__/Game2048.test.tsx)
+│   │   │   │   │   │   │   │               │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/game2048/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/game2048/constants.ts)
+│   │   │   │   │   │   │   │               │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/game2048/index.tsx)
+│   │   │   │   │   │   │   │               │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/game2048/types.ts)
+│   │   │   │   │   │   │   │               │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/game2048/utils.ts)
+│   │   │   │   │   │   │   │               ├── lights-out/
+│   │   │   │   │   │   │   │               │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/lights-out/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [useLightsOut.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/lights-out/__tests__/useLightsOut.test.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/lights-out/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/lights-out/constants.ts)
+│   │   │   │   │   │   │   │               │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/lights-out/index.tsx)
+│   │   │   │   │   │   │   │               │   ├── [useLightsOut.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/lights-out/useLightsOut.ts)
+│   │   │   │   │   │   │   │               │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/lights-out/utils.ts)
+│   │   │   │   │   │   │   │               ├── maze/
+│   │   │   │   │   │   │   │               │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/maze/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [maze.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/maze/__tests__/maze.test.ts)
+│   │   │   │   │   │   │   │               │   │   └── [useMaze.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/maze/__tests__/useMaze.test.ts)
+│   │   │   │   │   │   │   │               │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/maze/constants.ts)
+│   │   │   │   │   │   │   │               │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/maze/index.tsx)
+│   │   │   │   │   │   │   │               │   ├── [maze.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/maze/maze.ts)
+│   │   │   │   │   │   │   │               │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/maze/types.ts)
+│   │   │   │   │   │   │   │               │   └── [useMaze.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/maze/useMaze.ts)
+│   │   │   │   │   │   │   │               ├── nikoli/
+│   │   │   │   │   │   │   │               │   ├── Fillomino/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [Fillomino.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Fillomino/__tests__/Fillomino.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useFillomino.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Fillomino/__tests__/useFillomino.test.ts)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Fillomino/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Fillomino/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Fillomino/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useFillomino.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Fillomino/useFillomino.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Fillomino/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── Heyawake/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [Heyawake.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Heyawake/__tests__/Heyawake.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useHeyawake.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Heyawake/__tests__/useHeyawake.test.ts)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Heyawake/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Heyawake/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Heyawake/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useHeyawake.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Heyawake/useHeyawake.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Heyawake/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── Masyu/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [Masyu.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Masyu/__tests__/Masyu.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useMasyu.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Masyu/__tests__/useMasyu.test.ts)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Masyu/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [AGENTS.md](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Masyu/AGENTS.md)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Masyu/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Masyu/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useMasyu.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Masyu/useMasyu.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Masyu/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── Norinori/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [Norinori.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Norinori/__tests__/Norinori.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useNorinori.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Norinori/__tests__/useNorinori.test.ts)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Norinori/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Norinori/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Norinori/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useNorinori.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Norinori/useNorinori.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Norinori/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── Nurikabe/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [Nurikabe.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Nurikabe/__tests__/Nurikabe.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useNurikabe.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Nurikabe/__tests__/useNurikabe.test.ts)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Nurikabe/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Nurikabe/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Nurikabe/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useNurikabe.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Nurikabe/useNurikabe.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Nurikabe/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── Shikaku/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [Shikaku.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Shikaku/__tests__/Shikaku.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useShikaku.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Shikaku/__tests__/useShikaku.test.ts)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Shikaku/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Shikaku/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Shikaku/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useShikaku.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Shikaku/useShikaku.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Shikaku/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── Sudoku/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── __snapshots__/
+│   │   │   │   │   │   │   │               │   │   │   │   └── [index.test.tsx.snap](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Sudoku/__tests__/__snapshots__/index.test.tsx.snap)
+│   │   │   │   │   │   │   │               │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Sudoku/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   └── [useSudoku.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Sudoku/__tests__/useSudoku.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── utils/
+│   │   │   │   │   │   │   │               │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   │   └── [sudoku.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Sudoku/utils/__tests__/sudoku.test.ts)
+│   │   │   │   │   │   │   │               │   │   │   └── [sudoku.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Sudoku/utils/sudoku.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Sudoku/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Sudoku/types.ts)
+│   │   │   │   │   │   │   │               │   │   └── [useSudoku.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/Sudoku/useSudoku.ts)
+│   │   │   │   │   │   │   │               │   └── _shared/
+│   │   │   │   │   │   │   │               │       ├── __tests__/
+│   │   │   │   │   │   │   │               │       │   ├── [GameInstructions.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/_shared/__tests__/GameInstructions.test.tsx)
+│   │   │   │   │   │   │   │               │       │   └── [gameData.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/_shared/__tests__/gameData.test.tsx)
+│   │   │   │   │   │   │   │               │       ├── [GameInstructions.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/_shared/GameInstructions.tsx)
+│   │   │   │   │   │   │   │               │       ├── [gameData.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/_shared/gameData.tsx)
+│   │   │   │   │   │   │   │               │       └── [games.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/nikoli/_shared/games.ts)
+│   │   │   │   │   │   │   │               ├── sliding-puzzle/
+│   │   │   │   │   │   │   │               │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   ├── [SlidingPuzzle.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/sliding-puzzle/__tests__/SlidingPuzzle.test.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [useSlidingPuzzle.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/sliding-puzzle/__tests__/useSlidingPuzzle.test.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/sliding-puzzle/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/sliding-puzzle/index.tsx)
+│   │   │   │   │   │   │   │               │   ├── [useSlidingPuzzle.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/sliding-puzzle/useSlidingPuzzle.ts)
+│   │   │   │   │   │   │   │               │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/sliding-puzzle/utils.ts)
+│   │   │   │   │   │   │   │               ├── tic-tac-toe/
+│   │   │   │   │   │   │   │               │   ├── _shared/
+│   │   │   │   │   │   │   │               │   │   ├── [board.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/_shared/board.ts)
+│   │   │   │   │   │   │   │               │   │   └── [games.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/_shared/games.ts)
+│   │   │   │   │   │   │   │               │   ├── classic/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/classic/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useClassic.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/classic/__tests__/useClassic.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/classic/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/classic/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/classic/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useClassic.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/classic/useClassic.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/classic/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── duck/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/duck/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useDuck.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/duck/__tests__/useDuck.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/duck/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/duck/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/duck/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useDuck.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/duck/useDuck.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/duck/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── notakto/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/notakto/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useNotakto.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/notakto/__tests__/useNotakto.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/notakto/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/notakto/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/notakto/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useNotakto.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/notakto/useNotakto.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/notakto/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── reverse/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/reverse/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useReverse.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/reverse/__tests__/useReverse.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/reverse/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/reverse/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/reverse/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useReverse.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/reverse/useReverse.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/reverse/utils.ts)
+│   │   │   │   │   │   │   │               │   ├── t3/
+│   │   │   │   │   │   │   │               │   │   ├── __tests__/
+│   │   │   │   │   │   │   │               │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/t3/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   ├── [useT3.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/t3/__tests__/useT3.test.tsx)
+│   │   │   │   │   │   │   │               │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/t3/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/t3/index.tsx)
+│   │   │   │   │   │   │   │               │   │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/t3/types.ts)
+│   │   │   │   │   │   │   │               │   │   ├── [useT3.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/t3/useT3.ts)
+│   │   │   │   │   │   │   │               │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/t3/utils.ts)
+│   │   │   │   │   │   │   │               │   └── wild/
+│   │   │   │   │   │   │   │               │       ├── __tests__/
+│   │   │   │   │   │   │   │               │       │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/wild/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │               │       │   ├── [useWild.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/wild/__tests__/useWild.test.tsx)
+│   │   │   │   │   │   │   │               │       │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/wild/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │               │       ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/wild/index.tsx)
+│   │   │   │   │   │   │   │               │       ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/wild/types.ts)
+│   │   │   │   │   │   │   │               │       ├── [useWild.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/wild/useWild.ts)
+│   │   │   │   │   │   │   │               │       └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/tic-tac-toe/wild/utils.ts)
+│   │   │   │   │   │   │   │               └── towers/
+│   │   │   │   │   │   │   │                   ├── __tests__/
+│   │   │   │   │   │   │   │                   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/towers/__tests__/index.test.tsx)
+│   │   │   │   │   │   │   │                   │   ├── [useTowers.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/towers/__tests__/useTowers.test.ts)
+│   │   │   │   │   │   │   │                   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/towers/__tests__/utils.test.ts)
+│   │   │   │   │   │   │   │                   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/towers/constants.ts)
+│   │   │   │   │   │   │   │                   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/towers/index.tsx)
+│   │   │   │   │   │   │   │                   ├── [useTowers.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/towers/useTowers.ts)
+│   │   │   │   │   │   │   │                   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/health/psychology/cognitive/reasoning/towers/utils.ts)
 │   │   │   │   │   │   │   ├── humanities/
 │   │   │   │   │   │   │   │   ├── economics/
 │   │   │   │   │   │   │   │   │   ├── behavioral-economics/
@@ -13724,12 +14076,111 @@
 │   │   │   │   │   │   │       │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/kaprekar-constant/__tests__/utils.test.ts)
 │   │   │   │   │   │   │       │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/kaprekar-constant/index.tsx)
 │   │   │   │   │   │   │       │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/kaprekar-constant/utils.ts)
-│   │   │   │   │   │   │       │   └── prime-numbers/
-│   │   │   │   │   │   │       │       ├── __tests__/
-│   │   │   │   │   │   │       │       │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/prime-numbers/__tests__/index.test.tsx)
-│   │   │   │   │   │   │       │       │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/prime-numbers/__tests__/utils.test.ts)
-│   │   │   │   │   │   │       │       ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/prime-numbers/index.tsx)
-│   │   │   │   │   │   │       │       └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/prime-numbers/utils.ts)
+│   │   │   │   │   │   │       │   ├── prime-numbers/
+│   │   │   │   │   │   │       │   │   ├── __tests__/
+│   │   │   │   │   │   │       │   │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/prime-numbers/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │   │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/prime-numbers/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │   │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/prime-numbers/index.tsx)
+│   │   │   │   │   │   │       │   │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/prime-numbers/utils.ts)
+│   │   │   │   │   │   │       │   └── probability/
+│   │   │   │   │   │   │       │       ├── _shared/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   └── [cards.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/_shared/__tests__/cards.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [cards.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/_shared/cards.ts)
+│   │   │   │   │   │   │       │       │   └── [dice.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/_shared/dice.ts)
+│   │   │   │   │   │   │       │       ├── baccarat/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/baccarat/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │       │   │   ├── [useBaccarat.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/baccarat/__tests__/useBaccarat.test.ts)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/baccarat/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/baccarat/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/baccarat/types.ts)
+│   │   │   │   │   │   │       │       │   ├── [useBaccarat.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/baccarat/useBaccarat.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/baccarat/utils.ts)
+│   │   │   │   │   │   │       │       ├── card-counter/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/card-counter/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │       │   │   ├── [useCardCounter.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/card-counter/__tests__/useCardCounter.test.ts)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/card-counter/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/card-counter/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/card-counter/types.ts)
+│   │   │   │   │   │   │       │       │   ├── [useCardCounter.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/card-counter/useCardCounter.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/card-counter/utils.ts)
+│   │   │   │   │   │   │       │       ├── craps/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/craps/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │       │   │   ├── [useCraps.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/craps/__tests__/useCraps.test.ts)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/craps/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/craps/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/craps/types.ts)
+│   │   │   │   │   │   │       │       │   ├── [useCraps.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/craps/useCraps.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/craps/utils.ts)
+│   │   │   │   │   │   │       │       ├── hi-lo/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/hi-lo/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │       │   │   ├── [useHiLo.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/hi-lo/__tests__/useHiLo.test.ts)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/hi-lo/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/hi-lo/constants.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/hi-lo/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/hi-lo/types.ts)
+│   │   │   │   │   │   │       │       │   ├── [useHiLo.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/hi-lo/useHiLo.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/hi-lo/utils.ts)
+│   │   │   │   │   │   │       │       ├── keno/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/keno/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │       │   │   ├── [useKeno.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/keno/__tests__/useKeno.test.ts)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/keno/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/keno/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/keno/types.ts)
+│   │   │   │   │   │   │       │       │   ├── [useKeno.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/keno/useKeno.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/keno/utils.ts)
+│   │   │   │   │   │   │       │       ├── over-under-seven/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/over-under-seven/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │       │   │   ├── [useOverUnderSeven.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/over-under-seven/__tests__/useOverUnderSeven.test.ts)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/over-under-seven/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/over-under-seven/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/over-under-seven/types.ts)
+│   │   │   │   │   │   │       │       │   ├── [useOverUnderSeven.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/over-under-seven/useOverUnderSeven.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/over-under-seven/utils.ts)
+│   │   │   │   │   │   │       │       ├── poker-odds/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [usePokerOdds.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/poker-odds/__tests__/usePokerOdds.test.tsx)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/poker-odds/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── components/
+│   │   │   │   │   │   │       │       │   │   └── [CardPicker.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/poker-odds/components/CardPicker.tsx)
+│   │   │   │   │   │   │       │       │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/poker-odds/constants.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/poker-odds/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/poker-odds/types.ts)
+│   │   │   │   │   │   │       │       │   ├── [usePokerOdds.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/poker-odds/usePokerOdds.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/poker-odds/utils.ts)
+│   │   │   │   │   │   │       │       ├── roulette/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/roulette/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │       │   │   ├── [useRoulette.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/roulette/__tests__/useRoulette.test.ts)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/roulette/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/roulette/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/roulette/types.ts)
+│   │   │   │   │   │   │       │       │   ├── [useRoulette.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/roulette/useRoulette.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/roulette/utils.ts)
+│   │   │   │   │   │   │       │       ├── slot-machine/
+│   │   │   │   │   │   │       │       │   ├── __tests__/
+│   │   │   │   │   │   │       │       │   │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/slot-machine/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │       │   │   ├── [useSlotMachine.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/slot-machine/__tests__/useSlotMachine.test.ts)
+│   │   │   │   │   │   │       │       │   │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/slot-machine/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │       │   ├── [constants.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/slot-machine/constants.ts)
+│   │   │   │   │   │   │       │       │   ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/slot-machine/index.tsx)
+│   │   │   │   │   │   │       │       │   ├── [useSlotMachine.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/slot-machine/useSlotMachine.ts)
+│   │   │   │   │   │   │       │       │   └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/slot-machine/utils.ts)
+│   │   │   │   │   │   │       │       └── war/
+│   │   │   │   │   │   │       │           ├── __tests__/
+│   │   │   │   │   │   │       │           │   ├── [index.test.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/war/__tests__/index.test.tsx)
+│   │   │   │   │   │   │       │           │   ├── [useWar.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/war/__tests__/useWar.test.ts)
+│   │   │   │   │   │   │       │           │   └── [utils.test.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/war/__tests__/utils.test.ts)
+│   │   │   │   │   │   │       │           ├── [index.tsx](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/war/index.tsx)
+│   │   │   │   │   │   │       │           ├── [types.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/war/types.ts)
+│   │   │   │   │   │   │       │           ├── [useWar.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/war/useWar.ts)
+│   │   │   │   │   │   │       │           └── [utils.ts](./packages/app/hybrid/education/lingo/src/games/stem/maths/probability/war/utils.ts)
 │   │   │   │   │   │   │       └── neuroscience/
 │   │   │   │   │   │   │           ├── anatomy/
 │   │   │   │   │   │   │           │   └── brain-atlas/
@@ -13864,6 +14315,9 @@
 │   │   │   │   │   │   │   │   ├── ophthalmology/
 │   │   │   │   │   │   │   │   │   └── [vision.md](./packages/app/hybrid/education/lingo/src/notes/health/ophthalmology/vision.md)
 │   │   │   │   │   │   │   │   └── psychology/
+│   │   │   │   │   │   │   │       ├── clinical/
+│   │   │   │   │   │   │   │       │   ├── [anxiety.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/clinical/anxiety.md)
+│   │   │   │   │   │   │   │       │   └── [depression.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/clinical/depression.md)
 │   │   │   │   │   │   │   │       ├── practices/
 │   │   │   │   │   │   │   │       │   ├── [counselling.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/practices/counselling.md)
 │   │   │   │   │   │   │   │       │   ├── [journaling.md](./packages/app/hybrid/education/lingo/src/notes/health/psychology/practices/journaling.md)
@@ -13974,6 +14428,8 @@
 │   │   │   │   │   │   │   │   │       ├── [stacks.md](./packages/app/hybrid/education/lingo/src/notes/stem/engineering/data-structures/stacks.md)
 │   │   │   │   │   │   │   │   │       ├── [suffix-arrays.md](./packages/app/hybrid/education/lingo/src/notes/stem/engineering/data-structures/suffix-arrays.md)
 │   │   │   │   │   │   │   │   │       └── [trie.md](./packages/app/hybrid/education/lingo/src/notes/stem/engineering/data-structures/trie.md)
+│   │   │   │   │   │   │   │   ├── maths/
+│   │   │   │   │   │   │   │   │   └── [probability.md](./packages/app/hybrid/education/lingo/src/notes/stem/maths/probability.md)
 │   │   │   │   │   │   │   │   └── neuroscience/
 │   │   │   │   │   │   │   │       ├── neuroimaging/
 │   │   │   │   │   │   │   │       │   ├── eeg/
@@ -14097,319 +14553,8 @@
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/education/lingo/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/education/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/education/TREE.md)
-│   │   │   ├── finance/
-│   │   │   │   ├── tax/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/finance/tax/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/finance/tax/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/finance/tax/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/finance/tax/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/finance/tax/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── screenshots/
-│   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/finance/tax/e2e/screenshots/about.png)
-│   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/finance/tax/e2e/screenshots/downloads.png)
-│   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/finance/tax/e2e/screenshots/home.png)
-│   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/finance/tax/e2e/screenshots/version.png)
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/finance/tax/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [calculator.spec.ts](./packages/app/hybrid/finance/tax/e2e/calculator.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/finance/tax/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [helpers.ts](./packages/app/hybrid/finance/tax/e2e/helpers.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/finance/tax/e2e/home.spec.ts)
-│   │   │   │   │   │   ├── [index.spec.ts](./packages/app/hybrid/finance/tax/e2e/index.spec.ts)
-│   │   │   │   │   │   ├── [navigation.spec.ts](./packages/app/hybrid/finance/tax/e2e/navigation.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/finance/tax/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/finance/tax/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/finance/tax/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/finance/tax/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/finance/tax/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/finance/tax/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/finance/tax/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/finance/tax/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/finance/tax/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/finance/tax/public/icons/icon.svg)
-│   │   │   │   │   │   ├── og/
-│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/finance/tax/public/og/og.png)
-│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/finance/tax/public/og/og.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/finance/tax/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/finance/tax/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/finance/tax/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/finance/tax/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/finance/tax/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/finance/tax/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [audit-detail-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/audit-detail-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [audit-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/audit-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [business-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/business-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [calculator-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/calculator-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [new-submission-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/new-submission-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [personal-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/personal-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/finance/tax/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [settings-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/settings-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [submission-detail-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/submission-detail-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [submission-page.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/submission-page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/finance/tax/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── business/
-│   │   │   │   │   │   │   │   ├── audit/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/business/audit/page.tsx)
-│   │   │   │   │   │   │   │   ├── submission/
-│   │   │   │   │   │   │   │   │   ├── new/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/business/submission/new/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/business/submission/page.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/business/page.tsx)
-│   │   │   │   │   │   │   ├── personal/
-│   │   │   │   │   │   │   │   ├── calculator/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/personal/calculator/page.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/personal/page.tsx)
-│   │   │   │   │   │   │   ├── settings/
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/finance/tax/src/app/settings/page.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/finance/tax/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/finance/tax/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/finance/tax/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/finance/tax/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/finance/tax/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/finance/tax/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/finance/tax/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/finance/tax/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/finance/tax/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/finance/tax/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [OfflineBanner.test.tsx](./packages/app/hybrid/finance/tax/src/components/__tests__/OfflineBanner.test.tsx)
-│   │   │   │   │   │   │   │   ├── [RouteGuard.test.tsx](./packages/app/hybrid/finance/tax/src/components/__tests__/RouteGuard.test.tsx)
-│   │   │   │   │   │   │   │   └── [SkipToContent.test.tsx](./packages/app/hybrid/finance/tax/src/components/__tests__/SkipToContent.test.tsx)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AuditDetail.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/AuditDetail.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [AuditList.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/AuditList.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BottomNav.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/BottomNav.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CalculatorForm.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/CalculatorForm.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CalculatorResults.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/CalculatorResults.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Header.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/Header.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Sidebar.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/Sidebar.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SubmissionDetail.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/SubmissionDetail.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [SubmissionList.test.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/__tests__/SubmissionList.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AuditDetail.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/AuditDetail.tsx)
-│   │   │   │   │   │   │   │   ├── [AuditList.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/AuditList.tsx)
-│   │   │   │   │   │   │   │   ├── [BottomNav.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/BottomNav.tsx)
-│   │   │   │   │   │   │   │   ├── [CalculatorForm.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/CalculatorForm.tsx)
-│   │   │   │   │   │   │   │   ├── [CalculatorResults.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/CalculatorResults.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   ├── [Sidebar.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/Sidebar.tsx)
-│   │   │   │   │   │   │   │   ├── [SubmissionDetail.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/SubmissionDetail.tsx)
-│   │   │   │   │   │   │   │   └── [SubmissionList.tsx](./packages/app/hybrid/finance/tax/src/components/organisms/SubmissionList.tsx)
-│   │   │   │   │   │   │   ├── templates/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/finance/tax/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [AuthTemplate.test.tsx](./packages/app/hybrid/finance/tax/src/components/templates/__tests__/AuthTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DashboardTemplate.test.tsx](./packages/app/hybrid/finance/tax/src/components/templates/__tests__/DashboardTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/finance/tax/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/finance/tax/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AboutTemplate.tsx](./packages/app/hybrid/finance/tax/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [AuthTemplate.tsx](./packages/app/hybrid/finance/tax/src/components/templates/AuthTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [DashboardTemplate.tsx](./packages/app/hybrid/finance/tax/src/components/templates/DashboardTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [DownloadsTemplate.tsx](./packages/app/hybrid/finance/tax/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │   │   └── [VersionTemplate.tsx](./packages/app/hybrid/finance/tax/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   │   ├── [OfflineBanner.tsx](./packages/app/hybrid/finance/tax/src/components/OfflineBanner.tsx)
-│   │   │   │   │   │   │   ├── [RouteGuard.tsx](./packages/app/hybrid/finance/tax/src/components/RouteGuard.tsx)
-│   │   │   │   │   │   │   └── [SkipToContent.tsx](./packages/app/hybrid/finance/tax/src/components/SkipToContent.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/finance/tax/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/finance/tax/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/finance/tax/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [mock.test.ts](./packages/app/hybrid/finance/tax/src/data/__tests__/mock.test.ts)
-│   │   │   │   │   │   │   │   └── [nav.test.ts](./packages/app/hybrid/finance/tax/src/data/__tests__/nav.test.ts)
-│   │   │   │   │   │   │   ├── [mock.ts](./packages/app/hybrid/finance/tax/src/data/mock.ts)
-│   │   │   │   │   │   │   └── [nav.ts](./packages/app/hybrid/finance/tax/src/data/nav.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [useEntitySync.test.ts](./packages/app/hybrid/finance/tax/src/hooks/__tests__/useEntitySync.test.ts)
-│   │   │   │   │   │   │   └── [useEntitySync.ts](./packages/app/hybrid/finance/tax/src/hooks/useEntitySync.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/finance/tax/src/lib/__tests__/db.test.ts)
-│   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/finance/tax/src/lib/__tests__/seed.test.ts)
-│   │   │   │   │   │   │   ├── tax/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [calculator.test.ts](./packages/app/hybrid/finance/tax/src/lib/tax/__tests__/calculator.test.ts)
-│   │   │   │   │   │   │   │   │   └── [constants.test.ts](./packages/app/hybrid/finance/tax/src/lib/tax/__tests__/constants.test.ts)
-│   │   │   │   │   │   │   │   ├── [calculator.ts](./packages/app/hybrid/finance/tax/src/lib/tax/calculator.ts)
-│   │   │   │   │   │   │   │   └── [constants.ts](./packages/app/hybrid/finance/tax/src/lib/tax/constants.ts)
-│   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/finance/tax/src/lib/db.ts)
-│   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/finance/tax/src/lib/seed.ts)
-│   │   │   │   │   │   ├── providers/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/finance/tax/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/finance/tax/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   │   │   │   │   ├── auth/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [AuthProvider.test.tsx](./packages/app/hybrid/finance/tax/src/providers/auth/__tests__/AuthProvider.test.tsx)
-│   │   │   │   │   │   │   │   └── [AuthProvider.tsx](./packages/app/hybrid/finance/tax/src/providers/auth/AuthProvider.tsx)
-│   │   │   │   │   │   │   ├── entities/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [crud.test.tsx](./packages/app/hybrid/finance/tax/src/providers/entities/__tests__/crud.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [providers.test.tsx](./packages/app/hybrid/finance/tax/src/providers/entities/__tests__/providers.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AuditsProvider.tsx](./packages/app/hybrid/finance/tax/src/providers/entities/AuditsProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [CompaniesProvider.tsx](./packages/app/hybrid/finance/tax/src/providers/entities/CompaniesProvider.tsx)
-│   │   │   │   │   │   │   │   ├── [SubmissionsProvider.tsx](./packages/app/hybrid/finance/tax/src/providers/entities/SubmissionsProvider.tsx)
-│   │   │   │   │   │   │   │   └── [UserProvider.tsx](./packages/app/hybrid/finance/tax/src/providers/entities/UserProvider.tsx)
-│   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/finance/tax/src/providers/DataProvider.tsx)
-│   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/finance/tax/src/providers/Providers.tsx)
-│   │   │   │   │   │   │   └── [ToastProvider.tsx](./packages/app/hybrid/finance/tax/src/providers/ToastProvider.tsx)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/finance/tax/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/finance/tax/src/styles/themes.css)
-│   │   │   │   │   │   ├── types/
-│   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/finance/tax/src/types/index.ts)
-│   │   │   │   │   │   └── utils/
-│   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │       │   └── [format.test.ts](./packages/app/hybrid/finance/tax/src/utils/__tests__/format.test.ts)
-│   │   │   │   │   │       └── [format.ts](./packages/app/hybrid/finance/tax/src/utils/format.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/finance/tax/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/finance/tax/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/finance/tax/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/finance/tax/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/finance/tax/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/finance/tax/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/finance/tax/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/finance/tax/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/finance/tax/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/finance/tax/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/finance/tax/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/finance/tax/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   ├── [icon.png](./packages/app/hybrid/finance/tax/src-tauri/icons/icon.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/finance/tax/src-tauri/icons/icon.svg)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/finance/tax/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/finance/tax/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/finance/tax/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/finance/tax/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/finance/tax/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/finance/tax/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/finance/tax/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/finance/tax/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/finance/tax/LICENSE)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/finance/tax/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/finance/tax/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/finance/tax/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/finance/tax/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/finance/tax/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/finance/tax/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/finance/tax/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/finance/tax/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/finance/tax/tsconfig.json)
-│   │   │   │   ├── [README.md](./packages/app/hybrid/finance/README.md)
-│   │   │   │   └── [TREE.md](./packages/app/hybrid/finance/TREE.md)
 │   │   │   ├── food-drink/
 │   │   │   │   ├── foody/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/food-drink/foody/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/food-drink/foody/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/food-drink/foody/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/food-drink/foody/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/food-drink/foody/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/food-drink/foody/e2e/screenshots/about.png)
@@ -14708,685 +14853,20 @@
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/food-drink/foody/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/food-drink/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/food-drink/TREE.md)
-│   │   │   ├── games/
-│   │   │   │   ├── memory/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/games/memory/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/games/memory/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/games/memory/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/games/memory/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/games/memory/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── screenshots/
-│   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/games/memory/e2e/screenshots/about.png)
-│   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/games/memory/e2e/screenshots/downloads.png)
-│   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/games/memory/e2e/screenshots/home.png)
-│   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/games/memory/e2e/screenshots/version.png)
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/games/memory/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/games/memory/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/games/memory/e2e/home.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/games/memory/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/games/memory/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/games/memory/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/games/memory/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/games/memory/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/games/memory/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/games/memory/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/games/memory/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/games/memory/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/games/memory/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/games/memory/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/games/memory/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/games/memory/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/games/memory/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/games/memory/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/games/memory/public/icons/icon.svg)
-│   │   │   │   │   │   ├── og/
-│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/games/memory/public/og/og.png)
-│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/games/memory/public/og/og.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/games/memory/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/games/memory/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/games/memory/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/games/memory/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/games/memory/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/games/memory/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (games)/
-│   │   │   │   │   │   │   │   ├── 8-bit/
-│   │   │   │   │   │   │   │   │   ├── dino-run/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/8-bit/dino-run/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── maze/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/8-bit/maze/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── rock-paper-scissors/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/8-bit/rock-paper-scissors/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── snake/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/8-bit/snake/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/8-bit/page.tsx)
-│   │   │   │   │   │   │   │   ├── gambling/
-│   │   │   │   │   │   │   │   │   ├── baccarat/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/baccarat/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── card-counter/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/card-counter/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── craps/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/craps/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── hi-lo/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/hi-lo/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── keno/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/keno/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── over-under-seven/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/over-under-seven/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── poker-odds/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/poker-odds/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── roulette/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/roulette/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── slot-machine/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/slot-machine/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── war/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/war/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/page.tsx)
-│   │   │   │   │   │   │   │   ├── memory/
-│   │   │   │   │   │   │   │   │   ├── memory-match/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/memory/memory-match/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── n-back/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/memory/n-back/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── pi/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/memory/pi/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── recall/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/memory/recall/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/memory/page.tsx)
-│   │   │   │   │   │   │   │   ├── nikoli/
-│   │   │   │   │   │   │   │   │   ├── fillomino/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/nikoli/fillomino/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── heyawake/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/nikoli/heyawake/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── masyu/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/nikoli/masyu/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── norinori/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/nikoli/norinori/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── nurikabe/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/nikoli/nurikabe/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── shikaku/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/nikoli/shikaku/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── sudoku/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/nikoli/sudoku/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/nikoli/page.tsx)
-│   │   │   │   │   │   │   │   ├── puzzles/
-│   │   │   │   │   │   │   │   │   ├── game2048/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/puzzles/game2048/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── lights-out/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/puzzles/lights-out/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── sliding-puzzle/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/puzzles/sliding-puzzle/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── towers/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/puzzles/towers/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/puzzles/page.tsx)
-│   │   │   │   │   │   │   │   └── tic-tac-toe/
-│   │   │   │   │   │   │   │       ├── classic/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/tic-tac-toe/classic/page.tsx)
-│   │   │   │   │   │   │   │       ├── duck/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/tic-tac-toe/duck/page.tsx)
-│   │   │   │   │   │   │   │       ├── notakto/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/tic-tac-toe/notakto/page.tsx)
-│   │   │   │   │   │   │   │       ├── reverse/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/tic-tac-toe/reverse/page.tsx)
-│   │   │   │   │   │   │   │       ├── t3/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/tic-tac-toe/t3/page.tsx)
-│   │   │   │   │   │   │   │       ├── wild/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/tic-tac-toe/wild/page.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/tic-tac-toe/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/games/memory/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [default.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/default.test.tsx)
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/games/memory/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/games/memory/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/games/memory/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/games/memory/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/games/memory/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/games/memory/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/games/memory/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/games/memory/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/games/memory/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/games/memory/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/games/memory/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/games/memory/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/games/memory/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/games/memory/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [Dropzone.test.tsx](./packages/app/hybrid/games/memory/src/components/atoms/__tests__/Dropzone.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Dropzone.tsx](./packages/app/hybrid/games/memory/src/components/atoms/Dropzone.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/games/memory/src/components/atoms/index.ts)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [GameContainer.test.tsx](./packages/app/hybrid/games/memory/src/components/organisms/__tests__/GameContainer.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [Header.test.tsx](./packages/app/hybrid/games/memory/src/components/organisms/__tests__/Header.test.tsx)
-│   │   │   │   │   │   │   │   ├── [GameContainer.tsx](./packages/app/hybrid/games/memory/src/components/organisms/GameContainer.tsx)
-│   │   │   │   │   │   │   │   └── [Header.tsx](./packages/app/hybrid/games/memory/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   └── templates/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/games/memory/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/games/memory/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/games/memory/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [GamesTemplate.test.tsx](./packages/app/hybrid/games/memory/src/components/templates/__tests__/GamesTemplate.test.tsx)
-│   │   │   │   │   │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/games/memory/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/games/memory/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/games/memory/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/games/memory/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │       ├── [GamesTemplate.tsx](./packages/app/hybrid/games/memory/src/components/templates/GamesTemplate.tsx)
-│   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/games/memory/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/games/memory/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/games/memory/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/games/memory/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   └── [pi.ts](./packages/app/hybrid/games/memory/src/data/pi.ts)
-│   │   │   │   │   │   ├── games/
-│   │   │   │   │   │   │   ├── 8-bit/
-│   │   │   │   │   │   │   │   ├── DinoRun/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [game.test.ts](./packages/app/hybrid/games/memory/src/games/8-bit/DinoRun/__tests__/game.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/DinoRun/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/8-bit/DinoRun/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [game.ts](./packages/app/hybrid/games/memory/src/games/8-bit/DinoRun/game.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/DinoRun/index.tsx)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/games/memory/src/games/8-bit/DinoRun/types.ts)
-│   │   │   │   │   │   │   │   ├── Maze/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/Maze/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [maze.test.ts](./packages/app/hybrid/games/memory/src/games/8-bit/Maze/__tests__/maze.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/8-bit/Maze/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/Maze/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [maze.ts](./packages/app/hybrid/games/memory/src/games/8-bit/Maze/maze.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/games/memory/src/games/8-bit/Maze/types.ts)
-│   │   │   │   │   │   │   │   ├── RockPaperScissors/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/RockPaperScissors/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/8-bit/RockPaperScissors/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/RockPaperScissors/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/8-bit/RockPaperScissors/types.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/8-bit/RockPaperScissors/utils.ts)
-│   │   │   │   │   │   │   │   ├── Snake/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/Snake/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [snake.test.ts](./packages/app/hybrid/games/memory/src/games/8-bit/Snake/__tests__/snake.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/8-bit/Snake/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/Snake/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [snake.ts](./packages/app/hybrid/games/memory/src/games/8-bit/Snake/snake.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/games/memory/src/games/8-bit/Snake/types.ts)
-│   │   │   │   │   │   │   │   └── _shared/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   ├── [GameInstructions.test.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/_shared/__tests__/GameInstructions.test.tsx)
-│   │   │   │   │   │   │   │       │   └── [gameData.test.ts](./packages/app/hybrid/games/memory/src/games/8-bit/_shared/__tests__/gameData.test.ts)
-│   │   │   │   │   │   │   │       ├── [GameInstructions.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/_shared/GameInstructions.tsx)
-│   │   │   │   │   │   │   │       ├── [gameData.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/_shared/gameData.tsx)
-│   │   │   │   │   │   │   │       └── [games.ts](./packages/app/hybrid/games/memory/src/games/8-bit/_shared/games.ts)
-│   │   │   │   │   │   │   ├── gambling/
-│   │   │   │   │   │   │   │   ├── Baccarat/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useBaccarat.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/__tests__/useBaccarat.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useBaccarat.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/useBaccarat.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/utils.ts)
-│   │   │   │   │   │   │   │   ├── CardCounter/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useCardCounter.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/__tests__/useCardCounter.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useCardCounter.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/useCardCounter.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/utils.ts)
-│   │   │   │   │   │   │   │   ├── Craps/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Craps/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useCraps.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/__tests__/useCraps.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Craps/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useCraps.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/useCraps.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/utils.ts)
-│   │   │   │   │   │   │   │   ├── HiLo/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useHiLo.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/__tests__/useHiLo.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useHiLo.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/useHiLo.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/utils.ts)
-│   │   │   │   │   │   │   │   ├── Keno/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Keno/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useKeno.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/__tests__/useKeno.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Keno/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useKeno.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/useKeno.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/utils.ts)
-│   │   │   │   │   │   │   │   ├── OverUnderSeven/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useOverUnderSeven.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/__tests__/useOverUnderSeven.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useOverUnderSeven.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/useOverUnderSeven.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/utils.ts)
-│   │   │   │   │   │   │   │   ├── PokerOdds/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [usePokerOdds.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/__tests__/usePokerOdds.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   │   └── [CardPicker.tsx](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/components/CardPicker.tsx)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [usePokerOdds.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/usePokerOdds.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/utils.ts)
-│   │   │   │   │   │   │   │   ├── Roulette/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useRoulette.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/__tests__/useRoulette.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useRoulette.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/useRoulette.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/utils.ts)
-│   │   │   │   │   │   │   │   ├── SlotMachine/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useSlotMachine.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/__tests__/useSlotMachine.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [useSlotMachine.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/useSlotMachine.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/utils.ts)
-│   │   │   │   │   │   │   │   ├── War/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/War/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useWar.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/__tests__/useWar.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/War/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useWar.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/useWar.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/utils.ts)
-│   │   │   │   │   │   │   │   └── _shared/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [cards.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/_shared/__tests__/cards.test.ts)
-│   │   │   │   │   │   │   │       ├── [cards.ts](./packages/app/hybrid/games/memory/src/games/gambling/_shared/cards.ts)
-│   │   │   │   │   │   │   │       └── [games.ts](./packages/app/hybrid/games/memory/src/games/gambling/_shared/games.ts)
-│   │   │   │   │   │   │   ├── memory/
-│   │   │   │   │   │   │   │   ├── MemoryMatch/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [MemoryMatch.test.tsx](./packages/app/hybrid/games/memory/src/games/memory/MemoryMatch/__tests__/MemoryMatch.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useMemoryMatch.test.ts](./packages/app/hybrid/games/memory/src/games/memory/MemoryMatch/__tests__/useMemoryMatch.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/memory/MemoryMatch/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/memory/MemoryMatch/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [useMemoryMatch.ts](./packages/app/hybrid/games/memory/src/games/memory/MemoryMatch/useMemoryMatch.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/memory/MemoryMatch/utils.ts)
-│   │   │   │   │   │   │   │   ├── NBack/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [NBack.test.tsx](./packages/app/hybrid/games/memory/src/games/memory/NBack/__tests__/NBack.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [constants.test.ts](./packages/app/hybrid/games/memory/src/games/memory/NBack/__tests__/constants.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/memory/NBack/constants.ts)
-│   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/games/memory/src/games/memory/NBack/index.tsx)
-│   │   │   │   │   │   │   │   ├── PiNumber/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [Pi.test.tsx](./packages/app/hybrid/games/memory/src/games/memory/PiNumber/__tests__/Pi.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [constants.test.ts](./packages/app/hybrid/games/memory/src/games/memory/PiNumber/__tests__/constants.test.ts)
-│   │   │   │   │   │   │   │   │   │   ├── [keyHandlers.test.ts](./packages/app/hybrid/games/memory/src/games/memory/PiNumber/__tests__/keyHandlers.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [usePiGame.test.ts](./packages/app/hybrid/games/memory/src/games/memory/PiNumber/__tests__/usePiGame.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/memory/PiNumber/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/memory/PiNumber/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [keyHandlers.ts](./packages/app/hybrid/games/memory/src/games/memory/PiNumber/keyHandlers.ts)
-│   │   │   │   │   │   │   │   │   └── [usePiGame.ts](./packages/app/hybrid/games/memory/src/games/memory/PiNumber/usePiGame.ts)
-│   │   │   │   │   │   │   │   ├── Recall/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [Recall.test.tsx](./packages/app/hybrid/games/memory/src/games/memory/Recall/__tests__/Recall.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [constants.test.ts](./packages/app/hybrid/games/memory/src/games/memory/Recall/__tests__/constants.test.ts)
-│   │   │   │   │   │   │   │   │   │   ├── [useHighStreak.test.ts](./packages/app/hybrid/games/memory/src/games/memory/Recall/__tests__/useHighStreak.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [useRecall.test.ts](./packages/app/hybrid/games/memory/src/games/memory/Recall/__tests__/useRecall.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/memory/Recall/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/memory/Recall/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [useHighStreak.ts](./packages/app/hybrid/games/memory/src/games/memory/Recall/useHighStreak.ts)
-│   │   │   │   │   │   │   │   │   └── [useRecall.ts](./packages/app/hybrid/games/memory/src/games/memory/Recall/useRecall.ts)
-│   │   │   │   │   │   │   │   └── _shared/
-│   │   │   │   │   │   │   │       └── [games.ts](./packages/app/hybrid/games/memory/src/games/memory/_shared/games.ts)
-│   │   │   │   │   │   │   ├── nikoli/
-│   │   │   │   │   │   │   │   ├── Fillomino/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [Fillomino.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Fillomino/__tests__/Fillomino.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useFillomino.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Fillomino/__tests__/useFillomino.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Fillomino/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Fillomino/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Fillomino/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useFillomino.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Fillomino/useFillomino.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Fillomino/utils.ts)
-│   │   │   │   │   │   │   │   ├── Heyawake/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [Heyawake.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Heyawake/__tests__/Heyawake.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useHeyawake.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Heyawake/__tests__/useHeyawake.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Heyawake/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Heyawake/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Heyawake/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useHeyawake.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Heyawake/useHeyawake.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Heyawake/utils.ts)
-│   │   │   │   │   │   │   │   ├── Masyu/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [Masyu.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Masyu/__tests__/Masyu.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useMasyu.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Masyu/__tests__/useMasyu.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Masyu/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/games/memory/src/games/nikoli/Masyu/AGENTS.md)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Masyu/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Masyu/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useMasyu.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Masyu/useMasyu.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Masyu/utils.ts)
-│   │   │   │   │   │   │   │   ├── Norinori/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [Norinori.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Norinori/__tests__/Norinori.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useNorinori.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Norinori/__tests__/useNorinori.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Norinori/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Norinori/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Norinori/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useNorinori.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Norinori/useNorinori.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Norinori/utils.ts)
-│   │   │   │   │   │   │   │   ├── Nurikabe/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [Nurikabe.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Nurikabe/__tests__/Nurikabe.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useNurikabe.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Nurikabe/__tests__/useNurikabe.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Nurikabe/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Nurikabe/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Nurikabe/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useNurikabe.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Nurikabe/useNurikabe.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Nurikabe/utils.ts)
-│   │   │   │   │   │   │   │   ├── Shikaku/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [Shikaku.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Shikaku/__tests__/Shikaku.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useShikaku.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Shikaku/__tests__/useShikaku.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Shikaku/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Shikaku/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Shikaku/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useShikaku.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Shikaku/useShikaku.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Shikaku/utils.ts)
-│   │   │   │   │   │   │   │   ├── Sudoku/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   └── [index.test.tsx.snap](./packages/app/hybrid/games/memory/src/games/nikoli/Sudoku/__tests__/__snapshots__/index.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Sudoku/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [useSudoku.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Sudoku/__tests__/useSudoku.test.ts)
-│   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [sudoku.test.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Sudoku/utils/__tests__/sudoku.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [sudoku.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Sudoku/utils/sudoku.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/Sudoku/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Sudoku/types.ts)
-│   │   │   │   │   │   │   │   │   └── [useSudoku.ts](./packages/app/hybrid/games/memory/src/games/nikoli/Sudoku/useSudoku.ts)
-│   │   │   │   │   │   │   │   └── _shared/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   ├── [GameInstructions.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/_shared/__tests__/GameInstructions.test.tsx)
-│   │   │   │   │   │   │   │       │   └── [gameData.test.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/_shared/__tests__/gameData.test.tsx)
-│   │   │   │   │   │   │   │       ├── [GameInstructions.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/_shared/GameInstructions.tsx)
-│   │   │   │   │   │   │   │       ├── [gameData.tsx](./packages/app/hybrid/games/memory/src/games/nikoli/_shared/gameData.tsx)
-│   │   │   │   │   │   │   │       └── [games.ts](./packages/app/hybrid/games/memory/src/games/nikoli/_shared/games.ts)
-│   │   │   │   │   │   │   ├── puzzles/
-│   │   │   │   │   │   │   │   ├── Game2048/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   └── [Game2048.test.tsx.snap](./packages/app/hybrid/games/memory/src/games/puzzles/Game2048/__tests__/__snapshots__/Game2048.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   └── [Game2048.test.tsx](./packages/app/hybrid/games/memory/src/games/puzzles/Game2048/__tests__/Game2048.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [game.test.ts](./packages/app/hybrid/games/memory/src/games/puzzles/Game2048/utils/__tests__/game.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [game.ts](./packages/app/hybrid/games/memory/src/games/puzzles/Game2048/utils/game.ts)
-│   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/games/memory/src/games/puzzles/Game2048/AGENTS.md)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/puzzles/Game2048/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/puzzles/Game2048/index.tsx)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/games/memory/src/games/puzzles/Game2048/types.ts)
-│   │   │   │   │   │   │   │   ├── LightsOut/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [LightsOut.test.tsx](./packages/app/hybrid/games/memory/src/games/puzzles/LightsOut/__tests__/LightsOut.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useLightsOut.test.ts](./packages/app/hybrid/games/memory/src/games/puzzles/LightsOut/__tests__/useLightsOut.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/puzzles/LightsOut/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/games/memory/src/games/puzzles/LightsOut/AGENTS.md)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/puzzles/LightsOut/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [useLightsOut.ts](./packages/app/hybrid/games/memory/src/games/puzzles/LightsOut/useLightsOut.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/puzzles/LightsOut/utils.ts)
-│   │   │   │   │   │   │   │   ├── SlidingPuzzle/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   └── [SlidingPuzzle.test.tsx.snap](./packages/app/hybrid/games/memory/src/games/puzzles/SlidingPuzzle/__tests__/__snapshots__/SlidingPuzzle.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   ├── [SlidingPuzzle.test.tsx](./packages/app/hybrid/games/memory/src/games/puzzles/SlidingPuzzle/__tests__/SlidingPuzzle.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useSlidingPuzzle.test.ts](./packages/app/hybrid/games/memory/src/games/puzzles/SlidingPuzzle/__tests__/useSlidingPuzzle.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/puzzles/SlidingPuzzle/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/games/memory/src/games/puzzles/SlidingPuzzle/AGENTS.md)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/puzzles/SlidingPuzzle/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [useSlidingPuzzle.ts](./packages/app/hybrid/games/memory/src/games/puzzles/SlidingPuzzle/useSlidingPuzzle.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/puzzles/SlidingPuzzle/utils.ts)
-│   │   │   │   │   │   │   │   ├── Towers/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   └── [Towers.test.tsx.snap](./packages/app/hybrid/games/memory/src/games/puzzles/Towers/__tests__/__snapshots__/Towers.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   └── [Towers.test.tsx](./packages/app/hybrid/games/memory/src/games/puzzles/Towers/__tests__/Towers.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   └── [towers.test.ts](./packages/app/hybrid/games/memory/src/games/puzzles/Towers/utils/__tests__/towers.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [towers.ts](./packages/app/hybrid/games/memory/src/games/puzzles/Towers/utils/towers.ts)
-│   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/games/memory/src/games/puzzles/Towers/AGENTS.md)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/puzzles/Towers/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/puzzles/Towers/index.tsx)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/games/memory/src/games/puzzles/Towers/types.ts)
-│   │   │   │   │   │   │   │   └── _shared/
-│   │   │   │   │   │   │   │       └── [games.ts](./packages/app/hybrid/games/memory/src/games/puzzles/_shared/games.ts)
-│   │   │   │   │   │   │   └── tic-tac-toe/
-│   │   │   │   │   │   │       ├── _shared/
-│   │   │   │   │   │   │       │   ├── [board.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/_shared/board.ts)
-│   │   │   │   │   │   │       │   └── [games.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/_shared/games.ts)
-│   │   │   │   │   │   │       ├── classic/
-│   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/classic/__tests__/index.test.tsx)
-│   │   │   │   │   │   │       │   │   ├── [useClassic.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/classic/__tests__/useClassic.test.tsx)
-│   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/classic/__tests__/utils.test.ts)
-│   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/classic/index.tsx)
-│   │   │   │   │   │   │       │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/classic/types.ts)
-│   │   │   │   │   │   │       │   ├── [useClassic.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/classic/useClassic.ts)
-│   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/classic/utils.ts)
-│   │   │   │   │   │   │       ├── duck/
-│   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/duck/__tests__/index.test.tsx)
-│   │   │   │   │   │   │       │   │   ├── [useDuck.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/duck/__tests__/useDuck.test.tsx)
-│   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/duck/__tests__/utils.test.ts)
-│   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/duck/index.tsx)
-│   │   │   │   │   │   │       │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/duck/types.ts)
-│   │   │   │   │   │   │       │   ├── [useDuck.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/duck/useDuck.ts)
-│   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/duck/utils.ts)
-│   │   │   │   │   │   │       ├── notakto/
-│   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/notakto/__tests__/index.test.tsx)
-│   │   │   │   │   │   │       │   │   ├── [useNotakto.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/notakto/__tests__/useNotakto.test.tsx)
-│   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/notakto/__tests__/utils.test.ts)
-│   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/notakto/index.tsx)
-│   │   │   │   │   │   │       │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/notakto/types.ts)
-│   │   │   │   │   │   │       │   ├── [useNotakto.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/notakto/useNotakto.ts)
-│   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/notakto/utils.ts)
-│   │   │   │   │   │   │       ├── reverse/
-│   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/reverse/__tests__/index.test.tsx)
-│   │   │   │   │   │   │       │   │   ├── [useReverse.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/reverse/__tests__/useReverse.test.tsx)
-│   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/reverse/__tests__/utils.test.ts)
-│   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/reverse/index.tsx)
-│   │   │   │   │   │   │       │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/reverse/types.ts)
-│   │   │   │   │   │   │       │   ├── [useReverse.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/reverse/useReverse.ts)
-│   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/reverse/utils.ts)
-│   │   │   │   │   │   │       ├── t3/
-│   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/t3/__tests__/index.test.tsx)
-│   │   │   │   │   │   │       │   │   ├── [useT3.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/t3/__tests__/useT3.test.tsx)
-│   │   │   │   │   │   │       │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/t3/__tests__/utils.test.ts)
-│   │   │   │   │   │   │       │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/t3/index.tsx)
-│   │   │   │   │   │   │       │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/t3/types.ts)
-│   │   │   │   │   │   │       │   ├── [useT3.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/t3/useT3.ts)
-│   │   │   │   │   │   │       │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/t3/utils.ts)
-│   │   │   │   │   │   │       └── wild/
-│   │   │   │   │   │   │           ├── __tests__/
-│   │   │   │   │   │   │           │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/wild/__tests__/index.test.tsx)
-│   │   │   │   │   │   │           │   ├── [useWild.test.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/wild/__tests__/useWild.test.tsx)
-│   │   │   │   │   │   │           │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/wild/__tests__/utils.test.ts)
-│   │   │   │   │   │   │           ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/wild/index.tsx)
-│   │   │   │   │   │   │           ├── [types.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/wild/types.ts)
-│   │   │   │   │   │   │           ├── [useWild.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/wild/useWild.ts)
-│   │   │   │   │   │   │           └── [utils.ts](./packages/app/hybrid/games/memory/src/games/tic-tac-toe/wild/utils.ts)
-│   │   │   │   │   │   └── styles/
-│   │   │   │   │   │       ├── [globals.css](./packages/app/hybrid/games/memory/src/styles/globals.css)
-│   │   │   │   │   │       └── [themes.css](./packages/app/hybrid/games/memory/src/styles/themes.css)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/games/memory/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/games/memory/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/games/memory/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/games/memory/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/games/memory/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/games/memory/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/games/memory/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/games/memory/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/games/memory/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/games/memory/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/games/memory/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/games/memory/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/games/memory/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/games/memory/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/games/memory/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/games/memory/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/games/memory/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/games/memory/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/games/memory/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/games/memory/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/games/memory/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/games/memory/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/games/memory/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/games/memory/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/games/memory/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/games/memory/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/games/memory/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/games/memory/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/games/memory/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/games/memory/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/games/memory/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/games/memory/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/games/memory/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/games/memory/tsconfig.json)
-│   │   │   │   ├── [README.md](./packages/app/hybrid/games/README.md)
-│   │   │   │   └── [TREE.md](./packages/app/hybrid/games/TREE.md)
 │   │   │   ├── graphics-design/
 │   │   │   │   ├── exhibit/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/graphics-design/exhibit/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/graphics-design/exhibit/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/graphics-design/exhibit/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/graphics-design/exhibit/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/graphics-design/exhibit/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
+│   │   │   │   │   │   ├── tax/
+│   │   │   │   │   │   │   ├── [helpers.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/tax/helpers.ts)
+│   │   │   │   │   │   │   ├── [index.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/tax/index.spec.ts)
+│   │   │   │   │   │   │   └── [navigation.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/tax/navigation.spec.ts)
 │   │   │   │   │   │   ├── wallet/
-│   │   │   │   │   │   │   ├── [auth-guard.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/auth-guard.spec.ts)
 │   │   │   │   │   │   │   ├── [cards.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/cards.spec.ts)
 │   │   │   │   │   │   │   ├── [exchange.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/exchange.spec.ts)
 │   │   │   │   │   │   │   ├── [helpers.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/helpers.ts)
 │   │   │   │   │   │   │   ├── [index.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/index.spec.ts)
 │   │   │   │   │   │   │   ├── [navigation.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/navigation.spec.ts)
+│   │   │   │   │   │   │   ├── [open-access.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/open-access.spec.ts)
 │   │   │   │   │   │   │   ├── [pay.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/pay.spec.ts)
 │   │   │   │   │   │   │   ├── [profile.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/profile.spec.ts)
 │   │   │   │   │   │   │   ├── [transactions.spec.ts](./packages/app/hybrid/graphics-design/exhibit/e2e/wallet/transactions.spec.ts)
@@ -15424,12 +14904,44 @@
 │   │   │   │   │   ├── src/
 │   │   │   │   │   │   ├── app/
 │   │   │   │   │   │   │   ├── (app)/
+│   │   │   │   │   │   │   │   ├── ai/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/ai/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── chat/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/ai/chat/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/ai/chat/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── settings/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/ai/settings/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/ai/settings/page.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/ai/page.tsx)
 │   │   │   │   │   │   │   │   ├── chat/
 │   │   │   │   │   │   │   │   │   ├── settings/
 │   │   │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/chat/settings/__tests__/page.test.tsx)
 │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/chat/settings/page.tsx)
 │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/chat/page.tsx)
+│   │   │   │   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── album/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/album/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/album/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── albums/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/albums/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/albums/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── photo/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/photo/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/photo/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── search/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/search/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/search/page.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/gallery/page.tsx)
 │   │   │   │   │   │   │   │   ├── menu/
 │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/menu/page.tsx)
 │   │   │   │   │   │   │   │   ├── password/
@@ -15458,6 +14970,29 @@
 │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/password/page.tsx)
 │   │   │   │   │   │   │   │   ├── pos/
 │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/pos/page.tsx)
+│   │   │   │   │   │   │   │   ├── tax/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── audit/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   ├── [detail-page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/audit/__tests__/detail-page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/audit/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/audit/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── settings/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/settings/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/settings/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── submission/
+│   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   ├── [detail-page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/submission/__tests__/detail-page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/submission/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── new/
+│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/submission/new/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/submission/new/page.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/submission/page.tsx)
+│   │   │   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/layout.tsx)
+│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/tax/page.tsx)
 │   │   │   │   │   │   │   │   ├── video/
 │   │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/(app)/video/__tests__/page.test.tsx)
@@ -15643,6 +15178,38 @@
 │   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/template.tsx)
 │   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/graphics-design/exhibit/src/app/unauthorized.tsx)
 │   │   │   │   │   │   ├── components/
+│   │   │   │   │   │   │   ├── ai/
+│   │   │   │   │   │   │   │   ├── atoms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [MessageBubble.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/atoms/__tests__/MessageBubble.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [ModelBadge.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/atoms/__tests__/ModelBadge.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [MessageBubble.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/atoms/MessageBubble.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ModelBadge.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/atoms/ModelBadge.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/atoms/index.ts)
+│   │   │   │   │   │   │   │   ├── molecules/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [ChatInput.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/molecules/__tests__/ChatInput.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [ConversationCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/molecules/__tests__/ConversationCard.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ChatInput.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/molecules/ChatInput.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ConversationCard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/molecules/ConversationCard.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/molecules/index.ts)
+│   │   │   │   │   │   │   │   ├── organisms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [ChatHeader.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/__tests__/ChatHeader.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [OfflineBanner.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/__tests__/OfflineBanner.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [Sidebar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/__tests__/Sidebar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [ToastContainer.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/__tests__/ToastContainer.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ChatHeader.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/ChatHeader.tsx)
+│   │   │   │   │   │   │   │   │   ├── [OfflineBanner.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/OfflineBanner.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Sidebar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/Sidebar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ToastContainer.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/ToastContainer.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/organisms/index.ts)
+│   │   │   │   │   │   │   │   ├── templates/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [PageTransition.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/templates/__tests__/PageTransition.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PageTransition.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/templates/PageTransition.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/templates/index.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/ai/index.ts)
 │   │   │   │   │   │   │   ├── chat/
 │   │   │   │   │   │   │   │   ├── atoms/
 │   │   │   │   │   │   │   │   │   ├── __tests__/
@@ -15758,6 +15325,41 @@
 │   │   │   │   │   │   │   │   │   ├── [VersionTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/VersionTemplate.tsx)
 │   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/templates/index.ts)
 │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/chat/index.ts)
+│   │   │   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   │   │   ├── atoms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [PhotoThumb.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/atoms/__tests__/PhotoThumb.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PhotoThumb.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/atoms/PhotoThumb.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/atoms/index.ts)
+│   │   │   │   │   │   │   │   ├── molecules/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [AlbumTile.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/__tests__/AlbumTile.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [CameraCapture.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/__tests__/CameraCapture.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [ConfirmDialog.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/__tests__/ConfirmDialog.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [EmptyState.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/__tests__/EmptyState.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [NameDialog.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/__tests__/NameDialog.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [PhotoTile.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/__tests__/PhotoTile.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [SearchBar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/__tests__/SearchBar.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AlbumTile.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/AlbumTile.tsx)
+│   │   │   │   │   │   │   │   │   ├── [CameraCapture.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/CameraCapture.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ConfirmDialog.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/ConfirmDialog.tsx)
+│   │   │   │   │   │   │   │   │   ├── [EmptyState.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/EmptyState.tsx)
+│   │   │   │   │   │   │   │   │   ├── [NameDialog.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/NameDialog.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PhotoTile.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/PhotoTile.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SearchBar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/SearchBar.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/molecules/index.ts)
+│   │   │   │   │   │   │   │   ├── organisms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [PhoneFrame.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/__tests__/PhoneFrame.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [PhotoViewer.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/__tests__/PhotoViewer.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [TabBar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/__tests__/TabBar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [ToastContainer.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/__tests__/ToastContainer.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PhoneFrame.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/PhoneFrame.tsx)
+│   │   │   │   │   │   │   │   │   ├── [PhotoViewer.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/PhotoViewer.tsx)
+│   │   │   │   │   │   │   │   │   ├── [TabBar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/TabBar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [ToastContainer.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/ToastContainer.tsx)
+│   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/organisms/index.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/gallery/index.ts)
 │   │   │   │   │   │   │   ├── menu/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   └── [CustomerMenu.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/__tests__/CustomerMenu.test.tsx)
@@ -15769,8 +15371,6 @@
 │   │   │   │   │   │   │   │   ├── [RestaurantManager.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/RestaurantManager.tsx)
 │   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/index.ts)
 │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/menu/types.ts)
-│   │   │   │   │   │   │   ├── molecules/
-│   │   │   │   │   │   │   │   └── __tests__/
 │   │   │   │   │   │   │   ├── password/
 │   │   │   │   │   │   │   │   ├── molecules/
 │   │   │   │   │   │   │   │   │   ├── __tests__/
@@ -15891,7 +15491,9 @@
 │   │   │   │   │   │   │   │   ├── organisms/
 │   │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   │   └── [Header.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/__tests__/Header.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [Header.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/Header.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/Header.tsx)
+│   │   │   │   │   │   │   │   │   ├── [OfflineBanner.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/OfflineBanner.tsx)
+│   │   │   │   │   │   │   │   │   └── [SkipToContent.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/organisms/SkipToContent.tsx)
 │   │   │   │   │   │   │   │   └── templates/
 │   │   │   │   │   │   │   │       ├── __tests__/
 │   │   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/__tests__/AboutTemplate.test.tsx)
@@ -15902,6 +15504,25 @@
 │   │   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/DownloadsTemplate.tsx)
 │   │   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/ErrorTemplate.tsx)
 │   │   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/shared/templates/VersionTemplate.tsx)
+│   │   │   │   │   │   │   ├── tax/
+│   │   │   │   │   │   │   │   ├── organisms/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [AuditDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/__tests__/AuditDetail.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [AuditList.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/__tests__/AuditList.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [BottomNav.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/__tests__/BottomNav.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [Sidebar.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/__tests__/Sidebar.test.tsx)
+│   │   │   │   │   │   │   │   │   │   ├── [SubmissionDetail.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/__tests__/SubmissionDetail.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [SubmissionList.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/__tests__/SubmissionList.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AuditDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/AuditDetail.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AuditList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/AuditList.tsx)
+│   │   │   │   │   │   │   │   │   ├── [BottomNav.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/BottomNav.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Sidebar.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/Sidebar.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SubmissionDetail.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/SubmissionDetail.tsx)
+│   │   │   │   │   │   │   │   │   └── [SubmissionList.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/organisms/SubmissionList.tsx)
+│   │   │   │   │   │   │   │   └── templates/
+│   │   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │   │       │   └── [DashboardTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/templates/__tests__/DashboardTemplate.test.tsx)
+│   │   │   │   │   │   │   │       └── [DashboardTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/tax/templates/DashboardTemplate.tsx)
 │   │   │   │   │   │   │   ├── video/
 │   │   │   │   │   │   │   │   ├── atoms/
 │   │   │   │   │   │   │   │   │   ├── __tests__/
@@ -15946,8 +15567,6 @@
 │   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/video/templates/index.ts)
 │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/video/index.ts)
 │   │   │   │   │   │   │   └── wallet/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   └── [RouteGuard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/__tests__/RouteGuard.test.tsx)
 │   │   │   │   │   │   │       ├── atoms/
 │   │   │   │   │   │   │       │   ├── __tests__/
 │   │   │   │   │   │   │       │   │   ├── [AccountCard.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/atoms/__tests__/AccountCard.test.tsx)
@@ -16026,10 +15645,7 @@
 │   │   │   │   │   │   │       │   │   └── [DashboardTemplate.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/__tests__/DashboardTemplate.test.tsx)
 │   │   │   │   │   │   │       │   ├── [DashboardTemplate.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/DashboardTemplate.tsx)
 │   │   │   │   │   │   │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/templates/index.ts)
-│   │   │   │   │   │   │       ├── [OfflineBanner.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/OfflineBanner.tsx)
-│   │   │   │   │   │   │       ├── [PageTransition.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/PageTransition.tsx)
-│   │   │   │   │   │   │       ├── [RouteGuard.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/RouteGuard.tsx)
-│   │   │   │   │   │   │       └── [SkipToContent.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/SkipToContent.tsx)
+│   │   │   │   │   │   │       └── [PageTransition.tsx](./packages/app/hybrid/graphics-design/exhibit/src/components/wallet/PageTransition.tsx)
 │   │   │   │   │   │   ├── content/
 │   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/graphics-design/exhibit/src/content/about.ts)
 │   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/graphics-design/exhibit/src/content/download.ts)
@@ -16037,6 +15653,13 @@
 │   │   │   │   │   │   ├── data/
 │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   └── [items.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/__tests__/items.test.ts)
+│   │   │   │   │   │   │   ├── ai/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/ai/__tests__/models.test.ts)
+│   │   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/ai/__tests__/seed.test.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/ai/index.ts)
+│   │   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/ai/models.ts)
+│   │   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/ai/seed.ts)
 │   │   │   │   │   │   │   ├── chat/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/__tests__/models.test.ts)
@@ -16045,6 +15668,13 @@
 │   │   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/models.ts)
 │   │   │   │   │   │   │   │   ├── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/seed.ts)
 │   │   │   │   │   │   │   │   └── [stickers.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/chat/stickers.ts)
+│   │   │   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/gallery/__tests__/models.test.ts)
+│   │   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/gallery/__tests__/seed.test.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/gallery/index.ts)
+│   │   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/gallery/models.ts)
+│   │   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/gallery/seed.ts)
 │   │   │   │   │   │   │   ├── password/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/__tests__/models.test.ts)
@@ -16052,6 +15682,12 @@
 │   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/index.ts)
 │   │   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/models.ts)
 │   │   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/password/seed.ts)
+│   │   │   │   │   │   │   ├── tax/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [mock.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/tax/__tests__/mock.test.ts)
+│   │   │   │   │   │   │   │   │   └── [nav.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/tax/__tests__/nav.test.ts)
+│   │   │   │   │   │   │   │   ├── [mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/tax/mock.ts)
+│   │   │   │   │   │   │   │   └── [nav.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/tax/nav.ts)
 │   │   │   │   │   │   │   ├── video/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   └── [video-tools.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/video/__tests__/video-tools.test.ts)
@@ -16061,6 +15697,15 @@
 │   │   │   │   │   │   │   │   └── [nav.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/wallet/nav.ts)
 │   │   │   │   │   │   │   └── [items.ts](./packages/app/hybrid/graphics-design/exhibit/src/data/items.ts)
 │   │   │   │   │   │   ├── hooks/
+│   │   │   │   │   │   │   ├── ai/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [useKeyboard.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/ai/__tests__/useKeyboard.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [useSWRegister.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/ai/__tests__/useSWRegister.test.ts)
+│   │   │   │   │   │   │   │   │   └── [useStreaming.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/ai/__tests__/useStreaming.test.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/ai/index.ts)
+│   │   │   │   │   │   │   │   ├── [useKeyboard.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/ai/useKeyboard.ts)
+│   │   │   │   │   │   │   │   ├── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/ai/useSWRegister.ts)
+│   │   │   │   │   │   │   │   └── [useStreaming.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/ai/useStreaming.ts)
 │   │   │   │   │   │   │   ├── chat/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   └── [useSWRegister.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/__tests__/useSWRegister.test.ts)
@@ -16074,6 +15719,11 @@
 │   │   │   │   │   │   │   │   ├── [usePrivacyActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/usePrivacyActions.ts)
 │   │   │   │   │   │   │   │   ├── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useSWRegister.ts)
 │   │   │   │   │   │   │   │   └── [useSettingsActions.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/chat/useSettingsActions.ts)
+│   │   │   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [useSWRegister.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/gallery/__tests__/useSWRegister.test.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/gallery/index.ts)
+│   │   │   │   │   │   │   │   └── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/gallery/useSWRegister.ts)
 │   │   │   │   │   │   │   ├── menu/
 │   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/menu/index.ts)
 │   │   │   │   │   │   │   │   └── [useMenuStore.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/menu/useMenuStore.ts)
@@ -16082,6 +15732,10 @@
 │   │   │   │   │   │   │   │   │   └── [useSWRegister.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/hooks/password/__tests__/useSWRegister.test.tsx)
 │   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/password/index.ts)
 │   │   │   │   │   │   │   │   └── [useSWRegister.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/password/useSWRegister.ts)
+│   │   │   │   │   │   │   ├── tax/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [useEntitySync.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/tax/__tests__/useEntitySync.test.ts)
+│   │   │   │   │   │   │   │   └── [useEntitySync.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/tax/useEntitySync.ts)
 │   │   │   │   │   │   │   └── wallet/
 │   │   │   │   │   │   │       ├── [useEntitySync.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useEntitySync.ts)
 │   │   │   │   │   │   │       ├── [useHaptic.ts](./packages/app/hybrid/graphics-design/exhibit/src/hooks/wallet/useHaptic.ts)
@@ -16092,6 +15746,11 @@
 │   │   │   │   │   │   ├── lib/
 │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   └── [storage.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/__tests__/storage.test.ts)
+│   │   │   │   │   │   │   ├── ai/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [db.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/ai/__tests__/db.test.ts)
+│   │   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/ai/db.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/ai/index.ts)
 │   │   │   │   │   │   │   ├── chat/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   ├── [crypto.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/__tests__/crypto.test.ts)
@@ -16107,6 +15766,13 @@
 │   │   │   │   │   │   │   │   ├── [selectors.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/selectors.ts)
 │   │   │   │   │   │   │   │   ├── [url.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/url.ts)
 │   │   │   │   │   │   │   │   └── [webrtc.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/chat/webrtc.ts)
+│   │   │   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/gallery/__tests__/db.test.ts)
+│   │   │   │   │   │   │   │   │   └── [selectors.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/gallery/__tests__/selectors.test.ts)
+│   │   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/gallery/db.ts)
+│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/gallery/index.ts)
+│   │   │   │   │   │   │   │   └── [selectors.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/gallery/selectors.ts)
 │   │   │   │   │   │   │   ├── menu/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   └── [menu.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/menu/__tests__/menu.test.ts)
@@ -16147,6 +15813,14 @@
 │   │   │   │   │   │   │   │   ├── [payment.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/payment.ts)
 │   │   │   │   │   │   │   │   ├── [reports.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/reports.ts)
 │   │   │   │   │   │   │   │   └── [transactions.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/pos/transactions.ts)
+│   │   │   │   │   │   │   ├── tax/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [constants.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/tax/__tests__/constants.test.ts)
+│   │   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/tax/__tests__/db.test.ts)
+│   │   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/tax/__tests__/seed.test.ts)
+│   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/tax/constants.ts)
+│   │   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/tax/db.ts)
+│   │   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/tax/seed.ts)
 │   │   │   │   │   │   │   ├── video/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   └── [video-tools.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/video/__tests__/video-tools.test.ts)
@@ -16160,6 +15834,17 @@
 │   │   │   │   │   │   │   │   └── [session.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/wallet/session.ts)
 │   │   │   │   │   │   │   └── [storage.ts](./packages/app/hybrid/graphics-design/exhibit/src/lib/storage.ts)
 │   │   │   │   │   │   ├── providers/
+│   │   │   │   │   │   │   ├── ai/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [Providers.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/__tests__/Providers.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SWProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/__tests__/SWProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/__tests__/ToastProvider.test.tsx)
+│   │   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/DataProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/Providers.tsx)
+│   │   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/SWProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/ToastProvider.tsx)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/ai/index.ts)
 │   │   │   │   │   │   │   ├── chat/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/__tests__/DataProvider.test.tsx)
@@ -16173,6 +15858,16 @@
 │   │   │   │   │   │   │   │   ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/ToastProvider.tsx)
 │   │   │   │   │   │   │   │   ├── [data-helpers.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/data-helpers.ts)
 │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/chat/index.ts)
+│   │   │   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/gallery/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SWProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/gallery/__tests__/SWProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/gallery/__tests__/ToastProvider.test.tsx)
+│   │   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/gallery/DataProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/gallery/Providers.tsx)
+│   │   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/gallery/SWProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/gallery/ToastProvider.tsx)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/gallery/index.ts)
 │   │   │   │   │   │   │   ├── password/
 │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/__tests__/DataProvider.test.tsx)
@@ -16185,6 +15880,25 @@
 │   │   │   │   │   │   │   │   ├── [SecurityProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/SecurityProvider.tsx)
 │   │   │   │   │   │   │   │   ├── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/ToastProvider.tsx)
 │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/providers/password/index.ts)
+│   │   │   │   │   │   │   ├── tax/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/__tests__/ToastProvider.test.tsx)
+│   │   │   │   │   │   │   │   ├── auth/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   └── [AuthProvider.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/auth/__tests__/AuthProvider.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [AuthProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/auth/AuthProvider.tsx)
+│   │   │   │   │   │   │   │   ├── entities/
+│   │   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   │   ├── [crud.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/entities/__tests__/crud.test.tsx)
+│   │   │   │   │   │   │   │   │   │   └── [providers.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/entities/__tests__/providers.test.tsx)
+│   │   │   │   │   │   │   │   │   ├── [AuditsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/entities/AuditsProvider.tsx)
+│   │   │   │   │   │   │   │   │   ├── [CompaniesProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/entities/CompaniesProvider.tsx)
+│   │   │   │   │   │   │   │   │   ├── [SubmissionsProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/entities/SubmissionsProvider.tsx)
+│   │   │   │   │   │   │   │   │   └── [UserProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/entities/UserProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/DataProvider.tsx)
+│   │   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/Providers.tsx)
+│   │   │   │   │   │   │   │   └── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/tax/ToastProvider.tsx)
 │   │   │   │   │   │   │   └── wallet/
 │   │   │   │   │   │   │       ├── __tests__/
 │   │   │   │   │   │   │       │   ├── [DataProvider.crud.test.tsx](./packages/app/hybrid/graphics-design/exhibit/src/providers/wallet/__tests__/DataProvider.crud.test.tsx)
@@ -16221,6 +15935,9 @@
 │   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/graphics-design/exhibit/src/styles/globals.css)
 │   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/graphics-design/exhibit/src/styles/themes.css)
 │   │   │   │   │   │   ├── test-helpers/
+│   │   │   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   │   │   ├── [fakeDb.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/gallery/fakeDb.ts)
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/gallery/index.ts)
 │   │   │   │   │   │   │   ├── password/
 │   │   │   │   │   │   │   │   ├── [fakeDb.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/password/fakeDb.ts)
 │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/password/index.ts)
@@ -16230,6 +15947,8 @@
 │   │   │   │   │   │   │       ├── [nav-mock.ts](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/nav-mock.ts)
 │   │   │   │   │   │   │       └── [render.tsx](./packages/app/hybrid/graphics-design/exhibit/src/test-helpers/wallet/render.tsx)
 │   │   │   │   │   │   ├── types/
+│   │   │   │   │   │   │   ├── ai/
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/ai/index.ts)
 │   │   │   │   │   │   │   ├── chat/
 │   │   │   │   │   │   │   │   ├── [call.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/call.ts)
 │   │   │   │   │   │   │   │   ├── [chat.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/chat.ts)
@@ -16238,6 +15957,8 @@
 │   │   │   │   │   │   │   │   ├── [peer.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/peer.ts)
 │   │   │   │   │   │   │   │   ├── [settings.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/settings.ts)
 │   │   │   │   │   │   │   │   └── [user.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/chat/user.ts)
+│   │   │   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/gallery/index.ts)
 │   │   │   │   │   │   │   ├── menu/
 │   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/menu/index.ts)
 │   │   │   │   │   │   │   │   └── [menu.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/menu/menu.ts)
@@ -16245,16 +15966,32 @@
 │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/password/index.ts)
 │   │   │   │   │   │   │   ├── pos/
 │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/pos/index.ts)
+│   │   │   │   │   │   │   ├── tax/
+│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/tax/index.ts)
 │   │   │   │   │   │   │   ├── video/
 │   │   │   │   │   │   │   │   └── [speech-recognition.d.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/video/speech-recognition.d.ts)
 │   │   │   │   │   │   │   └── wallet/
 │   │   │   │   │   │   │       └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/types/wallet/index.ts)
 │   │   │   │   │   │   └── utils/
-│   │   │   │   │   │       └── password/
+│   │   │   │   │   │       ├── ai/
+│   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │       │   │   └── [format.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/ai/__tests__/format.test.ts)
+│   │   │   │   │   │       │   ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/ai/format.ts)
+│   │   │   │   │   │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/ai/index.ts)
+│   │   │   │   │   │       ├── gallery/
+│   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │       │   │   └── [format.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/gallery/__tests__/format.test.ts)
+│   │   │   │   │   │       │   ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/gallery/format.ts)
+│   │   │   │   │   │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/gallery/index.ts)
+│   │   │   │   │   │       ├── password/
+│   │   │   │   │   │       │   ├── __tests__/
+│   │   │   │   │   │       │   │   └── [format.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/__tests__/format.test.ts)
+│   │   │   │   │   │       │   ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/format.ts)
+│   │   │   │   │   │       │   └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/index.ts)
+│   │   │   │   │   │       └── tax/
 │   │   │   │   │   │           ├── __tests__/
-│   │   │   │   │   │           │   └── [format.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/__tests__/format.test.ts)
-│   │   │   │   │   │           ├── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/format.ts)
-│   │   │   │   │   │           └── [index.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/password/index.ts)
+│   │   │   │   │   │           │   └── [format.test.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/tax/__tests__/format.test.ts)
+│   │   │   │   │   │           └── [format.ts](./packages/app/hybrid/graphics-design/exhibit/src/utils/tax/format.ts)
 │   │   │   │   │   ├── src-tauri/
 │   │   │   │   │   │   ├── capabilities/
 │   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/graphics-design/exhibit/src-tauri/capabilities/default.json)
@@ -16344,412 +16081,7 @@
 │   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/graphics-design/exhibit/playwright.config.ts)
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/graphics-design/exhibit/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/graphics-design/exhibit/tsconfig.json)
-│   │   │   │   ├── photo/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/graphics-design/photo/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/graphics-design/photo/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/graphics-design/photo/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/graphics-design/photo/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/graphics-design/photo/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [albums.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/albums.spec.ts)
-│   │   │   │   │   │   ├── [crop.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/crop.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [edit.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/edit.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/home.spec.ts)
-│   │   │   │   │   │   ├── [layers.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/layers.spec.ts)
-│   │   │   │   │   │   ├── [navigation.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/navigation.spec.ts)
-│   │   │   │   │   │   ├── [profile.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/profile.spec.ts)
-│   │   │   │   │   │   ├── [settings.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/settings.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/graphics-design/photo/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/graphics-design/photo/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/graphics-design/photo/public/icons/icon.svg)
-│   │   │   │   │   │   ├── og/
-│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/graphics-design/photo/public/og/og.png)
-│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/graphics-design/photo/public/og/og.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/graphics-design/photo/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/graphics-design/photo/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/graphics-design/photo/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/graphics-design/photo/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/graphics-design/photo/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/graphics-design/photo/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── albums/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/albums/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/albums/page.tsx)
-│   │   │   │   │   │   │   ├── edit/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/edit/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── crop/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/edit/crop/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/edit/crop/page.tsx)
-│   │   │   │   │   │   │   │   ├── layers/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/edit/layers/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/edit/layers/page.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/edit/page.tsx)
-│   │   │   │   │   │   │   ├── settings/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/settings/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/settings/page.tsx)
-│   │   │   │   │   │   │   ├── tools/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/graphics-design/photo/src/app/tools/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/tools/page.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/graphics-design/photo/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/graphics-design/photo/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/graphics-design/photo/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/graphics-design/photo/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/graphics-design/photo/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/graphics-design/photo/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/graphics-design/photo/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/graphics-design/photo/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/graphics-design/photo/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/graphics-design/photo/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/graphics-design/photo/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/graphics-design/photo/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [ImageFileUpload.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/atoms/__tests__/ImageFileUpload.test.tsx)
-│   │   │   │   │   │   │   │   └── [ImageFileUpload.tsx](./packages/app/hybrid/graphics-design/photo/src/components/atoms/ImageFileUpload.tsx)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [ToastContainer.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/organisms/__tests__/ToastContainer.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/graphics-design/photo/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   └── [ToastContainer.tsx](./packages/app/hybrid/graphics-design/photo/src/components/organisms/ToastContainer.tsx)
-│   │   │   │   │   │   │   ├── templates/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AboutTemplate.tsx](./packages/app/hybrid/graphics-design/photo/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [DownloadsTemplate.tsx](./packages/app/hybrid/graphics-design/photo/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [ErrorTemplate.tsx](./packages/app/hybrid/graphics-design/photo/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │   │   └── [VersionTemplate.tsx](./packages/app/hybrid/graphics-design/photo/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   │   └── tools/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AiColorizeTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiColorizeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AiGenerateTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiGenerateTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AiRemoveBgTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiRemoveBgTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AiRemoveObjectTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiRemoveObjectTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AiRemovePersonTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiRemovePersonTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AiRemoveWatermarkTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiRemoveWatermarkTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AiRestoreTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiRestoreTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AiUnblurTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiUnblurTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [AiUpscaleTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/AiUpscaleTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [BarcodeReadTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/BarcodeReadTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [BarcodeTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/BarcodeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [Base64Tool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/Base64Tool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [BreakingBadTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/BreakingBadTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [CameraTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/CameraTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ChartMakerTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ChartMakerTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [CollageMakerTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/CollageMakerTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ColorsTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ColorsTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ContrastCheckerTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ContrastCheckerTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [GitHubSocialPreviewTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/GitHubSocialPreviewTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [GradientGeneratorTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/GradientGeneratorTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [HouseTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/HouseTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageAdjustTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageAdjustTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageBlurBackgroundTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageBlurBackgroundTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageBorderTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageBorderTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageBwTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageBwTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageColorizeTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageColorizeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageCombinerSideBySideTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageCombinerSideBySideTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageCombinerStackedTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageCombinerStackedTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageCompressTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageCompressTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageConvertTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageConvertTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageCropTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageCropTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageDominantColorTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageDominantColorTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageFlipTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageFlipTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageMorphingTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageMorphingTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageOcrTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageOcrTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImagePhotoFiltersTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImagePhotoFiltersTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImagePixelateFaceTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImagePixelateFaceTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImagePixelateTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImagePixelateTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageProfileTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageProfileTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageResizeTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageResizeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageRotateTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageRotateTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageRoundTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageRoundTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageShadowTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageShadowTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageSharpenTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageSharpenTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageSplitTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageSplitTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageTextTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageTextTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageTranslateTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageTranslateTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageTransparentBgTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageTransparentBgTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageVignetteTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageVignetteTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ImageWatermarkTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/ImageWatermarkTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [InstaSizeTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/InstaSizeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [InvoiceParserTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/InvoiceParserTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [MemeMakerTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/MemeMakerTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [PixelTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/PixelTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [QRCodeTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/QRCodeTool.test.tsx)
-│   │   │   │   │   │   │       │   ├── [QrReadTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/QrReadTool.test.tsx)
-│   │   │   │   │   │   │       │   └── [YouTubeThumbnailsTool.test.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/__tests__/YouTubeThumbnailsTool.test.tsx)
-│   │   │   │   │   │   │       ├── [AiColorizeTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiColorizeTool.tsx)
-│   │   │   │   │   │   │       ├── [AiGenerateTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiGenerateTool.tsx)
-│   │   │   │   │   │   │       ├── [AiRemoveBgTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiRemoveBgTool.tsx)
-│   │   │   │   │   │   │       ├── [AiRemoveObjectTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiRemoveObjectTool.tsx)
-│   │   │   │   │   │   │       ├── [AiRemovePersonTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiRemovePersonTool.tsx)
-│   │   │   │   │   │   │       ├── [AiRemoveWatermarkTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiRemoveWatermarkTool.tsx)
-│   │   │   │   │   │   │       ├── [AiRestoreTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiRestoreTool.tsx)
-│   │   │   │   │   │   │       ├── [AiUnblurTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiUnblurTool.tsx)
-│   │   │   │   │   │   │       ├── [AiUpscaleTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/AiUpscaleTool.tsx)
-│   │   │   │   │   │   │       ├── [BarcodeReadTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/BarcodeReadTool.tsx)
-│   │   │   │   │   │   │       ├── [BarcodeTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/BarcodeTool.tsx)
-│   │   │   │   │   │   │       ├── [Base64Tool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/Base64Tool.tsx)
-│   │   │   │   │   │   │       ├── [BreakingBadTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/BreakingBadTool.tsx)
-│   │   │   │   │   │   │       ├── [CameraTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/CameraTool.tsx)
-│   │   │   │   │   │   │       ├── [ChartMakerTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ChartMakerTool.tsx)
-│   │   │   │   │   │   │       ├── [CollageMakerTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/CollageMakerTool.tsx)
-│   │   │   │   │   │   │       ├── [ColorsTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ColorsTool.tsx)
-│   │   │   │   │   │   │       ├── [ContrastCheckerTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ContrastCheckerTool.tsx)
-│   │   │   │   │   │   │       ├── [GitHubSocialPreviewTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/GitHubSocialPreviewTool.tsx)
-│   │   │   │   │   │   │       ├── [GradientGeneratorTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/GradientGeneratorTool.tsx)
-│   │   │   │   │   │   │       ├── [HouseTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/HouseTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageAdjustTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageAdjustTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageBlurBackgroundTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageBlurBackgroundTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageBorderTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageBorderTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageBwTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageBwTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageColorizeTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageColorizeTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageCombinerSideBySideTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageCombinerSideBySideTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageCombinerStackedTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageCombinerStackedTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageCompressTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageCompressTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageConvertTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageConvertTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageCropTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageCropTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageDominantColorTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageDominantColorTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageFlipTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageFlipTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageMorphingTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageMorphingTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageOcrTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageOcrTool.tsx)
-│   │   │   │   │   │   │       ├── [ImagePhotoFiltersTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImagePhotoFiltersTool.tsx)
-│   │   │   │   │   │   │       ├── [ImagePixelateFaceTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImagePixelateFaceTool.tsx)
-│   │   │   │   │   │   │       ├── [ImagePixelateTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImagePixelateTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageProfileTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageProfileTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageResizeTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageResizeTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageRotateTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageRotateTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageRoundTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageRoundTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageShadowTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageShadowTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageSharpenTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageSharpenTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageSplitTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageSplitTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageTextTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageTextTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageTranslateTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageTranslateTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageTransparentBgTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageTransparentBgTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageVignetteTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageVignetteTool.tsx)
-│   │   │   │   │   │   │       ├── [ImageWatermarkTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/ImageWatermarkTool.tsx)
-│   │   │   │   │   │   │       ├── [InstaSizeTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/InstaSizeTool.tsx)
-│   │   │   │   │   │   │       ├── [InvoiceParserTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/InvoiceParserTool.tsx)
-│   │   │   │   │   │   │       ├── [MemeMakerTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/MemeMakerTool.tsx)
-│   │   │   │   │   │   │       ├── [PixelTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/PixelTool.tsx)
-│   │   │   │   │   │   │       ├── [QRCodeTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/QRCodeTool.tsx)
-│   │   │   │   │   │   │       ├── [QrReadTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/QrReadTool.tsx)
-│   │   │   │   │   │   │       └── [YouTubeThumbnailsTool.tsx](./packages/app/hybrid/graphics-design/photo/src/components/tools/YouTubeThumbnailsTool.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/graphics-design/photo/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/graphics-design/photo/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/graphics-design/photo/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [data.test.ts](./packages/app/hybrid/graphics-design/photo/src/data/__tests__/data.test.ts)
-│   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/graphics-design/photo/src/data/models.ts)
-│   │   │   │   │   │   │   ├── [photo-tools.ts](./packages/app/hybrid/graphics-design/photo/src/data/photo-tools.ts)
-│   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/graphics-design/photo/src/data/seed.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [useSWRegister.test.ts](./packages/app/hybrid/graphics-design/photo/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   │   │   │   │   └── [useSWRegister.ts](./packages/app/hybrid/graphics-design/photo/src/hooks/useSWRegister.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [db.test.ts](./packages/app/hybrid/graphics-design/photo/src/lib/__tests__/db.test.ts)
-│   │   │   │   │   │   │   │   └── [photo-tools.test.ts](./packages/app/hybrid/graphics-design/photo/src/lib/__tests__/photo-tools.test.ts)
-│   │   │   │   │   │   │   ├── [db.ts](./packages/app/hybrid/graphics-design/photo/src/lib/db.ts)
-│   │   │   │   │   │   │   └── [photo-tools.ts](./packages/app/hybrid/graphics-design/photo/src/lib/photo-tools.ts)
-│   │   │   │   │   │   ├── providers/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/graphics-design/photo/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/graphics-design/photo/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/graphics-design/photo/src/providers/DataProvider.tsx)
-│   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/graphics-design/photo/src/providers/Providers.tsx)
-│   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/graphics-design/photo/src/providers/SWProvider.tsx)
-│   │   │   │   │   │   │   └── [ToastProvider.tsx](./packages/app/hybrid/graphics-design/photo/src/providers/ToastProvider.tsx)
-│   │   │   │   │   │   ├── server/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [openrouter.test.ts](./packages/app/hybrid/graphics-design/photo/src/server/__tests__/openrouter.test.ts)
-│   │   │   │   │   │   │   └── trpc/
-│   │   │   │   │   │   │       ├── routers/
-│   │   │   │   │   │   │       │   ├── openrouter/
-│   │   │   │   │   │   │       │   │   └── [index.ts](./packages/app/hybrid/graphics-design/photo/src/server/trpc/routers/openrouter/index.ts)
-│   │   │   │   │   │   │       │   └── [_app.ts](./packages/app/hybrid/graphics-design/photo/src/server/trpc/routers/_app.ts)
-│   │   │   │   │   │   │       └── [trpc.ts](./packages/app/hybrid/graphics-design/photo/src/server/trpc/trpc.ts)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/graphics-design/photo/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/graphics-design/photo/src/styles/themes.css)
-│   │   │   │   │   │   ├── types/
-│   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/graphics-design/photo/src/types/index.ts)
-│   │   │   │   │   │   └── utils/
-│   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │       │   └── [format.test.ts](./packages/app/hybrid/graphics-design/photo/src/utils/__tests__/format.test.ts)
-│   │   │   │   │   │       ├── [format.ts](./packages/app/hybrid/graphics-design/photo/src/utils/format.ts)
-│   │   │   │   │   │       └── [trpc.ts](./packages/app/hybrid/graphics-design/photo/src/utils/trpc.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/graphics-design/photo/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/graphics-design/photo/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/graphics-design/photo/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/graphics-design/photo/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/graphics-design/photo/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/graphics-design/photo/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/graphics-design/photo/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/graphics-design/photo/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/graphics-design/photo/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/graphics-design/photo/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/graphics-design/photo/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/graphics-design/photo/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/graphics-design/photo/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/graphics-design/photo/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/graphics-design/photo/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/graphics-design/photo/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/graphics-design/photo/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/graphics-design/photo/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/graphics-design/photo/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/graphics-design/photo/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/graphics-design/photo/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/graphics-design/photo/tsconfig.json)
 │   │   │   │   ├── svg/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/graphics-design/svg/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/graphics-design/svg/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/graphics-design/svg/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/graphics-design/svg/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/graphics-design/svg/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/graphics-design/svg/e2e/about.spec.ts)
 │   │   │   │   │   │   ├── [canvas-editor.spec.ts](./packages/app/hybrid/graphics-design/svg/e2e/canvas-editor.spec.ts)
@@ -17019,12 +16351,6 @@
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/graphics-design/TREE.md)
 │   │   │   ├── medical/
 │   │   │   │   ├── brainbow/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/medical/brainbow/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/medical/brainbow/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/medical/brainbow/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/medical/brainbow/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/medical/brainbow/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/medical/brainbow/e2e/screenshots/about.png)
@@ -17418,12 +16744,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/medical/brainbow/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/medical/brainbow/tsconfig.json)
 │   │   │   │   ├── mri/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/medical/mri/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/medical/mri/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/medical/mri/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/medical/mri/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/medical/mri/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/medical/mri/e2e/screenshots/about.png)
@@ -17434,6 +16754,82 @@
 │   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/medical/mri/e2e/downloads.spec.ts)
 │   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/medical/mri/e2e/home.spec.ts)
 │   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/medical/mri/e2e/version.spec.ts)
+│   │   │   │   │   ├── pipeline/
+│   │   │   │   │   │   ├── configs/
+│   │   │   │   │   │   │   ├── [dev.yaml](./packages/app/hybrid/medical/mri/pipeline/configs/dev.yaml)
+│   │   │   │   │   │   │   └── [full.yaml](./packages/app/hybrid/medical/mri/pipeline/configs/full.yaml)
+│   │   │   │   │   │   ├── src/
+│   │   │   │   │   │   │   └── pipeline/
+│   │   │   │   │   │   │       ├── core/
+│   │   │   │   │   │   │       │   ├── [__init__.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/__init__.py)
+│   │   │   │   │   │   │       │   ├── [baselines.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/baselines.py)
+│   │   │   │   │   │   │       │   ├── [calibration.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/calibration.py)
+│   │   │   │   │   │   │       │   ├── [cohort.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/cohort.py)
+│   │   │   │   │   │   │       │   ├── [comparison.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/comparison.py)
+│   │   │   │   │   │   │       │   ├── [confidence.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/confidence.py)
+│   │   │   │   │   │   │       │   ├── [dataset.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/dataset.py)
+│   │   │   │   │   │   │       │   ├── [doctor.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/doctor.py)
+│   │   │   │   │   │   │       │   ├── [encoding.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/encoding.py)
+│   │   │   │   │   │   │       │   ├── [events.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/events.py)
+│   │   │   │   │   │   │       │   ├── [experiment.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/experiment.py)
+│   │   │   │   │   │   │       │   ├── [imaging.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/imaging.py)
+│   │   │   │   │   │   │       │   ├── [latex.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/latex.py)
+│   │   │   │   │   │   │       │   ├── [lockbox.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/lockbox.py)
+│   │   │   │   │   │   │       │   ├── [metrics.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/metrics.py)
+│   │   │   │   │   │   │       │   ├── [models.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/models.py)
+│   │   │   │   │   │   │       │   ├── [null_test.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/null_test.py)
+│   │   │   │   │   │   │       │   ├── [partition.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/partition.py)
+│   │   │   │   │   │   │       │   ├── [paths.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/paths.py)
+│   │   │   │   │   │   │       │   ├── [reports.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/reports.py)
+│   │   │   │   │   │   │       │   ├── [run_compare.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/run_compare.py)
+│   │   │   │   │   │   │       │   ├── [runner.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/runner.py)
+│   │   │   │   │   │   │       │   ├── [runs.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/runs.py)
+│   │   │   │   │   │   │       │   ├── [session_rules.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/session_rules.py)
+│   │   │   │   │   │   │       │   ├── [split.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/split.py)
+│   │   │   │   │   │   │       │   ├── [stages_data.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/stages_data.py)
+│   │   │   │   │   │   │       │   ├── [stages_model.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/stages_model.py)
+│   │   │   │   │   │   │       │   ├── [stats.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/stats.py)
+│   │   │   │   │   │   │       │   ├── [summary.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/summary.py)
+│   │   │   │   │   │   │       │   └── [synthetic.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/core/synthetic.py)
+│   │   │   │   │   │   │       ├── schemas/
+│   │   │   │   │   │   │       │   ├── [__init__.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/schemas/__init__.py)
+│   │   │   │   │   │   │       │   ├── [config.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/schemas/config.py)
+│   │   │   │   │   │   │       │   └── [export.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/schemas/export.py)
+│   │   │   │   │   │   │       ├── [__init__.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/__init__.py)
+│   │   │   │   │   │   │       ├── [__main__.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/__main__.py)
+│   │   │   │   │   │   │       ├── [cli.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/cli.py)
+│   │   │   │   │   │   │       ├── [commands.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/commands.py)
+│   │   │   │   │   │   │       ├── [commands_calibrate.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/commands_calibrate.py)
+│   │   │   │   │   │   │       └── [commands_data.py](./packages/app/hybrid/medical/mri/pipeline/src/pipeline/commands_data.py)
+│   │   │   │   │   │   ├── tests/
+│   │   │   │   │   │   │   ├── [__init__.py](./packages/app/hybrid/medical/mri/pipeline/tests/__init__.py)
+│   │   │   │   │   │   │   ├── [conftest.py](./packages/app/hybrid/medical/mri/pipeline/tests/conftest.py)
+│   │   │   │   │   │   │   ├── [test_baselines.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_baselines.py)
+│   │   │   │   │   │   │   ├── [test_cli.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_cli.py)
+│   │   │   │   │   │   │   ├── [test_cohort.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_cohort.py)
+│   │   │   │   │   │   │   ├── [test_config.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_config.py)
+│   │   │   │   │   │   │   ├── [test_confusion.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_confusion.py)
+│   │   │   │   │   │   │   ├── [test_dataset.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_dataset.py)
+│   │   │   │   │   │   │   ├── [test_doctor.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_doctor.py)
+│   │   │   │   │   │   │   ├── [test_events.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_events.py)
+│   │   │   │   │   │   │   ├── [test_imaging.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_imaging.py)
+│   │   │   │   │   │   │   ├── [test_lockbox.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_lockbox.py)
+│   │   │   │   │   │   │   ├── [test_metrics.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_metrics.py)
+│   │   │   │   │   │   │   ├── [test_null_test.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_null_test.py)
+│   │   │   │   │   │   │   ├── [test_partition.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_partition.py)
+│   │   │   │   │   │   │   ├── [test_paths.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_paths.py)
+│   │   │   │   │   │   │   ├── [test_reports.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_reports.py)
+│   │   │   │   │   │   │   ├── [test_run_compare.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_run_compare.py)
+│   │   │   │   │   │   │   ├── [test_runner.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_runner.py)
+│   │   │   │   │   │   │   ├── [test_runs.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_runs.py)
+│   │   │   │   │   │   │   ├── [test_split.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_split.py)
+│   │   │   │   │   │   │   ├── [test_stats.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_stats.py)
+│   │   │   │   │   │   │   └── [test_synthetic.py](./packages/app/hybrid/medical/mri/pipeline/tests/test_synthetic.py)
+│   │   │   │   │   │   ├── [Makefile](./packages/app/hybrid/medical/mri/pipeline/Makefile)
+│   │   │   │   │   │   ├── [PROGRESS.md](./packages/app/hybrid/medical/mri/pipeline/PROGRESS.md)
+│   │   │   │   │   │   ├── [README.md](./packages/app/hybrid/medical/mri/pipeline/README.md)
+│   │   │   │   │   │   ├── [pyproject.toml](./packages/app/hybrid/medical/mri/pipeline/pyproject.toml)
+│   │   │   │   │   │   └── [uv.lock](./packages/app/hybrid/medical/mri/pipeline/uv.lock)
 │   │   │   │   │   ├── public/
 │   │   │   │   │   │   ├── icons/
 │   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/medical/mri/public/icons/icon-128x128.png)
@@ -17460,157 +16856,123 @@
 │   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/medical/mri/public/robots.txt)
 │   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/medical/mri/public/sitemap.xml)
 │   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/medical/mri/public/sw.js)
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   │   └── [generate-contract.mjs](./packages/app/hybrid/medical/mri/scripts/generate-contract.mjs)
 │   │   │   │   │   ├── src/
 │   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (app)/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [compare.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/compare.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [dicomweb.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/dicomweb.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [models.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/models.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [pipelines.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/pipelines.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [protocols.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/protocols.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [studies.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/studies.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [unauthorized.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [viewer.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/viewer.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [workspace.test.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/__tests__/workspace.test.tsx)
-│   │   │   │   │   │   │   │   ├── compare/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/compare/page.tsx)
-│   │   │   │   │   │   │   │   ├── dicomweb/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/dicomweb/page.tsx)
-│   │   │   │   │   │   │   │   ├── models/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/models/page.tsx)
-│   │   │   │   │   │   │   │   ├── pipelines/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/pipelines/page.tsx)
-│   │   │   │   │   │   │   │   ├── protocols/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/protocols/page.tsx)
-│   │   │   │   │   │   │   │   ├── studies/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/studies/page.tsx)
-│   │   │   │   │   │   │   │   ├── viewer/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/viewer/page.tsx)
-│   │   │   │   │   │   │   │   └── workspace/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(app)/workspace/page.tsx)
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/(info)/version/page.tsx)
 │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [default.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/default.test.tsx)
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/medical/mri/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/medical/mri/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/medical/mri/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/medical/mri/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/medical/mri/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/medical/mri/src/app/global-error.tsx)
+│   │   │   │   │   │   │   │   └── [routes.test.tsx](./packages/app/hybrid/medical/mri/src/app/__tests__/routes.test.tsx)
+│   │   │   │   │   │   │   ├── analysis/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/analysis/page.tsx)
+│   │   │   │   │   │   │   ├── compare/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/compare/page.tsx)
+│   │   │   │   │   │   │   ├── datasets/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/datasets/page.tsx)
+│   │   │   │   │   │   │   ├── launch/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/launch/page.tsx)
+│   │   │   │   │   │   │   ├── rigour/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/rigour/page.tsx)
+│   │   │   │   │   │   │   ├── runs/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/runs/page.tsx)
+│   │   │   │   │   │   │   ├── settings/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/settings/page.tsx)
+│   │   │   │   │   │   │   ├── setup/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/setup/page.tsx)
+│   │   │   │   │   │   │   ├── viewer/
+│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/viewer/page.tsx)
 │   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/medical/mri/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/medical/mri/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/medical/mri/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/medical/mri/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/medical/mri/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/medical/mri/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/medical/mri/src/app/unauthorized.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/medical/mri/src/app/page.tsx)
 │   │   │   │   │   │   ├── components/
 │   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [Badge.test.tsx](./packages/app/hybrid/medical/mri/src/components/atoms/__tests__/Badge.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [Button.test.tsx](./packages/app/hybrid/medical/mri/src/components/atoms/__tests__/Button.test.tsx)
 │   │   │   │   │   │   │   │   ├── [Badge.tsx](./packages/app/hybrid/medical/mri/src/components/atoms/Badge.tsx)
-│   │   │   │   │   │   │   │   └── [Button.tsx](./packages/app/hybrid/medical/mri/src/components/atoms/Button.tsx)
+│   │   │   │   │   │   │   │   ├── [Card.tsx](./packages/app/hybrid/medical/mri/src/components/atoms/Card.tsx)
+│   │   │   │   │   │   │   │   ├── [EmptyState.tsx](./packages/app/hybrid/medical/mri/src/components/atoms/EmptyState.tsx)
+│   │   │   │   │   │   │   │   ├── [KeyValue.tsx](./packages/app/hybrid/medical/mri/src/components/atoms/KeyValue.tsx)
+│   │   │   │   │   │   │   │   └── [Stat.tsx](./packages/app/hybrid/medical/mri/src/components/atoms/Stat.tsx)
 │   │   │   │   │   │   │   ├── molecules/
 │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AnalysisPanel.test.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/__tests__/AnalysisPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [JobsPanel.test.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/__tests__/JobsPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [MetadataPanel.test.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/__tests__/MetadataPanel.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [QcPanel.test.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/__tests__/QcPanel.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AnalysisPanel.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/AnalysisPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [JobsPanel.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/JobsPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [MetadataPanel.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/MetadataPanel.tsx)
-│   │   │   │   │   │   │   │   ├── [QcPanel.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/QcPanel.tsx)
-│   │   │   │   │   │   │   │   └── [SliceCanvas.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/SliceCanvas.tsx)
+│   │   │   │   │   │   │   │   │   ├── [datatable.test.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/__tests__/datatable.test.tsx)
+│   │   │   │   │   │   │   │   │   └── [molecules.test.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/__tests__/molecules.test.tsx)
+│   │   │   │   │   │   │   │   ├── [ArtifactList.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/ArtifactList.tsx)
+│   │   │   │   │   │   │   │   ├── [DataTable.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/DataTable.tsx)
+│   │   │   │   │   │   │   │   ├── [EventTimeline.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/EventTimeline.tsx)
+│   │   │   │   │   │   │   │   ├── [LiveRunPanel.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/LiveRunPanel.tsx)
+│   │   │   │   │   │   │   │   ├── [RunLog.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/RunLog.tsx)
+│   │   │   │   │   │   │   │   └── [StatusBadge.tsx](./packages/app/hybrid/medical/mri/src/components/molecules/StatusBadge.tsx)
 │   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   └── [Header.tsx](./packages/app/hybrid/medical/mri/src/components/organisms/Header.tsx)
+│   │   │   │   │   │   │   │   ├── [AppShell.tsx](./packages/app/hybrid/medical/mri/src/components/organisms/AppShell.tsx)
+│   │   │   │   │   │   │   │   ├── [PageHeader.tsx](./packages/app/hybrid/medical/mri/src/components/organisms/PageHeader.tsx)
+│   │   │   │   │   │   │   │   └── [Screen.tsx](./packages/app/hybrid/medical/mri/src/components/organisms/Screen.tsx)
 │   │   │   │   │   │   │   └── templates/
 │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [CompareTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/CompareTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [DicomwebTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/DicomwebTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ModelsTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/ModelsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [PipelinesTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/PipelinesTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ProtocolsTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/ProtocolsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [StudiesTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/StudiesTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [VersionTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ViewerTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/ViewerTemplate.test.tsx)
-│   │   │   │   │   │   │       │   └── [WorkspaceTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/WorkspaceTemplate.test.tsx)
-│   │   │   │   │   │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/AboutTemplate.tsx)
+│   │   │   │   │   │   │       │   ├── [AnalysisCompare.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/AnalysisCompare.test.tsx)
+│   │   │   │   │   │   │       │   ├── [DashboardAndRigour.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/DashboardAndRigour.test.tsx)
+│   │   │   │   │   │   │       │   ├── [DatasetsTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/DatasetsTemplate.test.tsx)
+│   │   │   │   │   │   │       │   ├── [LaunchTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/LaunchTemplate.test.tsx)
+│   │   │   │   │   │   │       │   ├── [RunDetailTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/RunDetailTemplate.test.tsx)
+│   │   │   │   │   │   │       │   ├── [RunsTemplate.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/RunsTemplate.test.tsx)
+│   │   │   │   │   │   │       │   └── [SettingsSetupViewer.test.tsx](./packages/app/hybrid/medical/mri/src/components/templates/__tests__/SettingsSetupViewer.test.tsx)
+│   │   │   │   │   │   │       ├── [AnalysisTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/AnalysisTemplate.tsx)
 │   │   │   │   │   │   │       ├── [CompareTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/CompareTemplate.tsx)
-│   │   │   │   │   │   │       ├── [DicomwebTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/DicomwebTemplate.tsx)
-│   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ModelsTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/ModelsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [PipelinesTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/PipelinesTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ProtocolsTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/ProtocolsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [StudiesTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/StudiesTemplate.tsx)
-│   │   │   │   │   │   │       ├── [VersionTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ViewerTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/ViewerTemplate.tsx)
-│   │   │   │   │   │   │       └── [WorkspaceTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/WorkspaceTemplate.tsx)
+│   │   │   │   │   │   │       ├── [DashboardTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/DashboardTemplate.tsx)
+│   │   │   │   │   │   │       ├── [DatasetsTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/DatasetsTemplate.tsx)
+│   │   │   │   │   │   │       ├── [LaunchTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/LaunchTemplate.tsx)
+│   │   │   │   │   │   │       ├── [RigourTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/RigourTemplate.tsx)
+│   │   │   │   │   │   │       ├── [RunDetailTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/RunDetailTemplate.tsx)
+│   │   │   │   │   │   │       ├── [RunsTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/RunsTemplate.tsx)
+│   │   │   │   │   │   │       ├── [SettingsTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/SettingsTemplate.tsx)
+│   │   │   │   │   │   │       ├── [SetupTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/SetupTemplate.tsx)
+│   │   │   │   │   │   │       ├── [ViewerPageTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/ViewerPageTemplate.tsx)
+│   │   │   │   │   │   │       └── [ViewerTemplate.tsx](./packages/app/hybrid/medical/mri/src/components/templates/ViewerTemplate.tsx)
 │   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/medical/mri/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/medical/mri/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/medical/mri/src/content/version.ts)
+│   │   │   │   │   │   │   └── [navigation.ts](./packages/app/hybrid/medical/mri/src/content/navigation.ts)
 │   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [compare.test.ts](./packages/app/hybrid/medical/mri/src/lib/__tests__/compare.test.ts)
-│   │   │   │   │   │   │   ├── api/
+│   │   │   │   │   │   │   ├── analysis/
 │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [client.test.ts](./packages/app/hybrid/medical/mri/src/lib/api/__tests__/client.test.ts)
-│   │   │   │   │   │   │   │   ├── [client.ts](./packages/app/hybrid/medical/mri/src/lib/api/client.ts)
-│   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/medical/mri/src/lib/api/types.ts)
-│   │   │   │   │   │   │   ├── viewer/
+│   │   │   │   │   │   │   │   │   └── [metrics-table.test.ts](./packages/app/hybrid/medical/mri/src/lib/analysis/__tests__/metrics-table.test.ts)
+│   │   │   │   │   │   │   │   └── [metrics-table.ts](./packages/app/hybrid/medical/mri/src/lib/analysis/metrics-table.ts)
+│   │   │   │   │   │   │   ├── config/
 │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [lut.test.ts](./packages/app/hybrid/medical/mri/src/lib/viewer/__tests__/lut.test.ts)
-│   │   │   │   │   │   │   │   └── [lut.ts](./packages/app/hybrid/medical/mri/src/lib/viewer/lut.ts)
-│   │   │   │   │   │   │   └── [compare.ts](./packages/app/hybrid/medical/mri/src/lib/compare.ts)
+│   │   │   │   │   │   │   │   │   └── [form.test.ts](./packages/app/hybrid/medical/mri/src/lib/config/__tests__/form.test.ts)
+│   │   │   │   │   │   │   │   └── [form.ts](./packages/app/hybrid/medical/mri/src/lib/config/form.ts)
+│   │   │   │   │   │   │   ├── contract/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [schema.test.ts](./packages/app/hybrid/medical/mri/src/lib/contract/__tests__/schema.test.ts)
+│   │   │   │   │   │   │   │   ├── generated/
+│   │   │   │   │   │   │   │   │   ├── [config.schema.json](./packages/app/hybrid/medical/mri/src/lib/contract/generated/config.schema.json)
+│   │   │   │   │   │   │   │   │   └── [config.ts](./packages/app/hybrid/medical/mri/src/lib/contract/generated/config.ts)
+│   │   │   │   │   │   │   │   ├── [schema.ts](./packages/app/hybrid/medical/mri/src/lib/contract/schema.ts)
+│   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/medical/mri/src/lib/contract/types.ts)
+│   │   │   │   │   │   │   ├── dataset/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [cohort.test.ts](./packages/app/hybrid/medical/mri/src/lib/dataset/__tests__/cohort.test.ts)
+│   │   │   │   │   │   │   │   └── [cohort.ts](./packages/app/hybrid/medical/mri/src/lib/dataset/cohort.ts)
+│   │   │   │   │   │   │   ├── export/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [exports.test.ts](./packages/app/hybrid/medical/mri/src/lib/export/__tests__/exports.test.ts)
+│   │   │   │   │   │   │   │   ├── [chart.ts](./packages/app/hybrid/medical/mri/src/lib/export/chart.ts)
+│   │   │   │   │   │   │   │   ├── [csv.ts](./packages/app/hybrid/medical/mri/src/lib/export/csv.ts)
+│   │   │   │   │   │   │   │   └── [latex.ts](./packages/app/hybrid/medical/mri/src/lib/export/latex.ts)
+│   │   │   │   │   │   │   ├── format/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [format.test.ts](./packages/app/hybrid/medical/mri/src/lib/format/__tests__/format.test.ts)
+│   │   │   │   │   │   │   │   ├── [dates.ts](./packages/app/hybrid/medical/mri/src/lib/format/dates.ts)
+│   │   │   │   │   │   │   │   └── [numbers.ts](./packages/app/hybrid/medical/mri/src/lib/format/numbers.ts)
+│   │   │   │   │   │   │   ├── ipc/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [api.test.ts](./packages/app/hybrid/medical/mri/src/lib/ipc/__tests__/api.test.ts)
+│   │   │   │   │   │   │   │   ├── [api.ts](./packages/app/hybrid/medical/mri/src/lib/ipc/api.ts)
+│   │   │   │   │   │   │   │   ├── [client.ts](./packages/app/hybrid/medical/mri/src/lib/ipc/client.ts)
+│   │   │   │   │   │   │   │   └── [events.ts](./packages/app/hybrid/medical/mri/src/lib/ipc/events.ts)
+│   │   │   │   │   │   │   ├── runs/
+│   │   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   │   └── [filters.test.ts](./packages/app/hybrid/medical/mri/src/lib/runs/__tests__/filters.test.ts)
+│   │   │   │   │   │   │   │   └── [filters.ts](./packages/app/hybrid/medical/mri/src/lib/runs/filters.ts)
+│   │   │   │   │   │   │   └── ui/
+│   │   │   │   │   │   │       ├── __tests__/
+│   │   │   │   │   │   │       │   └── [ui.test.tsx](./packages/app/hybrid/medical/mri/src/lib/ui/__tests__/ui.test.tsx)
+│   │   │   │   │   │   │       ├── [use-query-state.ts](./packages/app/hybrid/medical/mri/src/lib/ui/use-query-state.ts)
+│   │   │   │   │   │   │       └── [use-resource.ts](./packages/app/hybrid/medical/mri/src/lib/ui/use-resource.ts)
 │   │   │   │   │   │   └── styles/
 │   │   │   │   │   │       ├── [globals.css](./packages/app/hybrid/medical/mri/src/styles/globals.css)
 │   │   │   │   │   │       └── [themes.css](./packages/app/hybrid/medical/mri/src/styles/themes.css)
@@ -17682,35 +17044,44 @@
 │   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/medical/mri/src-tauri/icons/icon.ico)
 │   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/medical/mri/src-tauri/icons/icon.png)
 │   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [analysis.rs](./packages/app/hybrid/medical/mri/src-tauri/src/analysis.rs)
-│   │   │   │   │   │   │   ├── [classifier.rs](./packages/app/hybrid/medical/mri/src-tauri/src/classifier.rs)
-│   │   │   │   │   │   │   ├── [commands.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands.rs)
-│   │   │   │   │   │   │   ├── [commands_dicomweb.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands_dicomweb.rs)
-│   │   │   │   │   │   │   ├── [commands_intel.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands_intel.rs)
-│   │   │   │   │   │   │   ├── [commands_models.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands_models.rs)
-│   │   │   │   │   │   │   ├── [commands_workflow.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands_workflow.rs)
-│   │   │   │   │   │   │   ├── [compare.rs](./packages/app/hybrid/medical/mri/src-tauri/src/compare.rs)
-│   │   │   │   │   │   │   ├── [db.rs](./packages/app/hybrid/medical/mri/src-tauri/src/db.rs)
-│   │   │   │   │   │   │   ├── [dicomweb.rs](./packages/app/hybrid/medical/mri/src-tauri/src/dicomweb.rs)
-│   │   │   │   │   │   │   ├── [import_dicom.rs](./packages/app/hybrid/medical/mri/src-tauri/src/import_dicom.rs)
-│   │   │   │   │   │   │   ├── [import_nifti.rs](./packages/app/hybrid/medical/mri/src-tauri/src/import_nifti.rs)
-│   │   │   │   │   │   │   ├── [inference.rs](./packages/app/hybrid/medical/mri/src-tauri/src/inference.rs)
-│   │   │   │   │   │   │   ├── [jobs.rs](./packages/app/hybrid/medical/mri/src-tauri/src/jobs.rs)
+│   │   │   │   │   │   │   ├── commands/
+│   │   │   │   │   │   │   │   ├── [dataset.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands/dataset.rs)
+│   │   │   │   │   │   │   │   ├── [launch.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands/launch.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands/mod.rs)
+│   │   │   │   │   │   │   │   ├── [overview.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands/overview.rs)
+│   │   │   │   │   │   │   │   ├── [runs.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands/runs.rs)
+│   │   │   │   │   │   │   │   └── [settings.rs](./packages/app/hybrid/medical/mri/src-tauri/src/commands/settings.rs)
+│   │   │   │   │   │   │   ├── domain/
+│   │   │   │   │   │   │   │   ├── [cohort.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/cohort.rs)
+│   │   │   │   │   │   │   │   ├── [config.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/config.rs)
+│   │   │   │   │   │   │   │   ├── [doctor.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/doctor.rs)
+│   │   │   │   │   │   │   │   ├── [events.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/events.rs)
+│   │   │   │   │   │   │   │   ├── [manifest.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/manifest.rs)
+│   │   │   │   │   │   │   │   ├── [metrics.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/metrics.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/mod.rs)
+│   │   │   │   │   │   │   │   ├── [rigour.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/rigour.rs)
+│   │   │   │   │   │   │   │   └── [run.rs](./packages/app/hybrid/medical/mri/src-tauri/src/domain/run.rs)
+│   │   │   │   │   │   │   ├── services/
+│   │   │   │   │   │   │   │   ├── launcher/
+│   │   │   │   │   │   │   │   │   ├── [command.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/launcher/command.rs)
+│   │   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/launcher/mod.rs)
+│   │   │   │   │   │   │   │   │   ├── [process.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/launcher/process.rs)
+│   │   │   │   │   │   │   │   │   ├── [registry.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/launcher/registry.rs)
+│   │   │   │   │   │   │   │   │   └── [stream.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/launcher/stream.rs)
+│   │   │   │   │   │   │   │   ├── [dataset.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/dataset.rs)
+│   │   │   │   │   │   │   │   ├── [doctor.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/doctor.rs)
+│   │   │   │   │   │   │   │   ├── [mod.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/mod.rs)
+│   │   │   │   │   │   │   │   ├── [paths.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/paths.rs)
+│   │   │   │   │   │   │   │   ├── [run_folder.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/run_folder.rs)
+│   │   │   │   │   │   │   │   ├── [runs.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/runs.rs)
+│   │   │   │   │   │   │   │   └── [settings.rs](./packages/app/hybrid/medical/mri/src-tauri/src/services/settings.rs)
+│   │   │   │   │   │   │   ├── [error.rs](./packages/app/hybrid/medical/mri/src-tauri/src/error.rs)
 │   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/medical/mri/src-tauri/src/lib.rs)
 │   │   │   │   │   │   │   ├── [main.rs](./packages/app/hybrid/medical/mri/src-tauri/src/main.rs)
-│   │   │   │   │   │   │   ├── [models.rs](./packages/app/hybrid/medical/mri/src-tauri/src/models.rs)
-│   │   │   │   │   │   │   ├── [normalize.rs](./packages/app/hybrid/medical/mri/src-tauri/src/normalize.rs)
-│   │   │   │   │   │   │   ├── [pipeline.rs](./packages/app/hybrid/medical/mri/src-tauri/src/pipeline.rs)
-│   │   │   │   │   │   │   ├── [process.rs](./packages/app/hybrid/medical/mri/src-tauri/src/process.rs)
-│   │   │   │   │   │   │   ├── [protocol.rs](./packages/app/hybrid/medical/mri/src-tauri/src/protocol.rs)
-│   │   │   │   │   │   │   ├── [provenance.rs](./packages/app/hybrid/medical/mri/src-tauri/src/provenance.rs)
-│   │   │   │   │   │   │   ├── [qc.rs](./packages/app/hybrid/medical/mri/src-tauri/src/qc.rs)
-│   │   │   │   │   │   │   ├── [qc_stats.rs](./packages/app/hybrid/medical/mri/src-tauri/src/qc_stats.rs)
-│   │   │   │   │   │   │   ├── [registry.rs](./packages/app/hybrid/medical/mri/src-tauri/src/registry.rs)
-│   │   │   │   │   │   │   ├── [state.rs](./packages/app/hybrid/medical/mri/src-tauri/src/state.rs)
-│   │   │   │   │   │   │   ├── [store.rs](./packages/app/hybrid/medical/mri/src-tauri/src/store.rs)
-│   │   │   │   │   │   │   ├── [viewer.rs](./packages/app/hybrid/medical/mri/src-tauri/src/viewer.rs)
-│   │   │   │   │   │   │   └── [workspace.rs](./packages/app/hybrid/medical/mri/src-tauri/src/workspace.rs)
+│   │   │   │   │   │   │   └── [state.rs](./packages/app/hybrid/medical/mri/src-tauri/src/state.rs)
+│   │   │   │   │   │   ├── tests/
+│   │   │   │   │   │   │   └── fixtures/
+│   │   │   │   │   │   │       └── [pipeline_help.txt](./packages/app/hybrid/medical/mri/src-tauri/tests/fixtures/pipeline_help.txt)
 │   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/medical/mri/src-tauri/Cargo.lock)
 │   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/medical/mri/src-tauri/Cargo.toml)
 │   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/medical/mri/src-tauri/build.rs)
@@ -17731,12 +17102,6 @@
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/medical/TREE.md)
 │   │   │   ├── productivity/
 │   │   │   │   ├── office/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/productivity/office/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/productivity/office/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/productivity/office/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/productivity/office/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/productivity/office/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/productivity/office/e2e/screenshots/about.png)
@@ -18409,8 +17774,7 @@
 │   │   │   │   │   │   │   ├── [bored.md](./packages/app/hybrid/productivity/office/src/notes/bored.md)
 │   │   │   │   │   │   │   ├── [engineering.md](./packages/app/hybrid/productivity/office/src/notes/engineering.md)
 │   │   │   │   │   │   │   ├── [intro.md](./packages/app/hybrid/productivity/office/src/notes/intro.md)
-│   │   │   │   │   │   │   ├── [me.md](./packages/app/hybrid/productivity/office/src/notes/me.md)
-│   │   │   │   │   │   │   └── [resume.md](./packages/app/hybrid/productivity/office/src/notes/resume.md)
+│   │   │   │   │   │   │   └── [me.md](./packages/app/hybrid/productivity/office/src/notes/me.md)
 │   │   │   │   │   │   ├── styles/
 │   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/productivity/office/src/styles/globals.css)
 │   │   │   │   │   │   │   ├── [keynotes-animations.css](./packages/app/hybrid/productivity/office/src/styles/keynotes-animations.css)
@@ -18512,12 +17876,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/productivity/office/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/productivity/office/tsconfig.json)
 │   │   │   │   ├── pdf/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/productivity/pdf/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/productivity/pdf/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/productivity/pdf/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/productivity/pdf/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/productivity/pdf/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/productivity/pdf/e2e/about.spec.ts)
 │   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/productivity/pdf/e2e/downloads.spec.ts)
@@ -18838,16 +18196,6 @@
 │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/productivity/pdf/sitemap.xml)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/productivity/pdf/tsconfig.json)
 │   │   │   │   ├── resume/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── other/
-│   │   │   │   │   │   │   ├── [DATA-MODEL.md](./packages/app/hybrid/productivity/resume/docs/other/DATA-MODEL.md)
-│   │   │   │   │   │   │   ├── [DEVELOPMENT.md](./packages/app/hybrid/productivity/resume/docs/other/DEVELOPMENT.md)
-│   │   │   │   │   │   │   ├── [README.md](./packages/app/hybrid/productivity/resume/docs/other/README.md)
-│   │   │   │   │   │   │   └── [TEMPLATES.md](./packages/app/hybrid/productivity/resume/docs/other/TEMPLATES.md)
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/productivity/resume/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/productivity/resume/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/productivity/resume/docs/DOWNLOADS.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/productivity/resume/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/productivity/resume/e2e/about.spec.ts)
 │   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/productivity/resume/e2e/downloads.spec.ts)
@@ -19310,12 +18658,6 @@
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/productivity/TREE.md)
 │   │   │   ├── shopping/
 │   │   │   │   ├── store/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/shopping/store/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/shopping/store/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/shopping/store/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/shopping/store/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/shopping/store/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/e2e/screenshots/about.png)
@@ -19396,11 +18738,6 @@
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/diagram/downloads.png)
 │   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/diagram/home.png)
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/diagram/version.png)
-│   │   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/docs/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/docs/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/docs/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/docs/version.png)
 │   │   │   │   │   │   │   ├── doi/
 │   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/doi/about.png)
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/doi/downloads.png)
@@ -19434,11 +18771,6 @@
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/lingo/version.png)
 │   │   │   │   │   │   │   ├── macosx/
 │   │   │   │   │   │   │   │   └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/macosx/home.png)
-│   │   │   │   │   │   │   ├── memory/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/memory/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/memory/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/memory/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/memory/version.png)
 │   │   │   │   │   │   │   ├── mri/
 │   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/mri/about.png)
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/mri/downloads.png)
@@ -19449,11 +18781,8 @@
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/office/downloads.png)
 │   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/office/home.png)
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/office/version.png)
-│   │   │   │   │   │   │   ├── password/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/password/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/password/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/password/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/password/version.png)
+│   │   │   │   │   │   │   ├── pagify/
+│   │   │   │   │   │   │   │   └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/pagify/home.png)
 │   │   │   │   │   │   │   ├── pdf/
 │   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/pdf/about.png)
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/pdf/downloads.png)
@@ -19479,23 +18808,13 @@
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/svg/downloads.png)
 │   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/svg/home.png)
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/svg/version.png)
-│   │   │   │   │   │   │   ├── tax/
-│   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/tax/about.png)
-│   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/tax/downloads.png)
-│   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/tax/home.png)
-│   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/tax/version.png)
 │   │   │   │   │   │   │   ├── tourney/
 │   │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/tourney/about.png)
 │   │   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/tourney/downloads.png)
 │   │   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/tourney/home.png)
 │   │   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/tourney/version.png)
-│   │   │   │   │   │   │   ├── vectify/
-│   │   │   │   │   │   │   │   └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/vectify/home.png)
-│   │   │   │   │   │   │   └── video/
-│   │   │   │   │   │   │       ├── [about.png](./packages/app/hybrid/shopping/store/public/screenshots/video/about.png)
-│   │   │   │   │   │   │       ├── [downloads.png](./packages/app/hybrid/shopping/store/public/screenshots/video/downloads.png)
-│   │   │   │   │   │   │       ├── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/video/home.png)
-│   │   │   │   │   │   │       └── [version.png](./packages/app/hybrid/shopping/store/public/screenshots/video/version.png)
+│   │   │   │   │   │   │   └── vectify/
+│   │   │   │   │   │   │       └── [home.png](./packages/app/hybrid/shopping/store/public/screenshots/vectify/home.png)
 │   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/shopping/store/public/apple-touch-icon.png)
 │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/shopping/store/public/favicon.ico)
 │   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/shopping/store/public/manifest.json)
@@ -19614,6 +18933,7 @@
 │   │   │   │   │   │   │   │   ├── [AppSection.tsx](./packages/app/hybrid/shopping/store/src/components/molecules/AppSection.tsx)
 │   │   │   │   │   │   │   │   ├── [CategoryFilter.tsx](./packages/app/hybrid/shopping/store/src/components/molecules/CategoryFilter.tsx)
 │   │   │   │   │   │   │   │   ├── [DownloadRow.tsx](./packages/app/hybrid/shopping/store/src/components/molecules/DownloadRow.tsx)
+│   │   │   │   │   │   │   │   ├── [HexagonGrid.tsx](./packages/app/hybrid/shopping/store/src/components/molecules/HexagonGrid.tsx)
 │   │   │   │   │   │   │   │   ├── [PlatformFilter.tsx](./packages/app/hybrid/shopping/store/src/components/molecules/PlatformFilter.tsx)
 │   │   │   │   │   │   │   │   ├── [RecentlyViewed.tsx](./packages/app/hybrid/shopping/store/src/components/molecules/RecentlyViewed.tsx)
 │   │   │   │   │   │   │   │   ├── [SearchBar.tsx](./packages/app/hybrid/shopping/store/src/components/molecules/SearchBar.tsx)
@@ -19771,374 +19091,10 @@
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/shopping/store/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/shopping/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/shopping/TREE.md)
-│   │   │   ├── social-networking/
-│   │   │   │   ├── chat/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/social-networking/chat/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/social-networking/chat/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/social-networking/chat/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/social-networking/chat/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/social-networking/chat/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [chat-header.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/chat-header.spec.ts)
-│   │   │   │   │   │   ├── [chat-thread.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/chat-thread.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/home.spec.ts)
-│   │   │   │   │   │   ├── [navigation.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/navigation.spec.ts)
-│   │   │   │   │   │   ├── [profile.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/profile.spec.ts)
-│   │   │   │   │   │   ├── [responsive.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/responsive.spec.ts)
-│   │   │   │   │   │   ├── [settings.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/settings.spec.ts)
-│   │   │   │   │   │   ├── [sidebar.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/sidebar.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/social-networking/chat/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/social-networking/chat/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/social-networking/chat/public/icons/icon.svg)
-│   │   │   │   │   │   ├── og/
-│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/social-networking/chat/public/og/og.png)
-│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/social-networking/chat/public/og/og.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/social-networking/chat/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/social-networking/chat/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/social-networking/chat/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/social-networking/chat/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/social-networking/chat/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/social-networking/chat/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/social-networking/chat/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── chat/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/chat/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/chat/page.tsx)
-│   │   │   │   │   │   │   ├── settings/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/social-networking/chat/src/app/settings/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/settings/page.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/social-networking/chat/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/social-networking/chat/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/social-networking/chat/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/social-networking/chat/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/social-networking/chat/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/social-networking/chat/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/social-networking/chat/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/social-networking/chat/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/social-networking/chat/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/social-networking/chat/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/social-networking/chat/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/social-networking/chat/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [FullScreen.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/__tests__/FullScreen.test.tsx)
-│   │   │   │   │   │   │   │   └── [SWProvider.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/__tests__/SWProvider.test.tsx)
-│   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [MessageBubble.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/atoms/__tests__/MessageBubble.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [ModelBadge.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/atoms/__tests__/ModelBadge.test.tsx)
-│   │   │   │   │   │   │   │   ├── [MessageBubble.tsx](./packages/app/hybrid/social-networking/chat/src/components/atoms/MessageBubble.tsx)
-│   │   │   │   │   │   │   │   └── [ModelBadge.tsx](./packages/app/hybrid/social-networking/chat/src/components/atoms/ModelBadge.tsx)
-│   │   │   │   │   │   │   ├── chat/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [Chat.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/chat/__tests__/Chat.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ChatCounter.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/chat/__tests__/ChatCounter.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ChatMessages.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/chat/__tests__/ChatMessages.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [ChatModels.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/chat/__tests__/ChatModels.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Chat.tsx](./packages/app/hybrid/social-networking/chat/src/components/chat/Chat.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatCounter.tsx](./packages/app/hybrid/social-networking/chat/src/components/chat/ChatCounter.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatMessages.tsx](./packages/app/hybrid/social-networking/chat/src/components/chat/ChatMessages.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatModels.tsx](./packages/app/hybrid/social-networking/chat/src/components/chat/ChatModels.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/social-networking/chat/src/components/chat/index.ts)
-│   │   │   │   │   │   │   ├── molecules/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [ChatInput.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/molecules/__tests__/ChatInput.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [ConversationCard.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/molecules/__tests__/ConversationCard.test.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatInput.tsx](./packages/app/hybrid/social-networking/chat/src/components/molecules/ChatInput.tsx)
-│   │   │   │   │   │   │   │   └── [ConversationCard.tsx](./packages/app/hybrid/social-networking/chat/src/components/molecules/ConversationCard.tsx)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [ChatHeader.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/__tests__/ChatHeader.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [OfflineBanner.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/__tests__/OfflineBanner.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Sidebar.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/__tests__/Sidebar.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [ToastContainer.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/__tests__/ToastContainer.test.tsx)
-│   │   │   │   │   │   │   │   ├── [ChatHeader.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/ChatHeader.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   ├── [OfflineBanner.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/OfflineBanner.tsx)
-│   │   │   │   │   │   │   │   ├── [Sidebar.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/Sidebar.tsx)
-│   │   │   │   │   │   │   │   └── [ToastContainer.tsx](./packages/app/hybrid/social-networking/chat/src/components/organisms/ToastContainer.tsx)
-│   │   │   │   │   │   │   ├── templates/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [PageTransition.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/__tests__/PageTransition.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │   │   ├── [AboutTemplate.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [DownloadsTemplate.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [ErrorTemplate.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │   │   ├── [PageTransition.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/PageTransition.tsx)
-│   │   │   │   │   │   │   │   └── [VersionTemplate.tsx](./packages/app/hybrid/social-networking/chat/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   │   ├── write/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [WriteModal.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/write/__tests__/WriteModal.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [WriteTool.test.tsx](./packages/app/hybrid/social-networking/chat/src/components/write/__tests__/WriteTool.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [config.test.ts](./packages/app/hybrid/social-networking/chat/src/components/write/__tests__/config.test.ts)
-│   │   │   │   │   │   │   │   ├── [WriteTool.tsx](./packages/app/hybrid/social-networking/chat/src/components/write/WriteTool.tsx)
-│   │   │   │   │   │   │   │   ├── [config.ts](./packages/app/hybrid/social-networking/chat/src/components/write/config.ts)
-│   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/social-networking/chat/src/components/write/index.tsx)
-│   │   │   │   │   │   │   └── [FullScreen.tsx](./packages/app/hybrid/social-networking/chat/src/components/FullScreen.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/social-networking/chat/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/social-networking/chat/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/social-networking/chat/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [models.test.ts](./packages/app/hybrid/social-networking/chat/src/data/__tests__/models.test.ts)
-│   │   │   │   │   │   │   │   └── [seed.test.ts](./packages/app/hybrid/social-networking/chat/src/data/__tests__/seed.test.ts)
-│   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/social-networking/chat/src/data/models.ts)
-│   │   │   │   │   │   │   └── [seed.ts](./packages/app/hybrid/social-networking/chat/src/data/seed.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [useKeyboard.test.ts](./packages/app/hybrid/social-networking/chat/src/hooks/__tests__/useKeyboard.test.ts)
-│   │   │   │   │   │   │   │   ├── [useSWRegister.test.ts](./packages/app/hybrid/social-networking/chat/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   │   │   │   │   │   └── [useStreaming.test.ts](./packages/app/hybrid/social-networking/chat/src/hooks/__tests__/useStreaming.test.ts)
-│   │   │   │   │   │   │   ├── [useKeyboard.ts](./packages/app/hybrid/social-networking/chat/src/hooks/useKeyboard.ts)
-│   │   │   │   │   │   │   ├── [useSWRegister.ts](./packages/app/hybrid/social-networking/chat/src/hooks/useSWRegister.ts)
-│   │   │   │   │   │   │   └── [useStreaming.ts](./packages/app/hybrid/social-networking/chat/src/hooks/useStreaming.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [db.test.ts](./packages/app/hybrid/social-networking/chat/src/lib/__tests__/db.test.ts)
-│   │   │   │   │   │   │   ├── api/
-│   │   │   │   │   │   │   │   └── __tests__/
-│   │   │   │   │   │   │   │       ├── [rest-endpoint.test.ts](./packages/app/hybrid/social-networking/chat/src/lib/api/__tests__/rest-endpoint.test.ts)
-│   │   │   │   │   │   │   │       └── [trpc-endpoint.test.ts](./packages/app/hybrid/social-networking/chat/src/lib/api/__tests__/trpc-endpoint.test.ts)
-│   │   │   │   │   │   │   └── [db.ts](./packages/app/hybrid/social-networking/chat/src/lib/db.ts)
-│   │   │   │   │   │   ├── pages/
-│   │   │   │   │   │   │   └── api/
-│   │   │   │   │   │   │       ├── rest/
-│   │   │   │   │   │   │       │   └── [[endpoint].ts](./packages/app/hybrid/social-networking/chat/src/pages/api/rest/[endpoint].ts)
-│   │   │   │   │   │   │       └── trpc/
-│   │   │   │   │   │   │           └── [[trpc].ts](./packages/app/hybrid/social-networking/chat/src/pages/api/trpc/[trpc].ts)
-│   │   │   │   │   │   ├── providers/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [DataProvider.test.tsx](./packages/app/hybrid/social-networking/chat/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Providers.test.tsx](./packages/app/hybrid/social-networking/chat/src/providers/__tests__/Providers.test.tsx)
-│   │   │   │   │   │   │   │   └── [ToastProvider.test.tsx](./packages/app/hybrid/social-networking/chat/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   │   │   │   │   ├── [DataProvider.tsx](./packages/app/hybrid/social-networking/chat/src/providers/DataProvider.tsx)
-│   │   │   │   │   │   │   ├── [Providers.tsx](./packages/app/hybrid/social-networking/chat/src/providers/Providers.tsx)
-│   │   │   │   │   │   │   ├── [SWProvider.tsx](./packages/app/hybrid/social-networking/chat/src/providers/SWProvider.tsx)
-│   │   │   │   │   │   │   └── [ToastProvider.tsx](./packages/app/hybrid/social-networking/chat/src/providers/ToastProvider.tsx)
-│   │   │   │   │   │   ├── server/
-│   │   │   │   │   │   │   ├── rest/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   └── [index.test.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/__tests__/index.test.ts)
-│   │   │   │   │   │   │   │   ├── handlers/
-│   │   │   │   │   │   │   │   │   ├── metadata/
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   ├── [docs.test.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/metadata/__tests__/docs.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   └── [metadata.test.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/metadata/__tests__/metadata.test.ts)
-│   │   │   │   │   │   │   │   │   │   ├── [docs.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/metadata/docs.ts)
-│   │   │   │   │   │   │   │   │   │   ├── [health.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/metadata/health.ts)
-│   │   │   │   │   │   │   │   │   │   ├── [info.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/metadata/info.ts)
-│   │   │   │   │   │   │   │   │   │   ├── [status.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/metadata/status.ts)
-│   │   │   │   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/metadata/version.ts)
-│   │   │   │   │   │   │   │   │   └── utils/
-│   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │       │   └── [proxy.test.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/utils/__tests__/proxy.test.ts)
-│   │   │   │   │   │   │   │   │       └── [proxy.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/handlers/utils/proxy.ts)
-│   │   │   │   │   │   │   │   ├── [index.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/index.ts)
-│   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/social-networking/chat/src/server/rest/types.ts)
-│   │   │   │   │   │   │   └── trpc/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   └── [probe.test.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/__tests__/probe.test.ts)
-│   │   │   │   │   │   │       ├── routers/
-│   │   │   │   │   │   │       │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   └── [_app.test.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/__tests__/_app.test.ts)
-│   │   │   │   │   │   │       │   ├── openrouter/
-│   │   │   │   │   │   │       │   │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   │   ├── [client.test.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/openrouter/__tests__/client.test.ts)
-│   │   │   │   │   │   │       │   │   │   ├── [index.test.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/openrouter/__tests__/index.test.ts)
-│   │   │   │   │   │   │       │   │   │   └── [service.test.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/openrouter/__tests__/service.test.ts)
-│   │   │   │   │   │   │       │   │   ├── [client.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/openrouter/client.ts)
-│   │   │   │   │   │   │       │   │   ├── [enums.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/openrouter/enums.ts)
-│   │   │   │   │   │   │       │   │   ├── [index.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/openrouter/index.ts)
-│   │   │   │   │   │   │       │   │   └── [service.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/openrouter/service.ts)
-│   │   │   │   │   │   │       │   ├── youtube/
-│   │   │   │   │   │   │       │   │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   │   ├── [index.test.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/youtube/__tests__/index.test.ts)
-│   │   │   │   │   │   │       │   │   │   └── [service.test.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/youtube/__tests__/service.test.ts)
-│   │   │   │   │   │   │       │   │   ├── [index.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/youtube/index.ts)
-│   │   │   │   │   │   │       │   │   └── [service.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/youtube/service.ts)
-│   │   │   │   │   │   │       │   └── [_app.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/routers/_app.ts)
-│   │   │   │   │   │   │       └── [trpc.ts](./packages/app/hybrid/social-networking/chat/src/server/trpc/trpc.ts)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/social-networking/chat/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/social-networking/chat/src/styles/themes.css)
-│   │   │   │   │   │   ├── types/
-│   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/social-networking/chat/src/types/index.ts)
-│   │   │   │   │   │   └── utils/
-│   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │       │   ├── [format.test.ts](./packages/app/hybrid/social-networking/chat/src/utils/__tests__/format.test.ts)
-│   │   │   │   │   │       │   ├── [trpc-server.test.ts](./packages/app/hybrid/social-networking/chat/src/utils/__tests__/trpc-server.test.ts)
-│   │   │   │   │   │       │   └── [trpc.test.ts](./packages/app/hybrid/social-networking/chat/src/utils/__tests__/trpc.test.ts)
-│   │   │   │   │   │       ├── [format.ts](./packages/app/hybrid/social-networking/chat/src/utils/format.ts)
-│   │   │   │   │   │       └── [trpc.ts](./packages/app/hybrid/social-networking/chat/src/utils/trpc.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/social-networking/chat/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/social-networking/chat/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/social-networking/chat/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/social-networking/chat/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/social-networking/chat/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/social-networking/chat/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/social-networking/chat/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/social-networking/chat/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/social-networking/chat/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/social-networking/chat/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/social-networking/chat/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/social-networking/chat/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/social-networking/chat/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/social-networking/chat/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/social-networking/chat/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/social-networking/chat/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/social-networking/chat/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/social-networking/chat/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/social-networking/chat/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/social-networking/chat/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/social-networking/chat/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/social-networking/chat/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/social-networking/chat/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/social-networking/chat/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/social-networking/chat/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/social-networking/chat/tsconfig.json)
-│   │   │   │   ├── [README.md](./packages/app/hybrid/social-networking/README.md)
-│   │   │   │   └── [TREE.md](./packages/app/hybrid/social-networking/TREE.md)
 │   │   │   ├── sports/
 │   │   │   │   ├── chess/
 │   │   │   │   │   ├── __mocks__/
 │   │   │   │   │   │   └── [chess-ts.js](./packages/app/hybrid/sports/chess/__mocks__/chess-ts.js)
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/sports/chess/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/sports/chess/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/sports/chess/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/sports/chess/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/sports/chess/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/sports/chess/e2e/screenshots/about.png)
@@ -20577,12 +19533,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/sports/chess/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/sports/chess/tsconfig.json)
 │   │   │   │   ├── football/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/sports/football/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/sports/football/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/sports/football/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/sports/football/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/sports/football/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── screenshots/
 │   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/sports/football/e2e/about.spec.ts)
@@ -21329,12 +20279,6 @@
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/sports/football/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/sports/football/tsconfig.json)
 │   │   │   │   ├── tourney/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/sports/tourney/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/sports/tourney/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/sports/tourney/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/sports/tourney/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/sports/tourney/docs/ROADMAP.md)
 │   │   │   │   │   ├── e2e/
 │   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/sports/tourney/e2e/about.spec.ts)
 │   │   │   │   │   │   ├── [bracket.spec.ts](./packages/app/hybrid/sports/tourney/e2e/bracket.spec.ts)
@@ -21757,1960 +20701,6 @@
 │   │   │   │   ├── [README.md](./packages/app/hybrid/sports/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/sports/TREE.md)
 │   │   │   ├── utilities/
-│   │   │   │   ├── docs/
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/hybrid/utilities/docs/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/hybrid/utilities/docs/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/hybrid/utilities/docs/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/hybrid/utilities/docs/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/hybrid/utilities/docs/docs/ROADMAP.md)
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/utilities/docs/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/utilities/docs/e2e/home.spec.ts)
-│   │   │   │   │   │   ├── [index.spec.ts](./packages/app/hybrid/utilities/docs/e2e/index.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/utilities/docs/e2e/version.spec.ts)
-│   │   │   │   │   ├── prisma/
-│   │   │   │   │   │   └── [schema.prisma](./packages/app/hybrid/utilities/docs/prisma/schema.prisma)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── db/
-│   │   │   │   │   │   │   ├── [chess.db](./packages/app/hybrid/utilities/docs/public/db/chess.db)
-│   │   │   │   │   │   │   └── [hieudoanm.db](./packages/app/hybrid/utilities/docs/public/db/hieudoanm.db)
-│   │   │   │   │   │   ├── fonts/
-│   │   │   │   │   │   │   ├── Roboto/
-│   │   │   │   │   │   │   │   ├── [Roboto-Italic.ttf](./packages/app/hybrid/utilities/docs/public/fonts/Roboto/Roboto-Italic.ttf)
-│   │   │   │   │   │   │   │   ├── [Roboto-Medium.ttf](./packages/app/hybrid/utilities/docs/public/fonts/Roboto/Roboto-Medium.ttf)
-│   │   │   │   │   │   │   │   ├── [Roboto-MediumItalic.ttf](./packages/app/hybrid/utilities/docs/public/fonts/Roboto/Roboto-MediumItalic.ttf)
-│   │   │   │   │   │   │   │   └── [Roboto-Regular.ttf](./packages/app/hybrid/utilities/docs/public/fonts/Roboto/Roboto-Regular.ttf)
-│   │   │   │   │   │   │   └── Times-New-Roman/
-│   │   │   │   │   │   │       ├── [Times-New-Roman-Bold-Italic.ttf](./packages/app/hybrid/utilities/docs/public/fonts/Times-New-Roman/Times-New-Roman-Bold-Italic.ttf)
-│   │   │   │   │   │   │       ├── [Times-New-Roman-Bold.ttf](./packages/app/hybrid/utilities/docs/public/fonts/Times-New-Roman/Times-New-Roman-Bold.ttf)
-│   │   │   │   │   │   │       ├── [Times-New-Roman-Italic.ttf](./packages/app/hybrid/utilities/docs/public/fonts/Times-New-Roman/Times-New-Roman-Italic.ttf)
-│   │   │   │   │   │   │       └── [Times-New-Roman-Regular.ttf](./packages/app/hybrid/utilities/docs/public/fonts/Times-New-Roman/Times-New-Roman-Regular.ttf)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/utilities/docs/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/utilities/docs/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/utilities/docs/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/utilities/docs/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/utilities/docs/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/utilities/docs/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/utilities/docs/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/utilities/docs/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/utilities/docs/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/utilities/docs/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/utilities/docs/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.svg](./packages/app/hybrid/utilities/docs/public/icons/icon-512x512.svg)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/utilities/docs/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/utilities/docs/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/utilities/docs/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/utilities/docs/public/icons/icon.svg)
-│   │   │   │   │   │   ├── models/
-│   │   │   │   │   │   │   └── [invoice-parser.onnx](./packages/app/hybrid/utilities/docs/public/models/invoice-parser.onnx)
-│   │   │   │   │   │   ├── og/
-│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/utilities/docs/public/og/og.png)
-│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/utilities/docs/public/og/og.svg)
-│   │   │   │   │   │   ├── workers/
-│   │   │   │   │   │   │   └── [pdf.worker.min.js](./packages/app/hybrid/utilities/docs/public/workers/pdf.worker.min.js)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/utilities/docs/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/utilities/docs/public/favicon.ico)
-│   │   │   │   │   │   ├── [file.svg](./packages/app/hybrid/utilities/docs/public/file.svg)
-│   │   │   │   │   │   ├── [globe.svg](./packages/app/hybrid/utilities/docs/public/globe.svg)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/utilities/docs/public/manifest.json)
-│   │   │   │   │   │   ├── [next.svg](./packages/app/hybrid/utilities/docs/public/next.svg)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/utilities/docs/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/utilities/docs/public/sitemap.xml)
-│   │   │   │   │   │   ├── [sw.js](./packages/app/hybrid/utilities/docs/public/sw.js)
-│   │   │   │   │   │   ├── [vercel.svg](./packages/app/hybrid/utilities/docs/public/vercel.svg)
-│   │   │   │   │   │   └── [window.svg](./packages/app/hybrid/utilities/docs/public/window.svg)
-│   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   ├── sh/
-│   │   │   │   │   │   │   └── [post-build.sh](./packages/app/hybrid/utilities/docs/scripts/sh/post-build.sh)
-│   │   │   │   │   │   ├── [bookmarks.ts](./packages/app/hybrid/utilities/docs/scripts/bookmarks.ts)
-│   │   │   │   │   │   ├── [currency.ts](./packages/app/hybrid/utilities/docs/scripts/currency.ts)
-│   │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/utilities/docs/scripts/tsconfig.json)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── (products)/
-│   │   │   │   │   │   │   │   ├── bored/
-│   │   │   │   │   │   │   │   │   ├── develop/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/bored/develop/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── research/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/bored/research/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── ship/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/bored/ship/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── vibe-slot-code/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/bored/vibe-slot-code/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── weird-search/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/bored/weird-search/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/bored/page.tsx)
-│   │   │   │   │   │   │   │   ├── calculator/
-│   │   │   │   │   │   │   │   │   ├── calculator/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/calculator/calculator/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── inflation/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/calculator/inflation/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── split-bill/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/calculator/split-bill/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/calculator/page.tsx)
-│   │   │   │   │   │   │   │   ├── clocks/
-│   │   │   │   │   │   │   │   │   ├── cron/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/clocks/cron/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── epoch-convert/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/clocks/epoch-convert/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/clocks/page.tsx)
-│   │   │   │   │   │   │   │   ├── data-excel/
-│   │   │   │   │   │   │   │   │   ├── excel-to-pdf/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/data-excel/excel-to-pdf/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── excel-to-xml/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/data-excel/excel-to-xml/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── split-excel/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/data-excel/split-excel/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/data-excel/page.tsx)
-│   │   │   │   │   │   │   │   ├── data-xml/
-│   │   │   │   │   │   │   │   │   ├── json-to-xml/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/data-xml/json-to-xml/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── xml-to-excel/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/data-xml/xml-to-excel/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── xml-to-json/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/data-xml/xml-to-json/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/data-xml/page.tsx)
-│   │   │   │   │   │   │   │   ├── developer/
-│   │   │   │   │   │   │   │   │   ├── figlet/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/developer/figlet/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── openapi/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/developer/openapi/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── proxy/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/developer/proxy/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── text-diff/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/developer/text-diff/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── text-url-tracer/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/developer/text-url-tracer/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── uuid/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/developer/uuid/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/developer/page.tsx)
-│   │   │   │   │   │   │   │   ├── editors/
-│   │   │   │   │   │   │   │   │   ├── json-schema/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/editors/json-schema/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── manifest/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/editors/manifest/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── regex/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/editors/regex/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── slides/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/editors/slides/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/editors/page.tsx)
-│   │   │   │   │   │   │   │   ├── trivia/
-│   │   │   │   │   │   │   │   │   ├── palindrome/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/trivia/palindrome/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── pokedex/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/trivia/pokedex/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── quizify/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/trivia/quizify/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/trivia/page.tsx)
-│   │   │   │   │   │   │   │   └── utilities/
-│   │   │   │   │   │   │   │       ├── create-zip/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/create-zip/page.tsx)
-│   │   │   │   │   │   │   │       ├── emojis/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/emojis/page.tsx)
-│   │   │   │   │   │   │   │       ├── legislation/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/legislation/page.tsx)
-│   │   │   │   │   │   │   │       ├── lorem-ipsum/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/lorem-ipsum/page.tsx)
-│   │   │   │   │   │   │   │       ├── no-sleep/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/no-sleep/page.tsx)
-│   │   │   │   │   │   │   │       ├── screen-recorder/
-│   │   │   │   │   │   │   │       │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/screen-recorder/page.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/page.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/utilities/docs/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/utilities/docs/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/utilities/docs/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/utilities/docs/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/utilities/docs/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/utilities/docs/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/utilities/docs/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/utilities/docs/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/utilities/docs/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/utilities/docs/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/utilities/docs/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── atoms/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   ├── [BlogDate.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/atoms/__tests__/__snapshots__/BlogDate.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   ├── [TagBadge.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/atoms/__tests__/__snapshots__/TagBadge.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   └── [ToolCard.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/atoms/__tests__/__snapshots__/ToolCard.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   ├── [BlogDate.test.tsx](./packages/app/hybrid/utilities/docs/src/components/atoms/__tests__/BlogDate.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [TagBadge.test.tsx](./packages/app/hybrid/utilities/docs/src/components/atoms/__tests__/TagBadge.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [ToolCard.test.tsx](./packages/app/hybrid/utilities/docs/src/components/atoms/__tests__/ToolCard.test.tsx)
-│   │   │   │   │   │   │   │   ├── [BlogDate.tsx](./packages/app/hybrid/utilities/docs/src/components/atoms/BlogDate.tsx)
-│   │   │   │   │   │   │   │   ├── [Dropzone.tsx](./packages/app/hybrid/utilities/docs/src/components/atoms/Dropzone.tsx)
-│   │   │   │   │   │   │   │   ├── [GlyphLoading.tsx](./packages/app/hybrid/utilities/docs/src/components/atoms/GlyphLoading.tsx)
-│   │   │   │   │   │   │   │   ├── [TagBadge.tsx](./packages/app/hybrid/utilities/docs/src/components/atoms/TagBadge.tsx)
-│   │   │   │   │   │   │   │   ├── [ToolCard.tsx](./packages/app/hybrid/utilities/docs/src/components/atoms/ToolCard.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/atoms/index.ts)
-│   │   │   │   │   │   │   ├── layout/
-│   │   │   │   │   │   │   │   └── [RootLayoutClient.tsx](./packages/app/hybrid/utilities/docs/src/components/layout/RootLayoutClient.tsx)
-│   │   │   │   │   │   │   ├── molecules/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   ├── [BlogCard.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/molecules/__tests__/__snapshots__/BlogCard.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   ├── [BlogCardList.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/molecules/__tests__/__snapshots__/BlogCardList.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   └── [BlogSidebar.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/molecules/__tests__/__snapshots__/BlogSidebar.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   ├── [BlogCard.test.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/__tests__/BlogCard.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BlogCardList.test.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/__tests__/BlogCardList.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [BlogSidebar.test.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/__tests__/BlogSidebar.test.tsx)
-│   │   │   │   │   │   │   │   ├── [BlogCard.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/BlogCard.tsx)
-│   │   │   │   │   │   │   │   ├── [BlogCardList.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/BlogCardList.tsx)
-│   │   │   │   │   │   │   │   ├── [BlogSidebar.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/BlogSidebar.tsx)
-│   │   │   │   │   │   │   │   ├── [SearchBar.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/SearchBar.tsx)
-│   │   │   │   │   │   │   │   ├── [Section.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/Section.tsx)
-│   │   │   │   │   │   │   │   ├── [VirtualTable.tsx](./packages/app/hybrid/utilities/docs/src/components/molecules/VirtualTable.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/molecules/index.ts)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   ├── auth/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   ├── [PasswordForget.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/__tests__/__snapshots__/PasswordForget.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [PasswordReset.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/__tests__/__snapshots__/PasswordReset.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [SignInForm.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/__tests__/__snapshots__/SignInForm.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   └── [SignUpForm.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/__tests__/__snapshots__/SignUpForm.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   ├── [PasswordForget.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/__tests__/PasswordForget.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [PasswordReset.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/__tests__/PasswordReset.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [SignInForm.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/__tests__/SignInForm.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [SignUpForm.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/__tests__/SignUpForm.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [PasswordForget.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/PasswordForget.tsx)
-│   │   │   │   │   │   │   │   │   ├── [PasswordReset.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/PasswordReset.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SignInForm.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/SignInForm.tsx)
-│   │   │   │   │   │   │   │   │   └── [SignUpForm.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/auth/SignUpForm.tsx)
-│   │   │   │   │   │   │   │   ├── blog/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   ├── [BlogFooter.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/blog/__tests__/__snapshots__/BlogFooter.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   └── [BlogHeader.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/blog/__tests__/__snapshots__/BlogHeader.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   ├── [BlogFooter.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/blog/__tests__/BlogFooter.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [BlogHeader.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/blog/__tests__/BlogHeader.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BlogFooter.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/blog/BlogFooter.tsx)
-│   │   │   │   │   │   │   │   │   └── [BlogHeader.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/blog/BlogHeader.tsx)
-│   │   │   │   │   │   │   │   ├── common/
-│   │   │   │   │   │   │   │   │   └── [PhotosGrid.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/common/PhotosGrid.tsx)
-│   │   │   │   │   │   │   │   ├── landing/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   ├── [CallToAction.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/__snapshots__/CallToAction.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Features.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/__snapshots__/Features.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Footer.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/__snapshots__/Footer.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [FrequentlyAskedQuestions.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/__snapshots__/FrequentlyAskedQuestions.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Header.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/__snapshots__/Header.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Hero.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/__snapshots__/Hero.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Pricing.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/__snapshots__/Pricing.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   └── [Testimonials.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/__snapshots__/Testimonials.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   ├── [CallToAction.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/CallToAction.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [Features.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/Features.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [Footer.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/Footer.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [FrequentlyAskedQuestions.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/FrequentlyAskedQuestions.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [Header.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/Header.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [Hero.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/Hero.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [Pricing.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/Pricing.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [Testimonials.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/__tests__/Testimonials.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [CallToAction.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/CallToAction.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Features.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/Features.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Footer.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/Footer.tsx)
-│   │   │   │   │   │   │   │   │   ├── [FrequentlyAskedQuestions.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/FrequentlyAskedQuestions.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/Header.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Hero.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/Hero.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Pricing.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/Pricing.tsx)
-│   │   │   │   │   │   │   │   │   └── [Testimonials.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/landing/Testimonials.tsx)
-│   │   │   │   │   │   │   │   ├── layout/
-│   │   │   │   │   │   │   │   │   ├── tabs/
-│   │   │   │   │   │   │   │   │   │   ├── CurrencyTab/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [CurrencyTab.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/CurrencyTab/__tests__/__snapshots__/CurrencyTab.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [CurrencyTab.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/CurrencyTab/__tests__/CurrencyTab.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [ConversionResult.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/CurrencyTab/ConversionResult.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [CurrencyInput.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/CurrencyTab/CurrencyInput.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [CurrencySelect.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/CurrencyTab/CurrencySelect.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [QuickPairs.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/CurrencyTab/QuickPairs.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/CurrencyTab/index.tsx)
-│   │   │   │   │   │   │   │   │   │   └── StatusTab/
-│   │   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │   │       │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │       │   │   └── [StatusTab.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/StatusTab/__tests__/__snapshots__/StatusTab.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │       │   └── [StatusTab.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/StatusTab/__tests__/StatusTab.test.tsx)
-│   │   │   │   │   │   │   │   │   │       ├── [ServiceRow.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/StatusTab/ServiceRow.tsx)
-│   │   │   │   │   │   │   │   │   │       ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/StatusTab/constants.ts)
-│   │   │   │   │   │   │   │   │   │       └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/tabs/StatusTab/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Breadcrumb.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/Breadcrumb.tsx)
-│   │   │   │   │   │   │   │   │   ├── [LeftSidebar.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/LeftSidebar.tsx)
-│   │   │   │   │   │   │   │   │   ├── [RightSidebar.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/RightSidebar.tsx)
-│   │   │   │   │   │   │   │   │   ├── [SidebarProvider.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/SidebarProvider.tsx)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/organisms/layout/types.ts)
-│   │   │   │   │   │   │   │   ├── mocks/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   ├── [Browser.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/__tests__/__snapshots__/Browser.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Phone.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/__tests__/__snapshots__/Phone.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Terminal.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/__tests__/__snapshots__/Terminal.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   └── [Window.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/__tests__/__snapshots__/Window.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   ├── [Browser.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/__tests__/Browser.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [Phone.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/__tests__/Phone.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [Terminal.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/__tests__/Terminal.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [Window.test.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/__tests__/Window.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Browser.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/Browser.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Phone.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/Phone.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Terminal.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/Terminal.tsx)
-│   │   │   │   │   │   │   │   │   └── [Window.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/mocks/Window.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/utilities/docs/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/organisms/index.ts)
-│   │   │   │   │   │   │   ├── routes/
-│   │   │   │   │   │   │   │   ├── apps/
-│   │   │   │   │   │   │   │   │   ├── bored/
-│   │   │   │   │   │   │   │   │   │   ├── Build/
-│   │   │   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Build/data/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [howToContent.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Build/data/howToContent.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [products.csv](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Build/data/products.csv)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [products.json](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Build/data/products.json)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Build/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Build/index.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── Develop/
-│   │   │   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Develop/data/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [howToContent.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Develop/data/howToContent.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [skills.csv](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Develop/data/skills.csv)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [skills.json](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Develop/data/skills.json)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Develop/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Develop/index.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── Research/
-│   │   │   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Research/data/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [howToContent.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Research/data/howToContent.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [topics.csv](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Research/data/topics.csv)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [topics.json](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Research/data/topics.json)
-│   │   │   │   │   │   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [how-to.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Research/docs/how-to.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Research/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Research/index.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── Ship/
-│   │   │   │   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── editor/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [EditorFields.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/editor/EditorFields.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [EditorSidebar.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/editor/EditorSidebar.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [EditorTabBar.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/editor/EditorTabBar.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [EditorToggle.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/editor/EditorToggle.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FullYamlPanel.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/editor/FullYamlPanel.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SingleYamlPanel.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/editor/SingleYamlPanel.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [YamlEditor.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/editor/YamlEditor.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── modal/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ModalHeader.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/modal/ModalHeader.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ModalTabs.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/modal/ModalTabs.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PreviewTab.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/modal/PreviewTab.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [RawTab.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/modal/RawTab.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [TemplateDocModal.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/modal/TemplateDocModal.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── preview/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [NavButton.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/preview/NavButton.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PostDots.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/preview/PostDots.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PreviewHeader.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/preview/PreviewHeader.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PreviewPane.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/preview/PreviewPane.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [ShipBadge.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/preview/ShipBadge.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── sidebar/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PostActions.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/PostActions.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PostItemRow.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/PostItemRow.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PostsList.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/PostsList.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SidebarTabBar.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/SidebarTabBar.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SidebarToggle.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/SidebarToggle.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [TemplateCategoryGroup.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/TemplateCategoryGroup.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [TemplateItem.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/TemplateItem.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [TemplateSearch.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/TemplateSearch.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [TemplateSelector.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/TemplateSelector.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [TemplateSidebar.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/sidebar/TemplateSidebar.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── templates/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── _shared/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Background.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/_shared/Background.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Footer.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/_shared/Footer.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/_shared/Header.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/_shared/index.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── business-health/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── ecommerce/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [DealBadge.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/ecommerce/DealBadge.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [NewArrival.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/ecommerce/NewArrival.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ProductShowcase.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/ecommerce/ProductShowcase.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ProductSpecs.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/ecommerce/ProductSpecs.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [Unboxing.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/ecommerce/Unboxing.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── finance/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BillReminder.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/finance/BillReminder.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BillSplit.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/finance/BillSplit.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BudgetTracker.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/finance/BudgetTracker.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ExpenseLog.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/finance/ExpenseLog.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FinancialPlan.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/finance/FinancialPlan.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [InvestmentTip.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/finance/InvestmentTip.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [InvoiceCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/finance/InvoiceCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [SavingsGoal.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/finance/SavingsGoal.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── fitness/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BodyMeasurements.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/fitness/BodyMeasurements.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ChallengeCalendar.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/fitness/ChallengeCalendar.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ExerciseGuide.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/fitness/ExerciseGuide.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FitnessGoal.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/fitness/FitnessGoal.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [WorkoutLog.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/fitness/WorkoutLog.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [YogaPose.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/fitness/YogaPose.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── food/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FoodReview.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/food/FoodReview.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [IngredientSpotlight.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/food/IngredientSpotlight.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MealPlan.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/food/MealPlan.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MenuHighlights.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/food/MenuHighlights.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [NutritionFacts.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/food/NutritionFacts.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [RecipeCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/food/RecipeCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── health/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MeditationGuide.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/health/MeditationGuide.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MoodTracker.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/health/MoodTracker.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SleepTips.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/health/SleepTips.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [WaterTracker.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/health/WaterTracker.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [WellnessTip.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/health/WellnessTip.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [WorkoutCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/health/WorkoutCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── marketing/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Announcement.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/marketing/Announcement.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [FAQ.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/marketing/FAQ.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Glossary.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/marketing/Glossary.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [OfferBanner.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/marketing/OfferBanner.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [PricingCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/marketing/PricingCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       └── [ValueProp.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/business-health/marketing/ValueProp.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── content-design/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── charts/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [AreaChart.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/charts/AreaChart.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BarChart.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/charts/BarChart.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PieChart.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/charts/PieChart.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ProgressRing.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/charts/ProgressRing.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [RadarChart.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/charts/RadarChart.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [ScatterChart.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/charts/ScatterChart.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── compare/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Comparison.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/compare/Comparison.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FeatureTable.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/compare/FeatureTable.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MythVsFact.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/compare/MythVsFact.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ProsCons.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/compare/ProsCons.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [RatingScale.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/compare/RatingScale.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SplitScreen.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/compare/SplitScreen.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [Versus.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/compare/Versus.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [DataStats.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/DataStats.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [DataTable.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/DataTable.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [DonutChart.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/DonutChart.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FeatureGrid.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/FeatureGrid.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [HeatmapGrid.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/HeatmapGrid.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ProgressList.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/ProgressList.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Sparkline.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/Sparkline.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [StatRow.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/StatRow.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [StatusGrid.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/StatusGrid.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [Timeline.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data/Timeline.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── data-science/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ConfusionMatrix.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data-science/ConfusionMatrix.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [LossCurve.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data-science/LossCurve.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [ModelComparison.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/data-science/ModelComparison.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── dev/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ApiEndpoint.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/dev/ApiEndpoint.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ArchitectureDiagram.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/dev/ArchitectureDiagram.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Changelog.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/dev/Changelog.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [DatabaseSchema.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/dev/DatabaseSchema.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [DependencyGraph.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/dev/DependencyGraph.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [GitGraph.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/dev/GitGraph.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── typography/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [GradientText.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/typography/GradientText.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [HighlightedTitle.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/typography/HighlightedTitle.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [IconText.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/typography/IconText.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Strikethrough.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/typography/Strikethrough.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [TriWord.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/typography/TriWord.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       └── [WordStack.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/content-design/typography/WordStack.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── creative-expression/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── art/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [AnatomyStudy.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/art/AnatomyStudy.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ArtHistory.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/art/ArtHistory.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ColorWheel.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/art/ColorWheel.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PaletteInspiration.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/art/PaletteInspiration.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [StyleGuide.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/art/StyleGuide.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [TechniqueTutorial.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/art/TechniqueTutorial.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── career/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [CoverLetter.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/career/CoverLetter.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [InterviewPrep.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/career/InterviewPrep.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [NetworkingTip.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/career/NetworkingTip.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ResumeTip.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/career/ResumeTip.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SalaryGuide.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/career/SalaryGuide.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [SkillRoadmap.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/career/SkillRoadmap.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── gaming/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [AchievementUnlocked.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/gaming/AchievementUnlocked.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [GameReview.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/gaming/GameReview.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SettingsGuide.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/gaming/SettingsGuide.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SetupTour.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/gaming/SetupTour.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [StatTracker.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/gaming/StatTracker.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [Tournament.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/gaming/Tournament.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── music/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [AlbumReview.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/music/AlbumReview.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ChordChart.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/music/ChordChart.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [GearReview.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/music/GearReview.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MusicTheory.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/music/MusicTheory.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Playlist.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/music/Playlist.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [Setlist.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/music/Setlist.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── quotes/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BookQuote.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/quotes/BookQuote.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [DailyWisdom.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/quotes/DailyWisdom.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FamousQuote.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/quotes/FamousQuote.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MotivationalQuote.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/quotes/MotivationalQuote.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MovieQuote.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/quotes/MovieQuote.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [SongLyric.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/quotes/SongLyric.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── writing/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [CharacterSheet.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/writing/CharacterSheet.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [EditingChecklist.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/writing/EditingChecklist.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [GenreGuide.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/writing/GenreGuide.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [StoryStructure.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/writing/StoryStructure.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [WorldBuilding.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/writing/WorldBuilding.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       └── [WritingPrompt.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/creative-expression/writing/WritingPrompt.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── lifestyle-tech/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── countdown/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Deadline.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/countdown/Deadline.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [EventTimer.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/countdown/EventTimer.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [GoalTracker.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/countdown/GoalTracker.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [LaunchCountdown.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/countdown/LaunchCountdown.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Milestone.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/countdown/Milestone.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SpeedRun.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/countdown/SpeedRun.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [StreakCounter.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/countdown/StreakCounter.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── device/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Browser.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/device/Browser.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Code.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/device/Code.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FileTree.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/device/FileTree.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Mobile.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/device/Mobile.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Notification.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/device/Notification.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SmartWatch.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/device/SmartWatch.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [Terminal.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/device/Terminal.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── football/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FormationCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/football/FormationCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [TransferCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/football/TransferCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── media/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [AspectRatio.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/media/AspectRatio.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [CardOverlay.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/media/CardOverlay.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [CinemaBanner.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/media/CinemaBanner.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Collage.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/media/Collage.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FullBleed.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/media/FullBleed.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Mosaic.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/media/Mosaic.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PodcastEpisode.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/media/PodcastEpisode.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [VideoStill.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/media/VideoStill.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── sports/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [HeadToHead.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/sports/HeadToHead.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [LeagueTable.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/sports/LeagueTable.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MatchSchedule.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/sports/MatchSchedule.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PlayerStats.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/sports/PlayerStats.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Scorecard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/sports/Scorecard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SeasonStats.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/sports/SeasonStats.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [TournamentBracket.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/sports/TournamentBracket.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── travel/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [BucketList.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/travel/BucketList.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [DestinationGuide.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/travel/DestinationGuide.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [ItineraryDay.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/travel/ItineraryDay.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [LandmarkSpotlight.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/travel/LandmarkSpotlight.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [PackingChecklist.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/travel/PackingChecklist.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [PackingList.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/travel/PackingList.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       └── [TravelTip.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/lifestyle-tech/travel/TravelTip.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── social-learning/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── education/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BookReview.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/BookReview.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [CheatSheet.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/CheatSheet.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [CourseHighlight.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/CourseHighlight.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [LearningPath.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/LearningPath.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MindMap.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/MindMap.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [QuickQuiz.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/QuickQuiz.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [References.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/References.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [StudyTips.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/StudyTips.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [SubjectSummary.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/education/SubjectSummary.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── hierarchy/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Iceberg.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/hierarchy/Iceberg.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Ladder.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/hierarchy/Ladder.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Leaderboard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/hierarchy/Leaderboard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [OnionDiagram.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/hierarchy/OnionDiagram.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Pyramid.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/hierarchy/Pyramid.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [TierList.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/hierarchy/TierList.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── inspirational/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Affirmation.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/inspirational/Affirmation.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BeliefCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/inspirational/BeliefCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MissionStatement.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/inspirational/MissionStatement.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [VisionBoard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/inspirational/VisionBoard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── interactive/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Abbreviation.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/interactive/Abbreviation.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ChallengeCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/interactive/ChallengeCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Chat.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/interactive/Chat.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FillBlank.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/interactive/FillBlank.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PollVote.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/interactive/PollVote.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [QandA.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/interactive/QandA.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [ThisOrThat.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/interactive/ThisOrThat.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── news/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BreakdownCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/news/BreakdownCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BreakingNews.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/news/BreakingNews.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [DailyDigest.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/news/DailyDigest.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FactCheck.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/news/FactCheck.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [TrendingTopic.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/news/TrendingTopic.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── research/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Discussion.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/research/Discussion.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [HypothesisCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/research/HypothesisCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [IntroLiterature.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/research/IntroLiterature.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Limitations.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/research/Limitations.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Methods.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/research/Methods.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Participants.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/research/Participants.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       └── [Results.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/social-learning/research/Results.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── visual-layout/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── list/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [BulletList.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/list/BulletList.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Checklist.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/list/Checklist.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ColorPalette.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/list/ColorPalette.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Listicle.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/list/Listicle.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [StepByStep.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/list/StepByStep.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [StepsHorizontal.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/list/StepsHorizontal.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── photography/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [CameraSettings.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/photography/CameraSettings.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Composition.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/photography/Composition.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [LensGuide.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/photography/LensGuide.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [LightingTips.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/photography/LightingTips.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [MoodBoard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/photography/MoodBoard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [PhotoEditing.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/photography/PhotoEditing.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Certifications.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/profile/Certifications.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Education.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/profile/Education.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ProfileHeader.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/profile/ProfileHeader.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Projects.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/profile/Projects.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Skills.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/profile/Skills.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [WorkExperience.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/profile/WorkExperience.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── social/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [EventCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/social/EventCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Mention.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/social/Mention.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ProfileCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/social/ProfileCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ShareCTA.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/social/ShareCTA.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [TeamRoster.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/social/TeamRoster.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [Testimonial.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/social/Testimonial.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── text/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Haiku.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/text/Haiku.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Minimal.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/text/Minimal.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [PullQuote.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/text/PullQuote.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [Takeaway.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/text/Takeaway.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [TipCard.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/text/TipCard.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── weather/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [ClimateCompare.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/weather/ClimateCompare.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Forecast.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/weather/Forecast.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [Season.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/weather/Season.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [SunriseSunset.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/weather/SunriseSunset.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [UVIndex.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/weather/UVIndex.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       └── [WeeklyOutlook.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/visual-layout/weather/WeeklyOutlook.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [common.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/common.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/templates/index.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── toolbar/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [AspectRatioSelect.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/toolbar/AspectRatioSelect.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FileNameInput.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/toolbar/FileNameInput.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [FontSelect.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/toolbar/FontSelect.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ShipInput.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/toolbar/ShipInput.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [Toolbar.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/toolbar/Toolbar.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [_icons.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/components/_icons.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [docs-import.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/data/docs-import.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [templates-schema.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/data/templates-schema.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [posts.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/docs/posts.md)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [series.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/docs/series.md)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [sizing.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/docs/sizing.md)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [templates.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/docs/templates.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── posts/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── archive/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── 2026/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── Q3/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── 07/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-11-sat-js-runtimes.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-11-sat-js-runtimes.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-12-sun-wc-qf.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-12-sun-wc-qf.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-13-mon-about-me.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-13-mon-about-me.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-14-tue-news-typescript-7.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-14-tue-news-typescript-7.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-15-wed-my-dev-stack.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-15-wed-my-dev-stack.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-16-thu-wc-sf.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-16-thu-wc-sf.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-17-fri-news-bun-zig-to-rust.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-17-fri-news-bun-zig-to-rust.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-18-sat-new-kimi-k3.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-18-sat-new-kimi-k3.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-19-sun-wc-third-place.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-19-sun-wc-third-place.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-20-mon-wc-final.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-20-mon-wc-final.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-21-tue-wc-wrapped.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-21-tue-wc-wrapped.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-22-wed-wc-euro.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-22-wed-wc-euro.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-23-thu-api-idempotency.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-23-thu-api-idempotency.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-24-fri-openai-hugging-face-hacking.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-24-fri-openai-hugging-face-hacking.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-25-sat-my-languages.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-25-sat-my-languages.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-26-sun-larp.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-26-sun-larp.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-27-mon-ai-markdown.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-27-mon-ai-markdown.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-28-tue-claude-google-leak.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-28-tue-claude-google-leak.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-29-wed-hydration.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-29-wed-hydration.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-07-30-thu-good-hobby.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-30-thu-good-hobby.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [2026-07-31-fri-brainbrow-explained.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-31-fri-brainbrow-explained.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── 08/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-01-sat-connectomics-explained.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-01-sat-connectomics-explained.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-02-sun-eeg-explained.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-02-sun-eeg-explained.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-03-mon-github-stacked-pr.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-03-mon-github-stacked-pr.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-04-tue-markdown-files.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-04-tue-markdown-files.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-05-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-05-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-06-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-06-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-07-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-07-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-08-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-08-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-09-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-09-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-10-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-10-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-11-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-11-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-12-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-12-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-13-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-13-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-14-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-14-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-15-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-15-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-16-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-16-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-17-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-17-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-18-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-18-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-19-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-19-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-20-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-20-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-21-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-21-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-22-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-22-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-23-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-23-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-24-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-24-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-25-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-25-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-26-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-26-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-27-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-27-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-28-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-28-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-29-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-29-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-30-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-30-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [2026-08-31-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-31-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └── 09/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-01-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-01-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-02-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-02-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-03-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-03-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-04-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-04-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-05-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-05-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-06-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-06-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-07-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-07-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-08-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-08-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-09-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-09-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-10-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-10-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-11-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-11-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-12-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-12-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-13-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-13-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-14-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-14-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-15-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-15-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-16-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-16-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-17-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-17-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-18-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-18-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-19-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-19-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-20-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-20-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-21-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-21-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-22-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-22-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-23-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-23-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-24-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-24-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-25-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-25-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-26-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-26-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-27-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-27-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-28-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-28-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── [2026-09-29-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-29-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   │       └── [2026-09-30-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/09/2026-09-30-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── Q4/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── 10/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-01-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-01-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-02-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-02-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-03-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-03-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-04-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-04-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-05-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-05-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-06-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-06-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-07-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-07-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-08-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-08-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-09-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-09-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-10-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-10-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-11-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-11-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-12-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-12-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-13-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-13-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-14-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-14-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-15-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-15-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-16-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-16-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-17-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-17-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-18-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-18-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-19-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-19-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-20-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-20-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-21-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-21-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-22-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-22-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-23-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-23-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-24-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-24-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-25-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-25-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-26-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-26-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-27-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-27-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-28-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-28-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-29-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-29-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-10-30-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-30-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   └── [2026-10-31-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/10/2026-10-31-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       ├── 11/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-01-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-01-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-02-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-02-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-03-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-03-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-04-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-04-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-05-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-05-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-06-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-06-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-07-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-07-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-08-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-08-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-09-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-09-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-10-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-10-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-11-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-11-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-12-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-12-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-13-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-13-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-14-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-14-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-15-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-15-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-16-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-16-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-17-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-17-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-18-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-18-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-19-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-19-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-20-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-20-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-21-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-21-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-22-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-22-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-23-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-23-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-24-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-24-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-25-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-25-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-26-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-26-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-27-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-27-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-28-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-28-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── [2026-11-29-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-29-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       │   └── [2026-11-30-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/11/2026-11-30-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │       └── 12/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-01-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-01-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-02-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-02-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-03-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-03-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-04-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-04-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-05-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-05-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-06-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-06-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-07-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-07-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-08-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-08-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-09-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-09-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-10-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-10-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-11-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-11-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-12-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-12-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-13-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-13-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-14-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-14-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-15-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-15-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-16-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-16-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-17-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-17-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-18-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-18-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-19-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-19-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-20-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-20-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-21-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-21-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-22-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-22-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-23-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-23-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-24-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-24-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-25-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-25-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-26-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-26-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-27-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-27-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-28-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-28-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-29-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-29-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           ├── [2026-12-30-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-30-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │           └── [2026-12-31-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2026/Q4/12/2026-12-31-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── 2027/
-│   │   │   │   │   │   │   │   │   │   │   │   │       ├── Q1/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── 01/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-01-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-01-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-02-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-02-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-03-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-03-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-04-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-04-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-05-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-05-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-06-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-06-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-07-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-07-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-08-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-08-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-09-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-09-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-10-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-10-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-11-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-11-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-12-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-12-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-13-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-13-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-14-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-14-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-15-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-15-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-16-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-16-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-17-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-17-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-18-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-18-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-19-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-19-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-20-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-20-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-21-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-21-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-22-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-22-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-23-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-23-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-24-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-24-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-25-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-25-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-26-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-26-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-27-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-27-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-28-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-28-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-29-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-29-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-01-30-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-30-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   └── [2027-01-31-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/01/2027-01-31-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── 02/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-01-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-01-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-02-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-02-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-03-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-03-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-04-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-04-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-05-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-05-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-06-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-06-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-07-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-07-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-08-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-08-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-09-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-09-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-10-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-10-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-11-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-11-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-12-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-12-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-13-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-13-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-14-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-14-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-15-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-15-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-16-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-16-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-17-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-17-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-18-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-18-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-19-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-19-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-20-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-20-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-21-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-21-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-22-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-22-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-23-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-23-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-24-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-24-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-25-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-25-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-26-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-26-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-02-27-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-27-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   └── [2027-02-28-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/02/2027-02-28-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   └── 03/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-01-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-01-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-02-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-02-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-03-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-03-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-04-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-04-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-05-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-05-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-06-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-06-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-07-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-07-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-08-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-08-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-09-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-09-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-10-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-10-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-11-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-11-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-12-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-12-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-13-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-13-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-14-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-14-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-15-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-15-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-16-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-16-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-17-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-17-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-18-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-18-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-19-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-19-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-20-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-20-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-21-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-21-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-22-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-22-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-23-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-23-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-24-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-24-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-25-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-25-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-26-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-26-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-27-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-27-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-28-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-28-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-29-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-29-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-03-30-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-30-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       └── [2027-03-31-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q1/03/2027-03-31-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       ├── Q2/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── 04/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-01-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-01-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-02-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-02-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-03-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-03-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-04-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-04-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-05-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-05-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-06-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-06-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-07-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-07-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-08-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-08-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-09-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-09-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-10-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-10-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-11-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-11-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-12-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-12-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-13-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-13-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-14-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-14-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-15-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-15-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-16-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-16-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-17-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-17-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-18-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-18-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-19-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-19-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-20-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-20-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-21-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-21-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-22-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-22-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-23-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-23-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-24-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-24-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-25-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-25-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-26-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-26-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-27-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-27-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-28-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-28-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-04-29-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-29-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   └── [2027-04-30-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/04/2027-04-30-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── 05/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-01-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-01-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-02-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-02-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-03-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-03-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-04-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-04-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-05-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-05-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-06-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-06-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-07-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-07-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-08-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-08-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-09-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-09-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-10-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-10-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-11-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-11-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-12-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-12-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-13-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-13-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-14-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-14-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-15-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-15-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-16-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-16-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-17-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-17-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-18-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-18-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-19-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-19-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-20-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-20-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-21-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-21-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-22-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-22-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-23-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-23-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-24-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-24-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-25-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-25-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-26-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-26-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-27-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-27-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-28-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-28-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-29-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-29-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-05-30-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-30-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   └── [2027-05-31-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/05/2027-05-31-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   └── 06/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-01-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-01-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-02-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-02-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-03-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-03-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-04-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-04-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-05-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-05-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-06-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-06-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-07-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-07-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-08-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-08-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-09-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-09-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-10-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-10-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-11-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-11-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-12-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-12-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-13-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-13-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-14-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-14-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-15-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-15-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-16-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-16-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-17-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-17-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-18-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-18-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-19-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-19-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-20-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-20-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-21-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-21-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-22-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-22-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-23-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-23-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-24-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-24-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-25-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-25-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-26-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-26-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-27-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-27-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-28-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-28-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-06-29-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-29-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       └── [2027-06-30-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q2/06/2027-06-30-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       ├── Q3/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── 07/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-01-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-01-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-02-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-02-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-03-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-03-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-04-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-04-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-05-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-05-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-06-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-06-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-07-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-07-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-08-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-08-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-09-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-09-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-10-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-10-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-11-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-11-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-12-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-12-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-13-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-13-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-14-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-14-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-15-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-15-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-16-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-16-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-17-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-17-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-18-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-18-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-19-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-19-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-20-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-20-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-21-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-21-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-22-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-22-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-23-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-23-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-24-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-24-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-25-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-25-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-26-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-26-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-27-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-27-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-28-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-28-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-29-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-29-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-07-30-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-30-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   └── [2027-07-31-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/07/2027-07-31-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   ├── 08/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-01-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-01-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-02-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-02-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-03-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-03-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-04-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-04-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-05-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-05-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-06-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-06-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-07-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-07-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-08-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-08-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-09-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-09-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-10-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-10-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-11-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-11-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-12-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-12-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-13-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-13-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-14-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-14-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-15-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-15-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-16-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-16-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-17-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-17-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-18-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-18-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-19-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-19-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-20-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-20-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-21-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-21-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-22-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-22-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-23-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-23-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-24-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-24-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-25-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-25-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-26-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-26-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-27-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-27-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-28-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-28-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-29-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-29-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   ├── [2027-08-30-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-30-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   │   └── [2027-08-31-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/08/2027-08-31-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │   └── 09/
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-01-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-01-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-02-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-02-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-03-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-03-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-04-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-04-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-05-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-05-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-06-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-06-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-07-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-07-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-08-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-08-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-09-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-09-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-10-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-10-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-11-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-11-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-12-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-12-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-13-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-13-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-14-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-14-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-15-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-15-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-16-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-16-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-17-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-17-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-18-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-18-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-19-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-19-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-20-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-20-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-21-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-21-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-22-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-22-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-23-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-23-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-24-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-24-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-25-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-25-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-26-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-26-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-27-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-27-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-28-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-28-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       ├── [2027-09-29-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-29-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       │       └── [2027-09-30-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q3/09/2027-09-30-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       └── Q4/
-│   │   │   │   │   │   │   │   │   │   │   │   │           ├── 10/
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-01-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-01-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-02-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-02-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-03-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-03-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-04-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-04-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-05-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-05-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-06-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-06-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-07-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-07-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-08-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-08-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-09-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-09-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-10-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-10-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-11-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-11-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-12-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-12-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-13-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-13-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-14-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-14-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-15-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-15-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-16-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-16-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-17-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-17-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-18-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-18-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-19-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-19-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-20-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-20-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-21-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-21-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-22-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-22-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-23-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-23-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-24-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-24-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-25-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-25-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-26-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-26-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-27-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-27-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-28-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-28-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-29-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-29-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-10-30-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-30-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   └── [2027-10-31-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/10/2027-10-31-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           ├── 11/
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-01-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-01-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-02-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-02-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-03-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-03-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-04-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-04-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-05-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-05-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-06-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-06-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-07-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-07-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-08-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-08-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-09-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-09-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-10-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-10-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-11-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-11-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-12-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-12-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-13-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-13-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-14-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-14-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-15-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-15-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-16-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-16-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-17-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-17-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-18-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-18-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-19-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-19-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-20-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-20-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-21-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-21-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-22-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-22-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-23-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-23-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-24-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-24-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-25-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-25-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-26-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-26-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-27-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-27-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-28-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-28-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   ├── [2027-11-29-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-29-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           │   └── [2027-11-30-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/11/2027-11-30-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │           └── 12/
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-01-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-01-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-02-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-02-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-03-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-03-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-04-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-04-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-05-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-05-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-06-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-06-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-07-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-07-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-08-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-08-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-09-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-09-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-10-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-10-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-11-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-11-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-12-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-12-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-13-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-13-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-14-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-14-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-15-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-15-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-16-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-16-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-17-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-17-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-18-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-18-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-19-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-19-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-20-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-20-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-21-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-21-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-22-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-22-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-23-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-23-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-24-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-24-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-25-sat.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-25-sat.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-26-sun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-26-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-27-mon.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-27-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-28-tue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-28-tue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-29-wed.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-29-wed.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               ├── [2027-12-30-thu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-30-thu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │               └── [2027-12-31-fri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/archive/2027/Q4/12/2027-12-31-fri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── next/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── computational-neuroscience/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [brainbrow-explained.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/brainbrow-explained.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [connectomics-explained.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/connectomics-explained.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [core-cpu-vs-prefrontal-cortex.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/core-cpu-vs-prefrontal-cortex.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [core-motherboard-vs-white-matter.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/core-motherboard-vs-white-matter.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [core-ram-vs-working-memory.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/core-ram-vs-working-memory.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [core-ssd-controller-vs-hippocampus.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/core-ssd-controller-vs-hippocampus.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [core-ssd-storage-vs-long-term-memory.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/core-ssd-storage-vs-long-term-memory.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [eeg-explained.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/eeg-explained.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [sense-gpu-vs-visual-cortex.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/sense-gpu-vs-visual-cortex.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [sense-languages-processing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/sense-languages-processing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── football-2026-world-cup/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-02-final.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2026-world-cup/round-of-02-final.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-02-third-place.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2026-world-cup/round-of-02-third-place.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-04-sf.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2026-world-cup/round-of-04-sf.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-08-qf.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2026-world-cup/round-of-08-qf.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-16.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2026-world-cup/round-of-16.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-32.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2026-world-cup/round-of-32.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [world-cup-euro.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2026-world-cup/world-cup-euro.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [wrapped.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2026-world-cup/wrapped.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── football-2028-euro/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-02-final.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2028-euro/round-of-02-final.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-04-sf.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2028-euro/round-of-04-sf.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [round-of-08-qf.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2028-euro/round-of-08-qf.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [round-of-16.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/football-2028-euro/round-of-16.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── fun-facts/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [good-hobby.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/fun-facts/good-hobby.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [larp.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/fun-facts/larp.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── java-solid/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/java-solid/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-single-responsibility-principle.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/java-solid/part-1-single-responsibility-principle.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-open-closed-principle.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/java-solid/part-2-open-closed-principle.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-liskovs-substitution-principle.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/java-solid/part-3-liskovs-substitution-principle.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-interface-segregation-principle.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/java-solid/part-4-interface-segregation-principle.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-dependency-inversion-principle.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/java-solid/part-5-dependency-inversion-principle.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/java-solid/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── js-engines/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-engines/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-v8.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-engines/part-1-v8.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-quickjs.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-engines/part-2-quickjs.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-javascriptcore.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-engines/part-3-javascriptcore.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-engines/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── js-packages-managers/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-packages-managers/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-npm.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-packages-managers/part-1-npm.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-yarn.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-packages-managers/part-2-yarn.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-pnpm.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-packages-managers/part-3-pnpm.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-bun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-packages-managers/part-4-bun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-deno.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-packages-managers/part-5-deno.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-packages-managers/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── js-runtimes/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-runtimes/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-node.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-runtimes/part-1-node.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-deno.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-runtimes/part-2-deno.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-bun.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-runtimes/part-3-bun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/js-runtimes/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── machine-learning-libraries/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-libraries/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-tensorflow.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-libraries/part-1-tensorflow.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-pytorch.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-libraries/part-2-pytorch.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-scikit-learn.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-libraries/part-3-scikit-learn.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-onnx-runtime.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-libraries/part-4-onnx-runtime.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-jax.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-libraries/part-5-jax.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-libraries/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── machine-learning-supervised-regression/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-supervised-regression/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-linear-regression.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-supervised-regression/part-1-linear-regression.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-polynomial-regression.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-supervised-regression/part-2-polynomial-regression.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-decision-tree-regression.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-supervised-regression/part-3-decision-tree-regression.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-random-forest-regression.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-supervised-regression/part-4-random-forest-regression.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-gradient-boosting-regression.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-supervised-regression/part-5-gradient-boosting-regression.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-supervised-regression/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── machine-learning-types/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-types/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-supervised-machine-learning.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-types/part-1-supervised-machine-learning.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-unsupervised-machine-learning.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-types/part-2-unsupervised-machine-learning.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-semini-supervised-machine-learning.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-types/part-3-semini-supervised-machine-learning.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-reinforcement-learning.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-types/part-4-reinforcement-learning.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-self-supervised.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-types/part-5-self-supervised.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/machine-learning-types/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── my/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [my-data-science-kit.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/my/my-data-science-kit.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [my-dev-tools.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/my/my-dev-tools.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [my-languages.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/my/my-languages.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [my-profile.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/my/my-profile.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── operating-systems-linux/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/operating-systems-linux/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-ubuntu.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/operating-systems-linux/part-1-ubuntu.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-mint.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/operating-systems-linux/part-2-mint.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-arch.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/operating-systems-linux/part-3-arch.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-debian.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/operating-systems-linux/part-4-debian.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-fedora.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/operating-systems-linux/part-5-fedora.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/operating-systems-linux/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-database-orm/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-orm/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-prisma.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-orm/part-1-prisma.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-drizzle.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-orm/part-2-drizzle.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-typeorm.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-orm/part-3-typeorm.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-prisma-vs-drizzle.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-orm/part-4-prisma-vs-drizzle.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-prisma-vs-typeorm.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-orm/part-5-prisma-vs-typeorm.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-orm/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-database-paradigm-document/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-document/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-mongodb.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-document/part-1-mongodb.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-couchbase.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-document/part-2-couchbase.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-couchdb.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-document/part-3-couchdb.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-4-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-document/part-4-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-database-paradigm-key-value/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-key-value/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-redis.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-key-value/part-1-redis.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-valkey.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-key-value/part-2-valkey.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-memcached.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-key-value/part-3-memcached.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-4-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-key-value/part-4-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-database-paradigm-relational/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-relational/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-postgresql.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-relational/part-1-postgresql.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-mysql.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-relational/part-2-mysql.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-mariadb.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-relational/part-3-mariadb.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-sqlite.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-relational/part-4-sqlite.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-cockroachdb.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-relational/part-5-cockroachdb.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-relational/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-database-paradigm-search-engine/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-search-engine/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-elasticsearch.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-search-engine/part-1-elasticsearch.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-opensearch.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-search-engine/part-2-opensearch.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-solr.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-search-engine/part-3-solr.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-meilisearch.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-search-engine/part-4-meilisearch.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-typesense.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-search-engine/part-5-typesense.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-search-engine/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-database-paradigm-wide-column/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-wide-column/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-cassandra.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-wide-column/part-1-cassandra.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-hbase.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-wide-column/part-2-hbase.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-accumulo.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-wide-column/part-3-accumulo.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-4-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigm-wide-column/part-4-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-database-paradigms/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigms/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-key-value.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigms/part-1-key-value.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-wide-columns.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigms/part-2-wide-columns.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-document.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigms/part-3-document.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-relational.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigms/part-4-relational.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-graph.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigms/part-5-graph.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-search-engine.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-database-paradigms/part-6-search-engine.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-for-front-end-frameworks/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-for-front-end-frameworks/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-graphql.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-for-front-end-frameworks/part-1-graphql.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-trpc.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-for-front-end-frameworks/part-2-trpc.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-express.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-for-front-end-frameworks/part-3-express.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-nest.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-for-front-end-frameworks/part-4-nest.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-hono.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-for-front-end-frameworks/part-5-hono.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-for-front-end-frameworks/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-back-end-messages-brokers/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-messages-brokers/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-kafka.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-messages-brokers/part-1-kafka.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-rabbit-mq.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-messages-brokers/part-2-rabbit-mq.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-rabbit-mq.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-messages-brokers/part-3-rabbit-mq.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-4-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-back-end-messages-brokers/part-4-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-front-end-hybrid-desktop-frameworks/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-desktop-frameworks/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-electron.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-desktop-frameworks/part-1-electron.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-wails.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-desktop-frameworks/part-2-wails.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-tauri.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-desktop-frameworks/part-3-tauri.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-deno-desktop.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-desktop-frameworks/part-4-deno-desktop.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-desktop-frameworks/part-5.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-desktop-frameworks/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-front-end-hybrid-mobile-frameworks/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-mobile-frameworks/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-react-native.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-mobile-frameworks/part-1-react-native.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-expo.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-mobile-frameworks/part-2-expo.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-ionic.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-mobile-frameworks/part-3-ionic.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-capacitor.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-mobile-frameworks/part-4-capacitor.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-lynx.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-mobile-frameworks/part-5-lynx.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-hybrid-mobile-frameworks/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-front-end-web-client-framework-react-advanced/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-advanced/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-context.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-advanced/part-1-context.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-performance.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-advanced/part-2-performance.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-client-vs-server.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-advanced/part-3-client-vs-server.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-advanced/part-4.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-advanced/part-5.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-advanced/part-6.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-front-end-web-client-framework-react-basics/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-basics/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-component.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-basics/part-1-component.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-props-vs-state.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-basics/part-2-props-vs-state.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-hooks.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-basics/part-3-hooks.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-virtual-dom.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-basics/part-4-virtual-dom.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-basics/part-5.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-framework-react-basics/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-front-end-web-client-frameworks/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-frameworks/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-react.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-frameworks/part-1-react.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-angular.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-frameworks/part-2-angular.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-vue.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-frameworks/part-3-vue.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-svelte.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-frameworks/part-4-svelte.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-solid.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-frameworks/part-5-solid.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-client-frameworks/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-front-end-web-meta-frameworks/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-meta-frameworks/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-next.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-meta-frameworks/part-1-next.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-angular-ssr.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-meta-frameworks/part-2-angular-ssr.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-nuxt.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-meta-frameworks/part-3-nuxt.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-svelte-kit.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-meta-frameworks/part-4-svelte-kit.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-solid-start.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-meta-frameworks/part-5-solid-start.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-meta-frameworks/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-front-end-web-static-frameworks/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-0-agenda.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-static-frameworks/part-0-agenda.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-1-astro.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-static-frameworks/part-1-astro.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-2-docusaurus.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-static-frameworks/part-2-docusaurus.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-3-gatsby.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-static-frameworks/part-3-gatsby.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-4-starlight.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-static-frameworks/part-4-starlight.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [part-5-gitbook.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-static-frameworks/part-5-gitbook.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [part-6-closing.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-front-end-web-static-frameworks/part-6-closing.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── software-interviews/
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [ai-markdown.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-interviews/ai-markdown.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [api-idempotency.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-interviews/api-idempotency.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   ├── [hydration.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-interviews/hydration.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   │   └── [markdown-files.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-interviews/markdown-files.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── software-news/
-│   │   │   │   │   │   │   │   │   │   │   │   │       ├── [bun-zig-to-rust.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-news/bun-zig-to-rust.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       ├── [claude-google-leak.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-news/claude-google-leak.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       ├── [github-stacked-pr.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-news/github-stacked-pr.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       ├── [kimi-k3.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-news/kimi-k3.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       ├── [openai-hugging-face-hacking.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-news/openai-hugging-face-hacking.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   │       └── [typescript-7.yaml](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/next/software-news/typescript-7.yaml)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [README.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/README.md)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [TREE.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/posts/TREE.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/Ship/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── VibeSlotCode/
-│   │   │   │   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [Header.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/components/Header.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [ReelBox.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/components/ReelBox.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [ReelGrid.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/components/ReelGrid.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [SpinButton.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/components/SpinButton.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [convert-csv-to-json.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/data/scripts/convert-csv-to-json.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [convert-projects-to-json.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/data/scripts/convert-projects-to-json.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/data/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [projects.csv](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/data/projects.csv)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [projects.json](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/data/projects.json)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [stacks.csv](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/data/stacks.csv)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [stacks.json](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/data/stacks.json)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/VibeSlotCode/index.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── WeirdSearch/
-│   │   │   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [convert-txt-to-json.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/WeirdSearch/data/scripts/convert-txt-to-json.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/WeirdSearch/data/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [howToContent.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/WeirdSearch/data/howToContent.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [queries.json](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/WeirdSearch/data/queries.json)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [queries.txt](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/WeirdSearch/data/queries.txt)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/WeirdSearch/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/WeirdSearch/index.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── _shared/
-│   │   │   │   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [HowToModal.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/components/HowToModal.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [ItemSelect.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/components/ItemSelect.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [RecordSpin.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/components/RecordSpin.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Reel.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/components/Reel.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [useReelRecorder.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/hooks/useReelRecorder.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [useTopicPicker.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/hooks/useTopicPicker.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [convert-csv-to-json.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/scripts/convert-csv-to-json.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [generate-build-data.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/scripts/generate-build-data.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [get-categories.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/scripts/get-categories.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [get-niches.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/scripts/get-niches.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [get-topics.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/scripts/get-topics.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/_shared/types.ts)
-│   │   │   │   │   │   │   │   │   │   └── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/bored/AGENTS.md)
-│   │   │   │   │   │   │   │   │   ├── calculator/
-│   │   │   │   │   │   │   │   │   │   ├── Calculator/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Calculator.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Calculator/__tests__/Calculator.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Calculator/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [convert.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Calculator/convert.ts)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Calculator/index.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── Inflation/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [Inflation.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Inflation/__tests__/Inflation.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [calculate.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Inflation/__tests__/calculate.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [constants.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Inflation/__tests__/constants.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [calculate.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Inflation/utils/calculate.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Inflation/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Inflation/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Inflation/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/Inflation/types.ts)
-│   │   │   │   │   │   │   │   │   │   └── SplitBill/
-│   │   │   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │   │   │       │   ├── [SplitBill.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/SplitBill/__tests__/SplitBill.test.tsx)
-│   │   │   │   │   │   │   │   │   │       │   └── [calculate.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/SplitBill/__tests__/calculate.test.ts)
-│   │   │   │   │   │   │   │   │   │       ├── utils/
-│   │   │   │   │   │   │   │   │   │       │   └── [calculate.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/SplitBill/utils/calculate.ts)
-│   │   │   │   │   │   │   │   │   │       ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/SplitBill/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │       ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/SplitBill/constants.ts)
-│   │   │   │   │   │   │   │   │   │       ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/SplitBill/index.tsx)
-│   │   │   │   │   │   │   │   │   │       └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/calculator/SplitBill/types.ts)
-│   │   │   │   │   │   │   │   │   ├── clocks/
-│   │   │   │   │   │   │   │   │   │   ├── Cron/
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [format.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/Cron/utils/__tests__/format.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [format.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/Cron/utils/format.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [parser.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/Cron/utils/parser.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/Cron/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/Cron/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/Cron/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/Cron/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── EpochConvert/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/EpochConvert/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/EpochConvert/index.tsx)
-│   │   │   │   │   │   │   │   │   │   └── __tests__/
-│   │   │   │   │   │   │   │   │   │       └── [Cron.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/clocks/__tests__/Cron.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   │   │   │   │   │   └── [convert-csv-to-json.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data/scripts/convert-csv-to-json.ts)
-│   │   │   │   │   │   │   │   │   │   ├── [apps.csv](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data/apps.csv)
-│   │   │   │   │   │   │   │   │   │   ├── [apps.json](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data/apps.json)
-│   │   │   │   │   │   │   │   │   │   └── [apps.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data/apps.ts)
-│   │   │   │   │   │   │   │   │   ├── data-excel/
-│   │   │   │   │   │   │   │   │   │   ├── ExcelToPdf/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/ExcelToPdf/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/ExcelToPdf/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/ExcelToPdf/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── ExcelToXml/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/ExcelToXml/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/ExcelToXml/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/ExcelToXml/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── SplitExcel/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/SplitExcel/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/SplitExcel/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/SplitExcel/utils.ts)
-│   │   │   │   │   │   │   │   │   │   └── __tests__/
-│   │   │   │   │   │   │   │   │   │       ├── [ExcelToPdf.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/__tests__/ExcelToPdf.test.tsx)
-│   │   │   │   │   │   │   │   │   │       ├── [ExcelToXml.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/__tests__/ExcelToXml.test.tsx)
-│   │   │   │   │   │   │   │   │   │       └── [SplitExcel.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-excel/__tests__/SplitExcel.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── data-xml/
-│   │   │   │   │   │   │   │   │   │   ├── JsonToXml/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/JsonToXml/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/JsonToXml/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/JsonToXml/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── XmlToExcel/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/XmlToExcel/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/XmlToExcel/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/XmlToExcel/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── XmlToJson/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/XmlToJson/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/XmlToJson/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/XmlToJson/utils.ts)
-│   │   │   │   │   │   │   │   │   │   └── __tests__/
-│   │   │   │   │   │   │   │   │   │       ├── [JsonToXml.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/__tests__/JsonToXml.test.tsx)
-│   │   │   │   │   │   │   │   │   │       ├── [XmlToExcel.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/__tests__/XmlToExcel.test.tsx)
-│   │   │   │   │   │   │   │   │   │       ├── [XmlToJson.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/__tests__/XmlToJson.test.tsx)
-│   │   │   │   │   │   │   │   │   │       └── [utils.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/data-xml/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── developer/
-│   │   │   │   │   │   │   │   │   │   ├── Figlet/
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [render.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Figlet/utils/__tests__/render.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [render.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Figlet/utils/render.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Figlet/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Figlet/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Figlet/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Figlet/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── OpenAPI2Postman/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [OpenAPI2Postman.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/__tests__/OpenAPI2Postman.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [converter.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/__tests__/converter.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [lineCount.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/__tests__/lineCount.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [schemaHelpers.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/__tests__/schemaHelpers.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [yamlParser.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/__tests__/yamlParser.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [converter.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/utils/converter.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [schemaHelpers.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/utils/schemaHelpers.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [yamlParser.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/utils/yamlParser.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/OpenAPI2Postman/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Proxy/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Proxy/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Proxy/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/Proxy/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── TextDiff/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/TextDiff/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/TextDiff/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/TextDiff/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── TextUrlTracer/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/TextUrlTracer/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/TextUrlTracer/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/TextUrlTracer/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── UUID/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/UUID/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/UUID/index.tsx)
-│   │   │   │   │   │   │   │   │   │   └── __tests__/
-│   │   │   │   │   │   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │       │   ├── [Figlet.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/__tests__/__snapshots__/Figlet.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │       │   ├── [OpenAPI2Postman.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/__tests__/__snapshots__/OpenAPI2Postman.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │       │   ├── [Proxy.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/__tests__/__snapshots__/Proxy.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │       │   └── [UUID.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/__tests__/__snapshots__/UUID.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │       ├── [Figlet.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/__tests__/Figlet.test.tsx)
-│   │   │   │   │   │   │   │   │   │       ├── [OpenAPI2Postman.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/__tests__/OpenAPI2Postman.test.tsx)
-│   │   │   │   │   │   │   │   │   │       ├── [Proxy.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/__tests__/Proxy.test.tsx)
-│   │   │   │   │   │   │   │   │   │       └── [UUID.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/developer/__tests__/UUID.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── editors/
-│   │   │   │   │   │   │   │   │   │   ├── JSONSchema/
-│   │   │   │   │   │   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [useCodeMirror.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/JSONSchema/hooks/__tests__/useCodeMirror.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [useCodeMirror.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/JSONSchema/hooks/useCodeMirror.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/JSONSchema/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/JSONSchema/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/JSONSchema/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/JSONSchema/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Manifest/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Manifest/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Manifest/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Manifest/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Regex/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Regex.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Regex/__tests__/Regex.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [regex.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Regex/utils/__tests__/regex.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [regex.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Regex/utils/regex.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Regex/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Regex/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Regex/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Slides/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Slides.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/__tests__/Slides.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [CenterBlock.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/__tests__/CenterBlock.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [LandingPage.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/__tests__/LandingPage.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [SlidePreview.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/__tests__/SlidePreview.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [YamlEditor.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/__tests__/YamlEditor.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [CenterBlock.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/CenterBlock.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [LandingPage.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/LandingPage.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [SlidePreview.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/SlidePreview.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [TextBlock.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/TextBlock.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [YamlEditor.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/components/YamlEditor.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [useToast.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/hooks/__tests__/useToast.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [useToast.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/hooks/useToast.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [colors.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/utils/__tests__/colors.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [exportPdf.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/utils/__tests__/exportPdf.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   │   ├── [formatCurrency.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/utils/__tests__/formatCurrency.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [yaml.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/utils/__tests__/yaml.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [colors.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/utils/colors.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [exportPdf.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/utils/exportPdf.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [formatCurrency.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/utils/formatCurrency.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [yaml.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/utils/yaml.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/Slides/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [JSONSchema.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/__tests__/__snapshots__/JSONSchema.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Manifest.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/__tests__/__snapshots__/Manifest.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [JSONSchema.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/__tests__/JSONSchema.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [Manifest.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/__tests__/Manifest.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── data/
-│   │   │   │   │   │   │   │   │   │       └── manifest/
-│   │   │   │   │   │   │   │   │   │           ├── [extension.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/data/manifest/extension.ts)
-│   │   │   │   │   │   │   │   │   │           └── [pwa.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/editors/data/manifest/pwa.ts)
-│   │   │   │   │   │   │   │   │   ├── trivia/
-│   │   │   │   │   │   │   │   │   │   ├── Palindrome/
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [puzzle.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Palindrome/utils/__tests__/puzzle.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [puzzle.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Palindrome/utils/puzzle.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Palindrome/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Palindrome/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Palindrome/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Palindrome/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Pokedex/
-│   │   │   │   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [PokemonDetail.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/components/__tests__/PokemonDetail.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [PokemonDetail.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/components/PokemonDetail.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [pokedex.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/data/pokedex.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [search.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/utils/__tests__/search.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [search.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/utils/search.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Pokedex/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Quizify/
-│   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Quizify.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Quizify/__tests__/Quizify.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [quiz.test.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Quizify/utils/__tests__/quiz.test.ts)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [quiz.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Quizify/utils/quiz.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Quizify/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Quizify/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/Quizify/types.ts)
-│   │   │   │   │   │   │   │   │   │   └── __tests__/
-│   │   │   │   │   │   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │       │   ├── [Palindrome.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/__tests__/__snapshots__/Palindrome.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │       │   └── [Pokedex.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/__tests__/__snapshots__/Pokedex.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │       ├── [Palindrome.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/__tests__/Palindrome.test.tsx)
-│   │   │   │   │   │   │   │   │   │       └── [Pokedex.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/trivia/__tests__/Pokedex.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── utilities/
-│   │   │   │   │   │   │   │   │   │   ├── CreateZip/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/CreateZip/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/CreateZip/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/CreateZip/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Emojis/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Emojis/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Emojis/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Emojis/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Legislation/
-│   │   │   │   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   │   │   └── [Hemicycle.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Legislation/components/__tests__/Hemicycle.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Hemicycle.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Legislation/components/Hemicycle.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Legislation/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Legislation/constants.ts)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Legislation/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [types.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Legislation/types.ts)
-│   │   │   │   │   │   │   │   │   │   ├── LoremIpsum/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/LoremIpsum/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/LoremIpsum/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/LoremIpsum/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── NoSleep/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/NoSleep/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/NoSleep/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/NoSleep/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── ScreenRecorder/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/ScreenRecorder/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/ScreenRecorder/index.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Emojis.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/__snapshots__/Emojis.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Emojis.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/Emojis.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Legislation.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/Legislation.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [LoremIpsum.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/LoremIpsum.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [NoSleep.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/NoSleep.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── data/
-│   │   │   │   │   │   │   │   │   │       └── [emojis.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/data/emojis.ts)
-│   │   │   │   │   │   │   │   │   └── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/AGENTS.md)
-│   │   │   │   │   │   │   │   ├── resume/
-│   │   │   │   │   │   │   │   │   ├── [Sections.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/resume/Sections.tsx)
-│   │   │   │   │   │   │   │   │   ├── [data.ts](./packages/app/hybrid/utilities/docs/src/components/routes/resume/data.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/resume/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [periods.ts](./packages/app/hybrid/utilities/docs/src/components/routes/resume/periods.ts)
-│   │   │   │   │   │   │   │   │   └── [projects.ts](./packages/app/hybrid/utilities/docs/src/components/routes/resume/projects.ts)
-│   │   │   │   │   │   │   │   ├── settings/
-│   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/settings/index.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/version/index.tsx)
-│   │   │   │   │   │   │   └── templates/
-│   │   │   │   │   │   │       ├── app/
-│   │   │   │   │   │   │       │   ├── AppsStoreTemplate/
-│   │   │   │   │   │   │       │   │   ├── __tests__/
-│   │   │   │   │   │   │       │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │       │   │   │   │   └── [AppsStoreTemplate.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/templates/app/AppsStoreTemplate/__tests__/__snapshots__/AppsStoreTemplate.test.tsx.snap)
-│   │   │   │   │   │   │       │   │   │   └── [AppsStoreTemplate.test.tsx](./packages/app/hybrid/utilities/docs/src/components/templates/app/AppsStoreTemplate/__tests__/AppsStoreTemplate.test.tsx)
-│   │   │   │   │   │   │       │   │   ├── [AppsStoreTemplate.tsx](./packages/app/hybrid/utilities/docs/src/components/templates/app/AppsStoreTemplate/AppsStoreTemplate.tsx)
-│   │   │   │   │   │   │       │   │   └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/templates/app/AppsStoreTemplate/index.ts)
-│   │   │   │   │   │   │       │   ├── SettingsTemplate/
-│   │   │   │   │   │   │       │   │   ├── [SettingsTemplate.tsx](./packages/app/hybrid/utilities/docs/src/components/templates/app/SettingsTemplate/SettingsTemplate.tsx)
-│   │   │   │   │   │   │       │   │   └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/templates/app/SettingsTemplate/index.ts)
-│   │   │   │   │   │   │       │   └── VersionTemplate/
-│   │   │   │   │   │   │       │       ├── __tests__/
-│   │   │   │   │   │   │       │       │   ├── __snapshots__/
-│   │   │   │   │   │   │       │       │   │   └── [VersionTemplate.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/templates/app/VersionTemplate/__tests__/__snapshots__/VersionTemplate.test.tsx.snap)
-│   │   │   │   │   │   │       │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/utilities/docs/src/components/templates/app/VersionTemplate/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │       │       ├── [VersionTemplate.tsx](./packages/app/hybrid/utilities/docs/src/components/templates/app/VersionTemplate/VersionTemplate.tsx)
-│   │   │   │   │   │   │       │       └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/templates/app/VersionTemplate/index.ts)
-│   │   │   │   │   │   │       └── shared/
-│   │   │   │   │   │   │           ├── ErrorTemplate/
-│   │   │   │   │   │   │           │   ├── __tests__/
-│   │   │   │   │   │   │           │   │   ├── __snapshots__/
-│   │   │   │   │   │   │           │   │   │   └── [ErrorTemplate.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/templates/shared/ErrorTemplate/__tests__/__snapshots__/ErrorTemplate.test.tsx.snap)
-│   │   │   │   │   │   │           │   │   └── [ErrorTemplate.test.tsx](./packages/app/hybrid/utilities/docs/src/components/templates/shared/ErrorTemplate/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │           │   ├── [ErrorTemplate.tsx](./packages/app/hybrid/utilities/docs/src/components/templates/shared/ErrorTemplate/ErrorTemplate.tsx)
-│   │   │   │   │   │   │           │   └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/templates/shared/ErrorTemplate/index.ts)
-│   │   │   │   │   │   │           └── HeadTemplate/
-│   │   │   │   │   │   │               ├── [HeadTemplate.tsx](./packages/app/hybrid/utilities/docs/src/components/templates/shared/HeadTemplate/HeadTemplate.tsx)
-│   │   │   │   │   │   │               └── [index.ts](./packages/app/hybrid/utilities/docs/src/components/templates/shared/HeadTemplate/index.ts)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/utilities/docs/src/content/version.ts)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── calendar/
-│   │   │   │   │   │   │   │   ├── [events.ts](./packages/app/hybrid/utilities/docs/src/data/calendar/events.ts)
-│   │   │   │   │   │   │   │   ├── [months.ts](./packages/app/hybrid/utilities/docs/src/data/calendar/months.ts)
-│   │   │   │   │   │   │   │   └── [years.ts](./packages/app/hybrid/utilities/docs/src/data/calendar/years.ts)
-│   │   │   │   │   │   │   ├── chess/
-│   │   │   │   │   │   │   │   └── [openings.ts](./packages/app/hybrid/utilities/docs/src/data/chess/openings.ts)
-│   │   │   │   │   │   │   ├── [blog.ts](./packages/app/hybrid/utilities/docs/src/data/blog.ts)
-│   │   │   │   │   │   │   ├── [countries.ts](./packages/app/hybrid/utilities/docs/src/data/countries.ts)
-│   │   │   │   │   │   │   ├── [currencies.ts](./packages/app/hybrid/utilities/docs/src/data/currencies.ts)
-│   │   │   │   │   │   │   ├── [models.ts](./packages/app/hybrid/utilities/docs/src/data/models.ts)
-│   │   │   │   │   │   │   ├── [timezones.ts](./packages/app/hybrid/utilities/docs/src/data/timezones.ts)
-│   │   │   │   │   │   │   └── [weather.ts](./packages/app/hybrid/utilities/docs/src/data/weather.ts)
-│   │   │   │   │   │   ├── examples/
-│   │   │   │   │   │   │   └── [example.yaml](./packages/app/hybrid/utilities/docs/src/examples/example.yaml)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   └── [useSWRegister.ts](./packages/app/hybrid/utilities/docs/src/hooks/useSWRegister.ts)
-│   │   │   │   │   │   ├── json/
-│   │   │   │   │   │   │   ├── inflation/
-│   │   │   │   │   │   │   │   ├── [countries_currencies.json](./packages/app/hybrid/utilities/docs/src/json/inflation/countries_currencies.json)
-│   │   │   │   │   │   │   │   ├── [currencies.json](./packages/app/hybrid/utilities/docs/src/json/inflation/currencies.json)
-│   │   │   │   │   │   │   │   └── [history.json](./packages/app/hybrid/utilities/docs/src/json/inflation/history.json)
-│   │   │   │   │   │   │   ├── palindrome/
-│   │   │   │   │   │   │   │   ├── [emordnilap.json](./packages/app/hybrid/utilities/docs/src/json/palindrome/emordnilap.json)
-│   │   │   │   │   │   │   │   └── [palindrome.json](./packages/app/hybrid/utilities/docs/src/json/palindrome/palindrome.json)
-│   │   │   │   │   │   │   ├── [currency.json](./packages/app/hybrid/utilities/docs/src/json/currency.json)
-│   │   │   │   │   │   │   └── [words.json](./packages/app/hybrid/utilities/docs/src/json/words.json)
-│   │   │   │   │   │   ├── middlewares/
-│   │   │   │   │   │   │   └── [rate-limit.ts](./packages/app/hybrid/utilities/docs/src/middlewares/rate-limit.ts)
-│   │   │   │   │   │   ├── services/
-│   │   │   │   │   │   │   ├── wordsapi.com/
-│   │   │   │   │   │   │   │   └── [wordsapi.client.ts](./packages/app/hybrid/utilities/docs/src/services/wordsapi.com/wordsapi.client.ts)
-│   │   │   │   │   │   │   └── yaml2pdfmake/
-│   │   │   │   │   │   │       ├── [index.ts](./packages/app/hybrid/utilities/docs/src/services/yaml2pdfmake/index.ts)
-│   │   │   │   │   │   │       ├── [pdf.types.ts](./packages/app/hybrid/utilities/docs/src/services/yaml2pdfmake/pdf.types.ts)
-│   │   │   │   │   │   │       ├── [resume.types.ts](./packages/app/hybrid/utilities/docs/src/services/yaml2pdfmake/resume.types.ts)
-│   │   │   │   │   │   │       └── [yaml2pdfmake.service.ts](./packages/app/hybrid/utilities/docs/src/services/yaml2pdfmake/yaml2pdfmake.service.ts)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/utilities/docs/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/utilities/docs/src/styles/themes.css)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   └── [canvas.ts](./packages/app/hybrid/utilities/docs/src/utils/canvas.ts)
-│   │   │   │   │   │   └── [global.d.ts](./packages/app/hybrid/utilities/docs/src/global.d.ts)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/utilities/docs/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/utilities/docs/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/utilities/docs/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/utilities/docs/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/utilities/docs/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/utilities/docs/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/utilities/docs/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/utilities/docs/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/utilities/docs/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/utilities/docs/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/utilities/docs/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/utilities/docs/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/utilities/docs/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/utilities/docs/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/utilities/docs/README.md)
-│   │   │   │   │   ├── [TREE.md](./packages/app/hybrid/utilities/docs/TREE.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/utilities/docs/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/utilities/docs/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/utilities/docs/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/utilities/docs/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/utilities/docs/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/utilities/docs/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/utilities/docs/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/utilities/docs/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/utilities/docs/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/utilities/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/utilities/TREE.md)
 │   │   │   ├── [README.md](./packages/app/hybrid/README.md)
@@ -23879,14 +20869,9 @@
 │   │   │   │   │   │   │       └── resources/
 │   │   │   │   │   │   │           └── [robolectric.properties](./packages/app/native/androidx/android/app/src/test/resources/robolectric.properties)
 │   │   │   │   │   │   ├── [build.gradle.kts](./packages/app/native/androidx/android/app/build.gradle.kts)
+│   │   │   │   │   │   ├── [gradle.lockfile](./packages/app/native/androidx/android/app/gradle.lockfile)
 │   │   │   │   │   │   ├── [lint.xml](./packages/app/native/androidx/android/app/lint.xml)
 │   │   │   │   │   │   └── [proguard-rules.pro](./packages/app/native/androidx/android/app/proguard-rules.pro)
-│   │   │   │   │   ├── docs/
-│   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/native/androidx/android/docs/ARCHITECTURE.md)
-│   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/native/androidx/android/docs/CONTRIBUTING.md)
-│   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/native/androidx/android/docs/DOWNLOADS.md)
-│   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/native/androidx/android/docs/PACKAGING.md)
-│   │   │   │   │   │   └── [ROADMAP.md](./packages/app/native/androidx/android/docs/ROADMAP.md)
 │   │   │   │   │   ├── gradle/
 │   │   │   │   │   │   └── wrapper/
 │   │   │   │   │   │       ├── [gradle-wrapper.jar](./packages/app/native/androidx/android/gradle/wrapper/gradle-wrapper.jar)
@@ -25015,6 +22000,9 @@
 │   │   │   │   │   │           ├── [tamara-swaab.md](./packages/data/uob/research-project/projects/data/md/supervisors/tamara-swaab.md)
 │   │   │   │   │   │           └── [wieske-van-zoest.md](./packages/data/uob/research-project/projects/data/md/supervisors/wieske-van-zoest.md)
 │   │   │   │   │   ├── notes/
+│   │   │   │   │   │   ├── [project-07-questions.md](./packages/data/uob/research-project/projects/notes/project-07-questions.md)
+│   │   │   │   │   │   ├── [project-40-questions.md](./packages/data/uob/research-project/projects/notes/project-40-questions.md)
+│   │   │   │   │   │   ├── [project-50-questions.md](./packages/data/uob/research-project/projects/notes/project-50-questions.md)
 │   │   │   │   │   │   └── [top-10.md](./packages/data/uob/research-project/projects/notes/top-10.md)
 │   │   │   │   │   ├── public/
 │   │   │   │   │   │   ├── [index.html](./packages/data/uob/research-project/projects/public/index.html)
@@ -25501,19 +22489,10 @@
 │   │   │   │   ├── research-methods-and-skills-in-psychology/
 │   │   │   │   │   ├── assignments/
 │   │   │   │   │   │   ├── research-methods-summary/
-│   │   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   │   ├── [criteria.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/docs/criteria.md)
-│   │   │   │   │   │   │   │   ├── [requirements.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/docs/requirements.md)
-│   │   │   │   │   │   │   │   └── [submission-and-genai-form.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/docs/submission-and-genai-form.md)
 │   │   │   │   │   │   │   ├── [bibliography.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/bibliography.md)
 │   │   │   │   │   │   │   ├── [draft.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/draft.md)
 │   │   │   │   │   │   │   └── [outline.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-methods-summary/outline.md)
 │   │   │   │   │   │   └── research-practical-report/
-│   │   │   │   │   │       ├── docs/
-│   │   │   │   │   │       │   ├── [assessment-brief.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/docs/assessment-brief.md)
-│   │   │   │   │   │       │   ├── [ddm-paper-reading-guide.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/docs/ddm-paper-reading-guide.md)
-│   │   │   │   │   │       │   ├── [genai-form.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/docs/genai-form.md)
-│   │   │   │   │   │       │   └── [marking-criteria.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/docs/marking-criteria.md)
 │   │   │   │   │   │       ├── [bibliography.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/bibliography.md)
 │   │   │   │   │   │       ├── [draft.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/draft.md)
 │   │   │   │   │   │       └── [outline.md](./packages/data/uob/sem-01/research-methods-and-skills-in-psychology/assignments/research-practical-report/outline.md)
@@ -25585,12 +22564,6 @@
 │   ├── extensions/
 │   │   ├── browser/
 │   │   │   ├── browserx/
-│   │   │   │   ├── docs/
-│   │   │   │   │   ├── [ARCHITECTURE.md](./packages/extensions/browser/browserx/docs/ARCHITECTURE.md)
-│   │   │   │   │   ├── [CONTRIBUTING.md](./packages/extensions/browser/browserx/docs/CONTRIBUTING.md)
-│   │   │   │   │   ├── [DOWNLOADS.md](./packages/extensions/browser/browserx/docs/DOWNLOADS.md)
-│   │   │   │   │   ├── [PACKAGING.md](./packages/extensions/browser/browserx/docs/PACKAGING.md)
-│   │   │   │   │   └── [ROADMAP.md](./packages/extensions/browser/browserx/docs/ROADMAP.md)
 │   │   │   │   ├── public/
 │   │   │   │   │   ├── icons/
 │   │   │   │   │   │   ├── [128x128.png](./packages/extensions/browser/browserx/public/icons/128x128.png)
@@ -27074,6 +24047,7 @@
 ├── [LICENSE](./LICENSE)
 ├── [Makefile](./Makefile)
 ├── [README.md](./README.md)
+├── [RESUME.md](./RESUME.md)
 ├── [TODO.md](./TODO.md)
 ├── [TREE.md](./TREE.md)
 ├── [package.json](./package.json)
@@ -27083,4 +24057,4 @@
 └── [turbo.json](./turbo.json)
 ```
 
-5784 directories, 21296 files
+5217 directories, 18837 files

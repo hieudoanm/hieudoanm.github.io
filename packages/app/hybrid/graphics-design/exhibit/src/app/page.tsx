@@ -5,7 +5,9 @@ import { useState, type FC } from 'react';
 import {
   FiCoffee,
   FiCreditCard,
+  FiCpu,
   FiGrid,
+  FiImage,
   FiList,
   FiLock,
   FiMessageSquare,
@@ -77,6 +79,16 @@ const apps: App[] = [
     category: 'Social Networking',
   },
   {
+    id: 'ai',
+    name: 'AI Chat',
+    description:
+      'AI chat with model switching, system prompts, and streaming replies',
+    icon: <FiCpu className="size-8" />,
+    href: '/ai',
+    status: 'ready',
+    category: 'AI',
+  },
+  {
     id: 'password',
     name: 'Password',
     description:
@@ -93,6 +105,16 @@ const apps: App[] = [
       'Video toolbox with compress, trim, merge, crop, convert, and subtitles',
     icon: <FiVideo className="size-8" />,
     href: '/video',
+    status: 'ready',
+    category: 'Graphics Design',
+  },
+  {
+    id: 'gallery',
+    name: 'Gallery',
+    description:
+      'Mobile photo library with albums, search, favorites, and a viewer',
+    icon: <FiImage className="size-8" />,
+    href: '/gallery',
     status: 'ready',
     category: 'Graphics Design',
   },

@@ -77,7 +77,7 @@ func TestDefaultEmbedsTemplateAndAssets(t *testing.T) {
 		t.Fatalf("Default: %v", err)
 	}
 
-	for _, name := range []string{"styles.css", "script.js", "search.js", "favicon.svg"} {
+	for _, name := range []string{"styles.css", "script.js", "search.js", "favicon.ico"} {
 		file, err := selected.Assets().Open(name)
 		if err != nil {
 			t.Errorf("asset %s missing: %v", name, err)

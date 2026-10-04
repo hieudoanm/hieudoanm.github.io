@@ -27,7 +27,10 @@ Reference docs live in `docs/`:
 - `prettier-plugin-tailwindcss` for class sorting
 - Atomic design: atoms → games → templates
 - Each game is a self-contained folder under `src/games/`: `index.tsx` (UI) and
-  `utils.ts` (pure data + logic, zero UI imports)
+  `utils.ts` (pure data + logic, zero UI imports); a game with a state machine
+  or a loop also splits `use<Name>.ts` (state + timers, injectable clock) and
+  `constants.ts` (tunables) out, so the UI stays render-only and the loop is
+  testable without a canvas
 - Games are standalone — no `onClose` prop; pages render them directly
 - `/languages` is a language hub (Duolingo-style list); the flashcard deck lives
   at `/languages/[language]`, pre-rendered via `generateStaticParams`
@@ -144,6 +147,14 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
     decomposition
   - `/maths/kaprekar-constant` — Kaprekar constant routine
   - `/maths/prime-numbers` — sieve of Eratosthenes, prime gaps, twin primes
+  - `/maths/probability` — probability-theory note (migrated from the gambling
+    app); links ten casino simulations that make expected value, variance and
+    the gambler's fallacy concrete
+    - `/maths/probability/<game>` — `baccarat`, `card-counter`, `craps`,
+      `hi-lo`, `keno`, `over-under-seven`, `poker-odds`, `roulette`,
+      `slot-machine`, `war`; implementations live in
+      `src/games/stem/maths/probability/<game>/`, with card and dice primitives
+      shared under `probability/_shared/`
 - `/music` — ear-training game (migrated from the `music` app)
   - `/music/pitch` — pitch training
 - `/neuroscience` — neuroscience hub
@@ -185,14 +196,35 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
 - `/profile` — user profile
 - `/psychology` — psychology hub
   - `/psychology/<theory>` — theory: biology, cognitive, developmental, social
+  - `/psychology/<theory>/<topic>` — per-topic theory notes; `cognitive` covers
+    attention, learning, memory, perception, and reasoning, each backed by a
+    note in `src/notes/health/psychology/theory/cognitive/`
+  - `/psychology/<theory>/<topic>/<exercise>` — exercises as standalone
+    components under `src/games/health/psychology/<theory>/<topic>/`; the
+    cognitive memory drills are `memory-match`, `n-back`, `pi`, and `recall`,
+    the cognitive attention drills are `dino-run`, `rock-paper-scissors`, and
+    `snake`, and the cognitive reasoning drills are `lights-out`, `towers`,
+    `maze`, plus the abstract puzzles `game2048` and `sliding-puzzle`
+  - `/psychology/cognitive/reasoning/nikoli` — migrated from the `memory` app; a
+    hub of classic Japanese logic puzzles (`sudoku`, `nurikabe`, `masyu`,
+    `shikaku`, `fillomino`, `norinori`, `heyawake`) with implementations under
+    `src/games/health/psychology/cognitive/reasoning/nikoli/`
+  - `/psychology/cognitive/reasoning/tic-tac-toe` — migrated from the `memory`
+    app; a hub of six grid-duel variants (`classic`, `duck`, `notakto`,
+    `reverse`, `t3`, `wild`) with implementations under
+    `src/games/health/psychology/cognitive/reasoning/tic-tac-toe/`
+  - `/psychology/anxiety` — clinical note on anxiety; its screening instrument
+    is a nested descendant:
+    - `/psychology/anxiety/generalized-anxiety-disorder`
+  - `/psychology/depression` — clinical note on depression; its screening
+    instruments are nested descendants:
+    - `/psychology/depression/beck-depression-inventory`
+    - `/psychology/depression/patient-health-questionnaire`
   - `/psychology/<practice>` — practices: counselling, journaling, mindfulness
   - `/psychology/<scale>` — screening instruments, not diagnostics:
-    - beck-depression-inventory
     - big-five-inventory
     - dyadic-adjustment-scale
     - experiences-in-close-relationships
-    - generalized-anxiety-disorder
-    - patient-health-questionnaire
     - relationship-closeness-inventory
     - satisfaction-with-life
 - `/reset-password` — password reset

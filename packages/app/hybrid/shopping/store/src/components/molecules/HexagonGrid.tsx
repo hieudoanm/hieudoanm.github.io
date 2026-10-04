@@ -96,7 +96,7 @@ export const HexagonGrid: FC<HexagonGridProps> = ({ apps }) => {
                   </div>
                 </Link>
 
-                <div className="bg-base-100 text-base-content ring-base-300 pointer-events-none absolute top-0 left-1/2 z-30 -translate-x-1/2 -translate-y-full rounded-md px-2 py-1 text-xs font-medium whitespace-nowrap opacity-0 shadow-lg ring-1 transition-opacity group-hover:opacity-100">
+                <div className="bg-base-100 text-base-content ring-base-300 pointer-events-none absolute top-0 left-1/2 z-30 -translate-x-1/2 -translate-y-full rounded-md px-2 py-1 text-xs font-medium whitespace-nowrap opacity-0 ring-1 transition-opacity group-hover:opacity-100">
                   {app.label}
                 </div>
               </div>

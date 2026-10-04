@@ -1,0 +1,147 @@
+[project]
+name = "pipeline"
+version = "0.1.0"
+description = "Predicting post-stroke aphasia outcome from lesion MRI plus clinical data"
+readme = "README.md"
+# Pinned to the exact interpreter the lock was resolved for; the project targets
+# this one version only. ruff's target-version and pyright's pythonVersion below
+# match it so the source language level and the runtime agree.
+requires-python = "==3.14.8"
+dependencies = [
+    "typer==0.27.3",
+    "pydantic==2.14.0",
+    "pydantic-settings==2.15.0",
+    "pyyaml==6.0.3",
+    # Exact pins, like every other dependency. These are the newest releases and
+    # declare Python >=3.12, which the pinned interpreter above satisfies.
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "scikit-learn==1.9.1",
+    "scipy==1.18.1",
+    "statsmodels==0.15.0",
+    # scikit-learn 1.9.1 requires joblib>=1.4.0, so a lower bound is the real
+    # constraint; an exact pin below that makes the resolution unsatisfiable.
+    "joblib==1.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "ruff==0.16.10",
+    "pyright==1.1.414",
+]
+
+imaging = [
+    "nibabel==5.4.2",
+    "nilearn==0.14.1",
+    "SimpleITK==2.5.6",
+]
+
+ml = [
+    "torch==2.14.1",
+    "torchvision==0.29.1",
+    "timm==1.0.30",
+    "xgboost==3.4.1",
+]
+
+stats = [
+    "statsmodels==0.15.0",
+]
+
+explainability = [
+    "captum==0.9.0",
+]
+
+data = [
+    "openneuro-py==2026.9.1",
+    "pybids==0.22.0",
+]
+
+tracking = [
+    "mlflow==3.17.0",
+]
+
+storage = [
+    "pyarrow==25.0.1",
+    "duckdb==1.5.6",
+]
+
+all = [
+    "pipeline[imaging,ml,stats,explainability,data,tracking,storage]",
+]
+
+[project.scripts]
+pipeline = "pipeline.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = [
+    # Every remaining W293 sits inside a docstring or multi-line string, where
+    # stripping the whitespace would edit the string's contents. Ruff marks the
+    # fix unsafe for this reason.
+    "W293",
+    # `class ModelType(str, Enum)` is the deliberate config idiom here: these
+    # values round-trip through JSON/YAML. enum.StrEnum would change str().
+    "UP042",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# X, C, X_train and X_test are the scikit-learn naming convention, not sloppiness.
+"src/pipeline/core/baselines.py" = ["N803"]
+"src/pipeline/core/models.py" = ["N803"]
+
+[tool.pyright]
+pythonVersion = "3.14"
+# Without this pyright resolves imports against the ambient interpreter rather
+# than the project venv, so numpy/pandas/scikit-learn come back unresolved and
+# every value derived from them is reported as an unknown type.
+venvPath = "."
+venv = ".venv"
+# Strict stays on. Two groups of rules cannot pass here, both for the same
+# reason: the scientific stack ships no type information.
+#
+# reportUnknown*Type: numpy, scipy, scikit-learn and statsmodels are untyped at
+# their boundaries, so every value flowing out of them is "unknown" (e.g.
+# scipy's wilcoxon is typed `(x: Unknown, y: Unknown ...) -> _`).
+#
+# reportMissingTypeStubs: pandas 3.0.6, scipy, scikit-learn, statsmodels and
+# joblib ship no `py.typed`, so strict reports a bare "Stub file not found" for
+# each import and nothing downstream can be checked. `pandas-stubs` was tried
+# and rejected: it is stricter than the pandas 3.0 API this code uses and raised
+# the error count from 197 to 236, so installing it would mean rewriting correct
+# code to match stubs rather than fixing real defects.
+#
+# Everything else strict enforces stays on, so annotation, argument-type and
+# attribute-access regressions still fail the build.
+reportUnknownMemberType = "none"
+reportUnknownVariableType = "none"
+reportUnknownArgumentType = "none"
+reportUnknownParameterType = "none"
+reportMissingTypeStubs = "none"
+typeCheckingMode = "strict"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+pythonpath = ["src"]
+
+# uv sync --dev installs this group, so CI's `uv run ruff`/`uv run pyright`
+# resolve. Keep in step with the [project.optional-dependencies] dev extra.
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "ruff==0.16.10",
+    "pyright==1.1.414",
+]

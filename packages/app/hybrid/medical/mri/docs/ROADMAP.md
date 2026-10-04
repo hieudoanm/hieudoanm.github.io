@@ -1,171 +1,251 @@
-# MRI — Roadmap
+# Desktop Workbench Roadmap
 
-An MRI research workspace and orchestration layer: study intelligence,
-quantitative analysis, pipelines, and reproducible research workflows. One
-Next.js codebase (static export) shipped as a web app, desktop app (Tauri), and
-mobile app (Tauri Mobile).
+Project: local-first workbench for the post-stroke aphasia prediction pipeline.
+Stack: Tauri 2 + Next.js (static export) + TypeScript + Rust. Status: v0.2,
+2026-10-05. Companion document: `pipeline/docs/ROADMAP.md` (the pipeline this
+app drives).
 
----
-
-## Table of Contents
-
-- [MRI — Roadmap](#mri--roadmap)
-  - [Table of Contents](#table-of-contents)
-  - [Techstack](#techstack)
-  - [Phase 0 — Foundations](#phase-0--foundations)
-  - [Phase 1 — Foundation](#phase-1--foundation)
-  - [Phase 2 — MRI Intelligence](#phase-2--mri-intelligence)
-  - [Phase 3 — Research Workflow](#phase-3--research-workflow)
-  - [Phase 4 — AI](#phase-4--ai)
-  - [Phase 5 — Advanced](#phase-5--advanced)
-  - [Decisions](#decisions)
+The workbench is a **client**, never a second implementation of the science. It
+reads run folders, launches runs the CLI supports, streams events, compares runs
+and exports results. Every phase below is marked with what actually exists in
+the repository.
 
 ---
 
-## Techstack
+## 1. Purpose
 
-1. UI: Next.js (`output: 'export'`), React, TailwindCSS + DaisyUI
-2. Shell: Tauri 2 (desktop: macOS/Windows/Linux, mobile: iOS/Android)
-3. Core: Rust owns filesystem, database, process management, background jobs,
-   pipeline engine, and security boundaries; the UI never executes native
-   commands directly
-4. Scientific tools: dcm2niix, ANTs, FSL/MRtrix, MONAI/PyTorch, qMRLab invoked
-   through a controlled Rust process manager — orchestrated, not reimplemented
-5. Storage: local embedded database for metadata + references; volumes stay on
-   disk addressed via logical IDs (`dataset://`, `series://`, `artifact://`)
-6. Package: self-contained `@hieudoanm.github.io/mri` app under
-   `packages/app/hybrid/medical/mri`
+A local-first desktop workbench to browse data, launch pipeline runs, compare
+experiments, inspect generated artefacts, and export dissertation-ready tables.
 
----
+It is a thin client:
 
-## Phase 0 — Foundations
+- it never trains models,
+- it never re-implements pipeline logic,
+- it works on finished run folders even when no Python process is running.
 
-1. [x] Monorepo scaffold (app under `packages/app/hybrid/medical/mri`)
-2. [x] Next.js static export config validated against Tauri's `dist`
-       expectations
-3. [ ] Tauri desktop shell boots and loads the exported Next.js build
-4. [ ] Tauri Mobile (iOS + Android) boots the same build
-5. [x] Shared design system: DaisyUI theme, base layout, navigation shell
-6. [x] CI: lint, typecheck, build web export, build Tauri desktop artifact
+## 2. Non-goals
 
----
+- Clinical decision support or any clinical claim. The app states that it is a
+  research prototype.
+- Uploading patient data anywhere. Everything stays on the local machine.
+- User accounts or authentication.
+- Editing or running arbitrary code.
+- In-app training logic.
+- A general DICOM/NIfTI viewer. The pipeline produces images as artefacts; the
+  app lists them, opens the text ones, and leaves volume rendering out.
 
-## Phase 1 — Foundation
+## 3. Principles
 
-> Core data plane: import, browse, inspect, view, and trace provenance
+- Files first: the app reads run folders directly. Starting processes is a
+  separate, optional capability that is offered only when the CLI advertises it.
+- The contract is files + JSON Lines + JSON Schema, nothing else.
+- Least privilege: filesystem access is scoped to the project folder, and only
+  the pipeline interpreter may be spawned.
+- Works offline.
+- Fail with a clear message: unknown schema versions, missing environments,
+  missing commands and missing files each get a readable explanation.
 
-1. [x] Workspace: local project container with dataset management (import,
-       organize, search)
-2. [x] DICOM import: files and series with full metadata preservation (no
-       silently discarded tags)
-3. [x] DICOMweb (QIDO-RS/WADO-RS/STOW-RS)
-4. [x] NIfTI support with header inspection
-5. [x] Filesystem abstraction: logical IDs (`dataset://`, `series://`,
-       `artifact://`) over local/mounted storage
-6. [x] Local embedded database for metadata and references — no volumes in the
-       relational store
-7. [x] MRI study browser organized around studies, series, acquisitions
-8. [x] Metadata viewer: original tags alongside normalized concepts
-9. [x] Basic 2D slice viewer with window/level controls
-10. [x] Provenance system: inputs, operations, software, environment, outputs
-        recorded for every derived artifact
+## 4. Stack
 
----
+| Layer    | Choice                                                                        |
+| -------- | ----------------------------------------------------------------------------- |
+| Shell    | Tauri 2, `core` + `dialog` permissions only                                   |
+| Frontend | Next.js static export, TypeScript, client-side rendering only                 |
+| Styling  | Tailwind CSS 4 + DaisyUI                                                      |
+| Tables   | TanStack Table                                                                |
+| Types    | Generated from the pipeline's JSON Schema, validated at the boundary with zod |
+| Backend  | Rust: filesystem, process manager, JSON/JSONL/YAML parsing                    |
+| Tests    | Jest + Testing Library with an 80% coverage threshold, plus Playwright smoke  |
+| Icons    | Text, emoji or CSS shapes; no icon or charting dependency                     |
 
-## Phase 2 — MRI Intelligence
+Constraints from static export:
 
-> The differentiator: the system understands studies rather than listing files
+- no Next.js API routes and no server-side data fetching at runtime,
+- all data comes through typed Tauri commands and events,
+- routing uses client-side navigation with query parameters rather than
+  build-time dynamic routes (`/runs?run=…`, `/compare?a=…&b=…`).
 
-1. [x] Automatic study analysis: modality, sequence, anatomical region,
-       orientation, voxel size, slice thickness, field strength, scanner,
-       manufacturer, acquisition/diffusion parameters, temporal dimensions
-2. [x] Sequence classifier (T1, T2, FLAIR, DWI, ADC, DTI, SWI, GRE, TOF, ASL,
-       BOLD, perfusion, spectroscopy, T1/T2/T2* mapping, Dixon, qSM) exposing
-       confidence — inferred information never presented as authoritative
-3. [x] Study normalization: scanner naming (MPRAGE/BRAVO/T1 3D/...) mapped to
-       canonical concepts, originals preserved
-4. [x] Protocol validation: user-defined protocols (required sequences,
-       constraints) checked automatically on import
-5. [x] Automated machine-readable QC: motion, noise, SNR, intensity
-       non-uniformity, ghosting, artifacts, coverage, spacing, metadata
-       consistency, missing sequences, corruption
-6. [x] Cross-study comparison: registration, synchronized navigation, linked
-       crosshairs, overlays, difference maps, segmentation/measurement
-       comparison, longitudinal statistics
+## 5. Contract with the pipeline
 
----
+The app depends only on these, all defined in `pipeline/`:
 
-## Phase 3 — Research Workflow
+- run folder layout (`manifest.json`, `config.yaml`, `events.jsonl`,
+  `metrics.json`, `predictions.parquet`, `artifacts/`),
+- JSON Lines event types (`stage_start`, `progress`, `metric`, `stage_end`,
+  `error`),
+- config schemas (used to render the launch form),
+- a `schema_version` in every manifest. The app refuses an unknown major version
+  with a clear message.
 
-> Orchestration: the manual tool-hopping gap becomes a managed pipeline
+Settings the app stores: project root folder, path to the Python environment (or
+`uv`), default config folder. "Check setup" runs `pipeline doctor`, reads the
+CLI's `--help`, and reports both the environment and whether a run can be
+launched.
 
-1. [x] Pipeline builder: stored, versioned pipeline definitions runnable through
-       GUI, CLI, API, and AI agent
-2. [x] Rust process manager: structured arguments, validation, stdout/stderr
-       capture, cancellation, timeouts, progress, resource limits
-3. [x] Background job system: queue → run → progress → complete/fail with logs,
-       retries, outputs, provenance; UI never blocks
-4. [ ] Scientific-tool integration: dcm2niix (DICOM → NIfTI), ANTs
-       (registration), FSL/MRtrix (diffusion), qMRLab (quantitative MRI)
-5. [ ] DICOM → BIDS conversion with BIDS validation and dataset QC
-6. [ ] Quantitative MRI domain: T1/T2/T2* mapping, ADC, DTI (FA/MD), perfusion,
-       ASL, susceptibility, relaxometry with exposed analysis pipelines
-7. [ ] Segmentation as structured data (source, labels, geometry, model,
-       statistics, review state, provenance) with standards-based export
+## 6. Screens
 
----
+| Screen     | Purpose                                                    | State      |
+| ---------- | ---------------------------------------------------------- | ---------- |
+| Overview   | Recent runs, launch status, rigour summary, open problems  | shipped    |
+| Setup      | Environment report, dependencies, available CLI commands   | shipped    |
+| Settings   | Project folder, interpreter path, config folder            | shipped    |
+| Launch     | Choose a config, edit parameters, start or stop a run      | shipped\*  |
+| Runs       | Table of all runs with filters and sorting                 | shipped    |
+| Run detail | Config, manifest, live or final events, metrics, artefacts | shipped    |
+| Analysis   | Per-participant predictions and exported metric tables     | shipped    |
+| Compare    | Side-by-side metrics with confidence-interval overlap      | shipped    |
+| Datasets   | Cohort table, outcome distribution, data quality flags     | shipped    |
+| Rigour     | Leakage checks and lock-box access log                     | shipped    |
+| Viewer     | Generated images and text artefacts per participant        | metadata\* |
 
-## Phase 4 — AI
+\* The launcher is capability-gated: the pipeline CLI has no `run` subcommand
+yet, so Setup says so and no launch is offered. Everything around it is wired
+and tested.
 
-> Models are first-class citizens, output is always reviewable
+\* The viewer lists artefacts and opens text ones; volume rendering is out of
+scope until a use case justifies the dependency.
 
-1. [x] Model registry: id, name, version, task, input/output, runtime, source,
-       license
-2. [x] Local model execution: ONNX, PyTorch, MONAI; containerized models;
-       external inference services optional
-3. [ ] AI segmentation with model provenance recorded per inference
-4. [ ] AI review workflow: prediction → human review → correction → approval →
-       export; original result and human modifications tracked separately
-5. [ ] Agent API: typed tools (`list_studies`, `inspect_study`, `find_sequence`,
-       `compare_studies`, `run_qc`, `run_pipeline`, ...) — no unrestricted shell
-       access
-6. [ ] Natural-language interface compiling into explicit operations with intent
-       shown before execution
+## 7. Phases
 
----
+### Phase A0: Scaffold — shipped
 
-## Phase 5 — Advanced
+- [x] Tauri 2 + Next.js static export project.
+- [x] Types generated from the pipeline JSON Schema as a build step
+      (`pnpm generate:contract`).
+- [x] Scoped path access, minimal Tauri permissions, settings and setup screens.
+- [x] CI builds, lints, type-checks and tests.
 
-> Longitudinal research at scale
+### Phase A1: Run browser — shipped
 
-1. [ ] Longitudinal biomarkers across studies
-2. [ ] Experiment tracking with reproducible parameters
-3. [ ] Dataset diff between timepoints
-4. [ ] Collaborative review workflows
-5. [ ] Automated research reports
-6. [ ] De-identification workflow hardening: original → de-identify → validate →
-       export with honest anonymity guarantees
+- [x] Runs table with filters (status, model, date, tags) and sorting.
+- [x] Run detail: config, manifest, events, metrics, artefact listing.
+- [x] Graceful handling of corrupt or incomplete runs (problems list, unknown
+      event shapes preserved).
 
----
+### Phase A2: Launcher — built, gated on the pipeline
 
-## Decisions
+- [x] Form generated from the config schema, with defaults and validation.
+- [x] Structured command construction; events streamed to a live log and
+      progress view.
+- [x] Cancel a run cleanly.
+- [x] One active run per project, tracked in a launcher registry.
+- [x] The pipeline exposes
+      `pipeline run --config … --output-dir … [--run-id …]`, so Setup reports
+      `canLaunch: true` and the button is enabled.
+- [ ] Imaging and deep-learning stages still have no implementation.
+      `pipeline     run` executes the tabular baseline path only, and refuses a
+      `model_type` it cannot honour rather than reporting a success it did not
+      achieve.
 
-Resolved product decisions (from `AGENTS.md`):
+### Phase A3: Dashboard and comparison — shipped
 
-1. **Not a generic viewer**: generic DICOM viewer/PACS/image-editor/chatbot/
-   notebook features are explicitly out of scope — every feature must serve
-   MRI-specific research workflows.
-2. **The gap is orchestration**: researchers can already do almost everything
-   with OHIF, 3D Slicer, ANTs, FSL, FreeSurfer, MONAI, qMRLab, dcm2niix — but
-   must manually move data between tools, repeatedly configure them, lose
-   metadata and provenance, and cannot reproduce workflows. The product is the
-   missing workflow layer.
-3. **Local-first by design**: full functionality offline; cloud services are
-   optional. No uploading MRI data to external services for core functionality.
-   Patient data is never sent to AI services automatically.
-4. **Prefer mature tools**: scientific tools are integrated through the process
-   manager, never rewritten in-app.
-5. **Provenance is mandatory**: any feature producing derived artifacts is not
-   done until provenance capture works.
-6. **Spatial correctness is non-negotiable**: tests must include rotated and
-   differently oriented datasets; numerical tolerances are explicit.
+- [x] Metrics with confidence intervals across seeds.
+- [x] Compare view with overlap-based significance indication.
+- [x] Export tables as CSV, Markdown and LaTeX; text artefacts viewable in-app.
+
+### Phase A4: Dataset explorer — shipped
+
+- [x] Cohort table with filters and outcome distribution.
+- [x] Data quality flags (missing mask, missing scan, duplicate sessions).
+- [x] Participant asset listing from the run folders.
+
+### Phase A5: Image viewer — deliberately minimal
+
+- [x] Gallery of generated images and text artefacts for a chosen participant.
+- [ ] Volume rendering of scan + lesion mask + atlas overlays. Deferred: no use
+      case has justified a WebGL NIfTI dependency, and a partial viewer is worse
+      than an honest list of what the pipeline produced.
+
+### Phase A6: Rigour panel — shipped
+
+- [x] Leakage check display (participant overlap between splits).
+- [x] Lock-box access log with a warning when it is evaluated more than planned.
+- [x] Raw report and lock-box list available as text artefacts.
+
+### Phase A7: Analysis views — shipped
+
+- [x] Per-participant predictions and exported metric tables.
+- [x] Calibration and subgroup tables as exported artefacts.
+- [ ] Interactive saliency overlays. Stays in the pipeline's export path.
+
+### Phase A8: Hybrid designer and ablation launcher — not planned
+
+- Interactive symbol encoding would duplicate pipeline config. Out of scope
+  while the app stays a client.
+
+### Phase A9: Remote mode — not planned
+
+Local-first is a requirement, not a stage. `pipeline serve` integration would
+add network paths the app does not need.
+
+### Phase A10: Packaging — deferred
+
+Installers matter only if the app is distributed. Bringing your own Python
+environment stays the default; bundling PyTorch is large and fragile.
+
+## 8. Feature list
+
+| ID   | Feature                                | Priority | Phase | Pipeline dependency   | State    |
+| ---- | -------------------------------------- | -------- | ----- | --------------------- | -------- |
+| A-01 | Project settings and setup check       | MVP      | A0    | `pipeline doctor`     | shipped  |
+| A-02 | Runs table and run detail              | MVP      | A1    | run folder format     | shipped  |
+| A-03 | Launcher with live events and cancel   | MVP      | A2    | CLI `run` command     | gated    |
+| A-04 | Metrics dashboard with intervals       | MVP      | A3    | `metrics.json`        | shipped  |
+| A-05 | Compare view                           | MVP      | A3    | report tables         | shipped  |
+| A-06 | Table and text export (CSV, MD, LaTeX) | MVP      | A3    | report tables         | shipped  |
+| A-07 | Dataset explorer and quality flags     | Should   | A4    | cohort builder        | shipped  |
+| A-08 | Artefact gallery                       | Should   | A5    | image generators      | shipped  |
+| A-09 | Rigour panel and lock-box log          | Should   | A6    | splitter, access log  | shipped  |
+| A-10 | Error analysis and prediction tables   | Should   | A7    | `predictions.parquet` | shipped  |
+| A-11 | Volume rendering                       | Stretch  | A5    | image generators      | deferred |
+| A-12 | Remote mode                            | Stretch  | A9    | `pipeline serve`      | dropped  |
+| A-13 | Packaged installers                    | Optional | A10   | none                  | deferred |
+
+## 9. Open items
+
+1. **Schema regeneration is still manual.** `pnpm generate:contract` reads the
+   committed JSON Schema, so the schema itself must first be re-exported from
+   the pipeline (`pipeline export-schemas`). CI only checks what is committed.
+2. **Only the tabular baseline path runs.** Preprocessing, image representations
+   and deep models are deliberately refused, not stubbed. The workbench can
+   launch a baseline run today; imaging stages need real implementations before
+   their phases can be checked off.
+3. **`pipeline data fetch` is still a stub.** It reports what it would do rather
+   than fetching, so a run fails with a clear message until real ARC access and
+   cohort construction land.
+4. **Artefact rendering.** PNG artefacts are listed, not displayed. Any future
+   viewer must load bytes through a Rust command — no filesystem plugin — and
+   must justify the dependency size.
+5. **Paper-facing exports** (LaTeX tables, figures) need a check against the
+   pipeline's own report output to guarantee they match.
+
+## 10. Risks
+
+| Risk                                                            | Mitigation                                                  |
+| --------------------------------------------------------------- | ----------------------------------------------------------- |
+| Tauri permission scopes block needed access                     | Only `core` + `dialog` are granted; all access is Rust-side |
+| Python environment not found                                    | `pipeline doctor` check and a clear setup screen            |
+| Pipeline CLI lacks a command the app expects                    | Setup reads `--help` and reports `canLaunch`                |
+| Static export limits routing                                    | Query-parameter routing from the start                      |
+| Large files make the UI slow                                    | Summaries by default; lazy-load predictions and artefacts   |
+| Schema drift between pipeline and app                           | Generate types from the schema; commit both together        |
+| App work crowds out the research                                | Time-box to about a quarter of effort; the cut order below  |
+| Differences between operating systems (paths, process handling) | Test on each platform actually used                         |
+
+## 11. Cut order if time is short
+
+Everything in the shipped set is load-bearing for the dissertation workflow. If
+time disappears: drop artefacts before the rigour panel, and the rigour panel
+before run detail. Never drop the run browser — the app must stay useful with no
+Python running.
+
+## 12. Definition of done
+
+- The main results table and the key text artefacts can be exported from the
+  app.
+- A run's config, events, metrics and artefacts can be inspected without
+  touching the terminal.
+- The app works on finished runs with no Python process running.
+- The launcher never offers a capability the pipeline does not expose.
+- Contract tests pass against the current pipeline schemas.
+- The app clearly labels itself as a research prototype, not a clinical tool.

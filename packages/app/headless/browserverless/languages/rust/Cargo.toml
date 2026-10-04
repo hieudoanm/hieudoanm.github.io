@@ -7,7 +7,7 @@ members = [
 ]
 
 [workspace.dependencies]
-servo = "=0.6.0"
+servo = "=0.7.0"
 clap = { version = "=4.6.7", features = ["derive"] }
 thiserror = "=2.0.21"
 image = "=0.25.10"

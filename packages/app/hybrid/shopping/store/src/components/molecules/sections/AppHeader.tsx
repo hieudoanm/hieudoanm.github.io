@@ -23,7 +23,7 @@ export const AppHeader: FC<AppHeaderProps> = ({ app }) => {
   const Icon = getIcon(app.icon);
   return (
     <div className="mb-8 text-center">
-      <div className="bg-primary/20 border-primary/30 mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full shadow-inner">
+      <div className="bg-primary/20 border-primary/30 mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-md">
         <Icon className="text-primary text-4xl" />
       </div>
       <h1 className="mb-2 text-3xl font-thin tracking-tight">{app.label}</h1>

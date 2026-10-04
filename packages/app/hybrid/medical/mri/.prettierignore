@@ -36,3 +36,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+
+# python
+/pipeline/
+
+# generated contract (regenerated from the pipeline's JSON Schema)
+/src/lib/contract/generated/

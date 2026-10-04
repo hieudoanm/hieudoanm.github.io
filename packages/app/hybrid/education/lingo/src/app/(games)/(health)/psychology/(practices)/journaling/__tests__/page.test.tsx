@@ -34,6 +34,9 @@ describe('JournalingTheoryPage', () => {
     ).toHaveAttribute('href', '/psychology');
     expect(
       screen.getByRole('link', { name: /^Beck Depression Inventory/ })
-    ).toHaveAttribute('href', '/psychology/beck-depression-inventory');
+    ).toHaveAttribute(
+      'href',
+      '/psychology/depression/beck-depression-inventory'
+    );
   });
 });

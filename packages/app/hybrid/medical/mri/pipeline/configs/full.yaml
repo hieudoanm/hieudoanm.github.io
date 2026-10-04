@@ -1,0 +1,61 @@
+# Full configuration for the MRI pipeline
+# This is the configuration for production runs
+
+schema_version: '0.1.0'
+
+data:
+  dataset: arc
+  # The ARC dataset is not redistributable, so its location is never committed.
+  # Export ARC_DATA_PATH before a real run, for example:
+  #   export ARC_DATA_PATH=/path/to/ds004884
+  # An unset variable is refused with a clear message rather than treated as a
+  # directory literally named `${ARC_DATA_PATH}`.
+  data_path: '${ARC_DATA_PATH}'
+  # A BIDS-style participants table, one row per participant. A table with
+  # several sessions per participant is refused, so a person can never appear
+  # in two folds.
+  participants_tsv: '${ARC_DATA_PATH}/participants.tsv'
+  # Root of the lesion-mask derivatives tree. Each participant's
+  # `*_desc-lesion_mask.nii.gz` is read with nibabel (the `imaging` extra) and
+  # reduced to `lesion_volume_mm3`.
+  lesion_mask_path: '${ARC_DATA_PATH}/derivatives/lesion_masks'
+  t1_path: null
+  # The outcome is binarised at this threshold. It is a modelling decision, not a
+  # fact about the data: it is recorded in docs/protocol.md once it is justified.
+  outcome_column: 'wab_aq'
+  outcome_threshold: 50.0
+  # Tabular inputs plus the imaging-derived lesion volume. `lesion_volume_mm3`
+  # is required here when `lesion_mask_path` is set, so the measurements are
+  # never read and then silently ignored.
+  features:
+    - 'age_at_stroke'
+    - 'sex'
+    - 'wab_days'
+    - 'lesion_volume_mm3'
+
+split:
+  n_folds: 4
+  lock_box_fraction: 0.2
+  seed: 42
+  stratify_by: 'wab_aq'
+
+model:
+  # TODO(ROADMAP Phase 4): `resnet18` is a declared ModelType with no trainer
+  # behind it, so a full run would fail when the model is built. A baseline that
+  # exists today is used instead; switch back when Phase 4 lands.
+  # `image_type` has no generator yet either (Phase 3) and is inert for now.
+  model_type: logistic_regression
+  image_type: hybrid
+  learning_rate: 0.001
+  batch_size: 32
+  max_epochs: 100
+  early_stopping_patience: 10
+  class_weight: true
+  calibration: true
+
+run:
+  run_id: null
+  output_dir: 'runs/'
+  device: auto
+  log_level: 'INFO'
+  cache_stages: true

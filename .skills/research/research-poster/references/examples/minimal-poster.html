@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minimal Research Poster</title>
+
+  <style>
+    :root {
+      --poster-width: 1189mm;
+      --poster-height: 841mm;
+
+      --background: #ffffff;
+      --text: #161616;
+      --muted: #626262;
+      --accent: #222222;
+      --accent-gradient: linear-gradient(135deg, #222222 0%, #444444 100%);
+      --surface: #f5f5f5;
+      --border: #d8d8d8;
+
+      --space-xs: 4mm;
+      --space-sm: 8mm;
+      --space-md: 14mm;
+      --space-lg: 20mm;
+      --space-xl: 30mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #dddddd;
+    }
+
+    body {
+      font-family:
+        Helvetica,
+        Arial,
+        sans-serif;
+      color: var(--text);
+    }
+
+    .poster {
+      animation: slideIn 0.6s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .main-result-number {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .poster {
+      width: var(--poster-width);
+      height: var(--poster-height);
+      margin: 0 auto;
+      padding: 28mm;
+
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: var(--space-xl);
+
+      background: var(--background);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .poster::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3mm;
+      background: var(--accent-gradient);
+    }
+
+    .poster::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 200mm;
+      height: 200mm;
+      background: radial-gradient(circle at center right, rgba(34, 34, 34, 0.02) 0%, transparent 70%);
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .header {
+      max-width: 1000mm;
+    }
+
+    .label {
+      margin: 0 0 var(--space-sm);
+      color: var(--muted);
+      font-size: 4mm;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900mm;
+      font-size: 31mm;
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .authors {
+      margin: var(--space-md) 0 0;
+      color: var(--muted);
+      font-size: 5mm;
+    }
+
+    .content {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 0.8fr 1.6fr 0.8fr;
+      gap: 24mm;
+      align-items: stretch;
+    }
+
+    .column {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      height: 100%;
+    }
+
+    .column:nth-child(1) {
+      animation: slideInLeft 0.6s ease-out 0.1s both;
+    }
+
+    .column:nth-child(2) {
+      animation: slideInUp 0.6s ease-out 0.2s both;
+    }
+
+    .column:nth-child(3) {
+      animation: slideInRight 0.6s ease-out 0.3s both;
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .column .section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column .main-result {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section {
+      border-top: 1px solid var(--border);
+      padding-top: var(--space-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 1mm 4mm rgba(34, 34, 34, 0.04);
+    }
+
+    .section:hover {
+      transform: translateY(-2mm);
+      box-shadow: 0 6mm 18mm rgba(34, 34, 34, 0.12);
+    }
+
+    .section h2 {
+      margin: 0 0 var(--space-sm);
+      font-size: 5mm;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      margin: 0;
+      font-size: 4.8mm;
+      line-height: 1.45;
+      flex: 1;
+    }
+
+    .section p + p {
+      margin-top: var(--space-sm);
+    }
+
+    .question {
+      padding: var(--space-md);
+      border: 2px solid var(--accent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .question::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(34, 34, 34, 0.08) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
+    }
+
+    .question h2 {
+      margin-bottom: var(--space-sm);
+      position: relative;
+      z-index: 1;
+    }
+
+    .question p {
+      font-size: 7mm;
+      line-height: 1.2;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+    }
+
+    .main-result {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .main-result-label {
+      margin: 0 0 var(--space-sm);
+      color: var(--muted);
+      font-size: 5mm;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .main-result-number {
+      margin: 0;
+      font-size: 42mm;
+      line-height: 0.9;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .main-result-text {
+      max-width: 390mm;
+      margin: var(--space-md) 0 0;
+      font-size: 8mm;
+      line-height: 1.2;
+      font-weight: 650;
+    }
+
+    .visual {
+      margin-top: var(--space-lg);
+      padding: var(--space-md);
+      background: var(--surface);
+      transition: transform 0.3s ease;
+    }
+
+    .visual:hover {
+      transform: scale(1.02);
+    }
+
+    .visual svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .visual svg rect,
+    .visual svg path,
+    .visual svg circle,
+    .visual svg line {
+      transition: opacity 0.3s ease;
+    }
+
+    .visual:hover svg rect,
+    .visual:hover svg path,
+    .visual:hover svg circle,
+    .visual:hover svg line {
+      opacity: 0.9;
+    }
+
+    .caption {
+      margin: var(--space-sm) 0 0;
+      color: var(--muted);
+      font-size: 3.8mm;
+      line-height: 1.35;
+    }
+
+    .takeaway {
+      padding: var(--space-lg);
+      background: var(--accent);
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4mm 12mm rgba(34, 34, 34, 0.2);
+    }
+
+    .takeaway:hover {
+      transform: translateY(-2mm);
+      box-shadow: 0 8mm 24mm rgba(34, 34, 34, 0.3);
+    }
+
+    .takeaway-label {
+      margin: 0 0 var(--space-sm);
+      color: #cccccc;
+      font-size: 4mm;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .takeaway p {
+      margin: 0;
+      font-size: 7mm;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 6mm;
+      font-size: 4.5mm;
+      line-height: 1.45;
+    }
+
+    .list li + li {
+      margin-top: 2mm;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-lg);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 3.6mm;
+    }
+
+    @media print {
+      @page {
+        size: A0 landscape;
+        margin: 0;
+      }
+
+      html,
+      body {
+        width: 1189mm;
+        height: 841mm;
+      }
+
+      .poster {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="poster">
+    <header class="header">
+      <p class="label">Minimal Research Poster</p>
+
+      <h1>
+        Does Sleep Duration Predict Cognitive Performance?
+      </h1>
+
+      <p class="authors">
+        H. Doan · Cognitive Neuroscience · University of Birmingham
+      </p>
+    </header>
+
+    <div class="content">
+      <div class="column">
+        <section class="section">
+          <h2>Background</h2>
+
+          <p>
+            Sleep is associated with multiple aspects of cognition, including
+            attention, memory, and executive function. Chronic sleep deprivation
+            has been linked to impaired cognitive performance, reduced
+            emotional regulation, and increased risk of neurodegenerative
+            diseases. However, the relationship between habitual sleep duration
+            and cognitive performance in healthy adults remains debated.
+          </p>
+
+          <p>
+            Theoretical frameworks suggest that sleep supports memory consolidation
+            through neural replay and synaptic pruning. Adequate sleep may also
+            facilitate optimal functioning of attentional networks and
+            executive control systems. These mechanisms predict a positive
+            association between sleep duration and cognitive performance.
+          </p>
+        </section>
+
+        <section class="question">
+          <h2>Research question</h2>
+
+          <p>
+            Is habitual sleep duration associated with cognitive performance?
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Dataset</h2>
+
+          <p>
+            Behavioural and self-reported sleep measures were collected from
+            420 adult participants (age 18-65, mean 34.2 years). Participants
+            completed a comprehensive cognitive battery assessing processing speed,
+            working memory, episodic memory, and executive function. Sleep duration
+            was assessed via the Pittsburgh Sleep Quality Index (PSQI) and
+            supplemented with 7-day sleep diaries.
+          </p>
+
+          <p>
+            The sample included diverse occupational backgrounds and educational
+            levels. Exclusion criteria included diagnosed sleep disorders,
+            shift work, and use of medications affecting sleep or cognition.
+            This approach aimed to capture naturalistic variation in sleep
+            patterns while minimising confounding factors.
+          </p>
+
+          <div style="margin-top: var(--space-sm); padding: var(--space-sm); background: var(--surface); border-radius: 3mm;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 4mm;">
+              <tr style="border-bottom: 1px solid var(--border);">
+                <th style="text-align: left; padding: 3mm; color: var(--accent);">Variable</th>
+                <th style="text-align: center; padding: 3mm; color: var(--accent);">Mean</th>
+                <th style="text-align: center; padding: 3mm; color: var(--accent);">SD</th>
+                <th style="text-align: center; padding: 3mm; color: var(--accent);">Range</th>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 3mm;">Sleep duration (h)</td>
+                <td style="text-align: center; padding: 3mm;">7.2</td>
+                <td style="text-align: center; padding: 3mm;">1.1</td>
+                <td style="text-align: center; padding: 3mm;">4.5-9.8</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 3mm;">Cognitive score</td>
+                <td style="text-align: center; padding: 3mm;">0.52</td>
+                <td style="text-align: center; padding: 3mm;">0.18</td>
+                <td style="text-align: center; padding: 3mm;">0.12-0.94</td>
+              </tr>
+              <tr>
+                <td style="padding: 3mm;">Age (years)</td>
+                <td style="text-align: center; padding: 3mm;">34.2</td>
+                <td style="text-align: center; padding: 3mm;">11.3</td>
+                <td style="text-align: center; padding: 3mm;">18-65</td>
+              </tr>
+            </table>
+            <p style="margin: var(--space-xs) 0 0; font-size: 3.5mm; color: var(--muted);">
+              Descriptive statistics for key variables (N=420).
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Analysis</h2>
+
+          <ol class="list">
+            <li>Inspect distributions of sleep duration and cognitive scores for outliers and normality.</li>
+            <li>Estimate the sleep–performance association using robust linear regression controlling for age, education, and physical activity.</li>
+            <li>Assess uncertainty using permutation analysis (10,000 permutations) to generate non-parametric confidence intervals.</li>
+            <li>Test for nonlinear relationships using restricted cubic splines.</li>
+            <li>Perform sensitivity analyses excluding participants with extreme sleep durations (<5h or >10h).</li>
+          </ol>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="main-result">
+          <p class="main-result-label">Main finding</p>
+
+          <p class="main-result-number">r = 0.28</p>
+
+          <p class="main-result-text">
+            Longer reported sleep duration was associated with better
+            cognitive performance across multiple cognitive domains.
+          </p>
+
+          <p style="margin-top: 15mm; font-size: 7mm; line-height: 1.25;">
+            The association remained significant after controlling for age,
+            education, and physical activity (β = 0.22, p < 0.001). Permutation
+            analysis confirmed robustness (95% CI: 0.15-0.29). No evidence of
+            nonlinear effects was detected, suggesting a linear relationship
+            across the observed sleep range (5-10 hours).
+          </p>
+
+          <div class="visual">
+            <svg
+              viewBox="0 0 760 470"
+              role="img"
+              aria-label="Illustrative scatter plot showing a positive relationship between sleep duration and cognitive performance"
+            >
+              <line
+                x1="90"
+                y1="390"
+                x2="700"
+                y2="390"
+                stroke="#626262"
+                stroke-width="3"
+              />
+
+              <line
+                x1="90"
+                y1="70"
+                x2="90"
+                y2="390"
+                stroke="#626262"
+                stroke-width="3"
+              />
+
+              <line
+                x1="120"
+                y1="350"
+                x2="665"
+                y2="115"
+                stroke="#222222"
+                stroke-width="6"
+              />
+
+              <circle cx="145" cy="350" r="8" fill="#555555" />
+              <circle cx="180" cy="330" r="8" fill="#555555" />
+              <circle cx="215" cy="345" r="8" fill="#555555" />
+              <circle cx="250" cy="300" r="8" fill="#555555" />
+              <circle cx="285" cy="320" r="8" fill="#555555" />
+              <circle cx="320" cy="280" r="8" fill="#555555" />
+              <circle cx="355" cy="290" r="8" fill="#555555" />
+              <circle cx="390" cy="245" r="8" fill="#555555" />
+              <circle cx="425" cy="250" r="8" fill="#555555" />
+              <circle cx="460" cy="220" r="8" fill="#555555" />
+              <circle cx="495" cy="200" r="8" fill="#555555" />
+              <circle cx="530" cy="180" r="8" fill="#555555" />
+              <circle cx="565" cy="190" r="8" fill="#555555" />
+              <circle cx="600" cy="145" r="8" fill="#555555" />
+              <circle cx="635" cy="135" r="8" fill="#555555" />
+
+              <text
+                x="395"
+                y="445"
+                text-anchor="middle"
+                font-size="23"
+                fill="#161616"
+              >
+                Sleep duration
+              </text>
+
+              <text
+                x="30"
+                y="230"
+                transform="rotate(-90 30 230)"
+                text-anchor="middle"
+                font-size="23"
+                fill="#161616"
+              >
+                Cognitive performance
+              </text>
+            </svg>
+
+            <p class="caption">
+              Illustrative figure for demonstrating a minimal poster layout.
+              The displayed relationship is not intended to represent a real
+              dataset.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="section">
+          <h2>Interpretation</h2>
+
+          <p>
+            The observed association is consistent with a relationship between
+            sleep duration and cognitive performance. The magnitude of the effect
+            (r = 0.28) is comparable to other established behavioural risk factors
+            for cognitive performance, suggesting that sleep may be a meaningful
+            modifiable target for cognitive health interventions.
+          </p>
+
+          <p>
+            Because the data are observational, the result does not establish
+            that changing sleep duration would cause a change in cognition.
+            Reverse causality is possible: individuals with better cognitive
+            function may be more likely to maintain healthy sleep habits.
+            Third variables such as stress, physical activity, or socioeconomic
+            status could also explain the association.
+          </p>
+
+          <p>
+            The linear relationship across the observed range suggests that the
+            association is not driven by extreme values at either end of the
+            sleep distribution. This pattern is consistent with a dose-response
+            relationship, which strengthens the case for a causal interpretation
+            but does not prove it.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Limitations</h2>
+
+          <ul class="list">
+            <li>Sleep duration was self-reported, subject to recall bias.</li>
+            <li>The study was observational; causal inference is limited.</li>
+            <li>Unmeasured variables may contribute to the association.</li>
+            <li>The sample may not represent the wider population.</li>
+            <li>Single time-point measurement does not capture sleep variability.</li>
+            <li>Cognitive assessment was brief and may not capture all domains.</li>
+            <li>No objective sleep measures (actigraphy, polysomnography) were used.</li>
+          </ul>
+        </section>
+
+        <section class="takeaway">
+          <p class="takeaway-label">Takeaway</p>
+
+          <p>
+            The data support an association between sleep duration and
+            cognitive performance, but not a causal conclusion.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Next steps</h2>
+
+          <ul class="list">
+            <li>Use objective sleep measurements.</li>
+            <li>Investigate longitudinal changes.</li>
+            <li>Control for additional behavioural factors.</li>
+            <li>Test specific cognitive domains separately.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>References</h2>
+
+          <ul class="list">
+            <li>Sleep and cognition literature.</li>
+            <li>Methods for observational association studies.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>
+        Example HTML research poster · Designed for one-shot screenshot capture
+      </span>
+
+      <span>
+        Contact · h.doe@example.ac.uk
+      </span>
+    </footer>
+  </main>
+</body>
+</html>

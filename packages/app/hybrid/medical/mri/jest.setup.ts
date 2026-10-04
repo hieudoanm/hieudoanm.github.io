@@ -18,3 +18,11 @@ global.ResizeObserver = ResizeObserverMock as unknown as typeof ResizeObserver;
 
 HTMLCanvasElement.prototype.getContext = (() =>
   null) as typeof HTMLCanvasElement.prototype.getContext;
+
+jest.mock('@tauri-apps/api/core', () => ({
+  invoke: jest.fn(async () => null),
+}));
+
+jest.mock('@tauri-apps/api/event', () => ({
+  listen: jest.fn(async () => () => undefined),
+}));
