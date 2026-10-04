@@ -1,11 +1,12 @@
 'use client';
 
-import { type FC } from 'react';
-import Link from 'next/link';
-import { getIcon } from '@/lib/icons';
+import { HexagonGrid } from '@/components/molecules/HexagonGrid';
 import type { AppData } from '@/lib/downloads';
+import { getIcon } from '@/lib/icons';
 import { getHomeScreenshotUrl } from '@/lib/screenshots';
 import type { ViewMode } from '@/lib/types';
+import Link from 'next/link';
+import { type FC } from 'react';
 
 interface RecentlyViewedProps {
   apps: AppData[];
@@ -76,6 +77,8 @@ export const RecentlyViewed: FC<RecentlyViewedProps> = ({
             </Link>
           ))}
         </div>
+      ) : viewMode === 'hexagon' ? (
+        <HexagonGrid apps={apps} />
       ) : (
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           {apps.map((app) => {

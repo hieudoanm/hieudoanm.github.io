@@ -8,7 +8,12 @@ import type { SortKey, ViewMode } from '@/lib/types';
 
 const VIEW_MODE_KEY = 'view-mode';
 const DEFAULT_VIEW_MODE: ViewMode = 'grid';
-const VALID_VIEW_MODES = new Set<ViewMode>(['grid', 'gallery', 'list']);
+const VALID_VIEW_MODES = new Set<ViewMode>([
+  'grid',
+  'gallery',
+  'list',
+  'hexagon',
+]);
 
 const getInitialViewMode = (): ViewMode => {
   const stored = storage.get<ViewMode>(VIEW_MODE_KEY, DEFAULT_VIEW_MODE);
