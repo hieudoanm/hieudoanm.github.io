@@ -5,7 +5,7 @@ description = "Predicting post-stroke aphasia outcome from lesion MRI plus clini
 readme = "README.md"
 # Must admit every interpreter CI builds on (3.11 and 3.12) as well as the local
 # one, and it matches ruff's target-version and pyright's pythonVersion below.
-requires-python = ">=3.11"
+requires-python = "==3.14.8"
 dependencies = [
     "typer==0.27.2",
     "pydantic==2.13.5",
@@ -15,14 +15,14 @@ dependencies = [
     # releases but require Python >=3.12, while CI also builds 3.11 (which caps
     # at numpy 2.4.6 / scipy 1.17.1). An exact pin here makes the lock
     # unsatisfiable for the 3.11 leg.
-    "numpy>=2.4.6",
+    "numpy==2.4.6",
     "pandas==3.0.6",
     "scikit-learn==1.9.1",
-    "scipy>=1.17.1",
+    "scipy==1.17.1",
     "statsmodels==0.15.0",
     # scikit-learn 1.9.1 requires joblib>=1.4.0, so a lower bound is the real
     # constraint; an exact pin below that makes the resolution unsatisfiable.
-    "joblib>=1.4.0",
+    "joblib==1.6.0",
 ]
 
 [project.optional-dependencies]
