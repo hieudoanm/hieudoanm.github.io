@@ -29,17 +29,16 @@
     "format": "prettier --cache --write .",
     "test": "jest --passWithNoTests",
     "test:e2e": "playwright test",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "generate:contract": "node scripts/generate-contract.mjs"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.21.3",
     "@tauri-apps/api": "2.12.1",
     "@tauri-apps/plugin-dialog": "2.8.1",
-    "@tauri-apps/plugin-notification": "2.5.1",
-    "@tauri-apps/plugin-updater": "2.13.1",
     "next": "16.3.8",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "react-icons": "5.7.0",
     "zod": "4.6.5"
   },
   "devDependencies": {

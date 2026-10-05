@@ -1,184 +1,185 @@
 # Contributing
 
-Thanks for contributing to **MRI**, a hybrid MRI research workspace that
-combines visualization, study intelligence, quantitative analysis, and
-scientific-tool orchestration. It ships as a web app (browser), desktop app
-(Tauri), and mobile app (Tauri Mobile).
+**MRI** is a local-first desktop workbench for a post-stroke aphasia prediction
+pipeline. It reads finished run folders, launches runs through the pipeline CLI,
+streams a run's events, compares runs, and exports tables and text artefacts. It
+is a research prototype: no clinical claims, no uploads, no accounts, no
+training logic.
 
-## Getting Started
+The science lives in `pipeline/`. This package owns the interface, the
+filesystem boundary and the process boundary.
 
-1. **Prerequisites**: Node.js (see `.nvmrc` at the repo root), `pnpm`, and a
-   Rust toolchain for Tauri.
-2. **Install dependencies** from the workspace root:
+## Prerequisites
 
-   ```bash
-   pnpm install
-   ```
+- Node.js (see `.nvmrc` at the repo root) and `pnpm`
+- A Rust toolchain, only if you need the desktop shell or to run `cargo test`
+- A Python project that satisfies `pipeline doctor`, only if you need to launch
+  runs
 
-3. **Run this app**:
+## Getting started
 
-   ```bash
-   pnpm dev --filter=@hieudoanm.github.io/mri
-   ```
+Install from the workspace root:
 
-## Development Commands
+```bash
+pnpm install
+```
 
-| Task       | Command                                            |
-| ---------- | -------------------------------------------------- |
-| Dev server | `pnpm dev --filter=@hieudoanm.github.io/mri`       |
-| Build      | `pnpm build --filter=@hieudoanm.github.io/mri`     |
-| Lint       | `pnpm lint --filter=@hieudoanm.github.io/mri`      |
-| Format     | `pnpm format --filter=@hieudoanm.github.io/mri`    |
-| Unit tests | `pnpm test --filter=@hieudoanm.github.io/mri`      |
-| E2E tests  | `pnpm test:e2e --filter=@hieudoanm.github.io/mri`  |
-| Desktop    | `pnpm tauri --filter=@hieudoanm.github.io/mri dev` |
+Then work in this package:
 
-Run `lint`, `format`, `test`, and `test:e2e` before pushing — CI enforces all of
-them.
+```bash
+pnpm --filter=@hieudoanm.github.io/mri dev      # Next.js dev server
+pnpm --filter=@hieudoanm.github.io/mri tauri dev
+```
 
-## Coding Conventions
+## Commands
 
-The conventions below come from the repository-wide `AGENTS.md`. Follow them for
-every change.
+Run these from the workspace root with the `--filter` flag, or run them directly
+in this package.
+
+| Task                    | Command                                                 |
+| ----------------------- | ------------------------------------------------------- |
+| Dev server              | `pnpm dev`                                              |
+| Desktop dev             | `pnpm tauri dev`                                        |
+| Build (static export)   | `pnpm build`                                            |
+| Types                   | `pnpm typecheck`                                        |
+| Lint (auto-fixing)      | `pnpm lint`                                             |
+| Format                  | `pnpm format`                                           |
+| Tests with coverage     | `pnpm test`                                             |
+| One suite, no coverage  | `pnpm jest <path> --coverage=false`                     |
+| E2E                     | `pnpm test:e2e`                                         |
+| Regenerate config types | `pnpm generate:contract`                                |
+| Rust tests / lint       | `cargo test`, `cargo fmt`, `cargo clippy --all-targets` |
+
+`pnpm test` enforces an 80% global threshold over `src/**/*.{ts,tsx}`, so new
+code needs new tests in the same change. When iterating on a single suite, pass
+`--coverage=false` or the global threshold will fail for unrelated reasons.
+
+### Regenerating the configuration contract
+
+The launch form is generated from the pipeline's JSON Schema. When the
+pipeline's config changes:
+
+```bash
+cd pipeline && uv run pipeline export-schemas --output-dir ../schemas
+cp schemas/config_schema.json ../src/lib/contract/generated/config.schema.json
+cd .. && pnpm generate:contract
+```
+
+Commit the schema **and** the generated types together; CI compares them.
+
+## Coding conventions
+
+The repository-wide rules in `AGENTS.md` apply. The notes below are the ones
+that bite hardest in this package.
 
 ### General
 
-1. **Explicit types over implicit** — annotate function signatures and exported
-   symbols. A signature tells the reader more than a body.
-2. **Flat over deeply nested** — short functions, minimal indentation, guard
-   clauses (`if (!value) return`).
-3. **Self-documenting identifiers** — `getStudyById(id)` needs no comment;
-   `processData(x)` does.
-4. **DRY** — when a pattern repeats, centralize it. Duplication is how bugs get
-   missed.
-5. **Small, focused files** — functions ≤ 30 lines, files ≤ 200 lines.
-6. **Explicit error handling** — check errors and fail loudly; never let
-   failures silently propagate.
-7. **Test names as documentation** — `test("flags DWI missing b=0 volume")`.
-8. **Consistent imports** — group by origin: stdlib, third-party, internal.
-9. **Pure functions with explicit dependencies** — accept inputs, return
-   outputs; no global/singleton state.
-10. **Conventional layouts** — `src/`, `components/`, `lib/`, `e2e/`.
+1. **Explicit types** on exported functions and components; no `any` for domain
+   data.
+2. **Flat over nested** — guard clauses, functions under ~30 lines, files under
+   ~200.
+3. **Self-documenting names** — `readRun`, `listConfigs`, `metricDelta`; no
+   comments restating the name.
+4. **Explicit error handling** — every `invoke` failure reaches the UI.
+   Swallowing an error is a bug; `SettingsTemplate` failed this way once
+   already.
+5. **Test names as documentation** —
+   `test('says nothing can be compared when neither run has metrics')`.
 
 ### TypeScript
 
-1. Use arrow functions for all function declarations and component exports —
-   `const fn = () => {}`, not `function fn() {}`.
-2. Use `const` over `let` when a value is never reassigned.
-3. Use `strict: true` in `tsconfig.json`.
-4. Prefer `interface` over `type` for object shapes; use `type` for unions,
-   intersections, and primitives.
-5. Use branded types for domain primitives — `StudyId`, `SeriesId`.
-6. Use discriminated unions for processing results.
-7. Use `satisfies` over raw casts — `const config = {...} satisfies Config`.
-8. Use `never` in exhaustive checks — `default: const _exhaustive: never = x;`.
-9. Favour `zod` (or `io-ts`) for runtime validation at the IPC boundary.
-10. No `any` for domain data.
+1. Arrow functions for declarations and components; `const` unless reassigned.
+2. `interface` for object shapes, `type` for unions and primitives; `satisfies`
+   over casts; `never` in exhaustive switches.
+3. Validate anything crossing the IPC boundary with `zod`
+   (`src/lib/contract/schema.ts`).
+4. Domain logic lives in `src/lib`, not in a component. Templates orchestrate;
+   they do not parse.
 
 ### React
 
-1. Prefer function components with hooks; never nest hooks inside conditionals
-   or loops.
-2. Extract custom hooks (`useX`) for reusable logic.
-3. Use `useReducer` for complex state; colocate state with its consumers.
-4. Use a stable `key` prop in lists — never array indices.
-5. Memoise sparingly (`useMemo`/`useCallback`/`React.memo`) — profile first.
-6. Run in `React.StrictMode` during development.
+1. Hooks at the top level; reusable logic in `src/lib/hooks` or a feature hook.
+2. Stable `key`s, no array indices.
+3. Memoise only after profiling.
+4. Colocate state with the component that owns it; do not lift it into context
+   without a reason.
 
 ### Next.js
 
-1. Use the App Router (`app/`) and prefer Server Components by default.
-2. Mark files `"use client"` only when they need interactivity or hooks.
-3. Use flat routes + `useSearchParams()` instead of dynamic segments where
-   possible.
-4. Use `loading.tsx`, `error.tsx`, `not-found.tsx` file conventions for
-   fallbacks.
-5. Use `next/link` for client-side navigation.
+1. App Router; `"use client"` only where interactivity or hooks are required.
+2. `output: 'export'` means no API routes, no server actions, and no dynamic
+   segments. Address a run with a query string: `/runs?run=<runId>`,
+   `/compare?a=<runId>&b=<runId>`, read through `useSearchParams`.
+3. One page folder per route, one template in `src/components/templates` behind
+   it.
+4. `next/link` for navigation.
 
-### Styling
+### Styling and components
 
-1. Use Tailwind utility classes; compose, don't write custom CSS.
-2. Use DaisyUI component classes (`btn`, `card`, `badge`, `input`).
-3. Dark theme is the default.
-4. `prettier-plugin-tailwindcss` sorts classes — keep class order consistent.
-5. Use `react-icons` Feather (`Fi`) set for icons.
+1. Tailwind utilities, DaisyUI component classes (`card`, `btn`, `badge`,
+   `table`).
+2. `prettier-plugin-tailwindcss` owns class order — do not hand-sort.
+3. No icon library: use text, CSS shapes or emoji.
+4. Atomic structure: `atoms` → `molecules` → `templates`. Keep templates thin
+   and put the branch-heavy parts in a molecule.
+5. No charting or volume-rendering dependency. Tables of numbers, text artefacts
+   and plain ASCII summaries are the supported presentation; adding a heavy
+   viewer needs a written justification first.
 
-### Atomic Design
+## Rust and Tauri conventions
 
-Structure components as atoms -> molecules -> organisms -> templates:
+1. `Result<T, AppError>` for fallible work, `thiserror` for the error enum, no
+   `unwrap`/`panic!` outside tests.
+2. Commands stay thin: `#[tauri::command] → services/ → domain/`. No parsing or
+   business logic in a command.
+3. **Never concatenate a command.** Build `CommandSpec { program, args }`,
+   validate the program against the interpreter allow-list, and reject arguments
+   containing NUL.
+4. Resolve every path with `services::paths::resolve_in(root, relative)`;
+   absolute paths, `..` and anything resolving outside the project root are
+   refused.
+5. Treat pipeline output as untrusted input: parse defensively, keep unknown
+   event shapes, and never log patient data.
+6. Keep Tauri permissions minimal — `core:default` and `dialog:default` only.
+   All filesystem and process access goes through Rust, not plugins.
+7. `cargo fmt`, `cargo clippy --all-targets` and `cargo test` must be clean.
 
-- `atoms/` — smallest building blocks (Button, Slider, Toggle)
-- `molecules/` — combinations of atoms (MetadataPanel, SliceSlider)
-- `organisms/` — complex UI sections (ViewerCanvas, StudyBrowser)
-- `templates/` — page-level layouts (WorkspaceTemplate, ViewerTemplate)
+## Run-folder conventions
 
-## Rust & Tauri Conventions
+1. **The contract is the files.** `manifest.json`, `config.yaml`,
+   `events.jsonl`, `metrics.json`, `predictions.parquet`, `artifacts/` — see
+   `docs/ARCHITECTURE.md`.
+2. An unknown major `schema_version` is an error, never a guess.
+3. Unknown keys survive a round trip: the config view is for editing, the raw
+   document is for saving.
+4. Never load `predictions.parquet` or image artefacts to answer a summary
+   question.
+5. Only offer a capability the pipeline actually exposes — `check_setup()` reads
+   the CLI's `--help` and reports `canLaunch`.
 
-1. Use `Result<T, E>` for fallible functions, never `panic!`; prefer `Option<T>`
-   over sentinel values.
-2. Use `thiserror` for domain error types; keep Tauri commands thin — delegate
-   to application services:
+## Testing conventions
 
-   ```txt
-   Tauri Command → Application Service → Domain Service → Infrastructure
-   ```
+1. One suite per unit, colocated in `__tests__/`, named after the unit under
+   test.
+2. Arrange–Act–Assert; assert on user-visible text and roles (`getByRole`,
+   `findByText`).
+3. Cover the failure path next to the happy path. Most real defects here were
+   silent failures, not wrong values.
+4. `jest.setup.ts` mocks the Tauri modules globally; a suite that needs real
+   behaviour overrides the mock.
+5. Rust: unit-test parsers, path validation and command construction. No test
+   needs a real Python environment.
+6. E2E (`pnpm test:e2e`) covers the static pages only; anything requiring the
+   desktop shell belongs in Jest.
 
-3. Annotate IPC handlers with `#[tauri::command]` and register them via
-   `generate_handler![]`; share state through `.manage()` + `State<'_, T>`.
-4. Never construct tool commands by string concatenation — use structured
-   arguments and validate everything derived from user input.
-5. Run `cargo clippy --deny warnings` and `cargo fmt` before pushing.
-6. Keep `unsafe` out of this codebase; native tool interaction goes through the
-   process manager.
+## Before you push
 
-## MRI Domain Conventions
+```bash
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+cd src-tauri && cargo fmt && cargo clippy --all-targets && cargo test
+```
 
-1. **Spatial correctness first** — always account for voxel spacing, affine,
-   orientation, origin, coordinate systems, slice order, resampling, and
-   registration. Tests must include rotated and differently oriented datasets.
-2. **Preserve original metadata** — normalization adds canonical concepts but
-   never discards source tags.
-3. **Confidence over authority** — inferred classifications expose confidence
-   and are visually distinguished from authoritative metadata.
-4. **Provenance on every artifact** — any derived image, map, measurement, or
-   report records inputs, operations, software, environment, and outputs.
-5. **Machine-readable QC** — quality results are structured data, not prose.
-6. **Privacy by default** — local processing, no patient data in logs, no
-   automatic uploads to external services.
-
-## Testing Conventions
-
-### Unit tests (Jest)
-
-Break tests into small per-file suites — one `*.test.ts` / `*.test.tsx` per unit
-(component, page, hook, util, provider), colocated in a `__tests__/` directory;
-never merge multiple units into one file. App pages are tested under
-`src/app/__tests__/` and route-group pages (`(app)`, `(info)`) colocate
-`__tests__/page.test.tsx` in the same folder.
-
-1. Test behaviour, not implementation.
-2. Use Arrange-Act-Assert.
-3. Keep tests isolated — each test manages its own state.
-4. Cover boundary conditions and error cases alongside happy paths.
-5. Numerical routines have reference tests with explicitly defined tolerances.
-
-### E2E tests (Playwright)
-
-1. Use `locator`/`getByRole`/`getByText` over raw CSS/XPath.
-2. Mock network via `page.route(...)` so tests don't need external services.
-3. Assert on user-visible state (`toBeVisible`, `toHaveText`).
-4. Cover every page-level flow (`pnpm test:e2e`).
-
-### Imaging tests
-
-1. Test against representative MRI datasets, including rotated and differently
-   oriented volumes.
-2. Verify DICOM metadata preservation after import/export round-trips.
-
-## Before You Push
-
-1. `pnpm lint --filter=@hieudoanm.github.io/mri`
-2. `pnpm format --filter=@hieudoanm.github.io/mri`
-3. `pnpm test --filter=@hieudoanm.github.io/mri`
-4. `pnpm test:e2e --filter=@hieudoanm.github.io/mri`
-5. `pnpm build --filter=@hieudoanm.github.io/mri`
+Update `docs/` when you change the contract, a command, or the roadmap status.

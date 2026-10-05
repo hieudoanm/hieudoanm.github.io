@@ -1,18 +1,25 @@
-import type { FC, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
-export interface BadgeProps {
-  variant?: 'info' | 'success' | 'warning' | 'error' | 'neutral';
-  children: ReactNode;
-}
-
-const variantClass: Record<NonNullable<BadgeProps['variant']>, string> = {
+const TONES = {
+  neutral: 'badge-neutral',
   info: 'badge-info',
   success: 'badge-success',
   warning: 'badge-warning',
   error: 'badge-error',
-  neutral: 'badge-neutral',
-};
+} as const;
 
-export const Badge: FC<BadgeProps> = ({ variant = 'neutral', children }) => (
-  <span className={`badge ${variantClass[variant]}`}>{children}</span>
+export type BadgeTone = keyof typeof TONES;
+
+export const Badge = ({
+  tone = 'neutral',
+  children,
+  title,
+}: {
+  tone?: BadgeTone;
+  children: ReactNode;
+  title?: string;
+}) => (
+  <span className={`badge ${TONES[tone]} badge-sm`} title={title}>
+    {children}
+  </span>
 );
