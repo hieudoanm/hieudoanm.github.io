@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Installation · basic-docs</title>
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">basic-docs</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/"
+    >Basic Docs</a
+  > <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/getting-started/"
+    >Getting Started</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/guide/"
+    >Guide</a
+  > <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/guide/configuration/"
+    >Configuration</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/docs/guide/installation/"
+    aria-current="page">Installation</a
+  > 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">Installation</h1>
+          
+          <h2 id="requirements">Requirements</h2>
+<ul>
+<li>Go 1.21+ (for building from source)</li>
+<li>No Node.js, npm, or Python required</li>
+</ul>
+<h2 id="methods">Methods</h2>
+<h3 id="go-install-recommended">Go Install (Recommended)</h3>
+<pre><code class="language-bash">go install github.com/hieudoanm/pagify@latest
+</code></pre>
+<p>Ensure <code>$(go env GOPATH)/bin</code> is in your <code>$PATH</code>.</p>
+<h3 id="build-from-source">Build from Source</h3>
+<pre><code class="language-bash">git clone https://github.com/hieudoanm/pagify
+cd pagify
+make build
+./bin/pagify --help
+</code></pre>
+<h3 id="homebrew-macos">Homebrew (macOS)</h3>
+<pre><code class="language-bash">brew tap hieudoanm/pagify
+brew install pagify
+</code></pre>
+<h2 id="verify-installation">Verify Installation</h2>
+<pre><code class="language-bash">pagify --version
+</code></pre>
+<p>Should output something like <code>pagify version 0.1.0</code>.</p>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#requirements">Requirements</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#methods">Methods</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#go-install-recommended">Go Install (Recommended)</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#build-from-source">Build from Source</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#homebrew-macos">Homebrew (macOS)</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#verify-installation">Verify Installation</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

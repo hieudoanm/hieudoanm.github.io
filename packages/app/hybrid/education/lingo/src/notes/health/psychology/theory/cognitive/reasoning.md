@@ -6,6 +6,25 @@
 "parentLink":
   "href": "/psychology/cognitive/"
   "label": "Cognitive Psychology"
+"links":
+  - "href": "/psychology/cognitive/reasoning/lights-out"
+    "label": "Lights Out"
+    "description":
+      "Every press reverses a cell and its neighbours, so the board looks
+      uncorrelated until the rule is modelled. Solving it is planning, not
+      search."
+  - "href": "/psychology/cognitive/reasoning/towers"
+    "label": "Towers of Hanoi"
+    "description":
+      "The smallest puzzle with a provably optimal solution. The gap between
+      your move count and 2^n - 1 shows whether the recursion was seen or
+      stumbled into."
+  - "href": "/psychology/cognitive/reasoning/maze"
+    "label": "Maze"
+    "description":
+      "A generated perfect maze with a shortest-path solver. Breadth-first
+      search visits cells in waves; tracing by hand is depth-first, and the cost
+      shows."
 "references":
   - "href": "https://en.wikipedia.org/wiki/Reasoning"
     "label": "Wikipedia: Reasoning"

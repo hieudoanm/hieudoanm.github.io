@@ -12,6 +12,21 @@
     "description":
       "Hold one stimulus and overwrite it repeatedly — attention as a
       continuously updated bottleneck."
+  - "href": "/psychology/cognitive/attention/rock-paper-scissors"
+    "label": "Rock Paper Scissors"
+    "description":
+      "The bot commits first and you counter second, so the win is no longer
+      luck: speed and accuracy trade directly against each other."
+  - "href": "/psychology/cognitive/attention/dino-run"
+    "label": "Dino Run"
+    "description":
+      "An infinite runner whose obstacle rate climbs without warning — sustained
+      attention measured by where the errors turn up."
+  - "href": "/psychology/cognitive/attention/snake"
+    "label": "Snake"
+    "description":
+      "A 12×12 grid on a shrinking time budget — inhibition of the reversal you
+      just reflexly wanted."
 "references":
   - "href": "https://en.wikipedia.org/wiki/Attention"
     "label": "Wikipedia: Attention"

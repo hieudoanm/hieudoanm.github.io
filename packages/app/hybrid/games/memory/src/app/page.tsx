@@ -4,12 +4,6 @@ import { PiMemory } from 'react-icons/pi';
 
 const GAMES = [
   {
-    name: '8-Bit',
-    description: 'Maze, Snake, Dino Run and more',
-    icon: PiMemory,
-    href: '/8-bit/',
-  },
-  {
     name: 'Nikoli',
     description: 'Sudoku, Masyu, Nurikabe and more',
     icon: PiMemory,
@@ -17,7 +11,7 @@ const GAMES = [
   },
   {
     name: 'Puzzles',
-    description: '2048, Lights Out, Towers and more',
+    description: '2048 and sliding puzzles',
     icon: PiMemory,
     href: '/puzzles/',
   },

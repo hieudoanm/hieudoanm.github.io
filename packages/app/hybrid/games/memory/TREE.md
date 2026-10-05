@@ -67,16 +67,6 @@
 │   │   │       │   └── [page.test.tsx](./src/app/(auth)/sign-up/__tests__/page.test.tsx)
 │   │   │       └── [page.tsx](./src/app/(auth)/sign-up/page.tsx)
 │   │   ├── (games)/
-│   │   │   ├── 8-bit/
-│   │   │   │   ├── dino-run/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/8-bit/dino-run/page.tsx)
-│   │   │   │   ├── maze/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/8-bit/maze/page.tsx)
-│   │   │   │   ├── rock-paper-scissors/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/8-bit/rock-paper-scissors/page.tsx)
-│   │   │   │   ├── snake/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/8-bit/snake/page.tsx)
-│   │   │   │   └── [page.tsx](./src/app/(games)/8-bit/page.tsx)
 │   │   │   ├── nikoli/
 │   │   │   │   ├── fillomino/
 │   │   │   │   │   └── [page.tsx](./src/app/(games)/nikoli/fillomino/page.tsx)
@@ -96,12 +86,8 @@
 │   │   │   ├── puzzles/
 │   │   │   │   ├── game2048/
 │   │   │   │   │   └── [page.tsx](./src/app/(games)/puzzles/game2048/page.tsx)
-│   │   │   │   ├── lights-out/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/puzzles/lights-out/page.tsx)
 │   │   │   │   ├── sliding-puzzle/
 │   │   │   │   │   └── [page.tsx](./src/app/(games)/puzzles/sliding-puzzle/page.tsx)
-│   │   │   │   ├── towers/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/puzzles/towers/page.tsx)
 │   │   │   │   └── [page.tsx](./src/app/(games)/puzzles/page.tsx)
 │   │   │   └── tic-tac-toe/
 │   │   │       ├── classic/
@@ -178,45 +164,6 @@
 │   │   ├── [download.ts](./src/content/download.ts)
 │   │   └── [version.ts](./src/content/version.ts)
 │   ├── games/
-│   │   ├── 8-bit/
-│   │   │   ├── DinoRun/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [game.test.ts](./src/games/8-bit/DinoRun/__tests__/game.test.ts)
-│   │   │   │   │   └── [index.test.tsx](./src/games/8-bit/DinoRun/__tests__/index.test.tsx)
-│   │   │   │   ├── [constants.ts](./src/games/8-bit/DinoRun/constants.ts)
-│   │   │   │   ├── [game.ts](./src/games/8-bit/DinoRun/game.ts)
-│   │   │   │   ├── [index.tsx](./src/games/8-bit/DinoRun/index.tsx)
-│   │   │   │   └── [types.ts](./src/games/8-bit/DinoRun/types.ts)
-│   │   │   ├── Maze/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./src/games/8-bit/Maze/__tests__/index.test.tsx)
-│   │   │   │   │   └── [maze.test.ts](./src/games/8-bit/Maze/__tests__/maze.test.ts)
-│   │   │   │   ├── [constants.ts](./src/games/8-bit/Maze/constants.ts)
-│   │   │   │   ├── [index.tsx](./src/games/8-bit/Maze/index.tsx)
-│   │   │   │   ├── [maze.ts](./src/games/8-bit/Maze/maze.ts)
-│   │   │   │   └── [types.ts](./src/games/8-bit/Maze/types.ts)
-│   │   │   ├── RockPaperScissors/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./src/games/8-bit/RockPaperScissors/__tests__/index.test.tsx)
-│   │   │   │   │   └── [utils.test.ts](./src/games/8-bit/RockPaperScissors/__tests__/utils.test.ts)
-│   │   │   │   ├── [index.tsx](./src/games/8-bit/RockPaperScissors/index.tsx)
-│   │   │   │   ├── [types.ts](./src/games/8-bit/RockPaperScissors/types.ts)
-│   │   │   │   └── [utils.ts](./src/games/8-bit/RockPaperScissors/utils.ts)
-│   │   │   ├── Snake/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./src/games/8-bit/Snake/__tests__/index.test.tsx)
-│   │   │   │   │   └── [snake.test.ts](./src/games/8-bit/Snake/__tests__/snake.test.ts)
-│   │   │   │   ├── [constants.ts](./src/games/8-bit/Snake/constants.ts)
-│   │   │   │   ├── [index.tsx](./src/games/8-bit/Snake/index.tsx)
-│   │   │   │   ├── [snake.ts](./src/games/8-bit/Snake/snake.ts)
-│   │   │   │   └── [types.ts](./src/games/8-bit/Snake/types.ts)
-│   │   │   └── _shared/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [GameInstructions.test.tsx](./src/games/8-bit/_shared/__tests__/GameInstructions.test.tsx)
-│   │   │       │   └── [gameData.test.ts](./src/games/8-bit/_shared/__tests__/gameData.test.ts)
-│   │   │       ├── [GameInstructions.tsx](./src/games/8-bit/_shared/GameInstructions.tsx)
-│   │   │       ├── [gameData.tsx](./src/games/8-bit/_shared/gameData.tsx)
-│   │   │       └── [games.ts](./src/games/8-bit/_shared/games.ts)
 │   │   ├── nikoli/
 │   │   │   ├── Fillomino/
 │   │   │   │   ├── __tests__/
@@ -307,15 +254,6 @@
 │   │   │   │   ├── [constants.ts](./src/games/puzzles/Game2048/constants.ts)
 │   │   │   │   ├── [index.tsx](./src/games/puzzles/Game2048/index.tsx)
 │   │   │   │   └── [types.ts](./src/games/puzzles/Game2048/types.ts)
-│   │   │   ├── LightsOut/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [LightsOut.test.tsx](./src/games/puzzles/LightsOut/__tests__/LightsOut.test.tsx)
-│   │   │   │   │   ├── [useLightsOut.test.ts](./src/games/puzzles/LightsOut/__tests__/useLightsOut.test.ts)
-│   │   │   │   │   └── [utils.test.ts](./src/games/puzzles/LightsOut/__tests__/utils.test.ts)
-│   │   │   │   ├── [AGENTS.md](./src/games/puzzles/LightsOut/AGENTS.md)
-│   │   │   │   ├── [index.tsx](./src/games/puzzles/LightsOut/index.tsx)
-│   │   │   │   ├── [useLightsOut.ts](./src/games/puzzles/LightsOut/useLightsOut.ts)
-│   │   │   │   └── [utils.ts](./src/games/puzzles/LightsOut/utils.ts)
 │   │   │   ├── SlidingPuzzle/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── __snapshots__/
@@ -327,19 +265,6 @@
 │   │   │   │   ├── [index.tsx](./src/games/puzzles/SlidingPuzzle/index.tsx)
 │   │   │   │   ├── [useSlidingPuzzle.ts](./src/games/puzzles/SlidingPuzzle/useSlidingPuzzle.ts)
 │   │   │   │   └── [utils.ts](./src/games/puzzles/SlidingPuzzle/utils.ts)
-│   │   │   ├── Towers/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   └── [Towers.test.tsx.snap](./src/games/puzzles/Towers/__tests__/__snapshots__/Towers.test.tsx.snap)
-│   │   │   │   │   └── [Towers.test.tsx](./src/games/puzzles/Towers/__tests__/Towers.test.tsx)
-│   │   │   │   ├── utils/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [towers.test.ts](./src/games/puzzles/Towers/utils/__tests__/towers.test.ts)
-│   │   │   │   │   └── [towers.ts](./src/games/puzzles/Towers/utils/towers.ts)
-│   │   │   │   ├── [AGENTS.md](./src/games/puzzles/Towers/AGENTS.md)
-│   │   │   │   ├── [constants.ts](./src/games/puzzles/Towers/constants.ts)
-│   │   │   │   ├── [index.tsx](./src/games/puzzles/Towers/index.tsx)
-│   │   │   │   └── [types.ts](./src/games/puzzles/Towers/types.ts)
 │   │   │   └── _shared/
 │   │   │       └── [games.ts](./src/games/puzzles/_shared/games.ts)
 │   │   └── tic-tac-toe/

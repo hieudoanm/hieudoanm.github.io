@@ -26,15 +26,14 @@
 ```txt
 src/
 ├── app/                # App Router pages and layouts
-│   ├── (games)/        # Game route group (8-bit, nikoli, puzzles, tic-tac-toe)
+│   ├── (games)/        # Game route group (nikoli, puzzles, tic-tac-toe)
 │   └── (info)/         # Info route group (about, downloads, version)
 ├── components/         # Atomic design components
 │   ├── organisms/      # Header
 │   └── templates/      # ErrorTemplate, NotFoundTemplate
 ├── games/              # Game modules (one dir per category)
-│   ├── 8-bit/          # DinoRun, Maze, RockPaperScissors, Snake
 │   ├── nikoli/         # Fillomino, Heyawake, Masyu, Nurikabe, and more
-│   ├── puzzles/        # Game2048, LightsOut, SlidingPuzzle, Towers
+│   ├── puzzles/        # Game2048, SlidingPuzzle
 │   └── tic-tac-toe/    # classic, duck, notakto, reverse, t3, wild
 └── styles/             # Global CSS (Tailwind base layer)
 ```
@@ -48,9 +47,8 @@ src/
 │  Templates (components/templates/)      │  Page-level layout shells
 ├─────────────────────────────────────────┤
 │  Games (games/)                         │  One module per category
-│    ├── 8-bit/                           │    Maze, Snake, Dino Run
 │    ├── nikoli/                          │    Sudoku, Masyu, Nurikabe
-│    ├── puzzles/                         │    2048, Lights Out, Towers
+│    ├── puzzles/                         │    2048, Sliding Puzzle
 │    └── tic-tac-toe/                     │    Classic, Reverse, Duck, Wild
 ├─────────────────────────────────────────┤
 │  Styles (styles/)                       │  Tailwind base layer, CSS variables
@@ -61,7 +59,7 @@ src/
 
 | Route         | Page                        | Client | Description            |
 | ------------- | --------------------------- | ------ | ---------------------- |
-| `/`           | `(games)/page.tsx`          | Yes    | Home — 5 game cards    |
+| `/`           | `(games)/page.tsx`          | Yes    | Home — 3 game cards    |
 | `/about/`     | `(info)/about/page.tsx`     | No     | About page             |
 | `/downloads/` | `(info)/downloads/page.tsx` | No     | Downloads page         |
 | `/version/`   | `(info)/version/page.tsx`   | No     | Version page           |

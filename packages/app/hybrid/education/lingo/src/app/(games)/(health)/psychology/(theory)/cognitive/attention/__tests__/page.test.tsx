@@ -47,6 +47,25 @@ describe('AttentionPage', () => {
     );
   });
 
+  it('links to the attention drills', () => {
+    render(<AttentionPage />);
+
+    expect(
+      screen.getByRole('link', { name: /Rock Paper Scissors/ })
+    ).toHaveAttribute(
+      'href',
+      '/psychology/cognitive/attention/rock-paper-scissors'
+    );
+    expect(screen.getByRole('link', { name: /Dino Run/ })).toHaveAttribute(
+      'href',
+      '/psychology/cognitive/attention/dino-run'
+    );
+    expect(screen.getByRole('link', { name: /Snake/ })).toHaveAttribute(
+      'href',
+      '/psychology/cognitive/attention/snake'
+    );
+  });
+
   it('lists the references', () => {
     render(<AttentionPage />);
 

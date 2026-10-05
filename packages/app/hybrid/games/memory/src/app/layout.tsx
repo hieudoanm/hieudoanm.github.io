@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://hieudoanm.github.io/open/memory/',
     title: 'Trains, puzzles and odds',
     description:
-      'Memory match, n-back, sudoku, 2048, 8-bit arcade and card odds — all in the browser.',
+      'Memory match, n-back, sudoku, 2048, sliding tiles and logic grids — all in the browser.',
     images: [
       {
         url: '/og/og.png',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Trains, puzzles and odds',
     description:
-      'Memory match, n-back, sudoku, 2048, 8-bit arcade and card odds — all in the browser.',
+      'Memory match, n-back, sudoku, 2048, sliding tiles and logic grids — all in the browser.',
     images: ['/og/og.png'],
   },
   manifest: '/manifest.json',

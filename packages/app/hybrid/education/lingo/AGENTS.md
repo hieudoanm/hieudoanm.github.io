@@ -27,7 +27,10 @@ Reference docs live in `docs/`:
 - `prettier-plugin-tailwindcss` for class sorting
 - Atomic design: atoms → games → templates
 - Each game is a self-contained folder under `src/games/`: `index.tsx` (UI) and
-  `utils.ts` (pure data + logic, zero UI imports)
+  `utils.ts` (pure data + logic, zero UI imports); a game with a state machine
+  or a loop also splits `use<Name>.ts` (state + timers, injectable clock) and
+  `constants.ts` (tunables) out, so the UI stays render-only and the loop is
+  testable without a canvas
 - Games are standalone — no `onClose` prop; pages render them directly
 - `/languages` is a language hub (Duolingo-style list); the flashcard deck lives
   at `/languages/[language]`, pre-rendered via `generateStaticParams`
@@ -198,7 +201,10 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
     note in `src/notes/health/psychology/theory/cognitive/`
   - `/psychology/<theory>/<topic>/<exercise>` — exercises as standalone
     components under `src/games/health/psychology/<theory>/<topic>/`; the
-    cognitive memory drills are `memory-match`, `n-back`, `pi`, and `recall`
+    cognitive memory drills are `memory-match`, `n-back`, `pi`, and `recall`,
+    the cognitive attention drills are `dino-run`, `rock-paper-scissors`, and
+    `snake`, and the cognitive reasoning drills are `lights-out`, `towers`, and
+    `maze`
   - `/psychology/<practice>` — practices: counselling, journaling, mindfulness
   - `/psychology/<scale>` — screening instruments, not diagnostics:
     - beck-depression-inventory
