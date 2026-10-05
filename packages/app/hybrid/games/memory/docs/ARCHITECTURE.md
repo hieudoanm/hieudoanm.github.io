@@ -26,14 +26,13 @@
 ```txt
 src/
 ├── app/                # App Router pages and layouts
-│   ├── (games)/        # Game route group (8-bit, gambling, nikoli, puzzles, tic-tac-toe)
+│   ├── (games)/        # Game route group (8-bit, nikoli, puzzles, tic-tac-toe)
 │   └── (info)/         # Info route group (about, downloads, version)
 ├── components/         # Atomic design components
 │   ├── organisms/      # Header
 │   └── templates/      # ErrorTemplate, NotFoundTemplate
 ├── games/              # Game modules (one dir per category)
 │   ├── 8-bit/          # DinoRun, Maze, RockPaperScissors, Snake
-│   ├── gambling/       # Baccarat, Craps, Keno, Roulette, and more
 │   ├── nikoli/         # Fillomino, Heyawake, Masyu, Nurikabe, and more
 │   ├── puzzles/        # Game2048, LightsOut, SlidingPuzzle, Towers
 │   └── tic-tac-toe/    # classic, duck, notakto, reverse, t3, wild
@@ -50,7 +49,6 @@ src/
 ├─────────────────────────────────────────┤
 │  Games (games/)                         │  One module per category
 │    ├── 8-bit/                           │    Maze, Snake, Dino Run
-│    ├── gambling/                        │    Baccarat, Roulette, Craps
 │    ├── nikoli/                          │    Sudoku, Masyu, Nurikabe
 │    ├── puzzles/                         │    2048, Lights Out, Towers
 │    └── tic-tac-toe/                     │    Classic, Reverse, Duck, Wild

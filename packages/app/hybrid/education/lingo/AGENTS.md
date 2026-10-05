@@ -144,6 +144,14 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
     decomposition
   - `/maths/kaprekar-constant` — Kaprekar constant routine
   - `/maths/prime-numbers` — sieve of Eratosthenes, prime gaps, twin primes
+  - `/maths/probability` — probability-theory note (migrated from the gambling
+    app); links ten casino simulations that make expected value, variance and
+    the gambler's fallacy concrete
+    - `/maths/probability/<game>` — `baccarat`, `card-counter`, `craps`,
+      `hi-lo`, `keno`, `over-under-seven`, `poker-odds`, `roulette`,
+      `slot-machine`, `war`; implementations live in
+      `src/games/stem/maths/probability/<game>/`, with card and dice primitives
+      shared under `probability/_shared/`
 - `/music` — ear-training game (migrated from the `music` app)
   - `/music/pitch` — pitch training
 - `/neuroscience` — neuroscience hub

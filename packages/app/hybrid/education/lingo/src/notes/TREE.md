@@ -122,6 +122,8 @@
 │   │       ├── [stacks.md](./stem/engineering/data-structures/stacks.md)
 │   │       ├── [suffix-arrays.md](./stem/engineering/data-structures/suffix-arrays.md)
 │   │       └── [trie.md](./stem/engineering/data-structures/trie.md)
+│   ├── maths/
+│   │   └── [probability.md](./stem/maths/probability.md)
 │   └── neuroscience/
 │       ├── neuroimaging/
 │       │   ├── eeg/
@@ -144,4 +146,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-26 directories, 114 files
+27 directories, 115 files

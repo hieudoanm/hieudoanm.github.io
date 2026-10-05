@@ -14786,28 +14786,6 @@
 │   │   │   │   │   │   │   │   │   ├── snake/
 │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/8-bit/snake/page.tsx)
 │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/8-bit/page.tsx)
-│   │   │   │   │   │   │   │   ├── gambling/
-│   │   │   │   │   │   │   │   │   ├── baccarat/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/baccarat/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── card-counter/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/card-counter/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── craps/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/craps/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── hi-lo/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/hi-lo/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── keno/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/keno/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── over-under-seven/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/over-under-seven/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── poker-odds/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/poker-odds/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── roulette/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/roulette/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── slot-machine/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/slot-machine/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── war/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/war/page.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/gambling/page.tsx)
 │   │   │   │   │   │   │   │   ├── memory/
 │   │   │   │   │   │   │   │   │   ├── memory-match/
 │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/games/memory/src/app/(games)/memory/memory-match/page.tsx)
@@ -14960,105 +14938,6 @@
 │   │   │   │   │   │   │   │       ├── [GameInstructions.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/_shared/GameInstructions.tsx)
 │   │   │   │   │   │   │   │       ├── [gameData.tsx](./packages/app/hybrid/games/memory/src/games/8-bit/_shared/gameData.tsx)
 │   │   │   │   │   │   │   │       └── [games.ts](./packages/app/hybrid/games/memory/src/games/8-bit/_shared/games.ts)
-│   │   │   │   │   │   │   ├── gambling/
-│   │   │   │   │   │   │   │   ├── Baccarat/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useBaccarat.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/__tests__/useBaccarat.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useBaccarat.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/useBaccarat.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/Baccarat/utils.ts)
-│   │   │   │   │   │   │   │   ├── CardCounter/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useCardCounter.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/__tests__/useCardCounter.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useCardCounter.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/useCardCounter.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/CardCounter/utils.ts)
-│   │   │   │   │   │   │   │   ├── Craps/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Craps/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useCraps.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/__tests__/useCraps.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Craps/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useCraps.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/useCraps.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/Craps/utils.ts)
-│   │   │   │   │   │   │   │   ├── HiLo/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useHiLo.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/__tests__/useHiLo.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useHiLo.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/useHiLo.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/HiLo/utils.ts)
-│   │   │   │   │   │   │   │   ├── Keno/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Keno/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useKeno.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/__tests__/useKeno.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Keno/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useKeno.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/useKeno.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/Keno/utils.ts)
-│   │   │   │   │   │   │   │   ├── OverUnderSeven/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useOverUnderSeven.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/__tests__/useOverUnderSeven.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useOverUnderSeven.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/useOverUnderSeven.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/OverUnderSeven/utils.ts)
-│   │   │   │   │   │   │   │   ├── PokerOdds/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [usePokerOdds.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/__tests__/usePokerOdds.test.tsx)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   │   └── [CardPicker.tsx](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/components/CardPicker.tsx)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [usePokerOdds.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/usePokerOdds.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/PokerOdds/utils.ts)
-│   │   │   │   │   │   │   │   ├── Roulette/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useRoulette.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/__tests__/useRoulette.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useRoulette.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/useRoulette.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/Roulette/utils.ts)
-│   │   │   │   │   │   │   │   ├── SlotMachine/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useSlotMachine.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/__tests__/useSlotMachine.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [constants.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/constants.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [useSlotMachine.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/useSlotMachine.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/SlotMachine/utils.ts)
-│   │   │   │   │   │   │   │   ├── War/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   ├── [index.test.tsx](./packages/app/hybrid/games/memory/src/games/gambling/War/__tests__/index.test.tsx)
-│   │   │   │   │   │   │   │   │   │   ├── [useWar.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/__tests__/useWar.test.ts)
-│   │   │   │   │   │   │   │   │   │   └── [utils.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/__tests__/utils.test.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/games/memory/src/games/gambling/War/index.tsx)
-│   │   │   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/types.ts)
-│   │   │   │   │   │   │   │   │   ├── [useWar.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/useWar.ts)
-│   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/games/memory/src/games/gambling/War/utils.ts)
-│   │   │   │   │   │   │   │   └── _shared/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [cards.test.ts](./packages/app/hybrid/games/memory/src/games/gambling/_shared/__tests__/cards.test.ts)
-│   │   │   │   │   │   │   │       ├── [cards.ts](./packages/app/hybrid/games/memory/src/games/gambling/_shared/cards.ts)
-│   │   │   │   │   │   │   │       └── [games.ts](./packages/app/hybrid/games/memory/src/games/gambling/_shared/games.ts)
 │   │   │   │   │   │   │   ├── memory/
 │   │   │   │   │   │   │   │   ├── MemoryMatch/
 │   │   │   │   │   │   │   │   │   ├── __tests__/
@@ -27083,4 +26962,4 @@
 └── [turbo.json](./turbo.json)
 ```
 
-5784 directories, 21296 files
+5749 directories, 21210 files

@@ -4,6 +4,7 @@ import { GameItem, GamesTemplate } from '@/components/templates/GamesTemplate';
 import { NextPage } from 'next';
 import {
   PiAtom,
+  PiChartBar,
   PiGridFour,
   PiInfinity,
   PiMathOperations,
@@ -50,6 +51,15 @@ const ITEMS: GameItem[] = [
     icon: PiMathOperations,
     href: '/maths/kaprekar-constant/',
     group: 'Number Theory',
+  },
+  {
+    testId: 'maths-probability',
+    name: 'Probability',
+    description:
+      'Ten casino simulations that make expected value, variance and the gambler’s fallacy concrete',
+    icon: PiChartBar,
+    href: '/maths/probability',
+    group: 'Probability',
   },
 ];
 
