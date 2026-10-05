@@ -19,6 +19,12 @@
 │       └── theory/
 │           ├── [biology.md](./health/psychology/theory/biology.md)
 │           ├── [cognitive.md](./health/psychology/theory/cognitive.md)
+│           ├── cognitive/
+│           │   ├── [attention.md](./health/psychology/theory/cognitive/attention.md)
+│           │   ├── [learning.md](./health/psychology/theory/cognitive/learning.md)
+│           │   ├── [memory.md](./health/psychology/theory/cognitive/memory.md)
+│           │   ├── [perception.md](./health/psychology/theory/cognitive/perception.md)
+│           │   └── [reasoning.md](./health/psychology/theory/cognitive/reasoning.md)
 │           ├── [developmental.md](./health/psychology/theory/developmental.md)
 │           └── [social.md](./health/psychology/theory/social.md)
 ├── humanities/
@@ -93,6 +99,8 @@
 │           ├── [production-and-costs.md](./humanities/economics/microeconomics/production-and-costs.md)
 │           └── [supply-and-demand.md](./humanities/economics/microeconomics/supply-and-demand.md)
 ├── stem/
+│   ├── chemistry/
+│   │   └── [periodic-table.md](./stem/chemistry/periodic-table.md)
 │   ├── engineering/
 │   │   ├── algorithms/
 │   │   │   ├── [binary-search.md](./stem/engineering/algorithms/binary-search.md)
@@ -136,4 +144,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-24 directories, 109 files
+26 directories, 114 files

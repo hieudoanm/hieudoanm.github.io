@@ -185,6 +185,12 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
 - `/profile` — user profile
 - `/psychology` — psychology hub
   - `/psychology/<theory>` — theory: biology, cognitive, developmental, social
+  - `/psychology/<theory>/<topic>` — per-topic theory notes; `cognitive` covers
+    attention, learning, memory, perception, and reasoning, each backed by a
+    note in `src/notes/health/psychology/theory/cognitive/`
+  - `/psychology/<theory>/<topic>/<exercise>` — exercises as standalone
+    components under `src/games/health/psychology/<theory>/<topic>/`; the
+    cognitive memory drills are `memory-match`, `n-back`, `pi`, and `recall`
   - `/psychology/<practice>` — practices: counselling, journaling, mindfulness
   - `/psychology/<scale>` — screening instruments, not diagnostics:
     - beck-depression-inventory

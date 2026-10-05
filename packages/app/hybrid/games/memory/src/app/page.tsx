@@ -16,12 +16,6 @@ const GAMES = [
     href: '/gambling/',
   },
   {
-    name: 'Memory',
-    description: 'Emoji card pairing grid, Pi digit memorization, and more',
-    icon: PiMemory,
-    href: '/memory/',
-  },
-  {
     name: 'Nikoli',
     description: 'Sudoku, Masyu, Nurikabe and more',
     icon: PiMemory,

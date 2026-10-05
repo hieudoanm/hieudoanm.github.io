@@ -74,16 +74,6 @@
 │   │   │   │   ├── snake/
 │   │   │   │   │   └── [page.tsx](./src/app/(games)/8-bit/snake/page.tsx)
 │   │   │   │   └── [page.tsx](./src/app/(games)/8-bit/page.tsx)
-│   │   │   ├── memory/
-│   │   │   │   ├── memory-match/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/memory/memory-match/page.tsx)
-│   │   │   │   ├── n-back/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/memory/n-back/page.tsx)
-│   │   │   │   ├── pi/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/memory/pi/page.tsx)
-│   │   │   │   ├── recall/
-│   │   │   │   │   └── [page.tsx](./src/app/(games)/memory/recall/page.tsx)
-│   │   │   │   └── [page.tsx](./src/app/(games)/memory/page.tsx)
 │   │   │   ├── nikoli/
 │   │   │   │   ├── fillomino/
 │   │   │   │   │   └── [page.tsx](./src/app/(games)/nikoli/fillomino/page.tsx)
@@ -182,8 +172,6 @@
 │   │   ├── [about.ts](./src/content/about.ts)
 │   │   ├── [download.ts](./src/content/download.ts)
 │   │   └── [version.ts](./src/content/version.ts)
-│   ├── data/
-│   │   └── [pi.ts](./src/data/pi.ts)
 │   ├── games/
 │   │   ├── 8-bit/
 │   │   │   ├── DinoRun/
@@ -223,41 +211,6 @@
 │   │   │       │   └── [gameData.test.ts](./src/games/8-bit/_shared/__tests__/gameData.test.ts)
 │   │   │       ├── [GameInstructions.tsx](./src/games/8-bit/_shared/GameInstructions.tsx)
 │   │   │       └── [gameData.tsx](./src/games/8-bit/_shared/gameData.tsx)
-│   │   ├── memory/
-│   │   │   ├── MemoryMatch/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [MemoryMatch.test.tsx](./src/games/memory/MemoryMatch/__tests__/MemoryMatch.test.tsx)
-│   │   │   │   │   ├── [useMemoryMatch.test.ts](./src/games/memory/MemoryMatch/__tests__/useMemoryMatch.test.ts)
-│   │   │   │   │   └── [utils.test.ts](./src/games/memory/MemoryMatch/__tests__/utils.test.ts)
-│   │   │   │   ├── [index.tsx](./src/games/memory/MemoryMatch/index.tsx)
-│   │   │   │   ├── [useMemoryMatch.ts](./src/games/memory/MemoryMatch/useMemoryMatch.ts)
-│   │   │   │   └── [utils.ts](./src/games/memory/MemoryMatch/utils.ts)
-│   │   │   ├── NBack/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [NBack.test.tsx](./src/games/memory/NBack/__tests__/NBack.test.tsx)
-│   │   │   │   │   └── [constants.test.ts](./src/games/memory/NBack/__tests__/constants.test.ts)
-│   │   │   │   ├── [constants.ts](./src/games/memory/NBack/constants.ts)
-│   │   │   │   └── [index.tsx](./src/games/memory/NBack/index.tsx)
-│   │   │   ├── PiNumber/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [Pi.test.tsx](./src/games/memory/PiNumber/__tests__/Pi.test.tsx)
-│   │   │   │   │   ├── [constants.test.ts](./src/games/memory/PiNumber/__tests__/constants.test.ts)
-│   │   │   │   │   ├── [keyHandlers.test.ts](./src/games/memory/PiNumber/__tests__/keyHandlers.test.ts)
-│   │   │   │   │   └── [usePiGame.test.ts](./src/games/memory/PiNumber/__tests__/usePiGame.test.ts)
-│   │   │   │   ├── [constants.ts](./src/games/memory/PiNumber/constants.ts)
-│   │   │   │   ├── [index.tsx](./src/games/memory/PiNumber/index.tsx)
-│   │   │   │   ├── [keyHandlers.ts](./src/games/memory/PiNumber/keyHandlers.ts)
-│   │   │   │   └── [usePiGame.ts](./src/games/memory/PiNumber/usePiGame.ts)
-│   │   │   └── Recall/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [Recall.test.tsx](./src/games/memory/Recall/__tests__/Recall.test.tsx)
-│   │   │       │   ├── [constants.test.ts](./src/games/memory/Recall/__tests__/constants.test.ts)
-│   │   │       │   ├── [useHighStreak.test.ts](./src/games/memory/Recall/__tests__/useHighStreak.test.ts)
-│   │   │       │   └── [useRecall.test.ts](./src/games/memory/Recall/__tests__/useRecall.test.ts)
-│   │   │       ├── [constants.ts](./src/games/memory/Recall/constants.ts)
-│   │   │       ├── [index.tsx](./src/games/memory/Recall/index.tsx)
-│   │   │       ├── [useHighStreak.ts](./src/games/memory/Recall/useHighStreak.ts)
-│   │   │       └── [useRecall.ts](./src/games/memory/Recall/useRecall.ts)
 │   │   ├── nikoli/
 │   │   │   ├── Fillomino/
 │   │   │   │   ├── __tests__/

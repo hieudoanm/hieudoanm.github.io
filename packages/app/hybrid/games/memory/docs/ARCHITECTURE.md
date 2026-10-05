@@ -5,7 +5,7 @@
 - Hybrid app that runs as a **web app** (browser), **desktop app** (Tauri), and
   **mobile app** (Tauri Mobile)
 - Static export for offline-first PWA support
-- Four memory and cognitive training games with shared infrastructure
+- Board, card and number games with shared infrastructure
 - Type-safe throughout with strict TypeScript
 
 ## Tech Stack
@@ -26,17 +26,17 @@
 ```txt
 src/
 ├── app/                # App Router pages and layouts
-│   ├── (games)/        # Game route group (memory-match, pi, n-back, recall)
+│   ├── (games)/        # Game route group (8-bit, gambling, nikoli, puzzles, tic-tac-toe)
 │   └── (info)/         # Info route group (about, downloads, version)
 ├── components/         # Atomic design components
 │   ├── organisms/      # Header
 │   └── templates/      # ErrorTemplate, NotFoundTemplate
-├── games/              # Game modules (one dir per game)
-│   ├── MemoryMatch/    # types, utils, hooks, component
-│   ├── PiNumber/       # constants, keyHandlers, hooks, component
-│   ├── NBack/          # constants, component
-│   └── Recall/         # constants, hooks, component
-├── data/               # Shared data (pi digits)
+├── games/              # Game modules (one dir per category)
+│   ├── 8-bit/          # DinoRun, Maze, RockPaperScissors, Snake
+│   ├── gambling/       # Baccarat, Craps, Keno, Roulette, and more
+│   ├── nikoli/         # Fillomino, Heyawake, Masyu, Nurikabe, and more
+│   ├── puzzles/        # Game2048, LightsOut, SlidingPuzzle, Towers
+│   └── tic-tac-toe/    # classic, duck, notakto, reverse, t3, wild
 └── styles/             # Global CSS (Tailwind base layer)
 ```
 
@@ -48,13 +48,12 @@ src/
 ├─────────────────────────────────────────┤
 │  Templates (components/templates/)      │  Page-level layout shells
 ├─────────────────────────────────────────┤
-│  Games (games/)                         │  One module per game
-│    ├── MemoryMatch/                     │    Card matching with emoji categories
-│    ├── PiNumber/                        │    Pi digit memorization
-│    ├── NBack/                           │    Dual n-back cognitive test
-│    └── Recall/                          │    Progressive digit recall
-├─────────────────────────────────────────┤
-│  Data (data/)                           │  Shared pi digit sequences
+│  Games (games/)                         │  One module per category
+│    ├── 8-bit/                           │    Maze, Snake, Dino Run
+│    ├── gambling/                        │    Baccarat, Roulette, Craps
+│    ├── nikoli/                          │    Sudoku, Masyu, Nurikabe
+│    ├── puzzles/                         │    2048, Lights Out, Towers
+│    └── tic-tac-toe/                     │    Classic, Reverse, Duck, Wild
 ├─────────────────────────────────────────┤
 │  Styles (styles/)                       │  Tailwind base layer, CSS variables
 └─────────────────────────────────────────┘
@@ -62,18 +61,14 @@ src/
 
 ## Routing
 
-| Route            | Page                            | Client | Description            |
-| ---------------- | ------------------------------- | ------ | ---------------------- |
-| `/`              | `(games)/page.tsx`              | Yes    | Home — 4 game cards    |
-| `/memory-match/` | `(games)/memory-match/page.tsx` | Yes    | Memory Match game      |
-| `/pi/`           | `(games)/pi/page.tsx`           | Yes    | Pi digit game          |
-| `/n-back/`       | `(games)/n-back/page.tsx`       | Yes    | N-Back cognitive test  |
-| `/recall/`       | `(games)/recall/page.tsx`       | Yes    | Recall game            |
-| `/about/`        | `(info)/about/page.tsx`         | No     | About page             |
-| `/downloads/`    | `(info)/downloads/page.tsx`     | No     | Downloads page         |
-| `/version/`      | `(info)/version/page.tsx`       | No     | Version page           |
-| `*`              | `not-found.tsx`                 | No     | 404 page               |
-| `*`              | `error.tsx`                     | Yes    | Runtime error boundary |
+| Route         | Page                        | Client | Description            |
+| ------------- | --------------------------- | ------ | ---------------------- |
+| `/`           | `(games)/page.tsx`          | Yes    | Home — 5 game cards    |
+| `/about/`     | `(info)/about/page.tsx`     | No     | About page             |
+| `/downloads/` | `(info)/downloads/page.tsx` | No     | Downloads page         |
+| `/version/`   | `(info)/version/page.tsx`   | No     | Version page           |
+| `*`           | `not-found.tsx`             | No     | 404 page               |
+| `*`           | `error.tsx`                 | Yes    | Runtime error boundary |
 
 ## Game Architecture Pattern
 
@@ -84,7 +79,7 @@ Each game follows a separation of concerns:
 | `constants.ts`   | Grid size, timing, level constants                  | No         |
 | `utils.ts`       | Pure functions — matching, generation, highlighting | No         |
 | `use*.ts`        | Custom hooks — game state, scoring, persistence     | No         |
-| `keyHandlers.ts` | Keyboard event handlers (PiNumber)                  | No         |
+| `keyHandlers.ts` | Keyboard event handlers, where a game needs them    | No         |
 | `index.tsx`      | React component — renders UI, controls, game board  | Yes        |
 
 ## Rendering Strategy
@@ -97,9 +92,7 @@ Each game follows a separation of concerns:
 ## State Management
 
 - Local state with `useState` / `useReducer` — component-scoped per game
-- Custom hooks for game logic (`useMemoryMatch`, `usePiGame`, `useRecall`)
-- `useHighStreak` hook for cross-session score persistence (localStorage)
-- `getHighScore()` / `setHighScore()` for Pi game persistence
+- Custom hooks for game logic, one per game module
 
 ## Styling
 

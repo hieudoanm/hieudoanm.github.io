@@ -1,9 +1,9 @@
 # Hieu Doan
 
-## Table of Contents
+## Skip To
 
 - [Hieu Doan](#hieu-doan)
-  - [Table of Contents](#table-of-contents)
+  - [Skip To](#skip-to)
   - [Overview](#overview)
   - [Education](#education)
     - [Master of Science (MSc) of Cognitive Neuroimaging \& Data Science (Computational Neuroscience)](#master-of-science-msc-of-cognitive-neuroimaging--data-science-computational-neuroscience)
@@ -19,12 +19,24 @@
 
 ## Overview
 
-| About                | Links                             |
-| -------------------- | --------------------------------- |
-| Data Science         | [Python][python]                  |
-| Web Development      | [TypeScript][ts]                  |
-| Headless Development | [Go][go] - [Rust][rust]           |
-| Native Development   | [Kotlin][kotlin] - [Swift][swift] |
+- `BFF`: Back-end for Front-end
+- `CLI`: Command-Line Interface
+- `DevOps`: Development and Operations
+
+| No  | Development        | Languages        | Techstack                                       |
+| --- | ------------------ | ---------------- | ----------------------------------------------- |
+| 1   | Data Analyst       | [Python][python] | `pandas` / `numpy` / `matplotlib`               |
+| 2   | Data Science       | [Python][python] | `TensorFlow` / `PyTorch`                        |
+| 3   | Web                | [TypeScript][ts] | `React` - `Next.js` / `TailwindCSS` / `DaisyUI` |
+| 4   | BFF                | [TypeScript][ts] | `GraphQL` / `tRPC`                              |
+| 5   | Back-end           | `Java`           | `Spring Boot` / `PostgreSQL` / `Kafka`          |
+| 6   | DevOps             | `Bash`           | `Docker` / `GitHub Actions`                     |
+| 7   | CLI ([Go][go])     | [Go][go]         | `Cobra` / `BubbleTea`                           |
+| 8   | CLI ([Rust][rust]) | [Rust][rust]     | `Clap` / `RatatUI`                              |
+| 9   | Android            | [Kotlin][kotlin] | `Jetpack Compose`                               |
+| 10  | iOS                | [Swift][swift]   | `SwiftUI`                                       |
+
+[Back to Skip To](#skip-to)
 
 ## Education
 
@@ -33,6 +45,7 @@
 - University: [University of Birmingham][uob]
 - Location: [Birmingham, United Kingdom][birmingham]
 - Period: September 2026 - September 2027 (1 year)
+- Research Project: TBD
 
 ---
 
@@ -41,6 +54,7 @@
 - University: [Royal Melbourne Institute of Technology (RMIT)][rmit]
 - Location: [Ho Chi Minh City, Vietnam][hcm]
 - Period: October 2022 - September 2025 (3 years)
+- Research Project: Effects of Antidepressant and Antimuscarinic on Obstructive Sleep Apnea: A Meta-Analysis of Combination Treatment
 
 ---
 
@@ -49,10 +63,11 @@
 - University: [LAB University of Applied Sciences][lab]
 - Location: [Lahti, Finland][lahti]
 - Period: September 2013 - December 2016 (3.5 years)
+- Thesis: Application of CI/CD in Software Development
 
 ---
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Skip To](#skip-to)
 
 ## Experiences
 
@@ -62,7 +77,7 @@
 - Location: [Ho Chi Minh City, Vietnam][hcm]
 - Period: October 2026 to September 2027 (1 year)
 - Techstack
-  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`
+  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`, `Kafka`
   - Front-end: [TypeScript][ts], `React`, `Apollo GraphQL`
 
 ---
@@ -72,7 +87,7 @@
 - Company: [NAB][nab]
 - Location: [Ho Chi Minh City, Vietnam][hcm]
 - Period: October 2023 to September 2025 (2 years)
-  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`
+  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`, `Kafka`
   - Front-end: [TypeScript][ts], `React`, `Apollo GraphQL`
 
 ---
@@ -83,7 +98,7 @@
 - Location: [Ho Chi Minh City, Vietnam][hcm]
 - Period: August 2021 to September 2023 (2 years 1 month)
 - Techstack
-  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`
+  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`, `Kafka`
   - Front-end: [TypeScript][ts], `React`, `Apollo GraphQL`
 
 ---
@@ -115,9 +130,9 @@
 - Period: January 2015 to February 2017 (2 years 2 months)
 - Techstack: `JavaScript`, `angular.js`
 
----
+[Back to Skip To](#skip-to)
 
-[Back to Table of Contents](#table-of-contents)
+---
 
 <!-- Universities -->
 
