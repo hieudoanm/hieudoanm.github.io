@@ -1622,7 +1622,7 @@ importers:
   packages/app/hybrid/medical/mri:
     dependencies:
       '@tanstack/react-table':
-        specifier: ^8.21.3
+        specifier: 8.21.3
         version: 8.21.3(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@tauri-apps/api':
         specifier: 2.12.1
