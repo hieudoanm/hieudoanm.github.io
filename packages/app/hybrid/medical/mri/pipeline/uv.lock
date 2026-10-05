@@ -1824,6 +1824,7 @@ name = "pipeline"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "joblib" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "pydantic" },
@@ -1897,6 +1898,7 @@ dev = [
 requires-dist = [
     { name = "captum", marker = "extra == 'explainability'", specifier = "==0.9.0" },
     { name = "duckdb", marker = "extra == 'storage'", specifier = "==1.5.6" },
+    { name = "joblib", specifier = "==1.6.0" },
     { name = "mlflow", marker = "extra == 'tracking'", specifier = "==3.16.1" },
     { name = "nibabel", marker = "extra == 'imaging'", specifier = "==5.4.2" },
     { name = "nilearn", marker = "extra == 'imaging'", specifier = "==0.14.1" },
