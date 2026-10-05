@@ -9,6 +9,7 @@ const eslintConfig = defineConfig([
     'next-env.d.ts',
     'node_modules/**',
     'out/**',
+    'pipeline',
     'src-tauri/**',
     'src-tauri/target/**',
   ]),

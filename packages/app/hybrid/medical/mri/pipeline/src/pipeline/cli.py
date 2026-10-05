@@ -1,13 +1,15 @@
 """CLI entry point for the MRI pipeline."""
 
-import typer
-from typing import Optional
 import json
+
+import typer
+
 from pipeline.core import check_system
 
 app = typer.Typer(
     name="pipeline",
-    help="MRI Pipeline for predicting post-stroke aphasia outcome from lesion MRI plus clinical data",
+    help="MRI Pipeline for predicting post-stroke aphasia outcome "
+    "from lesion MRI plus clinical data",
     add_completion=False,
 )
 
@@ -19,50 +21,54 @@ def doctor(
 ) -> None:
     """Check system dependencies and configuration."""
     typer.echo("Pipeline doctor - checking system...")
-    
+
     system_info = check_system(verbose=verbose)
-    
+
     typer.echo(f"\nPython version: {system_info['python_version']}")
-    typer.echo(f"Platform: {system_info['platform']['system']} ({system_info['platform']['machine']})")
-    
+    typer.echo(
+        f"Platform: {system_info['platform']['system']} ({system_info['platform']['machine']})"
+    )
+
     device = system_info['device']
     typer.echo(f"\nAvailable devices: {', '.join(device['available_devices'])}")
     typer.echo(f"Recommended device: {device['recommended_device']}")
-    
+
     if device.get('cuda_available'):
         typer.echo(f"CUDA devices: {device['cuda_device_count']}")
         typer.echo(f"CUDA device name: {device['cuda_device_name']}")
-    
+
     deps = system_info['dependencies']
     typer.echo("\nRequired dependencies:")
     for dep, installed in deps['required'].items():
         status = "✓" if installed else "✗"
         typer.echo(f"  {status} {dep}")
-    
+
     typer.echo("\nOptional dependencies:")
     for dep, installed in deps['optional'].items():
         status = "✓" if installed else "✗"
         typer.echo(f"  {status} {dep}")
-    
+
     paths = system_info['paths']
     typer.echo(f"\nData path: {paths['data_path']}")
     typer.echo(f"Data path exists: {'✓' if paths['data_path_exists'] else '✗'}")
-    
+
     if verbose:
         typer.echo("\n" + "="*50)
         typer.echo("Full system info:")
         typer.echo(json.dumps(system_info, indent=2, default=str))
-    
+
     typer.echo("\n✓ System check complete")
 
 
 @app.command()
 def export_schemas(
-    output_dir: str = typer.Option("schemas/", "--output-dir", "-o", help="Output directory for schemas"),
+    output_dir: str = typer.Option(
+        "schemas/", "--output-dir", "-o", help="Output directory for schemas"
+    ),
 ) -> None:
     """Export configuration schemas as JSON Schema."""
     from pipeline.schemas import export_all_schemas
-    
+
     typer.echo(f"Exporting schemas to {output_dir}...")
     export_all_schemas(output_dir)
     typer.echo("✓ Schemas exported successfully")
@@ -74,13 +80,13 @@ def list_runs(
 ) -> None:
     """List all runs."""
     from pipeline.core import list_runs
-    
+
     runs = list_runs(output_dir)
-    
+
     if not runs:
         typer.echo("No runs found.")
         return
-    
+
     typer.echo(f"Found {len(runs)} run(s):")
     for run in runs:
         manifest = run["manifest"]
@@ -109,8 +115,10 @@ def data(
 @app.command()
 def run(
     config: str = typer.Option(..., "--config", "-c", help="Path to a YAML configuration file"),
-    output_dir: str = typer.Option("runs/", "--output-dir", "-o", help="Parent directory for run folders"),
-    run_id: Optional[str] = typer.Option(None, "--run-id", help="Run id; generated when omitted"),
+    output_dir: str = typer.Option(
+        "runs/", "--output-dir", "-o", help="Parent directory for run folders"
+    ),
+    run_id: str | None = typer.Option(None, "--run-id", help="Run id; generated when omitted"),
 ) -> None:
     """Run the configured stages and write one run folder.
 

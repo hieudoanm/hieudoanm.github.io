@@ -63,7 +63,9 @@ def test_null_simulation_does_not_touch_the_global_random_state():
 
 
 def test_null_simulation_error_rate_is_bracketed_by_its_interval():
-    result = null_simulation_test(normal_null_scores(n_folds=4), n_simulations=300, n_folds=4, seed=1)
+    result = null_simulation_test(
+        normal_null_scores(n_folds=4), n_simulations=300, n_folds=4, seed=1
+    )
 
     assert result["ci_lower"] <= result["empirical_error_rate"] <= result["ci_upper"]
     assert 0.0 <= result["empirical_error_rate"] <= 1.0
@@ -119,7 +121,11 @@ def test_calibration_reports_the_best_candidate_and_a_conclusion():
     )
 
     assert len(result["results"]) == 3
-    assert result["best_df_scaling"] in [pytest.approx(0.1), pytest.approx(0.55), pytest.approx(1.0)]
+    assert result["best_df_scaling"] in [
+        pytest.approx(0.1),
+        pytest.approx(0.55),
+        pytest.approx(1.0),
+    ]
     assert result["best_error_rate"] == pytest.approx(
         min(row["error_rate"] for row in result["results"])
     )

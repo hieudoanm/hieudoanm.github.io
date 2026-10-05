@@ -14,13 +14,15 @@ Two rules make the estimate meaningful:
   between candidates is not confounded by the random draw.
 """
 
-import numpy as np
 import hashlib
-from typing import Any, Callable, Dict, List, Tuple
+from collections.abc import Callable
+from typing import Any
+
+import numpy as np
 
 from pipeline.core.stats import corrected_paired_t_test
 
-ScoreGenerator = Callable[[np.random.Generator], Tuple[np.ndarray, np.ndarray]]
+ScoreGenerator = Callable[[np.random.Generator], tuple[np.ndarray, np.ndarray]]
 
 
 def simulate_null_scores(
@@ -29,7 +31,7 @@ def simulate_null_scores(
     mean: float = 0.8,
     std: float = 0.1,
     correlation: float = 0.5,
-) -> Tuple[np.ndarray, np.ndarray]:
+) -> tuple[np.ndarray, np.ndarray]:
     """Draw two equally good but distinct sets of per-fold scores.
 
     Cross-validated scores of two models on the same folds are correlated, not
@@ -77,7 +79,7 @@ def normal_null_scores(
         null_simulation_test(normal_null_scores(n_folds=4), n_folds=4)
     """
 
-    def generator(rng: np.random.Generator) -> Tuple[np.ndarray, np.ndarray]:
+    def generator(rng: np.random.Generator) -> tuple[np.ndarray, np.ndarray]:
         return simulate_null_scores(rng, n_folds, mean=mean, std=std, correlation=correlation)
 
     return generator
@@ -90,7 +92,7 @@ def null_simulation_test(
     df_scaling: float = 0.45,
     alpha: float = 0.05,
     seed: int = 42,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Estimate the empirical type-I error rate of the corrected paired test.
 
     Args:
@@ -106,7 +108,7 @@ def null_simulation_test(
     """
     rng = np.random.default_rng(seed)
 
-    p_values: List[float] = []
+    p_values: list[float] = []
     rejections = 0
     for _ in range(n_simulations):
         scores1, scores2 = score_generator(rng)
@@ -144,10 +146,10 @@ def calibrate_df_scaling(
     n_folds: int = 4,
     target_alpha: float = 0.05,
     n_simulations: int = 1000,
-    scaling_range: Tuple[float, float] = (0.1, 3.0),
+    scaling_range: tuple[float, float] = (0.1, 3.0),
     n_steps: int = 10,
     seed: int = 42,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Search for the degrees-of-freedom scaling that matches `target_alpha`.
 
     Every candidate is evaluated on the same simulated comparisons (common
@@ -170,7 +172,7 @@ def calibrate_df_scaling(
 
     # One data set, reused for every candidate.
     rng = np.random.default_rng(seed)
-    simulated: List[Tuple[np.ndarray, np.ndarray]] = [
+    simulated: list[tuple[np.ndarray, np.ndarray]] = [
         score_generator(rng) for _ in range(n_simulations)
     ]
 
@@ -200,7 +202,7 @@ def calibrate_df_scaling(
     }
 
 
-def _fingerprint(simulated: List[Tuple[np.ndarray, np.ndarray]]) -> str:
+def _fingerprint(simulated: list[tuple[np.ndarray, np.ndarray]]) -> str:
     """Digest of the shared simulated data, so a reader can prove it was reused."""
     hasher = hashlib.sha256()
     for scores1, scores2 in simulated:
@@ -210,14 +212,14 @@ def _fingerprint(simulated: List[Tuple[np.ndarray, np.ndarray]]) -> str:
 
 
 def _rate_for_scaling(
-    simulated: List[Tuple[np.ndarray, np.ndarray]],
+    simulated: list[tuple[np.ndarray, np.ndarray]],
     df_scaling: float,
     n_folds: int,
     alpha: float,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Type-I error rate of one scaling on an already simulated data set."""
     rejections = 0
-    p_values: List[float] = []
+    p_values: list[float] = []
     for scores1, scores2 in simulated:
         p_value = corrected_paired_t_test(
             scores1,
@@ -244,7 +246,7 @@ def _rate_for_scaling(
     }
 
 
-def _clopper_pearson(successes: int, total: int, confidence: float) -> Tuple[float, float]:
+def _clopper_pearson(successes: int, total: int, confidence: float) -> tuple[float, float]:
     """Exact binomial confidence interval for a proportion."""
     from scipy import stats as scipy_stats
 
@@ -261,8 +263,8 @@ def _clopper_pearson(successes: int, total: int, confidence: float) -> Tuple[flo
 
 
 def _calibration_conclusion(
-    calibrated: List[Dict[str, Any]],
-    best: Dict[str, Any],
+    calibrated: list[dict[str, Any]],
+    best: dict[str, Any],
     target_alpha: float,
 ) -> str:
     """One sentence a reader can paste into a methods section."""

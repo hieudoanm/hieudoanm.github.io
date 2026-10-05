@@ -1,9 +1,9 @@
 """System health checks and dependency verification."""
 
-import sys
 import platform
-from typing import Dict, Any, Optional
+import sys
 from pathlib import Path
+from typing import Any
 
 
 def get_python_version() -> str:
@@ -11,7 +11,7 @@ def get_python_version() -> str:
     return f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
 
 
-def get_platform_info() -> Dict[str, str]:
+def get_platform_info() -> dict[str, str]:
     """Get platform information."""
     return {
         "system": platform.system(),
@@ -20,14 +20,14 @@ def get_platform_info() -> Dict[str, str]:
     }
 
 
-def get_device_info() -> Dict[str, Any]:
+def get_device_info() -> dict[str, Any]:
     """Get device information (CUDA, MPS, CPU)."""
     device_info = {
         "platform": platform.system(),
         "available_devices": ["cpu"],
         "recommended_device": "cpu",
     }
-    
+
     # Try to detect CUDA
     try:
         import torch
@@ -42,7 +42,7 @@ def get_device_info() -> Dict[str, Any]:
     except ImportError:
         device_info["cuda_available"] = False
         device_info["torch_installed"] = False
-    
+
     # Try to detect MPS (Apple Silicon)
     try:
         import torch
@@ -55,11 +55,11 @@ def get_device_info() -> Dict[str, Any]:
             device_info["mps_available"] = False
     except ImportError:
         device_info["mps_available"] = False
-    
+
     return device_info
 
 
-def check_dependencies() -> Dict[str, Any]:
+def check_dependencies() -> dict[str, Any]:
     """Check if required dependencies are installed."""
     dependencies = {
         "numpy": False,
@@ -68,7 +68,7 @@ def check_dependencies() -> Dict[str, Any]:
         "typer": False,
         "yaml": False,  # PyYAML imports as yaml
     }
-    
+
     optional_dependencies = {
         "torch": False,
         "nibabel": False,
@@ -76,32 +76,32 @@ def check_dependencies() -> Dict[str, Any]:
         "scikit-learn": False,
         "xgboost": False,
     }
-    
+
     for dep in dependencies:
         try:
             __import__(dep)
             dependencies[dep] = True
         except ImportError:
             pass
-    
+
     # Rename yaml back to pyyaml for display
     if "yaml" in dependencies:
         dependencies["pyyaml"] = dependencies.pop("yaml")
-    
+
     for dep in optional_dependencies:
         try:
             __import__(dep)
             optional_dependencies[dep] = True
         except ImportError:
             pass
-    
+
     return {
         "required": dependencies,
         "optional": optional_dependencies,
     }
 
 
-def check_paths(data_path: str = "data/") -> Dict[str, Any]:
+def check_paths(data_path: str = "data/") -> dict[str, Any]:
     """Check if required paths exist and are accessible."""
     path_info = {
         "data_path": str(Path(data_path).absolute()),
@@ -109,14 +109,14 @@ def check_paths(data_path: str = "data/") -> Dict[str, Any]:
         "data_path_readable": False,
         "cwd": str(Path.cwd()),
     }
-    
+
     if Path(data_path).exists():
         path_info["data_path_readable"] = Path(data_path).is_dir()
-    
+
     return path_info
 
 
-def check_system(verbose: bool = False) -> Dict[str, Any]:
+def check_system(verbose: bool = False) -> dict[str, Any]:
     """Run full system check."""
     system_info = {
         "python_version": get_python_version(),
@@ -125,8 +125,8 @@ def check_system(verbose: bool = False) -> Dict[str, Any]:
         "dependencies": check_dependencies(),
         "paths": check_paths(),
     }
-    
+
     if verbose:
         system_info["sys_path"] = sys.path
-    
+
     return system_info

@@ -1,9 +1,9 @@
 """Cohort builder for participant selection."""
 
-import pandas as pd
-from pathlib import Path
-from typing import Dict, Any, Optional, List
 from enum import Enum
+from pathlib import Path
+
+import pandas as pd
 
 
 class SessionRule(str, Enum):
@@ -14,7 +14,7 @@ class SessionRule(str, Enum):
     WITH_T1 = "with_t1"
     WITH_LESION = "with_lesion"
 
-    def column(self) -> Optional[str]:
+    def column(self) -> str | None:
         """The column this rule needs, or None when it only needs a session label."""
         return {
             SessionRule.WITH_WAB_AQ: "wab_aq",
@@ -31,7 +31,7 @@ class SessionRule(str, Enum):
 SESSION_COLUMNS = ("session_id", "session", "session_label")
 
 
-def _find_session_column(df: pd.DataFrame) -> Optional[str]:
+def _find_session_column(df: pd.DataFrame) -> str | None:
     for candidate in SESSION_COLUMNS:
         if candidate in df.columns:
             return candidate
@@ -49,10 +49,12 @@ def _session_key(
     share one ascending sort.
     """
     label = df[session_column].astype("string").str.extract(r"(\d+)", expand=False)
-    numbers = pd.to_numeric(label, errors="coerce").fillna(float("inf"))
+    numbers = pd.to_numeric(label, errors="coerce")
+    numbers = numbers.fillna(float("inf"))
+    numbers_f = numbers.astype(float)
     if descending:
-        numbers = -numbers
-    return numbers
+        numbers_f = -(numbers_f)
+    return pd.Series(numbers_f.values, index=df.index, dtype=float)
 
 
 def _rule_key(df: pd.DataFrame, rule: SessionRule) -> pd.Series:
@@ -66,7 +68,7 @@ def _rule_key(df: pd.DataFrame, rule: SessionRule) -> pd.Series:
 
 class CohortBuilder:
     """Builder for creating a cohort dataframe from BIDS participants.tsv."""
-    
+
     def __init__(
         self,
         participants_tsv: str,
@@ -80,21 +82,21 @@ class CohortBuilder:
         """
         self.participants_tsv = Path(participants_tsv)
         self.session_rule = session_rule
-        self.cohort_df: Optional[pd.DataFrame] = None
-    
+        self.cohort_df: pd.DataFrame | None = None
+
     def load_participants(self) -> pd.DataFrame:
         """Load participants.tsv file."""
         if not self.participants_tsv.exists():
             raise FileNotFoundError(f"Participants file not found: {self.participants_tsv}")
-        
+
         df = pd.read_csv(self.participants_tsv, sep="\t")
-        
+
         # Ensure participant_id column exists
         if "participant_id" not in df.columns:
             raise ValueError("participants.tsv must contain 'participant_id' column")
-        
+
         return df
-    
+
     def apply_session_rule(self, df: pd.DataFrame) -> pd.DataFrame:
         """Reduce the table to exactly one row per participant.
 
@@ -139,21 +141,21 @@ class CohortBuilder:
         ranked = ranked.sort_values(["participant_id", "_rule_key", "_session_key"])
         selected = ranked.groupby("participant_id", as_index=False).head(1)
         return selected.drop(columns=["_session_key", "_rule_key"]).reset_index(drop=True)
-    
+
     def filter_required_columns(
         self,
         df: pd.DataFrame,
-        required_columns: List[str],
+        required_columns: list[str],
     ) -> pd.DataFrame:
         """Filter to participants who have all required columns."""
         # Drop rows with missing values in required columns
         filtered_df = df.dropna(subset=required_columns)
-        
+
         return filtered_df
-    
+
     def build(
         self,
-        required_columns: Optional[List[str]] = None,
+        required_columns: list[str] | None = None,
     ) -> pd.DataFrame:
         """Build the cohort dataframe.
         
@@ -164,44 +166,44 @@ class CohortBuilder:
             DataFrame with one row per participant
         """
         df = self.load_participants()
-        
+
         # Apply session rule
         df = self.apply_session_rule(df)
-        
+
         # Filter required columns if specified
         if required_columns:
             df = self.filter_required_columns(df, required_columns)
-        
+
         self.cohort_df = df
         return df
-    
+
     def get_cohort_size(self) -> int:
         """Get the size of the cohort."""
         if self.cohort_df is None:
             raise ValueError("Cohort not built yet. Call build() first.")
         return len(self.cohort_df)
-    
-    def get_participant_ids(self) -> List[str]:
+
+    def get_participant_ids(self) -> list[str]:
         """Get list of participant IDs in the cohort."""
         if self.cohort_df is None:
             raise ValueError("Cohort not built yet. Call build() first.")
         return self.cohort_df["participant_id"].tolist()
-    
-    def save_cohort(self, output_path: str) -> None:
+
+    def save_cohort(self, output_path: str | Path) -> None:
         """Save cohort dataframe to file."""
         if self.cohort_df is None:
             raise ValueError("Cohort not built yet. Call build() first.")
-        
-        output_path = Path(output_path)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        
-        self.cohort_df.to_csv(output_path, sep="\t", index=False)
+
+        path = Path(output_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        self.cohort_df.to_csv(path, sep="\t", index=False)
 
 
 def create_cohort_from_tsv(
     participants_tsv: str,
     session_rule: str = "first",
-    required_columns: Optional[List[str]] = None,
+    required_columns: list[str] | None = None,
 ) -> pd.DataFrame:
     """Convenience function to create a cohort from a TSV file.
     
@@ -217,5 +219,5 @@ def create_cohort_from_tsv(
         participants_tsv=participants_tsv,
         session_rule=SessionRule(session_rule),
     )
-    
+
     return builder.build(required_columns=required_columns)

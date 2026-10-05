@@ -1,8 +1,9 @@
 """Tests for configuration schemas."""
 
 import pytest
-from pipeline.schemas import Config, DataConfig, ModelConfig, SplitConfig, RunConfig
-from pipeline.schemas.config import DatasetType, ModelType, ImageType
+
+from pipeline.schemas import Config, DataConfig, ModelConfig, RunConfig, SplitConfig
+from pipeline.schemas.config import DatasetType, ModelType
 
 
 def test_default_config():
@@ -25,7 +26,7 @@ def test_split_config_validation():
     """Test that split config validates ranges."""
     with pytest.raises(ValueError, match="Input should be greater than or equal to 2"):
         SplitConfig(n_folds=1)
-    
+
     with pytest.raises(ValueError, match="Input should be less than or equal to 10"):
         SplitConfig(n_folds=11)
 

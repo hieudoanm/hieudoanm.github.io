@@ -1,16 +1,17 @@
 """Participant-level data splitting with lock-box test set."""
 
 import json
+from pathlib import Path
+from typing import Any
+
 import numpy as np
 import pandas as pd
-from pathlib import Path
-from typing import Dict, Any, List, Tuple, Optional
 from sklearn.model_selection import StratifiedGroupKFold, train_test_split
 
 
 class Splitter:
     """Participant-level splitter with lock-box test set."""
-    
+
     def __init__(
         self,
         n_folds: int = 4,
@@ -31,12 +32,12 @@ class Splitter:
         self.seed = seed
         self.stratify_by = stratify_by
         self.lock_box_access_count = 0
-    
+
     def split_lock_box(
         self,
         df: pd.DataFrame,
         participant_col: str = "participant_id",
-    ) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    ) -> tuple[pd.DataFrame, pd.DataFrame]:
         """Split data into lock-box test set and remaining data.
         
         Args:
@@ -47,15 +48,15 @@ class Splitter:
             Tuple of (lock_box_df, remaining_df)
         """
         np.random.seed(self.seed)
-        
+
         # Get unique participants
         participants = df[participant_col].unique()
-        
+
         # Stratify by the stratify column if available
         if self.stratify_by in df.columns:
             # Get the stratify value for each participant (use first session's value)
             participant_stratify = df.groupby(participant_col)[self.stratify_by].first()
-            
+
             # For continuous values, bin them for stratification
             stratify_values = participant_stratify[participants].values
             if stratify_values.dtype.kind in 'fc':  # float or complex
@@ -63,7 +64,9 @@ class Splitter:
                 try:
                     n_bins = min(5, len(stratify_values) // 2)
                     if n_bins >= 2:
-                        stratify_binned = pd.qcut(stratify_values, q=n_bins, labels=False, duplicates='drop')
+                        stratify_binned = pd.qcut(
+                            stratify_values, q=n_bins, labels=False, duplicates='drop'
+                        )
                         lock_box_participants, remaining_participants = train_test_split(
                             participants,
                             test_size=1 - self.lock_box_fraction,
@@ -107,17 +110,17 @@ class Splitter:
                 test_size=1 - self.lock_box_fraction,
                 random_state=self.seed,
             )
-        
+
         lock_box_df = df[df[participant_col].isin(lock_box_participants)]
         remaining_df = df[df[participant_col].isin(remaining_participants)]
-        
+
         return lock_box_df, remaining_df
-    
+
     def create_cv_splits(
         self,
         df: pd.DataFrame,
         participant_col: str = "participant_id",
-    ) -> List[Tuple[np.ndarray, np.ndarray]]:
+    ) -> list[tuple[np.ndarray, np.ndarray]]:
         """Create cross-validation splits on the remaining data.
         
         Args:
@@ -128,15 +131,19 @@ class Splitter:
             List of (train_indices, val_indices) tuples
         """
         np.random.seed(self.seed)
-        
+
         # Create groups for participant-level splitting
         groups = df[participant_col].values
-        
+
         # Stratification needs discrete labels, so a continuous score such as
         # wab_aq is binned into quantile bins first. StratifiedGroupKFold
         # rejects a continuous target outright.
-        y = _discrete_stratify_labels(df[self.stratify_by]) if self.stratify_by in df.columns else None
-        
+        y = (
+            _discrete_stratify_labels(df[self.stratify_by])
+            if self.stratify_by in df.columns
+            else None
+        )
+
         # Use StratifiedGroupKFold if y is available, otherwise GroupKFold
         if y is not None:
             sgkf = StratifiedGroupKFold(
@@ -150,14 +157,14 @@ class Splitter:
             from sklearn.model_selection import GroupKFold
             gkf = GroupKFold(n_splits=self.n_folds)
             splits = list(gkf.split(df, groups=groups))
-        
+
         return splits
-    
+
     def split_all(
         self,
         df: pd.DataFrame,
         participant_col: str = "participant_id",
-    ) -> Dict[str, Any]:
+    ) -> dict[str, Any]:
         """Perform complete split: lock-box + CV folds.
         
         Args:
@@ -169,7 +176,7 @@ class Splitter:
         """
         lock_box_df, remaining_df = self.split_lock_box(df, participant_col)
         cv_splits = self.create_cv_splits(remaining_df, participant_col)
-        
+
         return {
             "lock_box": lock_box_df,
             "remaining": remaining_df,
@@ -177,11 +184,11 @@ class Splitter:
             "lock_box_participants": lock_box_df[participant_col].unique().tolist(),
             "remaining_participants": remaining_df[participant_col].unique().tolist(),
         }
-    
+
     def save_splits(
         self,
-        splits: Dict[str, Any],
-        output_path: str,
+        splits: dict[str, Any],
+        output_path: str | Path,
     ) -> None:
         """Save splits to disk for reproducibility.
         
@@ -189,9 +196,9 @@ class Splitter:
             splits: Splits dictionary from split_all
             output_path: Path to save splits
         """
-        output_path = Path(output_path)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        
+        path = Path(output_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+
         # Convert dataframes to lists of participant IDs for serialization
         splits_serializable = {
             "lock_box_participants": splits["lock_box_participants"],
@@ -208,33 +215,34 @@ class Splitter:
             "seed": self.seed,
             "stratify_by": self.stratify_by,
         }
-        
-        with open(output_path, "w") as f:
+
+        with open(path, "w") as f:
             json.dump(splits_serializable, f, indent=2)
-    
+
     def load_splits(
         self,
-        input_path: str,
+        input_path: str | Path,
         df: pd.DataFrame,
         participant_col: str = "participant_id",
-    ) -> Dict[str, Any]:
+    ) -> dict[str, Any]:
         """Load splits from disk.
-        
+
         Args:
             input_path: Path to saved splits
             df: Original cohort dataframe
             participant_col: Column name for participant IDs
-        
+
         Returns:
             Splits dictionary with dataframes
         """
-        with open(input_path, "r") as f:
+        path = Path(input_path)
+        with path.open() as f:
             splits_data = json.load(f)
-        
+
         # Reconstruct dataframes from participant IDs
         lock_box_df = df[df[participant_col].isin(splits_data["lock_box_participants"])]
         remaining_df = df[df[participant_col].isin(splits_data["remaining_participants"])]
-        
+
         # Reconstruct CV splits
         cv_splits = [
             (
@@ -243,7 +251,7 @@ class Splitter:
             )
             for s in splits_data["cv_splits"]
         ]
-        
+
         return {
             "lock_box": lock_box_df,
             "remaining": remaining_df,
@@ -251,20 +259,20 @@ class Splitter:
             "lock_box_participants": splits_data["lock_box_participants"],
             "remaining_participants": splits_data["remaining_participants"],
         }
-    
+
     def increment_lock_box_access(self) -> int:
         """Increment and return lock-box access count."""
         self.lock_box_access_count += 1
         return self.lock_box_access_count
-    
+
     def get_lock_box_access_count(self) -> int:
         """Get current lock-box access count."""
         return self.lock_box_access_count
 
 
 def verify_no_leakage(
-    train_participants: List[str],
-    test_participants: List[str],
+    train_participants: list[str],
+    test_participants: list[str],
 ) -> bool:
     """Verify that there is no participant leakage between train and test.
     
@@ -277,11 +285,11 @@ def verify_no_leakage(
     """
     train_set = set(train_participants)
     test_set = set(test_participants)
-    
+
     return len(train_set.intersection(test_set)) == 0
 
 
-def _discrete_stratify_labels(values: pd.Series, max_bins: int = 5) -> Optional[np.ndarray]:
+def _discrete_stratify_labels(values: pd.Series, max_bins: int = 5) -> np.ndarray | None:
     """Turn a stratification column into discrete labels.
 
     A continuous score has to be binned before it can stratify a split;

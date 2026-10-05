@@ -7,7 +7,7 @@ or duplicating people across folds.
 """
 
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -100,7 +100,7 @@ def binarise_outcome(
 
 def select_features(
     frame: pd.DataFrame,
-    feature_columns: List[str],
+    feature_columns: list[str],
     outcome_column: str,
 ) -> pd.DataFrame:
     """Keep participants with every feature and the outcome present.
@@ -134,7 +134,7 @@ def select_features(
 
 def encode_features(
     frame: pd.DataFrame,
-    feature_columns: List[str],
+    feature_columns: list[str],
 ) -> pd.DataFrame:
     """Turn the feature block into a numeric table, one-hot encoding categories.
 
@@ -161,7 +161,7 @@ def encode_features(
         and not pd.api.types.is_bool_dtype(block[column])
     ]
     for column in categorical:
-        block[column] = block[column].astype("object").where(
+        block[column] = block[column].astype(object).where(
             block[column].notna(), "missing"
         )
     encoded = pd.get_dummies(block, columns=categorical, drop_first=True)
@@ -177,10 +177,12 @@ def encode_features(
             f"features still contain missing values after encoding: {missing}; "
             "select_features should have dropped those participants"
         )
+    # Index alignment is mandatory: down-stream CV uses iloc/loc against this
+    # frame. Do not reset it.
     return encoded
 
 
-def summarise_classes(labels: np.ndarray) -> Dict[str, Any]:
+def summarise_classes(labels: np.ndarray) -> dict[str, Any]:
     """Class balance of the outcome, so an imbalanced cohort is visible in the log."""
     values, counts = np.unique(labels, return_counts=True)
     return {
@@ -193,8 +195,8 @@ def summarise_classes(labels: np.ndarray) -> Dict[str, Any]:
 
 def participant_labels(
     frame: pd.DataFrame,
-    folds: List[Tuple[np.ndarray, np.ndarray]],
-) -> List[Tuple[np.ndarray, np.ndarray]]:
+    folds: list[tuple[np.ndarray, np.ndarray]],
+) -> list[tuple[np.ndarray, np.ndarray]]:
     """Convert positional fold indices into participant labels."""
     participants = frame["participant_id"].to_numpy()
     return [(participants[train], participants[valid]) for train, valid in folds]

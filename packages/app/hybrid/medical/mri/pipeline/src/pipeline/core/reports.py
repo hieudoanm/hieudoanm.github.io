@@ -1,7 +1,7 @@
 """Report generation in CSV and LaTeX formats."""
 
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 import pandas as pd
 
@@ -30,11 +30,11 @@ def _write(
     path.write_text(to_latex_table(headers, rows, digits=digits) + "\n")
 
 
-def _metrics_frame(results: Dict[str, Dict[str, Any]]) -> pd.DataFrame:
+def _metrics_frame(results: dict[str, dict[str, Any]]) -> pd.DataFrame:
     """One row per model, one column per metric value and interval bound."""
     rows = []
     for model_name, metrics in results.items():
-        row: Dict[str, Any] = {"model": model_name}
+        row: dict[str, Any] = {"model": model_name}
         for metric_name, metric_data in metrics.items():
             if isinstance(metric_data, dict) and "value" in metric_data:
                 row[metric_name] = metric_data["value"]
@@ -47,7 +47,7 @@ def _metrics_frame(results: Dict[str, Dict[str, Any]]) -> pd.DataFrame:
 
 
 def create_metrics_table(
-    results: Dict[str, Dict[str, Any]],
+    results: dict[str, dict[str, Any]],
     output_path: str,
     format: str = "csv",
 ) -> None:
@@ -62,7 +62,7 @@ def create_metrics_table(
 
 
 def create_comparison_table(
-    comparisons: List[Dict[str, Any]],
+    comparisons: list[dict[str, Any]],
     output_path: str,
     format: str = "csv",
 ) -> None:
@@ -77,7 +77,7 @@ def create_comparison_table(
 
 
 def create_significance_table(
-    comparisons: List[Dict[str, Any]],
+    comparisons: list[dict[str, Any]],
     output_path: str,
     format: str = "csv",
     alpha: float = 0.05,
@@ -96,15 +96,15 @@ def create_significance_table(
         model_names.add(comp["model1"])
         model_names.add(comp["model2"])
     model_names = sorted(list(model_names))
-    
+
     # Create matrix
     matrix = pd.DataFrame(index=model_names, columns=model_names, dtype=object)
-    
+
     for comp in comparisons:
         model1 = comp["model1"]
         model2 = comp["model2"]
         p_value = comp.get("fdr_corrected_p", comp.get("corrected_p_value", 1.0))
-        
+
         # Add significance asterisks
         if p_value < 0.001:
             sig = "***"
@@ -114,18 +114,18 @@ def create_significance_table(
             sig = "*"
         else:
             sig = ""
-        
+
         matrix.loc[model1, model2] = f"{p_value:.4f}{sig}"
-    
+
     # Fill diagonal
     for model in model_names:
         matrix.loc[model, model] = "-"
-    
+
     _write(matrix, output_path, format, digits=4, index=True)
 
 
 def create_calibration_table(
-    calibration_results: Dict[str, Dict[str, Any]],
+    calibration_results: dict[str, dict[str, Any]],
     output_path: str,
     format: str = "csv",
 ) -> None:
@@ -144,14 +144,14 @@ def create_calibration_table(
             "ece": cal_metrics.get("ece", ""),
         }
         rows.append(row)
-    
+
     _write(pd.DataFrame(rows), output_path, format, digits=4)
 
 
 def generate_all_reports(
-    results: Dict[str, Dict[str, Any]],
-    comparisons: List[Dict[str, Any]],
-    output_dir: str,
+    results: dict[str, dict[str, Any]],
+    comparisons: list[dict[str, Any]],
+    output_dir: str | Path,
 ) -> None:
     """Generate all report tables.
     
@@ -160,25 +160,25 @@ def generate_all_reports(
         comparisons: Model comparisons list
         output_dir: Directory to save reports
     """
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    reports_dir = Path(output_dir)
+    reports_dir.mkdir(parents=True, exist_ok=True)
 
-    create_metrics_table(results, output_dir / "metrics.csv")
-    create_metrics_table(results, output_dir / "metrics.tex", format="latex")
-    create_comparison_table(comparisons, output_dir / "comparisons.csv")
-    create_comparison_table(comparisons, output_dir / "comparisons.tex", format="latex")
-    create_significance_table(comparisons, output_dir / "significance.csv")
-    create_significance_table(comparisons, output_dir / "significance.tex", format="latex")
+    create_metrics_table(results, reports_dir / "metrics.csv")
+    create_metrics_table(results, reports_dir / "metrics.tex", format="latex")
+    create_comparison_table(comparisons, reports_dir / "comparisons.csv")
+    create_comparison_table(comparisons, reports_dir / "comparisons.tex", format="latex")
+    create_significance_table(comparisons, reports_dir / "significance.csv")
+    create_significance_table(comparisons, reports_dir / "significance.tex", format="latex")
 
     calibration_results = _calibration_frame(results)
     if calibration_results:
-        create_calibration_table(calibration_results, output_dir / "calibration.csv")
+        create_calibration_table(calibration_results, reports_dir / "calibration.csv")
         create_calibration_table(
-            calibration_results, output_dir / "calibration.tex", format="latex"
+            calibration_results, reports_dir / "calibration.tex", format="latex"
         )
 
 
-def _calibration_frame(results: Dict[str, Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+def _calibration_frame(results: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
     """Calibration metrics per model, skipping models that report none."""
     return {
         model: metrics["calibration"]

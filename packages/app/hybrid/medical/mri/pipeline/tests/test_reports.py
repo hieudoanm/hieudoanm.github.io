@@ -81,7 +81,9 @@ def test_significance_table_marks_thresholds_and_fills_the_diagonal(tmp_path):
 
 
 def test_significance_table_uses_the_fdr_column_when_present(tmp_path):
-    comparisons = [{"model1": "a", "model2": "b", "corrected_p_value": 0.5, "fdr_corrected_p": 0.0004}]
+    comparisons = [
+        {"model1": "a", "model2": "b", "corrected_p_value": 0.5, "fdr_corrected_p": 0.0004}
+    ]
     path = tmp_path / "significance.csv"
 
     create_significance_table(comparisons, str(path))
@@ -153,7 +155,9 @@ def test_generate_all_reports_creates_a_missing_directory(tmp_path):
 def test_latex_tables_escape_model_names_that_contain_underscores(tmp_path):
     path = tmp_path / "metrics.tex"
 
-    create_metrics_table({"resnet18_hybrid": {"accuracy": {"value": 0.71}}}, str(path), format="latex")
+    create_metrics_table(
+        {"resnet18_hybrid": {"accuracy": {"value": 0.71}}}, str(path), format="latex"
+    )
 
     text = path.read_text()
     assert r"resnet18\_hybrid" in text

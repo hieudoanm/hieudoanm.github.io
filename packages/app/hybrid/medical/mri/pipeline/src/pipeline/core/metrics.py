@@ -1,24 +1,25 @@
 """Evaluation metrics with calibration."""
 
+from typing import Any
+
 import numpy as np
-from typing import Dict, Any, Optional, Tuple
 from sklearn.metrics import (
     accuracy_score,
     balanced_accuracy_score,
-    roc_auc_score,
+    brier_score_loss,
+    confusion_matrix,
     f1_score,
     precision_score,
     recall_score,
-    confusion_matrix,
+    roc_auc_score,
 )
-from sklearn.metrics import brier_score_loss
 
 
 def calculate_metrics(
     y_true: np.ndarray,
     y_pred: np.ndarray,
-    y_proba: Optional[np.ndarray] = None,
-) -> Dict[str, float]:
+    y_proba: np.ndarray | None = None,
+) -> dict[str, float]:
     """Calculate classification metrics.
     
     Args:
@@ -36,7 +37,7 @@ def calculate_metrics(
         "precision": precision_score(y_true, y_pred, average="binary", zero_division=0),
         "recall": recall_score(y_true, y_pred, average="binary", zero_division=0),
     }
-    
+
     # Add AUC if probabilities are provided
     if y_proba is not None:
         try:
@@ -44,7 +45,7 @@ def calculate_metrics(
         except ValueError:
             # Handle case where only one class is present
             metrics["auc"] = np.nan
-    
+
     return metrics
 
 
@@ -52,7 +53,7 @@ def calculate_calibration_metrics(
     y_true: np.ndarray,
     y_proba: np.ndarray,
     n_bins: int = 10,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Calculate calibration metrics over equal-width probability bins.
 
     Args:
@@ -115,7 +116,7 @@ def calculate_confidence_interval(
     metric: float,
     n_samples: int,
     confidence: float = 0.95,
-) -> Tuple[float, float]:
+) -> tuple[float, float]:
     """Calculate confidence interval for a metric using Wilson score interval.
     
     Args:
@@ -127,26 +128,26 @@ def calculate_confidence_interval(
         Tuple of (lower_bound, upper_bound)
     """
     from scipy import stats
-    
+
     z = stats.norm.ppf((1 + confidence) / 2)
-    
+
     # Wilson score interval
     denominator = 1 + z**2 / n_samples
     center = (metric + z**2 / (2 * n_samples)) / denominator
     margin = z * np.sqrt((metric * (1 - metric) + z**2 / (4 * n_samples)) / n_samples) / denominator
-    
+
     lower = max(0, center - margin)
     upper = min(1, center + margin)
-    
+
     return lower, upper
 
 
 def calculate_metrics_with_ci(
     y_true: np.ndarray,
     y_pred: np.ndarray,
-    y_proba: Optional[np.ndarray] = None,
+    y_proba: np.ndarray | None = None,
     confidence: float = 0.95,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Calculate metrics with confidence intervals.
     
     Args:
@@ -159,10 +160,10 @@ def calculate_metrics_with_ci(
         Dictionary of metrics with confidence intervals
     """
     n_samples = len(y_true)
-    
+
     # Calculate base metrics
     metrics = calculate_metrics(y_true, y_pred, y_proba)
-    
+
     # Add confidence intervals
     metrics_with_ci = {}
     for name, value in metrics.items():
@@ -176,19 +177,19 @@ def calculate_metrics_with_ci(
             }
         else:
             metrics_with_ci[name] = {"value": value}
-    
+
     # Add calibration metrics if probabilities are provided
     if y_proba is not None:
         cal_metrics = calculate_calibration_metrics(y_true, y_proba)
         metrics_with_ci["calibration"] = cal_metrics
-    
+
     return metrics_with_ci
 
 
 def calculate_confusion_matrix(
     y_true: np.ndarray,
     y_pred: np.ndarray,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Calculate confusion matrix.
     
     Args:

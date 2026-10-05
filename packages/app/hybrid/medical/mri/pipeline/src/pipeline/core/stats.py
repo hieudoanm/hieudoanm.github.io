@@ -1,9 +1,9 @@
 """Statistical tests for model comparison."""
 
 import warnings
+from typing import Any
 
 import numpy as np
-from typing import Dict, Any, List, Optional, Tuple
 from scipy import stats
 from statsmodels.stats.multitest import multipletests
 
@@ -12,7 +12,7 @@ def paired_t_test(
     scores1: np.ndarray,
     scores2: np.ndarray,
     alternative: str = "two-sided",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Perform paired t-test between two sets of scores.
     
     Args:
@@ -51,7 +51,7 @@ def corrected_paired_t_test(
     n_folds: int = 4,
     df_scaling: float = 0.45,
     alternative: str = "two-sided",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Corrected resampled t-test for cross-validated scores.
 
     Cross-validation folds overlap, so fold scores are not independent and the
@@ -147,9 +147,9 @@ def _t_sf(t_stat: float, df: float, alternative: str) -> float:
 
 
 def benjamini_hochberg_fdr(
-    p_values: List[float],
+    p_values: list[float],
     alpha: float = 0.05,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Apply Benjamini-Hochberg false discovery rate correction.
     
     Args:
@@ -194,7 +194,7 @@ def wilcoxon_signed_rank_test(
     scores1: np.ndarray,
     scores2: np.ndarray,
     alternative: str = "two-sided",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Perform Wilcoxon signed-rank test (non-parametric alternative to paired t-test).
     
     Args:
@@ -207,7 +207,7 @@ def wilcoxon_signed_rank_test(
     """
     _validate_alternative(alternative)
     stat, p_value = stats.wilcoxon(scores1, scores2, alternative=alternative)
-    
+
     return {
         "statistic": float(stat),
         "p_value": float(p_value),
@@ -221,7 +221,7 @@ def bootstrap_ci(
     n_bootstrap: int = 10000,
     confidence: float = 0.95,
     seed: int = 42,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Percentile bootstrap confidence interval for the mean of `scores`.
 
     A local generator is used so the result depends only on `seed` and never on
@@ -261,11 +261,11 @@ def bootstrap_ci(
 
 
 def compare_models(
-    model_scores: Dict[str, np.ndarray],
-    n_folds: Optional[int] = None,
+    model_scores: dict[str, np.ndarray],
+    n_folds: int | None = None,
     df_scaling: float = 0.45,
     alpha: float = 0.05,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Compare every pair of models with the corrected test and BH-FDR.
 
     Args:

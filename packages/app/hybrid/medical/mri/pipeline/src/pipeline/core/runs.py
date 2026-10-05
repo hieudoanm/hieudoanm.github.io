@@ -1,12 +1,12 @@
 """Run folder and manifest management."""
 
-import json
 import hashlib
-from pathlib import Path
-from datetime import datetime
-from typing import Dict, Any, Optional
+import json
 import subprocess
 import sys
+from datetime import datetime
+from pathlib import Path
+from typing import Any
 
 
 def generate_run_id() -> str:
@@ -17,7 +17,7 @@ def generate_run_id() -> str:
     return f"r_{timestamp}_{microseconds}"
 
 
-def get_git_commit() -> Optional[str]:
+def get_git_commit() -> str | None:
     """Get the current git commit hash."""
     try:
         result = subprocess.run(
@@ -31,7 +31,7 @@ def get_git_commit() -> Optional[str]:
         return None
 
 
-def get_git_branch() -> Optional[str]:
+def get_git_branch() -> str | None:
     """Get the current git branch."""
     try:
         result = subprocess.run(
@@ -54,7 +54,7 @@ def compute_file_hash(file_path: Path) -> str:
     return hasher.hexdigest()
 
 
-def compute_config_hash(config: Dict[str, Any]) -> str:
+def compute_config_hash(config: dict[str, Any]) -> str:
     """Compute hash of configuration dict."""
     config_str = json.dumps(config, sort_keys=True)
     return hashlib.sha256(config_str.encode()).hexdigest()
@@ -62,24 +62,24 @@ def compute_config_hash(config: Dict[str, Any]) -> str:
 
 def create_run_folder(
     output_dir: str,
-    run_id: Optional[str] = None,
-    config: Optional[Dict[str, Any]] = None,
+    run_id: str | None = None,
+    config: dict[str, Any] | None = None,
 ) -> Path:
     """Create a run folder with manifest."""
     if run_id is None:
         run_id = generate_run_id()
-    
+
     run_path = Path(output_dir) / run_id
     run_path.mkdir(parents=True, exist_ok=True)
-    
+
     return run_path
 
 
 def create_manifest(
     run_path: Path,
-    config: Dict[str, Any],
+    config: dict[str, Any],
     schema_version: str = "0.1.0",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Create and save manifest for a run."""
     manifest = {
         "schema_version": schema_version,
@@ -91,14 +91,16 @@ def create_manifest(
         "device": config.get("run", {}).get("device", "auto"),
         "start_time": datetime.now().isoformat(),
         "end_time": None,
-        "python_version": f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}",
+        "python_version": (
+            f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
+        ),
         "library_versions": get_library_versions(),
     }
-    
+
     manifest_path = run_path / "manifest.json"
     with open(manifest_path, "w") as f:
         json.dump(manifest, f, indent=2)
-    
+
     return manifest
 
 
@@ -106,19 +108,19 @@ def update_manifest_end_time(run_path: Path) -> None:
     """Update the end time in the manifest."""
     manifest_path = run_path / "manifest.json"
     if manifest_path.exists():
-        with open(manifest_path, "r") as f:
+        with open(manifest_path) as f:
             manifest = json.load(f)
-        
+
         manifest["end_time"] = datetime.now().isoformat()
-        
+
         with open(manifest_path, "w") as f:
             json.dump(manifest, f, indent=2)
 
 
-def get_library_versions() -> Dict[str, str]:
+def get_library_versions() -> dict[str, str]:
     """Get versions of key libraries."""
     versions = {}
-    
+
     libraries = [
         "numpy",
         "pandas",
@@ -128,18 +130,18 @@ def get_library_versions() -> Dict[str, str]:
         "nibabel",
         "nilearn",
     ]
-    
+
     for lib in libraries:
         try:
             module = __import__(lib)
             versions[lib] = getattr(module, "__version__", "unknown")
         except ImportError:
             versions[lib] = "not installed"
-    
+
     return versions
 
 
-def save_config(run_path: Path, config: Dict[str, Any]) -> None:
+def save_config(run_path: Path, config: dict[str, Any]) -> None:
     """Save resolved configuration to run folder."""
     config_path = run_path / "config.yaml"
     try:
@@ -153,19 +155,19 @@ def save_config(run_path: Path, config: Dict[str, Any]) -> None:
             json.dump(config, f, indent=2)
 
 
-def load_manifest(run_path: Path) -> Dict[str, Any]:
+def load_manifest(run_path: Path) -> dict[str, Any]:
     """Load manifest from run folder."""
     manifest_path = run_path / "manifest.json"
-    with open(manifest_path, "r") as f:
+    with open(manifest_path) as f:
         return json.load(f)
 
 
-def list_runs(output_dir: str) -> list[Dict[str, Any]]:
+def list_runs(output_dir: str) -> list[dict[str, Any]]:
     """List all runs in the output directory."""
     runs_dir = Path(output_dir)
     if not runs_dir.exists():
         return []
-    
+
     runs = []
     for run_path in sorted(runs_dir.iterdir()):
         if run_path.is_dir() and run_path.name.startswith("r_"):
@@ -178,5 +180,5 @@ def list_runs(output_dir: str) -> list[Dict[str, Any]]:
                 })
             except (FileNotFoundError, json.JSONDecodeError):
                 continue
-    
+
     return runs

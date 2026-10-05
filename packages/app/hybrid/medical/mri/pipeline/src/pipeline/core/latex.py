@@ -5,7 +5,8 @@ model called `resnet18_hybrid` produces a table that will not compile. These
 helpers keep the report stage dependency-free and produce a stable format.
 """
 
-from typing import Any, List, Sequence
+from collections.abc import Sequence
+from typing import Any
 
 SPECIALS = {
     "\\": r"\textbackslash{}",

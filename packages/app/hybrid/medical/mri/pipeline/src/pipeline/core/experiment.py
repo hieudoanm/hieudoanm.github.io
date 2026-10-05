@@ -6,7 +6,8 @@ never part of a training set here: it is scored once, by a model fitted on the
 development participants alone.
 """
 
-from typing import Any, Callable, Dict, List, Optional, Tuple
+from collections.abc import Callable
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -21,7 +22,7 @@ from pipeline.core.metrics import (
 METRICS_TABLE = ("logistic_regression", "gradient_boosting")
 
 
-class CrossValidationResult(Dict[str, Any]):
+class CrossValidationResult(dict[str, Any]):
     """Per-fold metrics, per-participant probabilities and who was validated."""
 
 
@@ -29,9 +30,9 @@ def run_cross_validation(
     frame: pd.DataFrame,
     features: pd.DataFrame,
     model_type: str,
-    folds: List[Tuple[np.ndarray, np.ndarray]],
-    on_fold_start: Optional[Callable[[int, int, int], None]] = None,
-    on_metric: Optional[Callable[[str, float, int], None]] = None,
+    folds: list[tuple[np.ndarray, np.ndarray]],
+    on_fold_start: Callable[[int, int, int], None] | None = None,
+    on_metric: Callable[[str, float, int], None] | None = None,
 ) -> CrossValidationResult:
     """Train and score a baseline on every validation fold of the development set.
 
@@ -54,9 +55,9 @@ def run_cross_validation(
     labels = frame["outcome"].to_numpy(dtype=int)
     participants = frame["participant_id"].to_numpy()
 
-    results: List[Dict[str, Any]] = []
-    predictions: Dict[str, float] = {}
-    validated: List[str] = []
+    results: list[dict[str, Any]] = []
+    predictions: dict[str, float] = {}
+    validated: list[str] = []
 
     for index, (train_index, valid_index) in enumerate(folds, start=1):
         if on_fold_start is not None:
@@ -97,7 +98,7 @@ def _fold_metrics(
     valid_index: np.ndarray,
     model_type: str,
     fold: int,
-) -> Optional[Tuple[Dict[str, Any], np.ndarray]]:
+) -> tuple[dict[str, Any], np.ndarray] | None:
     """Metrics for one fold, or None when the split cannot train or be scored."""
     train_labels = labels[train_index]
     valid_labels = labels[valid_index]
@@ -114,7 +115,7 @@ def _fold_metrics(
     return score_predictions(valid_labels, probabilities), probabilities
 
 
-def score_predictions(labels: np.ndarray, probabilities: np.ndarray) -> Dict[str, Any]:
+def score_predictions(labels: np.ndarray, probabilities: np.ndarray) -> dict[str, Any]:
     """Metrics, calibration and confusion for one set of predicted probabilities."""
     predicted = (probabilities >= 0.5).astype(int)
     return {
@@ -134,7 +135,7 @@ def fit_and_score_lock_box(
     features: pd.DataFrame,
     model_type: str,
     seed: int,
-) -> Tuple[Dict[str, Any], pd.DataFrame]:
+) -> tuple[dict[str, Any], pd.DataFrame]:
     """Fit on the development participants and score the lock-box exactly once.
 
     Args:
@@ -180,7 +181,7 @@ def fit_and_score_lock_box(
     return score_predictions(lock_box_labels, probabilities), table
 
 
-def aggregate_folds(folds: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def aggregate_folds(folds: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Mean metric across folds, with the spread across folds as the uncertainty."""
     names = [row["name"] for row in folds[0]["metrics"]]
     aggregated = []
@@ -199,7 +200,7 @@ def aggregate_folds(folds: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return aggregated
 
 
-def _values(folds: List[Dict[str, Any]], name: str) -> np.ndarray:
+def _values(folds: list[dict[str, Any]], name: str) -> np.ndarray:
     collected = [
         row["value"]
         for fold in folds
@@ -210,14 +211,14 @@ def _values(folds: List[Dict[str, Any]], name: str) -> np.ndarray:
     return values[~np.isnan(values)]
 
 
-def _emit(metrics: Dict[str, Any], fold: int, on_metric: Callable[[str, float, int], None]) -> None:
+def _emit(metrics: dict[str, Any], fold: int, on_metric: Callable[[str, float, int], None]) -> None:
     for row in metrics["metrics"]:
         value = row.get("value")
         if isinstance(value, (int, float)):
             on_metric(row["name"], float(value), fold)
 
 
-def rows(scored: Dict[str, Any]) -> List[Dict[str, Any]]:
+def rows(scored: dict[str, Any]) -> list[dict[str, Any]]:
     """Flatten the metric-with-interval dictionary into run-folder rows."""
     flattened = []
     for name, value in scored.items():
@@ -226,7 +227,7 @@ def rows(scored: Dict[str, Any]) -> List[Dict[str, Any]]:
     return flattened
 
 
-def calibration_payload(calibration: Dict[str, Any]) -> Dict[str, Any]:
+def calibration_payload(calibration: dict[str, Any]) -> dict[str, Any]:
     """Reliability data under both the current and the workbench's key names.
 
     `accuracy`/`confidence` are the same two curves the workbench reads as

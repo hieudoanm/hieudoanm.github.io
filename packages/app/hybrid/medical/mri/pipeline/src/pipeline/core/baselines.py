@@ -1,6 +1,6 @@
 """Baseline models for comparison."""
 
-from typing import Any, Dict, Optional
+from typing import Any
 
 import joblib
 import numpy as np
@@ -13,11 +13,11 @@ from sklearn.preprocessing import StandardScaler
 
 class BaselineModel:
     """Base class for baseline models."""
-    
+
     def __init__(
         self,
         random_state: int = 42,
-        class_weight: Optional[str] = "balanced",
+        class_weight: str | None = "balanced",
     ):
         """Initialize baseline model.
         
@@ -30,7 +30,7 @@ class BaselineModel:
         self.model = None
         self.scaler = StandardScaler()
         self.is_fitted = False
-    
+
     def fit(self, X: np.ndarray, y: np.ndarray) -> "BaselineModel":
         """Fit the model.
         
@@ -42,33 +42,33 @@ class BaselineModel:
             Self
         """
         raise NotImplementedError
-    
+
     def predict(self, X: np.ndarray) -> np.ndarray:
         """Make predictions.
-        
+
         Args:
             X: Features
-        
+
         Returns:
             Predicted labels
         """
-        if not self.is_fitted:
+        if not self.is_fitted or self.model is None:
             raise ValueError("Model must be fitted before prediction")
         return self.model.predict(X)
-    
+
     def predict_proba(self, X: np.ndarray) -> np.ndarray:
         """Predict class probabilities.
-        
+
         Args:
             X: Features
-        
+
         Returns:
             Predicted probabilities
         """
-        if not self.is_fitted:
+        if not self.is_fitted or self.model is None:
             raise ValueError("Model must be fitted before prediction")
         return self.model.predict_proba(X)
-    
+
     def save(self, path: str) -> None:
         """Save the fitted estimator to disk.
 
@@ -76,7 +76,7 @@ class BaselineModel:
             path: Path to save model
         """
         joblib.dump(self.model, path)
-    
+
     def load(self, path: str) -> "BaselineModel":
         """Load model from disk.
         
@@ -93,14 +93,14 @@ class BaselineModel:
 
 class LogisticRegressionBaseline(BaselineModel):
     """Logistic regression baseline model."""
-    
+
     def __init__(
         self,
         C: float = 1.0,
         solver: str = "lbfgs",
         max_iter: int = 1000,
         random_state: int = 42,
-        class_weight: Optional[str] = "balanced",
+        class_weight: str | None = "balanced",
     ):
         """Initialize logistic regression baseline.
 
@@ -129,7 +129,7 @@ class LogisticRegressionBaseline(BaselineModel):
                 class_weight=class_weight,
             )),
         ])
-    
+
     def fit(self, X: np.ndarray, y: np.ndarray) -> "LogisticRegressionBaseline":
         """Fit the logistic regression model.
         
@@ -147,7 +147,7 @@ class LogisticRegressionBaseline(BaselineModel):
 
 class GradientBoostingBaseline(BaselineModel):
     """Gradient boosting baseline model."""
-    
+
     def __init__(
         self,
         n_estimators: int = 100,
@@ -177,7 +177,7 @@ class GradientBoostingBaseline(BaselineModel):
             max_depth=max_depth,
             random_state=random_state,
         )
-    
+
     def fit(self, X: np.ndarray, y: np.ndarray) -> "GradientBoostingBaseline":
         """Fit the gradient boosting model.
         
@@ -216,7 +216,7 @@ def train_baseline(
         model = GradientBoostingBaseline(**kwargs)
     else:
         raise ValueError(f"Unknown model type: {model_type}")
-    
+
     model.fit(X_train, y_train)
     return model
 
@@ -225,7 +225,7 @@ def evaluate_baseline(
     model: BaselineModel,
     X_test: np.ndarray,
     y_test: np.ndarray,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Evaluate a baseline model.
     
     Args:
@@ -237,12 +237,12 @@ def evaluate_baseline(
         Dictionary of evaluation metrics
     """
     from pipeline.core.metrics import calculate_metrics_with_ci
-    
+
     y_pred = model.predict(X_test)
     y_proba = model.predict_proba(X_test)[:, 1]
-    
+
     metrics = calculate_metrics_with_ci(y_test, y_pred, y_proba)
-    
+
     return metrics
 
 
@@ -251,7 +251,7 @@ def cross_validate_baseline(
     X: np.ndarray,
     y: np.ndarray,
     cv: int = 5,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Perform cross-validation on a baseline model.
     
     Args:
@@ -264,14 +264,14 @@ def cross_validate_baseline(
         Dictionary with CV results
     """
     # Get the underlying sklearn model
-    if hasattr(model.model, "named_steps"):
+    if model.model is not None and hasattr(model.model, "named_steps"):
         sklearn_model = model.model.named_steps[list(model.model.named_steps.keys())[-1]]
     else:
         sklearn_model = model.model
-    
+
     # Perform cross-validation
     cv_scores = cross_val_score(sklearn_model, X, y, cv=cv, scoring="balanced_accuracy")
-    
+
     return {
         "cv_scores": cv_scores.tolist(),
         "mean_score": float(np.mean(cv_scores)),

@@ -8,7 +8,7 @@ is always complete enough to audit.
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 import pandas as pd
 
@@ -29,8 +29,8 @@ from pipeline.core.experiment import (
 from pipeline.core.lockbox import LockBoxLogger
 from pipeline.core.reports import generate_all_reports
 from pipeline.core.runs import (
-    compute_file_hash,
     compute_config_hash,
+    compute_file_hash,
     create_manifest,
     create_run_folder,
     generate_run_id,
@@ -43,10 +43,10 @@ BASELINE_STAGES = ("data", "split", "baseline", "evaluate", "report")
 
 
 def run_experiment(
-    config: Dict[str, Any],
+    config: dict[str, Any],
     output_dir: str,
-    run_id: Optional[str] = None,
-) -> Dict[str, Any]:
+    run_id: str | None = None,
+) -> dict[str, Any]:
     """Execute the configured stages and write one run folder.
 
     Args:
@@ -68,7 +68,7 @@ def run_experiment(
     events = EventWriter(run_path)
     events.write_stage_start("run", run_id)
 
-    summary: Dict[str, Any] = {
+    summary: dict[str, Any] = {
         "run_id": run_id,
         "path": str(run_path),
         "stages": [],
@@ -87,10 +87,10 @@ def run_experiment(
 
 def _finish(
     run_path: Path,
-    manifest: Dict[str, Any],
+    manifest: dict[str, Any],
     events: EventWriter,
     status: str,
-    data_hash: Optional[str] = None,
+    data_hash: str | None = None,
 ) -> None:
     events.write_stage_end("run", "ok" if status == "completed" else "error")
     _write_manifest(run_path, {
@@ -102,15 +102,15 @@ def _finish(
     update_manifest_end_time(run_path)
 
 
-def _write_manifest(run_path: Path, manifest: Dict[str, Any]) -> None:
+def _write_manifest(run_path: Path, manifest: dict[str, Any]) -> None:
     (run_path / "manifest.json").write_text(json.dumps(manifest, indent=2))
 
 
 def _stages(
-    config: Dict[str, Any],
+    config: dict[str, Any],
     run_path: Path,
     events: EventWriter,
-    summary: Dict[str, Any],
+    summary: dict[str, Any],
 ) -> None:
     """Run every stage in order, recording each outcome in the summary."""
     model_type = _model_type(config)
@@ -129,16 +129,16 @@ def _stages(
     )
 
 
-def _model_type(config: Dict[str, Any]) -> str:
+def _model_type(config: dict[str, Any]) -> str:
     model_type = str(config.get("model", {}).get("model_type", "logistic_regression"))
     return model_type
 
 
 def _stage_data(
-    config: Dict[str, Any],
+    config: dict[str, Any],
     events: EventWriter,
-    summary: Dict[str, Any],
-) -> Tuple[pd.DataFrame, pd.DataFrame, Path]:
+    summary: dict[str, Any],
+) -> tuple[pd.DataFrame, pd.DataFrame, Path]:
     """Load the cohort, bin the outcome, encode features and record the hash."""
     data_config = config.get("data", {})
     participants_tsv = data_config.get("participants_tsv")
@@ -171,12 +171,12 @@ def _stage_data(
 
 
 def _stage_split(
-    config: Dict[str, Any],
+    config: dict[str, Any],
     cohort: pd.DataFrame,
     run_path: Path,
     events: EventWriter,
-    summary: Dict[str, Any],
-) -> Tuple[Splitter, pd.DataFrame]:
+    summary: dict[str, Any],
+) -> tuple[Splitter, pd.DataFrame]:
     """Hold out the lock-box, then write the split that the run will use."""
     split_config = config.get("split", {})
     splitter = Splitter(
@@ -226,8 +226,8 @@ def _stage_baseline(
     features: pd.DataFrame,
     splitter: Splitter,
     events: EventWriter,
-    summary: Dict[str, Any],
-) -> List[Dict[str, Any]]:
+    summary: dict[str, Any],
+) -> list[dict[str, Any]]:
     """Train and score the baseline over the development folds."""
     events.write_stage_start("baseline", model_type)
     folds = splitter.create_cv_splits(development)
@@ -257,8 +257,8 @@ def _stage_evaluate(
     splitter: Splitter,
     run_path: Path,
     events: EventWriter,
-    summary: Dict[str, Any],
-) -> Dict[str, Any]:
+    summary: dict[str, Any],
+) -> dict[str, Any]:
     """Score the held-out participants once, with the access written to the log."""
     events.write_stage_start("evaluate", "lock_box")
     metrics, table = fit_and_score_lock_box(
@@ -290,11 +290,11 @@ def _stage_evaluate(
 
 def _stage_report(
     model_type: str,
-    result: Dict[str, Any],
+    result: dict[str, Any],
     cohort: pd.DataFrame,
     run_path: Path,
     events: EventWriter,
-    summary: Dict[str, Any],
+    summary: dict[str, Any],
 ) -> None:
     """Write metrics.json, the report tables and the per-participant predictions."""
     events.write_stage_start("report", "metrics")
@@ -329,11 +329,11 @@ def _artefacts(run_path: Path) -> Path:
     return artefacts
 
 
-def config_hash(config: Dict[str, Any]) -> str:
+def config_hash(config: dict[str, Any]) -> str:
     """Hash of the resolved configuration, for the summary the CLI prints."""
     return compute_config_hash(config)
 
 
-def stages() -> List[str]:
+def stages() -> list[str]:
     """The stages this build implements, in execution order."""
     return list(BASELINE_STAGES)
