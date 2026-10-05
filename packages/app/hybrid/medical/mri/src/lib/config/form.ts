@@ -9,7 +9,13 @@ import {
  * pipeline parameter appears in the app without a UI change.
  */
 export type FieldKind =
-  'text' | 'number' | 'boolean' | 'enum' | 'optional-text';
+  | 'text'
+  | 'number'
+  | 'boolean'
+  | 'enum'
+  | 'optional-text'
+  /** A list of strings, edited as one comma-separated line. */
+  | 'text-list';
 
 export interface ConfigField {
   path: string;
@@ -57,8 +63,14 @@ const kindOf = (node: Record<string, unknown>): FieldKind => {
   if (isNullable(node)) return 'optional-text';
   if (node.type === 'boolean') return 'boolean';
   if (node.type === 'integer' || node.type === 'number') return 'number';
+  if (isStringList(node)) return 'text-list';
   return 'text';
 };
+
+/** A JSON Schema array of strings, such as `data.features`. */
+const isStringList = (node: Record<string, unknown>): boolean =>
+  node.type === 'array' &&
+  (node.items as { type?: string } | undefined)?.type === 'string';
 
 const fieldFrom = (
   section: string,
@@ -98,7 +110,8 @@ export const configFields = (): ConfigField[] => {
 export const sectionLabels = (): { id: string; label: string }[] =>
   Object.entries(SECTION_LABELS).map(([id, name]) => ({ id, label: name }));
 
-export type ConfigValues = Record<string, string | number | boolean | null>;
+export type ConfigValue = string | number | boolean | null | string[];
+export type ConfigValues = Record<string, ConfigValue>;
 
 export const configToValues = (config: PipelineConfig): ConfigValues => {
   const values: ConfigValues = {};
@@ -111,7 +124,7 @@ export const configToValues = (config: PipelineConfig): ConfigValues => {
         config
       );
     if (value !== undefined && value !== null) {
-      values[field.path] = value as string | number | boolean;
+      values[field.path] = value as ConfigValue;
     }
   }
   return values;
@@ -119,10 +132,16 @@ export const configToValues = (config: PipelineConfig): ConfigValues => {
 
 export const defaultValues = (): ConfigValues =>
   configFields().reduce<ConfigValues>((values, field) => {
-    values[field.path] = (field.default ?? null) as
-      string | number | boolean | null;
+    values[field.path] = (field.default ?? nullFor(field)) as ConfigValue;
     return values;
   }, {});
+
+/**
+ * A list field has no JSON Schema default, but Pydantic's `default_factory`
+ * makes an omitted list empty rather than invalid, so the form starts empty too.
+ */
+const nullFor = (field: ConfigField): null | string[] =>
+  field.kind === 'text-list' ? [] : null;
 
 /**
  * Rebuilds a pipeline config from the form. The shape matches the Pydantic
@@ -163,7 +182,22 @@ export const valuesToConfig = (
   };
 };
 
+/** Splits the comma-separated editor value into a list of trimmed names. */
+export const parseList = (value: unknown): string[] => {
+  if (Array.isArray(value)) return value.map((entry) => String(entry).trim());
+  if (typeof value !== 'string') return [];
+  return value
+    .split(',')
+    .map((entry) => entry.trim())
+    .filter((entry) => entry.length > 0);
+};
+
+/** Renders a list for a single-line editor. */
+export const formatList = (value: unknown): string =>
+  Array.isArray(value) ? value.map((entry) => String(entry)).join(', ') : '';
+
 const coerce = (field: ConfigField, value: unknown): unknown => {
+  if (field.kind === 'text-list') return parseList(value);
   if (value === null || value === undefined || value === '') {
     return field.kind === 'optional-text' ? null : (field.default ?? null);
   }

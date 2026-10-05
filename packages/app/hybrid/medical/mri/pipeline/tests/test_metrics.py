@@ -114,3 +114,84 @@ def test_calculate_confusion_matrix(sample_predictions):
     total = (cm_result["true_negatives"] + cm_result["false_positives"] +
              cm_result["false_negatives"] + cm_result["true_positives"])
     assert total == len(y_true)
+
+
+def test_ece_is_zero_for_a_perfectly_calibrated_single_bin():
+    # Every prediction sits in one bin, and its confidence equals its accuracy.
+    y_true = np.array([1] * 10 + [0] * 10)
+    y_proba = np.full(20, 0.5)
+
+    result = calculate_calibration_metrics(y_true, y_proba, n_bins=10)
+
+    assert result["ece"] == pytest.approx(0.0, abs=1e-12)
+    assert result["brier_score"] == pytest.approx(0.25)
+    assert result["calibration_curve"]["accuracy"][5] == pytest.approx(0.5)
+
+
+def test_ece_matches_the_hand_computed_weighted_gap():
+    # Bin 0.9-1.0: one positive and one negative -> accuracy 0.5, confidence 0.99.
+    # Bin 0.0-0.1: one positive and one negative -> accuracy 0.5, confidence 0.01.
+    # Each bin holds half the sample, so ECE = 0.5*0.49 + 0.5*0.49.
+    y_true = np.array([1, 0, 1, 0])
+    y_proba = np.array([0.99, 0.99, 0.01, 0.01])
+
+    result = calculate_calibration_metrics(y_true, y_proba, n_bins=10)
+
+    assert result["ece"] == pytest.approx(0.49)
+    assert result["bin_counts"][0] == 2
+    assert result["bin_counts"][9] == 2
+
+
+def test_ece_keeps_bins_aligned_instead_of_skipping_empty_ones():
+    # Empty bins must not shift the non-empty ones: bin 0 has two samples with
+    # accuracy 1.0 and confidence 0.05, so the gap is 0.95 and ECE is 0.95.
+    y_true = np.array([1, 1])
+    y_proba = np.array([0.05, 0.05])
+
+    result = calculate_calibration_metrics(y_true, y_proba, n_bins=10)
+
+    assert result["ece"] == pytest.approx(0.95)
+    assert result["bin_counts"][0] == 2
+    assert result["bin_counts"][5:] == [0] * 5
+    assert np.isnan(result["calibration_curve"]["accuracy"][1])
+
+
+def test_ece_puts_probability_one_in_the_last_bin_and_zero_in_the_first():
+    # Correct predictions at the extremes are perfectly calibrated, so ECE is 0
+    # even though the probabilities are extreme.
+    result = calculate_calibration_metrics(np.array([1, 0]), np.array([1.0, 0.0]), n_bins=10)
+
+    assert result["bin_counts"][9] == 1
+    assert result["bin_counts"][0] == 1
+    assert result["ece"] == pytest.approx(0.0, abs=1e-12)
+
+
+def test_ece_penalises_a_confident_wrong_prediction():
+    # A single sample that says 1.0 but is actually 0: accuracy 0, confidence 1.
+    result = calculate_calibration_metrics(np.array([0]), np.array([1.0]), n_bins=10)
+
+    assert result["ece"] == pytest.approx(1.0)
+    assert result["brier_score"] == pytest.approx(1.0)
+
+
+def test_confusion_matrix_stays_two_by_two_for_a_single_class():
+    result = calculate_confusion_matrix(np.zeros(4, dtype=int), np.zeros(4, dtype=int))
+
+    assert result["confusion_matrix"] == [[4, 0], [0, 0]]
+    assert result["true_negatives"] == 4
+    assert result["sensitivity"] == 0.0
+    assert result["specificity"] == 1.0
+
+
+def test_confusion_matrix_reports_sensitivity_and_specificity():
+    y_true = np.array([0, 0, 1, 1])
+    y_pred = np.array([0, 1, 0, 1])
+
+    result = calculate_confusion_matrix(y_true, y_pred)
+
+    assert result["true_negatives"] == 1
+    assert result["false_positives"] == 1
+    assert result["false_negatives"] == 1
+    assert result["true_positives"] == 1
+    assert result["sensitivity"] == pytest.approx(0.5)
+    assert result["specificity"] == pytest.approx(0.5)

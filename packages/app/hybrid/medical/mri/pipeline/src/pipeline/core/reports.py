@@ -1,8 +1,49 @@
 """Report generation in CSV and LaTeX formats."""
 
-import pandas as pd
-from typing import Dict, Any, List, Optional
 from pathlib import Path
+from typing import Any, Dict, List
+
+import pandas as pd
+
+from pipeline.core.latex import to_latex_table
+
+FORMATS = ("csv", "latex")
+
+
+def _write(
+    frame: pd.DataFrame,
+    output_path: str,
+    output_format: str,
+    digits: int = 3,
+    index: bool = False,
+) -> None:
+    """Write one table as CSV or as a LaTeX booktabs table."""
+    if output_format not in FORMATS:
+        raise ValueError(f"Unknown format: {output_format}")
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if output_format == "csv":
+        frame.to_csv(path, index=index)
+        return
+    headers = [str(column) for column in frame.columns]
+    rows = [[value for value in row] for row in frame.itertuples(index=False, name=None)]
+    path.write_text(to_latex_table(headers, rows, digits=digits) + "\n")
+
+
+def _metrics_frame(results: Dict[str, Dict[str, Any]]) -> pd.DataFrame:
+    """One row per model, one column per metric value and interval bound."""
+    rows = []
+    for model_name, metrics in results.items():
+        row: Dict[str, Any] = {"model": model_name}
+        for metric_name, metric_data in metrics.items():
+            if isinstance(metric_data, dict) and "value" in metric_data:
+                row[metric_name] = metric_data["value"]
+                row[f"{metric_name}_ci_lower"] = metric_data.get("ci_lower")
+                row[f"{metric_name}_ci_upper"] = metric_data.get("ci_upper")
+            else:
+                row[metric_name] = metric_data
+        rows.append(row)
+    return pd.DataFrame(rows)
 
 
 def create_metrics_table(
@@ -11,35 +52,13 @@ def create_metrics_table(
     format: str = "csv",
 ) -> None:
     """Create a metrics table from model results.
-    
+
     Args:
-        results: Dictionary mapping model names to metric dictionaries
-        output_path: Path to save the table
-        format: Output format ('csv' or 'latex')
+        results: Model name to metric dictionary
+        output_path: Where to write the table
+        format: 'csv' or 'latex'
     """
-    # Flatten results into a dataframe
-    rows = []
-    for model_name, metrics in results.items():
-        row = {"model": model_name}
-        for metric_name, metric_data in metrics.items():
-            if isinstance(metric_data, dict) and "value" in metric_data:
-                row[metric_name] = metric_data["value"]
-                row[f"{metric_name}_ci_lower"] = metric_data.get("ci_lower", "")
-                row[f"{metric_name}_ci_upper"] = metric_data.get("ci_upper", "")
-            else:
-                row[metric_name] = metric_data
-        rows.append(row)
-    
-    df = pd.DataFrame(rows)
-    
-    if format == "csv":
-        df.to_csv(output_path, index=False)
-    elif format == "latex":
-        latex_table = df.to_latex(index=False, float_format="%.3f")
-        with open(output_path, "w") as f:
-            f.write(latex_table)
-    else:
-        raise ValueError(f"Unknown format: {format}")
+    _write(_metrics_frame(results), output_path, format, digits=3)
 
 
 def create_comparison_table(
@@ -54,16 +73,7 @@ def create_comparison_table(
         output_path: Path to save the table
         format: Output format ('csv' or 'latex')
     """
-    df = pd.DataFrame(comparisons)
-    
-    if format == "csv":
-        df.to_csv(output_path, index=False)
-    elif format == "latex":
-        latex_table = df.to_latex(index=False, float_format="%.4f")
-        with open(output_path, "w") as f:
-            f.write(latex_table)
-    else:
-        raise ValueError(f"Unknown format: {format}")
+    _write(pd.DataFrame(comparisons), output_path, format, digits=4)
 
 
 def create_significance_table(
@@ -111,14 +121,7 @@ def create_significance_table(
     for model in model_names:
         matrix.loc[model, model] = "-"
     
-    if format == "csv":
-        matrix.to_csv(output_path)
-    elif format == "latex":
-        latex_table = matrix.to_latex()
-        with open(output_path, "w") as f:
-            f.write(latex_table)
-    else:
-        raise ValueError(f"Unknown format: {format}")
+    _write(matrix, output_path, format, digits=4, index=True)
 
 
 def create_calibration_table(
@@ -142,16 +145,7 @@ def create_calibration_table(
         }
         rows.append(row)
     
-    df = pd.DataFrame(rows)
-    
-    if format == "csv":
-        df.to_csv(output_path, index=False)
-    elif format == "latex":
-        latex_table = df.to_latex(index=False, float_format="%.4f")
-        with open(output_path, "w") as f:
-            f.write(latex_table)
-    else:
-        raise ValueError(f"Unknown format: {format}")
+    _write(pd.DataFrame(rows), output_path, format, digits=4)
 
 
 def generate_all_reports(
@@ -168,58 +162,26 @@ def generate_all_reports(
     """
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    
-    # Metrics table
-    create_metrics_table(
-        results,
-        output_dir / "metrics.csv",
-        format="csv",
-    )
-    create_metrics_table(
-        results,
-        output_dir / "metrics.tex",
-        format="latex",
-    )
-    
-    # Comparison table
-    create_comparison_table(
-        comparisons,
-        output_dir / "comparisons.csv",
-        format="csv",
-    )
-    create_comparison_table(
-        comparisons,
-        output_dir / "comparisons.tex",
-        format="latex",
-    )
-    
-    # Significance table
-    create_significance_table(
-        comparisons,
-        output_dir / "significance.csv",
-        format="csv",
-    )
-    create_significance_table(
-        comparisons,
-        output_dir / "significance.tex",
-        format="latex",
-    )
-    
-    # Calibration table (if available)
-    calibration_results = {
-        model: metrics.get("calibration", {})
-        for model, metrics in results.items()
-        if "calibration" in metrics
-    }
-    
+
+    create_metrics_table(results, output_dir / "metrics.csv")
+    create_metrics_table(results, output_dir / "metrics.tex", format="latex")
+    create_comparison_table(comparisons, output_dir / "comparisons.csv")
+    create_comparison_table(comparisons, output_dir / "comparisons.tex", format="latex")
+    create_significance_table(comparisons, output_dir / "significance.csv")
+    create_significance_table(comparisons, output_dir / "significance.tex", format="latex")
+
+    calibration_results = _calibration_frame(results)
     if calibration_results:
+        create_calibration_table(calibration_results, output_dir / "calibration.csv")
         create_calibration_table(
-            calibration_results,
-            output_dir / "calibration.csv",
-            format="csv",
+            calibration_results, output_dir / "calibration.tex", format="latex"
         )
-        create_calibration_table(
-            calibration_results,
-            output_dir / "calibration.tex",
-            format="latex",
-        )
+
+
+def _calibration_frame(results: Dict[str, Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+    """Calibration metrics per model, skipping models that report none."""
+    return {
+        model: metrics["calibration"]
+        for model, metrics in results.items()
+        if isinstance(metrics.get("calibration"), dict)
+    }

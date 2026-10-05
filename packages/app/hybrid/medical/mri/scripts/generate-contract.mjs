@@ -62,7 +62,9 @@ const interfaceFor = (definitionName) => {
   const properties = Object.entries(definition?.properties ?? {});
   const lines = properties.map(
     ([name, node]) =>
-      `  ${name}${node.default === undefined ? '?' : ''}?: ${propertyType(node)};`
+      // A property is optional exactly when the schema gives it no default. A
+      // `default_factory` does not produce one, so those fields are optional too.
+      `  ${name}${node.default === undefined ? '?' : ''}: ${propertyType(node)};`
   );
   return [`export interface ${definitionName} {`, ...lines, '}'].join('\n');
 };
@@ -109,7 +111,9 @@ ${definitionNames.map(interfaceFor).join('\n\n')}
 export const CONFIG_SCHEMA_VERSION = ${JSON.stringify(
   schema.properties?.schema_version?.default ?? '0.1.0'
 )};
-export const CONFIG_JSON_SCHEMA = ${JSON.stringify(schema)} as const;
+// Pretty-printed so the generated diff stays reviewable; this file is excluded
+// from prettier so regenerating it does not churn the repository.
+export const CONFIG_JSON_SCHEMA = ${JSON.stringify(schema, null, 2)} as const;
 
 ${defaultConfig()}
 `;

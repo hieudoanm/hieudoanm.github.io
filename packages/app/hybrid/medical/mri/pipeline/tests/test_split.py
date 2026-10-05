@@ -122,3 +122,25 @@ def test_lock_box_access_counter():
     
     splitter.increment_lock_box_access()
     assert splitter.get_lock_box_access_count() == 2
+
+
+def test_continuous_stratify_column_is_binned(sample_cohort):
+    """A continuous score must be binned; StratifiedGroupKFold rejects it raw."""
+    frame = sample_cohort.copy()
+    frame["wab_aq"] = frame["age_at_stroke"] * 1.7 + frame["wab_aq"] * 0.3
+    splitter = Splitter(n_folds=3, lock_box_fraction=0.2, seed=42, stratify_by="wab_aq")
+
+    splits = splitter.create_cv_splits(frame)
+
+    assert len(splits) == 3
+    assert frame["wab_aq"].dtype.kind == "f"  # the column really is continuous
+
+
+def test_missing_stratify_column_falls_back_to_group_kfold(sample_cohort):
+    splitter = Splitter(n_folds=3, seed=42, stratify_by="not_a_column")
+
+    splits = splitter.create_cv_splits(sample_cohort)
+
+    assert len(splits) == 3
+    for train_index, valid_index in splits:
+        assert set(train_index).isdisjoint(valid_index)

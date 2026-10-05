@@ -98,3 +98,54 @@ describe('config form validation', () => {
     expect(validateValues(defaultValues())).toEqual([]);
   });
 });
+
+describe('list-valued pipeline fields', () => {
+  test('data.features is recognised as an editable list, not a text field', () => {
+    const field = configFields().find(
+      (entry) => entry.path === 'data.features'
+    );
+
+    expect(field?.kind).toBe('text-list');
+  });
+
+  test('a list field starts empty rather than failing validation', () => {
+    // Pydantic's default_factory makes an omitted list empty, so the form must
+    // not demand one; the pipeline reports the real problem when it needs one.
+    expect(defaultValues()['data.features']).toEqual([]);
+    expect(validateValues(defaultValues())).toEqual([]);
+  });
+
+  test('a comma-separated entry becomes a list of feature names', () => {
+    const config = valuesToConfig(
+      {
+        ...defaultValues(),
+        'data.features': 'age_at_stroke, sex ,wab_days',
+      },
+      null
+    );
+
+    expect(config.data?.features).toEqual(['age_at_stroke', 'sex', 'wab_days']);
+  });
+
+  test('an existing feature list survives a relaunch', () => {
+    const saved: PipelineConfig = {
+      data: {
+        participants_tsv: '/data/participants.tsv',
+        features: ['age_at_stroke', 'lesion_volume'],
+      },
+    };
+
+    const rebuilt = valuesToConfig(configToValues(saved), saved);
+
+    expect(rebuilt.data?.features).toEqual(['age_at_stroke', 'lesion_volume']);
+  });
+
+  test('clearing the list produces an empty list, not a stray string', () => {
+    const config = valuesToConfig(
+      { ...defaultValues(), 'data.features': '' },
+      { data: { features: ['age_at_stroke'] } }
+    );
+
+    expect(config.data?.features).toEqual([]);
+  });
+});

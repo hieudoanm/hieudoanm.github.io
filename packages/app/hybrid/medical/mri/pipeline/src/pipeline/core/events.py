@@ -68,14 +68,20 @@ class EventWriter:
     
     def write_metric(
         self,
+        stage: str,
         name: str,
         value: float,
         fold: Optional[int] = None,
         **kwargs: Any,
     ) -> None:
-        """Write a metric event."""
+        """Write a metric event.
+
+        `stage` is required, not optional: the workbench deserialises a metric
+        event with a missing stage as a parse error and drops it silently.
+        """
         event = {
             "type": "metric",
+            "stage": stage,
             "name": name,
             "value": value,
         }

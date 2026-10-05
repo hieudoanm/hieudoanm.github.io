@@ -41,33 +41,73 @@ pub struct DoctorReport {
     pub available_commands: Vec<String>,
 }
 
-/// Typer prints one indented command name per line under its `Commands` panel.
-/// Those names are what the workbench may invoke, so they are read from help
-/// rather than assumed.
+/// Typer prints its command names inside a rich box panel, one per line, and
+/// older/plain renderings use an indented `Commands:` list. Both are read here,
+/// because these names decide what the workbench offers to launch.
 pub fn commands_from_help(help_output: &str) -> Vec<String> {
     let mut inside_commands = false;
-    let mut commands = Vec::new();
+    let mut name_offset: Option<usize> = None;
+    let mut commands: Vec<String> = Vec::new();
     for line in help_output.lines() {
         let trimmed = line.trim();
-        if trimmed.trim_end_matches(':') == "Commands" {
+        if is_commands_header(trimmed) {
             inside_commands = true;
+            name_offset = None;
             continue;
         }
-        if inside_commands {
-            if trimmed.is_empty() {
-                inside_commands = false;
-                continue;
-            }
-            if line.starts_with(' ') {
-                if let Some(name) = trimmed.split_whitespace().next() {
-                    commands.push(name.to_string());
-                }
-            } else {
-                inside_commands = false;
+        if !inside_commands {
+            continue;
+        }
+        if strip_panel(trimmed).is_empty() {
+            inside_commands = false;
+            continue;
+        }
+        if let Some(name) = command_name(line, &mut name_offset) {
+            if !commands.contains(&name) {
+                commands.push(name);
             }
         }
     }
     commands
+}
+
+/// A panel header (`Commands:`, `Commands`, or `╭─ Commands ─╮`) starts the list.
+fn is_commands_header(trimmed: &str) -> bool {
+    let mut text = strip_panel(trimmed);
+    text = text.trim_end_matches(':').trim().to_string();
+    text.eq_ignore_ascii_case("commands")
+}
+
+/// Drops the box-drawing border so only the panel's text content is left.
+fn strip_panel(line: &str) -> String {
+    line.trim_matches(|c: char| PANEL_CHARS.contains(&c) || c.is_whitespace())
+        .to_string()
+}
+
+const PANEL_CHARS: [char; 6] = ['│', '─', '╭', '╮', '╰', '╯'];
+
+/// The command name occupies a fixed column, so a description that wrapped onto
+/// the next line is not mistaken for another command.
+fn command_name(line: &str, name_offset: &mut Option<usize>) -> Option<String> {
+    let chars: Vec<char> = line.chars().collect();
+    let offset = match *name_offset {
+        Some(offset) => offset,
+        None => {
+            let offset = chars.iter().position(|c| !c.is_whitespace() && *c != '│')?;
+            *name_offset = Some(offset);
+            offset
+        }
+    };
+    let token: String = chars
+        .get(offset..)?
+        .iter()
+        .take_while(|c| !c.is_whitespace())
+        .collect();
+    if token.is_empty() {
+        None
+    } else {
+        Some(token)
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -214,6 +254,73 @@ mod tests {
     #[test]
     fn finds_no_commands_in_help_without_a_command_panel() {
         assert!(commands_from_help("Usage: pipeline [OPTIONS]\n").is_empty());
+    }
+
+    /// Real `pipeline --help` output from Typer's rich renderer, which draws a
+    /// box panel rather than an indented list and wraps long descriptions.
+    const RICH_HELP: &str = concat!(
+        "Usage: pipeline [OPTIONS] COMMAND [ARGS]...\n",
+        "\n",
+        "Options:\n",
+        "╭─ Options ───────────────────────────────────────────────────────────────────╮\n",
+        "│ --help          Show this message and exit.                                 │\n",
+        "╰──────────────────────────────────────────────────────────────────────────────╯\n",
+        "\n",
+        "╭─ Commands ───────────────────────────────────────────────────────────────────╮\n",
+        "│ doctor          Check system dependencies and configuration.                 │\n",
+        "│ export-schemas  Export configuration schemas as JSON Schema.                 │\n",
+        "│ list-runs       List all runs.                                               │\n",
+        "│ data            Data management commands.                                    │\n",
+        "│ run             Run the configured stages and write one run folder.          │\n",
+        "│                 Because the description wrapped onto this line.             │\n",
+        "│ split           Create train/validation/test splits.                         │\n",
+        "╰──────────────────────────────────────────────────────────────────────────────╯\n",
+    );
+
+    #[test]
+    fn reads_commands_out_of_a_rich_box_panel() {
+        assert_eq!(
+            commands_from_help(RICH_HELP),
+            vec![
+                "doctor",
+                "export-schemas",
+                "list-runs",
+                "data",
+                "run",
+                "split"
+            ]
+        );
+    }
+
+    #[test]
+    fn a_wrapped_description_is_not_read_as_a_command() {
+        let commands = commands_from_help(RICH_HELP);
+
+        assert!(commands.contains(&"run".to_string()));
+        assert!(!commands.iter().any(|name| name.contains("Because")));
+    }
+
+    #[test]
+    fn the_run_command_is_visible_so_the_workbench_can_launch() {
+        assert!(commands_from_help(RICH_HELP).contains(&"run".to_string()));
+    }
+
+    #[test]
+    fn stops_at_the_end_of_the_command_panel() {
+        let help = format!("{RICH_HELP}\n╭─ Notes ─╮\n│ not a command │\n╰─────────╯\n");
+
+        assert!(!commands_from_help(&help).contains(&"not".to_string()));
+    }
+
+    /// The captured output of `pipeline --help`, so a Typer upgrade that changes
+    /// the panel layout fails here instead of silently disabling Launch.
+    #[test]
+    fn parses_the_captured_pipeline_help() {
+        let commands = commands_from_help(include_str!("../../tests/fixtures/pipeline_help.txt"));
+
+        assert!(commands.contains(&"run".to_string()), "{commands:?}");
+        assert!(commands.contains(&"doctor".to_string()), "{commands:?}");
+        assert!(commands.contains(&"list-runs".to_string()), "{commands:?}");
     }
 
     const OUTPUT: &str = "Pipeline doctor - checking system...\n\n\

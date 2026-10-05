@@ -129,9 +129,13 @@ scope until a use case justifies the dependency.
       progress view.
 - [x] Cancel a run cleanly.
 - [x] One active run per project, tracked in a launcher registry.
-- [ ] The pipeline exposes
-      `pipeline run --config … --output-dir … [--run-id …]`. Until then Setup
-      reports `canLaunch: false` and the button stays honest.
+- [x] The pipeline exposes
+      `pipeline run --config … --output-dir … [--run-id …]`, so Setup reports
+      `canLaunch: true` and the button is enabled.
+- [ ] Imaging and deep-learning stages still have no implementation.
+      `pipeline     run` executes the tabular baseline path only, and refuses a
+      `model_type` it cannot honour rather than reporting a success it did not
+      achieve.
 
 ### Phase A3: Dashboard and comparison — shipped
 
@@ -199,18 +203,20 @@ environment stays the default; bundling PyTorch is large and fragile.
 
 ## 9. Open items
 
-1. **`pipeline run` does not exist yet.** The workbench builds the command,
-   streams and cancels correctly, but nothing can be launched until the CLI
-   grows a `run` subcommand that honours `--config`, `--output-dir` and
-   `--run-id` and emits the event JSONL. Setup reports this state instead of
-   hiding it.
-2. **Schema regeneration is manual.** The generated config types drift silently
-   until someone runs `pnpm generate:contract`; CI only checks what is
-   committed.
-3. **Artefact rendering.** PNG artefacts are listed, not displayed. Any future
+1. **Schema regeneration is still manual.** `pnpm generate:contract` reads the
+   committed JSON Schema, so the schema itself must first be re-exported from
+   the pipeline (`pipeline export-schemas`). CI only checks what is committed.
+2. **Only the tabular baseline path runs.** Preprocessing, image representations
+   and deep models are deliberately refused, not stubbed. The workbench can
+   launch a baseline run today; imaging stages need real implementations before
+   their phases can be checked off.
+3. **`pipeline data fetch` is still a stub.** It reports what it would do rather
+   than fetching, so a run fails with a clear message until real ARC access and
+   cohort construction land.
+4. **Artefact rendering.** PNG artefacts are listed, not displayed. Any future
    viewer must load bytes through a Rust command — no filesystem plugin — and
    must justify the dependency size.
-4. **Paper-facing exports** (LaTeX tables, figures) need a check against the
+5. **Paper-facing exports** (LaTeX tables, figures) need a check against the
    pipeline's own report output to guarantee they match.
 
 ## 10. Risks

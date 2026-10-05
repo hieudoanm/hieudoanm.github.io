@@ -14,6 +14,55 @@ class SessionRule(str, Enum):
     WITH_T1 = "with_t1"
     WITH_LESION = "with_lesion"
 
+    def column(self) -> Optional[str]:
+        """The column this rule needs, or None when it only needs a session label."""
+        return {
+            SessionRule.WITH_WAB_AQ: "wab_aq",
+            SessionRule.WITH_T1: "t1_path",
+            SessionRule.WITH_LESION: "lesion_mask_path",
+        }.get(self)
+
+    @property
+    def prefers_measured(self) -> bool:
+        """Whether this rule prefers the session that has the measurement."""
+        return self.column() is not None
+
+
+SESSION_COLUMNS = ("session_id", "session", "session_label")
+
+
+def _find_session_column(df: pd.DataFrame) -> Optional[str]:
+    for candidate in SESSION_COLUMNS:
+        if candidate in df.columns:
+            return candidate
+    return None
+
+
+def _session_key(
+    df: pd.DataFrame,
+    session_column: str,
+    descending: bool = False,
+) -> pd.Series:
+    """Sort key for a session label such as `ses-1` or `1`, with unknowns last.
+
+    Negating the number reverses the order for the `last` rule, so both rules can
+    share one ascending sort.
+    """
+    label = df[session_column].astype("string").str.extract(r"(\d+)", expand=False)
+    numbers = pd.to_numeric(label, errors="coerce").fillna(float("inf"))
+    if descending:
+        numbers = -numbers
+    return numbers
+
+
+def _rule_key(df: pd.DataFrame, rule: SessionRule) -> pd.Series:
+    """Sort key that puts the session the rule wants first."""
+    if not rule.prefers_measured:
+        return pd.Series(0.0, index=df.index)
+    column = rule.column()
+    measured = df[column].notna() & (df[column].astype("string") != "")
+    return (~measured).astype(float)
+
 
 class CohortBuilder:
     """Builder for creating a cohort dataframe from BIDS participants.tsv."""
@@ -47,18 +96,49 @@ class CohortBuilder:
         return df
     
     def apply_session_rule(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Apply session selection rule to the dataframe.
-        
-        This is a placeholder - actual implementation depends on the dataset structure.
-        For ARC, we need to check the actual session structure.
+        """Reduce the table to exactly one row per participant.
+
+        The split unit is the participant, so leaving two sessions of the same
+        person in the table would put that person in two folds. A table without a
+        session column is already one row per participant and passes through.
+
+        Args:
+            df: Loaded participants table
+
+        Returns:
+            A table with one row per participant
+
+        Raises:
+            ValueError: If no session column exists and a session rule was asked
+                for explicitly, or if a rule needs a column the table lacks
         """
-        # Placeholder: for now, just return the dataframe as-is
-        # In a real implementation, this would:
-        # 1. Load session information from BIDS structure
-        # 2. Apply the session rule to select one session per participant
-        # 3. Filter to participants that have the required data
-        
-        return df
+        session_column = _find_session_column(df)
+        if session_column is None:
+            if self.session_rule is SessionRule.FIRST and len(df) > 0:
+                duplicates = df["participant_id"].duplicated().sum()
+                if duplicates:
+                    raise ValueError(
+                        f"{duplicates} participant rows share an id but the table has "
+                        "no session column, so no session rule can be applied"
+                    )
+            return df
+
+        missing = self.session_rule.column()
+        if missing is not None and missing not in df.columns:
+            raise ValueError(
+                f"session rule '{self.session_rule.value}' needs the column "
+                f"'{missing}', which is not in the table; available columns: "
+                f"{sorted(df.columns)}"
+            )
+
+        ranked = df.copy()
+        ranked["_session_key"] = _session_key(
+            ranked, session_column, descending=self.session_rule is SessionRule.LAST
+        )
+        ranked["_rule_key"] = _rule_key(ranked, self.session_rule)
+        ranked = ranked.sort_values(["participant_id", "_rule_key", "_session_key"])
+        selected = ranked.groupby("participant_id", as_index=False).head(1)
+        return selected.drop(columns=["_session_key", "_rule_key"]).reset_index(drop=True)
     
     def filter_required_columns(
         self,

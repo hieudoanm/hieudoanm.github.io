@@ -1,5 +1,8 @@
 """Configuration schemas for the MRI pipeline."""
 
+from pathlib import Path
+
+import yaml
 from pydantic import BaseModel, Field, field_validator, ConfigDict
 from typing import Optional, Literal
 from enum import Enum
@@ -33,6 +36,20 @@ class DataConfig(BaseModel):
     participants_tsv: Optional[str] = Field(default=None, description="Path to participants.tsv")
     lesion_mask_path: Optional[str] = Field(default=None, description="Path to lesion masks")
     t1_path: Optional[str] = Field(default=None, description="Path to T1 scans")
+    outcome_column: str = Field(
+        default="wab_aq",
+        description="Continuous outcome column to binarise",
+    )
+    outcome_threshold: float = Field(
+        default=50.0,
+        description="Value at or above which the outcome counts as positive; "
+        "a modelling decision that must be justified in the protocol, not a fact "
+        "about the cohort",
+    )
+    features: list[str] = Field(
+        default_factory=list,
+        description="participants.tsv columns used as tabular model inputs",
+    )
     
     @field_validator("data_path")
     @classmethod
@@ -89,3 +106,29 @@ class Config(BaseModel):
     run: RunConfig = Field(default_factory=RunConfig)
     
     schema_version: str = Field(default="0.1.0", description="Configuration schema version")
+
+
+def load_config(config_path: str) -> Config:
+    """Read a YAML configuration file and validate it.
+
+    Args:
+        config_path: Path to a YAML configuration file
+
+    Returns:
+        The validated configuration
+
+    Raises:
+        FileNotFoundError: If the file does not exist
+        ValueError: If the file is not a mapping or fails validation
+    """
+    path = Path(config_path)
+    if not path.is_file():
+        raise FileNotFoundError(f"configuration file not found: {path}")
+
+    raw = yaml.safe_load(path.read_text())
+    if raw is None:
+        raw = {}
+    if not isinstance(raw, dict):
+        raise ValueError(f"configuration must be a mapping, got {type(raw).__name__}")
+
+    return Config(**raw)

@@ -11,7 +11,6 @@ from sklearn.metrics import (
     recall_score,
     confusion_matrix,
 )
-from sklearn.calibration import calibration_curve
 from sklearn.metrics import brier_score_loss
 
 
@@ -54,46 +53,61 @@ def calculate_calibration_metrics(
     y_proba: np.ndarray,
     n_bins: int = 10,
 ) -> Dict[str, Any]:
-    """Calculate calibration metrics.
-    
+    """Calculate calibration metrics over equal-width probability bins.
+
     Args:
         y_true: True labels
         y_proba: Predicted probabilities
-        n_bins: Number of bins for calibration curve
-    
+        n_bins: Number of equal-width bins on [0, 1]
+
     Returns:
-        Dictionary of calibration metrics
+        Brier score, expected calibration error and the per-bin reliability data
     """
+    true = np.asarray(y_true, dtype=float)
+    proba = np.asarray(y_proba, dtype=float)
+
     metrics = {
-        "brier_score": brier_score_loss(y_true, y_proba),
+        "brier_score": float(brier_score_loss(true, proba)),
     }
-    
-    # Calculate Expected Calibration Error (ECE)
-    prob_true, prob_pred = calibration_curve(y_true, y_proba, n_bins=n_bins)
-    
-    # Calculate ECE
-    bin_boundaries = np.linspace(0, 1, n_bins + 1)
-    bin_centers = (bin_boundaries[:-1] + bin_boundaries[1:]) / 2
-    
-    # Calculate number of samples in each bin
-    bin_counts = np.histogram(y_proba, bins=bin_boundaries)[0]
-    
-    # Calculate ECE
+
+    # Expected calibration error (Guo et al., 2017), computed per equal-width
+    # bin from the raw samples. `sklearn.calibration_curve` returns only
+    # non-empty bins, so its k-th entry does not correspond to the k-th bin of
+    # an equal-width grid; the two must not be zipped together.
+    edges = np.linspace(0.0, 1.0, n_bins + 1)
+    # `searchsorted(side="right") - 1` puts p=0 in bin 0 and p=1 in the last bin.
+    assignment = np.clip(np.searchsorted(edges, proba, side="right") - 1, 0, n_bins - 1)
+
     ece = 0.0
-    for i in range(n_bins):
-        if bin_counts[i] > 0:
-            ece += bin_counts[i] * np.abs(prob_true[i] - prob_pred[i])
-    
-    ece = ece / len(y_true)
-    metrics["ece"] = ece
-    
-    # Store calibration curve data
+    counts: list[int] = []
+    accuracies: list[float] = []
+    confidences: list[float] = []
+    for index in range(n_bins):
+        mask = assignment == index
+        count = int(mask.sum())
+        counts.append(count)
+        if count == 0:
+            accuracies.append(float("nan"))
+            confidences.append(float("nan"))
+            continue
+        accuracy = float(true[mask].mean())
+        confidence = float(proba[mask].mean())
+        accuracies.append(accuracy)
+        confidences.append(confidence)
+        ece += (count / len(true)) * abs(accuracy - confidence)
+
+    metrics["ece"] = float(ece)
+    metrics["n_bins"] = n_bins
+    metrics["bin_edges"] = edges.tolist()
+    metrics["bin_counts"] = counts
     metrics["calibration_curve"] = {
-        "prob_true": prob_true.tolist(),
-        "prob_pred": prob_pred.tolist(),
-        "bin_centers": bin_centers.tolist(),
+        # Empty bins stay NaN so a gap in the reliability diagram is visible
+        # instead of being silently shifted onto the wrong bin.
+        "accuracy": accuracies,
+        "confidence": confidences,
+        "count": counts,
     }
-    
+
     return metrics
 
 
@@ -184,16 +198,19 @@ def calculate_confusion_matrix(
     Returns:
         Dictionary with confusion matrix and derived metrics
     """
-    cm = confusion_matrix(y_true, y_pred)
-    
-    tn, fp, fn, tp = cm.ravel() if cm.size == 4 else (0, 0, 0, 0)
-    
+    true = np.asarray(y_true)
+    pred = np.asarray(y_pred)
+    # `labels=[0, 1]` keeps a 2x2 matrix even when only one class is present,
+    # so the cell names never have to be guessed from the matrix shape.
+    cm = confusion_matrix(true, pred, labels=[0, 1])
+    tn, fp, fn, tp = (int(cell) for cell in cm.ravel())
+
     return {
         "confusion_matrix": cm.tolist(),
-        "true_negatives": int(tn),
-        "false_positives": int(fp),
-        "false_negatives": int(fn),
-        "true_positives": int(tp),
-        "sensitivity": tp / (tp + fn) if (tp + fn) > 0 else 0,
-        "specificity": tn / (tn + fp) if (tn + fp) > 0 else 0,
+        "true_negatives": tn,
+        "false_positives": fp,
+        "false_negatives": fn,
+        "true_positives": tp,
+        "sensitivity": tp / (tp + fn) if (tp + fn) > 0 else 0.0,
+        "specificity": tn / (tn + fp) if (tn + fp) > 0 else 0.0,
     }

@@ -30,9 +30,10 @@ from .stats import (
     compare_models,
 )
 from .null_test import (
-    null_simulation_test,
-    generate_null_scores_normal,
     calibrate_df_scaling,
+    normal_null_scores,
+    null_simulation_test,
+    simulate_null_scores,
 )
 from .baselines import (
     BaselineModel,
@@ -42,6 +43,7 @@ from .baselines import (
     evaluate_baseline,
     cross_validate_baseline,
 )
+from .latex import to_latex_table
 from .reports import (
     create_metrics_table,
     create_comparison_table,
@@ -84,7 +86,8 @@ __all__ = [
     "bootstrap_ci",
     "compare_models",
     "null_simulation_test",
-    "generate_null_scores_normal",
+    "simulate_null_scores",
+    "normal_null_scores",
     "calibrate_df_scaling",
     "BaselineModel",
     "LogisticRegressionBaseline",
@@ -96,5 +99,6 @@ __all__ = [
     "create_comparison_table",
     "create_significance_table",
     "create_calibration_table",
+    "to_latex_table",
     "generate_all_reports",
 ]

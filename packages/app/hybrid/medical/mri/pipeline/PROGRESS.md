@@ -2,7 +2,8 @@
 
 **Project**: Predicting post-stroke aphasia outcome from lesion MRI plus
 clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
-103638 **Status**: Phase 0 - Decisions and access **Last Updated**: 2026-10-05
+103638 **Status**: Phase 2 in progress - evaluation harness and tabular baselines
+reachable from `pipeline run` **Last Updated**: 2026-10-05
 
 ---
 
@@ -16,6 +17,8 @@ clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
       first)
 - [x] Scaffold the repository (`uv`, Typer, Pydantic, `pytest`, CI)
 - [ ] Resolve the checklist in section 5 of ROADMAP.md
+- [ ] Confirm the WAB-AQ threshold used to binarise the outcome against the
+      literature, and record it in the protocol document
 
 **Done when**: the usable ARC sample size is known and the research question is
 written in one sentence.
@@ -58,7 +61,11 @@ the tests pass in CI.
 - [x] JSONL event writer for tracking pipeline progress
 - [x] Config schemas exported as JSON Schema
 - [x] Tests for split reproducibility passing
-- [x] All 22 tests passing
+- [x] Session rules actually reduce the table to one row per participant; a
+      table without a session column and duplicate ids is refused rather than
+      passed through, because one participant in two folds invalidates a split
+- [x] A continuous stratification column is binned before `StratifiedGroupKFold`,
+      which rejects a continuous target
 
 ---
 
@@ -66,18 +73,47 @@ the tests pass in CI.
 
 ### Tasks
 
-- [ ] Metrics: accuracy, balanced accuracy, AUC, F1, plus calibration (ECE,
+- [x] Metrics: accuracy, balanced accuracy, AUC, F1, plus calibration (ECE,
       Brier)
-- [ ] Corrected paired t-test and Benjamini-Hochberg FDR, ported from the
-      paper's Appendix A1/A2
-- [ ] Null-simulation test that checks the type-I error rate of your own design
-- [ ] Baselines: logistic regression on tabular features; regularised models and
-      gradient boosting on ROI lesion loads once available
+- [x] Corrected paired t-test (Nadeau-Bengio variance inflation and degree-of-
+      freedom scaling) and Benjamini-Hochberg FDR, with degenerate and empty
+      inputs handled explicitly
+- [x] Null-simulation machinery that checks the type-I error rate of the design,
+      using common simulated data across candidates so they are comparable
+- [x] Baselines: logistic regression and gradient boosting on tabular features
+- [x] Report tables as CSV and LaTeX, without a Jinja2 dependency
+- [x] `pipeline run` executes the stages end to end and writes a complete run
+      folder: manifest, config, `events.jsonl`, `metrics.json`, the participant
+      split, the lock-box access log and the artefacts
+- [ ] Regularised models and ROI lesion loads once the imaging stages exist
 - [ ] Optional nested cross-validation or a second lock-box
-- [ ] Report tables as CSV and LaTeX
+- [ ] Model comparison across two runs, with the corrected test and FDR in the
+      report; the pieces exist but no command joins them yet
 
 **Done when**: baselines run end to end from the CLI and produce a table with
-confidence intervals and a significance table.
+confidence intervals and a significance table - the baseline half now holds, the
+significance table still needs the comparison command.
+
+### Completed
+
+- [x] `pipeline run --config ... --output-dir ... [--run-id ...]`, matching the
+      command the desktop workbench builds, so the workbench can launch a run
+- [x] Lock-box participants are excluded from training and scored once, with the
+      access recorded
+- [x] ECE computed from raw samples with equal-width bins that keep their
+      alignment, and a confusion matrix that stays 2x2 for a single class
+- [x] Report and launch-form list fields (`data.features`) round-trip through the
+      workbench instead of silently becoming a text field
+
+### Deliberately not implemented
+
+The commands below report what they would need rather than pretending to work.
+Each is a no-op that would otherwise be recorded as a successful run:
+
+- `preprocess`, `images`, `train` - imaging and deep-learning stages
+- `compare` - needs two runs and the corrected test wired together
+- `serve` - the workbench reads run folders directly
+- `data fetch` - no ARC access yet
 
 ---
 
@@ -180,32 +216,34 @@ commands.
 
 ## Feature Implementation Status
 
-| ID   | Feature                                            | Priority | Phase | Status |
-| ---- | -------------------------------------------------- | -------- | ----- | ------ |
-| P-01 | Cohort builder with documented session rule        | MVP      | 1     | ✅     | Complete |
-| P-02 | Participant-level splitter and lock-box            | MVP      | 1     | ✅     | Complete |
-| P-03 | Lock-box access counter and log                    | MVP      | 1     | ✅     | Complete |
-| P-04 | Run folder, manifest, JSONL events                 | MVP      | 1     | ✅     | Complete |
-| P-05 | Config schemas exported as JSON Schema             | MVP      | 1     | ✅     | Complete |
-| P-06 | CLI skeleton and `pipeline doctor`                 | MVP      | 1     | ✅     | Complete |
-| P-07 | Metrics with calibration                           | MVP      | 2     | 🔲     |
-| P-08 | Corrected t-test, FDR, null simulation             | MVP      | 2     | 🔲     |
-| P-09 | Baselines (logistic regression, gradient boosting) | MVP      | 2     | 🔲     |
-| P-10 | Report tables (CSV, LaTeX)                         | MVP      | 2     | 🔲     |
-| P-11 | Preprocessing, lesion volume, atlas lesion loads   | MVP      | 3     | 🔲     |
-| P-12 | Stitched, ROI and hybrid image generators          | MVP      | 3     | 🔲     |
-| P-13 | Stage caching and data hashing                     | MVP      | 3     | 🔲     |
-| P-14 | ResNet-18 trainer with calibration                 | MVP      | 4     | 🔲     |
-| P-15 | Ablation runner                                    | Should   | 4     | 🔲     |
-| P-16 | Nested CV or second lock-box                       | Should   | 2/4   | 🔲     |
-| P-17 | Slurm templates                                    | Should   | 4     | 🔲     |
-| P-18 | Explainability and ROI importance                  | Should   | 6     | 🔲     |
-| P-19 | Error analysis, calibration, subgroup plots        | Should   | 6     | 🔲     |
-| P-20 | Reproducibility bundle                             | Should   | 8     | 🔲     |
-| P-21 | Pre-training module and comparison runner          | Stretch  | 5     | 🔲     |
-| P-22 | `pipeline serve`                                   | Stretch  | 7     | 🔲     |
-| P-23 | Dataset adapters (ATLAS, PLORAS)                   | Stretch  | any   | 🔲     |
-| P-24 | 3D models                                          | Stretch  | any   | 🔲     |
+| ID   | Feature                                            | Priority | Phase | Status              |
+| ---- | -------------------------------------------------- | -------- | ----- | ------------------- |
+| P-01 | Cohort builder with documented session rule        | MVP      | 1     | done                |
+| P-02 | Participant-level splitter and lock-box            | MVP      | 1     | done                |
+| P-03 | Lock-box access counter and log                    | MVP      | 1     | done                |
+| P-04 | Run folder, manifest, JSONL events                 | MVP      | 1     | done                |
+| P-05 | Config schemas exported as JSON Schema             | MVP      | 1     | done                |
+| P-06 | CLI skeleton and `pipeline doctor`                 | MVP      | 1     | done                |
+| P-07 | Metrics with calibration                           | MVP      | 2     | done                |
+| P-08 | Corrected t-test, FDR, null simulation             | MVP      | 2     | done                |
+| P-09 | Baselines (logistic regression, gradient boosting) | MVP      | 2     | done                |
+| P-10 | Report tables (CSV, LaTeX)                         | MVP      | 2     | done                |
+| P-25 | `pipeline run` writing a complete run folder        | MVP      | 2     | done                |
+| P-26 | Model comparison across two runs                   | MVP      | 2     | not started         |
+| P-11 | Preprocessing, lesion volume, atlas lesion loads   | MVP      | 3     | not started         |
+| P-12 | Stitched, ROI and hybrid image generators          | MVP      | 3     | not started         |
+| P-13 | Stage caching and data hashing                     | MVP      | 3     | not started         |
+| P-14 | ResNet-18 trainer with calibration                 | MVP      | 4     | not started         |
+| P-15 | Ablation runner                                    | Should   | 4     | not started         |
+| P-16 | Nested CV or second lock-box                       | Should   | 2/4   | not started         |
+| P-17 | Slurm templates                                    | Should   | 4     | not started         |
+| P-18 | Explainability and ROI importance                  | Should   | 6     | not started         |
+| P-19 | Error analysis, calibration, subgroup plots        | Should   | 6     | not started         |
+| P-20 | Reproducibility bundle                             | Should   | 8     | not started         |
+| P-21 | Pre-training module and comparison runner          | Stretch  | 5     | not started         |
+| P-22 | `pipeline serve`                                   | Stretch  | 7     | dropped, by choice  |
+| P-23 | Dataset adapters (ATLAS, PLORAS)                   | Stretch  | any   | not started         |
+| P-24 | 3D models                                          | Stretch  | any   | not started         |
 
 ---
 
@@ -213,14 +251,15 @@ commands.
 
 | Component        | Status | Notes                         |
 | ---------------- | ------ | ----------------------------- |
-| Python 3.11/3.12 | ✅     | Using 3.14 (uv default)       |
-| uv               | ✅     | Installed and configured      |
-| Typer            | ✅     | CLI skeleton implemented      |
-| Pydantic         | ✅     | Configuration schemas created |
-| pytest           | ✅     | Test suite passing            |
-| ruff             | ✅     | Configured in pyproject.toml  |
-| pyright          | ✅     | Configured in pyproject.toml  |
-| GitHub Actions   | ✅     | CI workflow created           |
+| Python 3.11/3.12 | done   | Using 3.14 (uv default)       |
+| uv               | done   | Installed and configured      |
+| Typer            | done   | CLI implemented               |
+| Pydantic         | done   | Configuration schemas created |
+| pytest           | done   | 133 tests passing             |
+| ruff             | config | Declared in pyproject.toml, not in the venv |
+| pyright          | config | Declared in pyproject.toml, not in the venv |
+| joblib           | done   | Declared directly; used by the baselines |
+| GitHub Actions   | done   | CI workflow created           |
 
 ---
 
@@ -230,10 +269,10 @@ commands.
 
 | Item                             | Decision                                      |
 | -------------------------------- | --------------------------------------------- |
-| Cohort and session rule          | TBD                                           |
-| Outcome and threshold            | TBD (justify from the literature)             |
-| Features                         | TBD                                           |
-| Splits                           | k folds, lock-box fraction, seeds: TBD        |
+| Cohort and session rule          | one row per participant, session rule explicit |
+| Outcome and threshold            | WAB-AQ >= 50 in code, threshold still to justify |
+| Features                         | configurable per run (`data.features`)        |
+| Splits                           | 4 folds, 0.2 lock-box, seed 42 by default     |
 | Metrics (primary / secondary)    | TBD                                           |
 | Primary comparison               | TBD (for example hybrid ROI vs best baseline) |
 | Test and correction              | corrected paired t-test, Benjamini-Hochberg   |

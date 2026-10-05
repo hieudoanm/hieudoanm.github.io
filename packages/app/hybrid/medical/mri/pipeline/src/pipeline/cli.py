@@ -107,57 +107,128 @@ def data(
 
 
 @app.command()
+def run(
+    config: str = typer.Option(..., "--config", "-c", help="Path to a YAML configuration file"),
+    output_dir: str = typer.Option("runs/", "--output-dir", "-o", help="Parent directory for run folders"),
+    run_id: Optional[str] = typer.Option(None, "--run-id", help="Run id; generated when omitted"),
+) -> None:
+    """Run the configured stages and write one run folder.
+
+    This is the command the desktop workbench launches. Progress is written to
+    the run folder's events.jsonl as JSON Lines; the summary is printed here.
+    """
+    from pipeline.core.runner import run_experiment
+    from pipeline.schemas.config import load_config
+
+    try:
+        validated = load_config(config)
+    except Exception as error:
+        typer.secho(f"Configuration error: {error}", err=True, fg=typer.colors.RED)
+        raise typer.Exit(code=2)
+
+    resolved = validated.model_dump(mode="json")
+    try:
+        summary = run_experiment(resolved, output_dir=output_dir, run_id=run_id)
+    except Exception as error:
+        typer.secho(f"Run failed: {error}", err=True, fg=typer.colors.RED)
+        raise typer.Exit(code=1)
+
+    typer.echo(json.dumps(summary, indent=2, default=str))
+
+
+@app.command()
 def split() -> None:
     """Create train/validation/test splits."""
-    typer.echo("Creating splits...")
+    typer.secho(
+        "Not available as a standalone command: the split is created by "
+        "'pipeline run' and saved to the run folder's splits/split.json.",
+        err=True,
+    )
+    raise typer.Exit(code=2)
 
 
 @app.command()
 def preprocess() -> None:
     """Preprocess imaging data."""
-    typer.echo("Preprocessing data...")
+    _not_implemented(
+        "preprocess",
+        "imaging preprocessing is not implemented in this build; "
+        "'pipeline run' executes the tabular baseline path",
+    )
 
 
 @app.command()
 def images() -> None:
     """Generate image representations."""
-    typer.echo("Generating images...")
+    _not_implemented(
+        "images",
+        "image representation generation is not implemented in this build; "
+        "'pipeline run' executes the tabular baseline path",
+    )
 
 
 @app.command()
 def baseline() -> None:
     """Run baseline models."""
-    typer.echo("Running baselines...")
+    _not_implemented(
+        "baseline",
+        "run the baseline inside a full run instead: 'pipeline run --config <path>'",
+    )
 
 
 @app.command()
 def train() -> None:
     """Train deep models."""
-    typer.echo("Training models...")
+    _not_implemented(
+        "train",
+        "deep models are not implemented in this build; "
+        "'pipeline run' executes the tabular baseline path",
+    )
 
 
 @app.command()
 def evaluate() -> None:
     """Evaluate models."""
-    typer.echo("Evaluating models...")
+    _not_implemented(
+        "evaluate",
+        "evaluation happens inside a run so the lock-box access is logged; "
+        "use 'pipeline run --config <path>'",
+    )
 
 
 @app.command()
 def compare() -> None:
     """Compare model results."""
-    typer.echo("Comparing results...")
+    _not_implemented(
+        "compare",
+        "model comparison needs two runs; run the baseline for each model type "
+        "and open them in the workbench's comparison view",
+    )
 
 
 @app.command()
 def report() -> None:
     """Generate reports."""
-    typer.echo("Generating reports...")
+    _not_implemented(
+        "report",
+        "report tables are written into the run folder's artifacts/reports; "
+        "use 'pipeline run --config <path>'",
+    )
+
+
+def _not_implemented(command: str, reason: str) -> None:
+    """Report an unimplemented command instead of pretending it succeeded."""
+    typer.secho(f"'{command}' is not implemented: {reason}", err=True, fg=typer.colors.RED)
+    raise typer.Exit(code=2)
 
 
 @app.command()
 def serve() -> None:
     """Start the pipeline server (optional)."""
-    typer.echo("Starting server...")
+    _not_implemented(
+        "serve",
+        "this build has no server; the desktop workbench reads run folders directly",
+    )
 
 
 def main() -> None:

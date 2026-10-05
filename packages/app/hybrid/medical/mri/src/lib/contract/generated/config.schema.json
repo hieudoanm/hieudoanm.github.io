@@ -52,6 +52,26 @@
           "default": null,
           "description": "Path to T1 scans",
           "title": "T1 Path"
+        },
+        "outcome_column": {
+          "default": "wab_aq",
+          "description": "Continuous outcome column to binarise",
+          "title": "Outcome Column",
+          "type": "string"
+        },
+        "outcome_threshold": {
+          "default": 50.0,
+          "description": "Value at or above which the outcome counts as positive; a modelling decision that must be justified in the protocol, not a fact about the cohort",
+          "title": "Outcome Threshold",
+          "type": "number"
+        },
+        "features": {
+          "description": "participants.tsv columns used as tabular model inputs",
+          "items": {
+            "type": "string"
+          },
+          "title": "Features",
+          "type": "array"
         }
       },
       "title": "DataConfig",
@@ -59,13 +79,21 @@
     },
     "DatasetType": {
       "description": "Supported dataset types.",
-      "enum": ["arc", "atlas", "ploras"],
+      "enum": [
+        "arc",
+        "atlas",
+        "ploras"
+      ],
       "title": "DatasetType",
       "type": "string"
     },
     "ImageType": {
       "description": "Image representation types.",
-      "enum": ["stitched", "roi", "hybrid"],
+      "enum": [
+        "stitched",
+        "roi",
+        "hybrid"
+      ],
       "title": "ImageType",
       "type": "string"
     },
@@ -128,7 +156,11 @@
     },
     "ModelType": {
       "description": "Model types.",
-      "enum": ["logistic_regression", "gradient_boosting", "resnet18"],
+      "enum": [
+        "logistic_regression",
+        "gradient_boosting",
+        "resnet18"
+      ],
       "title": "ModelType",
       "type": "string"
     },
@@ -236,6 +268,5 @@
     }
   },
   "title": "Config",
-  "type": "object",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "type": "object"
 }

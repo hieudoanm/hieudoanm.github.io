@@ -1,0 +1,30 @@
+Captured from `COLUMNS=80 .venv/bin/python -m pipeline.cli --help` (Typer).
+Locked so the command parser is verified against the real renderer, not a
+hand-written approximation. Regenerate if Typer changes its output format.
+
+                                                                                
+ Usage: python -m pipeline.cli [OPTIONS] COMMAND [ARGS]...                      
+                                                                                
+ MRI Pipeline for predicting post-stroke aphasia outcome from lesion MRI plus   
+ clinical data                                                                  
+                                                                                
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --help          Show this message and exit.                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ doctor          Check system dependencies and configuration.                 │
+│ export-schemas  Export configuration schemas as JSON Schema.                 │
+│ list-runs       List all runs.                                               │
+│ data            Data management commands.                                    │
+│ run             Run the configured stages and write one run folder.          │
+│ split           Create train/validation/test splits.                         │
+│ preprocess      Preprocess imaging data.                                     │
+│ images          Generate image representations.                              │
+│ baseline        Run baseline models.                                         │
+│ train           Train deep models.                                           │
+│ evaluate        Evaluate models.                                             │
+│ compare         Compare model results.                                       │
+│ report          Generate reports.                                            │
+│ serve           Start the pipeline server (optional).                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+

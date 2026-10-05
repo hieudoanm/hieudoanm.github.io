@@ -11,6 +11,7 @@ import {
   configToValues,
   defaultValues,
   valuesToConfig,
+  formatList,
   validateValues,
   type ConfigValues,
 } from '@/lib/config/form';
@@ -272,18 +273,25 @@ const Field = ({
     )}
     {(field.kind === 'number' ||
       field.kind === 'text' ||
+      field.kind === 'text-list' ||
       field.kind === 'optional-text') && (
       <input
         type={field.kind === 'number' ? 'number' : 'text'}
         className="input input-sm input-bordered"
         step={field.minimum !== undefined ? 'any' : undefined}
-        value={value === null || value === undefined ? '' : String(value)}
-        placeholder={field.description}
-        onChange={(event) =>
-          onChange(
-            field.kind === 'number' ? event.target.value : event.target.value
-          )
+        value={
+          field.kind === 'text-list'
+            ? formatList(value)
+            : value === null || value === undefined
+              ? ''
+              : String(value)
         }
+        placeholder={
+          field.kind === 'text-list'
+            ? `comma separated${field.description ? ` · ${field.description}` : ''}`
+            : field.description
+        }
+        onChange={(event) => onChange(event.target.value)}
       />
     )}
     {field.minimum !== undefined && (

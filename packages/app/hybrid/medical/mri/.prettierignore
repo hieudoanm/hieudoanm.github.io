@@ -39,3 +39,6 @@ yarn-error.log*
 
 # python
 /pipeline/
+
+# generated contract (regenerated from the pipeline's JSON Schema)
+/src/lib/contract/generated/

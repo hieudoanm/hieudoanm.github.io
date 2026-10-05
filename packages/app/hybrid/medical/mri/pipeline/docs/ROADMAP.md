@@ -2,7 +2,7 @@
 
 Project: predicting post-stroke aphasia outcome from lesion MRI plus clinical
 data Basis: reproduces and extends White et al. (2024), NeuroImage: Clinical 43,
-103638 Status: draft v0.1, 2026-10-05 Companion document: ROADMAP-app.md (the
+103638 Status: draft v0.1, 2026-10-05 Companion document: ../docs/ROADMAP.md (the
 desktop app that drives this pipeline)
 
 Week numbers below assume a 20-week project. Rescale them once the submission
@@ -107,7 +107,7 @@ repo/
       server.py      # optional FastAPI adapter
     tests/
     configs/         # dev.yaml, full.yaml, per-experiment configs
-  app/               # see ROADMAP-app.md
+  app/               # see ../docs/ROADMAP.md
   runs/              # outputs (git-ignored)
   docs/              # protocol, decisions, results log
 ```

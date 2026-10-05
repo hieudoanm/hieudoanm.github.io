@@ -66,6 +66,9 @@ export interface PipelineConfig {
     participants_tsv?: string | null;
     lesion_mask_path?: string | null;
     t1_path?: string | null;
+    outcome_column?: string;
+    outcome_threshold?: number;
+    features?: string[];
   };
   split?: {
     n_folds?: number;

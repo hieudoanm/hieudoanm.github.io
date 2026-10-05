@@ -132,11 +132,10 @@ class Splitter:
         # Create groups for participant-level splitting
         groups = df[participant_col].values
         
-        # Get stratify values if available
-        if self.stratify_by in df.columns:
-            y = df[self.stratify_by].values
-        else:
-            y = None
+        # Stratification needs discrete labels, so a continuous score such as
+        # wab_aq is binned into quantile bins first. StratifiedGroupKFold
+        # rejects a continuous target outright.
+        y = _discrete_stratify_labels(df[self.stratify_by]) if self.stratify_by in df.columns else None
         
         # Use StratifiedGroupKFold if y is available, otherwise GroupKFold
         if y is not None:
@@ -280,3 +279,30 @@ def verify_no_leakage(
     test_set = set(test_participants)
     
     return len(train_set.intersection(test_set)) == 0
+
+
+def _discrete_stratify_labels(values: pd.Series, max_bins: int = 5) -> Optional[np.ndarray]:
+    """Turn a stratification column into discrete labels.
+
+    A continuous score has to be binned before it can stratify a split;
+    quantiles keep the rare tails visible instead of collapsing them.
+
+    Args:
+        values: The column to stratify by
+        max_bins: Largest number of quantile bins to use
+
+    Returns:
+        Integer bin labels, or None when the column is not usable as a label
+    """
+    usable = values.dropna()
+    if usable.empty:
+        return None
+
+    if usable.dtype.kind not in "fc":
+        return usable.astype(str).to_numpy()
+
+    bins = min(max_bins, len(usable) // 2)
+    if bins < 2:
+        return None
+    binned = pd.qcut(usable, q=bins, labels=False, duplicates="drop")
+    return binned.reindex(values.index).to_numpy()

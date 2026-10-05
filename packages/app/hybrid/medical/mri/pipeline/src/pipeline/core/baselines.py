@@ -1,14 +1,14 @@
 """Baseline models for comparison."""
 
-import numpy as np
-import pandas as pd
-from typing import Dict, Any, Optional, Tuple
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
-from sklearn.model_selection import cross_val_score
+from typing import Any, Dict, Optional
+
 import joblib
+import numpy as np
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_score
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 
 class BaselineModel:
@@ -70,8 +70,8 @@ class BaselineModel:
         return self.model.predict_proba(X)
     
     def save(self, path: str) -> None:
-        """Save model to disk.
-        
+        """Save the fitted estimator to disk.
+
         Args:
             path: Path to save model
         """
@@ -97,17 +97,18 @@ class LogisticRegressionBaseline(BaselineModel):
     def __init__(
         self,
         C: float = 1.0,
-        penalty: str = "l2",
         solver: str = "lbfgs",
         max_iter: int = 1000,
         random_state: int = 42,
         class_weight: Optional[str] = "balanced",
     ):
         """Initialize logistic regression baseline.
-        
+
+        scikit-learn 1.8 deprecated the `penalty` argument in favour of
+        `l1_ratio`, so the default L2 penalty is left unset on purpose.
+
         Args:
             C: Inverse regularization strength
-            penalty: Regularization penalty
             solver: Solver to use
             max_iter: Maximum iterations
             random_state: Random seed
@@ -115,15 +116,13 @@ class LogisticRegressionBaseline(BaselineModel):
         """
         super().__init__(random_state, class_weight)
         self.C = C
-        self.penalty = penalty
         self.solver = solver
         self.max_iter = max_iter
-        
+
         self.model = Pipeline([
             ("scaler", StandardScaler()),
             ("logreg", LogisticRegression(
                 C=C,
-                penalty=penalty,
                 solver=solver,
                 max_iter=max_iter,
                 random_state=random_state,
@@ -155,22 +154,23 @@ class GradientBoostingBaseline(BaselineModel):
         learning_rate: float = 0.1,
         max_depth: int = 3,
         random_state: int = 42,
-        class_weight: Optional[str] = "balanced",
     ):
         """Initialize gradient boosting baseline.
-        
+
         Args:
             n_estimators: Number of trees
             learning_rate: Learning rate
             max_depth: Maximum tree depth
             random_state: Random seed
-            class_weight: Class weighting
         """
-        super().__init__(random_state, class_weight)
+        super().__init__(random_state)
         self.n_estimators = n_estimators
         self.learning_rate = learning_rate
         self.max_depth = max_depth
-        
+
+        # scikit-learn's GradientBoostingClassifier has no class_weight; the
+        # imbalance is handled by the evaluation metrics and the split, so the
+        # accepted `class_weight` argument would be silently ignored here.
         self.model = GradientBoostingClassifier(
             n_estimators=n_estimators,
             learning_rate=learning_rate,
