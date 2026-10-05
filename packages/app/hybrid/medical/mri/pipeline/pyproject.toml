@@ -15,7 +15,7 @@ dependencies = [
     # releases but require Python >=3.12, while CI also builds 3.11 (which caps
     # at numpy 2.4.6 / scipy 1.17.1). An exact pin here makes the lock
     # unsatisfiable for the 3.11 leg.
-    "numpy==2.4.6",
+    "numpy==2.5.3",
     "pandas==3.0.6",
     "scikit-learn==1.9.1",
     "scipy==1.18.1",
