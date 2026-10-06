@@ -7,7 +7,7 @@ PY      := $(VENV)/bin/python
 RUFF    := $(VENV)/bin/ruff
 PYRIGHT := $(VENV)/bin/pyright
 
-.PHONY: install lint typecheck test check doctor clean
+.PHONY: install lint typecheck test check doctor demo clean
 
 ## install: create the venv and install runtime + dev dependencies
 install:
@@ -31,6 +31,11 @@ check: lint typecheck test
 ## doctor: report interpreter, device and path status
 doctor:
 	$(PY) -m pipeline doctor
+
+## demo: build a synthetic cohort and run the dev config end to end
+demo:
+	$(PY) -m pipeline data cohort --participants data/synthetic/participants.tsv
+	$(PY) -m pipeline run --config configs/dev.yaml --output-dir runs/
 
 ## clean: remove caches and bytecode
 clean:

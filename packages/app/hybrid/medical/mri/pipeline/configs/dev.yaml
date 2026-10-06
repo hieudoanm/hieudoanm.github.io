@@ -8,8 +8,10 @@ data:
   data_path: 'data/'
   # Required by `pipeline run`: a BIDS-style participants table, one row per
   # participant. A table with several sessions per participant is refused, so a
-  # person can never appear in two folds.
-  participants_tsv: null
+  # person can never appear in two folds. `pipeline data cohort` writes this one,
+  # so `make demo` runs from a clean clone without the (non-redistributable) ARC
+  # data; point it at the real table for a real run.
+  participants_tsv: 'data/synthetic/participants.tsv'
   lesion_mask_path: null
   t1_path: null
   # The outcome is binarised at this threshold. It is a modelling decision, not a
@@ -17,7 +19,10 @@ data:
   outcome_column: 'wab_aq'
   outcome_threshold: 50.0
   # participants.tsv columns used as model inputs. Must be non-empty for a run.
-  features: []
+  features:
+    - 'age_at_stroke'
+    - 'sex'
+    - 'wab_days'
 
 split:
   n_folds: 2 # Smaller for faster iteration

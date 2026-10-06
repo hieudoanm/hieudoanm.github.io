@@ -31,22 +31,29 @@ Optional dependency groups cover the not-yet-wired stages: `pipeline[imaging]`,
 ## Use
 
 ```bash
+make demo                            # synthetic cohort + a dev run, from a clean clone
+
 pipeline doctor                      # check the environment
+pipeline data cohort                 # write data/synthetic/participants.tsv
+pipeline data check                  # report the cohort the last command wrote
 pipeline run --config configs/dev.yaml --output-dir runs/
 pipeline list-runs
 pipeline split                       # not yet implemented
 ```
 
 `pipeline run` needs `data.participants_tsv` — a BIDS-style table with one row
-per participant, plus the columns named in `data.features`.
+per participant, plus the columns named in `data.features`. The real ARC cohort
+is not redistributable, so `pipeline data cohort` writes a seeded synthetic table
+with the same columns and `configs/dev.yaml` points at it; `data fetch` refuses
+until you point `participants_tsv` at the real OpenNeuro table.
 
 ### Commands
 
 | Command | State |
 | ------- | ----- |
-| `doctor`, `export-schemas`, `list-runs`, `run` | implemented |
-| `data` | implemented; `data fetch` needs ARC access |
-| `split`, `preprocess`, `images`, `baseline`, `train`, `evaluate`, `compare`, `report`, `serve` | report what they would need, so a no-op is never recorded as a successful run |
+| `doctor`, `export-schemas`, `list-runs`, `run`, `compare`, `calibrate` | implemented |
+| `data` | implemented (`cohort`, `check`); `data fetch` needs ARC access |
+| `split`, `preprocess`, `images`, `baseline`, `train`, `evaluate`, `report`, `serve` | report what they would need, so a no-op is never recorded as a successful run |
 
 ## Development
 
@@ -57,7 +64,7 @@ make typecheck   # pyright, strict
 make test        # pytest
 ```
 
-Current state: `ruff` clean, `pyright` strict at 0 errors, 133 tests passing.
+Current state: `ruff` clean, `pyright` strict at 0 errors, 198 tests passing.
 
 ## Layout
 
@@ -87,4 +94,5 @@ runs/<run_id>/
 - Everything is config-driven and seeded; a run reproduces from its manifest.
 - Decisions live in [`docs/protocol.md`](docs/protocol.md) and must be settled
   before the first model run.
-- Logic lives in `core/`; the CLI and the server are thin adapters.
+- Logic lives in `core/`; the CLI is a thin adapter (no server: the workbench
+  reads run folders directly).

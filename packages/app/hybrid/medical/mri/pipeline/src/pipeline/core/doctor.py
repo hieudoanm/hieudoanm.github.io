@@ -72,45 +72,39 @@ def get_device_info() -> dict[str, Any]:
 
 
 def check_dependencies() -> dict[str, Any]:
-    """Check if required dependencies are installed."""
-    dependencies: dict[str, bool] = {
-        "numpy": False,
-        "pandas": False,
-        "pydantic": False,
-        "typer": False,
-        "yaml": False,  # PyYAML imports as yaml
+    """Check if required and optional dependencies are installed.
+
+    Keys are display names; values are the module to import, because the two
+    differ (`scikit-learn` imports as `sklearn`, `pyyaml` as `yaml`).
+    """
+    required_imports = {
+        "numpy": "numpy",
+        "pandas": "pandas",
+        "pydantic": "pydantic",
+        "typer": "typer",
+        "pyyaml": "yaml",
     }
-
-    optional_dependencies: dict[str, bool] = {
-        "torch": False,
-        "nibabel": False,
-        "nilearn": False,
-        "scikit-learn": False,
-        "xgboost": False,
+    optional_imports = {
+        "torch": "torch",
+        "nibabel": "nibabel",
+        "nilearn": "nilearn",
+        "scikit-learn": "sklearn",
+        "xgboost": "xgboost",
     }
-
-    for dep in dependencies:
-        try:
-            __import__(dep)
-            dependencies[dep] = True
-        except ImportError:
-            pass
-
-    # Rename yaml back to pyyaml for display
-    if "yaml" in dependencies:
-        dependencies["pyyaml"] = dependencies.pop("yaml")
-
-    for dep in optional_dependencies:
-        try:
-            __import__(dep)
-            optional_dependencies[dep] = True
-        except ImportError:
-            pass
 
     return {
-        "required": dependencies,
-        "optional": optional_dependencies,
+        "required": {name: _is_importable(module) for name, module in required_imports.items()},
+        "optional": {name: _is_importable(module) for name, module in optional_imports.items()},
     }
+
+
+def _is_importable(module_name: str) -> bool:
+    """Whether a module can be imported, without importing it for real."""
+    try:
+        __import__(module_name)
+    except ImportError:
+        return False
+    return True
 
 
 def check_paths(data_path: str = "data/") -> dict[str, Any]:

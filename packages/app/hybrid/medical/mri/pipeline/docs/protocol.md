@@ -86,8 +86,8 @@ model family.
 Degrees of freedom are scaled by `df_scaling`, defaulting to **0.45**. That
 value comes from White et al. (2024), calibrated by simulation for *their*
 design (four folds, single lock-box). It has **not** been calibrated for this
-design. Re-derive it with
-`pipeline.core.calibration.calibrate_df_scaling` and record the result here
+design. Re-derive it with `pipeline calibrate` (the CLI for
+`pipeline.core.calibration.calibrate_df_scaling`) and record the result here
 before quoting any p-value.
 
 **TBD**: the number of models compared, which fixes the multiplicity burden.
@@ -124,3 +124,4 @@ completeness, lesion mask space, PLORAS access, compute, submission date.
 | Date       | Change                                                     |
 | ---------- | ---------------------------------------------------------- |
 | 2026-10-06 | First version, consolidated from ROADMAP section 9 and the PROGRESS.md decisions log |
+| 2026-10-06 | Section 7 now names `pipeline calibrate` as the command that re-derives the df scaling |

@@ -6,7 +6,9 @@ next to the stubs, so one file lists the whole surface `pipeline --help` shows.
 
 import typer
 
-from pipeline.commands import compare, data, doctor, export_schemas, list_runs, run
+from pipeline.commands import compare, doctor, export_schemas, list_runs, run
+from pipeline.commands_calibrate import calibrate
+from pipeline.commands_data import data
 
 app = typer.Typer(
     name="pipeline",
@@ -21,6 +23,7 @@ app.command()(list_runs)
 app.command()(data)
 app.command()(run)
 app.command()(compare)
+app.command()(calibrate)
 
 
 @app.command()

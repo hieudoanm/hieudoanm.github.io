@@ -2,7 +2,7 @@
 
 **Project**: Predicting post-stroke aphasia outcome from lesion MRI plus
 clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
-103638 **Status**: Phase 2 complete (the tabular evaluation harness, baselines and `pipeline compare` all run end-to-end); the imaging and deep-learning paths are explicitly deferred
+103638 **Status**: Phase 2 complete (the tabular evaluation harness, baselines, `pipeline compare` and `pipeline calibrate` all run end-to-end, and a clean clone runs `make demo` on a synthetic cohort); the imaging and deep-learning paths are explicitly deferred
 **Last Updated**: 2026-10-06
 
 ---
@@ -23,7 +23,7 @@ clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
 - [x] Split every module over the 200-line limit (`runner`, `split`, `cli`,
       `null_test`, `baselines`, `cohort`, `dataset`, `metrics`, `experiment`
       and the two long test files); the largest file is now 198 lines
-- [x] Resolve CI/lint/type-check/tooling compatibility and get tests passing (143/143) in Python 3.14.8 environment with locked deps
+- [x] Resolve CI/lint/type-check/tooling compatibility and get tests passing (198/198) in Python 3.14.8 environment with locked deps
 - [x] Clear `pyright` strict across `src` and `tests` (0 errors) and keep `ruff check` at 0 findings
 - [x] Add `joblib>=1.4.0` (pinned `1.6.0`) and sync `ruff`/`pyright` into both
       dev dependency groups
@@ -93,16 +93,20 @@ the tests pass in CI.
       inputs handled explicitly
 - [x] Null-simulation machinery that checks the type-I error rate of the design,
       using common simulated data across candidates so they are comparable
+- [x] `pipeline calibrate` exposes that sweep as a command, printing the best
+      degrees-of-freedom scaling and writing the full sweep as JSON
 - [x] Baselines: logistic regression and gradient boosting on tabular features
 - [x] Report tables as CSV and LaTeX, without a Jinja2 dependency
 - [x] `pipeline run` executes the stages end to end and writes a complete run
       folder: manifest, config, `events.jsonl`, `metrics.json`, the participant
       split, the lock-box access log and the artefacts
-- [x] Regularised models and ROI lesion loads once the imaging stages exist (marked as deferred)
+- [ ] Regularised models and ROI lesion loads once the imaging stages exist (deferred to Phase 3)
 - [ ] Optional nested cross-validation or a second lock-box
 - [x] Model comparison across two runs, with the corrected test and FDR in the
       report; `pipeline compare` pairs the folds of runs that share a split and
       writes the comparison, significance and JSON tables
+- [x] `pipeline calibrate` exposes the degrees-of-freedom sweep that justifies
+      the corrected test's scaling for this design
 
 **Done when**: baselines run end to end from the CLI and produce a table with
 confidence intervals and a significance table. Both halves hold: `pipeline run`
@@ -203,6 +207,10 @@ and corrected tests, whatever the result.
 
 ## Phase 7: Server mode (optional, any time after Phase 1)
 
+**Dropped, by choice** (see P-22): the desktop workbench reads run folders
+directly, so a server would duplicate logic the CLI already owns. The tasks stay
+recorded in case that changes.
+
 ### Tasks
 
 - [ ] `pipeline serve` wrapping the same core, bound to localhost
@@ -243,6 +251,8 @@ commands.
 | P-10 | Report tables (CSV, LaTeX)                         | MVP      | 2     | done                |
 | P-25 | `pipeline run` writing a complete run folder        | MVP      | 2     | done                |
 | P-26 | Model comparison across two runs                   | MVP      | 2     | done                |
+| P-27 | `pipeline calibrate` df-scaling sweep              | MVP      | 2     | done                |
+| P-28 | Synthetic cohort (`data cohort`) + `make demo`     | Should   | 2     | done                |
 | P-11 | Preprocessing, lesion volume, atlas lesion loads   | MVP      | 3     | not started         |
 | P-12 | Stitched, ROI and hybrid image generators          | MVP      | 3     | not started         |
 | P-13 | Stage caching and data hashing                     | MVP      | 3     | not started         |
@@ -268,7 +278,7 @@ commands.
 | uv               | done   | Installed and configured      |
 | Typer            | done   | CLI implemented               |
 | Pydantic         | done   | Configuration schemas created |
-| pytest           | done   | 133 tests passing             |
+| pytest           | done   | 198 tests passing             |
 | ruff             | done   | `ruff check .` clean across src and tests |
 | pyright          | done   | `pyright` strict clean: 0 errors in src and tests |
 | joblib           | done   | Declared directly; used by the baselines |
@@ -295,4 +305,4 @@ number of models compared, stopping rules, what counts as a negative result.
   run — the file exists; the TBDs listed above still block the first model run
 - Lock-box test set must be accessed rarely and every touch logged
 - Everything is config-driven and seeded for reproducibility
-- Logic lives in `core/`. The CLI and the server are thin adapters
+- Logic lives in `core/`. The CLI is a thin adapter (no server: P-22 dropped)

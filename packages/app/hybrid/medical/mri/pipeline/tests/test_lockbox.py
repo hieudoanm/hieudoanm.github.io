@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from pipeline.core.lockbox import LockBoxLogger
+from pipeline.core.lockbox import LockBoxLogger, get_default_lockbox_log_path
 from pipeline.core.runner import run_experiment
 from tests.conftest import make_config
 
@@ -64,4 +64,39 @@ def test_cross_validated_predictions_exclude_the_lock_box(workspace: tuple[Path,
     predicted = set(predictions.loc[predictions["probability"].notna(), "participant_id"])
 
     assert not predicted & lock_box
+
+
+def test_logger_refuses_a_non_integer_count(tmp_path: Path):
+    """A corrupt count is reset rather than crashing the counter."""
+    log = tmp_path / "lockbox_access.json"
+    log.write_text(json.dumps({"access_count": "not-a-number", "accesses": []}))
+
+    logger = LockBoxLogger(str(log))
+
+    assert logger.log_access("r1", "evaluation") == 1
+
+
+def test_access_history_is_empty_for_a_malformed_log(tmp_path: Path):
+    path = tmp_path / "lockbox.json"
+    path.write_text(json.dumps({"access_count": 0, "accesses": "nope"}))
+
+    logger = LockBoxLogger(str(path))
+
+    assert logger.get_access_history() == []
+
+
+def test_reset_clears_the_log(tmp_path: Path):
+    logger = LockBoxLogger(str(tmp_path / "lockbox.json"))
+    logger.log_access("r1", "evaluation")
+
+    logger.reset()
+
+    assert logger.get_access_count() == 0
+    assert logger.get_access_history() == []
+
+
+def test_get_default_lockbox_log_path(tmp_path: Path):
+    assert get_default_lockbox_log_path(str(tmp_path)) == str(
+        tmp_path / "lockbox_access_log.json"
+    )
 

@@ -92,20 +92,6 @@ def list_runs(
         typer.echo(f"    Device: {manifest.get('device', 'unknown')}")
 
 
-def data(
-    action: str = typer.Argument(..., help="Action: fetch, cohort, or check"),
-) -> None:
-    """Data management commands."""
-    if action == "fetch":
-        typer.echo("Fetching data...")
-    elif action == "cohort":
-        typer.echo("Building cohort...")
-    elif action == "check":
-        typer.echo("Checking data integrity...")
-    else:
-        typer.echo(f"Unknown action: {action}")
-
-
 def run(
     config: str = typer.Option(..., "--config", "-c", help="Path to a YAML configuration file"),
     output_dir: str = typer.Option(
