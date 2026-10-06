@@ -5,6 +5,7 @@ typer runner; `cli.py` registers them on the app next to the stubs.
 """
 
 import json
+from pathlib import Path
 
 import typer
 
@@ -134,3 +135,54 @@ def run(
         raise typer.Exit(code=1)
 
     typer.echo(json.dumps(summary, indent=2, default=str))
+
+
+def compare(
+    runs: list[str] = typer.Argument(..., help="Two or more completed run folders to compare"),
+    metric: str = typer.Option(
+        "balanced_accuracy", "--metric", "-m", help="Per-fold metric to compare"
+    ),
+    output_dir: str | None = typer.Option(
+        None, "--output-dir", "-o", help="Write the comparison tables and JSON here"
+    ),
+    alpha: float = typer.Option(0.05, "--alpha", help="FDR significance level"),
+    df_scaling: float = typer.Option(
+        0.45, "--df-scaling", help="Degrees-of-freedom scaling for the corrected test"
+    ),
+) -> None:
+    """Compare runs that share a split, with the corrected test and BH-FDR.
+
+    The runs must have been built on the same split, so fold k is the same
+    participants in both; a mismatched split is refused rather than paired.
+    """
+    from pipeline.core.run_compare import compare_runs, write_comparison
+
+    if len(runs) < 2:
+        typer.secho(
+            "compare needs at least two run folders", err=True, fg=typer.colors.RED
+        )
+        raise typer.Exit(code=2)
+
+    try:
+        result = compare_runs(
+            [Path(run) for run in runs],
+            metric=metric,
+            df_scaling=df_scaling,
+            alpha=alpha,
+        )
+    except Exception as error:
+        typer.secho(f"Comparison failed: {error}", err=True, fg=typer.colors.RED)
+        raise typer.Exit(code=1)
+
+    for comparison in result["comparisons"]:
+        verdict = "significant" if comparison["fdr_rejected"] else "not significant"
+        typer.echo(
+            f"{comparison['model1']} vs {comparison['model2']}: "
+            f"mean_diff={comparison['mean_diff']:.4f} "
+            f"corrected_p={comparison['corrected_p_value']:.4f} "
+            f"fdr_p={comparison['fdr_corrected_p']:.4f} {verdict}"
+        )
+
+    if output_dir is not None:
+        write_comparison(result, Path(output_dir))
+        typer.echo(f"\nWrote comparison tables to {output_dir}")

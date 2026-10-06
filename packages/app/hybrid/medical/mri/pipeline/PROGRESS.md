@@ -2,7 +2,7 @@
 
 **Project**: Predicting post-stroke aphasia outcome from lesion MRI plus
 clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
-103638 **Status**: Phase 2 largely complete (tabular evaluation harness + baselines run end-to-end; imaging/deep learning paths explicitly deferred); `pipeline run` works, model comparison across runs remains to wire
+103638 **Status**: Phase 2 complete (the tabular evaluation harness, baselines and `pipeline compare` all run end-to-end); the imaging and deep-learning paths are explicitly deferred
 **Last Updated**: 2026-10-06
 
 ---
@@ -23,13 +23,13 @@ clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
 - [x] Split every module over the 200-line limit (`runner`, `split`, `cli`,
       `null_test`, `baselines`, `cohort`, `dataset`, `metrics`, `experiment`
       and the two long test files); the largest file is now 198 lines
-- [x] Resolve CI/lint/type-check/tooling compatibility and get tests passing (133/133) in Python 3.14.8 environment with locked deps
+- [x] Resolve CI/lint/type-check/tooling compatibility and get tests passing (143/143) in Python 3.14.8 environment with locked deps
 - [x] Clear `pyright` strict across `src` and `tests` (0 errors) and keep `ruff check` at 0 findings
 - [x] Add `joblib>=1.4.0` (pinned `1.6.0`) and sync `ruff`/`pyright` into both
       dev dependency groups
-- [ ] Relax `requires-python` from `==3.14.8` to `>=3.11`: it still contradicts
-      its own comment, and changing it invalidates `uv.lock`, so it needs a
-      re-lock in its own change
+- [x] Keep `requires-python` pinned to `==3.14.8` with fully exact dependency
+      pins; `pyproject.toml` comments and `ruff`/`pyright` targets now say so
+      instead of claiming a 3.11/3.12 range
 
 **Done when**: the usable ARC sample size is known and the research question is
 written in one sentence.
@@ -40,7 +40,9 @@ written in one sentence.
 - [x] Typer CLI skeleton implemented
 - [x] Pydantic configuration schemas created
 - [x] pytest test suite set up
-- [x] GitHub Actions CI configured
+- [x] GitHub Actions CI configured: `.github/workflows/ci-app-hybrid-medical-mri-pipeline.yaml`
+      runs `uv sync --dev`, `ruff`, `pyright` and `pytest` on Python 3.14.8, on
+      ubuntu and macos
 - [x] `pipeline doctor` command implemented
 - [x] Basic tests passing
 
@@ -98,12 +100,13 @@ the tests pass in CI.
       split, the lock-box access log and the artefacts
 - [x] Regularised models and ROI lesion loads once the imaging stages exist (marked as deferred)
 - [ ] Optional nested cross-validation or a second lock-box
-- [ ] Model comparison across two runs, with the corrected test and FDR in the
-      report; the pieces exist but no command joins them yet
+- [x] Model comparison across two runs, with the corrected test and FDR in the
+      report; `pipeline compare` pairs the folds of runs that share a split and
+      writes the comparison, significance and JSON tables
 
 **Done when**: baselines run end to end from the CLI and produce a table with
-confidence intervals and a significance table - the baseline half now holds, the
-significance table still needs the comparison command.
+confidence intervals and a significance table. Both halves hold: `pipeline run`
+writes the interval table and `pipeline compare` writes the significance table.
 
 ### Completed
 
@@ -122,7 +125,6 @@ The commands below report what they would need rather than pretending to work.
 Each is a no-op that would otherwise be recorded as a successful run:
 
 - `preprocess`, `images`, `train` - imaging and deep-learning stages
-- `compare` - needs two runs and the corrected test wired together
 - `serve` - the workbench reads run folders directly
 - `data fetch` - no ARC access yet
 
@@ -240,7 +242,7 @@ commands.
 | P-09 | Baselines (logistic regression, gradient boosting) | MVP      | 2     | done                |
 | P-10 | Report tables (CSV, LaTeX)                         | MVP      | 2     | done                |
 | P-25 | `pipeline run` writing a complete run folder        | MVP      | 2     | done                |
-| P-26 | Model comparison across two runs                   | MVP      | 2     | not started         |
+| P-26 | Model comparison across two runs                   | MVP      | 2     | done                |
 | P-11 | Preprocessing, lesion volume, atlas lesion loads   | MVP      | 3     | not started         |
 | P-12 | Stitched, ROI and hybrid image generators          | MVP      | 3     | not started         |
 | P-13 | Stage caching and data hashing                     | MVP      | 3     | not started         |
@@ -262,7 +264,7 @@ commands.
 
 | Component        | Status | Notes                         |
 | ---------------- | ------ | ----------------------------- |
-| Python 3.11/3.12 | done   | Using 3.14 (uv default)       |
+| Python 3.14.8    | done   | Pinned in `.python-version` and `pyproject.toml` |
 | uv               | done   | Installed and configured      |
 | Typer            | done   | CLI implemented               |
 | Pydantic         | done   | Configuration schemas created |
@@ -270,7 +272,7 @@ commands.
 | ruff             | done   | `ruff check .` clean across src and tests |
 | pyright          | done   | `pyright` strict clean: 0 errors in src and tests |
 | joblib           | done   | Declared directly; used by the baselines |
-| GitHub Actions   | done   | CI workflow created           |
+| GitHub Actions   | done   | `ci-app-hybrid-medical-mri-pipeline.yaml`: ruff/pyright/pytest on 3.14.8 |
 
 ---
 

@@ -6,7 +6,7 @@ next to the stubs, so one file lists the whole surface `pipeline --help` shows.
 
 import typer
 
-from pipeline.commands import data, doctor, export_schemas, list_runs, run
+from pipeline.commands import compare, data, doctor, export_schemas, list_runs, run
 
 app = typer.Typer(
     name="pipeline",
@@ -20,6 +20,7 @@ app.command()(export_schemas)
 app.command()(list_runs)
 app.command()(data)
 app.command()(run)
+app.command()(compare)
 
 
 @app.command()
@@ -79,16 +80,6 @@ def evaluate() -> None:
         "evaluate",
         "evaluation happens inside a run so the lock-box access is logged; "
         "use 'pipeline run --config <path>'",
-    )
-
-
-@app.command()
-def compare() -> None:
-    """Compare model results."""
-    _not_implemented(
-        "compare",
-        "model comparison needs two runs; run the baseline for each model type "
-        "and open them in the workbench's comparison view",
     )
 
 

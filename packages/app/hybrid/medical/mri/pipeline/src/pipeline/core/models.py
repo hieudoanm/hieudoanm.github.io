@@ -32,7 +32,7 @@ class BaselineModel:
         self.scaler = StandardScaler()
         self.is_fitted = False
 
-    def fit(self, X: np.ndarray, y: np.ndarray) -> "BaselineModel":
+    def fit(self, X: np.ndarray, y: np.ndarray) -> BaselineModel:
         """Fit the model.
         
         Args:
@@ -78,7 +78,7 @@ class BaselineModel:
         """
         joblib.dump(self.model, path)
 
-    def load(self, path: str) -> "BaselineModel":
+    def load(self, path: str) -> BaselineModel:
         """Load model from disk.
         
         Args:
@@ -131,7 +131,7 @@ class LogisticRegressionBaseline(BaselineModel):
             )),
         ])
 
-    def fit(self, X: np.ndarray, y: np.ndarray) -> "LogisticRegressionBaseline":
+    def fit(self, X: np.ndarray, y: np.ndarray) -> LogisticRegressionBaseline:
         """Fit the logistic regression model.
         
         Args:
@@ -179,7 +179,7 @@ class GradientBoostingBaseline(BaselineModel):
             random_state=random_state,
         )
 
-    def fit(self, X: np.ndarray, y: np.ndarray) -> "GradientBoostingBaseline":
+    def fit(self, X: np.ndarray, y: np.ndarray) -> GradientBoostingBaseline:
         """Fit the gradient boosting model.
         
         Args:

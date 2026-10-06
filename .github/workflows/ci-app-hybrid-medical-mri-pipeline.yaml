@@ -1,0 +1,70 @@
+name: CI - App - Hybrid - Medical - MRI - Pipeline
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/medical/mri/pipeline/**/*'
+      - '.github/workflows/ci-app-hybrid-medical-mri-pipeline.yaml'
+  pull_request:
+    branches:
+      - 'master'
+      - 'develop'
+    paths:
+      - 'packages/app/hybrid/medical/mri/pipeline/**/*'
+      - '.github/workflows/ci-app-hybrid-medical-mri-pipeline.yaml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-app-hybrid-medical-mri-pipeline-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: packages/app/hybrid/medical/mri/pipeline
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ['3.14.8']
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.2.0
+        with:
+          version: 'latest'
+
+      - name: Set up Python ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: uv sync --dev
+
+      - name: Run linting
+        run: uv run ruff check .
+
+      - name: Run type checking
+        run: uv run pyright
+
+      - name: Run tests
+        run: uv run pytest --cov=pipeline --cov-report=xml
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v7.1.1
+        if: matrix.os == 'ubuntu-latest'
+        with:
+          file: packages/app/hybrid/medical/mri/pipeline/coverage.xml

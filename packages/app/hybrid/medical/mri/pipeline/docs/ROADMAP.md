@@ -2,7 +2,7 @@
 
 Project: predicting post-stroke aphasia outcome from lesion MRI plus clinical
 data Basis: reproduces and extends White et al. (2024), NeuroImage: Clinical 43,
-103638 **Status**: v0.1 (Phase 2 tabular complete), 2026-10-05 Companion document: ../docs/ROADMAP.md (the
+103638 **Status**: v0.1 (Phase 2 complete, including `pipeline compare`), 2026-10-06 Companion document: ../docs/ROADMAP.md (the
 desktop app that drives this pipeline)
 
 Week numbers below assume a 20-week project. Rescale them once the submission
@@ -55,7 +55,7 @@ Out of scope:
 
 | Layer              | Choice                                        |
 | ------------------ | --------------------------------------------- |
-| Environment        | Python 3.11/3.12, `uv`                        |
+| Environment        | Python 3.14.8 (pinned), `uv`                  |
 | Data access        | `openneuro-py` or DataLad, `pybids`           |
 | Neuroimaging       | `nibabel`, `nilearn`, `SimpleITK` or `ANTsPy` |
 | ML                 | PyTorch, `timm`, `torchvision`                |
@@ -191,14 +191,14 @@ tests pass in CI.
       gradient boosting on ROI lesion loads once available.
 - [x] `pipeline run` executes the stages end to end and writes a complete run
       folder.
-- [ ] Model comparison across two runs: the corrected test and FDR exist, but
-      no command joins them yet (`pipeline compare`).
+- [x] Model comparison across two runs: `pipeline compare` joins runs that share
+      a split and writes the corrected-test and FDR tables.
 - [ ] Optional nested cross-validation or a second lock-box.
 - [x] Report tables as CSV and LaTeX.
 
 Done when: baselines run end to end from the CLI and produce a table with
-confidence intervals and a significance table. The baseline half holds; the
-significance table still needs `pipeline compare`.
+confidence intervals and a significance table. Both hold now: `pipeline run`
+writes the interval table and `pipeline compare` writes the significance table.
 
 ### Phase 3: Imaging representations (weeks 4-8)
 

@@ -3,18 +3,17 @@ name = "pipeline"
 version = "0.1.0"
 description = "Predicting post-stroke aphasia outcome from lesion MRI plus clinical data"
 readme = "README.md"
-# Must admit every interpreter CI builds on (3.11 and 3.12) as well as the local
-# one, and it matches ruff's target-version and pyright's pythonVersion below.
+# Pinned to the exact interpreter the lock was resolved for; the project targets
+# this one version only. ruff's target-version and pyright's pythonVersion below
+# match it so the source language level and the runtime agree.
 requires-python = "==3.14.8"
 dependencies = [
     "typer==0.27.2",
     "pydantic==2.13.5",
     "pydantic-settings==2.15.0",
     "pyyaml==6.0.3",
-    # Lower bounds, not exact pins: numpy 2.5.3 / scipy 1.18.1 are the newest
-    # releases but require Python >=3.12, while CI also builds 3.11 (which caps
-    # at numpy 2.4.6 / scipy 1.17.1). An exact pin here makes the lock
-    # unsatisfiable for the 3.11 leg.
+    # Exact pins, like every other dependency. These are the newest releases and
+    # declare Python >=3.12, which the pinned interpreter above satisfies.
     "numpy==2.5.3",
     "pandas==3.0.6",
     "scikit-learn==1.9.1",
@@ -81,7 +80,7 @@ build-backend = "hatchling.build"
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py314"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W", "UP"]
@@ -101,7 +100,7 @@ ignore = [
 "src/pipeline/core/models.py" = ["N803"]
 
 [tool.pyright]
-pythonVersion = "3.11"
+pythonVersion = "3.14"
 # Without this pyright resolves imports against the ambient interpreter rather
 # than the project venv, so numpy/pandas/scikit-learn come back unresolved and
 # every value derived from them is reported as an unknown type.
