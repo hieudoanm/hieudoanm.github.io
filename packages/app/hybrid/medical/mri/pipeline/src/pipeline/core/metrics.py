@@ -14,6 +14,11 @@ from sklearn.metrics import (
     roc_auc_score,
 )
 
+# scikit-learn's own annotation types `zero_division` as `str`, but the
+# parameter accepts {0, 1, "warn"} and 0 is the documented silent choice. Typed
+# as Any so the mismatch is recorded once here instead of at every call site.
+_ZERO_DIVISION: Any = 0
+
 
 def calculate_metrics(
     y_true: np.ndarray,
@@ -34,8 +39,12 @@ def calculate_metrics(
         "accuracy": accuracy_score(y_true, y_pred),
         "balanced_accuracy": balanced_accuracy_score(y_true, y_pred),
         "f1": f1_score(y_true, y_pred, average="binary"),
-        "precision": precision_score(y_true, y_pred, average="binary", zero_division=0),
-        "recall": recall_score(y_true, y_pred, average="binary", zero_division=0),
+        "precision": precision_score(
+            y_true, y_pred, average="binary", zero_division=_ZERO_DIVISION
+        ),
+        "recall": recall_score(
+            y_true, y_pred, average="binary", zero_division=_ZERO_DIVISION
+        ),
     }
 
     # Add AUC if probabilities are provided
@@ -67,7 +76,7 @@ def calculate_calibration_metrics(
     true = np.asarray(y_true, dtype=float)
     proba = np.asarray(y_proba, dtype=float)
 
-    metrics = {
+    metrics: dict[str, Any] = {
         "brier_score": float(brier_score_loss(true, proba)),
     }
 
@@ -129,7 +138,10 @@ def calculate_confidence_interval(
     """
     from scipy import stats
 
-    z = stats.norm.ppf((1 + confidence) / 2)
+    # scipy is untyped at its boundary, so the quantile is cast to float here:
+    # everything downstream, including the return type, is arithmetic on a
+    # Python float rather than on an untyped value.
+    z = float(stats.norm.ppf((1 + confidence) / 2))
 
     # Wilson score interval
     denominator = 1 + z**2 / n_samples
@@ -165,7 +177,7 @@ def calculate_metrics_with_ci(
     metrics = calculate_metrics(y_true, y_pred, y_proba)
 
     # Add confidence intervals
-    metrics_with_ci = {}
+    metrics_with_ci: dict[str, Any] = {}
     for name, value in metrics.items():
         if isinstance(value, float) and not np.isnan(value):
             lower, upper = calculate_confidence_interval(value, n_samples, confidence)

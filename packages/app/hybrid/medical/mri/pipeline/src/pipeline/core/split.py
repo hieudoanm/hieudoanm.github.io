@@ -58,7 +58,7 @@ class Splitter:
             participant_stratify = df.groupby(participant_col)[self.stratify_by].first()
 
             # For continuous values, bin them for stratification
-            stratify_values = participant_stratify[participants].values
+            stratify_values = participant_stratify.reindex(participants).to_numpy()
             if stratify_values.dtype.kind in 'fc':  # float or complex
                 # Bin into quantiles
                 try:
@@ -111,8 +111,10 @@ class Splitter:
                 random_state=self.seed,
             )
 
-        lock_box_df = df[df[participant_col].isin(lock_box_participants)]
-        remaining_df = df[df[participant_col].isin(remaining_participants)]
+        # `list(...)` because train_test_split returns either a list or an ndarray, and
+        # pandas types `isin` against Sequence but not ndarray.
+        lock_box_df = df.loc[df[participant_col].isin(list(lock_box_participants))]
+        remaining_df = df.loc[df[participant_col].isin(list(remaining_participants))]
 
         return lock_box_df, remaining_df
 
@@ -139,7 +141,7 @@ class Splitter:
         # wab_aq is binned into quantile bins first. StratifiedGroupKFold
         # rejects a continuous target outright.
         y = (
-            _discrete_stratify_labels(df[self.stratify_by])
+            _discrete_stratify_labels(df, self.stratify_by)
             if self.stratify_by in df.columns
             else None
         )
@@ -289,19 +291,36 @@ def verify_no_leakage(
     return len(train_set.intersection(test_set)) == 0
 
 
-def _discrete_stratify_labels(values: pd.Series, max_bins: int = 5) -> np.ndarray | None:
+def _discrete_stratify_labels(
+    frame: pd.DataFrame,
+    column: str,
+    max_bins: int = 5,
+) -> np.ndarray | None:
     """Turn a stratification column into discrete labels.
 
     A continuous score has to be binned before it can stratify a split;
     quantiles keep the rare tails visible instead of collapsing them.
 
+    The frame and the column name are taken rather than the column itself:
+    pandas ships no `py.typed`, so `frame[column]` is typed as a union of Series
+    and DataFrame, while a single existing label always produces a Series.
+
     Args:
-        values: The column to stratify by
+        frame: The cohort to read from
+        column: Name of the column to stratify by
         max_bins: Largest number of quantile bins to use
 
     Returns:
         Integer bin labels, or None when the column is not usable as a label
+
+    Raises:
+        ValueError: If the label does not resolve to a single column
     """
+    selected = frame[column]
+    if not isinstance(selected, pd.Series):
+        raise ValueError(f"{column!r} did not resolve to a single column")
+
+    values = selected
     usable = values.dropna()
     if usable.empty:
         return None
@@ -312,5 +331,7 @@ def _discrete_stratify_labels(values: pd.Series, max_bins: int = 5) -> np.ndarra
     bins = min(max_bins, len(usable) // 2)
     if bins < 2:
         return None
-    binned = pd.qcut(usable, q=bins, labels=False, duplicates="drop")
-    return binned.reindex(values.index).to_numpy()
+    # qcut is typed as a union that includes ndarray and Categorical, so its
+    # codes are unwrapped first and then realigned to the original index.
+    codes = np.asarray(pd.qcut(usable, q=bins, labels=False, duplicates="drop"))
+    return pd.Series(codes, index=usable.index).reindex(values.index).to_numpy()

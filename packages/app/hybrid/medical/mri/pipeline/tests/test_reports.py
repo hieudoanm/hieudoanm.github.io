@@ -1,5 +1,7 @@
 """Tests for the report tables written to CSV and LaTeX."""
 
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -30,7 +32,7 @@ COMPARISONS = [
 ]
 
 
-def test_metrics_table_flattens_values_and_intervals(tmp_path):
+def test_metrics_table_flattens_values_and_intervals(tmp_path: Path):
     path = tmp_path / "metrics.csv"
 
     create_metrics_table(RESULTS, str(path))
@@ -42,7 +44,7 @@ def test_metrics_table_flattens_values_and_intervals(tmp_path):
     assert frame.loc[0, "accuracy_ci_upper"] == pytest.approx(0.73)
 
 
-def test_metrics_table_writes_latex_with_three_decimals(tmp_path):
+def test_metrics_table_writes_latex_with_three_decimals(tmp_path: Path):
     path = tmp_path / "metrics.tex"
 
     create_metrics_table(RESULTS, str(path), format="latex")
@@ -53,12 +55,12 @@ def test_metrics_table_writes_latex_with_three_decimals(tmp_path):
     assert text.rstrip().endswith("\\end{tabular}")
 
 
-def test_metrics_table_rejects_an_unknown_format(tmp_path):
+def test_metrics_table_rejects_an_unknown_format(tmp_path: Path):
     with pytest.raises(ValueError, match="Unknown format"):
         create_metrics_table(RESULTS, str(tmp_path / "metrics.txt"), format="docx")
 
 
-def test_comparison_table_keeps_every_column(tmp_path):
+def test_comparison_table_keeps_every_column(tmp_path: Path):
     path = tmp_path / "comparisons.csv"
 
     create_comparison_table(COMPARISONS, str(path))
@@ -68,7 +70,7 @@ def test_comparison_table_keeps_every_column(tmp_path):
     assert frame.loc[0, "corrected_p_value"] == pytest.approx(0.0004)
 
 
-def test_significance_table_marks_thresholds_and_fills_the_diagonal(tmp_path):
+def test_significance_table_marks_thresholds_and_fills_the_diagonal(tmp_path: Path):
     path = tmp_path / "significance.csv"
 
     create_significance_table(COMPARISONS, str(path))
@@ -80,7 +82,7 @@ def test_significance_table_marks_thresholds_and_fills_the_diagonal(tmp_path):
     assert (frame.values[np.diag_indices(len(frame))] == "-").all()
 
 
-def test_significance_table_uses_the_fdr_column_when_present(tmp_path):
+def test_significance_table_uses_the_fdr_column_when_present(tmp_path: Path):
     comparisons = [
         {"model1": "a", "model2": "b", "corrected_p_value": 0.5, "fdr_corrected_p": 0.0004}
     ]
@@ -92,7 +94,7 @@ def test_significance_table_uses_the_fdr_column_when_present(tmp_path):
     assert frame.loc["a", "b"].endswith("***")
 
 
-def test_significance_markers_use_strict_thresholds(tmp_path):
+def test_significance_markers_use_strict_thresholds(tmp_path: Path):
     # 0.001 is not strictly below 0.001, so it earns two stars rather than three.
     comparisons = [
         {"model1": "a", "model2": "b", "corrected_p_value": 0.001},
@@ -107,7 +109,7 @@ def test_significance_markers_use_strict_thresholds(tmp_path):
     assert frame.loc["a", "c"] == "0.0500"
 
 
-def test_calibration_table_lists_brier_and_ece(tmp_path):
+def test_calibration_table_lists_brier_and_ece(tmp_path: Path):
     path = tmp_path / "calibration.csv"
 
     create_calibration_table(
@@ -120,7 +122,7 @@ def test_calibration_table_lists_brier_and_ece(tmp_path):
     assert frame.loc[1, "ece"] == pytest.approx(0.09)
 
 
-def test_generate_all_reports_writes_every_table(tmp_path):
+def test_generate_all_reports_writes_every_table(tmp_path: Path):
     generate_all_reports(RESULTS, COMPARISONS, str(tmp_path))
 
     written = {path.name for path in tmp_path.iterdir()}
@@ -136,7 +138,7 @@ def test_generate_all_reports_writes_every_table(tmp_path):
     }
 
 
-def test_generate_all_reports_skips_calibration_when_no_model_provided_it(tmp_path):
+def test_generate_all_reports_skips_calibration_when_no_model_provided_it(tmp_path: Path):
     without_calibration = {"logreg": {"accuracy": {"value": 0.6, "ci_lower": 0.5, "ci_upper": 0.7}}}
 
     generate_all_reports(without_calibration, [], str(tmp_path))
@@ -145,14 +147,14 @@ def test_generate_all_reports_skips_calibration_when_no_model_provided_it(tmp_pa
     assert (tmp_path / "metrics.csv").exists()
 
 
-def test_generate_all_reports_creates_a_missing_directory(tmp_path):
+def test_generate_all_reports_creates_a_missing_directory(tmp_path: Path):
     target = tmp_path / "nested" / "reports"
 
     generate_all_reports(RESULTS, COMPARISONS, str(target))
 
     assert (target / "metrics.csv").exists()
 
-def test_latex_tables_escape_model_names_that_contain_underscores(tmp_path):
+def test_latex_tables_escape_model_names_that_contain_underscores(tmp_path: Path):
     path = tmp_path / "metrics.tex"
 
     create_metrics_table(
@@ -164,7 +166,7 @@ def test_latex_tables_escape_model_names_that_contain_underscores(tmp_path):
     assert "resnet18_hybrid" not in text
 
 
-def test_latex_tables_mark_missing_intervals_instead_of_printing_nan(tmp_path):
+def test_latex_tables_mark_missing_intervals_instead_of_printing_nan(tmp_path: Path):
     path = tmp_path / "metrics.tex"
 
     create_metrics_table({"boost": {"accuracy": {"value": 0.66}}}, str(path), format="latex")

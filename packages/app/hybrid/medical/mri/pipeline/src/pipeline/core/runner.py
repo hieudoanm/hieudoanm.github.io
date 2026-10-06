@@ -22,6 +22,7 @@ from pipeline.core.dataset import (
 )
 from pipeline.core.events import EventWriter
 from pipeline.core.experiment import (
+    CrossValidationResult,
     aggregate_folds,
     fit_and_score_lock_box,
     run_cross_validation,
@@ -114,19 +115,17 @@ def _stages(
 ) -> None:
     """Run every stage in order, recording each outcome in the summary."""
     model_type = _model_type(config)
-    cohort, features, participants_tsv = _stage_data(config, events, summary)
+    cohort, features = _stage_data(config, events, summary)
     splitter, lock_box = _stage_split(config, cohort, run_path, events, summary)
 
     development = cohort.drop(index=lock_box.index)
-    folds = _stage_baseline(
+    result = _stage_baseline(
         model_type, development, features, splitter, events, summary
     )
     _stage_evaluate(
         model_type, development, lock_box, features, splitter, run_path, events, summary
     )
-    _stage_report(
-        model_type, folds, cohort, run_path, events, summary
-    )
+    _stage_report(model_type, result, cohort, run_path, events, summary)
 
 
 def _model_type(config: dict[str, Any]) -> str:
@@ -138,7 +137,7 @@ def _stage_data(
     config: dict[str, Any],
     events: EventWriter,
     summary: dict[str, Any],
-) -> tuple[pd.DataFrame, pd.DataFrame, Path]:
+) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Load the cohort, bin the outcome, encode features and record the hash."""
     data_config = config.get("data", {})
     participants_tsv = data_config.get("participants_tsv")
@@ -167,7 +166,7 @@ def _stage_data(
     events.write_metric("data", "positive_rate", balance["positive_rate"])
     events.write_stage_end("data", "ok")
     summary["data_hash"] = compute_file_hash(path)
-    return frame, features, path
+    return frame, features
 
 
 def _stage_split(
@@ -227,7 +226,7 @@ def _stage_baseline(
     splitter: Splitter,
     events: EventWriter,
     summary: dict[str, Any],
-) -> list[dict[str, Any]]:
+) -> CrossValidationResult:
     """Train and score the baseline over the development folds."""
     events.write_stage_start("baseline", model_type)
     folds = splitter.create_cv_splits(development)

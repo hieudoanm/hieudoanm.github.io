@@ -1,5 +1,7 @@
 """System health checks and dependency verification."""
 
+import importlib
+import importlib.util
 import platform
 import sys
 from pathlib import Path
@@ -20,40 +22,50 @@ def get_platform_info() -> dict[str, str]:
     }
 
 
+def _torch_or_none() -> Any:
+    """Import torch if it is installed, otherwise return None.
+
+    torch is an optional extra, so it is resolved by name rather than with a
+    top-level `import torch`: a plain import is unresolvable for the type checker
+    on a machine that only installed the base dependencies.
+    """
+    if importlib.util.find_spec("torch") is None:
+        return None
+    return importlib.import_module("torch")
+
+
 def get_device_info() -> dict[str, Any]:
     """Get device information (CUDA, MPS, CPU)."""
-    device_info = {
+    device_info: dict[str, Any] = {
         "platform": platform.system(),
         "available_devices": ["cpu"],
         "recommended_device": "cpu",
     }
 
-    # Try to detect CUDA
-    try:
-        import torch
-        if torch.cuda.is_available():
-            device_info["available_devices"].append("cuda")
-            device_info["cuda_available"] = True
-            device_info["cuda_device_count"] = torch.cuda.device_count()
-            device_info["cuda_device_name"] = torch.cuda.get_device_name(0)
-            device_info["recommended_device"] = "cuda"
-        else:
-            device_info["cuda_available"] = False
-    except ImportError:
+    torch = _torch_or_none()
+    if torch is None:
         device_info["cuda_available"] = False
         device_info["torch_installed"] = False
+        device_info["mps_available"] = False
+        return device_info
 
-    # Try to detect MPS (Apple Silicon)
-    try:
-        import torch
-        if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
-            device_info["available_devices"].append("mps")
-            device_info["mps_available"] = True
-            if device_info["recommended_device"] == "cpu":
-                device_info["recommended_device"] = "mps"
-        else:
-            device_info["mps_available"] = False
-    except ImportError:
+    # CUDA
+    if torch.cuda.is_available():
+        device_info["available_devices"].append("cuda")
+        device_info["cuda_available"] = True
+        device_info["cuda_device_count"] = torch.cuda.device_count()
+        device_info["cuda_device_name"] = torch.cuda.get_device_name(0)
+        device_info["recommended_device"] = "cuda"
+    else:
+        device_info["cuda_available"] = False
+
+    # MPS (Apple Silicon)
+    if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+        device_info["available_devices"].append("mps")
+        device_info["mps_available"] = True
+        if device_info["recommended_device"] == "cpu":
+            device_info["recommended_device"] = "mps"
+    else:
         device_info["mps_available"] = False
 
     return device_info
@@ -61,7 +73,7 @@ def get_device_info() -> dict[str, Any]:
 
 def check_dependencies() -> dict[str, Any]:
     """Check if required dependencies are installed."""
-    dependencies = {
+    dependencies: dict[str, bool] = {
         "numpy": False,
         "pandas": False,
         "pydantic": False,
@@ -69,7 +81,7 @@ def check_dependencies() -> dict[str, Any]:
         "yaml": False,  # PyYAML imports as yaml
     }
 
-    optional_dependencies = {
+    optional_dependencies: dict[str, bool] = {
         "torch": False,
         "nibabel": False,
         "nilearn": False,
@@ -103,7 +115,7 @@ def check_dependencies() -> dict[str, Any]:
 
 def check_paths(data_path: str = "data/") -> dict[str, Any]:
     """Check if required paths exist and are accessible."""
-    path_info = {
+    path_info: dict[str, Any] = {
         "data_path": str(Path(data_path).absolute()),
         "data_path_exists": Path(data_path).exists(),
         "data_path_readable": False,
@@ -118,7 +130,7 @@ def check_paths(data_path: str = "data/") -> dict[str, Any]:
 
 def check_system(verbose: bool = False) -> dict[str, Any]:
     """Run full system check."""
-    system_info = {
+    system_info: dict[str, Any] = {
         "python_version": get_python_version(),
         "platform": get_platform_info(),
         "device": get_device_info(),

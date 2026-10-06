@@ -5,6 +5,8 @@ tests check that the harness is reproducible and that evaluation reports
 calibration rather than a bare accuracy.
 """
 
+from pathlib import Path
+
 import numpy as np
 import pytest
 
@@ -27,7 +29,9 @@ def separable_data():
     return features, labels
 
 
-def test_logistic_regression_learns_a_separable_problem(separable_data):
+def test_logistic_regression_learns_a_separable_problem(
+    separable_data: tuple[np.ndarray, np.ndarray],
+):
     features, labels = separable_data
 
     model = LogisticRegressionBaseline().fit(features, labels)
@@ -39,7 +43,9 @@ def test_logistic_regression_learns_a_separable_problem(separable_data):
     assert 0 <= scores["accuracy"]["ci_lower"] <= scores["accuracy"]["ci_upper"]
 
 
-def test_predictions_are_reproducible_for_a_fixed_seed(separable_data):
+def test_predictions_are_reproducible_for_a_fixed_seed(
+    separable_data: tuple[np.ndarray, np.ndarray],
+):
     features, labels = separable_data
 
     first = LogisticRegressionBaseline(random_state=7).fit(features, labels)
@@ -49,7 +55,7 @@ def test_predictions_are_reproducible_for_a_fixed_seed(separable_data):
     assert np.allclose(first.predict_proba(features), second.predict_proba(features))
 
 
-def test_predicting_before_fitting_is_refused(separable_data):
+def test_predicting_before_fitting_is_refused(separable_data: tuple[np.ndarray, np.ndarray]):
     features, _ = separable_data
     model = LogisticRegressionBaseline()
 
@@ -59,7 +65,7 @@ def test_predicting_before_fitting_is_refused(separable_data):
         model.predict_proba(features)
 
 
-def test_gradient_boosting_is_reproducible(separable_data):
+def test_gradient_boosting_is_reproducible(separable_data: tuple[np.ndarray, np.ndarray]):
     features, labels = separable_data
 
     first = GradientBoostingBaseline(random_state=7).fit(features, labels)
@@ -68,7 +74,9 @@ def test_gradient_boosting_is_reproducible(separable_data):
     assert np.array_equal(first.predict(features), second.predict(features))
 
 
-def test_train_baseline_dispatches_and_rejects_unknown_types(separable_data):
+def test_train_baseline_dispatches_and_rejects_unknown_types(
+    separable_data: tuple[np.ndarray, np.ndarray],
+):
     features, labels = separable_data
 
     logistic = train_baseline("logistic_regression", features, labels)
@@ -81,7 +89,10 @@ def test_train_baseline_dispatches_and_rejects_unknown_types(separable_data):
         train_baseline("transformer", features, labels)
 
 
-def test_baseline_survives_a_save_load_round_trip(separable_data, tmp_path):
+def test_baseline_survives_a_save_load_round_trip(
+    separable_data: tuple[np.ndarray, np.ndarray],
+    tmp_path: Path,
+):
     features, labels = separable_data
     model = LogisticRegressionBaseline().fit(features, labels)
     path = tmp_path / "model.joblib"
@@ -92,7 +103,7 @@ def test_baseline_survives_a_save_load_round_trip(separable_data, tmp_path):
     assert np.allclose(restored.predict_proba(features), model.predict_proba(features))
 
 
-def test_cross_validation_reports_one_score_per_fold(separable_data):
+def test_cross_validation_reports_one_score_per_fold(separable_data: tuple[np.ndarray, np.ndarray]):
     features, labels = separable_data
     model = LogisticRegressionBaseline().fit(features, labels)
 
@@ -103,7 +114,9 @@ def test_cross_validation_reports_one_score_per_fold(separable_data):
     assert 0.0 <= result["mean_score"] <= 1.0
 
 
-def test_evaluation_intervals_match_the_shared_metric_helper(separable_data):
+def test_evaluation_intervals_match_the_shared_metric_helper(
+    separable_data: tuple[np.ndarray, np.ndarray],
+):
     features, labels = separable_data
     model = LogisticRegressionBaseline().fit(features, labels)
 

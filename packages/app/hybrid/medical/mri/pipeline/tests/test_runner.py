@@ -7,6 +7,7 @@ folder that says it failed instead of an empty one.
 
 import json
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -46,7 +47,9 @@ def make_cohort(path: Path, size: int = 60) -> Path:
     return path
 
 
-def make_config(participants: Path, model_type: str = "logistic_regression") -> dict:
+def make_config(
+    participants: Path, model_type: str = "logistic_regression"
+) -> dict[str, Any]:
     return {
         "schema_version": "0.1.0",
         "data": {
@@ -62,12 +65,12 @@ def make_config(participants: Path, model_type: str = "logistic_regression") -> 
 
 
 @pytest.fixture
-def workspace(tmp_path):
+def workspace(tmp_path: Path):
     participants = make_cohort(tmp_path / "participants.tsv")
     return participants, tmp_path / "runs"
 
 
-def test_run_writes_a_complete_folder(workspace):
+def test_run_writes_a_complete_folder(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(make_config(participants), output_dir=str(runs))
@@ -79,7 +82,7 @@ def test_run_writes_a_complete_folder(workspace):
     assert summary["run_id"].startswith("r_")
 
 
-def test_manifest_records_completion_and_the_data_hash(workspace):
+def test_manifest_records_completion_and_the_data_hash(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(make_config(participants), output_dir=str(runs))
@@ -92,7 +95,7 @@ def test_manifest_records_completion_and_the_data_hash(workspace):
     assert manifest["library_versions"]["numpy"] != "not installed"
 
 
-def test_metrics_document_matches_what_the_workbench_reads(workspace):
+def test_metrics_document_matches_what_the_workbench_reads(workspace: tuple[Path, Path]):
     """The dashboard parses metrics/calibration/confusion from metrics.json."""
     participants, runs = workspace
 
@@ -109,7 +112,7 @@ def test_metrics_document_matches_what_the_workbench_reads(workspace):
     assert len(document["folds"]) == 3
 
 
-def test_calibration_prob_true_and_prob_pred_are_matching_curves(workspace):
+def test_calibration_prob_true_and_prob_pred_are_matching_curves(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(make_config(participants), output_dir=str(runs))
@@ -120,7 +123,7 @@ def test_calibration_prob_true_and_prob_pred_are_matching_curves(workspace):
     assert len(calibration["prob_true"]) == len(calibration["count"])
 
 
-def test_events_are_append_only_and_every_metric_names_its_stage(workspace):
+def test_events_are_append_only_and_every_metric_names_its_stage(workspace: tuple[Path, Path]):
     """A metric event without a stage is dropped by the workbench parser."""
     participants, runs = workspace
 
@@ -137,7 +140,7 @@ def test_events_are_append_only_and_every_metric_names_its_stage(workspace):
             assert isinstance(event["value"], (int, float))
 
 
-def test_events_cover_every_reported_stage(workspace):
+def test_events_cover_every_reported_stage(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(make_config(participants), output_dir=str(runs))
@@ -148,7 +151,7 @@ def test_events_cover_every_reported_stage(workspace):
     assert started == ended == {"run", "data", "split", "baseline", "evaluate", "report"}
 
 
-def test_split_artifact_holds_out_participants_nobody_trains_on(workspace):
+def test_split_artifact_holds_out_participants_nobody_trains_on(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(make_config(participants), output_dir=str(runs))
@@ -164,7 +167,7 @@ def test_split_artifact_holds_out_participants_nobody_trains_on(workspace):
         assert set(fold["valid"]) <= development
 
 
-def test_lock_box_predictions_cover_only_held_out_participants(workspace):
+def test_lock_box_predictions_cover_only_held_out_participants(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(make_config(participants), output_dir=str(runs))
@@ -177,7 +180,7 @@ def test_lock_box_predictions_cover_only_held_out_participants(workspace):
     assert set(table["predicted"]) <= {0, 1}
 
 
-def test_lock_box_access_is_logged_exactly_once(workspace):
+def test_lock_box_access_is_logged_exactly_once(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(make_config(participants), output_dir=str(runs))
@@ -190,7 +193,7 @@ def test_lock_box_access_is_logged_exactly_once(workspace):
     assert access["accesses"][0]["n_participants"] > 0
 
 
-def test_cross_validated_predictions_exclude_the_lock_box(workspace):
+def test_cross_validated_predictions_exclude_the_lock_box(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(make_config(participants), output_dir=str(runs))
@@ -204,7 +207,7 @@ def test_cross_validated_predictions_exclude_the_lock_box(workspace):
     assert not predicted & lock_box
 
 
-def test_gradient_boosting_runs_the_same_pipeline(workspace):
+def test_gradient_boosting_runs_the_same_pipeline(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     summary = run_experiment(
@@ -216,7 +219,7 @@ def test_gradient_boosting_runs_the_same_pipeline(workspace):
     assert document["metrics"]
 
 
-def test_run_is_reproducible_for_a_fixed_seed(workspace):
+def test_run_is_reproducible_for_a_fixed_seed(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     first = run_experiment(make_config(participants), output_dir=str(runs), run_id="r_fixed_1")
@@ -227,7 +230,7 @@ def test_run_is_reproducible_for_a_fixed_seed(workspace):
     assert left == right
 
 
-def test_run_appears_in_the_run_listing(workspace):
+def test_run_appears_in_the_run_listing(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     run_experiment(make_config(participants), output_dir=str(runs))
@@ -237,7 +240,7 @@ def test_run_appears_in_the_run_listing(workspace):
     assert listing[0]["run_id"] == listing[0]["run_id"].strip()
 
 
-def test_a_failing_run_leaves_a_folder_that_says_it_failed(workspace):
+def test_a_failing_run_leaves_a_folder_that_says_it_failed(workspace: tuple[Path, Path]):
     participants, runs = workspace
     config = make_config(participants)
     config["data"]["features"] = ["not_a_column"]
@@ -254,7 +257,10 @@ def test_a_failing_run_leaves_a_folder_that_says_it_failed(workspace):
     assert any(event["type"] == "error" for event in events)
 
 
-def test_missing_participants_table_is_reported_not_swallowed(workspace, tmp_path):
+def test_missing_participants_table_is_reported_not_swallowed(
+    workspace: tuple[Path, Path],
+    tmp_path: Path,
+):
     _, runs = workspace
     config = make_config(tmp_path / "absent.tsv")
 
@@ -262,7 +268,7 @@ def test_missing_participants_table_is_reported_not_swallowed(workspace, tmp_pat
         run_experiment(config, output_dir=str(runs))
 
 
-def test_model_without_an_implementation_is_refused(workspace):
+def test_model_without_an_implementation_is_refused(workspace: tuple[Path, Path]):
     participants, runs = workspace
 
     with pytest.raises(ValueError, match="no tabular baseline"):

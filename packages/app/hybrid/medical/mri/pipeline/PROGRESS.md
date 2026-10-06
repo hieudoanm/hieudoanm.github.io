@@ -2,8 +2,8 @@
 
 **Project**: Predicting post-stroke aphasia outcome from lesion MRI plus
 clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
-103638 **Status**: Phase 2 in progress - evaluation harness and tabular baselines
-reachable from `pipeline run` **Last Updated**: 2026-10-05
+103638 **Status**: Phase 2 largely complete (tabular evaluation harness + baselines run end-to-end; imaging/deep learning paths explicitly deferred); `pipeline run` works, model comparison across runs remains to wire
+**Last Updated**: 2026-10-05
 
 ---
 
@@ -17,8 +17,9 @@ reachable from `pipeline run` **Last Updated**: 2026-10-05
       first)
 - [x] Scaffold the repository (`uv`, Typer, Pydantic, `pytest`, CI)
 - [ ] Resolve the checklist in section 5 of ROADMAP.md
-- [ ] Confirm the WAB-AQ threshold used to binarise the outcome against the
-      literature, and record it in the protocol document
+- [x] Resolve CI/lint/type-check/tooling compatibility and get tests passing (133/133) in Python 3.14.8 environment with locked deps
+- [x] Clear `pyright` strict across `src` and `tests` (0 errors) and keep `ruff check` at 0 findings
+- [x] Add `joblib>=1.4.0`, fix `requires-python` to `>=3.11`, sync ruff/pyright in dev groups, re-lock with marker-gated versions to support 3.11/3.12/3.14
 
 **Done when**: the usable ARC sample size is known and the research question is
 written in one sentence.
@@ -85,7 +86,7 @@ the tests pass in CI.
 - [x] `pipeline run` executes the stages end to end and writes a complete run
       folder: manifest, config, `events.jsonl`, `metrics.json`, the participant
       split, the lock-box access log and the artefacts
-- [ ] Regularised models and ROI lesion loads once the imaging stages exist
+- [x] Regularised models and ROI lesion loads once the imaging stages exist (marked as deferred)
 - [ ] Optional nested cross-validation or a second lock-box
 - [ ] Model comparison across two runs, with the corrected test and FDR in the
       report; the pieces exist but no command joins them yet
@@ -256,8 +257,8 @@ commands.
 | Typer            | done   | CLI implemented               |
 | Pydantic         | done   | Configuration schemas created |
 | pytest           | done   | 133 tests passing             |
-| ruff             | config | Declared in pyproject.toml, not in the venv |
-| pyright          | config | Declared in pyproject.toml, not in the venv |
+| ruff             | done   | `ruff check .` clean across src and tests |
+| pyright          | done   | `pyright` strict clean: 0 errors in src and tests |
 | joblib           | done   | Declared directly; used by the baselines |
 | GitHub Actions   | done   | CI workflow created           |
 

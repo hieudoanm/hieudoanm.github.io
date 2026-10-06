@@ -22,7 +22,7 @@ def sample_predictions():
     return y_true, y_pred, y_proba
 
 
-def test_calculate_metrics(sample_predictions):
+def test_calculate_metrics(sample_predictions: tuple[np.ndarray, np.ndarray, np.ndarray]):
     """Test basic metrics calculation."""
     y_true, y_pred, y_proba = sample_predictions
 
@@ -41,7 +41,9 @@ def test_calculate_metrics(sample_predictions):
     assert 0 <= metrics["f1"] <= 1
 
 
-def test_calculate_metrics_without_proba(sample_predictions):
+def test_calculate_metrics_without_proba(
+    sample_predictions: tuple[np.ndarray, np.ndarray, np.ndarray],
+):
     """Test metrics calculation without probabilities."""
     y_true, y_pred, _ = sample_predictions
 
@@ -51,7 +53,7 @@ def test_calculate_metrics_without_proba(sample_predictions):
     assert "auc" not in metrics  # Should not have AUC without probabilities
 
 
-def test_calculate_metrics_with_ci(sample_predictions):
+def test_calculate_metrics_with_ci(sample_predictions: tuple[np.ndarray, np.ndarray, np.ndarray]):
     """Test metrics with confidence intervals."""
     y_true, y_pred, y_proba = sample_predictions
 
@@ -68,7 +70,9 @@ def test_calculate_metrics_with_ci(sample_predictions):
     assert metrics["accuracy"]["ci_upper"] >= metrics["accuracy"]["value"]
 
 
-def test_calculate_calibration_metrics(sample_predictions):
+def test_calculate_calibration_metrics(
+    sample_predictions: tuple[np.ndarray, np.ndarray, np.ndarray],
+):
     """Test calibration metrics calculation."""
     y_true, _, y_proba = sample_predictions
 
@@ -97,7 +101,7 @@ def test_calculate_confidence_interval():
     assert lower < upper
 
 
-def test_calculate_confusion_matrix(sample_predictions):
+def test_calculate_confusion_matrix(sample_predictions: tuple[np.ndarray, np.ndarray, np.ndarray]):
     """Test confusion matrix calculation."""
     y_true, y_pred, _ = sample_predictions
 

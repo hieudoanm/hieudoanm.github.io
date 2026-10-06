@@ -206,11 +206,15 @@ def wilcoxon_signed_rank_test(
         Dictionary with test results
     """
     _validate_alternative(alternative)
-    stat, p_value = stats.wilcoxon(scores1, scores2, alternative=alternative)
+    # scipy is untyped here, so the two components are pulled through numpy to
+    # reach the declared float return rather than staying a bound typevar.
+    result = stats.wilcoxon(scores1, scores2, alternative=alternative)
+    statistic = float(np.asarray(result[0]).item())
+    p_value = float(np.asarray(result[1]).item())
 
     return {
-        "statistic": float(stat),
-        "p_value": float(p_value),
+        "statistic": statistic,
+        "p_value": p_value,
         "alternative": alternative,
         "mean_diff": float(np.mean(scores1 - scores2)),
     }

@@ -151,7 +151,7 @@ def encode_features(
     Raises:
         CohortError: If encoding produces no usable column
     """
-    block = frame[feature_columns].copy()
+    block = frame.reindex(columns=feature_columns).copy()
     # Anything that is not already a numeric or boolean dtype is categorical,
     # including pandas' StringDtype, which a dtype == object check would miss.
     categorical = [
@@ -160,12 +160,14 @@ def encode_features(
         if not pd.api.types.is_numeric_dtype(block[column])
         and not pd.api.types.is_bool_dtype(block[column])
     ]
-    for column in categorical:
-        block[column] = block[column].astype(object).where(
-            block[column].notna(), "missing"
+    # Only the categorical columns are re-typed, so the numeric ones keep the
+    # dtype the check above just trusted.
+    if categorical:
+        block[categorical] = block.reindex(columns=categorical).astype(object).fillna(
+            "missing"
         )
     encoded = pd.get_dummies(block, columns=categorical, drop_first=True)
-    encoded = encoded.apply(pd.to_numeric, errors="coerce")
+    encoded = pd.DataFrame(encoded.apply(pd.to_numeric, errors="coerce"))
     if encoded.empty or encoded.shape[1] == 0:
         raise CohortError(
             f"feature encoding of {feature_columns} produced no usable column"

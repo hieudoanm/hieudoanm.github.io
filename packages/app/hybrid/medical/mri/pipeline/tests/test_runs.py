@@ -1,5 +1,7 @@
 """Tests for run folder and manifest management."""
 
+from pathlib import Path
+
 from pipeline.core import (
     create_manifest,
     create_run_folder,
@@ -17,14 +19,14 @@ def test_generate_run_id():
     assert len(run_id) > 10  # Should have timestamp
 
 
-def test_create_run_folder(tmp_path):
+def test_create_run_folder(tmp_path: Path):
     """Test that run folder is created correctly."""
     run_path = create_run_folder(str(tmp_path))
     assert run_path.exists()
     assert run_path.is_dir()
 
 
-def test_create_manifest(tmp_path):
+def test_create_manifest(tmp_path: Path):
     """Test that manifest is created and saved correctly."""
     run_path = create_run_folder(str(tmp_path))
     config = {"split": {"seed": 42}, "run": {"device": "cpu"}}
@@ -45,7 +47,7 @@ def test_create_manifest(tmp_path):
     assert loaded_manifest["schema_version"] == manifest["schema_version"]
 
 
-def test_save_config(tmp_path):
+def test_save_config(tmp_path: Path):
     """Test that config is saved correctly."""
     run_path = create_run_folder(str(tmp_path))
     config = {"split": {"seed": 42}, "run": {"device": "cpu"}}
@@ -57,7 +59,7 @@ def test_save_config(tmp_path):
     assert config_path.exists()
 
 
-def test_list_runs(tmp_path):
+def test_list_runs(tmp_path: Path):
     """Test that runs are listed correctly."""
     import time
 

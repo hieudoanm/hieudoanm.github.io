@@ -1,5 +1,7 @@
 """Tests for participant-level splitting."""
 
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -27,7 +29,7 @@ def test_splitter_initialization():
     assert splitter.seed == 42
 
 
-def test_lock_box_split(sample_cohort):
+def test_lock_box_split(sample_cohort: pd.DataFrame):
     """Test that lock-box split works correctly."""
     splitter = Splitter(n_folds=4, lock_box_fraction=0.2, seed=42, stratify_by="outcome_group")
     lock_box_df, remaining_df = splitter.split_lock_box(sample_cohort)
@@ -41,7 +43,7 @@ def test_lock_box_split(sample_cohort):
     assert 0.15 < lock_box_size / total < 0.25  # Allow some tolerance
 
 
-def test_cv_splits(sample_cohort):
+def test_cv_splits(sample_cohort: pd.DataFrame):
     """Test that CV splits are created correctly."""
     splitter = Splitter(n_folds=4, lock_box_fraction=0.2, seed=42, stratify_by="outcome_group")
     _, remaining_df = splitter.split_lock_box(sample_cohort)
@@ -56,7 +58,7 @@ def test_cv_splits(sample_cohort):
         assert len(set(train_idx).intersection(set(val_idx))) == 0
 
 
-def test_split_all(sample_cohort):
+def test_split_all(sample_cohort: pd.DataFrame):
     """Test complete split pipeline."""
     splitter = Splitter(n_folds=4, lock_box_fraction=0.2, seed=42, stratify_by="outcome_group")
     splits = splitter.split_all(sample_cohort)
@@ -67,7 +69,7 @@ def test_split_all(sample_cohort):
     assert len(splits["cv_splits"]) == 4
 
 
-def test_no_participant_leakage(sample_cohort):
+def test_no_participant_leakage(sample_cohort: pd.DataFrame):
     """Test that there is no participant leakage between splits."""
     splitter = Splitter(n_folds=4, lock_box_fraction=0.2, seed=42, stratify_by="outcome_group")
     splits = splitter.split_all(sample_cohort)
@@ -78,7 +80,7 @@ def test_no_participant_leakage(sample_cohort):
     assert verify_no_leakage(lock_box_participants, remaining_participants)
 
 
-def test_split_reproducibility(sample_cohort):
+def test_split_reproducibility(sample_cohort: pd.DataFrame):
     """Test that splits are reproducible with the same seed."""
     splitter1 = Splitter(n_folds=4, lock_box_fraction=0.2, seed=42, stratify_by="outcome_group")
     splits1 = splitter1.split_all(sample_cohort)
@@ -95,7 +97,7 @@ def test_split_reproducibility(sample_cohort):
         assert np.array_equal(val1, val2)
 
 
-def test_save_and_load_splits(sample_cohort, tmp_path):
+def test_save_and_load_splits(sample_cohort: pd.DataFrame, tmp_path: Path):
     """Test that splits can be saved and loaded."""
     splitter = Splitter(n_folds=4, lock_box_fraction=0.2, seed=42, stratify_by="outcome_group")
     splits = splitter.split_all(sample_cohort)
@@ -125,7 +127,7 @@ def test_lock_box_access_counter():
     assert splitter.get_lock_box_access_count() == 2
 
 
-def test_continuous_stratify_column_is_binned(sample_cohort):
+def test_continuous_stratify_column_is_binned(sample_cohort: pd.DataFrame):
     """A continuous score must be binned; StratifiedGroupKFold rejects it raw."""
     frame = sample_cohort.copy()
     frame["wab_aq"] = frame["age_at_stroke"] * 1.7 + frame["wab_aq"] * 0.3
@@ -137,7 +139,7 @@ def test_continuous_stratify_column_is_binned(sample_cohort):
     assert frame["wab_aq"].dtype.kind == "f"  # the column really is continuous
 
 
-def test_missing_stratify_column_falls_back_to_group_kfold(sample_cohort):
+def test_missing_stratify_column_falls_back_to_group_kfold(sample_cohort: pd.DataFrame):
     splitter = Splitter(n_folds=3, seed=42, stratify_by="not_a_column")
 
     splits = splitter.create_cv_splits(sample_cohort)

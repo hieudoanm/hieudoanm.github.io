@@ -2,7 +2,7 @@
 
 Project: predicting post-stroke aphasia outcome from lesion MRI plus clinical
 data Basis: reproduces and extends White et al. (2024), NeuroImage: Clinical 43,
-103638 Status: draft v0.1, 2026-10-05 Companion document: ../docs/ROADMAP.md (the
+103638 **Status**: v0.1 (Phase 2 tabular complete), 2026-10-05 Companion document: ../docs/ROADMAP.md (the
 desktop app that drives this pipeline)
 
 Week numbers below assume a 20-week project. Rescale them once the submission

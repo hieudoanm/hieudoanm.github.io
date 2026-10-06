@@ -1,5 +1,7 @@
 """Tests for cohort loading, outcome binning and feature encoding."""
 
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -27,31 +29,34 @@ def cohort():
     })
 
 
-def write(frame: pd.DataFrame, path) -> str:
+def write(frame: pd.DataFrame, path: Path) -> str:
     frame.to_csv(path, sep="\t", index=False)
     return str(path)
 
 
-def test_loads_one_row_per_participant(cohort, tmp_path):
+def test_loads_one_row_per_participant(cohort: pd.DataFrame, tmp_path: Path):
     frame = load_cohort(write(cohort, tmp_path / "participants.tsv"))
 
     assert len(frame) == len(cohort)
     assert "participant_id" in frame.columns
 
 
-def test_missing_file_is_reported_by_path(tmp_path):
+def test_missing_file_is_reported_by_path(tmp_path: Path):
     with pytest.raises(CohortError, match="not found"):
         load_cohort(str(tmp_path / "absent.tsv"))
 
 
-def test_table_without_participant_id_is_refused(tmp_path):
+def test_table_without_participant_id_is_refused(tmp_path: Path):
     path = write(pd.DataFrame({"wab_aq": [10, 20]}), tmp_path / "participants.tsv")
 
     with pytest.raises(CohortError, match="participant_id"):
         load_cohort(path)
 
 
-def test_repeated_sessions_are_refused_rather_than_silently_pooled(cohort, tmp_path):
+def test_repeated_sessions_are_refused_rather_than_silently_pooled(
+    cohort: pd.DataFrame,
+    tmp_path: Path,
+):
     """Two sessions per person would put a participant in two folds."""
     repeated = pd.concat([cohort, cohort.assign(session_id="ses-2")], ignore_index=True)
     repeated["session_id"] = ["ses-1"] * len(cohort) + ["ses-2"] * len(cohort)
@@ -60,7 +65,7 @@ def test_repeated_sessions_are_refused_rather_than_silently_pooled(cohort, tmp_p
         load_cohort(write(repeated, tmp_path / "participants.tsv"))
 
 
-def test_one_session_per_participant_is_accepted(cohort, tmp_path):
+def test_one_session_per_participant_is_accepted(cohort: pd.DataFrame, tmp_path: Path):
     single = cohort.assign(session_id="ses-1")
 
     frame = load_cohort(write(single, tmp_path / "participants.tsv"))
@@ -68,7 +73,7 @@ def test_one_session_per_participant_is_accepted(cohort, tmp_path):
     assert len(frame) == len(cohort)
 
 
-def test_outcome_is_binned_and_continuous_score_kept(cohort):
+def test_outcome_is_binned_and_continuous_score_kept(cohort: pd.DataFrame):
     frame = binarise_outcome(cohort, "wab_aq", 50.0)
 
     assert set(frame["outcome"].unique()) <= {0.0, 1.0}
@@ -76,19 +81,19 @@ def test_outcome_is_binned_and_continuous_score_kept(cohort):
     assert "wab_aq" in frame.columns
 
 
-def test_absent_outcome_column_names_what_is_available(cohort):
+def test_absent_outcome_column_names_what_is_available(cohort: pd.DataFrame):
     with pytest.raises(CohortError, match="outcome column 'wab_days' is missing"):
         binarise_outcome(cohort, "wab_days", 50.0)
 
 
-def test_all_missing_outcome_column_is_refused(cohort):
+def test_all_missing_outcome_column_is_refused(cohort: pd.DataFrame):
     frame = cohort.assign(wab_aq=np.nan)
 
     with pytest.raises(CohortError, match="no usable values"):
         binarise_outcome(frame, "wab_aq", 50.0)
 
 
-def test_participants_missing_an_outcome_are_dropped_not_imputed(cohort):
+def test_participants_missing_an_outcome_are_dropped_not_imputed(cohort: pd.DataFrame):
     frame = cohort.copy()
     frame.loc[frame.index[:5], "wab_aq"] = np.nan
     binarised = binarise_outcome(frame, "wab_aq", 50.0)
@@ -96,17 +101,17 @@ def test_participants_missing_an_outcome_are_dropped_not_imputed(cohort):
     usable = select_features(binarised, ["age_at_stroke"], "wab_aq")
 
     assert len(usable) == len(cohort) - 5
-    assert not usable["outcome"].isna().any()
+    assert not bool(usable["outcome"].isna().any())
 
 
-def test_unknown_feature_column_is_refused_with_the_available_list(cohort):
+def test_unknown_feature_column_is_refused_with_the_available_list(cohort: pd.DataFrame):
     binarised = binarise_outcome(cohort, "wab_aq", 50.0)
 
     with pytest.raises(CohortError, match="lesion_volume"):
         select_features(binarised, ["age_at_stroke", "lesion_volume"], "wab_aq")
 
 
-def test_selecting_nothing_survives_is_an_error(cohort):
+def test_selecting_nothing_survives_is_an_error(cohort: pd.DataFrame):
     frame = cohort.assign(age_at_stroke=np.nan)
     binarised = binarise_outcome(frame, "wab_aq", 50.0)
 
@@ -114,7 +119,7 @@ def test_selecting_nothing_survives_is_an_error(cohort):
         select_features(binarised, ["age_at_stroke"], "wab_aq")
 
 
-def test_categorical_feature_is_one_hot_encoded(cohort):
+def test_categorical_feature_is_one_hot_encoded(cohort: pd.DataFrame):
     binarised = binarise_outcome(cohort, "wab_aq", 50.0)
     usable = select_features(binarised, ["age_at_stroke", "sex"], "wab_aq")
 
@@ -127,7 +132,7 @@ def test_categorical_feature_is_one_hot_encoded(cohort):
     assert any(column.startswith("sex_") for column in encoded.columns)
 
 
-def test_encoding_keeps_the_frame_index(cohort):
+def test_encoding_keeps_the_frame_index(cohort: pd.DataFrame):
     """Row alignment matters: the lock-box is selected by label, not position."""
     binarised = binarise_outcome(cohort, "wab_aq", 50.0)
     usable = select_features(binarised, ["age_at_stroke"], "wab_aq")
@@ -138,7 +143,7 @@ def test_encoding_keeps_the_frame_index(cohort):
     assert list(encoded.index) == list(subset.index)
 
 
-def test_encoding_never_returns_an_empty_matrix(cohort):
+def test_encoding_never_returns_an_empty_matrix(cohort: pd.DataFrame):
     binarised = binarise_outcome(cohort, "wab_aq", 50.0)
     usable = select_features(binarised, ["sex"], "wab_aq")
 
@@ -147,7 +152,7 @@ def test_encoding_never_returns_an_empty_matrix(cohort):
     assert encoded.shape[1] >= 1
 
 
-def test_class_summary_counts_both_directions(cohort):
+def test_class_summary_counts_both_directions(cohort: pd.DataFrame):
     binarised = binarise_outcome(cohort, "wab_aq", 50.0)
     labels = binarised["outcome"].to_numpy(dtype=int)
 

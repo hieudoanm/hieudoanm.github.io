@@ -3,6 +3,7 @@
 from enum import Enum
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 
@@ -49,12 +50,11 @@ def _session_key(
     share one ascending sort.
     """
     label = df[session_column].astype("string").str.extract(r"(\d+)", expand=False)
-    numbers = pd.to_numeric(label, errors="coerce")
-    numbers = numbers.fillna(float("inf"))
-    numbers_f = numbers.astype(float)
+    numbers = np.asarray(pd.to_numeric(label, errors="coerce"), dtype=float)
+    numbers = np.where(np.isnan(numbers), np.inf, numbers)
     if descending:
-        numbers_f = -(numbers_f)
-    return pd.Series(numbers_f.values, index=df.index, dtype=float)
+        numbers = -numbers
+    return pd.Series(numbers, index=df.index, dtype=float)
 
 
 def _rule_key(df: pd.DataFrame, rule: SessionRule) -> pd.Series:

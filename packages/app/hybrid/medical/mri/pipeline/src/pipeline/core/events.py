@@ -49,7 +49,7 @@ class EventWriter:
         **kwargs: Any,
     ) -> None:
         """Write a progress event."""
-        event = {
+        event: dict[str, Any] = {
             "type": "progress",
             "stage": stage,
         }
@@ -79,7 +79,7 @@ class EventWriter:
         `stage` is required, not optional: the workbench deserialises a metric
         event with a missing stage as a parse error and drops it silently.
         """
-        event = {
+        event: dict[str, Any] = {
             "type": "metric",
             "stage": stage,
             "name": name,

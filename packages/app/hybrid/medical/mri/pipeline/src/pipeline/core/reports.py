@@ -12,7 +12,7 @@ FORMATS = ("csv", "latex")
 
 def _write(
     frame: pd.DataFrame,
-    output_path: str,
+    output_path: str | Path,
     output_format: str,
     digits: int = 3,
     index: bool = False,
@@ -48,7 +48,7 @@ def _metrics_frame(results: dict[str, dict[str, Any]]) -> pd.DataFrame:
 
 def create_metrics_table(
     results: dict[str, dict[str, Any]],
-    output_path: str,
+    output_path: str | Path,
     format: str = "csv",
 ) -> None:
     """Create a metrics table from model results.
@@ -63,7 +63,7 @@ def create_metrics_table(
 
 def create_comparison_table(
     comparisons: list[dict[str, Any]],
-    output_path: str,
+    output_path: str | Path,
     format: str = "csv",
 ) -> None:
     """Create a model comparison table.
@@ -78,7 +78,7 @@ def create_comparison_table(
 
 def create_significance_table(
     comparisons: list[dict[str, Any]],
-    output_path: str,
+    output_path: str | Path,
     format: str = "csv",
     alpha: float = 0.05,
 ) -> None:
@@ -126,7 +126,7 @@ def create_significance_table(
 
 def create_calibration_table(
     calibration_results: dict[str, dict[str, Any]],
-    output_path: str,
+    output_path: str | Path,
     format: str = "csv",
 ) -> None:
     """Create a calibration metrics table.

@@ -21,12 +21,17 @@ class LockBoxLogger:
         # Load existing log if it exists
         if self.log_path.exists():
             with open(self.log_path) as f:
-                self.log = json.load(f)
+                loaded = json.load(f)
         else:
-            self.log = {
-                "access_count": 0,
-                "accesses": [],
-            }
+            loaded = None
+
+        # The log holds an int and a list under different keys, so it is typed
+        # loosely on purpose: a narrow union would make `self.log["accesses"]`
+        # look like an int to the checker and reject the append below.
+        self.log: dict[str, Any] = loaded if isinstance(loaded, dict) else {
+            "access_count": 0,
+            "accesses": [],
+        }
 
     def log_access(
         self,
@@ -53,7 +58,7 @@ class LockBoxLogger:
         count += 1
         self.log["access_count"] = count
 
-        access_entry = {
+        access_entry: dict[str, Any] = {
             "access_number": count,
             "timestamp": datetime.now().isoformat(),
             "run_id": run_id,
@@ -67,15 +72,17 @@ class LockBoxLogger:
         # Save to disk
         self._save()
 
-        return self.log["access_count"]
+        return count
 
     def get_access_count(self) -> int:
         """Get the current access count."""
-        return self.log["access_count"]
+        count = self.log["access_count"]
+        return count if isinstance(count, int) else 0
 
     def get_access_history(self) -> list[dict[str, Any]]:
         """Get the full access history."""
-        return self.log["accesses"]
+        history = self.log["accesses"]
+        return history if isinstance(history, list) else []
 
     def _save(self) -> None:
         """Save log to disk."""

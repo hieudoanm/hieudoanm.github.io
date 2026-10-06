@@ -80,7 +80,11 @@ def run_cross_validation(
             "no fold contained both outcome classes; adjust the cohort, the feature "
             "list or the fold count"
         )
-    return {"folds": results, "predictions": predictions, "validated": validated}
+    return CrossValidationResult({
+        "folds": results,
+        "predictions": predictions,
+        "validated": validated,
+    })
 
 
 def _require_known_model(model_type: str) -> None:

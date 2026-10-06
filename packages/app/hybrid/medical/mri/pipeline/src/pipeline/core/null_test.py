@@ -177,7 +177,7 @@ def calibrate_df_scaling(
     ]
 
     fingerprint = _fingerprint(simulated)
-    results = []
+    results: list[dict[str, Any]] = []
     for scaling in scalings:
         row = _rate_for_scaling(simulated, float(scaling), n_folds, target_alpha)
         results.append({**row, "data_fingerprint": fingerprint})

@@ -1,5 +1,7 @@
 """Tests for configuration schemas."""
 
+from typing import Any
+
 import pytest
 
 from pipeline.schemas import Config, DataConfig, ModelConfig, RunConfig, SplitConfig
@@ -45,7 +47,7 @@ def test_run_config_device_validation():
 
 def test_config_from_dict():
     """Test that config can be created from dict."""
-    config_dict = {
+    config_dict: dict[str, Any] = {
         "data": {"dataset": "arc", "data_path": "data/"},
         "split": {"n_folds": 5, "seed": 123},
         "model": {"model_type": "resnet18"},
