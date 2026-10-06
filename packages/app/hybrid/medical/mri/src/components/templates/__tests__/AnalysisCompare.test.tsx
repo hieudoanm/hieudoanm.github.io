@@ -145,12 +145,10 @@ describe('Compare screen', () => {
 
   test('says nothing can be compared when neither run has metrics', async () => {
     window.history.replaceState(null, '', '/compare?a=r_1,r_2');
-    jest
-      .mocked(readRun)
-      .mockImplementation(async (runId: string) => ({
-        ...detail(runId, runId, 0.8),
-        metrics: null,
-      }));
+    jest.mocked(readRun).mockImplementation(async (runId: string) => ({
+      ...detail(runId, runId, 0.8),
+      metrics: null,
+    }));
     render(<CompareTemplate />);
     expect(
       await screen.findByText('Neither run wrote metrics.')

@@ -95,12 +95,10 @@ describe('Run detail screen', () => {
   });
 
   test('shows calibration figures and a run without metrics', async () => {
-    jest
-      .mocked(readRun)
-      .mockResolvedValue({
-        ...detail,
-        metrics: { metrics: [], calibration: { brierScore: 0.14, ece: 0.06 } },
-      });
+    jest.mocked(readRun).mockResolvedValue({
+      ...detail,
+      metrics: { metrics: [], calibration: { brierScore: 0.14, ece: 0.06 } },
+    });
     render(<RunDetailTemplate runId="r_cal" />);
     expect(
       await screen.findByText('This run wrote no metrics.')

@@ -179,13 +179,11 @@ describe('Settings screen', () => {
   });
 
   test('says nothing can be launched when the CLI lists no command', async () => {
-    jest
-      .mocked(checkSetup)
-      .mockResolvedValue({
-        ...doctor,
-        canLaunch: false,
-        availableCommands: [],
-      });
+    jest.mocked(checkSetup).mockResolvedValue({
+      ...doctor,
+      canLaunch: false,
+      availableCommands: [],
+    });
     render(<SetupTemplate />);
     expect(
       await screen.findByText(
@@ -195,15 +193,13 @@ describe('Settings screen', () => {
   });
 
   test('shows an environment report without a recorded exit code', async () => {
-    jest
-      .mocked(checkSetup)
-      .mockResolvedValue({
-        ...doctor,
-        exitCode: null,
-        recommendedDevice: null,
-        dataPath: null,
-        dataPathExists: false,
-      });
+    jest.mocked(checkSetup).mockResolvedValue({
+      ...doctor,
+      exitCode: null,
+      recommendedDevice: null,
+      dataPath: null,
+      dataPathExists: false,
+    });
     render(<SettingsTemplate />);
     await screen.findByDisplayValue('/project');
     fireEvent.click(
