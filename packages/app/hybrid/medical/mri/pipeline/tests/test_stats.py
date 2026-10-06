@@ -8,10 +8,12 @@ import numpy as np
 import pytest
 from scipy import stats
 
-from pipeline.core.stats import (
+from pipeline.core.comparison import (
     benjamini_hochberg_fdr,
     bootstrap_ci,
     compare_models,
+)
+from pipeline.core.stats import (
     corrected_paired_t_test,
     paired_t_test,
     wilcoxon_signed_rank_test,

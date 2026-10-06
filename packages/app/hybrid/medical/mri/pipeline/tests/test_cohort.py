@@ -12,9 +12,9 @@ import pytest
 
 from pipeline.core.cohort import (
     CohortBuilder,
-    SessionRule,
     create_cohort_from_tsv,
 )
+from pipeline.core.session_rules import SessionRule
 
 
 @pytest.fixture

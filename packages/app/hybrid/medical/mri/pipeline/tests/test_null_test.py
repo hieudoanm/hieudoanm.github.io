@@ -8,8 +8,8 @@ between candidates, must be detectable.
 import numpy as np
 import pytest
 
+from pipeline.core.calibration import calibrate_df_scaling
 from pipeline.core.null_test import (
-    calibrate_df_scaling,
     normal_null_scores,
     null_simulation_test,
     simulate_null_scores,

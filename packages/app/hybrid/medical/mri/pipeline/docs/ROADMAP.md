@@ -158,7 +158,7 @@ pipeline serve                  # optional, Phase 7
       pre-training, research question wording.
 - [ ] Download ARC T1 scans, lesion masks and metadata only (check total size
       first).
-- [ ] Scaffold the repository (`uv`, Typer, Pydantic, `pytest`, CI).
+- [x] Scaffold the repository (`uv`, Typer, Pydantic, `pytest`, CI).
 - [ ] Resolve the checklist in section 5.
 
 Done when: the usable ARC sample size is known and the research question is
@@ -166,14 +166,14 @@ written in one sentence.
 
 ### Phase 1: Foundations (weeks 1-3)
 
-- [ ] Cohort builder: one row per participant, with a documented rule for
+- [x] Cohort builder: one row per participant, with a documented rule for
       choosing a session.
-- [ ] Participant-level splitter (`StratifiedGroupKFold`) with a fixed lock-box
+- [x] Participant-level splitter (`StratifiedGroupKFold`) with a fixed lock-box
       split saved to disk.
-- [ ] Lock-box access counter and log (every evaluation on it is recorded).
-- [ ] Run folder, manifest and JSONL event writer.
-- [ ] Config schemas and `pipeline doctor`.
-- [ ] Tests: no participant appears in both train and test; the split is
+- [x] Lock-box access counter and log (every evaluation on it is recorded).
+- [x] Run folder, manifest and JSONL event writer.
+- [x] Config schemas and `pipeline doctor`.
+- [x] Tests: no participant appears in both train and test; the split is
       reproducible from the seed.
 
 Done when: `pipeline split` produces identical splits on two machines and the
@@ -181,19 +181,24 @@ tests pass in CI.
 
 ### Phase 2: Evaluation harness and baselines (weeks 3-6)
 
-- [ ] Metrics: accuracy, balanced accuracy, AUC, F1, plus calibration (ECE,
+- [x] Metrics: accuracy, balanced accuracy, AUC, F1, plus calibration (ECE,
       Brier).
-- [ ] Corrected paired t-test and Benjamini-Hochberg FDR, ported from the
+- [x] Corrected paired t-test and Benjamini-Hochberg FDR, ported from the
       paper's Appendix A1/A2.
-- [ ] Null-simulation test that checks the type-I error rate of your own design
+- [x] Null-simulation test that checks the type-I error rate of your own design
       (see the note in section 9).
-- [ ] Baselines: logistic regression on tabular features; regularised models and
+- [x] Baselines: logistic regression on tabular features; regularised models and
       gradient boosting on ROI lesion loads once available.
+- [x] `pipeline run` executes the stages end to end and writes a complete run
+      folder.
+- [ ] Model comparison across two runs: the corrected test and FDR exist, but
+      no command joins them yet (`pipeline compare`).
 - [ ] Optional nested cross-validation or a second lock-box.
-- [ ] Report tables as CSV and LaTeX.
+- [x] Report tables as CSV and LaTeX.
 
 Done when: baselines run end to end from the CLI and produce a table with
-confidence intervals and a significance table.
+confidence intervals and a significance table. The baseline half holds; the
+significance table still needs `pipeline compare`.
 
 ### Phase 3: Imaging representations (weeks 4-8)
 
@@ -301,24 +306,21 @@ commands.
 
 ## 9. Evaluation protocol (fix before running experiments)
 
-Write this into `docs/protocol.md` and commit it before the first model run.
+Lives in [`docs/protocol.md`](./protocol.md). It must be committed before the
+first model run and updated only through the change log at the bottom of that
+file.
 
-| Item                             | Decision                                      |
-| -------------------------------- | --------------------------------------------- |
-| Cohort and session rule          | TBD                                           |
-| Outcome and threshold            | TBD (justify from the literature)             |
-| Features                         | TBD                                           |
-| Splits                           | k folds, lock-box fraction, seeds: TBD        |
-| Metrics (primary / secondary)    | TBD                                           |
-| Primary comparison               | TBD (for example hybrid ROI vs best baseline) |
-| Test and correction              | corrected paired t-test, Benjamini-Hochberg   |
-| Number of models compared        | TBD (sets the multiplicity burden)            |
-| Stopping rules                   | TBD                                           |
-| What counts as a negative result | TBD                                           |
+Decided so far: cohort and session rule, outcome column, splits, lock-box
+policy, and the corrected t-test with Benjamini-Hochberg FDR.
+
+Still TBD there, and therefore blocking: the threshold justification, the
+primary metric, the primary comparison, the number of models compared, the
+stopping rules, and what counts as a negative result.
 
 Note on the corrected t-test: the paper's degrees-of-freedom scaling (0.45) was
 calibrated by simulation for its own design (four folds, single lock-box).
-Re-run the null simulation for your design before reusing that factor.
+Re-run the null simulation for this design before reusing that factor; section 7
+of `docs/protocol.md` records where to do it.
 
 ## 10. Lessons from the reference code (check, do not copy)
 

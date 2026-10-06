@@ -1,31 +1,21 @@
 """Core pipeline logic."""
 
-from .baselines import (
-    BaselineModel,
-    GradientBoostingBaseline,
-    LogisticRegressionBaseline,
-    cross_validate_baseline,
-    evaluate_baseline,
-    train_baseline,
-)
-from .cohort import CohortBuilder, SessionRule, create_cohort_from_tsv
+from .baselines import cross_validate_baseline, evaluate_baseline, train_baseline
+from .calibration import calibrate_df_scaling
+from .cohort import CohortBuilder, create_cohort_from_tsv
+from .comparison import benjamini_hochberg_fdr, bootstrap_ci, compare_models
+from .confidence import calculate_confidence_interval, calculate_metrics_with_ci
 from .doctor import check_dependencies, check_system, get_device_info
 from .events import EventWriter, filter_events_by_stage, filter_events_by_type, read_events
 from .latex import to_latex_table
 from .lockbox import LockBoxLogger, get_default_lockbox_log_path
 from .metrics import (
     calculate_calibration_metrics,
-    calculate_confidence_interval,
     calculate_confusion_matrix,
     calculate_metrics,
-    calculate_metrics_with_ci,
 )
-from .null_test import (
-    calibrate_df_scaling,
-    normal_null_scores,
-    null_simulation_test,
-    simulate_null_scores,
-)
+from .models import BaselineModel, GradientBoostingBaseline, LogisticRegressionBaseline
+from .null_test import normal_null_scores, null_simulation_test, simulate_null_scores
 from .reports import (
     create_calibration_table,
     create_comparison_table,
@@ -42,15 +32,9 @@ from .runs import (
     save_config,
     update_manifest_end_time,
 )
+from .session_rules import SessionRule
 from .split import Splitter, verify_no_leakage
-from .stats import (
-    benjamini_hochberg_fdr,
-    bootstrap_ci,
-    compare_models,
-    corrected_paired_t_test,
-    paired_t_test,
-    wilcoxon_signed_rank_test,
-)
+from .stats import corrected_paired_t_test, paired_t_test, wilcoxon_signed_rank_test
 
 __all__ = [
     "check_system",

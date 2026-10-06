@@ -11,13 +11,12 @@ import numpy as np
 import pytest
 
 from pipeline.core.baselines import (
-    GradientBoostingBaseline,
-    LogisticRegressionBaseline,
     cross_validate_baseline,
     evaluate_baseline,
     train_baseline,
 )
-from pipeline.core.metrics import calculate_metrics_with_ci
+from pipeline.core.confidence import calculate_metrics_with_ci
+from pipeline.core.models import GradientBoostingBaseline, LogisticRegressionBaseline
 
 
 @pytest.fixture

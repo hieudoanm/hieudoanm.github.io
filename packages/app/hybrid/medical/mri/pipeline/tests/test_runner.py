@@ -1,73 +1,19 @@
 """Tests for run orchestration.
 
 These are the contract tests for the desktop workbench: a run folder has to be
-complete, the lock-box must stay out of training, and a failure must leave a
-folder that says it failed instead of an empty one.
+complete and a failure must leave a folder that says it failed instead of an
+empty one. The lock-box contract lives in `test_lockbox.py`.
 """
 
 import json
 from pathlib import Path
-from typing import Any
 
-import numpy as np
-import pandas as pd
 import pytest
 
 from pipeline.core.events import read_events
-from pipeline.core.lockbox import LockBoxLogger
 from pipeline.core.runner import run_experiment
 from pipeline.core.runs import list_runs, load_manifest
-
-REQUIRED_FILES = (
-    "manifest.json",
-    "config.yaml",
-    "events.jsonl",
-    "metrics.json",
-    "splits/split.json",
-    "lockbox_metrics.json",
-    "lockbox_access.json",
-    "artifacts/predictions.csv",
-    "artifacts/lockbox_predictions.csv",
-    "artifacts/reports/metrics.csv",
-)
-
-
-def make_cohort(path: Path, size: int = 60) -> Path:
-    rng = np.random.default_rng(11)
-    signal = rng.normal(size=size)
-    score = np.clip(50 + 20 * signal + rng.normal(scale=8, size=size), 5, 99)
-    frame = pd.DataFrame({
-        "participant_id": [f"sub-{i:03d}" for i in range(size)],
-        "age_at_stroke": rng.normal(65, 9, size).round(1),
-        "sex": rng.choice(["M", "F"], size),
-        "wab_days": rng.uniform(3, 90, size).round(1),
-        "wab_aq": score.round(1),
-    })
-    frame.to_csv(path, sep="\t", index=False)
-    return path
-
-
-def make_config(
-    participants: Path, model_type: str = "logistic_regression"
-) -> dict[str, Any]:
-    return {
-        "schema_version": "0.1.0",
-        "data": {
-            "participants_tsv": str(participants),
-            "outcome_column": "wab_aq",
-            "outcome_threshold": 50.0,
-            "features": ["age_at_stroke", "sex", "wab_days"],
-        },
-        "split": {"n_folds": 3, "lock_box_fraction": 0.25, "seed": 42, "stratify_by": "wab_aq"},
-        "model": {"model_type": model_type},
-        "run": {"output_dir": "runs/"},
-    }
-
-
-@pytest.fixture
-def workspace(tmp_path: Path):
-    participants = make_cohort(tmp_path / "participants.tsv")
-    return participants, tmp_path / "runs"
+from tests.conftest import REQUIRED_FILES, make_config
 
 
 def test_run_writes_a_complete_folder(workspace: tuple[Path, Path]):
@@ -149,62 +95,6 @@ def test_events_cover_every_reported_stage(workspace: tuple[Path, Path]):
     started = {event["stage"] for event in events if event["type"] == "stage_start"}
     ended = {event["stage"] for event in events if event["type"] == "stage_end"}
     assert started == ended == {"run", "data", "split", "baseline", "evaluate", "report"}
-
-
-def test_split_artifact_holds_out_participants_nobody_trains_on(workspace: tuple[Path, Path]):
-    participants, runs = workspace
-
-    summary = run_experiment(make_config(participants), output_dir=str(runs))
-    split = json.loads((Path(summary["path"]) / "splits" / "split.json").read_text())
-
-    lock_box = set(split["lock_box_participants"])
-    development = set(split["development_participants"])
-    assert lock_box and development
-    assert lock_box.isdisjoint(development)
-    for fold in split["folds"]:
-        assert set(fold["train"]).isdisjoint(fold["valid"])
-        assert set(fold["train"]) <= development
-        assert set(fold["valid"]) <= development
-
-
-def test_lock_box_predictions_cover_only_held_out_participants(workspace: tuple[Path, Path]):
-    participants, runs = workspace
-
-    summary = run_experiment(make_config(participants), output_dir=str(runs))
-    run_path = Path(summary["path"])
-    split = json.loads((run_path / "splits" / "split.json").read_text())
-    table = pd.read_csv(run_path / "artifacts" / "lockbox_predictions.csv")
-
-    assert set(table["participant_id"]) == set(split["lock_box_participants"])
-    assert table["probability"].between(0.0, 1.0).all()
-    assert set(table["predicted"]) <= {0, 1}
-
-
-def test_lock_box_access_is_logged_exactly_once(workspace: tuple[Path, Path]):
-    participants, runs = workspace
-
-    summary = run_experiment(make_config(participants), output_dir=str(runs))
-    run_path = Path(summary["path"])
-    access = json.loads((run_path / "lockbox_access.json").read_text())
-    logger = LockBoxLogger(str(run_path / "lockbox_access.json"))
-
-    assert logger.get_access_count() == 1
-    assert access["accesses"][0]["run_id"] == run_path.name
-    assert access["accesses"][0]["n_participants"] > 0
-
-
-def test_cross_validated_predictions_exclude_the_lock_box(workspace: tuple[Path, Path]):
-    participants, runs = workspace
-
-    summary = run_experiment(make_config(participants), output_dir=str(runs))
-    run_path = Path(summary["path"])
-    lock_box = set(
-        json.loads((run_path / "splits" / "split.json").read_text())["lock_box_participants"]
-    )
-    predictions = pd.read_csv(run_path / "artifacts" / "predictions.csv")
-    predicted = set(predictions.loc[predictions["probability"].notna(), "participant_id"])
-
-    assert not predicted & lock_box
 
 
 def test_gradient_boosting_runs_the_same_pipeline(workspace: tuple[Path, Path]):

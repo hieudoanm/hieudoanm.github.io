@@ -9,12 +9,12 @@ import pytest
 from pipeline.core.dataset import (
     CohortError,
     binarise_outcome,
-    encode_features,
     has_both_classes,
     load_cohort,
     select_features,
     summarise_classes,
 )
+from pipeline.core.encoding import encode_features
 
 
 @pytest.fixture

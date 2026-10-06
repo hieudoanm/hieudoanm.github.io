@@ -98,6 +98,7 @@ ignore = [
 [tool.ruff.lint.per-file-ignores]
 # X, C, X_train and X_test are the scikit-learn naming convention, not sloppiness.
 "src/pipeline/core/baselines.py" = ["N803"]
+"src/pipeline/core/models.py" = ["N803"]
 
 [tool.pyright]
 pythonVersion = "3.11"

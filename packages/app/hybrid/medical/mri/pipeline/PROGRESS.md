@@ -3,7 +3,7 @@
 **Project**: Predicting post-stroke aphasia outcome from lesion MRI plus
 clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
 103638 **Status**: Phase 2 largely complete (tabular evaluation harness + baselines run end-to-end; imaging/deep learning paths explicitly deferred); `pipeline run` works, model comparison across runs remains to wire
-**Last Updated**: 2026-10-05
+**Last Updated**: 2026-10-06
 
 ---
 
@@ -17,9 +17,19 @@ clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
       first)
 - [x] Scaffold the repository (`uv`, Typer, Pydantic, `pytest`, CI)
 - [ ] Resolve the checklist in section 5 of ROADMAP.md
+- [x] Write `docs/protocol.md` and point ROADMAP section 9 at it; the TBDs
+      inside still block the first model run
+- [x] Fill in the empty `README.md` and `Makefile` (`make install|check`)
+- [x] Split every module over the 200-line limit (`runner`, `split`, `cli`,
+      `null_test`, `baselines`, `cohort`, `dataset`, `metrics`, `experiment`
+      and the two long test files); the largest file is now 198 lines
 - [x] Resolve CI/lint/type-check/tooling compatibility and get tests passing (133/133) in Python 3.14.8 environment with locked deps
 - [x] Clear `pyright` strict across `src` and `tests` (0 errors) and keep `ruff check` at 0 findings
-- [x] Add `joblib>=1.4.0`, fix `requires-python` to `>=3.11`, sync ruff/pyright in dev groups, re-lock with marker-gated versions to support 3.11/3.12/3.14
+- [x] Add `joblib>=1.4.0` (pinned `1.6.0`) and sync `ruff`/`pyright` into both
+      dev dependency groups
+- [ ] Relax `requires-python` from `==3.14.8` to `>=3.11`: it still contradicts
+      its own comment, and changing it invalidates `uv.lock`, so it needs a
+      re-lock in its own change
 
 **Done when**: the usable ARC sample size is known and the research question is
 written in one sentence.
@@ -266,27 +276,21 @@ commands.
 
 ## Decisions Log
 
-### Evaluation Protocol (Section 9 of ROADMAP.md)
+Evaluation-protocol decisions now live in [`docs/protocol.md`](docs/protocol.md),
+the single source of truth (ROADMAP section 9 points there).
 
-| Item                             | Decision                                      |
-| -------------------------------- | --------------------------------------------- |
-| Cohort and session rule          | one row per participant, session rule explicit |
-| Outcome and threshold            | WAB-AQ >= 50 in code, threshold still to justify |
-| Features                         | configurable per run (`data.features`)        |
-| Splits                           | 4 folds, 0.2 lock-box, seed 42 by default     |
-| Metrics (primary / secondary)    | TBD                                           |
-| Primary comparison               | TBD (for example hybrid ROI vs best baseline) |
-| Test and correction              | corrected paired t-test, Benjamini-Hochberg   |
-| Number of models compared        | TBD (sets the multiplicity burden)            |
-| Stopping rules                   | TBD                                           |
-| What counts as a negative result | TBD                                           |
+Decided: cohort and session rule, outcome column, splits, lock-box policy,
+corrected t-test with Benjamini-Hochberg FDR.
+
+Still TBD there: threshold justification, primary metric, primary comparison,
+number of models compared, stopping rules, what counts as a negative result.
 
 ---
 
 ## Notes
 
 - All decisions must be documented in `docs/protocol.md` before the first model
-  run
+  run — the file exists; the TBDs listed above still block the first model run
 - Lock-box test set must be accessed rarely and every touch logged
 - Everything is config-driven and seeded for reproducibility
 - Logic lives in `core/`. The CLI and the server are thin adapters
