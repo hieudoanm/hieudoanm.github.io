@@ -1,11 +1,14 @@
 """Tests for configuration schemas."""
 
+from pathlib import Path
 from typing import Any
 
 import pytest
 
 from pipeline.schemas import Config, DataConfig, ModelConfig, RunConfig, SplitConfig
-from pipeline.schemas.config import DatasetType, ModelType
+from pipeline.schemas.config import DatasetType, ModelType, load_config
+
+FULL_CONFIG = Path(__file__).resolve().parents[1] / "configs" / "full.yaml"
 
 
 def test_default_config():
@@ -58,3 +61,12 @@ def test_config_from_dict():
     assert config.split.seed == 123
     assert config.model.model_type == ModelType.RESNET18
     assert config.run.device == "cpu"
+
+
+def test_committed_full_config_names_the_dataset_through_an_env_var():
+    """The real-data config stays portable: no machine path is committed."""
+    config = load_config(str(FULL_CONFIG))
+
+    assert config.data.participants_tsv == "${ARC_DATA_PATH}/participants.tsv"
+    assert config.data.lesion_mask_path == "${ARC_DATA_PATH}/derivatives/lesion_masks"
+    assert "lesion_volume_mm3" in config.data.features

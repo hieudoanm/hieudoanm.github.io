@@ -2,7 +2,7 @@
 
 **Project**: Predicting post-stroke aphasia outcome from lesion MRI plus
 clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
-103638 **Status**: Phase 2 complete (the tabular evaluation harness, baselines, `pipeline compare` and `pipeline calibrate` all run end-to-end, and a clean clone runs `make demo` on a synthetic cohort); the imaging and deep-learning paths are explicitly deferred
+103638 **Status**: Phase 2 complete (the tabular evaluation harness, baselines, `pipeline compare` and `pipeline calibrate` all run end-to-end, and a clean clone runs `make demo` on a synthetic cohort); lesion-mask ingestion landed so a real ARC run reads `derivatives/lesion_masks` as a `lesion_volume_mm3` feature; registration, image generation and deep learning are explicitly deferred
 **Last Updated**: 2026-10-06
 
 ---
@@ -23,7 +23,7 @@ clinical data **Reference**: White et al. (2024), NeuroImage: Clinical 43,
 - [x] Split every module over the 200-line limit (`runner`, `split`, `cli`,
       `null_test`, `baselines`, `cohort`, `dataset`, `metrics`, `experiment`
       and the two long test files); the largest file is now 198 lines
-- [x] Resolve CI/lint/type-check/tooling compatibility and get tests passing (198/198) in Python 3.14.8 environment with locked deps
+- [x] Resolve CI/lint/type-check/tooling compatibility and get tests passing (213/213) in Python 3.14.8 environment with locked deps
 - [x] Clear `pyright` strict across `src` and `tests` (0 errors) and keep `ruff check` at 0 findings
 - [x] Add `joblib>=1.4.0` (pinned `1.6.0`) and sync `ruff`/`pyright` into both
       dev dependency groups
@@ -138,8 +138,11 @@ Each is a no-op that would otherwise be recorded as a successful run:
 
 ### Tasks
 
+- [x] Lesion-mask ingestion: read a BIDS `derivatives/lesion_masks` tree and
+      reduce each participant to `lesion_volume_mm3` (nibabel behind the
+      `imaging` extra; participants without a readable mask drop out)
 - [ ] Preprocessing: registration to MNI space (using the lesion mask to guard
-      the fit), lesion volume, AAL atlas parcellation
+      the fit) and AAL atlas parcellation
 - [ ] Stitched MRI generator (64 axial slices tiled into one 2D image)
 - [ ] ROI image generator with a configurable ROI list
 - [ ] Hybrid image generator with configurable encodings (shape, size,
@@ -149,6 +152,12 @@ Each is a no-op that would otherwise be recorded as a successful run:
 
 **Done when**: images for the whole cohort regenerate from one command and a
 spot check shows correct alignment of masks and atlas.
+
+### Completed
+
+- [x] `pipeline run` reads a real ARC checkout via `ARC_DATA_PATH`, measures each
+      participant's lesion mask and models it alongside the clinical features;
+      a full run on ds004884 joined 228 masks (lock-box n=45)
 
 ---
 
@@ -253,7 +262,7 @@ commands.
 | P-26 | Model comparison across two runs                   | MVP      | 2     | done                |
 | P-27 | `pipeline calibrate` df-scaling sweep              | MVP      | 2     | done                |
 | P-28 | Synthetic cohort (`data cohort`) + `make demo`     | Should   | 2     | done                |
-| P-11 | Preprocessing, lesion volume, atlas lesion loads   | MVP      | 3     | not started         |
+| P-11 | Preprocessing, lesion volume, atlas lesion loads   | MVP      | 3     | in progress (lesion volume) |
 | P-12 | Stitched, ROI and hybrid image generators          | MVP      | 3     | not started         |
 | P-13 | Stage caching and data hashing                     | MVP      | 3     | not started         |
 | P-14 | ResNet-18 trainer with calibration                 | MVP      | 4     | not started         |
@@ -267,6 +276,7 @@ commands.
 | P-22 | `pipeline serve`                                   | Stretch  | 7     | dropped, by choice  |
 | P-23 | Dataset adapters (ATLAS, PLORAS)                   | Stretch  | any   | not started         |
 | P-24 | 3D models                                          | Stretch  | any   | not started         |
+| P-29 | Lesion-mask ingestion (`lesion_volume_mm3`)        | MVP      | 3     | done                |
 
 ---
 
@@ -278,7 +288,7 @@ commands.
 | uv               | done   | Installed and configured      |
 | Typer            | done   | CLI implemented               |
 | Pydantic         | done   | Configuration schemas created |
-| pytest           | done   | 198 tests passing             |
+| pytest           | done   | 213 tests passing             |
 | ruff             | done   | `ruff check .` clean across src and tests |
 | pyright          | done   | `pyright` strict clean: 0 errors in src and tests |
 | joblib           | done   | Declared directly; used by the baselines |

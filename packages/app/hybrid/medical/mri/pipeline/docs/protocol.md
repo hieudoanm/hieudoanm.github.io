@@ -34,7 +34,9 @@ result as provisional.
 
 Configured per run as `data.features`; an empty list is refused at run time.
 Candidates named in ROADMAP section 5: `age_at_stroke`, `sex`, `wab_days`,
-lesion volume.
+lesion volume. Lesion volume is ingested as `lesion_volume_mm3` from the BIDS
+`derivatives/lesion_masks` tree; it is unregistered and unnormalised for now,
+so it stands only as a raw covariate, not a validated imaging feature.
 
 Excluded by default:
 

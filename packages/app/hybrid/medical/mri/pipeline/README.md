@@ -25,8 +25,11 @@ make install     # uv sync --dev
 make doctor      # interpreter, device and path status
 ```
 
-Optional dependency groups cover the not-yet-wired stages: `pipeline[imaging]`,
-`pipeline[ml]`, `pipeline[stats]`, `pipeline[data]`, `pipeline[all]`.
+Optional dependency groups: `pipeline[imaging]` (lesion-mask reading and the
+not-yet-wired image stages), `pipeline[ml]`, `pipeline[stats]`, `pipeline[data]`,
+`pipeline[all]`. Lesion masks are read through `pipeline[imaging]`; without it a
+run that configures masks fails with the install hint rather than a raw
+`ImportError`.
 
 ## Use
 
@@ -47,6 +50,30 @@ is not redistributable, so `pipeline data cohort` writes a seeded synthetic tabl
 with the same columns and `configs/dev.yaml` points at it; `data fetch` refuses
 until you point `participants_tsv` at the real OpenNeuro table.
 
+### Real ARC data
+
+`configs/full.yaml` takes the dataset location from `ARC_DATA_PATH`, so no
+machine-specific path is committed. Point it at a local `ds004884` checkout:
+
+```bash
+export ARC_DATA_PATH=/path/to/ds004884
+uv sync --extra imaging                 # nibabel, for reading masks
+pipeline run --config configs/full.yaml
+```
+
+With `data.lesion_mask_path` set, each participant's
+`derivatives/lesion_masks/**/*_desc-lesion_mask.nii.gz` is measured and reduced
+to a `lesion_volume_mm3` feature; participants without a readable mask are
+dropped from the modelling cohort instead of treated as zero-lesion. The
+feature must be listed in `data.features`, or the run refuses so the
+measurements cannot be read and silently ignored.
+
+A DataLad checkout only holds file placeholders until its content is fetched.
+If the masks are unfetched the run fails with the path and a `datalad get` hint.
+OpenNeuro mirrors the BIDS tree on public S3, so the masks alone can be fetched
+without git-annex, for example by resolving each mask's symlink and downloading
+`https://s3.amazonaws.com/openneuro.org/ds004884/<path-relative-to-dataset>`.
+
 ### Commands
 
 | Command | State |
@@ -64,13 +91,13 @@ make typecheck   # pyright, strict
 make test        # pytest
 ```
 
-Current state: `ruff` clean, `pyright` strict at 0 errors, 198 tests passing.
+Current state: `ruff` clean, `pyright` strict at 0 errors, 213 tests passing.
 
 ## Layout
 
 ```
 src/pipeline/
-  core/          # cohort, split, metrics, stats, baselines, runner, reports
+  core/          # cohort, split, metrics, stats, baselines, imaging, runner, reports
   schemas/       # Pydantic models, exported as JSON Schema
   cli.py         # Typer commands (thin adapters over core)
 configs/         # dev.yaml, full.yaml

@@ -19,6 +19,8 @@ from pipeline.core.dataset import (
 )
 from pipeline.core.encoding import encode_features
 from pipeline.core.events import EventWriter
+from pipeline.core.imaging import LESION_VOLUME_FEATURE, build_lesion_table
+from pipeline.core.paths import expand_path
 from pipeline.core.runs import compute_file_hash
 from pipeline.core.split import Splitter
 
@@ -33,7 +35,7 @@ def stage_data(
     events: EventWriter,
     summary: dict[str, Any],
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Load the cohort, bin the outcome, encode features and record the hash."""
+    """Load the cohort, bin the outcome, add imaging, encode and hash."""
     data_config = config.get("data", {})
     participants_tsv = data_config.get("participants_tsv")
     if not participants_tsv:
@@ -41,7 +43,7 @@ def stage_data(
             "data.participants_tsv is not set; the baseline stages need a "
             "participants table"
         )
-    path = Path(participants_tsv)
+    path = expand_path(str(participants_tsv))
 
     events.write_stage_start("data", str(path))
     outcome_column = str(data_config.get("outcome_column", "wab_aq"))
@@ -49,6 +51,7 @@ def stage_data(
     frame = binarise_outcome(
         frame, outcome_column, float(data_config.get("outcome_threshold", 50.0))
     )
+    frame = _attach_imaging(frame, data_config, events, summary)
     feature_columns = list(data_config.get("features") or [])
     if not feature_columns:
         raise CohortError("data.features is empty; a baseline needs at least one column")
@@ -62,6 +65,40 @@ def stage_data(
     events.write_stage_end("data", "ok")
     summary["data_hash"] = compute_file_hash(path)
     return frame, features
+
+
+def _attach_imaging(
+    frame: pd.DataFrame,
+    data_config: dict[str, Any],
+    events: EventWriter,
+    summary: dict[str, Any],
+) -> pd.DataFrame:
+    """Join the measured lesion volume onto the cohort when masks are configured.
+
+    Participants without a readable mask end up missing the volume column, so
+    `select_features` drops them instead of modelling a missing scan as a
+    zero-lesion.
+    """
+    mask_root = data_config.get("lesion_mask_path")
+    if not mask_root:
+        return frame
+    features = list(data_config.get("features") or [])
+    if LESION_VOLUME_FEATURE not in features:
+        raise CohortError(
+            "data.lesion_mask_path is set but 'lesion_volume_mm3' is not in "
+            "data.features, so the measurements would be ignored"
+        )
+
+    participants = frame["participant_id"].astype(str)
+    mask_root_path = expand_path(str(mask_root))
+    lesions = build_lesion_table(mask_root_path, participants.tolist())
+    lesions["participant_id"] = lesions["participant_id"].astype(str)
+    events.write_metric("data", "n_lesion_masks", int(len(lesions)))
+    summary["imaging"] = {"mask_root": str(mask_root_path), "n_masks": int(len(lesions))}
+
+    frame = frame.copy()
+    frame["participant_id"] = participants
+    return frame.merge(lesions, on="participant_id", how="left")
 
 
 def stage_split(

@@ -7,6 +7,12 @@ from .comparison import benjamini_hochberg_fdr, bootstrap_ci, compare_models
 from .confidence import calculate_confidence_interval, calculate_metrics_with_ci
 from .doctor import check_dependencies, check_system, get_device_info
 from .events import EventWriter, filter_events_by_stage, filter_events_by_type, read_events
+from .imaging import (
+    LESION_VOLUME_FEATURE,
+    ImagingError,
+    build_lesion_table,
+    lesion_volume_mm3,
+)
 from .latex import to_latex_table
 from .lockbox import LockBoxLogger, get_default_lockbox_log_path
 from .metrics import (
@@ -16,6 +22,7 @@ from .metrics import (
 )
 from .models import BaselineModel, GradientBoostingBaseline, LogisticRegressionBaseline
 from .null_test import normal_null_scores, null_simulation_test, simulate_null_scores
+from .paths import expand_path
 from .reports import (
     create_calibration_table,
     create_comparison_table,
@@ -51,6 +58,11 @@ __all__ = [
     "read_events",
     "filter_events_by_type",
     "filter_events_by_stage",
+    "expand_path",
+    "LESION_VOLUME_FEATURE",
+    "ImagingError",
+    "build_lesion_table",
+    "lesion_volume_mm3",
     "CohortBuilder",
     "SessionRule",
     "create_cohort_from_tsv",
