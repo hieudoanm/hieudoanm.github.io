@@ -2,10 +2,11 @@
 
 import {
   createColumnHelper,
-  flexRender,
-  getCoreRowModel,
-  getSortedRowModel,
-  useReactTable,
+  createSortedRowModel,
+  rowSortingFeature,
+  tableFeatures,
+  useTable,
+  type RowData,
   type SortingState,
 } from '@tanstack/react-table';
 import { useState, type ReactNode } from 'react';
@@ -20,10 +21,19 @@ export interface ColumnSpec<T> {
 }
 
 /**
+ * v9 registers only the features a table asks for. Sorting is the sole feature
+ * this table needs; the core row model is always built.
+ */
+const features = tableFeatures({
+  rowSortingFeature,
+  sortedRowModel: createSortedRowModel(),
+});
+
+/**
  * One table implementation for run lists, metrics and participants. Sorting is
  * client-side because a run list is a few hundred rows at most.
  */
-export const DataTable = <T,>({
+export const DataTable = <T extends RowData>({
   rows,
   columns,
   onRowClick,
@@ -38,22 +48,23 @@ export const DataTable = <T,>({
 }) => {
   const [sorting, setSorting] = useState<SortingState>([]);
   const headers = columns.map((column) => column.header);
-  const helper = createColumnHelper<T>();
-  const table = useReactTable({
+  const helper = createColumnHelper<typeof features, T>();
+  const table = useTable({
+    features,
     data: partitionBySort(rows, columns, sorting),
-    columns: columns.map((column) =>
-      helper.accessor((row: T) => column.sortValue?.(row), {
-        id: column.id,
-        header: String(column.header),
-        cell: (info) => column.cell(info.row.original),
-        sortingFn: (left, right) =>
-          compareValues(left.getValue(column.id), right.getValue(column.id)),
-      })
+    columns: helper.columns(
+      columns.map((column) =>
+        helper.accessor((row: T) => column.sortValue?.(row), {
+          id: column.id,
+          header: String(column.header),
+          cell: (info) => column.cell(info.row.original),
+          sortFn: (left, right) =>
+            compareValues(left.getValue(column.id), right.getValue(column.id)),
+        })
+      )
     ),
     state: { sorting },
     onSortingChange: setSorting,
-    getCoreRowModel: getCoreRowModel(),
-    getSortedRowModel: getSortedRowModel(),
   });
 
   if (rows.length === 0) {
@@ -86,9 +97,9 @@ export const DataTable = <T,>({
               key={row.id}
               onClick={onRowClick ? () => onRowClick(row.original) : undefined}
               className={onRowClick ? 'hover cursor-pointer' : undefined}>
-              {row.getVisibleCells().map((cell) => (
+              {row.getAllCells().map((cell) => (
                 <td key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  <table.FlexRender cell={cell} />
                 </td>
               ))}
             </tr>
@@ -116,7 +127,7 @@ const isMissing = (value: unknown): boolean =>
  * compares anything, because a table-core sort flips `undefined` to the top in
  * descending order. A missing measurement must never lead a results table.
  */
-const partitionBySort = <T,>(
+const partitionBySort = <T extends RowData>(
   rows: T[],
   columns: ColumnSpec<T>[],
   sorting: SortingState

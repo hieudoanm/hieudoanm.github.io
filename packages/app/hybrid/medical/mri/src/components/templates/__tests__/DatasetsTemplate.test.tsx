@@ -45,17 +45,15 @@ describe('Datasets screen', () => {
     jest.clearAllMocks();
     window.history.replaceState(null, '', '/datasets');
     jest.mocked(readCohort).mockResolvedValue(cohort);
-    jest
-      .mocked(listParticipantAssets)
-      .mockResolvedValue([
-        {
-          participantId: 'sub-01',
-          path: 'data/sub-01/pelvis_0.png',
-          name: 'pelvis_0.png',
-          role: 'image',
-          sizeBytes: 2048,
-        },
-      ]);
+    jest.mocked(listParticipantAssets).mockResolvedValue([
+      {
+        participantId: 'sub-01',
+        path: 'data/sub-01/pelvis_0.png',
+        name: 'pelvis_0.png',
+        role: 'image',
+        sizeBytes: 2048,
+      },
+    ]);
   });
 
   test('reports how many participants are usable', async () => {
@@ -106,17 +104,15 @@ describe('Datasets screen', () => {
   });
 
   test('shows an empty cohort without pretending it is usable', async () => {
-    jest
-      .mocked(readCohort)
-      .mockResolvedValue({
-        ...cohort,
-        rows: [],
-        rowCount: 0,
-        uniqueParticipants: 0,
-        usableParticipants: 0,
-        excludedReasons: [],
-        flags: [],
-      });
+    jest.mocked(readCohort).mockResolvedValue({
+      ...cohort,
+      rows: [],
+      rowCount: 0,
+      uniqueParticipants: 0,
+      usableParticipants: 0,
+      excludedReasons: [],
+      flags: [],
+    });
     render(<DatasetsTemplate />);
     expect(
       await screen.findByText('No exclusions were flagged.')
