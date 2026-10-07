@@ -98,12 +98,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
       - name: Download APK
-        uses: actions/download-artifact@v8.0.1
+        uses: actions/download-artifact@v8.0.2
         with:
           name: ${{ inputs.artifactPrefix }}-apk
           path: artifacts/apk
       - name: Download AAB
-        uses: actions/download-artifact@v8.0.1
+        uses: actions/download-artifact@v8.0.2
         with:
           name: ${{ inputs.artifactPrefix }}-aab
           path: artifacts/aab
