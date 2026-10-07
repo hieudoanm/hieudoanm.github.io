@@ -3209,8 +3209,8 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
       solid-js:
-        specifier: 1.9.15
-        version: 1.9.15
+        specifier: 1.9.16
+        version: 1.9.16
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -3507,8 +3507,8 @@ importers:
   packages/modules/simple/packages/upload/frontend/solid:
     dependencies:
       solid-js:
-        specifier: 1.9.15
-        version: 1.9.15
+        specifier: 1.9.16
+        version: 1.9.16
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -13100,14 +13100,14 @@ packages:
     resolution: {integrity: sha512-YAy8Od6KV+uuwUuU50np8fGB/Aues6Y0nAhA9y/hId74PlKUcme4pXcBD46NWKr1Q4osN/iseZ17YqO1XfmI8g==}
     engines: {node: '>=20.0.0'}
 
-  seroval-plugins@1.5.5:
-    resolution: {integrity: sha512-+BDhqYM6CEn3x09v44dpa9p6974FuUB2dxk+Ctn04k0cO1Zt6QODTXfmEZK0eBaTe/fJBvP4NMGuNJ+R8T+QMg==}
+  seroval-plugins@1.6.8:
+    resolution: {integrity: sha512-N7mWAMydj89EnYTHtRpS3LBrAz3J9O6oVrqpuXuvlAHfAUG8WEKqtbAd7SBiJNY5NfCAFhSdyAh7wI4Shjqy4g==}
     engines: {node: '>=10'}
     peerDependencies:
       seroval: ^1.0
 
-  seroval@1.5.5:
-    resolution: {integrity: sha512-bSjOuPcwPKLSJNhr9+bZxA20nQxVle5J5MNsYRVE6cIg7KpRLXGupymePavu0jrxlPiPsr4xGZSB8yUY2sH2sw==}
+  seroval@1.6.8:
+    resolution: {integrity: sha512-HlSgSAkTk4EqHcje1ptJjfZi1YDv5KbhVJ/d3P7T/nAXua2VmDu+AKDX5VTdFfZf48nDkWB2TKYt0DrCSa+3wg==}
     engines: {node: '>=10'}
 
   serve-index@1.9.2:
@@ -13252,8 +13252,8 @@ packages:
     resolution: {integrity: sha512-LJhUYUvItdQ0LkJTmPeaEObWXAqFyfmP85x0tch/ez9cahmhlBBLbIqDFnvBnUJGagb0JbIQrkBs1wJ+yRYpEw==}
     engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
 
-  solid-js@1.9.15:
-    resolution: {integrity: sha512-EeiY2xfpZJqPLjXspVEKjAII4yv8NyG//NxZ3IpOFHdUNnnTyL0uJOeS9LWGvA7cFCz5y94cjFwYlmw5Luncsg==}
+  solid-js@1.9.16:
+    resolution: {integrity: sha512-vESESWrNRebA0sQv+Vr9/2wOFOL6NK2QQow7F5/WCBH4c+OVoDyQNEbiVKVL7YqE1M7MPd7z7p27KElLkaD0bw==}
 
   sonic-boom@4.2.1:
     resolution: {integrity: sha512-w6AxtubXa2wTXAUsZMMWERrsIRAdrK0Sc+FUytWvYAhBJLyuI4llrMIC1DtlNSdI99EI86KZum2MMq3EAZlF9Q==}
@@ -14871,7 +14871,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 8.0.6
       '@babel/generator': 8.0.6
-      '@babel/helper-compilation-targets': 8.0.6
+      '@babel/helper-compilation-targets': 8.0.7
       '@babel/helpers': 8.0.5
       '@babel/parser': 8.0.6
       '@babel/template': 8.0.0
@@ -25975,11 +25975,11 @@ snapshots:
 
   serialize-javascript@7.0.7: {}
 
-  seroval-plugins@1.5.5(seroval@1.5.5):
+  seroval-plugins@1.6.8(seroval@1.6.8):
     dependencies:
-      seroval: 1.5.5
+      seroval: 1.6.8
 
-  seroval@1.5.5: {}
+  seroval@1.6.8: {}
 
   serve-index@1.9.2(supports-color@10.2.2):
     dependencies:
@@ -26225,11 +26225,11 @@ snapshots:
       ip-address: 10.2.0
       smart-buffer: 4.2.0
 
-  solid-js@1.9.15:
+  solid-js@1.9.16:
     dependencies:
       csstype: 3.2.3
-      seroval: 1.5.5
-      seroval-plugins: 1.5.5(seroval@1.5.5)
+      seroval: 1.6.8
+      seroval-plugins: 1.6.8(seroval@1.6.8)
 
   sonic-boom@4.2.1:
     dependencies:
