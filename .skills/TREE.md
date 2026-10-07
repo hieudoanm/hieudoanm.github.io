@@ -713,21 +713,35 @@
 │           │   └── [SKILL.md](./programming/saas/payment/square/SKILL.md)
 │           └── stripe/
 │               └── [SKILL.md](./programming/saas/payment/stripe/SKILL.md)
-├── progressive-explanation/
-│   ├── references/
-│   │   ├── examples/
-│   │   │   ├── mathematics/
-│   │   │   │   ├── [linear-algreba.md](./progressive-explanation/references/examples/mathematics/linear-algreba.md)
-│   │   │   │   └── [probability.md](./progressive-explanation/references/examples/mathematics/probability.md)
-│   │   │   ├── [deep-learning.md](./progressive-explanation/references/examples/deep-learning.md)
-│   │   │   ├── [machine-learning.md](./progressive-explanation/references/examples/machine-learning.md)
-│   │   │   ├── [neural-networks.md](./progressive-explanation/references/examples/neural-networks.md)
-│   │   │   └── [neuroscience.md](./progressive-explanation/references/examples/neuroscience.md)
-│   │   ├── [levels.md](./progressive-explanation/references/levels.md)
-│   │   └── [techniques.md](./progressive-explanation/references/techniques.md)
-│   ├── [README.md](./progressive-explanation/README.md)
-│   └── [SKILL.md](./progressive-explanation/SKILL.md)
+├── research/
+│   ├── literature-review/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── [machine-learning.md](./research/literature-review/references/examples/machine-learning.md)
+│   │   │   │   ├── [neuroscience.md](./research/literature-review/references/examples/neuroscience.md)
+│   │   │   │   ├── [psychology.md](./research/literature-review/references/examples/psychology.md)
+│   │   │   │   └── [stroke-rehabilitation.md](./research/literature-review/references/examples/stroke-rehabilitation.md)
+│   │   │   ├── [critical-appraisal.md](./research/literature-review/references/critical-appraisal.md)
+│   │   │   ├── [review-types.md](./research/literature-review/references/review-types.md)
+│   │   │   ├── [search-strategy.md](./research/literature-review/references/search-strategy.md)
+│   │   │   └── [synthesis.md](./research/literature-review/references/synthesis.md)
+│   │   ├── [README.md](./research/literature-review/README.md)
+│   │   └── [SKILL.md](./research/literature-review/SKILL.md)
+│   └── progressive-explanation/
+│       ├── references/
+│       │   ├── examples/
+│       │   │   ├── mathematics/
+│       │   │   │   ├── [linear-algreba.md](./research/progressive-explanation/references/examples/mathematics/linear-algreba.md)
+│       │   │   │   └── [probability.md](./research/progressive-explanation/references/examples/mathematics/probability.md)
+│       │   │   ├── [deep-learning.md](./research/progressive-explanation/references/examples/deep-learning.md)
+│       │   │   ├── [machine-learning.md](./research/progressive-explanation/references/examples/machine-learning.md)
+│       │   │   ├── [neural-networks.md](./research/progressive-explanation/references/examples/neural-networks.md)
+│       │   │   └── [neuroscience.md](./research/progressive-explanation/references/examples/neuroscience.md)
+│       │   ├── [levels.md](./research/progressive-explanation/references/levels.md)
+│       │   └── [techniques.md](./research/progressive-explanation/references/techniques.md)
+│       ├── [README.md](./research/progressive-explanation/README.md)
+│       └── [SKILL.md](./research/progressive-explanation/SKILL.md)
 └── [TREE.md](./TREE.md)
 ```
 
-408 directories, 319 files
+412 directories, 329 files
