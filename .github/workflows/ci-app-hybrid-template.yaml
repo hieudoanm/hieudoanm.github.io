@@ -67,7 +67,7 @@ jobs:
       - name: Test
         run: pnpm run test --filter=${{ inputs.filter }}
       - name: Upload Build Output
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: ${{ inputs.artifactPrefix }}-out
           path: ${{ inputs.package }}/out/
@@ -131,7 +131,7 @@ jobs:
         id: date
         run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
       - name: Upload Desktop Artifacts
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: ${{ inputs.artifactPrefix }}_desktop_${{ matrix.os }}-${{ steps.date.outputs.value }}
           path: ${{ inputs.package }}/src-tauri/target/release/bundle/
@@ -202,7 +202,7 @@ jobs:
         id: date
         run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
       - name: Upload Android Artifacts
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: ${{ inputs.artifactPrefix }}_android-${{ steps.date.outputs.value }}
           path: ${{ inputs.package }}/src-tauri/gen/android/app/build/outputs/

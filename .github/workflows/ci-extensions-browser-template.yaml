@@ -60,13 +60,13 @@ jobs:
       - name: Build
         run: pnpm run build --filter=${{ inputs.filter }}
       - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: ${{ inputs.artifactPrefix }}-build
           path: ${{ inputs.package }}/download/
           if-no-files-found: error
       - name: Upload Build Sources
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: ${{ inputs.artifactPrefix }}-dist
           path: ${{ inputs.package }}/dist/
