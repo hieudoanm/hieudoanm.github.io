@@ -183,7 +183,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
       - name: Download Build Artifacts
-        uses: actions/download-artifact@v8.0.1
+        uses: actions/download-artifact@v8.0.2
         with:
           name: ${{ inputs.artifactName }}
           path: artifacts
