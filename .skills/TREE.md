@@ -727,21 +727,99 @@
 │   │   │   └── [synthesis.md](./research/literature-review/references/synthesis.md)
 │   │   ├── [README.md](./research/literature-review/README.md)
 │   │   └── [SKILL.md](./research/literature-review/SKILL.md)
-│   └── progressive-explanation/
+│   ├── meta-analysis/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── [clinical-neuroscience.md](./research/meta-analysis/references/examples/clinical-neuroscience.md)
+│   │   │   │   ├── [machine-learning.md](./research/meta-analysis/references/examples/machine-learning.md)
+│   │   │   │   ├── [neuroscience.md](./research/meta-analysis/references/examples/neuroscience.md)
+│   │   │   │   └── [psychology.md](./research/meta-analysis/references/examples/psychology.md)
+│   │   │   ├── [bias-and-sensitivity.md](./research/meta-analysis/references/bias-and-sensitivity.md)
+│   │   │   ├── [effect-sizes.md](./research/meta-analysis/references/effect-sizes.md)
+│   │   │   ├── [heterogeneity.md](./research/meta-analysis/references/heterogeneity.md)
+│   │   │   └── [meta-analysis-workflow.md](./research/meta-analysis/references/meta-analysis-workflow.md)
+│   │   ├── [README.md](./research/meta-analysis/README.md)
+│   │   └── [SKILL.md](./research/meta-analysis/SKILL.md)
+│   ├── paper-pdf-to-markdown/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── [clinical-neuroscience.md](./research/paper-pdf-to-markdown/references/examples/clinical-neuroscience.md)
+│   │   │   │   ├── [machine-learning.md](./research/paper-pdf-to-markdown/references/examples/machine-learning.md)
+│   │   │   │   ├── [neuroscience.md](./research/paper-pdf-to-markdown/references/examples/neuroscience.md)
+│   │   │   │   └── [psychology.md](./research/paper-pdf-to-markdown/references/examples/psychology.md)
+│   │   │   ├── [extraction-workflow.md](./research/paper-pdf-to-markdown/references/extraction-workflow.md)
+│   │   │   ├── [pdf-structure.md](./research/paper-pdf-to-markdown/references/pdf-structure.md)
+│   │   │   ├── [quality-control.md](./research/paper-pdf-to-markdown/references/quality-control.md)
+│   │   │   └── [scientific-formatting.md](./research/paper-pdf-to-markdown/references/scientific-formatting.md)
+│   │   ├── [README.md](./research/paper-pdf-to-markdown/README.md)
+│   │   └── [SKILL.md](./research/paper-pdf-to-markdown/SKILL.md)
+│   ├── paper-reading/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── [clinical-neuroscience.md](./research/paper-reading/references/examples/clinical-neuroscience.md)
+│   │   │   │   ├── [machine-learning.md](./research/paper-reading/references/examples/machine-learning.md)
+│   │   │   │   ├── [neuroscience.md](./research/paper-reading/references/examples/neuroscience.md)
+│   │   │   │   └── [psychology.md](./research/paper-reading/references/examples/psychology.md)
+│   │   │   ├── [critical-reading.md](./research/paper-reading/references/critical-reading.md)
+│   │   │   ├── [evidence-extraction.md](./research/paper-reading/references/evidence-extraction.md)
+│   │   │   ├── [paper-structure.md](./research/paper-reading/references/paper-structure.md)
+│   │   │   └── [reading-strategy.md](./research/paper-reading/references/reading-strategy.md)
+│   │   ├── [README.md](./research/paper-reading/README.md)
+│   │   └── [SKILL.md](./research/paper-reading/SKILL.md)
+│   ├── progressive-explanation/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── mathematics/
+│   │   │   │   │   ├── [linear-algreba.md](./research/progressive-explanation/references/examples/mathematics/linear-algreba.md)
+│   │   │   │   │   └── [probability.md](./research/progressive-explanation/references/examples/mathematics/probability.md)
+│   │   │   │   ├── [deep-learning.md](./research/progressive-explanation/references/examples/deep-learning.md)
+│   │   │   │   ├── [machine-learning.md](./research/progressive-explanation/references/examples/machine-learning.md)
+│   │   │   │   ├── [neural-networks.md](./research/progressive-explanation/references/examples/neural-networks.md)
+│   │   │   │   └── [neuroscience.md](./research/progressive-explanation/references/examples/neuroscience.md)
+│   │   │   ├── [levels.md](./research/progressive-explanation/references/levels.md)
+│   │   │   └── [techniques.md](./research/progressive-explanation/references/techniques.md)
+│   │   ├── [README.md](./research/progressive-explanation/README.md)
+│   │   └── [SKILL.md](./research/progressive-explanation/SKILL.md)
+│   ├── research-gap/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── [clinical-neuroscience.md](./research/research-gap/references/examples/clinical-neuroscience.md)
+│   │   │   │   ├── [machine-learning.md](./research/research-gap/references/examples/machine-learning.md)
+│   │   │   │   ├── [neuroscience.md](./research/research-gap/references/examples/neuroscience.md)
+│   │   │   │   └── [psychology.md](./research/research-gap/references/examples/psychology.md)
+│   │   │   ├── [gap-identification.md](./research/research-gap/references/gap-identification.md)
+│   │   │   ├── [gap-types.md](./research/research-gap/references/gap-types.md)
+│   │   │   ├── [gap-validation.md](./research/research-gap/references/gap-validation.md)
+│   │   │   └── [research-question.md](./research/research-gap/references/research-question.md)
+│   │   ├── [README.md](./research/research-gap/README.md)
+│   │   └── [SKILL.md](./research/research-gap/SKILL.md)
+│   ├── research-replication/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── [clinical-neuroscience.md](./research/research-replication/references/examples/clinical-neuroscience.md)
+│   │   │   │   ├── [machine-learning.md](./research/research-replication/references/examples/machine-learning.md)
+│   │   │   │   ├── [neuroscience.md](./research/research-replication/references/examples/neuroscience.md)
+│   │   │   │   └── [psychology.md](./research/research-replication/references/examples/psychology.md)
+│   │   │   ├── [replication-analysis.md](./research/research-replication/references/replication-analysis.md)
+│   │   │   ├── [replication-design.md](./research/research-replication/references/replication-design.md)
+│   │   │   ├── [replication-types.md](./research/research-replication/references/replication-types.md)
+│   │   │   └── [replication-validation.md](./research/research-replication/references/replication-validation.md)
+│   │   ├── [README.md](./research/research-replication/README.md)
+│   │   └── [SKILL.md](./research/research-replication/SKILL.md)
+│   └── research-reproduction/
 │       ├── references/
 │       │   ├── examples/
-│       │   │   ├── mathematics/
-│       │   │   │   ├── [linear-algreba.md](./research/progressive-explanation/references/examples/mathematics/linear-algreba.md)
-│       │   │   │   └── [probability.md](./research/progressive-explanation/references/examples/mathematics/probability.md)
-│       │   │   ├── [deep-learning.md](./research/progressive-explanation/references/examples/deep-learning.md)
-│       │   │   ├── [machine-learning.md](./research/progressive-explanation/references/examples/machine-learning.md)
-│       │   │   ├── [neural-networks.md](./research/progressive-explanation/references/examples/neural-networks.md)
-│       │   │   └── [neuroscience.md](./research/progressive-explanation/references/examples/neuroscience.md)
-│       │   ├── [levels.md](./research/progressive-explanation/references/levels.md)
-│       │   └── [techniques.md](./research/progressive-explanation/references/techniques.md)
-│       ├── [README.md](./research/progressive-explanation/README.md)
-│       └── [SKILL.md](./research/progressive-explanation/SKILL.md)
+│       │   │   ├── [clinical-neuroscience.md](./research/research-reproduction/references/examples/clinical-neuroscience.md)
+│       │   │   ├── [machine-learning.md](./research/research-reproduction/references/examples/machine-learning.md)
+│       │   │   ├── [neuroscience.md](./research/research-reproduction/references/examples/neuroscience.md)
+│       │   │   └── [psychology.md](./research/research-reproduction/references/examples/psychology.md)
+│       │   ├── [reproduction-analysis.md](./research/research-reproduction/references/reproduction-analysis.md)
+│       │   ├── [reproduction-design.md](./research/research-reproduction/references/reproduction-design.md)
+│       │   ├── [reproduction-types.md](./research/research-reproduction/references/reproduction-types.md)
+│       │   └── [reproduction-validation.md](./research/research-reproduction/references/reproduction-validation.md)
+│       ├── [README.md](./research/research-reproduction/README.md)
+│       └── [SKILL.md](./research/research-reproduction/SKILL.md)
 └── [TREE.md](./TREE.md)
 ```
 
-412 directories, 329 files
+430 directories, 389 files
