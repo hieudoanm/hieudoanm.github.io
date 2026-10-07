@@ -59,7 +59,7 @@ data = [
 ]
 
 tracking = [
-    "mlflow==3.16.1",
+    "mlflow==3.17.0",
 ]
 
 storage = [
