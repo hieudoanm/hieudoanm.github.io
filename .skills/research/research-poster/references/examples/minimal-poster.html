@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minimal Research Poster</title>
+
+  <style>
+    :root {
+      --poster-width: 1189mm;
+      --poster-height: 841mm;
+
+      --background: #ffffff;
+      --text: #161616;
+      --muted: #626262;
+      --accent: #222222;
+      --surface: #f5f5f5;
+      --border: #d8d8d8;
+
+      --space-xs: 4mm;
+      --space-sm: 8mm;
+      --space-md: 14mm;
+      --space-lg: 20mm;
+      --space-xl: 30mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #dddddd;
+    }
+
+    body {
+      font-family:
+        Helvetica,
+        Arial,
+        sans-serif;
+      color: var(--text);
+    }
+
+    .poster {
+      width: var(--poster-width);
+      height: var(--poster-height);
+      margin: 0 auto;
+      padding: 28mm;
+
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: var(--space-xl);
+
+      background: var(--background);
+      overflow: hidden;
+    }
+
+    .header {
+      max-width: 1000mm;
+    }
+
+    .label {
+      margin: 0 0 var(--space-sm);
+      color: var(--muted);
+      font-size: 4mm;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900mm;
+      font-size: 31mm;
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .authors {
+      margin: var(--space-md) 0 0;
+      color: var(--muted);
+      font-size: 5mm;
+    }
+
+    .content {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 0.8fr 1.6fr 0.8fr;
+      gap: 24mm;
+    }
+
+    .column {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .section {
+      border-top: 1px solid var(--border);
+      padding-top: var(--space-sm);
+    }
+
+    .section h2 {
+      margin: 0 0 var(--space-sm);
+      font-size: 5mm;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .section p {
+      margin: 0;
+      font-size: 4.8mm;
+      line-height: 1.45;
+    }
+
+    .section p + p {
+      margin-top: var(--space-sm);
+    }
+
+    .question {
+      padding: var(--space-md);
+      border: 2px solid var(--accent);
+    }
+
+    .question h2 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .question p {
+      font-size: 7mm;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .main-result {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .main-result-label {
+      margin: 0 0 var(--space-sm);
+      color: var(--muted);
+      font-size: 5mm;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .main-result-number {
+      margin: 0;
+      font-size: 42mm;
+      line-height: 0.9;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .main-result-text {
+      max-width: 390mm;
+      margin: var(--space-md) 0 0;
+      font-size: 8mm;
+      line-height: 1.2;
+      font-weight: 650;
+    }
+
+    .visual {
+      margin-top: var(--space-lg);
+      padding: var(--space-md);
+      background: var(--surface);
+    }
+
+    .visual svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .caption {
+      margin: var(--space-sm) 0 0;
+      color: var(--muted);
+      font-size: 3.8mm;
+      line-height: 1.35;
+    }
+
+    .takeaway {
+      padding: var(--space-lg);
+      background: var(--accent);
+      color: white;
+    }
+
+    .takeaway-label {
+      margin: 0 0 var(--space-sm);
+      color: #cccccc;
+      font-size: 4mm;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .takeaway p {
+      margin: 0;
+      font-size: 7mm;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 6mm;
+      font-size: 4.5mm;
+      line-height: 1.45;
+    }
+
+    .list li + li {
+      margin-top: 2mm;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-lg);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 3.6mm;
+    }
+
+    @media print {
+      @page {
+        size: A0 landscape;
+        margin: 0;
+      }
+
+      html,
+      body {
+        width: 1189mm;
+        height: 841mm;
+      }
+
+      .poster {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="poster">
+    <header class="header">
+      <p class="label">Minimal Research Poster</p>
+
+      <h1>
+        Does Sleep Duration Predict Cognitive Performance?
+      </h1>
+
+      <p class="authors">
+        H. Doan · Cognitive Neuroscience · University of Birmingham
+      </p>
+    </header>
+
+    <div class="content">
+      <div class="column">
+        <section class="section">
+          <h2>Background</h2>
+
+          <p>
+            Sleep is associated with multiple aspects of cognition, including
+            attention, memory, and executive function.
+          </p>
+        </section>
+
+        <section class="question">
+          <h2>Research question</h2>
+
+          <p>
+            Is habitual sleep duration associated with cognitive performance?
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Dataset</h2>
+
+          <p>
+            Behavioural and self-reported sleep measures were collected from
+            420 adult participants.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Analysis</h2>
+
+          <ol class="list">
+            <li>Inspect distributions.</li>
+            <li>Estimate the sleep–performance association.</li>
+            <li>Assess uncertainty using permutation analysis.</li>
+          </ol>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="main-result">
+          <p class="main-result-label">Main finding</p>
+
+          <p class="main-result-number">+</p>
+
+          <p class="main-result-text">
+            Longer reported sleep duration was associated with better
+            cognitive performance.
+          </p>
+
+          <div class="visual">
+            <svg
+              viewBox="0 0 760 470"
+              role="img"
+              aria-label="Illustrative scatter plot showing a positive relationship between sleep duration and cognitive performance"
+            >
+              <line
+                x1="90"
+                y1="390"
+                x2="700"
+                y2="390"
+                stroke="#626262"
+                stroke-width="3"
+              />
+
+              <line
+                x1="90"
+                y1="70"
+                x2="90"
+                y2="390"
+                stroke="#626262"
+                stroke-width="3"
+              />
+
+              <line
+                x1="120"
+                y1="350"
+                x2="665"
+                y2="115"
+                stroke="#222222"
+                stroke-width="6"
+              />
+
+              <circle cx="145" cy="350" r="8" fill="#555555" />
+              <circle cx="180" cy="330" r="8" fill="#555555" />
+              <circle cx="215" cy="345" r="8" fill="#555555" />
+              <circle cx="250" cy="300" r="8" fill="#555555" />
+              <circle cx="285" cy="320" r="8" fill="#555555" />
+              <circle cx="320" cy="280" r="8" fill="#555555" />
+              <circle cx="355" cy="290" r="8" fill="#555555" />
+              <circle cx="390" cy="245" r="8" fill="#555555" />
+              <circle cx="425" cy="250" r="8" fill="#555555" />
+              <circle cx="460" cy="220" r="8" fill="#555555" />
+              <circle cx="495" cy="200" r="8" fill="#555555" />
+              <circle cx="530" cy="180" r="8" fill="#555555" />
+              <circle cx="565" cy="190" r="8" fill="#555555" />
+              <circle cx="600" cy="145" r="8" fill="#555555" />
+              <circle cx="635" cy="135" r="8" fill="#555555" />
+
+              <text
+                x="395"
+                y="445"
+                text-anchor="middle"
+                font-size="23"
+                fill="#161616"
+              >
+                Sleep duration
+              </text>
+
+              <text
+                x="30"
+                y="230"
+                transform="rotate(-90 30 230)"
+                text-anchor="middle"
+                font-size="23"
+                fill="#161616"
+              >
+                Cognitive performance
+              </text>
+            </svg>
+
+            <p class="caption">
+              Illustrative figure for demonstrating a minimal poster layout.
+              The displayed relationship is not intended to represent a real
+              dataset.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="section">
+          <h2>Interpretation</h2>
+
+          <p>
+            The observed association is consistent with a relationship between
+            sleep duration and cognitive performance.
+          </p>
+
+          <p>
+            Because the data are observational, the result does not establish
+            that changing sleep duration would cause a change in cognition.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Limitations</h2>
+
+          <ul class="list">
+            <li>Sleep duration was self-reported.</li>
+            <li>The study was observational.</li>
+            <li>Unmeasured variables may contribute to the association.</li>
+            <li>The sample may not represent the wider population.</li>
+          </ul>
+        </section>
+
+        <section class="takeaway">
+          <p class="takeaway-label">Takeaway</p>
+
+          <p>
+            The data support an association between sleep duration and
+            cognitive performance, but not a causal conclusion.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Next steps</h2>
+
+          <ul class="list">
+            <li>Use objective sleep measurements.</li>
+            <li>Investigate longitudinal changes.</li>
+            <li>Control for additional behavioural factors.</li>
+            <li>Test specific cognitive domains separately.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>References</h2>
+
+          <ul class="list">
+            <li>Sleep and cognition literature.</li>
+            <li>Methods for observational association studies.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>
+        Example HTML research poster · Designed for one-shot screenshot capture
+      </span>
+
+      <span>
+        Contact · h.doe@example.ac.uk
+      </span>
+    </footer>
+  </main>
+</body>
+</html>
