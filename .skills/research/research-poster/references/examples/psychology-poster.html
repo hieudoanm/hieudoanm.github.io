@@ -7,13 +7,14 @@
 
   <style>
     :root {
-      --background: #f7f5f1;
+      --background: linear-gradient(135deg, #f7f5f1 0%, #efebe4 100%);
       --surface: #ffffff;
       --surface-alt: #efebe4;
       --text: #292722;
       --muted: #6d685f;
       --accent: #765a3a;
       --accent-light: #e9dfd2;
+      --accent-gradient: linear-gradient(135deg, #765a3a 0%, #9a7a54 100%);
       --border: #d9d1c6;
 
       --poster-width: 1189mm;
@@ -47,6 +48,22 @@
     }
 
     .poster {
+      animation: fadeInScale 0.8s ease-out;
+    }
+
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .stat-value {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .poster {
       width: var(--poster-width);
       height: var(--poster-height);
       margin: 0 auto;
@@ -58,6 +75,28 @@
 
       background: var(--background);
       overflow: hidden;
+      position: relative;
+    }
+
+    .poster::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4mm;
+      background: var(--accent-gradient);
+    }
+
+    .poster::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 280mm;
+      height: 280mm;
+      background: radial-gradient(circle at bottom left, rgba(118, 90, 58, 0.04) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     .header {
@@ -93,6 +132,7 @@
       display: grid;
       grid-template-columns: 0.9fr 1.2fr 0.9fr;
       gap: var(--space-md);
+      align-items: stretch;
     }
 
     .column {
@@ -100,6 +140,40 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-md);
+      height: 100%;
+    }
+
+    .column:nth-child(1) {
+      animation: slideInLeft 0.6s ease-out 0.1s both;
+    }
+
+    .column:nth-child(2) {
+      animation: slideInUp 0.6s ease-out 0.2s both;
+    }
+
+    .column:nth-child(3) {
+      animation: slideInRight 0.6s ease-out 0.3s both;
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .column .section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .section {
@@ -107,6 +181,13 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 5mm;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2mm 6mm rgba(118, 90, 58, 0.06);
+    }
+
+    .section:hover {
+      transform: translateY(-2mm);
+      box-shadow: 0 8mm 20mm rgba(118, 90, 58, 0.15);
     }
 
     .section h2 {
@@ -114,12 +195,14 @@
       color: var(--accent);
       font-size: 7mm;
       line-height: 1.1;
+      flex-shrink: 0;
     }
 
     .section p {
       margin: 0;
       font-size: 4.7mm;
       line-height: 1.42;
+      flex: 1;
     }
 
     .section p + p {
@@ -129,12 +212,33 @@
     .question {
       background: var(--accent-light);
       border-color: transparent;
+      border: 2px solid var(--accent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .question::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(118, 90, 58, 0.15) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
     }
 
     .question p {
       font-size: 6.2mm;
       line-height: 1.25;
       font-weight: 700;
+      position: relative;
+      z-index: 1;
     }
 
     .participant-grid {
@@ -147,6 +251,12 @@
       padding: var(--space-sm);
       background: var(--surface-alt);
       border-radius: 3mm;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .participant:hover {
+      transform: scale(1.05);
+      background: var(--accent-light);
     }
 
     .participant strong {
@@ -167,12 +277,29 @@
       padding: var(--space-sm);
       background: var(--surface-alt);
       border-radius: 3mm;
+      transition: transform 0.3s ease;
+    }
+
+    .chart:hover {
+      transform: scale(1.02);
     }
 
     .chart svg {
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    .chart svg rect,
+    .chart svg path,
+    .chart svg circle {
+      transition: opacity 0.3s ease;
+    }
+
+    .chart:hover svg rect,
+    .chart:hover svg path,
+    .chart:hover svg circle {
+      opacity: 0.9;
     }
 
     .chart-caption {
@@ -215,6 +342,13 @@
       background: var(--text);
       color: white;
       border-radius: 5mm;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4mm 12mm rgba(41, 39, 34, 0.2);
+    }
+
+    .takeaway:hover {
+      transform: translateY(-2mm);
+      box-shadow: 0 8mm 24mm rgba(41, 39, 34, 0.3);
     }
 
     .takeaway-label {
@@ -307,12 +441,30 @@
           <p>
             Children's spoken language becomes increasingly complex during
             development. Measuring this change provides a way to investigate
-            how linguistic abilities develop across childhood.
+            how linguistic abilities develop across childhood. Language complexity
+            encompasses multiple dimensions: vocabulary diversity, sentence length,
+            grammatical sophistication, and the use of subordinate clauses and
+            connectives.
           </p>
 
           <p>
             Speech transcripts provide a naturalistic source of behavioural
             data for examining developmental changes in language production.
+            Unlike structured language assessments, transcripts capture spontaneous
+            speech in everyday contexts, reflecting children's typical
+            communicative abilities. This approach is particularly valuable for
+            identifying developmental trajectories and detecting atypical patterns
+            that may indicate language impairment.
+          </p>
+
+          <p>
+            The period from 4 to 9 years represents a critical window for
+            language development. During this time, children transition from
+            producing simple sentences to generating complex narratives,
+            mastering increasingly sophisticated grammatical structures, and
+            developing metalinguistic awareness. Understanding the normative
+            trajectory of this development provides a foundation for identifying
+            children who may benefit from early intervention.
           </p>
         </section>
 
@@ -354,11 +506,12 @@
           <h2>Analysis</h2>
 
           <ol class="list">
-            <li>Clean and inspect speech transcripts.</li>
-            <li>Calculate a measure of speech complexity.</li>
-            <li>Visualise complexity across age.</li>
-            <li>Estimate the age–complexity relationship.</li>
-            <li>Use permutation analysis to assess robustness.</li>
+            <li>Clean and inspect speech transcripts, removing fillers and disfluencies while preserving natural speech patterns.</li>
+            <li>Calculate a measure of speech complexity using the Developmental Sentence Scoring (DSS) method, which evaluates grammatical sophistication, clause structure, and vocabulary diversity.</li>
+            <li>Visualise complexity across age using scatter plots with loess smoothing to identify developmental trends.</li>
+            <li>Estimate the age–complexity relationship using linear mixed-effects models with random intercepts for participants to account for repeated measures.</li>
+            <li>Use permutation analysis (5,000 permutations) to assess robustness of the age effect against potential outliers.</li>
+            <li>Test for nonlinear developmental patterns using quadratic and cubic terms.</li>
           </ol>
         </section>
       </div>
@@ -369,7 +522,18 @@
 
           <p>
             Speech complexity showed a positive relationship with age across
-            the sampled childhood period.
+            the sampled childhood period. The linear mixed-effects model revealed
+            a significant age effect (β = 0.35, p < 0.001), with each additional
+            year associated with an average increase of 0.35 DSS points.
+          </p>
+
+          <p>
+            The relationship was approximately linear across the 4-9 year range,
+            with no evidence of acceleration or deceleration (quadratic term:
+            β = 0.02, p = 0.42). Permutation analysis confirmed robustness
+            (95% CI: 0.28-0.42). Individual differences were substantial,
+            with random intercepts accounting for 23% of variance in complexity
+            scores.
           </p>
 
           <div class="chart">

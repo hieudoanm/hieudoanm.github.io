@@ -171,23 +171,6 @@ cards:
       success: '#6da34d'
       error: '#d7263d'
 
-  - app: games/memory
-    url: 'https://hieudoanm.github.io/open/memory/'
-    name: Memory
-    kicker: '41 games, no install'
-    title: 'Trains, puzzles and odds'
-    description: 'Memory match, n-back, sudoku, 2048, 8-bit arcade and card odds — all in the browser.'
-    tags: ['Memory & n-back', 'Sudoku & puzzles', '8-bit arcade', 'Card odds']
-    theme:
-      base: '#faf8ff'
-      content: '#1f1440'
-      primary: '#8b5cf6'
-      secondary: '#f472b6'
-      info: '#6366f1'
-      warning: '#f59e0b'
-      success: '#10b981'
-      error: '#e11d48'
-
   - app: graphics-design/exhibit
     url: 'https://hieudoanm.github.io/open/exhibit/'
     name: Exhibit
@@ -346,29 +329,6 @@ cards:
       warning: '#ff9f0a'
       success: '#34c759'
       error: '#ff3b30'
-
-  - app: social-networking/chat
-    url: 'https://hieudoanm.github.io/open/chat/'
-    name: Chat
-    kicker: 'Your models, your prompts'
-    title: 'An AI chat you control'
-    description: 'A modern AI chat interface with streaming replies, model switching and system prompt templates.'
-    tags:
-      [
-        'Streaming replies',
-        'Model switcher',
-        'Prompt templates',
-        'Local history',
-      ]
-    theme:
-      base: '#f7faff'
-      content: '#0c1c33'
-      primary: '#2563eb'
-      secondary: '#0ea5e9'
-      info: '#0284c7'
-      warning: '#d97706'
-      success: '#16a34a'
-      error: '#e11d48'
 
   - app: sports/chess
     url: 'https://hieudoanm.github.io/open/chess/'

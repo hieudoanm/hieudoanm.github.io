@@ -19,11 +19,10 @@
 | 15  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                | No       | DONE   | Productivity      | Business           |
 | 16  | resume      | [Resume][resume]           | Resume Builder                                                   | No       | DONE   | Productivity      | Business           |
 | 17  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
-| 18  | chat        | [Chat][chat]               | Chat like Codex / Claude                                         | Required | DONE   | Social Networking | Business           |
-| 19  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
-| 20  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
-| 21  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
-| 22  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
+| 18  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
+| 19  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
+| 20  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
+| 21  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/
@@ -33,7 +32,6 @@
 [lingo]: https://hieudoanm.github.io/open/lingo/
 [exhibit]: https://hieudoanm.github.io/open/exhibit/
 [foody]: https://hieudoanm.github.io/open/foody/
-[memory]: https://hieudoanm.github.io/open/memory/
 [photo]: https://hieudoanm.github.io/open/photo/
 [svg]: https://hieudoanm.github.io/open/svg/
 [brainbow]: https://hieudoanm.github.io/open/brainbow/
@@ -42,7 +40,6 @@
 [pdf]: https://hieudoanm.github.io/open/pdf/
 [resume]: https://hieudoanm.github.io/open/resume/
 [store]: https://hieudoanm.github.io/open/store/
-[chat]: https://hieudoanm.github.io/open/chat/
 [chess]: https://hieudoanm.github.io/open/chess/
 [football]: https://hieudoanm.github.io/open/football/
 [tourney]: https://hieudoanm.github.io/open/tourney/

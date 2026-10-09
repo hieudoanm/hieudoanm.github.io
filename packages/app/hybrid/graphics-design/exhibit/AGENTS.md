@@ -43,6 +43,7 @@ src/
 │   ├── page.tsx          # Showcase home page
 │   ├── (app)/
 │   │   ├── pos/          # POS application (migrated from business/pos)
+│   │   ├── ai/           # AI chat application
 │   │   ├── chat/         # Chat application
 │   │   ├── menu/         # Menu application
 │   │   ├── wallet/       # Wallet application (migrated from finance/wallet)
@@ -72,6 +73,7 @@ src/
 │       ├── reset-password/page.tsx
 │       └── profile/page.tsx
 ├── components/
+│   ├── ai/
 │   ├── chat/
 │   ├── menu/
 │   ├── pos/
@@ -99,6 +101,7 @@ src/
 | Wallet       | Finance         | Ready       | `/wallet`   |
 | Tax          | Finance         | Ready       | `/tax`      |
 | Chat         | Social          | Ready       | `/chat`     |
+| AI Chat      | AI              | Ready       | `/ai`       |
 | Password     | Utilities       | Ready       | `/password` |
 | Video        | Graphics Design | Ready       | `/video`    |
 | Photo Editor | Graphics Design | Ready       | External    |

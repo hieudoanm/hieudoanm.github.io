@@ -6,7 +6,7 @@
   **mobile app** (Tauri Mobile)
 - Static export for offline-first PWA support
 - Showcase of self-contained demo applications (**POS**, **Menu**, **Chat**,
-  **Wallet**, **Password**)
+  **AI Chat**, **Wallet**, **Password**)
 - Type-safe throughout with strict TypeScript
 
 ## Tech Stack
@@ -29,6 +29,7 @@
 | POS      | `/pos`      | Business — point of sale   | `atoms` → `templates`                  |
 | Menu     | `/menu`     | Business — digital menus   | flat under `components/menu`           |
 | Chat     | `/chat`     | Social — messaging         | `atoms` → `templates`                  |
+| AI Chat  | `/ai`       | AI — chat interface        | `atoms` → `templates` (namespaced)     |
 | Wallet   | `/wallet`   | Finance — personal banking | `atoms` → `templates` (namespaced)     |
 | Password | `/password` | Utilities — password vault | `molecules` → `organisms` (namespaced) |
 
@@ -39,7 +40,7 @@ Shared, app-agnostic UI lives in `components/shared/templates`.
 ```txt
 src/
 ├── app/                # App Router: routes, layouts, error boundaries
-│   ├── (app)/          # Main apps: chat, menu, pos, wallet, password
+│   ├── (app)/          # Main apps: ai, chat, menu, pos, wallet, password
 │   ├── (auth)/         # sign-in, sign-up, profile, password flows
 │   ├── (info)/         # about, downloads, version
 │   ├── error.tsx       # Runtime error boundary
@@ -48,6 +49,7 @@ src/
 │   ├── loading.tsx     # Route loading UI
 │   └── not-found.tsx   # 404 page
 ├── components/         # UI, organised by app then atomic tier
+│   ├── ai/             # atoms, molecules, organisms, templates (namespaced)
 │   ├── chat/           # atoms, molecules, organisms, templates
 │   ├── menu/           # flat components
 │   ├── pos/            # atoms, molecules, organisms, templates
@@ -55,16 +57,17 @@ src/
 │   ├── password/       # molecules, organisms (vendored)
 │   └── shared/         # templates/ — ErrorTemplate and friends
 ├── lib/                # Pure logic, no React
+│   ├── ai/             # db
 │   ├── chat/           # crypto, db, format, selectors, url, webrtc
 │   ├── wallet/         # db, export, format, iconMap, seed, session, utils
 │   ├── password/       # db, health, security, totp, transfer
 │   ├── menu/
 │   └── pos/            # money, cart, discounts, payment, reports, …
-├── hooks/              # Reusable hooks (chat/, menu/, password/, wallet/)
-├── providers/          # React context providers (chat/, password/, wallet/)
-├── data/               # Seed/fixture data (chat/, password/, wallet/)
-├── types/              # Shared types (chat/, menu/, pos/, password/, wallet/)
-├── utils/              # Formatting helpers (password/)
+├── hooks/              # Reusable hooks (ai/, chat/, menu/, password/, wallet/)
+├── providers/          # React context providers (ai/, chat/, password/, wallet/)
+├── data/               # Seed/fixture data (ai/, chat/, password/, wallet/)
+├── types/              # Shared types (ai/, chat/, menu/, pos/, password/, wallet/)
+├── utils/              # Formatting helpers (ai/, password/)
 ├── test-helpers/       # Shared test doubles (password/, wallet/)
 ├── content/            # Build-time content (version string)
 ├── styles/             # globals.css (entry) + themes.css
@@ -116,6 +119,9 @@ Flat routes with route groups — no dynamic `[id]` or `[slug]` segments.
 | `/menu`            | `(app)/menu/page.tsx`             | Yes    | Menu application                         |
 | `/chat`            | `(app)/chat/page.tsx`             | Yes    | Chat application                         |
 | `/chat/settings`   | `(app)/chat/settings/page.tsx`    | Yes    | Chat preferences                         |
+| `/ai`              | `(app)/ai/page.tsx`               | Yes    | AI chat home                             |
+| `/ai/chat`         | `(app)/ai/chat/page.tsx`          | Yes    | AI chat conversation                     |
+| `/ai/settings`     | `(app)/ai/settings/page.tsx`      | Yes    | AI chat preferences                      |
 | `/wallet`          | `(app)/wallet/page.tsx`           | Yes    | Wallet dashboard                         |
 | `/wallet/*`        | nested under `(app)/wallet/`      | Yes    | All wallet features                      |
 | `/password`        | `(app)/password/page.tsx`         | Yes    | Password vault                           |

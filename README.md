@@ -13,7 +13,7 @@
 [twitter]: https://x.com/hieudoanm
 [instagram]: https://instagram.com/hieudoanm.github.io
 
-## [Open Releases (32)](https://hieudoanm.github.io/open)
+## [Open Releases (31)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions and Native Apps (3)
 
@@ -39,7 +39,7 @@
 
 ---
 
-### Hybrid (23)
+### Hybrid (21)
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
@@ -60,11 +60,10 @@
 | 25  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
 | 26  | Hybrid   | Productivity      | Resume      | [Open][open-resume]      | [Releases][releases-resume]      |
 | 27  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
-| 28  | Hybrid   | Social Networking | Chat        | [Open][open-chat]        | [Releases][releases-chat]        |
-| 29  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 30  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 31  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 32  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 28  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 29  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 30  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 31  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -89,7 +88,6 @@
 [open-pdf]: https://hieudoanm.github.io/open/pdf/
 [open-resume]: https://hieudoanm.github.io/open/resume/
 [open-store]: https://hieudoanm.github.io/open/store/
-[open-chat]: https://hieudoanm.github.io/open/chat/
 [open-chess]: https://hieudoanm.github.io/open/chess/
 [open-football]: https://hieudoanm.github.io/open/football/
 [open-tourney]: https://hieudoanm.github.io/open/tourney/
@@ -122,7 +120,6 @@
 [releases-pdf]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-pdf-latest
 [releases-resume]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-resume-latest
 [releases-store]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-shopping-store-latest
-[releases-chat]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-social-networking-chat-latest
 [releases-chess]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-chess-latest
 [releases-football]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-football-latest
 [releases-tourney]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-tourney-latest

@@ -5,6 +5,7 @@ import { useState, type FC } from 'react';
 import {
   FiCoffee,
   FiCreditCard,
+  FiCpu,
   FiGrid,
   FiList,
   FiLock,
@@ -75,6 +76,16 @@ const apps: App[] = [
     href: '/chat',
     status: 'ready',
     category: 'Social Networking',
+  },
+  {
+    id: 'ai',
+    name: 'AI Chat',
+    description:
+      'AI chat with model switching, system prompts, and streaming replies',
+    icon: <FiCpu className="size-8" />,
+    href: '/ai',
+    status: 'ready',
+    category: 'AI',
   },
   {
     id: 'password',

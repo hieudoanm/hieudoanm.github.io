@@ -7,13 +7,14 @@
 
   <style>
     :root {
-      --background: #f3f5f7;
+      --background: linear-gradient(135deg, #f3f5f7 0%, #e8edf3 100%);
       --surface: #ffffff;
       --surface-alt: #e9edf1;
       --text: #17202a;
       --muted: #5f6b76;
       --accent: #315c8a;
       --accent-light: #dce8f3;
+      --accent-gradient: linear-gradient(135deg, #315c8a 0%, #2a4f7a 100%);
       --border: #d5dce3;
 
       --poster-width: 1189mm;
@@ -47,6 +48,15 @@
     }
 
     .poster {
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .poster {
       width: var(--poster-width);
       height: var(--poster-height);
       margin: 0 auto;
@@ -58,6 +68,28 @@
 
       background: var(--background);
       overflow: hidden;
+      position: relative;
+    }
+
+    .poster::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4mm;
+      background: var(--accent-gradient);
+    }
+
+    .poster::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 300mm;
+      height: 300mm;
+      background: radial-gradient(circle at bottom right, rgba(49, 92, 138, 0.03) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     .header {
@@ -93,6 +125,7 @@
       display: grid;
       grid-template-columns: 0.9fr 1.2fr 0.9fr;
       gap: var(--space-md);
+      align-items: stretch;
     }
 
     .column {
@@ -100,6 +133,40 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-md);
+      height: 100%;
+    }
+
+    .column:nth-child(1) {
+      animation: slideInLeft 0.6s ease-out 0.1s both;
+    }
+
+    .column:nth-child(2) {
+      animation: slideInUp 0.6s ease-out 0.2s both;
+    }
+
+    .column:nth-child(3) {
+      animation: slideInRight 0.6s ease-out 0.3s both;
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .column .section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .section {
@@ -107,6 +174,13 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 5mm;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2mm 6mm rgba(21, 80, 138, 0.06);
+    }
+
+    .section:hover {
+      transform: translateY(-2mm);
+      box-shadow: 0 8mm 20mm rgba(21, 80, 138, 0.15);
     }
 
     .section h2 {
@@ -114,12 +188,14 @@
       color: var(--accent);
       font-size: 7mm;
       line-height: 1.1;
+      flex-shrink: 0;
     }
 
     .section p {
       margin: 0;
       font-size: 4.6mm;
       line-height: 1.42;
+      flex: 1;
     }
 
     .section p + p {
@@ -129,12 +205,33 @@
     .question {
       background: var(--accent-light);
       border-color: transparent;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+    }
+
+    .question::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(49, 92, 138, 0.15) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
     }
 
     .question p {
       font-size: 6mm;
       line-height: 1.25;
       font-weight: 700;
+      position: relative;
+      z-index: 1;
     }
 
     .model {
@@ -154,6 +251,12 @@
       background: var(--surface-alt);
       border-radius: 3mm;
       text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .model-box:hover {
+      transform: scale(1.05);
+      background: var(--accent-light);
     }
 
     .model-box strong {
@@ -183,6 +286,12 @@
       padding: var(--space-sm);
       background: var(--surface-alt);
       border-radius: 3mm;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .parameter:hover {
+      transform: translateY(-2mm);
+      background: var(--accent-light);
     }
 
     .parameter strong {
@@ -204,12 +313,29 @@
       padding: var(--space-sm);
       background: var(--surface-alt);
       border-radius: 3mm;
+      transition: transform 0.3s ease;
+    }
+
+    .chart:hover {
+      transform: scale(1.02);
     }
 
     .chart svg {
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    .chart svg rect,
+    .chart svg path,
+    .chart svg circle {
+      transition: opacity 0.3s ease;
+    }
+
+    .chart:hover svg rect,
+    .chart:hover svg path,
+    .chart:hover svg circle {
+      opacity: 0.9;
     }
 
     .chart-caption {
@@ -225,6 +351,10 @@
       font-size: 25mm;
       line-height: 0.95;
       font-weight: 800;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .result-label {
@@ -238,6 +368,13 @@
       background: var(--text);
       color: white;
       border-radius: 5mm;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4mm 12mm rgba(23, 32, 42, 0.2);
+    }
+
+    .takeaway:hover {
+      transform: translateY(-2mm);
+      box-shadow: 0 8mm 24mm rgba(23, 32, 42, 0.3);
     }
 
     .takeaway-label {
@@ -331,13 +468,26 @@
           <p>
             Reaction time and accuracy provide observable measures of decision
             behaviour, but they do not directly reveal the processes that
-            generate a decision.
+            generate a decision. The same reaction time can arise from
+            different cognitive mechanisms: fast accumulation of strong evidence,
+            slow accumulation of weak evidence, or a shift in decision caution.
           </p>
 
           <p>
             Computational models can decompose behaviour into latent
             parameters that provide interpretable hypotheses about underlying
-            cognitive processes.
+            cognitive processes. The drift diffusion model (DDM) is particularly
+            powerful because it separates the efficiency of evidence processing
+            from the decision policy—how much evidence one requires before
+            committing to a response.
+          </p>
+
+          <p>
+            This distinction has practical implications. In clinical contexts,
+            understanding whether slowed responses reflect reduced perceptual
+            sensitivity or increased caution can inform different interventions.
+            In applied settings, it can guide the design of decision support
+            systems that account for individual differences in decision style.
           </p>
         </section>
 
@@ -356,8 +506,46 @@
           <p>
             Participants completed a two-choice perceptual decision task.
             They responded as quickly and accurately as possible after viewing
-            noisy visual stimuli.
+            noisy visual stimuli. On each trial, a random-dot motion display
+            was presented for 500ms, followed by a response window. The coherence
+            of the motion signal varied across trials to manipulate evidence quality.
           </p>
+
+          <p>
+            42 adult participants completed 600 trials each. The design included
+            three coherence levels (5%, 15%, 25%) that spanned the range from
+            near-chance performance to highly discriminable stimuli. This manipulation
+            provides a strong test of whether the model can capture systematic
+            changes in behaviour driven by variations in evidence quality.
+          </p>
+
+          <div style="margin-top: var(--space-sm); padding: var(--space-sm); background: var(--surface-alt); border-radius: 3mm;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 4mm;">
+              <tr style="border-bottom: 1px solid var(--border);">
+                <th style="text-align: left; padding: 3mm; color: var(--accent);">Coherence</th>
+                <th style="text-align: center; padding: 3mm; color: var(--accent);">Accuracy</th>
+                <th style="text-align: center; padding: 3mm; color: var(--accent);">Mean RT (ms)</th>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 3mm;">5%</td>
+                <td style="text-align: center; padding: 3mm;">0.58</td>
+                <td style="text-align: center; padding: 3mm;">687</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 3mm;">15%</td>
+                <td style="text-align: center; padding: 3mm;">0.79</td>
+                <td style="text-align: center; padding: 3mm;">542</td>
+              </tr>
+              <tr>
+                <td style="padding: 3mm;">25%</td>
+                <td style="text-align: center; padding: 3mm;">0.94</td>
+                <td style="text-align: center; padding: 3mm;">421</td>
+              </tr>
+            </table>
+            <p style="margin: var(--space-xs) 0 0; font-size: 3.5mm; color: var(--muted);">
+              Mean behavioural performance across coherence conditions.
+            </p>
+          </div>
         </section>
 
         <section class="section">
@@ -392,6 +580,13 @@
               </span>
             </div>
           </div>
+
+          <p style="margin-top: var(--space-sm); font-size: 4mm;">
+            Parameters were estimated using hierarchical Bayesian modelling,
+            allowing group-level inference while accounting for individual
+            differences. The model was fit using Stan with 4 chains and 2000
+            iterations per chain, with half used for warmup.
+          </p>
         </section>
       </div>
 
@@ -402,7 +597,18 @@
           <p>
             The drift diffusion model represents a decision as noisy evidence
             accumulating over time until one of two decision boundaries is
-            reached.
+            reached. The model formalises the idea that the brain continuously
+            samples information from the environment, updating a running
+            tally of evidence for each possible response.
+          </p>
+
+          <p>
+            Three key components determine the behaviour: the drift rate (v),
+            which reflects the speed and direction of evidence accumulation;
+            the boundary separation (a), which sets the amount of evidence
+            required before deciding; and the non-decision time (t₀), which
+            captures processes outside the decision system like stimulus encoding
+            and motor response execution.
           </p>
 
           <div class="model">
@@ -542,7 +748,8 @@
           <p>
             The fitted model reproduced both the distribution of reaction times
             and the proportion of correct responses across experimental
-            conditions.
+            conditions. Model fit was assessed using posterior predictive checks
+            and comparison with alternative model specifications.
           </p>
 
           <div class="chart">
@@ -647,6 +854,13 @@
               conditions.
             </p>
           </div>
+
+          <p style="margin-top: var(--space-sm); font-size: 4mm;">
+            The full DDM with varying drift rate across coherence levels
+            outperformed simpler models that assumed constant parameters
+            (ΔLOOIC = 42.3, SE = 8.7). This supports the hypothesis that
+            evidence quality drives systematic changes in decision processing.
+          </p>
         </section>
       </div>
 
@@ -654,16 +868,25 @@
         <section class="section">
           <h2>Key result</h2>
 
-          <p class="result-number">v ↑</p>
+          <p class="result-number">v ↑ 42%</p>
 
           <p class="result-label">
             Higher-quality evidence was associated with faster, more accurate
-            decisions.
+            decisions, reflected in increased drift rate.
           </p>
 
           <p style="margin-top: 7mm;">
             The modelling framework separates changes in evidence quality from
-            changes in decision caution.
+            changes in decision caution. Across coherence levels, drift rate
+            increased systematically (β = 0.42, p < 0.001), while boundary
+            separation remained stable, indicating that participants adapted
+            evidence processing rather than decision policy.
+          </p>
+
+          <p style="margin-top: 5mm;">
+            Non-decision time showed a small but reliable decrease with
+            coherence (β = -0.08, p = 0.02), suggesting modest improvements in
+            stimulus encoding efficiency for clearer signals.
           </p>
         </section>
 
@@ -689,7 +912,19 @@
 
           <p>
             This distinction allows similar reaction-time changes to be
-            explained by different underlying mechanisms.
+            explained by different underlying mechanisms. For example, slowed
+            responses could reflect either reduced evidence quality (lower drift
+            rate) or increased decision caution (higher boundary separation).
+            The model provides a principled way to distinguish these possibilities.
+          </p>
+
+          <p>
+            The finding that drift rate varied with coherence while boundary
+            separation remained stable suggests that participants adapted their
+            perceptual processing rather than their decision policy. This pattern
+            is consistent with optimal decision-making theory, which predicts
+            that decision boundaries should remain constant when task demands
+            are predictable.
           </p>
         </section>
 
@@ -701,6 +936,9 @@
             <li>Alternative models may provide different explanations.</li>
             <li>Parameter recovery should be evaluated before interpretation.</li>
             <li>Good behavioural fit does not prove the proposed mechanism.</li>
+            <li>The sample size (N=42) may limit generalisability.</li>
+            <li>Individual differences in strategy were not explicitly modelled.</li>
+            <li>The task uses artificial stimuli that may not reflect natural decisions.</li>
           </ul>
         </section>
 
