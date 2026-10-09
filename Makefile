@@ -40,6 +40,9 @@ start-lingo:
 start-mri:
 	pnpm run dev --filter=@hieudoanm.github.io/mri
 
+start-office:
+	pnpm run dev --filter=@hieudoanm.github.io/office
+
 start-pdf:
 	pnpm run dev --filter=@hieudoanm.github.io/pdf
 

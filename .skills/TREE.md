@@ -64,20 +64,43 @@
 │   │           └── [SKILL.md](./programming/database/wide-column/apache-hbase/SKILL.md)
 │   ├── design/
 │   │   ├── brand/
-│   │   │   ├── atlassian/
-│   │   │   │   └── [SKILL.md](./programming/design/brand/atlassian/SKILL.md)
-│   │   │   ├── carbon/
-│   │   │   │   └── [SKILL.md](./programming/design/brand/carbon/SKILL.md)
-│   │   │   ├── google/
-│   │   │   │   └── [SKILL.md](./programming/design/brand/google/SKILL.md)
-│   │   │   ├── lightning/
-│   │   │   │   └── [SKILL.md](./programming/design/brand/lightning/SKILL.md)
-│   │   │   ├── nothing/
-│   │   │   │   └── [SKILL.md](./programming/design/brand/nothing/SKILL.md)
+│   │   │   ├── atlassian.design/
+│   │   │   │   └── [SKILL.md](./programming/design/brand/atlassian.design/SKILL.md)
+│   │   │   ├── carbondesignsystem.com/
+│   │   │   │   └── [SKILL.md](./programming/design/brand/carbondesignsystem.com/SKILL.md)
+│   │   │   ├── claude.com/
+│   │   │   │   ├── assets/
+│   │   │   │   │   └── [template.html](./programming/design/brand/claude.com/assets/template.html)
+│   │   │   │   ├── references/
+│   │   │   │   │   ├── [components.md](./programming/design/brand/claude.com/references/components.md)
+│   │   │   │   │   └── [tokens.css](./programming/design/brand/claude.com/references/tokens.css)
+│   │   │   │   └── [SKILL.md](./programming/design/brand/claude.com/SKILL.md)
+│   │   │   ├── getartcraft.com/
+│   │   │   │   ├── assets/
+│   │   │   │   │   └── [template.html](./programming/design/brand/getartcraft.com/assets/template.html)
+│   │   │   │   ├── references/
+│   │   │   │   │   ├── [components.md](./programming/design/brand/getartcraft.com/references/components.md)
+│   │   │   │   │   └── [tokens.css](./programming/design/brand/getartcraft.com/references/tokens.css)
+│   │   │   │   ├── [README.md](./programming/design/brand/getartcraft.com/README.md)
+│   │   │   │   └── [SKILL.md](./programming/design/brand/getartcraft.com/SKILL.md)
+│   │   │   ├── lightningdesignsystem.com/
+│   │   │   │   └── [SKILL.md](./programming/design/brand/lightningdesignsystem.com/SKILL.md)
+│   │   │   ├── m3.material.io/
+│   │   │   │   └── [SKILL.md](./programming/design/brand/m3.material.io/SKILL.md)
+│   │   │   ├── nothing.tech/
+│   │   │   │   ├── references/
+│   │   │   │   └── [SKILL.md](./programming/design/brand/nothing.tech/SKILL.md)
+│   │   │   ├── opencode.ai/
+│   │   │   │   ├── assets/
+│   │   │   │   │   └── [template.html](./programming/design/brand/opencode.ai/assets/template.html)
+│   │   │   │   ├── references/
+│   │   │   │   │   ├── [components.md](./programming/design/brand/opencode.ai/references/components.md)
+│   │   │   │   │   └── [tokens.css](./programming/design/brand/opencode.ai/references/tokens.css)
+│   │   │   │   └── [SKILL.md](./programming/design/brand/opencode.ai/SKILL.md)
 │   │   │   ├── polaris/
 │   │   │   │   └── [SKILL.md](./programming/design/brand/polaris/SKILL.md)
-│   │   │   └── spectrum/
-│   │   │       └── [SKILL.md](./programming/design/brand/spectrum/SKILL.md)
+│   │   │   └── spectrum.adobe.com/
+│   │   │       └── [SKILL.md](./programming/design/brand/spectrum.adobe.com/SKILL.md)
 │   │   └── philosophy/
 │   │       ├── brutalism/
 │   │       │   └── [SKILL.md](./programming/design/philosophy/brutalism/SKILL.md)
@@ -793,6 +816,19 @@
 │   │   │   └── [research-question.md](./research/research-gap/references/research-question.md)
 │   │   ├── [README.md](./research/research-gap/README.md)
 │   │   └── [SKILL.md](./research/research-gap/SKILL.md)
+│   ├── research-poster/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── [computational-poster.html](./research/research-poster/references/examples/computational-poster.html)
+│   │   │   │   ├── [minimal-poster.html](./research/research-poster/references/examples/minimal-poster.html)
+│   │   │   │   ├── [neuroscience-poster.html](./research/research-poster/references/examples/neuroscience-poster.html)
+│   │   │   │   └── [psychology-poster.html](./research/research-poster/references/examples/psychology-poster.html)
+│   │   │   ├── [html-rendering.md](./research/research-poster/references/html-rendering.md)
+│   │   │   ├── [poster-structure.md](./research/research-poster/references/poster-structure.md)
+│   │   │   ├── [scientific-communication.md](./research/research-poster/references/scientific-communication.md)
+│   │   │   └── [visual-design.md](./research/research-poster/references/visual-design.md)
+│   │   ├── [README.md](./research/research-poster/README.md)
+│   │   └── [SKILL.md](./research/research-poster/SKILL.md)
 │   ├── research-replication/
 │   │   ├── references/
 │   │   │   ├── examples/
@@ -806,20 +842,33 @@
 │   │   │   └── [replication-validation.md](./research/research-replication/references/replication-validation.md)
 │   │   ├── [README.md](./research/research-replication/README.md)
 │   │   └── [SKILL.md](./research/research-replication/SKILL.md)
-│   └── research-reproduction/
+│   ├── research-reproduction/
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   │   ├── [clinical-neuroscience.md](./research/research-reproduction/references/examples/clinical-neuroscience.md)
+│   │   │   │   ├── [machine-learning.md](./research/research-reproduction/references/examples/machine-learning.md)
+│   │   │   │   ├── [neuroscience.md](./research/research-reproduction/references/examples/neuroscience.md)
+│   │   │   │   └── [psychology.md](./research/research-reproduction/references/examples/psychology.md)
+│   │   │   ├── [reproduction-analysis.md](./research/research-reproduction/references/reproduction-analysis.md)
+│   │   │   ├── [reproduction-design.md](./research/research-reproduction/references/reproduction-design.md)
+│   │   │   ├── [reproduction-types.md](./research/research-reproduction/references/reproduction-types.md)
+│   │   │   └── [reproduction-validation.md](./research/research-reproduction/references/reproduction-validation.md)
+│   │   ├── [README.md](./research/research-reproduction/README.md)
+│   │   └── [SKILL.md](./research/research-reproduction/SKILL.md)
+│   └── research-writing/
 │       ├── references/
 │       │   ├── examples/
-│       │   │   ├── [clinical-neuroscience.md](./research/research-reproduction/references/examples/clinical-neuroscience.md)
-│       │   │   ├── [machine-learning.md](./research/research-reproduction/references/examples/machine-learning.md)
-│       │   │   ├── [neuroscience.md](./research/research-reproduction/references/examples/neuroscience.md)
-│       │   │   └── [psychology.md](./research/research-reproduction/references/examples/psychology.md)
-│       │   ├── [reproduction-analysis.md](./research/research-reproduction/references/reproduction-analysis.md)
-│       │   ├── [reproduction-design.md](./research/research-reproduction/references/reproduction-design.md)
-│       │   ├── [reproduction-types.md](./research/research-reproduction/references/reproduction-types.md)
-│       │   └── [reproduction-validation.md](./research/research-reproduction/references/reproduction-validation.md)
-│       ├── [README.md](./research/research-reproduction/README.md)
-│       └── [SKILL.md](./research/research-reproduction/SKILL.md)
+│       │   │   ├── [discussion.md](./research/research-writing/references/examples/discussion.md)
+│       │   │   ├── [introduction.md](./research/research-writing/references/examples/introduction.md)
+│       │   │   ├── [methods.md](./research/research-writing/references/examples/methods.md)
+│       │   │   └── [results.md](./research/research-writing/references/examples/results.md)
+│       │   ├── [argumentation.md](./research/research-writing/references/argumentation.md)
+│       │   ├── [imrad.md](./research/research-writing/references/imrad.md)
+│       │   ├── [reporting-guidelines.md](./research/research-writing/references/reporting-guidelines.md)
+│       │   └── [scienctific-writing.md](./research/research-writing/references/scienctific-writing.md)
+│       ├── [README.md](./research/research-writing/README.md)
+│       └── [SKILL.md](./research/research-writing/SKILL.md)
 └── [TREE.md](./TREE.md)
 ```
 
-430 directories, 389 files
+446 directories, 422 files
