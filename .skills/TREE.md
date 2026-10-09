@@ -64,6 +64,13 @@
 │   │           └── [SKILL.md](./programming/database/wide-column/apache-hbase/SKILL.md)
 │   ├── design/
 │   │   ├── brand/
+│   │   │   ├── astryx.atmeta.com/
+│   │   │   │   ├── assets/
+│   │   │   │   │   └── [template.html](./programming/design/brand/astryx.atmeta.com/assets/template.html)
+│   │   │   │   ├── references/
+│   │   │   │   │   ├── [components.md](./programming/design/brand/astryx.atmeta.com/references/components.md)
+│   │   │   │   │   └── [tokens.css](./programming/design/brand/astryx.atmeta.com/references/tokens.css)
+│   │   │   │   └── [SKILL.md](./programming/design/brand/astryx.atmeta.com/SKILL.md)
 │   │   │   ├── atlassian.design/
 │   │   │   │   └── [SKILL.md](./programming/design/brand/atlassian.design/SKILL.md)
 │   │   │   ├── carbondesignsystem.com/
@@ -90,6 +97,19 @@
 │   │   │   ├── nothing.tech/
 │   │   │   │   ├── references/
 │   │   │   │   └── [SKILL.md](./programming/design/brand/nothing.tech/SKILL.md)
+│   │   │   ├── notion.com/
+│   │   │   │   ├── assets/
+│   │   │   │   │   ├── app/
+│   │   │   │   │   │   └── [template.html](./programming/design/brand/notion.com/assets/app/template.html)
+│   │   │   │   │   └── marketing/
+│   │   │   │   │       └── [template.html](./programming/design/brand/notion.com/assets/marketing/template.html)
+│   │   │   │   ├── references/
+│   │   │   │   │   ├── app/
+│   │   │   │   │   │   └── [components.md](./programming/design/brand/notion.com/references/app/components.md)
+│   │   │   │   │   ├── marketing/
+│   │   │   │   │   │   └── [components.md](./programming/design/brand/notion.com/references/marketing/components.md)
+│   │   │   │   │   └── [tokens.css](./programming/design/brand/notion.com/references/tokens.css)
+│   │   │   │   └── [SKILL.md](./programming/design/brand/notion.com/SKILL.md)
 │   │   │   ├── opencode.ai/
 │   │   │   │   ├── assets/
 │   │   │   │   │   └── [template.html](./programming/design/brand/opencode.ai/assets/template.html)
@@ -871,4 +891,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-446 directories, 422 files
+456 directories, 432 files
