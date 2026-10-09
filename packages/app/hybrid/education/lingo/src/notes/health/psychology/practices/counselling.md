@@ -7,10 +7,10 @@
   "href": "/psychology/"
   "label": "Psychology"
 "links":
-  - "href": "/psychology/patient-health-questionnaire/"
+  - "href": "/psychology/depression/patient-health-questionnaire/"
     "label": "Patient Health Questionnaire (PHQ-9)"
     "description": "Common first step in screening for depression"
-  - "href": "/psychology/generalized-anxiety-disorder/"
+  - "href": "/psychology/anxiety/generalized-anxiety-disorder/"
     "label": "Generalized Anxiety Disorder (GAD-7)"
     "description": "Screening for generalised anxiety symptoms"
   - "href": "/psychology/dyadic-adjustment-scale/"

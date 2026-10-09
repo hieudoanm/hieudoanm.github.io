@@ -6,10 +6,10 @@
   "href": "/psychology/"
   "label": "Psychology"
 "links":
-  - "href": "/psychology/patient-health-questionnaire/"
+  - "href": "/psychology/depression/patient-health-questionnaire/"
     "label": "Patient Health Questionnaire (PHQ-9)"
     "description": "Structured symptom tracking over two weeks"
-  - "href": "/psychology/beck-depression-inventory/"
+  - "href": "/psychology/depression/beck-depression-inventory/"
     "label": "Beck Depression Inventory (BDI-II)"
     "description": "Mood, sleep and energy across three weeks"
   - "href": "/psychology/satisfaction-with-life/"

@@ -29,6 +29,9 @@ describe('BiologyTheoryPage', () => {
     ).toHaveAttribute('href', '/psychology');
     expect(
       screen.getByRole('link', { name: /^Generalized Anxiety Disorder/ })
-    ).toHaveAttribute('href', '/psychology/generalized-anxiety-disorder');
+    ).toHaveAttribute(
+      'href',
+      '/psychology/anxiety/generalized-anxiety-disorder'
+    );
   });
 });

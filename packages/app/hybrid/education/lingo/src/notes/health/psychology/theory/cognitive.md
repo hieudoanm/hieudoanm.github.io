@@ -36,7 +36,7 @@
   - "href": "/psychology/satisfaction-with-life/"
     "label": "Satisfaction With Life Scale"
     "description": "A validated measure of cognitive appraisal of life"
-  - "href": "/psychology/patient-health-questionnaire/"
+  - "href": "/psychology/depression/patient-health-questionnaire/"
     "label": "Patient Health Questionnaire (PHQ-9)"
     "description": "Attention and memory symptoms screened clinically"
 ---

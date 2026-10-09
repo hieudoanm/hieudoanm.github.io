@@ -7,13 +7,13 @@
   "href": "/psychology/"
   "label": "Psychology"
 "links":
-  - "href": "/psychology/generalized-anxiety-disorder/"
+  - "href": "/psychology/anxiety/generalized-anxiety-disorder/"
     "label": "Generalized Anxiety Disorder (GAD-7)"
     "description": "Arousal and worry measured on a validated scale"
-  - "href": "/psychology/beck-depression-inventory/"
+  - "href": "/psychology/depression/beck-depression-inventory/"
     "label": "Beck Depression Inventory (BDI-II)"
     "description": "Mood symptoms screened over the last two weeks"
-  - "href": "/psychology/patient-health-questionnaire/"
+  - "href": "/psychology/depression/patient-health-questionnaire/"
     "label": "Patient Health Questionnaire (PHQ-9)"
     "description": "A brief screen for depressive symptom severity"
 ---

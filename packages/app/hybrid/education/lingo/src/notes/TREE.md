@@ -12,6 +12,9 @@
 │   ├── ophthalmology/
 │   │   └── [vision.md](./health/ophthalmology/vision.md)
 │   └── psychology/
+│       ├── clinical/
+│       │   ├── [anxiety.md](./health/psychology/clinical/anxiety.md)
+│       │   └── [depression.md](./health/psychology/clinical/depression.md)
 │       ├── practices/
 │       │   ├── [counselling.md](./health/psychology/practices/counselling.md)
 │       │   ├── [journaling.md](./health/psychology/practices/journaling.md)
@@ -146,4 +149,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-27 directories, 115 files
+27 directories, 116 files

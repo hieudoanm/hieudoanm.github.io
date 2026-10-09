@@ -203,16 +203,28 @@ Routes are sorted alphabetically; hub descendants are nested bullets.
     components under `src/games/health/psychology/<theory>/<topic>/`; the
     cognitive memory drills are `memory-match`, `n-back`, `pi`, and `recall`,
     the cognitive attention drills are `dino-run`, `rock-paper-scissors`, and
-    `snake`, and the cognitive reasoning drills are `lights-out`, `towers`, and
-    `maze`
+    `snake`, and the cognitive reasoning drills are `lights-out`, `towers`,
+    `maze`, plus the abstract puzzles `game2048` and `sliding-puzzle`
+  - `/psychology/cognitive/reasoning/nikoli` — migrated from the `memory` app; a
+    hub of classic Japanese logic puzzles (`sudoku`, `nurikabe`, `masyu`,
+    `shikaku`, `fillomino`, `norinori`, `heyawake`) with implementations under
+    `src/games/health/psychology/cognitive/reasoning/nikoli/`
+  - `/psychology/cognitive/reasoning/tic-tac-toe` — migrated from the `memory`
+    app; a hub of six grid-duel variants (`classic`, `duck`, `notakto`,
+    `reverse`, `t3`, `wild`) with implementations under
+    `src/games/health/psychology/cognitive/reasoning/tic-tac-toe/`
+  - `/psychology/anxiety` — clinical note on anxiety; its screening instrument
+    is a nested descendant:
+    - `/psychology/anxiety/generalized-anxiety-disorder`
+  - `/psychology/depression` — clinical note on depression; its screening
+    instruments are nested descendants:
+    - `/psychology/depression/beck-depression-inventory`
+    - `/psychology/depression/patient-health-questionnaire`
   - `/psychology/<practice>` — practices: counselling, journaling, mindfulness
   - `/psychology/<scale>` — screening instruments, not diagnostics:
-    - beck-depression-inventory
     - big-five-inventory
     - dyadic-adjustment-scale
     - experiences-in-close-relationships
-    - generalized-anxiety-disorder
-    - patient-health-questionnaire
     - relationship-closeness-inventory
     - satisfaction-with-life
 - `/reset-password` — password reset

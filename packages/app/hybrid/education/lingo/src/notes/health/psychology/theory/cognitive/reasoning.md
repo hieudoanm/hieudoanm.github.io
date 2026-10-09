@@ -25,6 +25,29 @@
       "A generated perfect maze with a shortest-path solver. Breadth-first
       search visits cells in waves; tracing by hand is depth-first, and the cost
       shows."
+  - "href": "/psychology/cognitive/reasoning/game2048"
+    "label": "2048"
+    "description":
+      "Slide and merge equal tiles on a 4×4 grid. The greedy bot plays one move
+      at a time, which is planning under uncertainty rather than search."
+  - "href": "/psychology/cognitive/reasoning/sliding-puzzle"
+    "label": "Sliding Puzzle"
+    "description":
+      "Reassemble a scrambled image by sliding tiles into the gap. Every move
+      trades position for progress, so the solution is found by searching the
+      state space."
+  - "href": "/psychology/cognitive/reasoning/nikoli"
+    "label": "Nikoli Puzzles"
+    "description":
+      "Seven classic Japanese grid puzzles — Sudoku, Nurikabe, Masyu, Shikaku,
+      Fillomino, Norinori and Heyawake — each solved by propagating constraints
+      rather than searching, which is deductive inference made visible."
+  - "href": "/psychology/cognitive/reasoning/tic-tac-toe"
+    "label": "Tic-Tac-Toe"
+    "description":
+      "Six variants on the classic grid duel — Classic, Duck, Notakto, Reverse,
+      T3 and Wild. Each rewrites the win condition, so the same board teaches a
+      different game tree."
 "references":
   - "href": "https://en.wikipedia.org/wiki/Reasoning"
     "label": "Wikipedia: Reasoning"
