@@ -26,7 +26,7 @@ export const StoreCard: FC<StoreCardProps> = ({
   const { isFavorite, toggleFavorite } = useFavorites();
 
   return (
-    <div className="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg">
+    <div className="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-colors duration-300">
       <button
         type="button"
         onClick={() => toggleFavorite(app.slug)}
@@ -39,7 +39,7 @@ export const StoreCard: FC<StoreCardProps> = ({
         )}
       </button>
       <div className="card-body flex-col items-center justify-center gap-2 p-4 text-center">
-        <div className="bg-primary/20 border-primary/30 flex h-12 w-12 items-center justify-center rounded-full shadow-inner transition-transform duration-300 group-hover:scale-110">
+        <div className="bg-primary/20 border-primary/30 flex h-12 w-12 items-center justify-center rounded-md transition-colors duration-300">
           <Icon className="text-primary text-xl" />
         </div>
         <div className="w-full text-center">

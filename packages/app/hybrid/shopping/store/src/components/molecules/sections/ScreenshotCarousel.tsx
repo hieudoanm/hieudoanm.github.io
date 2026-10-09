@@ -51,7 +51,7 @@ export const ScreenshotCarousel: FC<ScreenshotCarouselProps> = ({
       <h2 className="text-base-content/70 mb-3 font-mono text-xs tracking-widest uppercase">
         Screenshots
       </h2>
-      <div className="bg-base-200 border-base-300 relative flex items-center justify-center overflow-hidden rounded-lg border">
+      <div className="bg-base-200 border-base-300 relative flex items-center justify-center overflow-hidden rounded-md border">
         {screenshots.length > 1 && (
           <button
             type="button"

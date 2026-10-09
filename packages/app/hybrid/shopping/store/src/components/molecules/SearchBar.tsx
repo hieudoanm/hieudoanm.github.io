@@ -64,7 +64,7 @@ export const SearchBar: FC<SearchBarProps> = ({
           className="input input-bordered focus:border-primary focus:outline-primary w-full"
         />
         {showSuggestions && hasSuggestions && (
-          <div className="bg-base-200 border-base-300 absolute top-full right-0 left-0 z-20 mt-1 rounded-lg border shadow-lg">
+          <div className="bg-base-200 border-base-300 absolute top-full right-0 left-0 z-20 mt-1 rounded-md border">
             {suggestions.map((s) => (
               <Link
                 key={s.slug}
@@ -79,7 +79,7 @@ export const SearchBar: FC<SearchBarProps> = ({
           </div>
         )}
         {showHistory && (
-          <div className="bg-base-200 border-base-300 absolute top-full right-0 left-0 z-20 mt-1 rounded-lg border shadow-lg">
+          <div className="bg-base-200 border-base-300 absolute top-full right-0 left-0 z-20 mt-1 rounded-md border">
             <div className="flex items-center justify-between px-4 py-2">
               <span className="text-base-content/40 font-mono text-xs tracking-widest uppercase">
                 Recent searches

@@ -18,17 +18,17 @@ const ProfilePage: FC = () => {
   return (
     <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <div className="card bg-base-100 w-full shadow-xl">
+        <div className="card bg-base-100 border-base-300 w-full border">
           <div className="card-body">
             <div className="mb-2 flex items-center justify-center">
               <div className="relative">
-                <div className="text-primary bg-primary/10 flex h-20 w-20 items-center justify-center rounded-full">
+                <div className="text-primary bg-primary/10 flex h-20 w-20 items-center justify-center rounded-md">
                   <FiUser className="h-10 w-10" />
                 </div>
                 <button
                   type="button"
                   aria-label="Change photo"
-                  className="btn btn-ghost btn-sm absolute -right-1 -bottom-1 rounded-full">
+                  className="btn btn-ghost btn-sm absolute -right-1 -bottom-1">
                   <FiCamera className="h-4 w-4" />
                 </button>
               </div>
