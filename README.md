@@ -13,7 +13,7 @@
 [twitter]: https://x.com/hieudoanm
 [instagram]: https://instagram.com/hieudoanm.github.io
 
-## [Open Releases (31)](https://hieudoanm.github.io/open)
+## [Open Releases (30)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions and Native Apps (3)
 
@@ -39,7 +39,7 @@
 
 ---
 
-### Hybrid (21)
+### Hybrid (20)
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
@@ -52,18 +52,17 @@
 | 17  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
 | 18  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
 | 19  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
-| 20  | Hybrid   | Graphics & Design | Photo       | [Open][open-photo]       | [Releases][releases-photo]       |
-| 21  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
-| 22  | Hybrid   | Medical           | Brainbow    | [Open][open-brainbow]    | [Releases][releases-brainbow]    |
-| 23  | Hybrid   | Medical           | MRI         | [Open][open-mri]         | [Releases][releases-mri]         |
-| 24  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
-| 25  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
-| 26  | Hybrid   | Productivity      | Resume      | [Open][open-resume]      | [Releases][releases-resume]      |
-| 27  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
-| 28  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 29  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 30  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 31  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 20  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
+| 21  | Hybrid   | Medical           | Brainbow    | [Open][open-brainbow]    | [Releases][releases-brainbow]    |
+| 22  | Hybrid   | Medical           | MRI         | [Open][open-mri]         | [Releases][releases-mri]         |
+| 23  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
+| 24  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
+| 25  | Hybrid   | Productivity      | Resume      | [Open][open-resume]      | [Releases][releases-resume]      |
+| 26  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
+| 27  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 28  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 29  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 30  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -80,7 +79,6 @@
 [open-lingo]: https://hieudoanm.github.io/open/lingo/
 [open-doi]: https://hieudoanm.github.io/open/doi/
 [open-foody]: https://hieudoanm.github.io/open/foody/
-[open-photo]: https://hieudoanm.github.io/open/photo/
 [open-svg]: https://hieudoanm.github.io/open/svg/
 [open-brainbow]: https://hieudoanm.github.io/open/brainbow/
 [open-mri]: https://hieudoanm.github.io/open/mri/
@@ -112,7 +110,6 @@
 [releases-lingo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest
 [releases-doi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-doi-latest
 [releases-foody]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest
-[releases-photo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-photo-latest
 [releases-svg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-svg-latest
 [releases-brainbow]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-brainbow-latest
 [releases-mri]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-mri-latest

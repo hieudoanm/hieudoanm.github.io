@@ -188,23 +188,6 @@ cards:
       success: '#2e7d32'
       error: '#d32f2f'
 
-  - app: graphics-design/photo
-    url: 'https://hieudoanm.github.io/open/photo/'
-    name: Photo
-    kicker: 'Layers, crop, albums'
-    title: 'An image editor in the tab'
-    description: 'A powerful image editor: a non-destructive layer stack, cropping and albums, all client-side.'
-    tags: ['Layer stack', 'Crop & resize', 'Albums', 'IndexedDB']
-    theme:
-      base: '#f7f7f3'
-      content: '#1f2b2b'
-      primary: '#4f772d'
-      secondary: '#31572c'
-      info: '#3b82f6'
-      warning: '#d97706'
-      success: '#65a30d'
-      error: '#b91c1c'
-
   - app: graphics-design/svg
     url: 'https://hieudoanm.github.io/open/svg/'
     name: SVG
