@@ -28,7 +28,7 @@ dependencies = [
 dev = [
     "pytest==9.1.1",
     "pytest-cov==7.1.0",
-    "ruff==0.16.10",
+    "ruff==0.17.0",
     "pyright==1.1.414",
 ]
 
@@ -63,7 +63,7 @@ tracking = [
 ]
 
 storage = [
-    "pyarrow==25.0.1",
+    "pyarrow==26.0.0",
     "duckdb==1.5.6",
 ]
 
@@ -142,6 +142,6 @@ pythonpath = ["src"]
 dev = [
     "pytest==9.1.1",
     "pytest-cov==7.1.0",
-    "ruff==0.16.10",
+    "ruff==0.17.0",
     "pyright==1.1.414",
 ]

@@ -9,7 +9,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser.git", exact: "1.8.2"),
-        .package(url: "https://github.com/scinfu/SwiftSoup.git", exact: "2.13.9"),
+        .package(url: "https://github.com/scinfu/SwiftSoup.git", exact: "2.14.1"),
     ],
     targets: [
         .executableTarget(
