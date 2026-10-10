@@ -16,10 +16,11 @@ Examples:
 - [programming/devops/docker](./programming/devops/docker)
 - [programming/languages/python](./programming/languages/python)
 - [programming/database/sql/postgresql](./programming/database/sql/postgresql)
+- [programming/design/solution](./programming/design/solution)
 
 ### Research
 
-A structured set of research skills for literature review, writing, replication, meta-analysis, and evidence synthesis.
+A structured set of research skills for study design, systematic reviews, qualitative analysis, literature synthesis, writing, reproduction, replication, and meta-analysis.
 
 Examples:
 
@@ -27,6 +28,16 @@ Examples:
 - [research/paper-reading](./research/paper-reading)
 - [research/research-writing](./research/research-writing)
 - [research/meta-analysis](./research/meta-analysis)
+- [research/study-design-protocol](./research/study-design-protocol)
+- [research/systematic-review](./research/systematic-review)
+- [research/qualitative-analysis](./research/qualitative-analysis)
+- [research/quantitative-analysis-plan](./research/quantitative-analysis-plan)
+- [research/research-data-management](./research/research-data-management)
+- [research/causal-inference](./research/causal-inference)
+- [research/research-ethics-governance](./research/research-ethics-governance)
+- [research/scientific-peer-review](./research/scientific-peer-review)
+- [research/research-visualization](./research/research-visualization)
+- [research/grant-proposal](./research/grant-proposal)
 
 ## How to use this library
 
@@ -47,6 +58,7 @@ Then navigate to the matching topic area.
 #### If you are building software
 
 - [programming/languages/typescript](./programming/languages/typescript)
+- [programming/languages/terraform](./programming/languages/terraform) — Terraform core, AWS, Azure, and Google Cloud
 - [programming/development/architecture/hexagonal](./programming/development/architecture/hexagonal)
 - [programming/development/security/jwt](./programming/development/security/jwt)
 - [programming/devops/docker](./programming/devops/docker)
@@ -64,6 +76,16 @@ Then navigate to the matching topic area.
 - [research/literature-review](./research/literature-review)
 - [research/research-gap](./research/research-gap)
 - [research/research-writing](./research/research-writing)
+- [research/study-design-protocol](./research/study-design-protocol)
+- [research/systematic-review](./research/systematic-review)
+- [research/qualitative-analysis](./research/qualitative-analysis)
+- [research/quantitative-analysis-plan](./research/quantitative-analysis-plan)
+- [research/research-data-management](./research/research-data-management)
+- [research/causal-inference](./research/causal-inference)
+- [research/research-ethics-governance](./research/research-ethics-governance)
+- [research/scientific-peer-review](./research/scientific-peer-review)
+- [research/research-visualization](./research/research-visualization)
+- [research/grant-proposal](./research/grant-proposal)
 
 ## Library structure
 

@@ -1,29 +1,42 @@
-# Literature Review: Starter Template
+# Literature Review: Evidence Synthesis Starter
 
-A fill-in scaffold for work guided by [Literature Review](../SKILL.md). Keep the artifact specific to the project's evidence and constraints.
+A research-specific scaffold for a transparent review. Tailor it to the question, discipline, and review type; distinguish planned methods from work already completed.
 
-## Objective
+## Review question and scope
 
-<!-- State the question, change, or outcome this artifact supports. -->
+- Review question:
+- Population/system and phenomenon:
+- Eligible study designs, outcomes, and date range:
+- Exclusions and rationale:
+- Review type and protocol/registration:
 
-## Inputs and evidence
+## Search record
 
-- Source materials:
-- Relevant versions or context:
-- Known limitations:
+- Databases and platforms:
+- Search date(s):
+- Search strings and limits:
+- Citation chaining or other sources:
+- Records retrieved by source:
 
-## Approach
+## Screening and extraction
 
-1. <!-- Apply the most relevant guidance from SKILL.md. -->
-2. <!-- Record key choices and why they fit the constraints. -->
-3. <!-- Note alternatives, uncertainties, or exceptions. -->
+- Deduplication method and count:
+- Title/abstract and full-text criteria:
+- Exclusions at full text with reasons:
+- Extracted fields (design, sample, measures, results, limitations):
+- Appraisal approach and reviewer process:
 
-## Deliverable
+## Evidence synthesis
 
-<!-- Add the implementation, synthesis, design, or decision output here. -->
+- Evidence table or source location:
+- Themes / effect groupings:
+- Agreement, disagreement, and plausible explanations:
+- Risk of bias, certainty, and limitations:
+- Claims linked to supporting sources:
 
-## Review notes
+## Gaps and reporting
 
-- Assumptions:
-- Open questions:
-- Follow-up:
+- Defensible gaps and why they matter:
+- Conclusions proportional to evidence:
+- Search/screening flow and reporting checklist:
+- Unresolved decisions, deviations, and dates:

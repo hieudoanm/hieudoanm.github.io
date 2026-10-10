@@ -4,16 +4,17 @@ description: "Create self-contained HTML research posters that communicate resea
 tags:
   - "research"
   - "poster"
-when_to_use: "Use when creating a scientific poster as a self-contained HTML deliverable for browser viewing, screenshot capture, or PDF export."
+when_to_use: "Use to turn a completed study or evidence synthesis into a self-contained scientific poster for a defined canvas, browser capture, or PDF export."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "Verified study question, methods, results, limitations, and references, or explicit placeholders for information not yet available."
+  - "Poster dimensions, audience, and export requirements."
 related_skills:
   - "../research-writing/SKILL.md"
   - "../paper-pdf-to-markdown/SKILL.md"
   - "../research-replication/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When the underlying study results are not yet verified; create a clearly labeled draft or placeholder poster rather than presenting invented findings."
+  - "When the requested output is a manuscript, slide deck, or interactive dashboard rather than a poster."
 status: "active"
 ---
 
@@ -71,6 +72,7 @@ Therefore:
 - Avoid animations that could capture an inconsistent state.
 - Avoid dynamically changing content unless explicitly requested.
 - Keep important information visible without interaction.
+- Mark every illustrative or synthetic example prominently; do not let sample values read as actual study findings.
 
 The final HTML should render deterministically.
 

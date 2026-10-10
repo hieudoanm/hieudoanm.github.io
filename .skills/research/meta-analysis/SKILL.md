@@ -5,16 +5,19 @@ tags:
   - "research"
   - "meta"
   - "analysis"
-when_to_use: "Use when conducting or communicating work related to meta-analysis, especially when a structured research workflow is needed."
+when_to_use: "Use to plan, perform, or critically interpret a quantitative synthesis that pools compatible effect estimates from multiple studies and evaluates heterogeneity, bias, and uncertainty."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "A focused question, explicit eligibility criteria, and a documented search or study set."
+  - "At least two studies with outcomes and effect estimates that can be meaningfully harmonized, or data sufficient to derive them."
+  - "A justified effect measure and model, with statistical software and expertise appropriate to the analysis."
 related_skills:
   - "../research-replication/SKILL.md"
   - "../research-reproduction/SKILL.md"
   - "../literature-review/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When studies do not estimate a sufficiently comparable outcome or estimand; use a structured narrative synthesis instead of forcing a pooled estimate."
+  - "When only one study is available; use critical appraisal and report the evidence without pooling."
+  - "When the goal is to test a finding with new data or repeat original code; use research-replication or research-reproduction."
 status: "active"
 ---
 

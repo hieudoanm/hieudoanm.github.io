@@ -4,16 +4,18 @@ description: "Reproduce published scientific research by reconstructing the orig
 tags:
   - "research"
   - "reproduction"
-when_to_use: "Use when conducting or communicating work related to research reproduction, especially when a structured research workflow is needed."
+when_to_use: "Use to reconstruct and rerun a published computational or empirical analysis using its original data, code, methods, and documented computational conditions."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "The target paper and sufficient access to its original data, code, protocols, or detailed methods."
+  - "A suitable software/runtime environment and a record of versions, dependencies, and deviations."
+  - "Permission and safeguards appropriate to the data and any restricted materials."
 related_skills:
   - "../paper-reading/SKILL.md"
   - "../research-replication/SKILL.md"
   - "../meta-analysis/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When the question is whether the finding holds with new participants or newly collected evidence; use research-replication."
+  - "When original inputs or procedures are unavailable; document the gap and classify any modified analysis accurately instead of claiming exact reproduction."
 status: "active"
 ---
 

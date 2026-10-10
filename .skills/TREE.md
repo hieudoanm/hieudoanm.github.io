@@ -479,304 +479,397 @@
 │   │           ├── [README.md](./programming/database/wide-column/apache-hbase/README.md)
 │   │           └── [SKILL.md](./programming/database/wide-column/apache-hbase/SKILL.md)
 │   ├── design/
-│   │   ├── brand/
-│   │   │   ├── astryx.atmeta.com/
+│   │   ├── solution/
+│   │   │   ├── architecture-decision-records/
 │   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/astryx.atmeta.com/assets/decision-record.md)
-│   │   │   │   │   ├── [template.html](./programming/design/brand/astryx.atmeta.com/assets/template.html)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/astryx.atmeta.com/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/astryx.atmeta.com/assets/workflow-checklist.md)
+│   │   │   │   │   ├── [adr-template.md](./programming/design/solution/architecture-decision-records/assets/adr-template.md)
+│   │   │   │   │   ├── [decision-log-index.md](./programming/design/solution/architecture-decision-records/assets/decision-log-index.md)
+│   │   │   │   │   ├── [decision-review-checklist.md](./programming/design/solution/architecture-decision-records/assets/decision-review-checklist.md)
+│   │   │   │   │   └── [option-comparison.md](./programming/design/solution/architecture-decision-records/assets/option-comparison.md)
 │   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/astryx.atmeta.com/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/astryx.atmeta.com/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/astryx.atmeta.com/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/astryx.atmeta.com/examples/testing-and-validation.md)
+│   │   │   │   │   ├── [database-choice.md](./programming/design/solution/architecture-decision-records/examples/database-choice.md)
+│   │   │   │   │   ├── [shared-platform.md](./programming/design/solution/architecture-decision-records/examples/shared-platform.md)
+│   │   │   │   │   ├── [superseded-decision.md](./programming/design/solution/architecture-decision-records/examples/superseded-decision.md)
+│   │   │   │   │   └── [synchronous-versus-asynchronous.md](./programming/design/solution/architecture-decision-records/examples/synchronous-versus-asynchronous.md)
 │   │   │   │   ├── references/
-│   │   │   │   │   ├── [components.md](./programming/design/brand/astryx.atmeta.com/references/components.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/astryx.atmeta.com/references/overview.md)
-│   │   │   │   │   ├── [tokens.css](./programming/design/brand/astryx.atmeta.com/references/tokens.css)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/astryx.atmeta.com/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/astryx.atmeta.com/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/astryx.atmeta.com/SKILL.md)
-│   │   │   ├── atlassian.design/
+│   │   │   │   │   ├── [decision-quality.md](./programming/design/solution/architecture-decision-records/references/decision-quality.md)
+│   │   │   │   │   ├── [option-evaluation.md](./programming/design/solution/architecture-decision-records/references/option-evaluation.md)
+│   │   │   │   │   ├── [record-structure.md](./programming/design/solution/architecture-decision-records/references/record-structure.md)
+│   │   │   │   │   └── [status-and-lifecycle.md](./programming/design/solution/architecture-decision-records/references/status-and-lifecycle.md)
+│   │   │   │   ├── [README.md](./programming/design/solution/architecture-decision-records/README.md)
+│   │   │   │   └── [SKILL.md](./programming/design/solution/architecture-decision-records/SKILL.md)
+│   │   │   ├── integration-architecture/
 │   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/atlassian.design/assets/decision-record.md)
-│   │   │   │   │   ├── [starter-template.md](./programming/design/brand/atlassian.design/assets/starter-template.md)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/atlassian.design/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/atlassian.design/assets/workflow-checklist.md)
+│   │   │   │   │   ├── [compatibility-plan.md](./programming/design/solution/integration-architecture/assets/compatibility-plan.md)
+│   │   │   │   │   ├── [failure-mode-table.md](./programming/design/solution/integration-architecture/assets/failure-mode-table.md)
+│   │   │   │   │   ├── [integration-contract.md](./programming/design/solution/integration-architecture/assets/integration-contract.md)
+│   │   │   │   │   └── [integration-review-checklist.md](./programming/design/solution/integration-architecture/assets/integration-review-checklist.md)
 │   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/atlassian.design/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/atlassian.design/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/atlassian.design/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/atlassian.design/examples/testing-and-validation.md)
+│   │   │   │   │   ├── [batch-data-exchange.md](./programming/design/solution/integration-architecture/examples/batch-data-exchange.md)
+│   │   │   │   │   ├── [event-notification.md](./programming/design/solution/integration-architecture/examples/event-notification.md)
+│   │   │   │   │   ├── [request-response-api.md](./programming/design/solution/integration-architecture/examples/request-response-api.md)
+│   │   │   │   │   └── [third-party-provider.md](./programming/design/solution/integration-architecture/examples/third-party-provider.md)
 │   │   │   │   ├── references/
-│   │   │   │   │   ├── [implementation-notes.md](./programming/design/brand/atlassian.design/references/implementation-notes.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/atlassian.design/references/overview.md)
-│   │   │   │   │   ├── [review-checklist.md](./programming/design/brand/atlassian.design/references/review-checklist.md)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/atlassian.design/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/atlassian.design/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/atlassian.design/SKILL.md)
-│   │   │   ├── carbondesignsystem.com/
+│   │   │   │   │   ├── [contract-evolution.md](./programming/design/solution/integration-architecture/references/contract-evolution.md)
+│   │   │   │   │   ├── [interaction-patterns.md](./programming/design/solution/integration-architecture/references/interaction-patterns.md)
+│   │   │   │   │   ├── [reliability-semantics.md](./programming/design/solution/integration-architecture/references/reliability-semantics.md)
+│   │   │   │   │   └── [security-and-observability.md](./programming/design/solution/integration-architecture/references/security-and-observability.md)
+│   │   │   │   ├── [README.md](./programming/design/solution/integration-architecture/README.md)
+│   │   │   │   └── [SKILL.md](./programming/design/solution/integration-architecture/SKILL.md)
+│   │   │   ├── quality-attribute-analysis/
 │   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/carbondesignsystem.com/assets/decision-record.md)
-│   │   │   │   │   ├── [starter-template.md](./programming/design/brand/carbondesignsystem.com/assets/starter-template.md)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/carbondesignsystem.com/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/carbondesignsystem.com/assets/workflow-checklist.md)
+│   │   │   │   │   ├── [quality-priority-matrix.md](./programming/design/solution/quality-attribute-analysis/assets/quality-priority-matrix.md)
+│   │   │   │   │   ├── [quality-scenario-worksheet.md](./programming/design/solution/quality-attribute-analysis/assets/quality-scenario-worksheet.md)
+│   │   │   │   │   ├── [risk-acceptance-record.md](./programming/design/solution/quality-attribute-analysis/assets/risk-acceptance-record.md)
+│   │   │   │   │   └── [verification-map.md](./programming/design/solution/quality-attribute-analysis/assets/verification-map.md)
 │   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/carbondesignsystem.com/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/carbondesignsystem.com/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/carbondesignsystem.com/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/carbondesignsystem.com/examples/testing-and-validation.md)
+│   │   │   │   │   ├── [availability-scenario.md](./programming/design/solution/quality-attribute-analysis/examples/availability-scenario.md)
+│   │   │   │   │   ├── [latency-under-load.md](./programming/design/solution/quality-attribute-analysis/examples/latency-under-load.md)
+│   │   │   │   │   ├── [maintainability-constraint.md](./programming/design/solution/quality-attribute-analysis/examples/maintainability-constraint.md)
+│   │   │   │   │   └── [recovery-objective.md](./programming/design/solution/quality-attribute-analysis/examples/recovery-objective.md)
 │   │   │   │   ├── references/
-│   │   │   │   │   ├── [implementation-notes.md](./programming/design/brand/carbondesignsystem.com/references/implementation-notes.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/carbondesignsystem.com/references/overview.md)
-│   │   │   │   │   ├── [review-checklist.md](./programming/design/brand/carbondesignsystem.com/references/review-checklist.md)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/carbondesignsystem.com/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/carbondesignsystem.com/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/carbondesignsystem.com/SKILL.md)
-│   │   │   ├── claude.com/
+│   │   │   │   │   ├── [performance-and-capacity.md](./programming/design/solution/quality-attribute-analysis/references/performance-and-capacity.md)
+│   │   │   │   │   ├── [reliability-and-recovery.md](./programming/design/solution/quality-attribute-analysis/references/reliability-and-recovery.md)
+│   │   │   │   │   ├── [scenario-construction.md](./programming/design/solution/quality-attribute-analysis/references/scenario-construction.md)
+│   │   │   │   │   └── [security-and-operability.md](./programming/design/solution/quality-attribute-analysis/references/security-and-operability.md)
+│   │   │   │   ├── [README.md](./programming/design/solution/quality-attribute-analysis/README.md)
+│   │   │   │   └── [SKILL.md](./programming/design/solution/quality-attribute-analysis/SKILL.md)
+│   │   │   ├── solution-architecture/
 │   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/claude.com/assets/decision-record.md)
-│   │   │   │   │   ├── [template.html](./programming/design/brand/claude.com/assets/template.html)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/claude.com/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/claude.com/assets/workflow-checklist.md)
+│   │   │   │   │   ├── [architecture-brief.md](./programming/design/solution/solution-architecture/assets/architecture-brief.md)
+│   │   │   │   │   ├── [option-matrix.md](./programming/design/solution/solution-architecture/assets/option-matrix.md)
+│   │   │   │   │   ├── [review-checklist.md](./programming/design/solution/solution-architecture/assets/review-checklist.md)
+│   │   │   │   │   └── [risk-register.md](./programming/design/solution/solution-architecture/assets/risk-register.md)
 │   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/claude.com/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/claude.com/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/claude.com/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/claude.com/examples/testing-and-validation.md)
+│   │   │   │   │   ├── [incremental-migration.md](./programming/design/solution/solution-architecture/examples/incremental-migration.md)
+│   │   │   │   │   ├── [legacy-modernization.md](./programming/design/solution/solution-architecture/examples/legacy-modernization.md)
+│   │   │   │   │   ├── [managed-service.md](./programming/design/solution/solution-architecture/examples/managed-service.md)
+│   │   │   │   │   └── [new-service.md](./programming/design/solution/solution-architecture/examples/new-service.md)
 │   │   │   │   ├── references/
-│   │   │   │   │   ├── [components.md](./programming/design/brand/claude.com/references/components.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/claude.com/references/overview.md)
-│   │   │   │   │   ├── [tokens.css](./programming/design/brand/claude.com/references/tokens.css)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/claude.com/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/claude.com/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/claude.com/SKILL.md)
-│   │   │   ├── getartcraft.com/
+│   │   │   │   │   ├── [architecture-views.md](./programming/design/solution/solution-architecture/references/architecture-views.md)
+│   │   │   │   │   ├── [architecture-workflow.md](./programming/design/solution/solution-architecture/references/architecture-workflow.md)
+│   │   │   │   │   ├── [option-analysis.md](./programming/design/solution/solution-architecture/references/option-analysis.md)
+│   │   │   │   │   └── [validation-and-evolution.md](./programming/design/solution/solution-architecture/references/validation-and-evolution.md)
+│   │   │   │   ├── [README.md](./programming/design/solution/solution-architecture/README.md)
+│   │   │   │   └── [SKILL.md](./programming/design/solution/solution-architecture/SKILL.md)
+│   │   │   ├── system-context-and-boundaries/
 │   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/getartcraft.com/assets/decision-record.md)
-│   │   │   │   │   ├── [template.html](./programming/design/brand/getartcraft.com/assets/template.html)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/getartcraft.com/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/getartcraft.com/assets/workflow-checklist.md)
+│   │   │   │   │   ├── [boundary-decision-record.md](./programming/design/solution/system-context-and-boundaries/assets/boundary-decision-record.md)
+│   │   │   │   │   ├── [context-inventory.md](./programming/design/solution/system-context-and-boundaries/assets/context-inventory.md)
+│   │   │   │   │   ├── [responsibility-map.md](./programming/design/solution/system-context-and-boundaries/assets/responsibility-map.md)
+│   │   │   │   │   └── [trust-flow-checklist.md](./programming/design/solution/system-context-and-boundaries/assets/trust-flow-checklist.md)
 │   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/getartcraft.com/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/getartcraft.com/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/getartcraft.com/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/getartcraft.com/examples/testing-and-validation.md)
+│   │   │   │   │   ├── [context-diagram.md](./programming/design/solution/system-context-and-boundaries/examples/context-diagram.md)
+│   │   │   │   │   ├── [data-authority-conflict.md](./programming/design/solution/system-context-and-boundaries/examples/data-authority-conflict.md)
+│   │   │   │   │   ├── [monolith-decomposition.md](./programming/design/solution/system-context-and-boundaries/examples/monolith-decomposition.md)
+│   │   │   │   │   └── [team-ownership-boundary.md](./programming/design/solution/system-context-and-boundaries/examples/team-ownership-boundary.md)
 │   │   │   │   ├── references/
-│   │   │   │   │   ├── [components.md](./programming/design/brand/getartcraft.com/references/components.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/getartcraft.com/references/overview.md)
-│   │   │   │   │   ├── [tokens.css](./programming/design/brand/getartcraft.com/references/tokens.css)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/getartcraft.com/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/getartcraft.com/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/getartcraft.com/SKILL.md)
-│   │   │   ├── lightningdesignsystem.com/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/lightningdesignsystem.com/assets/decision-record.md)
-│   │   │   │   │   ├── [starter-template.md](./programming/design/brand/lightningdesignsystem.com/assets/starter-template.md)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/lightningdesignsystem.com/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/lightningdesignsystem.com/assets/workflow-checklist.md)
-│   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/lightningdesignsystem.com/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/lightningdesignsystem.com/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/lightningdesignsystem.com/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/lightningdesignsystem.com/examples/testing-and-validation.md)
-│   │   │   │   ├── references/
-│   │   │   │   │   ├── [implementation-notes.md](./programming/design/brand/lightningdesignsystem.com/references/implementation-notes.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/lightningdesignsystem.com/references/overview.md)
-│   │   │   │   │   ├── [review-checklist.md](./programming/design/brand/lightningdesignsystem.com/references/review-checklist.md)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/lightningdesignsystem.com/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/lightningdesignsystem.com/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/lightningdesignsystem.com/SKILL.md)
-│   │   │   ├── m3.material.io/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/m3.material.io/assets/decision-record.md)
-│   │   │   │   │   ├── [starter-template.md](./programming/design/brand/m3.material.io/assets/starter-template.md)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/m3.material.io/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/m3.material.io/assets/workflow-checklist.md)
-│   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/m3.material.io/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/m3.material.io/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/m3.material.io/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/m3.material.io/examples/testing-and-validation.md)
-│   │   │   │   ├── references/
-│   │   │   │   │   ├── [implementation-notes.md](./programming/design/brand/m3.material.io/references/implementation-notes.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/m3.material.io/references/overview.md)
-│   │   │   │   │   ├── [review-checklist.md](./programming/design/brand/m3.material.io/references/review-checklist.md)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/m3.material.io/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/m3.material.io/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/m3.material.io/SKILL.md)
-│   │   │   ├── nothing.tech/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/nothing.tech/assets/decision-record.md)
-│   │   │   │   │   ├── [starter-template.md](./programming/design/brand/nothing.tech/assets/starter-template.md)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/nothing.tech/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/nothing.tech/assets/workflow-checklist.md)
-│   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/nothing.tech/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/nothing.tech/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/nothing.tech/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/nothing.tech/examples/testing-and-validation.md)
-│   │   │   │   ├── references/
-│   │   │   │   │   ├── [implementation-notes.md](./programming/design/brand/nothing.tech/references/implementation-notes.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/nothing.tech/references/overview.md)
-│   │   │   │   │   ├── [review-checklist.md](./programming/design/brand/nothing.tech/references/review-checklist.md)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/nothing.tech/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/nothing.tech/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/nothing.tech/SKILL.md)
-│   │   │   ├── notion.com/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── app/
-│   │   │   │   │   │   └── [template.html](./programming/design/brand/notion.com/assets/app/template.html)
-│   │   │   │   │   ├── marketing/
-│   │   │   │   │   │   └── [template.html](./programming/design/brand/notion.com/assets/marketing/template.html)
-│   │   │   │   │   ├── [app-template.html](./programming/design/brand/notion.com/assets/app-template.html)
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/notion.com/assets/decision-record.md)
-│   │   │   │   │   ├── [marketing-template.html](./programming/design/brand/notion.com/assets/marketing-template.html)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/notion.com/assets/workflow-checklist.md)
-│   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/notion.com/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/notion.com/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/notion.com/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/notion.com/examples/testing-and-validation.md)
-│   │   │   │   ├── references/
-│   │   │   │   │   ├── app/
-│   │   │   │   │   │   └── [components.md](./programming/design/brand/notion.com/references/app/components.md)
-│   │   │   │   │   ├── marketing/
-│   │   │   │   │   │   └── [components.md](./programming/design/brand/notion.com/references/marketing/components.md)
-│   │   │   │   │   ├── [app-components.md](./programming/design/brand/notion.com/references/app-components.md)
-│   │   │   │   │   ├── [marketing-components.md](./programming/design/brand/notion.com/references/marketing-components.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/notion.com/references/overview.md)
-│   │   │   │   │   └── [tokens.css](./programming/design/brand/notion.com/references/tokens.css)
-│   │   │   │   ├── [README.md](./programming/design/brand/notion.com/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/notion.com/SKILL.md)
-│   │   │   ├── opencode.ai/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/opencode.ai/assets/decision-record.md)
-│   │   │   │   │   ├── [template.html](./programming/design/brand/opencode.ai/assets/template.html)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/opencode.ai/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/opencode.ai/assets/workflow-checklist.md)
-│   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/opencode.ai/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/opencode.ai/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/opencode.ai/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/opencode.ai/examples/testing-and-validation.md)
-│   │   │   │   ├── references/
-│   │   │   │   │   ├── [components.md](./programming/design/brand/opencode.ai/references/components.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/opencode.ai/references/overview.md)
-│   │   │   │   │   ├── [tokens.css](./programming/design/brand/opencode.ai/references/tokens.css)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/opencode.ai/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/opencode.ai/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/opencode.ai/SKILL.md)
-│   │   │   ├── polaris/
-│   │   │   │   ├── assets/
-│   │   │   │   │   ├── [decision-record.md](./programming/design/brand/polaris/assets/decision-record.md)
-│   │   │   │   │   ├── [starter-template.md](./programming/design/brand/polaris/assets/starter-template.md)
-│   │   │   │   │   ├── [validation-plan.md](./programming/design/brand/polaris/assets/validation-plan.md)
-│   │   │   │   │   └── [workflow-checklist.md](./programming/design/brand/polaris/assets/workflow-checklist.md)
-│   │   │   │   ├── examples/
-│   │   │   │   │   ├── [basic-usage.md](./programming/design/brand/polaris/examples/basic-usage.md)
-│   │   │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/brand/polaris/examples/reliability-and-edge-cases.md)
-│   │   │   │   │   ├── [setup-and-configuration.md](./programming/design/brand/polaris/examples/setup-and-configuration.md)
-│   │   │   │   │   └── [testing-and-validation.md](./programming/design/brand/polaris/examples/testing-and-validation.md)
-│   │   │   │   ├── references/
-│   │   │   │   │   ├── [implementation-notes.md](./programming/design/brand/polaris/references/implementation-notes.md)
-│   │   │   │   │   ├── [overview.md](./programming/design/brand/polaris/references/overview.md)
-│   │   │   │   │   ├── [review-checklist.md](./programming/design/brand/polaris/references/review-checklist.md)
-│   │   │   │   │   └── [workflow-notes.md](./programming/design/brand/polaris/references/workflow-notes.md)
-│   │   │   │   ├── [README.md](./programming/design/brand/polaris/README.md)
-│   │   │   │   └── [SKILL.md](./programming/design/brand/polaris/SKILL.md)
-│   │   │   └── spectrum.adobe.com/
-│   │   │       ├── assets/
-│   │   │       │   ├── [decision-record.md](./programming/design/brand/spectrum.adobe.com/assets/decision-record.md)
-│   │   │       │   ├── [starter-template.md](./programming/design/brand/spectrum.adobe.com/assets/starter-template.md)
-│   │   │       │   ├── [validation-plan.md](./programming/design/brand/spectrum.adobe.com/assets/validation-plan.md)
-│   │   │       │   └── [workflow-checklist.md](./programming/design/brand/spectrum.adobe.com/assets/workflow-checklist.md)
-│   │   │       ├── examples/
-│   │   │       │   ├── [basic-usage.md](./programming/design/brand/spectrum.adobe.com/examples/basic-usage.md)
-│   │   │       │   ├── [reliability-and-edge-cases.md](./programming/design/brand/spectrum.adobe.com/examples/reliability-and-edge-cases.md)
-│   │   │       │   ├── [setup-and-configuration.md](./programming/design/brand/spectrum.adobe.com/examples/setup-and-configuration.md)
-│   │   │       │   └── [testing-and-validation.md](./programming/design/brand/spectrum.adobe.com/examples/testing-and-validation.md)
-│   │   │       ├── references/
-│   │   │       │   ├── [implementation-notes.md](./programming/design/brand/spectrum.adobe.com/references/implementation-notes.md)
-│   │   │       │   ├── [overview.md](./programming/design/brand/spectrum.adobe.com/references/overview.md)
-│   │   │       │   ├── [review-checklist.md](./programming/design/brand/spectrum.adobe.com/references/review-checklist.md)
-│   │   │       │   └── [workflow-notes.md](./programming/design/brand/spectrum.adobe.com/references/workflow-notes.md)
-│   │   │       ├── [README.md](./programming/design/brand/spectrum.adobe.com/README.md)
-│   │   │       └── [SKILL.md](./programming/design/brand/spectrum.adobe.com/SKILL.md)
-│   │   └── philosophy/
-│   │       ├── brutalism/
-│   │       │   ├── assets/
-│   │       │   │   ├── [decision-record.md](./programming/design/philosophy/brutalism/assets/decision-record.md)
-│   │       │   │   ├── [starter-template.md](./programming/design/philosophy/brutalism/assets/starter-template.md)
-│   │       │   │   ├── [validation-plan.md](./programming/design/philosophy/brutalism/assets/validation-plan.md)
-│   │       │   │   └── [workflow-checklist.md](./programming/design/philosophy/brutalism/assets/workflow-checklist.md)
-│   │       │   ├── examples/
-│   │       │   │   ├── [basic-usage.md](./programming/design/philosophy/brutalism/examples/basic-usage.md)
-│   │       │   │   ├── [reliability-and-edge-cases.md](./programming/design/philosophy/brutalism/examples/reliability-and-edge-cases.md)
-│   │       │   │   ├── [setup-and-configuration.md](./programming/design/philosophy/brutalism/examples/setup-and-configuration.md)
-│   │       │   │   └── [testing-and-validation.md](./programming/design/philosophy/brutalism/examples/testing-and-validation.md)
-│   │       │   ├── references/
-│   │       │   │   ├── [implementation-notes.md](./programming/design/philosophy/brutalism/references/implementation-notes.md)
-│   │       │   │   ├── [overview.md](./programming/design/philosophy/brutalism/references/overview.md)
-│   │       │   │   ├── [review-checklist.md](./programming/design/philosophy/brutalism/references/review-checklist.md)
-│   │       │   │   └── [workflow-notes.md](./programming/design/philosophy/brutalism/references/workflow-notes.md)
-│   │       │   ├── [README.md](./programming/design/philosophy/brutalism/README.md)
-│   │       │   └── [SKILL.md](./programming/design/philosophy/brutalism/SKILL.md)
-│   │       ├── flat/
-│   │       │   ├── assets/
-│   │       │   │   ├── [decision-record.md](./programming/design/philosophy/flat/assets/decision-record.md)
-│   │       │   │   ├── [starter-template.md](./programming/design/philosophy/flat/assets/starter-template.md)
-│   │       │   │   ├── [validation-plan.md](./programming/design/philosophy/flat/assets/validation-plan.md)
-│   │       │   │   └── [workflow-checklist.md](./programming/design/philosophy/flat/assets/workflow-checklist.md)
-│   │       │   ├── examples/
-│   │       │   │   ├── [basic-usage.md](./programming/design/philosophy/flat/examples/basic-usage.md)
-│   │       │   │   ├── [reliability-and-edge-cases.md](./programming/design/philosophy/flat/examples/reliability-and-edge-cases.md)
-│   │       │   │   ├── [setup-and-configuration.md](./programming/design/philosophy/flat/examples/setup-and-configuration.md)
-│   │       │   │   └── [testing-and-validation.md](./programming/design/philosophy/flat/examples/testing-and-validation.md)
-│   │       │   ├── references/
-│   │       │   │   ├── [implementation-notes.md](./programming/design/philosophy/flat/references/implementation-notes.md)
-│   │       │   │   ├── [overview.md](./programming/design/philosophy/flat/references/overview.md)
-│   │       │   │   ├── [review-checklist.md](./programming/design/philosophy/flat/references/review-checklist.md)
-│   │       │   │   └── [workflow-notes.md](./programming/design/philosophy/flat/references/workflow-notes.md)
-│   │       │   ├── [README.md](./programming/design/philosophy/flat/README.md)
-│   │       │   └── [SKILL.md](./programming/design/philosophy/flat/SKILL.md)
-│   │       ├── maximalism/
-│   │       │   ├── assets/
-│   │       │   │   ├── [decision-record.md](./programming/design/philosophy/maximalism/assets/decision-record.md)
-│   │       │   │   ├── [starter-template.md](./programming/design/philosophy/maximalism/assets/starter-template.md)
-│   │       │   │   ├── [validation-plan.md](./programming/design/philosophy/maximalism/assets/validation-plan.md)
-│   │       │   │   └── [workflow-checklist.md](./programming/design/philosophy/maximalism/assets/workflow-checklist.md)
-│   │       │   ├── examples/
-│   │       │   │   ├── [basic-usage.md](./programming/design/philosophy/maximalism/examples/basic-usage.md)
-│   │       │   │   ├── [reliability-and-edge-cases.md](./programming/design/philosophy/maximalism/examples/reliability-and-edge-cases.md)
-│   │       │   │   ├── [setup-and-configuration.md](./programming/design/philosophy/maximalism/examples/setup-and-configuration.md)
-│   │       │   │   └── [testing-and-validation.md](./programming/design/philosophy/maximalism/examples/testing-and-validation.md)
-│   │       │   ├── references/
-│   │       │   │   ├── [implementation-notes.md](./programming/design/philosophy/maximalism/references/implementation-notes.md)
-│   │       │   │   ├── [overview.md](./programming/design/philosophy/maximalism/references/overview.md)
-│   │       │   │   ├── [review-checklist.md](./programming/design/philosophy/maximalism/references/review-checklist.md)
-│   │       │   │   └── [workflow-notes.md](./programming/design/philosophy/maximalism/references/workflow-notes.md)
-│   │       │   ├── [README.md](./programming/design/philosophy/maximalism/README.md)
-│   │       │   └── [SKILL.md](./programming/design/philosophy/maximalism/SKILL.md)
-│   │       └── minimalism/
-│   │           ├── assets/
-│   │           │   ├── [decision-record.md](./programming/design/philosophy/minimalism/assets/decision-record.md)
-│   │           │   ├── [starter-template.md](./programming/design/philosophy/minimalism/assets/starter-template.md)
-│   │           │   ├── [validation-plan.md](./programming/design/philosophy/minimalism/assets/validation-plan.md)
-│   │           │   └── [workflow-checklist.md](./programming/design/philosophy/minimalism/assets/workflow-checklist.md)
-│   │           ├── examples/
-│   │           │   ├── [basic-usage.md](./programming/design/philosophy/minimalism/examples/basic-usage.md)
-│   │           │   ├── [reliability-and-edge-cases.md](./programming/design/philosophy/minimalism/examples/reliability-and-edge-cases.md)
-│   │           │   ├── [setup-and-configuration.md](./programming/design/philosophy/minimalism/examples/setup-and-configuration.md)
-│   │           │   └── [testing-and-validation.md](./programming/design/philosophy/minimalism/examples/testing-and-validation.md)
-│   │           ├── references/
-│   │           │   ├── [implementation-notes.md](./programming/design/philosophy/minimalism/references/implementation-notes.md)
-│   │           │   ├── [overview.md](./programming/design/philosophy/minimalism/references/overview.md)
-│   │           │   ├── [review-checklist.md](./programming/design/philosophy/minimalism/references/review-checklist.md)
-│   │           │   └── [workflow-notes.md](./programming/design/philosophy/minimalism/references/workflow-notes.md)
-│   │           ├── [README.md](./programming/design/philosophy/minimalism/README.md)
-│   │           └── [SKILL.md](./programming/design/philosophy/minimalism/SKILL.md)
+│   │   │   │   │   ├── [context-modeling.md](./programming/design/solution/system-context-and-boundaries/references/context-modeling.md)
+│   │   │   │   │   ├── [data-ownership.md](./programming/design/solution/system-context-and-boundaries/references/data-ownership.md)
+│   │   │   │   │   ├── [responsibility-and-domain-boundaries.md](./programming/design/solution/system-context-and-boundaries/references/responsibility-and-domain-boundaries.md)
+│   │   │   │   │   └── [trust-boundaries.md](./programming/design/solution/system-context-and-boundaries/references/trust-boundaries.md)
+│   │   │   │   ├── [README.md](./programming/design/solution/system-context-and-boundaries/README.md)
+│   │   │   │   └── [SKILL.md](./programming/design/solution/system-context-and-boundaries/SKILL.md)
+│   │   │   └── [README.md](./programming/design/solution/README.md)
+│   │   └── ui/
+│   │       ├── brand/
+│   │       │   ├── astryx.atmeta.com/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/astryx.atmeta.com/assets/decision-record.md)
+│   │       │   │   │   ├── [template.html](./programming/design/ui/brand/astryx.atmeta.com/assets/template.html)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/astryx.atmeta.com/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/astryx.atmeta.com/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/astryx.atmeta.com/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/astryx.atmeta.com/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/astryx.atmeta.com/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/astryx.atmeta.com/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [components.md](./programming/design/ui/brand/astryx.atmeta.com/references/components.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/astryx.atmeta.com/references/overview.md)
+│   │       │   │   │   ├── [tokens.css](./programming/design/ui/brand/astryx.atmeta.com/references/tokens.css)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/astryx.atmeta.com/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/astryx.atmeta.com/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/astryx.atmeta.com/SKILL.md)
+│   │       │   ├── atlassian.design/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/atlassian.design/assets/decision-record.md)
+│   │       │   │   │   ├── [starter-template.md](./programming/design/ui/brand/atlassian.design/assets/starter-template.md)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/atlassian.design/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/atlassian.design/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/atlassian.design/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/atlassian.design/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/atlassian.design/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/atlassian.design/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [implementation-notes.md](./programming/design/ui/brand/atlassian.design/references/implementation-notes.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/atlassian.design/references/overview.md)
+│   │       │   │   │   ├── [review-checklist.md](./programming/design/ui/brand/atlassian.design/references/review-checklist.md)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/atlassian.design/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/atlassian.design/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/atlassian.design/SKILL.md)
+│   │       │   ├── carbondesignsystem.com/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/carbondesignsystem.com/assets/decision-record.md)
+│   │       │   │   │   ├── [starter-template.md](./programming/design/ui/brand/carbondesignsystem.com/assets/starter-template.md)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/carbondesignsystem.com/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/carbondesignsystem.com/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/carbondesignsystem.com/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/carbondesignsystem.com/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/carbondesignsystem.com/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/carbondesignsystem.com/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [implementation-notes.md](./programming/design/ui/brand/carbondesignsystem.com/references/implementation-notes.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/carbondesignsystem.com/references/overview.md)
+│   │       │   │   │   ├── [review-checklist.md](./programming/design/ui/brand/carbondesignsystem.com/references/review-checklist.md)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/carbondesignsystem.com/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/carbondesignsystem.com/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/carbondesignsystem.com/SKILL.md)
+│   │       │   ├── claude.com/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/claude.com/assets/decision-record.md)
+│   │       │   │   │   ├── [template.html](./programming/design/ui/brand/claude.com/assets/template.html)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/claude.com/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/claude.com/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/claude.com/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/claude.com/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/claude.com/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/claude.com/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [components.md](./programming/design/ui/brand/claude.com/references/components.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/claude.com/references/overview.md)
+│   │       │   │   │   ├── [tokens.css](./programming/design/ui/brand/claude.com/references/tokens.css)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/claude.com/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/claude.com/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/claude.com/SKILL.md)
+│   │       │   ├── getartcraft.com/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/getartcraft.com/assets/decision-record.md)
+│   │       │   │   │   ├── [template.html](./programming/design/ui/brand/getartcraft.com/assets/template.html)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/getartcraft.com/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/getartcraft.com/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/getartcraft.com/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/getartcraft.com/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/getartcraft.com/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/getartcraft.com/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [components.md](./programming/design/ui/brand/getartcraft.com/references/components.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/getartcraft.com/references/overview.md)
+│   │       │   │   │   ├── [tokens.css](./programming/design/ui/brand/getartcraft.com/references/tokens.css)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/getartcraft.com/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/getartcraft.com/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/getartcraft.com/SKILL.md)
+│   │       │   ├── lightningdesignsystem.com/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/lightningdesignsystem.com/assets/decision-record.md)
+│   │       │   │   │   ├── [starter-template.md](./programming/design/ui/brand/lightningdesignsystem.com/assets/starter-template.md)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/lightningdesignsystem.com/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/lightningdesignsystem.com/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/lightningdesignsystem.com/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/lightningdesignsystem.com/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/lightningdesignsystem.com/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/lightningdesignsystem.com/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [implementation-notes.md](./programming/design/ui/brand/lightningdesignsystem.com/references/implementation-notes.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/lightningdesignsystem.com/references/overview.md)
+│   │       │   │   │   ├── [review-checklist.md](./programming/design/ui/brand/lightningdesignsystem.com/references/review-checklist.md)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/lightningdesignsystem.com/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/lightningdesignsystem.com/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/lightningdesignsystem.com/SKILL.md)
+│   │       │   ├── m3.material.io/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/m3.material.io/assets/decision-record.md)
+│   │       │   │   │   ├── [starter-template.md](./programming/design/ui/brand/m3.material.io/assets/starter-template.md)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/m3.material.io/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/m3.material.io/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/m3.material.io/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/m3.material.io/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/m3.material.io/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/m3.material.io/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [implementation-notes.md](./programming/design/ui/brand/m3.material.io/references/implementation-notes.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/m3.material.io/references/overview.md)
+│   │       │   │   │   ├── [review-checklist.md](./programming/design/ui/brand/m3.material.io/references/review-checklist.md)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/m3.material.io/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/m3.material.io/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/m3.material.io/SKILL.md)
+│   │       │   ├── nothing.tech/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/nothing.tech/assets/decision-record.md)
+│   │       │   │   │   ├── [starter-template.md](./programming/design/ui/brand/nothing.tech/assets/starter-template.md)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/nothing.tech/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/nothing.tech/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/nothing.tech/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/nothing.tech/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/nothing.tech/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/nothing.tech/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [implementation-notes.md](./programming/design/ui/brand/nothing.tech/references/implementation-notes.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/nothing.tech/references/overview.md)
+│   │       │   │   │   ├── [review-checklist.md](./programming/design/ui/brand/nothing.tech/references/review-checklist.md)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/nothing.tech/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/nothing.tech/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/nothing.tech/SKILL.md)
+│   │       │   ├── notion.com/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── app/
+│   │       │   │   │   │   └── [template.html](./programming/design/ui/brand/notion.com/assets/app/template.html)
+│   │       │   │   │   ├── marketing/
+│   │       │   │   │   │   └── [template.html](./programming/design/ui/brand/notion.com/assets/marketing/template.html)
+│   │       │   │   │   ├── [app-template.html](./programming/design/ui/brand/notion.com/assets/app-template.html)
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/notion.com/assets/decision-record.md)
+│   │       │   │   │   ├── [marketing-template.html](./programming/design/ui/brand/notion.com/assets/marketing-template.html)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/notion.com/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/notion.com/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/notion.com/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/notion.com/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/notion.com/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── app/
+│   │       │   │   │   │   └── [components.md](./programming/design/ui/brand/notion.com/references/app/components.md)
+│   │       │   │   │   ├── marketing/
+│   │       │   │   │   │   └── [components.md](./programming/design/ui/brand/notion.com/references/marketing/components.md)
+│   │       │   │   │   ├── [app-components.md](./programming/design/ui/brand/notion.com/references/app-components.md)
+│   │       │   │   │   ├── [marketing-components.md](./programming/design/ui/brand/notion.com/references/marketing-components.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/notion.com/references/overview.md)
+│   │       │   │   │   └── [tokens.css](./programming/design/ui/brand/notion.com/references/tokens.css)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/notion.com/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/notion.com/SKILL.md)
+│   │       │   ├── opencode.ai/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/opencode.ai/assets/decision-record.md)
+│   │       │   │   │   ├── [template.html](./programming/design/ui/brand/opencode.ai/assets/template.html)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/opencode.ai/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/opencode.ai/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/opencode.ai/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/opencode.ai/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/opencode.ai/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/opencode.ai/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [components.md](./programming/design/ui/brand/opencode.ai/references/components.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/opencode.ai/references/overview.md)
+│   │       │   │   │   ├── [tokens.css](./programming/design/ui/brand/opencode.ai/references/tokens.css)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/opencode.ai/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/opencode.ai/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/opencode.ai/SKILL.md)
+│   │       │   ├── polaris/
+│   │       │   │   ├── assets/
+│   │       │   │   │   ├── [decision-record.md](./programming/design/ui/brand/polaris/assets/decision-record.md)
+│   │       │   │   │   ├── [starter-template.md](./programming/design/ui/brand/polaris/assets/starter-template.md)
+│   │       │   │   │   ├── [validation-plan.md](./programming/design/ui/brand/polaris/assets/validation-plan.md)
+│   │       │   │   │   └── [workflow-checklist.md](./programming/design/ui/brand/polaris/assets/workflow-checklist.md)
+│   │       │   │   ├── examples/
+│   │       │   │   │   ├── [basic-usage.md](./programming/design/ui/brand/polaris/examples/basic-usage.md)
+│   │       │   │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/polaris/examples/reliability-and-edge-cases.md)
+│   │       │   │   │   ├── [setup-and-configuration.md](./programming/design/ui/brand/polaris/examples/setup-and-configuration.md)
+│   │       │   │   │   └── [testing-and-validation.md](./programming/design/ui/brand/polaris/examples/testing-and-validation.md)
+│   │       │   │   ├── references/
+│   │       │   │   │   ├── [implementation-notes.md](./programming/design/ui/brand/polaris/references/implementation-notes.md)
+│   │       │   │   │   ├── [overview.md](./programming/design/ui/brand/polaris/references/overview.md)
+│   │       │   │   │   ├── [review-checklist.md](./programming/design/ui/brand/polaris/references/review-checklist.md)
+│   │       │   │   │   └── [workflow-notes.md](./programming/design/ui/brand/polaris/references/workflow-notes.md)
+│   │       │   │   ├── [README.md](./programming/design/ui/brand/polaris/README.md)
+│   │       │   │   └── [SKILL.md](./programming/design/ui/brand/polaris/SKILL.md)
+│   │       │   └── spectrum.adobe.com/
+│   │       │       ├── assets/
+│   │       │       │   ├── [decision-record.md](./programming/design/ui/brand/spectrum.adobe.com/assets/decision-record.md)
+│   │       │       │   ├── [starter-template.md](./programming/design/ui/brand/spectrum.adobe.com/assets/starter-template.md)
+│   │       │       │   ├── [validation-plan.md](./programming/design/ui/brand/spectrum.adobe.com/assets/validation-plan.md)
+│   │       │       │   └── [workflow-checklist.md](./programming/design/ui/brand/spectrum.adobe.com/assets/workflow-checklist.md)
+│   │       │       ├── examples/
+│   │       │       │   ├── [basic-usage.md](./programming/design/ui/brand/spectrum.adobe.com/examples/basic-usage.md)
+│   │       │       │   ├── [reliability-and-edge-cases.md](./programming/design/ui/brand/spectrum.adobe.com/examples/reliability-and-edge-cases.md)
+│   │       │       │   ├── [setup-and-configuration.md](./programming/design/ui/brand/spectrum.adobe.com/examples/setup-and-configuration.md)
+│   │       │       │   └── [testing-and-validation.md](./programming/design/ui/brand/spectrum.adobe.com/examples/testing-and-validation.md)
+│   │       │       ├── references/
+│   │       │       │   ├── [implementation-notes.md](./programming/design/ui/brand/spectrum.adobe.com/references/implementation-notes.md)
+│   │       │       │   ├── [overview.md](./programming/design/ui/brand/spectrum.adobe.com/references/overview.md)
+│   │       │       │   ├── [review-checklist.md](./programming/design/ui/brand/spectrum.adobe.com/references/review-checklist.md)
+│   │       │       │   └── [workflow-notes.md](./programming/design/ui/brand/spectrum.adobe.com/references/workflow-notes.md)
+│   │       │       ├── [README.md](./programming/design/ui/brand/spectrum.adobe.com/README.md)
+│   │       │       └── [SKILL.md](./programming/design/ui/brand/spectrum.adobe.com/SKILL.md)
+│   │       └── philosophy/
+│   │           ├── brutalism/
+│   │           │   ├── assets/
+│   │           │   │   ├── [decision-record.md](./programming/design/ui/philosophy/brutalism/assets/decision-record.md)
+│   │           │   │   ├── [starter-template.md](./programming/design/ui/philosophy/brutalism/assets/starter-template.md)
+│   │           │   │   ├── [validation-plan.md](./programming/design/ui/philosophy/brutalism/assets/validation-plan.md)
+│   │           │   │   └── [workflow-checklist.md](./programming/design/ui/philosophy/brutalism/assets/workflow-checklist.md)
+│   │           │   ├── examples/
+│   │           │   │   ├── [basic-usage.md](./programming/design/ui/philosophy/brutalism/examples/basic-usage.md)
+│   │           │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/philosophy/brutalism/examples/reliability-and-edge-cases.md)
+│   │           │   │   ├── [setup-and-configuration.md](./programming/design/ui/philosophy/brutalism/examples/setup-and-configuration.md)
+│   │           │   │   └── [testing-and-validation.md](./programming/design/ui/philosophy/brutalism/examples/testing-and-validation.md)
+│   │           │   ├── references/
+│   │           │   │   ├── [implementation-notes.md](./programming/design/ui/philosophy/brutalism/references/implementation-notes.md)
+│   │           │   │   ├── [overview.md](./programming/design/ui/philosophy/brutalism/references/overview.md)
+│   │           │   │   ├── [review-checklist.md](./programming/design/ui/philosophy/brutalism/references/review-checklist.md)
+│   │           │   │   └── [workflow-notes.md](./programming/design/ui/philosophy/brutalism/references/workflow-notes.md)
+│   │           │   ├── [README.md](./programming/design/ui/philosophy/brutalism/README.md)
+│   │           │   └── [SKILL.md](./programming/design/ui/philosophy/brutalism/SKILL.md)
+│   │           ├── flat/
+│   │           │   ├── assets/
+│   │           │   │   ├── [decision-record.md](./programming/design/ui/philosophy/flat/assets/decision-record.md)
+│   │           │   │   ├── [starter-template.md](./programming/design/ui/philosophy/flat/assets/starter-template.md)
+│   │           │   │   ├── [validation-plan.md](./programming/design/ui/philosophy/flat/assets/validation-plan.md)
+│   │           │   │   └── [workflow-checklist.md](./programming/design/ui/philosophy/flat/assets/workflow-checklist.md)
+│   │           │   ├── examples/
+│   │           │   │   ├── [basic-usage.md](./programming/design/ui/philosophy/flat/examples/basic-usage.md)
+│   │           │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/philosophy/flat/examples/reliability-and-edge-cases.md)
+│   │           │   │   ├── [setup-and-configuration.md](./programming/design/ui/philosophy/flat/examples/setup-and-configuration.md)
+│   │           │   │   └── [testing-and-validation.md](./programming/design/ui/philosophy/flat/examples/testing-and-validation.md)
+│   │           │   ├── references/
+│   │           │   │   ├── [implementation-notes.md](./programming/design/ui/philosophy/flat/references/implementation-notes.md)
+│   │           │   │   ├── [overview.md](./programming/design/ui/philosophy/flat/references/overview.md)
+│   │           │   │   ├── [review-checklist.md](./programming/design/ui/philosophy/flat/references/review-checklist.md)
+│   │           │   │   └── [workflow-notes.md](./programming/design/ui/philosophy/flat/references/workflow-notes.md)
+│   │           │   ├── [README.md](./programming/design/ui/philosophy/flat/README.md)
+│   │           │   └── [SKILL.md](./programming/design/ui/philosophy/flat/SKILL.md)
+│   │           ├── maximalism/
+│   │           │   ├── assets/
+│   │           │   │   ├── [decision-record.md](./programming/design/ui/philosophy/maximalism/assets/decision-record.md)
+│   │           │   │   ├── [starter-template.md](./programming/design/ui/philosophy/maximalism/assets/starter-template.md)
+│   │           │   │   ├── [validation-plan.md](./programming/design/ui/philosophy/maximalism/assets/validation-plan.md)
+│   │           │   │   └── [workflow-checklist.md](./programming/design/ui/philosophy/maximalism/assets/workflow-checklist.md)
+│   │           │   ├── examples/
+│   │           │   │   ├── [basic-usage.md](./programming/design/ui/philosophy/maximalism/examples/basic-usage.md)
+│   │           │   │   ├── [reliability-and-edge-cases.md](./programming/design/ui/philosophy/maximalism/examples/reliability-and-edge-cases.md)
+│   │           │   │   ├── [setup-and-configuration.md](./programming/design/ui/philosophy/maximalism/examples/setup-and-configuration.md)
+│   │           │   │   └── [testing-and-validation.md](./programming/design/ui/philosophy/maximalism/examples/testing-and-validation.md)
+│   │           │   ├── references/
+│   │           │   │   ├── [implementation-notes.md](./programming/design/ui/philosophy/maximalism/references/implementation-notes.md)
+│   │           │   │   ├── [overview.md](./programming/design/ui/philosophy/maximalism/references/overview.md)
+│   │           │   │   ├── [review-checklist.md](./programming/design/ui/philosophy/maximalism/references/review-checklist.md)
+│   │           │   │   └── [workflow-notes.md](./programming/design/ui/philosophy/maximalism/references/workflow-notes.md)
+│   │           │   ├── [README.md](./programming/design/ui/philosophy/maximalism/README.md)
+│   │           │   └── [SKILL.md](./programming/design/ui/philosophy/maximalism/SKILL.md)
+│   │           └── minimalism/
+│   │               ├── assets/
+│   │               │   ├── [decision-record.md](./programming/design/ui/philosophy/minimalism/assets/decision-record.md)
+│   │               │   ├── [starter-template.md](./programming/design/ui/philosophy/minimalism/assets/starter-template.md)
+│   │               │   ├── [validation-plan.md](./programming/design/ui/philosophy/minimalism/assets/validation-plan.md)
+│   │               │   └── [workflow-checklist.md](./programming/design/ui/philosophy/minimalism/assets/workflow-checklist.md)
+│   │               ├── examples/
+│   │               │   ├── [basic-usage.md](./programming/design/ui/philosophy/minimalism/examples/basic-usage.md)
+│   │               │   ├── [reliability-and-edge-cases.md](./programming/design/ui/philosophy/minimalism/examples/reliability-and-edge-cases.md)
+│   │               │   ├── [setup-and-configuration.md](./programming/design/ui/philosophy/minimalism/examples/setup-and-configuration.md)
+│   │               │   └── [testing-and-validation.md](./programming/design/ui/philosophy/minimalism/examples/testing-and-validation.md)
+│   │               ├── references/
+│   │               │   ├── [implementation-notes.md](./programming/design/ui/philosophy/minimalism/references/implementation-notes.md)
+│   │               │   ├── [overview.md](./programming/design/ui/philosophy/minimalism/references/overview.md)
+│   │               │   ├── [review-checklist.md](./programming/design/ui/philosophy/minimalism/references/review-checklist.md)
+│   │               │   └── [workflow-notes.md](./programming/design/ui/philosophy/minimalism/references/workflow-notes.md)
+│   │               ├── [README.md](./programming/design/ui/philosophy/minimalism/README.md)
+│   │               └── [SKILL.md](./programming/design/ui/philosophy/minimalism/SKILL.md)
 │   ├── development/
 │   │   ├── architecture/
 │   │   │   ├── cqrs/
@@ -3678,6 +3771,78 @@
 │   │   │   │       └── [SKILL.md](./programming/languages/swift/ui/swiftui/SKILL.md)
 │   │   │   ├── [README.md](./programming/languages/swift/README.md)
 │   │   │   └── [SKILL.md](./programming/languages/swift/SKILL.md)
+│   │   ├── terraform/
+│   │   │   ├── assets/
+│   │   │   │   ├── [change-runbook.md](./programming/languages/terraform/assets/change-runbook.md)
+│   │   │   │   ├── [module-review-checklist.md](./programming/languages/terraform/assets/module-review-checklist.md)
+│   │   │   │   ├── [plan-approval-record.md](./programming/languages/terraform/assets/plan-approval-record.md)
+│   │   │   │   └── [state-boundary-design.md](./programming/languages/terraform/assets/state-boundary-design.md)
+│   │   │   ├── aws/
+│   │   │   │   ├── assets/
+│   │   │   │   │   ├── [deployment-review.md](./programming/languages/terraform/aws/assets/deployment-review.md)
+│   │   │   │   │   ├── [iam-review.md](./programming/languages/terraform/aws/assets/iam-review.md)
+│   │   │   │   │   ├── [identity-map.md](./programming/languages/terraform/aws/assets/identity-map.md)
+│   │   │   │   │   └── [state-recovery.md](./programming/languages/terraform/aws/assets/state-recovery.md)
+│   │   │   │   ├── examples/
+│   │   │   │   │   ├── [assume-role-account.md](./programming/languages/terraform/aws/examples/assume-role-account.md)
+│   │   │   │   │   ├── [least-privilege-policy.md](./programming/languages/terraform/aws/examples/least-privilege-policy.md)
+│   │   │   │   │   ├── [provider-setup.md](./programming/languages/terraform/aws/examples/provider-setup.md)
+│   │   │   │   │   └── [s3-backend.md](./programming/languages/terraform/aws/examples/s3-backend.md)
+│   │   │   │   ├── references/
+│   │   │   │   │   ├── [iam-and-resource-security.md](./programming/languages/terraform/aws/references/iam-and-resource-security.md)
+│   │   │   │   │   ├── [identity-and-boundaries.md](./programming/languages/terraform/aws/references/identity-and-boundaries.md)
+│   │   │   │   │   ├── [resource-lifecycle.md](./programming/languages/terraform/aws/references/resource-lifecycle.md)
+│   │   │   │   │   └── [state-backend.md](./programming/languages/terraform/aws/references/state-backend.md)
+│   │   │   │   ├── [README.md](./programming/languages/terraform/aws/README.md)
+│   │   │   │   └── [SKILL.md](./programming/languages/terraform/aws/SKILL.md)
+│   │   │   ├── azure/
+│   │   │   │   ├── assets/
+│   │   │   │   │   ├── [deployment-review.md](./programming/languages/terraform/azure/assets/deployment-review.md)
+│   │   │   │   │   ├── [identity-map.md](./programming/languages/terraform/azure/assets/identity-map.md)
+│   │   │   │   │   ├── [rbac-review.md](./programming/languages/terraform/azure/assets/rbac-review.md)
+│   │   │   │   │   └── [state-recovery.md](./programming/languages/terraform/azure/assets/state-recovery.md)
+│   │   │   │   ├── examples/
+│   │   │   │   │   ├── [blob-backend.md](./programming/languages/terraform/azure/examples/blob-backend.md)
+│   │   │   │   │   ├── [cross-subscription.md](./programming/languages/terraform/azure/examples/cross-subscription.md)
+│   │   │   │   │   ├── [provider-setup.md](./programming/languages/terraform/azure/examples/provider-setup.md)
+│   │   │   │   │   └── [role-assignment.md](./programming/languages/terraform/azure/examples/role-assignment.md)
+│   │   │   │   ├── references/
+│   │   │   │   │   ├── [identity-and-boundaries.md](./programming/languages/terraform/azure/references/identity-and-boundaries.md)
+│   │   │   │   │   ├── [rbac-and-security.md](./programming/languages/terraform/azure/references/rbac-and-security.md)
+│   │   │   │   │   ├── [resource-lifecycle.md](./programming/languages/terraform/azure/references/resource-lifecycle.md)
+│   │   │   │   │   └── [state-backend.md](./programming/languages/terraform/azure/references/state-backend.md)
+│   │   │   │   ├── [README.md](./programming/languages/terraform/azure/README.md)
+│   │   │   │   └── [SKILL.md](./programming/languages/terraform/azure/SKILL.md)
+│   │   │   ├── examples/
+│   │   │   │   ├── [minimal-root-module.md](./programming/languages/terraform/examples/minimal-root-module.md)
+│   │   │   │   ├── [plan-review.md](./programming/languages/terraform/examples/plan-review.md)
+│   │   │   │   ├── [refactor-and-import.md](./programming/languages/terraform/examples/refactor-and-import.md)
+│   │   │   │   └── [stable-resource-identity.md](./programming/languages/terraform/examples/stable-resource-identity.md)
+│   │   │   ├── gcp/
+│   │   │   │   ├── assets/
+│   │   │   │   │   ├── [deployment-review.md](./programming/languages/terraform/gcp/assets/deployment-review.md)
+│   │   │   │   │   ├── [iam-review.md](./programming/languages/terraform/gcp/assets/iam-review.md)
+│   │   │   │   │   ├── [identity-map.md](./programming/languages/terraform/gcp/assets/identity-map.md)
+│   │   │   │   │   └── [state-recovery.md](./programming/languages/terraform/gcp/assets/state-recovery.md)
+│   │   │   │   ├── examples/
+│   │   │   │   │   ├── [gcs-backend.md](./programming/languages/terraform/gcp/examples/gcs-backend.md)
+│   │   │   │   │   ├── [impersonation.md](./programming/languages/terraform/gcp/examples/impersonation.md)
+│   │   │   │   │   ├── [project-iam-member.md](./programming/languages/terraform/gcp/examples/project-iam-member.md)
+│   │   │   │   │   └── [provider-setup.md](./programming/languages/terraform/gcp/examples/provider-setup.md)
+│   │   │   │   ├── references/
+│   │   │   │   │   ├── [iam-and-security.md](./programming/languages/terraform/gcp/references/iam-and-security.md)
+│   │   │   │   │   ├── [identity-and-boundaries.md](./programming/languages/terraform/gcp/references/identity-and-boundaries.md)
+│   │   │   │   │   ├── [resource-lifecycle.md](./programming/languages/terraform/gcp/references/resource-lifecycle.md)
+│   │   │   │   │   └── [state-backend.md](./programming/languages/terraform/gcp/references/state-backend.md)
+│   │   │   │   ├── [README.md](./programming/languages/terraform/gcp/README.md)
+│   │   │   │   └── [SKILL.md](./programming/languages/terraform/gcp/SKILL.md)
+│   │   │   ├── references/
+│   │   │   │   ├── [core-workflow.md](./programming/languages/terraform/references/core-workflow.md)
+│   │   │   │   ├── [modules-and-configuration.md](./programming/languages/terraform/references/modules-and-configuration.md)
+│   │   │   │   ├── [state-and-security.md](./programming/languages/terraform/references/state-and-security.md)
+│   │   │   │   └── [testing-and-review.md](./programming/languages/terraform/references/testing-and-review.md)
+│   │   │   ├── [README.md](./programming/languages/terraform/README.md)
+│   │   │   └── [SKILL.md](./programming/languages/terraform/SKILL.md)
 │   │   └── typescript/
 │   │       ├── assets/
 │   │       │   ├── [decision-record.md](./programming/languages/typescript/assets/decision-record.md)
@@ -5740,6 +5905,42 @@
 │               ├── [README.md](./programming/saas/payment/stripe/README.md)
 │               └── [SKILL.md](./programming/saas/payment/stripe/SKILL.md)
 ├── research/
+│   ├── causal-inference/
+│   │   ├── assets/
+│   │   │   ├── [assumption-register.md](./research/causal-inference/assets/assumption-register.md)
+│   │   │   ├── [causal-claim-review.md](./research/causal-inference/assets/causal-claim-review.md)
+│   │   │   ├── [causal-question-worksheet.md](./research/causal-inference/assets/causal-question-worksheet.md)
+│   │   │   └── [dag-review-checklist.md](./research/causal-inference/assets/dag-review-checklist.md)
+│   │   ├── examples/
+│   │   │   ├── [difference-in-differences.md](./research/causal-inference/examples/difference-in-differences.md)
+│   │   │   ├── [observational-cohort.md](./research/causal-inference/examples/observational-cohort.md)
+│   │   │   ├── [randomized-assignment.md](./research/causal-inference/examples/randomized-assignment.md)
+│   │   │   └── [target-trial-emulation.md](./research/causal-inference/examples/target-trial-emulation.md)
+│   │   ├── references/
+│   │   │   ├── [causal-diagrams.md](./research/causal-inference/references/causal-diagrams.md)
+│   │   │   ├── [causal-questions-and-estimands.md](./research/causal-inference/references/causal-questions-and-estimands.md)
+│   │   │   ├── [identification-strategies.md](./research/causal-inference/references/identification-strategies.md)
+│   │   │   └── [sensitivity-and-diagnostics.md](./research/causal-inference/references/sensitivity-and-diagnostics.md)
+│   │   ├── [README.md](./research/causal-inference/README.md)
+│   │   └── [SKILL.md](./research/causal-inference/SKILL.md)
+│   ├── grant-proposal/
+│   │   ├── assets/
+│   │   │   ├── [aims-methods-map.md](./research/grant-proposal/assets/aims-methods-map.md)
+│   │   │   ├── [call-fit-matrix.md](./research/grant-proposal/assets/call-fit-matrix.md)
+│   │   │   ├── [proposal-review-checklist.md](./research/grant-proposal/assets/proposal-review-checklist.md)
+│   │   │   └── [risk-mitigation-register.md](./research/grant-proposal/assets/risk-mitigation-register.md)
+│   │   ├── examples/
+│   │   │   ├── [budget-justification.md](./research/grant-proposal/examples/budget-justification.md)
+│   │   │   ├── [feasibility-and-alternatives.md](./research/grant-proposal/examples/feasibility-and-alternatives.md)
+│   │   │   ├── [impact-pathway.md](./research/grant-proposal/examples/impact-pathway.md)
+│   │   │   └── [specific-aims-page.md](./research/grant-proposal/examples/specific-aims-page.md)
+│   │   ├── references/
+│   │   │   ├── [aims-and-logic-model.md](./research/grant-proposal/references/aims-and-logic-model.md)
+│   │   │   ├── [approach-and-feasibility.md](./research/grant-proposal/references/approach-and-feasibility.md)
+│   │   │   ├── [funder-fit-and-criteria.md](./research/grant-proposal/references/funder-fit-and-criteria.md)
+│   │   │   └── [impact-and-budget.md](./research/grant-proposal/references/impact-and-budget.md)
+│   │   ├── [README.md](./research/grant-proposal/README.md)
+│   │   └── [SKILL.md](./research/grant-proposal/SKILL.md)
 │   ├── literature-review/
 │   │   ├── assets/
 │   │   │   ├── [decision-record.md](./research/literature-review/assets/decision-record.md)
@@ -5813,11 +6014,12 @@
 │   │   ├── [README.md](./research/paper-reading/README.md)
 │   │   └── [SKILL.md](./research/paper-reading/SKILL.md)
 │   ├── progressive-explanation/
-│   │   ├── archived-examples/
-│   │   │   ├── mathematics/
-│   │   │   │   ├── [linear-algreba.md](./research/progressive-explanation/archived-examples/mathematics/linear-algreba.md)
-│   │   │   │   └── [probability.md](./research/progressive-explanation/archived-examples/mathematics/probability.md)
-│   │   │   └── [README.md](./research/progressive-explanation/archived-examples/README.md)
+│   │   ├── archived/
+│   │   │   └── examples/
+│   │   │       ├── mathematics/
+│   │   │       │   ├── [linear-algreba.md](./research/progressive-explanation/archived/examples/mathematics/linear-algreba.md)
+│   │   │       │   └── [probability.md](./research/progressive-explanation/archived/examples/mathematics/probability.md)
+│   │   │       └── [README.md](./research/progressive-explanation/archived/examples/README.md)
 │   │   ├── assets/
 │   │   │   ├── [decision-record.md](./research/progressive-explanation/assets/decision-record.md)
 │   │   │   ├── [starter-template.md](./research/progressive-explanation/assets/starter-template.md)
@@ -5835,6 +6037,78 @@
 │   │   │   └── [workflow-notes.md](./research/progressive-explanation/references/workflow-notes.md)
 │   │   ├── [README.md](./research/progressive-explanation/README.md)
 │   │   └── [SKILL.md](./research/progressive-explanation/SKILL.md)
+│   ├── qualitative-analysis/
+│   │   ├── assets/
+│   │   │   ├── [analytic-audit-log.md](./research/qualitative-analysis/assets/analytic-audit-log.md)
+│   │   │   ├── [codebook-framework.md](./research/qualitative-analysis/assets/codebook-framework.md)
+│   │   │   ├── [evidence-claim-matrix.md](./research/qualitative-analysis/assets/evidence-claim-matrix.md)
+│   │   │   └── [reflexive-memo.md](./research/qualitative-analysis/assets/reflexive-memo.md)
+│   │   ├── examples/
+│   │   │   ├── [framework-analysis.md](./research/qualitative-analysis/examples/framework-analysis.md)
+│   │   │   ├── [mixed-methods-integration.md](./research/qualitative-analysis/examples/mixed-methods-integration.md)
+│   │   │   ├── [qualitative-content-analysis.md](./research/qualitative-analysis/examples/qualitative-content-analysis.md)
+│   │   │   └── [reflexive-thematic-analysis.md](./research/qualitative-analysis/examples/reflexive-thematic-analysis.md)
+│   │   ├── references/
+│   │   │   ├── [approach-selection.md](./research/qualitative-analysis/references/approach-selection.md)
+│   │   │   ├── [coding-and-interpretation.md](./research/qualitative-analysis/references/coding-and-interpretation.md)
+│   │   │   ├── [reflexivity.md](./research/qualitative-analysis/references/reflexivity.md)
+│   │   │   └── [trustworthiness-and-reporting.md](./research/qualitative-analysis/references/trustworthiness-and-reporting.md)
+│   │   ├── [README.md](./research/qualitative-analysis/README.md)
+│   │   └── [SKILL.md](./research/qualitative-analysis/SKILL.md)
+│   ├── quantitative-analysis-plan/
+│   │   ├── assets/
+│   │   │   ├── [analysis-plan-template.md](./research/quantitative-analysis-plan/assets/analysis-plan-template.md)
+│   │   │   ├── [analysis-review-checklist.md](./research/quantitative-analysis-plan/assets/analysis-review-checklist.md)
+│   │   │   ├── [decision-deviation-log.md](./research/quantitative-analysis-plan/assets/decision-deviation-log.md)
+│   │   │   └── [estimand-table.md](./research/quantitative-analysis-plan/assets/estimand-table.md)
+│   │   ├── examples/
+│   │   │   ├── [diagnostic-study.md](./research/quantitative-analysis-plan/examples/diagnostic-study.md)
+│   │   │   ├── [exploratory-analysis.md](./research/quantitative-analysis-plan/examples/exploratory-analysis.md)
+│   │   │   ├── [longitudinal-cohort.md](./research/quantitative-analysis-plan/examples/longitudinal-cohort.md)
+│   │   │   └── [randomized-trial.md](./research/quantitative-analysis-plan/examples/randomized-trial.md)
+│   │   ├── references/
+│   │   │   ├── [estimands-and-outcomes.md](./research/quantitative-analysis-plan/references/estimands-and-outcomes.md)
+│   │   │   ├── [missing-data-and-exclusions.md](./research/quantitative-analysis-plan/references/missing-data-and-exclusions.md)
+│   │   │   ├── [model-choice-and-diagnostics.md](./research/quantitative-analysis-plan/references/model-choice-and-diagnostics.md)
+│   │   │   └── [multiplicity-and-sensitivity.md](./research/quantitative-analysis-plan/references/multiplicity-and-sensitivity.md)
+│   │   ├── [README.md](./research/quantitative-analysis-plan/README.md)
+│   │   └── [SKILL.md](./research/quantitative-analysis-plan/SKILL.md)
+│   ├── research-data-management/
+│   │   ├── assets/
+│   │   │   ├── [change-access-log.md](./research/research-data-management/assets/change-access-log.md)
+│   │   │   ├── [data-dictionary.md](./research/research-data-management/assets/data-dictionary.md)
+│   │   │   ├── [data-inventory.md](./research/research-data-management/assets/data-inventory.md)
+│   │   │   └── [data-management-plan.md](./research/research-data-management/assets/data-management-plan.md)
+│   │   ├── examples/
+│   │   │   ├── [collaborative-imaging-project.md](./research/research-data-management/examples/collaborative-imaging-project.md)
+│   │   │   ├── [open-computational-dataset.md](./research/research-data-management/examples/open-computational-dataset.md)
+│   │   │   ├── [sensitive-participant-data.md](./research/research-data-management/examples/sensitive-participant-data.md)
+│   │   │   └── [systematic-review-records.md](./research/research-data-management/examples/systematic-review-records.md)
+│   │   ├── references/
+│   │   │   ├── [organization-and-metadata.md](./research/research-data-management/references/organization-and-metadata.md)
+│   │   │   ├── [preservation-and-sharing.md](./research/research-data-management/references/preservation-and-sharing.md)
+│   │   │   ├── [provenance-and-versioning.md](./research/research-data-management/references/provenance-and-versioning.md)
+│   │   │   └── [security-and-access.md](./research/research-data-management/references/security-and-access.md)
+│   │   ├── [README.md](./research/research-data-management/README.md)
+│   │   └── [SKILL.md](./research/research-data-management/SKILL.md)
+│   ├── research-ethics-governance/
+│   │   ├── assets/
+│   │   │   ├── [conflict-disclosure-log.md](./research/research-ethics-governance/assets/conflict-disclosure-log.md)
+│   │   │   ├── [consent-planning-worksheet.md](./research/research-ethics-governance/assets/consent-planning-worksheet.md)
+│   │   │   ├── [contribution-agreement.md](./research/research-ethics-governance/assets/contribution-agreement.md)
+│   │   │   └── [ethics-governance-checklist.md](./research/research-ethics-governance/assets/ethics-governance-checklist.md)
+│   │   ├── examples/
+│   │   │   ├── [authorship-disagreement.md](./research/research-ethics-governance/examples/authorship-disagreement.md)
+│   │   │   ├── [human-participant-study.md](./research/research-ethics-governance/examples/human-participant-study.md)
+│   │   │   ├── [industry-collaboration.md](./research/research-ethics-governance/examples/industry-collaboration.md)
+│   │   │   └── [secondary-data.md](./research/research-ethics-governance/examples/secondary-data.md)
+│   │   ├── references/
+│   │   │   ├── [authorship-and-accountability.md](./research/research-ethics-governance/references/authorship-and-accountability.md)
+│   │   │   ├── [consent-and-welfare.md](./research/research-ethics-governance/references/consent-and-welfare.md)
+│   │   │   ├── [integrity-and-conflicts.md](./research/research-ethics-governance/references/integrity-and-conflicts.md)
+│   │   │   └── [oversight-and-review.md](./research/research-ethics-governance/references/oversight-and-review.md)
+│   │   ├── [README.md](./research/research-ethics-governance/README.md)
+│   │   └── [SKILL.md](./research/research-ethics-governance/SKILL.md)
 │   ├── research-gap/
 │   │   ├── assets/
 │   │   │   ├── [decision-record.md](./research/research-gap/assets/decision-record.md)
@@ -5907,28 +6181,100 @@
 │   │   │   └── [reproduction-validation.md](./research/research-reproduction/references/reproduction-validation.md)
 │   │   ├── [README.md](./research/research-reproduction/README.md)
 │   │   └── [SKILL.md](./research/research-reproduction/SKILL.md)
-│   └── research-writing/
+│   ├── research-visualization/
+│   │   ├── assets/
+│   │   │   ├── [accessibility-review.md](./research/research-visualization/assets/accessibility-review.md)
+│   │   │   ├── [caption-template.md](./research/research-visualization/assets/caption-template.md)
+│   │   │   ├── [figure-specification.md](./research/research-visualization/assets/figure-specification.md)
+│   │   │   └── [visual-integrity-checklist.md](./research/research-visualization/assets/visual-integrity-checklist.md)
+│   │   ├── examples/
+│   │   │   ├── [distribution-display.md](./research/research-visualization/examples/distribution-display.md)
+│   │   │   ├── [graphical-abstract.md](./research/research-visualization/examples/graphical-abstract.md)
+│   │   │   ├── [group-comparison.md](./research/research-visualization/examples/group-comparison.md)
+│   │   │   └── [longitudinal-estimate.md](./research/research-visualization/examples/longitudinal-estimate.md)
+│   │   ├── references/
+│   │   │   ├── [accessibility-and-color.md](./research/research-visualization/references/accessibility-and-color.md)
+│   │   │   ├── [captions-and-graphical-abstracts.md](./research/research-visualization/references/captions-and-graphical-abstracts.md)
+│   │   │   ├── [chart-selection.md](./research/research-visualization/references/chart-selection.md)
+│   │   │   └── [uncertainty-and-scales.md](./research/research-visualization/references/uncertainty-and-scales.md)
+│   │   ├── [README.md](./research/research-visualization/README.md)
+│   │   └── [SKILL.md](./research/research-visualization/SKILL.md)
+│   ├── research-writing/
+│   │   ├── assets/
+│   │   │   ├── [decision-record.md](./research/research-writing/assets/decision-record.md)
+│   │   │   ├── [starter-template.md](./research/research-writing/assets/starter-template.md)
+│   │   │   ├── [validation-plan.md](./research/research-writing/assets/validation-plan.md)
+│   │   │   └── [workflow-checklist.md](./research/research-writing/assets/workflow-checklist.md)
+│   │   ├── examples/
+│   │   │   ├── [discussion.md](./research/research-writing/examples/discussion.md)
+│   │   │   ├── [introduction.md](./research/research-writing/examples/introduction.md)
+│   │   │   ├── [methods.md](./research/research-writing/examples/methods.md)
+│   │   │   └── [results.md](./research/research-writing/examples/results.md)
+│   │   ├── references/
+│   │   │   ├── [argumentation.md](./research/research-writing/references/argumentation.md)
+│   │   │   ├── [imrad.md](./research/research-writing/references/imrad.md)
+│   │   │   ├── [reporting-guidelines.md](./research/research-writing/references/reporting-guidelines.md)
+│   │   │   └── [scientific-writing.md](./research/research-writing/references/scientific-writing.md)
+│   │   ├── [README.md](./research/research-writing/README.md)
+│   │   └── [SKILL.md](./research/research-writing/SKILL.md)
+│   ├── scientific-peer-review/
+│   │   ├── assets/
+│   │   │   ├── [claim-evidence-matrix.md](./research/scientific-peer-review/assets/claim-evidence-matrix.md)
+│   │   │   ├── [conflict-scope-check.md](./research/scientific-peer-review/assets/conflict-scope-check.md)
+│   │   │   ├── [review-template.md](./research/scientific-peer-review/assets/review-template.md)
+│   │   │   └── [revision-response-matrix.md](./research/scientific-peer-review/assets/revision-response-matrix.md)
+│   │   ├── examples/
+│   │   │   ├── [balanced-assessment.md](./research/scientific-peer-review/examples/balanced-assessment.md)
+│   │   │   ├── [major-design-concern.md](./research/scientific-peer-review/examples/major-design-concern.md)
+│   │   │   ├── [reporting-clarification.md](./research/scientific-peer-review/examples/reporting-clarification.md)
+│   │   │   └── [response-to-reviewers.md](./research/scientific-peer-review/examples/response-to-reviewers.md)
+│   │   ├── references/
+│   │   │   ├── [constructive-comments.md](./research/scientific-peer-review/references/constructive-comments.md)
+│   │   │   ├── [ethics-and-confidentiality.md](./research/scientific-peer-review/references/ethics-and-confidentiality.md)
+│   │   │   ├── [review-criteria.md](./research/scientific-peer-review/references/review-criteria.md)
+│   │   │   └── [revision-responses.md](./research/scientific-peer-review/references/revision-responses.md)
+│   │   ├── [README.md](./research/scientific-peer-review/README.md)
+│   │   └── [SKILL.md](./research/scientific-peer-review/SKILL.md)
+│   ├── study-design-protocol/
+│   │   ├── assets/
+│   │   │   ├── [design-decision-record.md](./research/study-design-protocol/assets/design-decision-record.md)
+│   │   │   ├── [preregistration-map.md](./research/study-design-protocol/assets/preregistration-map.md)
+│   │   │   ├── [protocol-review-checklist.md](./research/study-design-protocol/assets/protocol-review-checklist.md)
+│   │   │   └── [protocol-template.md](./research/study-design-protocol/assets/protocol-template.md)
+│   │   ├── examples/
+│   │   │   ├── [measurement-validation.md](./research/study-design-protocol/examples/measurement-validation.md)
+│   │   │   ├── [mixed-methods-study.md](./research/study-design-protocol/examples/mixed-methods-study.md)
+│   │   │   ├── [observational-cohort.md](./research/study-design-protocol/examples/observational-cohort.md)
+│   │   │   └── [randomized-intervention.md](./research/study-design-protocol/examples/randomized-intervention.md)
+│   │   ├── references/
+│   │   │   ├── [design-selection.md](./research/study-design-protocol/references/design-selection.md)
+│   │   │   ├── [ethics-and-governance.md](./research/study-design-protocol/references/ethics-and-governance.md)
+│   │   │   ├── [preregistration.md](./research/study-design-protocol/references/preregistration.md)
+│   │   │   └── [sampling-and-precision.md](./research/study-design-protocol/references/sampling-and-precision.md)
+│   │   ├── [README.md](./research/study-design-protocol/README.md)
+│   │   └── [SKILL.md](./research/study-design-protocol/SKILL.md)
+│   └── systematic-review/
 │       ├── assets/
-│       │   ├── [decision-record.md](./research/research-writing/assets/decision-record.md)
-│       │   ├── [starter-template.md](./research/research-writing/assets/starter-template.md)
-│       │   ├── [validation-plan.md](./research/research-writing/assets/validation-plan.md)
-│       │   └── [workflow-checklist.md](./research/research-writing/assets/workflow-checklist.md)
+│       │   ├── [extraction-form.md](./research/systematic-review/assets/extraction-form.md)
+│       │   ├── [screening-decision-log.md](./research/systematic-review/assets/screening-decision-log.md)
+│       │   ├── [search-log.md](./research/systematic-review/assets/search-log.md)
+│       │   └── [study-flow-template.md](./research/systematic-review/assets/study-flow-template.md)
 │       ├── examples/
-│       │   ├── [discussion.md](./research/research-writing/examples/discussion.md)
-│       │   ├── [introduction.md](./research/research-writing/examples/introduction.md)
-│       │   ├── [methods.md](./research/research-writing/examples/methods.md)
-│       │   └── [results.md](./research/research-writing/examples/results.md)
+│       │   ├── [diagnostic-accuracy-review.md](./research/systematic-review/examples/diagnostic-accuracy-review.md)
+│       │   ├── [intervention-review.md](./research/systematic-review/examples/intervention-review.md)
+│       │   ├── [rapid-review-adaptation.md](./research/systematic-review/examples/rapid-review-adaptation.md)
+│       │   └── [scoping-review-boundary.md](./research/systematic-review/examples/scoping-review-boundary.md)
 │       ├── references/
-│       │   ├── [argumentation.md](./research/research-writing/references/argumentation.md)
-│       │   ├── [imrad.md](./research/research-writing/references/imrad.md)
-│       │   ├── [reporting-guidelines.md](./research/research-writing/references/reporting-guidelines.md)
-│       │   └── [scientific-writing.md](./research/research-writing/references/scientific-writing.md)
-│       ├── [README.md](./research/research-writing/README.md)
-│       └── [SKILL.md](./research/research-writing/SKILL.md)
+│       │   ├── [protocol-and-scope.md](./research/systematic-review/references/protocol-and-scope.md)
+│       │   ├── [screening-and-extraction.md](./research/systematic-review/references/screening-and-extraction.md)
+│       │   ├── [search-and-retrieval.md](./research/systematic-review/references/search-and-retrieval.md)
+│       │   └── [synthesis-and-reporting.md](./research/systematic-review/references/synthesis-and-reporting.md)
+│       ├── [README.md](./research/systematic-review/README.md)
+│       └── [SKILL.md](./research/systematic-review/SKILL.md)
 ├── templates/
 │   └── [SKILL_TEMPLATE.md](./templates/SKILL_TEMPLATE.md)
 ├── [README.md](./README.md)
 └── [TREE.md](./TREE.md)
 ```
 
-1396 directories, 4532 files
+1475 directories, 4799 files

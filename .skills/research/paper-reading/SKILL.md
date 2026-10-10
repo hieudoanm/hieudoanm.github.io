@@ -5,16 +5,18 @@ tags:
   - "research"
   - "paper"
   - "reading"
-when_to_use: "Use when conducting or communicating work related to paper reading, especially when a structured research workflow is needed."
+when_to_use: "Use to critically understand an individual scholarly paper: its question, design, methods, evidence, results, limitations, and contribution."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "The paper's full text or enough primary material to verify its methods and results."
+  - "A reading purpose or research context; if none is supplied, state the scope of the analysis."
 related_skills:
   - "../research-reproduction/SKILL.md"
   - "../paper-pdf-to-markdown/SKILL.md"
   - "../research-gap/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When the goal is to synthesize patterns across a body of studies; use literature-review."
+  - "When the goal is to assess a research gap across a field; use research-gap."
+  - "When only a PDF-to-text conversion is requested; use paper-pdf-to-markdown before interpretation."
 status: "active"
 ---
 

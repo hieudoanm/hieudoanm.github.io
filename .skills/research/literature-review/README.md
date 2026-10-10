@@ -56,6 +56,11 @@ Conclusion
 literature-review/
 ├── SKILL.md
 ├── README.md
+├── assets/
+│   ├── decision-record.md
+│   ├── starter-template.md
+│   ├── validation-plan.md
+│   └── workflow-checklist.md
 ├── references/
 │   ├── review-types.md
 │   ├── synthesis.md
@@ -64,27 +69,22 @@ literature-review/
 └── examples/
     ├── neuroscience.md
     ├── machine-learning.md
-    └── psychology.md
+    ├── psychology.md
+    └── stroke-rehabilitation.md
 ```
 
-## Related Skills
+## Related skills and workflow
 
-Literature review works well as part of a larger research workflow:
+The research workflow is an adaptable route, not a mandatory sequence. Select only the stages the question needs:
 
 ```text
-literature-search
-       ↓
-paper-reading
-       ↓
-critical-appraisal
-       ↓
-literature-review
-       ↓
-research-gap
+paper-reading ──> systematic-review ──┐
+                                      ├─> literature-review ──> research-gap ──> study-design-protocol
+paper-reading ────────────────────────┘              │
+                                                      └─> meta-analysis (only when estimates are comparable)
 ```
 
-Each skill should have a clear responsibility rather than attempting
-to perform the entire research process.
+Use [systematic-review](../systematic-review/SKILL.md) when the task requires protocol-driven, reproducible search and study selection. This skill remains the broader guide to synthesizing and interpreting a body of evidence; the routes can be combined. For same-data computational work use [research-reproduction](../research-reproduction/SKILL.md); to test a finding with new evidence use [research-replication](../research-replication/SKILL.md). See the repository's [research workflow](../../../.agents/workflows/researching/research.md) for routing and completion criteria.
 
 ## Design Principles
 

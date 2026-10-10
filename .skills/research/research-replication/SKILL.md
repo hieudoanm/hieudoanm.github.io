@@ -4,16 +4,18 @@ description: "Design, evaluate, and interpret independent replications of scient
 tags:
   - "research"
   - "replication"
-when_to_use: "Use when conducting or communicating work related to research replication, especially when a structured research workflow is needed."
+when_to_use: "Use to design or evaluate a study that tests whether a published finding generalizes or remains robust using newly collected or independently obtained evidence."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "A specific target finding and enough access to the original report to identify its construct, design, and essential methods."
+  - "A new-data or independent-evidence plan, with feasible sampling, measurement, and analysis resources."
+  - "A plan to state what is preserved and what is changed, preferably before observing outcomes."
 related_skills:
   - "../research-reproduction/SKILL.md"
   - "../meta-analysis/SKILL.md"
   - "../paper-reading/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When the goal is to rerun the original analysis using the original data and procedures; use research-reproduction."
+  - "When no new or independent evidence can be obtained; describe the work as a reproduction, reanalysis, or review as appropriate."
 status: "active"
 ---
 

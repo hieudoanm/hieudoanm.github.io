@@ -1,32 +1,34 @@
-# Literature Review: Validation Plan
+# Literature Review: Evidence and Process Checks
 
-Use this plan to verify work guided by [Literature Review](../SKILL.md). Replace generic entries with observable project-specific checks; do not treat an unchecked box as evidence.
+Use this plan to verify a review's traceability and methodological integrity. Record evidence for every completed check; an unchecked box is not a finding.
 
-## Preconditions
+## Review scope and protocol
 
-- A defined research topic or question.
-- Access to relevant sources or project materials.
+- [ ] The question, review type, scope, and eligibility criteria are explicit.
+- [ ] Any protocol or registration and all deviations are recorded.
+- [ ] Databases, platforms, search dates, and complete search strings are retained.
 
-## Skill-specific review
+## Search, screening, and extraction
 
-- [ ] Introduction
-- [ ] Scope and search strategy
-- [ ] Thematic synthesis
-- [ ] Comparison of evidence
-- [ ] Methodological limitations
-- [ ] Research gaps
-- [ ] Conclusion
+- [ ] Search results are deduplicated using a documented method.
+- [ ] Inclusion and exclusion decisions can be traced to the criteria.
+- [ ] Full-text exclusions have specific reasons where required.
+- [ ] Extracted study characteristics and outcomes can be checked against sources.
+- [ ] Appraisal is appropriate to the included designs and reviewer process.
 
-## Test record
+## Synthesis and claims
 
-| Check | Expected result | Evidence / command | Outcome |
+| Check | Evidence to record | Result / notes |
 |---|---|---|---|
-| Primary success path | Meets the stated acceptance criteria |  |  |
-| Boundary or failure case | Behaves safely and predictably |  |  |
-| Regression / compatibility | Existing required behavior remains intact |  |  |
+| Claim traceability | Every substantive claim maps to its supporting source(s) |  |
+| Comparability | Differences in population, methods, outcomes, and estimands are considered |  |
+| Uncertainty | Bias, inconsistency, indirectness, and missing evidence are reported |  |
+| Balance | Conflicting evidence and plausible alternatives are represented |  |
+| Synthesis choice | Quantitative pooling is justified, or a non-pooled synthesis is explained |  |
+| Reproducibility | Search, screening, extraction, and analysis records are retained |  |
 
-## Release decision
+## Reporting notes
 
-- Result: <!-- pass / pass with known limitations / fail -->
-- Known limitations:
-- Follow-up owner and date:
+- Reporting guideline selected and why:
+- Limitations and unresolved uncertainties:
+- Final review date and reviewer(s):

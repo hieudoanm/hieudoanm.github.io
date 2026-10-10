@@ -44,15 +44,6 @@
       color: var(--text);
     }
 
-    .poster {
-      animation: slideIn 0.6s ease-out;
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
     .main-result-number {
       background: var(--accent-gradient);
       -webkit-background-clip: text;
@@ -141,33 +132,6 @@
       height: 100%;
     }
 
-    .column:nth-child(1) {
-      animation: slideInLeft 0.6s ease-out 0.1s both;
-    }
-
-    .column:nth-child(2) {
-      animation: slideInUp 0.6s ease-out 0.2s both;
-    }
-
-    .column:nth-child(3) {
-      animation: slideInRight 0.6s ease-out 0.3s both;
-    }
-
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes slideInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
     .column .section {
       flex: 1;
       display: flex;
@@ -183,13 +147,7 @@
     .section {
       border-top: 1px solid var(--border);
       padding-top: var(--space-sm);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 1mm 4mm rgba(34, 34, 34, 0.04);
-    }
-
-    .section:hover {
-      transform: translateY(-2mm);
-      box-shadow: 0 6mm 18mm rgba(34, 34, 34, 0.12);
     }
 
     .section h2 {
@@ -227,12 +185,6 @@
       width: 100%;
       height: 100%;
       background: radial-gradient(circle, rgba(34, 34, 34, 0.08) 0%, transparent 70%);
-      animation: pulse 4s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.1); }
     }
 
     .question h2 {
@@ -286,31 +238,12 @@
       margin-top: var(--space-lg);
       padding: var(--space-md);
       background: var(--surface);
-      transition: transform 0.3s ease;
-    }
-
-    .visual:hover {
-      transform: scale(1.02);
     }
 
     .visual svg {
       display: block;
       width: 100%;
       height: auto;
-    }
-
-    .visual svg rect,
-    .visual svg path,
-    .visual svg circle,
-    .visual svg line {
-      transition: opacity 0.3s ease;
-    }
-
-    .visual:hover svg rect,
-    .visual:hover svg path,
-    .visual:hover svg circle,
-    .visual:hover svg line {
-      opacity: 0.9;
     }
 
     .caption {
@@ -324,13 +257,7 @@
       padding: var(--space-lg);
       background: var(--accent);
       color: white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4mm 12mm rgba(34, 34, 34, 0.2);
-    }
-
-    .takeaway:hover {
-      transform: translateY(-2mm);
-      box-shadow: 0 8mm 24mm rgba(34, 34, 34, 0.3);
     }
 
     .takeaway-label {
@@ -370,6 +297,17 @@
       font-size: 3.6mm;
     }
 
+    .demo-notice {
+      margin: 0 0 var(--space-sm);
+      padding: var(--space-xs) var(--space-sm);
+      border: 1mm solid #8a1c1c;
+      background: #fff0f0;
+      color: #6d1111;
+      font-size: 4mm;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
     @media print {
       @page {
         size: A0 landscape;
@@ -392,14 +330,15 @@
 <body>
   <main class="poster">
     <header class="header">
-      <p class="label">Minimal Research Poster</p>
+      <p class="demo-notice" role="note">SYNTHETIC DEMONSTRATION — ALL STUDY DETAILS AND RESULTS ARE FICTIONAL</p>
+      <p class="label">Minimal Research Poster Layout</p>
 
       <h1>
         Does Sleep Duration Predict Cognitive Performance?
       </h1>
 
       <p class="authors">
-        H. Doan · Cognitive Neuroscience · University of Birmingham
+        [Author names] · [Department] · [Institution]
       </p>
     </header>
 
@@ -409,7 +348,8 @@
           <h2>Background</h2>
 
           <p>
-            Sleep is associated with multiple aspects of cognition, including
+            Example background copy only. Replace with claims supported by
+            cited sources. Sleep is associated with multiple aspects of cognition, including
             attention, memory, and executive function. Chronic sleep deprivation
             has been linked to impaired cognitive performance, reduced
             emotional regulation, and increased risk of neurodegenerative
@@ -438,8 +378,8 @@
           <h2>Dataset</h2>
 
           <p>
-            Behavioural and self-reported sleep measures were collected from
-            420 adult participants (age 18-65, mean 34.2 years). Participants
+            SYNTHETIC EXAMPLE: imagine behavioural and self-reported sleep measures
+            from 420 adult participants (age 18-65, mean 34.2 years). Participants
             completed a comprehensive cognitive battery assessing processing speed,
             working memory, episodic memory, and executive function. Sleep duration
             was assessed via the Pittsburgh Sleep Quality Index (PSQI) and
@@ -482,7 +422,7 @@
               </tr>
             </table>
             <p style="margin: var(--space-xs) 0 0; font-size: 3.5mm; color: var(--muted);">
-              Descriptive statistics for key variables (N=420).
+              Fictional values for layout demonstration only (N=420).
             </p>
           </div>
         </section>
@@ -493,7 +433,7 @@
           <ol class="list">
             <li>Inspect distributions of sleep duration and cognitive scores for outliers and normality.</li>
             <li>Estimate the sleep–performance association using robust linear regression controlling for age, education, and physical activity.</li>
-            <li>Assess uncertainty using permutation analysis (10,000 permutations) to generate non-parametric confidence intervals.</li>
+            <li>Estimate a 95% confidence interval for the regression coefficient with 10,000 bootstrap resamples; use a separately specified permutation test to assess the null association.</li>
             <li>Test for nonlinear relationships using restricted cubic splines.</li>
             <li>Perform sensitivity analyses excluding participants with extreme sleep durations (<5h or >10h).</li>
           </ol>
@@ -502,7 +442,7 @@
 
       <div class="column">
         <section class="main-result">
-          <p class="main-result-label">Main finding</p>
+          <p class="main-result-label">Synthetic example result — not empirical evidence</p>
 
           <p class="main-result-number">r = 0.28</p>
 
@@ -512,11 +452,10 @@
           </p>
 
           <p style="margin-top: 15mm; font-size: 7mm; line-height: 1.25;">
-            The association remained significant after controlling for age,
-            education, and physical activity (β = 0.22, p < 0.001). Permutation
-            analysis confirmed robustness (95% CI: 0.15-0.29). No evidence of
-            nonlinear effects was detected, suggesting a linear relationship
-            across the observed sleep range (5-10 hours).
+            Fictional values for layout demonstration only: an adjusted
+            coefficient of β = 0.22 (bootstrap 95% CI: 0.15-0.29) and a
+            separately calculated permutation-test p < 0.001. Do not report
+            these numbers as study findings.
           </p>
 
           <div class="visual">
@@ -591,9 +530,8 @@
             </svg>
 
             <p class="caption">
-              Illustrative figure for demonstrating a minimal poster layout.
-              The displayed relationship is not intended to represent a real
-              dataset.
+              Synthetic points and trend line for demonstrating poster layout;
+              not observations from a real dataset.
             </p>
           </div>
         </section>
@@ -604,28 +542,15 @@
           <h2>Interpretation</h2>
 
           <p>
-            The observed association is consistent with a relationship between
-            sleep duration and cognitive performance. The magnitude of the effect
-            (r = 0.28) is comparable to other established behavioural risk factors
-            for cognitive performance, suggesting that sleep may be a meaningful
-            modifiable target for cognitive health interventions.
+            PLACEHOLDER: Describe the direction and magnitude of the verified
+            result, with uncertainty. Compare it with prior evidence only when
+            the populations, measures, and methods are sufficiently comparable.
           </p>
 
           <p>
-            Because the data are observational, the result does not establish
-            that changing sleep duration would cause a change in cognition.
-            Reverse causality is possible: individuals with better cognitive
-            function may be more likely to maintain healthy sleep habits.
-            Third variables such as stress, physical activity, or socioeconomic
-            status could also explain the association.
-          </p>
-
-          <p>
-            The linear relationship across the observed range suggests that the
-            association is not driven by extreme values at either end of the
-            sleep distribution. This pattern is consistent with a dose-response
-            relationship, which strengthens the case for a causal interpretation
-            but does not prove it.
+            For observational evidence, discuss plausible confounding and
+            reverse causality. Do not imply that an association or dose-response
+            pattern establishes causation.
           </p>
         </section>
 
@@ -647,8 +572,8 @@
           <p class="takeaway-label">Takeaway</p>
 
           <p>
-            The data support an association between sleep duration and
-            cognitive performance, but not a causal conclusion.
+            PLACEHOLDER: State the main result at a strength justified by the
+            verified evidence, including key uncertainty or limitation.
           </p>
         </section>
 
@@ -667,8 +592,8 @@
           <h2>References</h2>
 
           <ul class="list">
-            <li>Sleep and cognition literature.</li>
-            <li>Methods for observational association studies.</li>
+            <li>[Add a verified source for the background claim.]</li>
+            <li>[Add the study protocol or analysis reference, if applicable.]</li>
           </ul>
         </section>
       </div>
@@ -680,7 +605,7 @@
       </span>
 
       <span>
-        Contact · h.doe@example.ac.uk
+        Contact · [corresponding author email]
       </span>
     </footer>
   </main>

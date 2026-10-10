@@ -5,16 +5,19 @@ tags:
   - "research"
   - "literature"
   - "review"
-when_to_use: "Use when conducting or communicating work related to literature review, especially when a structured research workflow is needed."
+when_to_use: "Use to plan or conduct a structured review that screens and synthesizes findings across a body of studies, compares methods, and evaluates the overall state of evidence."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "A focused review question and an initial scope (population, phenomenon, methods, or time range)."
+  - "Access to relevant scholarly databases or a clearly bounded set of source materials."
+  - "A plan to record search, eligibility, extraction, and appraisal decisions."
 related_skills:
   - "../meta-analysis/SKILL.md"
   - "../research-gap/SKILL.md"
   - "../research-writing/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When the task is to interpret one paper only; use paper-reading."
+  - "When the task is to estimate a pooled quantitative effect from sufficiently comparable studies; use meta-analysis alongside the review process."
+  - "When the task is to reproduce an analysis or collect new data to test a finding; use research-reproduction or research-replication."
 status: "active"
 ---
 

@@ -5,16 +5,17 @@ tags:
   - "research"
   - "progressive"
   - "explanation"
-when_to_use: "Use when conducting or communicating work related to progressive explanation, especially when a structured research workflow is needed."
+when_to_use: "Use to explain one defined concept at progressively deeper levels for child, student, layperson, and expert audiences without changing the underlying claim."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "A specific concept and the source material needed to verify its meaning."
+  - "The intended audience or permission to provide all four audience levels."
 related_skills:
   - "../literature-review/SKILL.md"
   - "../meta-analysis/SKILL.md"
   - "../paper-pdf-to-markdown/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When the task requires a literature synthesis, a paper critique, or original scientific writing rather than audience-level explanation."
+  - "When the concept or source is ambiguous; clarify terminology and evidence before simplifying."
 status: "active"
 ---
 # Progressive Explanation

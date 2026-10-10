@@ -4,16 +4,18 @@ description: "Identify, validate, and formulate genuine research gaps by systema
 tags:
   - "research"
   - "gap"
-when_to_use: "Use when conducting or communicating work related to research gap, especially when a structured research workflow is needed."
+when_to_use: "Use to determine whether a proposed research gap is real, important, and supported by a sufficiently current scan of the relevant literature, then turn it into a feasible research question."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "A defined field, population or system, and phenomenon of interest."
+  - "Access to relevant literature, including a search date or other way to judge recency."
+  - "A proposed gap or enough background to map established findings, uncertainty, and disagreement."
 related_skills:
   - "../paper-reading/SKILL.md"
   - "../literature-review/SKILL.md"
   - "../meta-analysis/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When the task is only to summarize known findings; use literature-review."
+  - "When a research question is already settled and the task is to design a new-data test or reproduce an analysis; use research-replication or research-reproduction."
 status: "active"
 ---
 

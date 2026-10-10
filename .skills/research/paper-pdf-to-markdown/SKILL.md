@@ -6,16 +6,19 @@ tags:
   - "paper"
   - "pdf"
   - "markdown"
-when_to_use: "Use when conducting or communicating work related to paper pdf to markdown, especially when a structured research workflow is needed."
+when_to_use: "Use to convert a scholarly PDF into reviewable Markdown while preserving section hierarchy, equations, tables, figure references, citations, and source provenance."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "The source PDF and permission to process it."
+  - "A target Markdown format and a way to inspect rendered pages for layout-sensitive content."
+  - "OCR or extraction tooling when the PDF is scanned or has a non-text layer."
 related_skills:
   - "../research-poster/SKILL.md"
   - "../paper-reading/SKILL.md"
   - "../research-replication/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When a publisher's structured HTML or XML is available and better preserves semantics; prefer that source and retain the PDF for verification."
+  - "When the task is to summarize or critique the paper rather than transcribe it; use paper-reading."
+  - "When tables, equations, or figures cannot be verified against the rendered PDF; preserve them as explicitly marked review items instead of guessing."
 status: "active"
 ---
 

@@ -4,16 +4,18 @@ description: "Write clear, rigorous, evidence-based scientific research document
 tags:
   - "research"
   - "writing"
-when_to_use: "Use when drafting or revising a scientific article, report, thesis, proposal, or summary and claims must remain proportional to evidence."
+when_to_use: "Use to draft or revise a scientific manuscript, report, thesis, proposal, or evidence-based summary for a defined audience, venue, and purpose."
 prerequisites:
-  - "A defined research topic or question."
-  - "Access to relevant sources or project materials."
+  - "The study or synthesis question, verified results or source set, and documented limitations."
+  - "The intended audience, document type, and any venue or reporting requirements."
 related_skills:
   - "../research-poster/SKILL.md"
   - "../literature-review/SKILL.md"
   - "../paper-pdf-to-markdown/SKILL.md"
 avoid_when:
-  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+  - "When the user needs a visual research poster; use research-poster."
+  - "When the task is only to interpret one paper or convert a PDF; use paper-reading or paper-pdf-to-markdown."
+  - "When results or citations are missing, do not invent them; draft a clearly marked outline or request verified inputs."
 status: "active"
 ---
 
