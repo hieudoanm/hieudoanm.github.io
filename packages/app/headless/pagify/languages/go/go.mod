@@ -3,7 +3,7 @@ module pagify
 go 1.27.1
 
 require (
-	github.com/mark3labs/mcp-go v1.1.1
+	github.com/mark3labs/mcp-go v1.2.1
 	github.com/spf13/cobra v1.10.2
 	github.com/yuin/goldmark/v2 v2.1.6
 	gopkg.in/yaml.v3 v3.0.1
