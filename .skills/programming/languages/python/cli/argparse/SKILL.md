@@ -1,8 +1,24 @@
 ---
-name: argparse-best-practices
-description: Best practices for writing Python CLIs with argparse — the stdlib command-line parser conventions. Use when writing, structuring, or reviewing argparse-based tools — covers parser layout, arguments, subcommands, validation, help text, typing, and testing.
+name: "argparse-best-practices"
+description: "Best practices for writing Python CLIs with argparse — the stdlib command-line parser conventions. Use when writing, structuring, or reviewing argparse-based tools — covers parser layout, arguments, subcommands, validation, help text, typing, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "cli"
+  - "argparse"
+when_to_use: "Use when writing, structuring, or reviewing argparse-based tools."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../click/SKILL.md"
+  - "../../SKILL.md"
+  - "../../../rust/cli/clap/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Argparse Best Practices
 
 `argparse` is Python's standard-library CLI parser — **`ArgumentParser`, `add_argument` declarations, and a `Namespace` of parsed values**. Practical argparse leans on **`prog`-and-`description` self-documenting help, `dest`-aware names, type-callables for parsing, and `add_subparsers` for command trees**. Parse once at the `main` boundary; keep the parsing layer thin and the domain logic parseable by tests.

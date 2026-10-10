@@ -1,8 +1,23 @@
 ---
-name: mssql
-description: Microsoft SQL Server — relational database management system with T-SQL, ACID transactions, indexing, and enterprise features.
+name: "mssql"
+description: "Microsoft SQL Server — relational database management system with T-SQL, ACID transactions, indexing, and enterprise features."
+tags:
+  - "programming"
+  - "database"
+  - "sql"
+  - "mssql"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting MS SQL Server in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../mysql/SKILL.md"
+  - "../postgresql/SKILL.md"
+  - "../cockroachdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Microsoft SQL Server is a **relational database management system** with a rich **T-SQL** dialect, **ACID transactions**, comprehensive indexing and concurrency controls, high availability, and analytics capabilities.
 
 ## 1. Core Concepts

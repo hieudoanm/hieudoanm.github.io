@@ -1,8 +1,26 @@
 ---
-name: better-auth-best-practices
-description: Best practices for authentication with Better Auth — the TypeScript-first auth library conventions for modern web apps. Use when writing, structuring, or reviewing Better Auth — covers plugins, database adapters, sessions, middleware, and security.
+name: "better-auth-best-practices"
+description: "Best practices for authentication with Better Auth — the TypeScript-first auth library conventions for modern web apps. Use when writing, structuring, or reviewing Better Auth — covers plugins, database adapters, sessions, middleware, and security."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "authentication"
+  - "better"
+  - "auth"
+when_to_use: "Use when writing, structuring, or reviewing Better Auth."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../auth.js/SKILL.md"
+  - "../../../SKILL.md"
+  - "../../charts/chart.js/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Better Auth Best Practices
 
 Better Auth is a **TypeScript-first, framework-agnostic auth library for modern web apps** (works with Next.js, SvelteKit, Hono, etc.) — **plugin ecosystem (`emailPassword`, `socialProviders`), database adapters, and a single typed `betterAuth()` server instance.** Practical Better Auth leans on **one typed auth instance per app with plugins declared for the real flows, a chosen database adapter with connected schema, sessions managed via cookies, and the instance shared across router/sub-routes** — the API surface is typed at the framework seam, not scattered string handlers.

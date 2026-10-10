@@ -1,8 +1,26 @@
 ---
-name: scikit-learn-best-practices
-description: Best practices for machine learning with scikit-learn — the estimator/pipeline conventions for predictive modeling in Python. Use when writing, structuring, or reviewing scikit-learn — covers estimators, pipelines, train/test splits, imputation, tuning, and evaluation.
+name: "scikit-learn-best-practices"
+description: "Best practices for machine learning with scikit-learn — the estimator/pipeline conventions for predictive modeling in Python. Use when writing, structuring, or reviewing scikit-learn — covers estimators, pipelines, train/test splits, imputation, tuning, and evaluation."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-science"
+  - "scikit"
+  - "learn"
+when_to_use: "Use when writing, structuring, or reviewing scikit-learn."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../pytorch/SKILL.md"
+  - "../tensorflow/SKILL.md"
+  - "../xgboost/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Scikit-learn Best Practices
 
 scikit-learn centers the work on **consistent estimators — `fit(X, y)` / `predict(X)` / `score(X, y)`** — joined into `Pipeline`s that compose preprocessing + modeling into one grid-searchable object. Practical scikit-learn leans on **`Pipeline` + `ColumnTransformer` for reproducible preprocessing, `train_test_split`/`cross_val_score` for honest evaluation, `GridSearchCV`/`RandomizedSearchCV` for tuning on the train set only**, and **metrics matched to the problem (not one-score-fits-all)**.

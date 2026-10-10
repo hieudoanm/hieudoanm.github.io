@@ -1,8 +1,24 @@
 ---
-name: claude-design
-description: Design system and page-building guide for the Claude (claude.com) look: warm off-white and warm-charcoal surfaces, a single terracotta "clay" accent, literary serif headlines, calm benefit-led copy, hairline-bordered plan cards, and light/dark themes that follow the OS. Use whenever the user asks to build, mock up, restyle or write copy for a landing page, pricing page, sign-up block, app UI or component "in the Claude style", "like claude.com", "Anthropic-style", or "warm, editorial, friendly AI product site", even if they never name Claude.
+name: "claude-design"
+description: "Design system and page-building guide for the Claude (claude.com) look: warm off-white and warm-charcoal surfaces, a single terracotta \"clay\" accent, literary serif headlines, calm benefit-led copy, hairline-bordered plan cards, and light/dark themes that follow the OS. Use whenever the user asks to build, mock up, restyle or write copy for a landing page, pricing page, sign-up block, app UI or component \"in the Claude style\", \"like claude.com\", \"Anthropic-style\", or \"warm, editorial, friendly AI product site\", even if they never name Claude."
+tags:
+  - "programming"
+  - "design"
+  - "brand"
+  - "claude"
+  - "com"
+when_to_use: "Use when creating or reviewing an interface that should follow Claude design system design guidance."
+prerequisites:
+  - "A clear product or design goal."
+  - "Familiarity with the target audience and existing interface constraints."
+related_skills:
+  - "../opencode.ai/SKILL.md"
+  - "../notion.com/SKILL.md"
+  - "../getartcraft.com/SKILL.md"
+avoid_when:
+  - "When the brief does not call for this design system or philosophy; follow the project’s existing design language instead."
+status: "active"
 ---
-
 # Claude design system
 
 Reproduces the visual and verbal style of claude.com, the public home page of Claude by Anthropic.

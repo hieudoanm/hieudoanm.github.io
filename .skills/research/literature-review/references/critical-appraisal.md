@@ -9,7 +9,6 @@ The goal is to determine:
 > What can this study actually tell us?
 
 ## Core Questions
-
 For every important study, consider:
 
 1. What question did the researchers ask?
@@ -22,7 +21,6 @@ For every important study, consider:
 8. How does the study compare with other evidence?
 
 ## Research Question
-
 Determine whether the study clearly defines what it is investigating.
 
 Ask:
@@ -36,7 +34,6 @@ A well-designed study can still provide weak evidence if it asks the
 wrong question for the research objective.
 
 ## Study Design
-
 Match the design to the claim.
 
 | Design                      | Useful for                             |
@@ -52,30 +49,7 @@ Match the design to the claim.
 
 Do not infer causal conclusions from designs that cannot support them.
 
-## Sample
-
-Evaluate:
-
-- Sample size.
-- Sampling method.
-- Population characteristics.
-- Inclusion criteria.
-- Exclusion criteria.
-- Attrition.
-- Representativeness.
-
-Ask:
-
-> Who was actually studied?
-
-and:
-
-> To whom can these results reasonably generalize?
-
-A large sample does not automatically represent the target population.
-
 ## Measurement
-
 Determine whether the variables were measured appropriately.
 
 Consider:
@@ -95,41 +69,7 @@ For example, neural activity measured with fMRI, EEG, and MEG represents
 different aspects of brain physiology and has different spatial and
 temporal properties.
 
-## Confounding
-
-A confound is a variable that can create or distort an observed
-relationship.
-
-Consider:
-
-```text
-Confound
-   ↓
-X ←────→ Y
-```
-
-Ask whether an alternative explanation could account for the result.
-
-Important confounds depend on the research area.
-
-Examples include:
-
-- Age.
-- Education.
-- Socioeconomic status.
-- Task difficulty.
-- Motion.
-- Head position.
-- Scanner differences.
-- Batch effects.
-- Medication.
-- Previous training.
-
-Do not list confounds mechanically. Identify confounds that could
-actually affect the research question.
-
 ## Statistical Analysis
-
 Ask:
 
 - Is the statistical method appropriate?
@@ -145,7 +85,6 @@ Ask:
 Do not judge a study solely by whether its p-value is below 0.05.
 
 ## Effect Size
-
 Statistical significance does not tell us how large an effect is.
 
 Consider:
@@ -161,7 +100,6 @@ A meaningful effect can fail to reach conventional significance in a small
 sample.
 
 ## Multiple Comparisons
-
 When researchers test many hypotheses, the probability of obtaining
 apparently significant results by chance increases.
 
@@ -171,25 +109,7 @@ strategies.
 In neuroimaging this is particularly important because thousands of
 voxels, vertices, sensors, or time points may be examined.
 
-## Reproducibility
-
-Consider whether the finding is likely to reproduce.
-
-Useful indicators include:
-
-- Independent replication.
-- Transparent methods.
-- Open data.
-- Open code.
-- Preregistration.
-- Registered reports.
-- Robustness analyses.
-
-Absence of open data or code does not automatically make a study invalid,
-but it can limit independent verification.
-
 ## Internal Validity
-
 Internal validity asks:
 
 > Is the observed result plausibly caused by the mechanism or relationship
@@ -204,24 +124,7 @@ Threats include:
 - Poor randomization.
 - Experimental demand effects.
 
-## External Validity
-
-External validity asks:
-
-> Does the result generalize beyond this study?
-
-Consider differences in:
-
-- Population.
-- Environment.
-- Task.
-- Stimuli.
-- Measurement.
-- Culture.
-- Clinical status.
-
 ## Researcher Degrees of Freedom
-
 Be alert to analytical choices that could influence results.
 
 Examples:
@@ -238,7 +141,6 @@ A large number of reasonable analytical choices can increase the risk
 of obtaining results that appear stronger than they are.
 
 ## Critical Appraisal Language
-
 Prefer precise language.
 
 Instead of:
@@ -259,32 +161,7 @@ Use:
 > The findings are consistent with X, although the observational design
 > does not establish causality.
 
-## Appraisal Outcome
-
-Classify evidence cautiously:
-
-### Strong
-
-The design, measurement, analysis, and replication provide substantial
-support for the conclusion.
-
-### Moderate
-
-The evidence is informative but has meaningful limitations.
-
-### Weak
-
-The evidence is suggestive but substantial methodological uncertainty
-remains.
-
-### Inconclusive
-
-The study does not provide sufficient evidence to answer the question.
-
-These labels are contextual, not universal scores.
-
 ## Final Principle
-
 Critical appraisal should strengthen synthesis.
 
 Do not simply list limitations at the end of a review.

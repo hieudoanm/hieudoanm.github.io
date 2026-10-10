@@ -1,8 +1,23 @@
 ---
-name: postmark
-description: Best practices for transactional email with Postmark. Use when sending app-triggered email reliably, handling bounces, or setting up delivery events — covers the send API, deliverability defaults, and reputation management.
+name: "postmark"
+description: "Best practices for transactional email with Postmark. Use when sending app-triggered email reliably, handling bounces, or setting up delivery events — covers the send API, deliverability defaults, and reputation management."
+tags:
+  - "programming"
+  - "saas"
+  - "email"
+  - "postmark"
+when_to_use: "Use when sending app-triggered email reliably, handling bounces, or setting up delivery events."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../resend/SKILL.md"
+  - "../sendgrid/SKILL.md"
+  - "../mailgun/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Postmark Best Practices
 
 Postmark is a transactional-email-only service (it rejects marketing/bulk by policy). Best practice is using it for **behavioral, app-triggered email** with high deliverability expectations: plain send API + templates, webhooks for bounces, and strict suppression handling.

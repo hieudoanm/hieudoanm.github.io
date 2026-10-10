@@ -1,0 +1,86 @@
+/* Approximate tokens for recreations; verify proposed measurements with the target. */
+:root {
+  color-scheme: light;
+  --m-bg: #fff;
+  --m-ink: #0b0a0b;
+  --m-muted: #5a5960;
+  --m-blue: #0075de;
+  --m-border: rgb(11 10 11 / 10%);
+  --m-dark: #202431;
+  --m-peach: #fff1e8;
+  --m-rose: #fff0f1;
+  --m-mint: #e8f7ef;
+  --m-lavender: #f2efff;
+  --m-sky: #eaf5ff;
+  --m-yellow: #fff8dc;
+  --app-font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --m-font: var(--app-font);
+}
+
+[data-app] {
+  color-scheme: light;
+  --app-bg: #fff;
+  --app-sidebar: #f7f7f5;
+  --app-ink: #37352f;
+  --app-muted: rgb(55 53 47 / 60%);
+  --app-link: #2383e2;
+  --app-border: rgb(55 53 47 / 11%);
+  --app-hover: rgb(55 53 47 / 8%);
+  --app-popover: #fff;
+  --app-shadow: 0 8px 24px rgb(15 15 15 / 12%);
+  --app-radius: 4px;
+  --block-gray: #f1f1ef;
+  --block-brown: #f4eeee;
+  --block-orange: #fbecdd;
+  --block-yellow: #fbf3db;
+  --block-green: #e9f3e7;
+  --block-blue: #e7f0f8;
+  --block-purple: #f1ecf9;
+  --block-pink: #f9eaf0;
+  --block-red: #fae9e7;
+  --app-font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Proposed layout measurements; adjust to the target viewport and content. */
+  --app-sidebar-width: 240px;
+  --app-topbar-height: 45px;
+  --app-content-width: 708px;
+}
+
+[data-app] {
+  background: var(--app-bg);
+  color: var(--app-ink);
+  font-family: var(--app-font);
+}
+
+[data-app] a {
+  color: var(--app-link);
+}
+
+[data-app] :focus-visible,
+:root :focus-visible {
+  outline: 2px solid var(--app-link, var(--m-blue));
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-app] {
+    color-scheme: dark;
+    --app-bg: #191919;
+    --app-sidebar: #202020;
+    --app-ink: #e8e7e4;
+    --app-muted: rgb(232 231 228 / 62%);
+    --app-link: #529cca;
+    --app-border: rgb(255 255 255 / 12%);
+    --app-hover: rgb(255 255 255 / 6%);
+    --app-popover: #252525;
+    --app-shadow: 0 8px 24px rgb(0 0 0 / 35%);
+    --block-gray: #30302f;
+    --block-brown: #382f2d;
+    --block-orange: #3e3026;
+    --block-yellow: #3a3526;
+    --block-green: #29362a;
+    --block-blue: #28343d;
+    --block-purple: #342d3d;
+    --block-pink: #3b2d34;
+    --block-red: #3b2c2a;
+  }
+}

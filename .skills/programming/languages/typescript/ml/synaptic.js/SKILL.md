@@ -1,8 +1,25 @@
 ---
-name: synaptic-best-practices
-description: Best practices for building neural networks in JS with Synaptic — the network-architecture conventions for browser/Node. Use when writing, structuring, or reviewing Synaptic — covers networks, architect objects, training, serialization, and performance.
+name: "synaptic-best-practices"
+description: "Best practices for building neural networks in JS with Synaptic — the network-architecture conventions for browser/Node. Use when writing, structuring, or reviewing Synaptic — covers networks, architect objects, training, serialization, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "ml"
+  - "synaptic"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing Synaptic."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../brain.js/SKILL.md"
+  - "../mind.js/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Synaptic Best Practices
 
 Synaptic is a **JavaScript neural network library** — `new Architect.Perceptron`, `Network`, layers and trainers with a small VM-style API. Practical Synaptic leans on **declarative architect objects for the network shape, `trainer.XOR`-style or custom `network.activate` + `trainer.train` for learning, explicit `toJSON`/`fromJSON` serialization for persistence, and input/output normalization discipline** — the network is a function you train; data into `[0,1]`/normalized in, predictions out.

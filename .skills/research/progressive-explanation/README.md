@@ -26,17 +26,16 @@ An expert needs precision, assumptions, mathematics, and limitations.
 progressive-explanation/
 ├── SKILL.md
 ├── README.md
-└── references/
-    ├── levels.md
-    ├── techniques.md
-    └── examples/
-        ├── mathematics/
-        │   ├── linear-algreba.md
-        │   └── probability.md
-        ├── deep-learning.md
-        ├── neural-networks.md
-        ├── machine-learning.md
-        └── neuroscience.md
+├── references/
+│   ├── levels.md
+│   ├── techniques.md
+│   ├── workflow-notes.md
+│   └── overview.md
+└── examples/
+    ├── deep-learning.md
+    ├── neural-networks.md
+    ├── machine-learning.md
+    └── neuroscience.md
 ```
 
 ## Usage
@@ -56,3 +55,13 @@ Examples:
 Every level should preserve the essential truth of the concept.
 The difference is the assumed knowledge, abstraction, terminology,
 mathematical formalism, and technical depth.
+
+## References
+
+- [Reference materials](references/)
+- [Examples](examples)
+- [Additional mathematics examples](archived-examples)
+
+## Assets
+
+- [Supporting assets (4)](assets)

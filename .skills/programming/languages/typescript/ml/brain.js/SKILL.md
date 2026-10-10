@@ -1,8 +1,25 @@
 ---
-name: brain-js-best-practices
-description: Best practices for neural networks in JS with Brain.js — the simple fixed-topology NN conventions for browser/Node. Use when writing, structuring, or reviewing Brain.js — covers net types, training data, options, serialization, and performance.
+name: "brain-js-best-practices"
+description: "Best practices for neural networks in JS with Brain.js — the simple fixed-topology NN conventions for browser/Node. Use when writing, structuring, or reviewing Brain.js — covers net types, training data, options, serialization, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "ml"
+  - "brain"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing Brain.js."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../mind.js/SKILL.md"
+  - "../synaptic.js/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Brain.js Best Practices
 
 Brain.js is a **simple neural network library for JS** — `new brain.NeuralNetwork()`/`brain.recurrent.LSTM` trained on `input`/`output` arrays with JSON serialization built in. Practical Brain.js leans on **`input`→`output` array mapping (normalize!), training with `tolerance`/`iterations` and observed `error`, and `toJSON`/`fromJSON` for deploying trained nets — plus the pragmatic ceiling: small fixed-topology nets** — it's the HTML5-era simplicity; data normalization and validation are where the craft lives.

@@ -1,8 +1,25 @@
 ---
-name: playwright-best-practices
-description: Best practices for end-to-end testing with Playwright — the cross-browser testing framework conventions. Use when writing, structuring, or reviewing Playwright suites — covers locators, assertions, webServer, fixtures, network, and CI.
+name: "playwright-best-practices"
+description: "Best practices for end-to-end testing with Playwright — the cross-browser testing framework conventions. Use when writing, structuring, or reviewing Playwright suites — covers locators, assertions, webServer, fixtures, network, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "end-to-end-testing"
+  - "playwright"
+when_to_use: "Use when writing, structuring, or reviewing Playwright suites."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../cypress/SKILL.md"
+  - "../selenium/SKILL.md"
+  - "../karma/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Playwright Best Practices
 
 Playwright drives real browsers (Chromium, Firefox, WebKit) with **auto-waiting locators** and a **first-class fixture system (`test`, `expect`, `page`)**. Practical Playwright leans on **`locator` over raw selectors, accessible queries (`getByRole`) mirroring user intent, auto-waiting assertions (`expect.toBeVisible`) instead of sleeps, and the `webServer`/`page` fixture model for deterministic runs.** Reliable E2E is a product feature.

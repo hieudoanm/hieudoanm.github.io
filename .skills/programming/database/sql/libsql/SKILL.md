@@ -1,8 +1,23 @@
 ---
-name: libsql
-description: Best practices for using libSQL — the SQLite-compatible, embeddable database with replication. Use when designing local-first/edge-first data models, planning SQLite→libSQL migrations, or building replicated read/write tunnels — covers topology awareness, replication lag, and offline behavior.
+name: "libsql"
+description: "Best practices for using libSQL — the SQLite-compatible, embeddable database with replication. Use when designing local-first/edge-first data models, planning SQLite→libSQL migrations, or building replicated read/write tunnels — covers topology awareness, replication lag, and offline behavior."
+tags:
+  - "programming"
+  - "database"
+  - "sql"
+  - "libsql"
+when_to_use: "Use when designing local-first/edge-first data models, planning SQLite→libSQL migrations, or building replicated read/write tunnels."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../mysql/SKILL.md"
+  - "../postgresql/SKILL.md"
+  - "../sqlite/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # libSQL Best Practices
 
 libSQL is **SQLite-first with replication**, not "Postgres-lite": a local embedded core plus remote URLs, primary/replica topology, and sync. Best practice is a **local-first, distributed-systems-aware** mental model — schemas must tolerate replication lag and eventual consistency, local reads are primary, and remote operations are treated as high-latency, potentially stale, and partition-prone.

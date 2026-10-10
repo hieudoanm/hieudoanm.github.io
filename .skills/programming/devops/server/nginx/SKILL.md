@@ -1,8 +1,23 @@
 ---
-name: nginx-best-practices
-description: Best practices for Nginx configuration. Use when writing, reviewing, or optimizing Nginx server blocks and site configurations.
+name: "nginx-best-practices"
+description: "Best practices for Nginx configuration. Use when writing, reviewing, or optimizing Nginx server blocks and site configurations."
+tags:
+  - "programming"
+  - "devops"
+  - "server"
+  - "nginx"
+when_to_use: "Use when writing, reviewing, or optimizing Nginx server blocks and site configurations."
+prerequisites:
+  - "Familiarity with the application and its deployment environment."
+  - "Access to the relevant pipeline, infrastructure, or runtime configuration."
+related_skills:
+  - "../apache-server/SKILL.md"
+  - "../../kubernetes/SKILL.md"
+  - "../../ci/circle-ci/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Nginx Best Practices
 
 Nginx is a high-performance web server and reverse proxy. Well-configured Nginx is secure, fast, and reliable.

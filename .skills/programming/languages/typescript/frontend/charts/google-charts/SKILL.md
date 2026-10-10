@@ -1,8 +1,25 @@
 ---
-name: google-charts-best-practices
-description: Best practices for integrating Google Charts (gviz) — the hosted-chart conventions for JS dashboards. Use when writing, structuring, or reviewing Google Charts — covers loading, DataTable vs Array, options, events, and rendering/performance.
+name: "google-charts-best-practices"
+description: "Best practices for integrating Google Charts (gviz) — the hosted-chart conventions for JS dashboards. Use when writing, structuring, or reviewing Google Charts — covers loading, DataTable vs Array, options, events, and rendering/performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "charts"
+  - "google"
+when_to_use: "Use when writing, structuring, or reviewing Google Charts."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../chart.js/SKILL.md"
+  - "../highcharts/SKILL.md"
+  - "../recharts/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Google Charts Best Practices
 
 Google Charts (the `gviz`/`google.visualization` library) renders **hosted SVG charts from a `DataTable`** — load the loader, build the table, pick a chart class, render with options. Practical Google Charts leans on **the loader `google.charts.load("current", {packages:[...]})` + `setOnLoadCallback`, `DataTable` semantics (columns typed) over ad-hoc arrays, and explicit `options` per chart** — the data shape (`DataTable`) is the contract; options are the flavor.

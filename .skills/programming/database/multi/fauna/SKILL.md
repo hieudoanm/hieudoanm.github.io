@@ -1,8 +1,23 @@
 ---
-name: fauna
-description: Fauna — distributed multi-model database with relational query surface, temporal logs, and a graph-compatible API.
+name: "fauna"
+description: "Fauna — distributed multi-model database with relational query surface, temporal logs, and a graph-compatible API."
+tags:
+  - "programming"
+  - "database"
+  - "multi"
+  - "fauna"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Fauna in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../../graph/dgraph/SKILL.md"
+  - "../../document/couchdb/SKILL.md"
+  - "../../sql/cockroachdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Fauna is a **serverless, distributed, multi-model database** offering **relational real-time consistency** with a **FQL (Fauna Query Language)** surface, temporal queries, and GraphQL compatibility, managed via a global API.
 
 ## 1. Core Concepts

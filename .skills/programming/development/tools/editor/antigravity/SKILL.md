@@ -1,11 +1,27 @@
 ---
-name: antigravity-best-practices
-description: Best practices for the Antigravity editor — agent-first workflow boundaries, reviewing generated diffs, project rules, and when to fall back to a conventional editor. Use when configuring or working with agent-driven editing in Antigravity.
+name: "antigravity-best-practices"
+description: "Best practices for the Antigravity editor — agent-first workflow boundaries, reviewing generated diffs, project rules, and when to fall back to a conventional editor. Use when configuring or working with agent-driven editing in Antigravity."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "editor"
+  - "antigravity"
+when_to_use: "Use when configuring or working with agent-driven editing in Antigravity."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../cursor/SKILL.md"
+  - "../neovim/SKILL.md"
+  - "../vscode/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Antigravity
 
-Antigravity is a Google-built, agent-first editor: rather than autocomplete that suggests the next token, it is built around an agent that plans and executes multi-file work inside the editor, with a conventional editor underneath. Its premise is that **the agent is the primary author and you are the reviewer**, which inverts the usual arrangement. Practical Antigravity work is about **bounding what the agent is allowed to do, reviewing its output as code, and keeping the conventional editor and CLI checks as the authority**. VS Code conventions are in [vscode.md](./vscode.md); the closest other agent-first editor is [cursor.md](./cursor.md).
+Antigravity is a Google-built, agent-first editor: rather than autocomplete that suggests the next token, it is built around an agent that plans and executes multi-file work inside the editor, with a conventional editor underneath. Its premise is that **the agent is the primary author and you are the reviewer**, which inverts the usual arrangement. Practical Antigravity work is about **bounding what the agent is allowed to do, reviewing its output as code, and keeping the conventional editor and CLI checks as the authority**. VS Code conventions are in [vscode.md](../vscode/SKILL.md); the closest other agent-first editor is [cursor.md](../cursor/SKILL.md).
 
 _Verified against Antigravity's 2026 releases. The product changes quickly — features, model access, and the exact surface move between releases; the review and boundary practices below are the stable part._
 
@@ -43,7 +59,7 @@ _Verified against Antigravity's 2026 releases. The product changes quickly — f
 
 ## 4. Conventions & Rules
 
-- **Encode the project's conventions where the agent will read them** — a committed rules or instructions file, the same discipline as in [cursor.md](./cursor.md). Include the build, test, typecheck, and format commands; an agent guessing a test command produces a false green.
+- **Encode the project's conventions where the agent will read them** — a committed rules or instructions file, the same discipline as in [cursor.md](../cursor/SKILL.md). Include the build, test, typecheck, and format commands; an agent guessing a test command produces a false green.
 - **Be specific.** "Follow existing patterns" is not a rule; "components live in `src/components/atoms`, `organisms`, `templates`; a new one goes in the layer it matches" is.
 - **Version the rules like code.** A rule change is a reviewable diff, so a disagreement about an agent rule is settled the way a lint rule is.
 - **The project still owns the conventions** — file layout, size limits, dependency policy. The agent is a fast author, not the owner of the architecture.

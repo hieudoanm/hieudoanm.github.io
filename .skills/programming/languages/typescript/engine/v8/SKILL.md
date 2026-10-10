@@ -1,8 +1,24 @@
 ---
-name: v8-best-practices
-description: Best practices for running JavaScript on the V8 engine — the Chrome/Node/Bun/V8-based JS engine conventions. Use when writing, structuring, or reviewing code that targets V8 — covers optimization tiers, hidden classes, typed-arrays, memory, and profiler-guided tuning.
+name: "v8-best-practices"
+description: "Best practices for running JavaScript on the V8 engine — the Chrome/Node/Bun/V8-based JS engine conventions. Use when writing, structuring, or reviewing code that targets V8 — covers optimization tiers, hidden classes, typed-arrays, memory, and profiler-guided tuning."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "engine"
+  - "v8"
+when_to_use: "Use when writing, structuring, or reviewing code that targets V8."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../javascript-core/SKILL.md"
+  - "../spider-monkey/SKILL.md"
+  - "../hermes/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # V8 Best Practices
 
 V8 is **Google's JavaScript engine (Chrome, Node.js, Electron, Deno, Bun)** — code is JIT-compiled across tiers (Ignition interpreter → Sparkplug/TurboFan optimizing compiler). Practical V8-aware code leans on **stable object shape for fast hidden-class paths (`monomorphic`), typed arrays for numeric buffers, and profiler-guided optimization (`%OptimizeFunctionOnNextCall` is a debugging tool, not a production lever)** — most of the win is NOT contorting code; it's avoiding the known slow-path traps.

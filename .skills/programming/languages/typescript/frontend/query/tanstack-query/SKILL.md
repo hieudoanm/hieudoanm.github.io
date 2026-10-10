@@ -1,8 +1,25 @@
 ---
-name: tanstack-query-best-practices
-description: Best practices for server state with TanStack Query — the React Query conventions for async state in JS apps. Use when writing, structuring, or reviewing TanStack Query — covers QueryClient, keys, queries, mutations, caching, infinite queries, and testing.
+name: "tanstack-query-best-practices"
+description: "Best practices for server state with TanStack Query — the React Query conventions for async state in JS apps. Use when writing, structuring, or reviewing TanStack Query — covers QueryClient, keys, queries, mutations, caching, infinite queries, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "query"
+  - "tanstack"
+when_to_use: "Use when writing, structuring, or reviewing TanStack Query."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../apollo-client/SKILL.md"
+  - "../swr/SKILL.md"
+  - "../axios/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # TanStack Query Best Practices
 
 TanStack Query (React Query) manages **server state — cached queries (`useQuery`) and mutations (`useMutation`) with a QueryClient** — the cache is the source of truth for fetched data. Practical TanStack Query leans on **a single `QueryClient` with per-app defaults, structured query keys (hierarchical), `staleTime` deliberate, mutations updating the cache via `invalidateQueries`/`setQueryData`, and `useSuspenseQuery`-ready loading states** — separating server state from client state is the library's reason to exist.

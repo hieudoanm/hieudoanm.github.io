@@ -1,8 +1,22 @@
 ---
-name: graphql-go
-description: graphql-go — the reference GraphQL server implementation for Go (graphql-go/graphql library), building schemas and resolving field functions.
+name: "graphql-go"
+description: "graphql-go — the reference GraphQL server implementation for Go (graphql-go/graphql library), building schemas and resolving field functions."
+tags:
+  - "programming"
+  - "graphql"
+  - "go"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting graphql-go in a project."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../typescript/apollo/server/SKILL.md"
+  - "../../typescript/garph/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 `graphql-go/graphql` is a **Go implementation of GraphQL Server (reference JS implementation semantics)**, letting you define a typed schema and resolvers natively in Go without codegen.
 
 ## 1. Core Concepts

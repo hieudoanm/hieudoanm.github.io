@@ -1,8 +1,23 @@
 ---
-name: leveldb
-description: LevelDB — fast key-value storage library written by Google, providing ordered mapping from string keys to string values with a log-structured merge-tree.
+name: "leveldb"
+description: "LevelDB — fast key-value storage library written by Google, providing ordered mapping from string keys to string values with a log-structured merge-tree."
+tags:
+  - "programming"
+  - "database"
+  - "cache"
+  - "leveldb"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting LevelDB in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../badger/SKILL.md"
+  - "../rocksdb/SKILL.md"
+  - "../valkey/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 LevelDB is a **lightweight, embedded key-value store** providing **ordered string key→value** mappings backed by an **LSM (log-structured merge) tree**, originally developed by Google for Chrome.
 
 ## 1. Core Concepts

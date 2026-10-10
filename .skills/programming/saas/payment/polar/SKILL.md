@@ -1,8 +1,23 @@
 ---
-name: polar
-description: Best practices for monetizing open-source and digital products with Polar. Use when selling subscriptions, one-time purchases, or handling donations/pledges — covers checkout, benefits, webhooks, and the open-source ISV model.
+name: "polar"
+description: "Best practices for monetizing open-source and digital products with Polar. Use when selling subscriptions, one-time purchases, or handling donations/pledges — covers checkout, benefits, webhooks, and the open-source ISV model."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "polar"
+when_to_use: "Use when selling subscriptions, one-time purchases, or handling donations/pledges."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../lemonsqueezy/SKILL.md"
+  - "../paddle/SKILL.md"
+  - "../dodopayments/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Polar Best Practices
 
 Polar is a payments platform aimed at **open-source monetization** — subscriptions, one-time purchases, donations, and benefits attached to repos/products, with the merchant-of-record handling tax. Best practice is letting Polar own checkout/tax, consuming **webhooks** for entitlement state, and treating **benefits** (license keys, repo access, Discord roles) as the product surface you grant.

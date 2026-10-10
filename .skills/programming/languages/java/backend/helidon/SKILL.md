@@ -1,8 +1,24 @@
 ---
-name: helidon-best-practices
-description: Best practices for building Java microservices with Helidon — the lightweight microprofile-oriented framework conventions. Use when writing, structuring, or reviewing Helidon (helidon-se/helidon-nima and helidon-mp) — covers starting points, routing, config, CDI, reactive/Nima, errors, testing, and observability.
+name: "helidon-best-practices"
+description: "Best practices for building Java microservices with Helidon — the lightweight microprofile-oriented framework conventions. Use when writing, structuring, or reviewing Helidon (helidon-se/helidon-nima and helidon-mp) — covers starting points, routing, config, CDI, reactive/Nima, errors, testing, and observability."
+tags:
+  - "programming"
+  - "language"
+  - "java"
+  - "backend"
+  - "helidon"
+when_to_use: "Use when writing, structuring, or reviewing Helidon (helidon-se/helidon-nima and helidon-mp)."
+prerequisites:
+  - "Basic familiarity with Java and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../micronaut/SKILL.md"
+  - "../quarkus/SKILL.md"
+  - "../javalin/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Helidon Best Practices
 
 Helidon offers two flavors: **`helidon-se`** (now **`helidon-nima`/virtual-thread based**; a modern, imperative `WebServer` with `Routing` builders) and **`helidon-mp`** (MicroProfile; CDI + JAX-RS conventions). Practical Helidon leans on **a `Routing` builder assembled from small `Service`/`Handler` pieces for SE, or CDI-managed resources with typed config for MP**, **`Config`/`@ConfigProperty` as the single configuration boundary**, and **structured metrics/logging/health via the built-in `Health`/`Metrics` integrations**. Use Nima unless you specifically need the MicroProfile ecosystem.

@@ -1,8 +1,23 @@
 ---
-name: elasticsearch
-description: Best practices for designing indexes, queries, and clusters with Elasticsearch (search and analytics). Use when writing mappings, building search queries/aggregations, tuning shards, planning migrations/re-indexing, or debugging slow searches — treats ES as a search engine, not a system of record.
+name: "elasticsearch"
+description: "Best practices for designing indexes, queries, and clusters with Elasticsearch (search and analytics). Use when writing mappings, building search queries/aggregations, tuning shards, planning migrations/re-indexing, or debugging slow searches — treats ES as a search engine, not a system of record."
+tags:
+  - "programming"
+  - "database"
+  - "search"
+  - "elasticsearch"
+when_to_use: "Use when writing mappings, building search queries/aggregations, tuning shards, planning migrations/re-indexing, or debugging slow searches."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../opensearch/SKILL.md"
+  - "../apache-solr/SKILL.md"
+  - "../../sql/mysql/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Elasticsearch Best Practices
 
 Elasticsearch is a **search and analytics engine**, not a transactional database or source of truth — data is rebuilt from primary storage. Best practice is designing mappings before indexing, separating `text` from `keyword` deliberately, avoiding mapping explosions and wildcards on high-cardinality fields, controlling shards, and using `search_after` over deep `from+size` pagination.

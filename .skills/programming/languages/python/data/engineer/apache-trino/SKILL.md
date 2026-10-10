@@ -1,8 +1,26 @@
 ---
-name: apache-trino-best-practices
-description: Best practices for distributed SQL querying with Trino — the federated-query-engine conventions. Use when writing, structuring, or reviewing Trino SQL/queries — covers catalogs/schemas, query patterns, joins, bucketing, resource groups, and connectors.
+name: "apache-trino-best-practices"
+description: "Best practices for distributed SQL querying with Trino — the federated-query-engine conventions. Use when writing, structuring, or reviewing Trino SQL/queries — covers catalogs/schemas, query patterns, joins, bucketing, resource groups, and connectors."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-engineering"
+  - "apache"
+  - "trino"
+when_to_use: "Use when writing, structuring, or reviewing Trino SQL/queries."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../apache-spark/SKILL.md"
+  - "../apache-airflow/SKILL.md"
+  - "../apache-iceberg/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Apache Trino Best Practices
 
 Trino is a **distributed SQL query engine for federated analytics across many connectors (Hive, Iceberg, Postgres, Kafka…)** — stateless, ANSI-ish, streaming results. Practical Trino leans on **catalog-qualified queries (`catalog.schema.table`), pushing work down (`filters`/joins at the source), correct join style (hash vs broadcast) aware of connector behavior, and bucketing on join keys for performance** — "push down, stream, and minimize shuffle" is the engine's discipline; the EXPLAIN is your map.

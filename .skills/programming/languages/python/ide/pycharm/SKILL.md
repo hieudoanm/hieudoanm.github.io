@@ -1,11 +1,27 @@
 ---
-name: pycharm-best-practices
-description: Best practices for working in PyCharm — the unified free and paid tiers, virtualenv and uv/poetry environment management, pytest and the profiler, Jupyter support, and JetBrains shared conventions. Use when setting up, debugging, or profiling a Python project in PyCharm.
+name: "pycharm-best-practices"
+description: "Best practices for working in PyCharm — the unified free and paid tiers, virtualenv and uv/poetry environment management, pytest and the profiler, Jupyter support, and JetBrains shared conventions. Use when setting up, debugging, or profiling a Python project in PyCharm."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "ide"
+  - "pycharm"
+when_to_use: "Use when setting up, debugging, or profiling a Python project in PyCharm."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../../java/ide/idea/SKILL.md"
+  - "../../../php/ide/php-storm/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # PyCharm
 
-PyCharm is JetBrains' Python IDE, with the deepest Python tooling in the JetBrains catalogue: refactorings that understand the language, a scientific-tooling stack (Notebook, NumPy/pandas support, Jupyter), and a built-in profiler. As of **2025.1 there is one PyCharm**, replacing the separate Community and Professional editions — the free tier is limited by a non-commercial-use condition rather than by features. Practical PyCharm work is about **letting the project's own environment and test runner own the workflow, and never letting the IDE's interpreter silently become a second source of truth**. Language rules live in [python.md](../python.md).
+PyCharm is JetBrains' Python IDE, with the deepest Python tooling in the JetBrains catalogue: refactorings that understand the language, a scientific-tooling stack (Notebook, NumPy/pandas support, Jupyter), and a built-in profiler. As of **2025.1 there is one PyCharm**, replacing the separate Community and Professional editions — the free tier is limited by a non-commercial-use condition rather than by features. Practical PyCharm work is about **letting the project's own environment and test runner own the workflow, and never letting the IDE's interpreter silently become a second source of truth**. Language rules live in [python.md](../../SKILL.md).
 
 _Verified against PyCharm 2026.2.3 (September 2026) with Python 3.13 and pytest 8.x. The unified edition shipped 2025-04-16 with the 2025.1 release._
 

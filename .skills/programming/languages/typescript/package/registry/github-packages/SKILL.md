@@ -1,8 +1,26 @@
 ---
-name: github-packages-best-practices
-description: Best practices for hosting and consuming JavaScript packages on GitHub Packages — the GHCR/GPR conventions for npm scope publishing. Use when writing, structuring, or reviewing GitHub Packages — covers auth, scoping, publishing, private packages, and CI workflows.
+name: "github-packages-best-practices"
+description: "Best practices for hosting and consuming JavaScript packages on GitHub Packages — the GHCR/GPR conventions for npm scope publishing. Use when writing, structuring, or reviewing GitHub Packages — covers auth, scoping, publishing, private packages, and CI workflows."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "package-management"
+  - "package-registry"
+  - "github"
+  - "packages"
+when_to_use: "Use when writing, structuring, or reviewing GitHub Packages."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../jsr/SKILL.md"
+  - "../../../SKILL.md"
+  - "../../manager/npm/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # GitHub Packages Best Practices
 
 GitHub Packages (GHR/ GHCR) hosts **private/registry-scoped npm packages alongside your GitHub org** — publishing via `GITHUB_TOKEN` or a PAT from a `workflow`, consumed through the scoped registry URL. Practical GitHub Packages leans on **a scoped name (`@org/pkg`), per-repo `workflow_dispatch`-style publish with least-privilege tokens, registry auth via `npm_config_registry` pattern, and version/changelog driven from tags** — the registry mirrors your Git state; automation owns the publish ceremony.

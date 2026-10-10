@@ -1,8 +1,23 @@
 ---
-name: keycloak
-description: Best practices for running Keycloak as a self-hosted identity provider. Use when deploying Keycloak, configuring realms/clients, or integrating OIDC/SAML — covers realm isolation, token validation, high availability, and upgrades.
+name: "keycloak"
+description: "Best practices for running Keycloak as a self-hosted identity provider. Use when deploying Keycloak, configuring realms/clients, or integrating OIDC/SAML — covers realm isolation, token validation, high availability, and upgrades."
+tags:
+  - "programming"
+  - "saas"
+  - "authentication"
+  - "keycloak"
+when_to_use: "Use when deploying Keycloak, configuring realms/clients, or integrating OIDC/SAML."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../zitadel/SKILL.md"
+  - "../auth0/SKILL.md"
+  - "../okta/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Keycloak Best Practices
 
 Keycloak is an open-source, self-hosted identity and access management server supporting OIDC and SAML. Best practice is running it as a **managed platform piece**: realms for isolation, clients with least-privilege, DB-backed state for HA, close attention to upgrades, and local token validation on the application side.

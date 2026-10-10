@@ -1,8 +1,25 @@
 ---
-name: nodejs-runtime
-description: Best practices for building applications that run on the Node.js runtime (TypeScript/JavaScript). Use when structuring or reviewing Node.js server, CLI, or library code — covers ESM, the event loop, streams, processes and signals, fs, testing, and tooling.
+name: "nodejs-runtime"
+description: "Best practices for building applications that run on the Node.js runtime (TypeScript/JavaScript). Use when structuring or reviewing Node.js server, CLI, or library code — covers ESM, the event loop, streams, processes and signals, fs, testing, and tooling."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "runtime"
+  - "node"
+  - "nodejs"
+when_to_use: "Use when structuring or reviewing Node.js server, CLI, or library code."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../deno/SKILL.md"
+  - "../bun/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Node.js Runtime Best Practices
 
 Node.js is a single-threaded, event-loop-based JavaScript runtime with a rich set of standard modules. The modern runtime has converged on ESM, `node:` (and `node:test`) built-ins, first-class `fetch`, and smooth TypeScript — so "best practice" is about writing non-blocking I/O, managing the process lifecycle explicitly, and using the well-trodden tools (`node --watch`, `--env-file`, `node:test`) instead of re-inventing them.

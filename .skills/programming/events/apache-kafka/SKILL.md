@@ -1,8 +1,23 @@
 ---
-name: apache-kafka
-description: Best practices for event streaming with Apache Kafka. Use when designing topics and schemas, building producers/consumers, choosing delivery semantics, debugging consumer lag, or planning streaming pipelines — treats Kafka as an event log and streaming backbone, not a queue or database.
+name: "apache-kafka"
+description: "Best practices for event streaming with Apache Kafka. Use when designing topics and schemas, building producers/consumers, choosing delivery semantics, debugging consumer lag, or planning streaming pipelines — treats Kafka as an event log and streaming backbone, not a queue or database."
+tags:
+  - "programming"
+  - "messaging"
+  - "apache"
+  - "kafka"
+when_to_use: "Use when designing topics and schemas, building producers/consumers, choosing delivery semantics, debugging consumer lag, or planning streaming pipelines."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../apache-pulsar/SKILL.md"
+  - "../rabbitmq/SKILL.md"
+  - "../activemq/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Apache Kafka Best Practices
 
 Kafka is an **event log and streaming backbone** — immutable, append-only events retained independently of consumption, replayed freely, ordered per partition. Best practice is designing topics around business events with stable naming and versioned schemas, choosing partition keys intentionally, committing offsets deliberately, and building idempotent consumers because reprocessing and duplicates are the expected contract.

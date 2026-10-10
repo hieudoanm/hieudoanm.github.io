@@ -1,8 +1,25 @@
 ---
-name: bubbletea-design
-description: Best practices for building visually polished terminal UIs with Bubble Tea (Go). Use when creating, styling, or reviewing a Bubble Tea TUI app — covers Lip Gloss styling, layout, color, and component patterns with suggested values.
+name: "bubbletea-design"
+description: "Best practices for building visually polished terminal UIs with Bubble Tea (Go). Use when creating, styling, or reviewing a Bubble Tea TUI app — covers Lip Gloss styling, layout, color, and component patterns with suggested values."
+tags:
+  - "programming"
+  - "language"
+  - "go"
+  - "cli"
+  - "bubbletea"
+  - "design"
+when_to_use: "Use when creating, styling, or reviewing a Bubble Tea TUI app."
+prerequisites:
+  - "Basic familiarity with Go and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../cobra/SKILL.md"
+  - "../../../rust/cli/ratatui/SKILL.md"
+  - "../../ui/fyne/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Bubble Tea Design Best Practices
 
 Bubble Tea (charmbracelet/bubbletea) handles the Elm-architecture state/update/view loop; **Lip Gloss** (charmbracelet/lipgloss) handles all visual styling. A plain Bubble Tea app looks like raw terminal text until Lip Gloss is applied deliberately.

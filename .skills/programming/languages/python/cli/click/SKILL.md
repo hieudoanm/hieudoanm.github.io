@@ -1,8 +1,24 @@
 ---
-name: click-best-practices
-description: Best practices for writing Python CLIs with Click — the composable command-line framework conventions. Use when writing, structuring, or reviewing Click tools — covers commands/groups, options/arguments, type handling, context, validation, error handling, and testing.
+name: "click-best-practices"
+description: "Best practices for writing Python CLIs with Click — the composable command-line framework conventions. Use when writing, structuring, or reviewing Click tools — covers commands/groups, options/arguments, type handling, context, validation, error handling, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "cli"
+  - "click"
+when_to_use: "Use when writing, structuring, or reviewing Click tools."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../argparse/SKILL.md"
+  - "../../SKILL.md"
+  - "../../backend/fastapi/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Click Best Practices
 
 Click builds CLIs from **decorators** (`@click.group`, `@click.command`, `@click.option`) that wrap functions — the function signature becomes the CLI contract. Practical Click leans on **small command functions with typed options/arguments, `@click.group` command clusters, `@click.option` with `type=` and `required`/`multiple`**, and **`ctx` (context) only for shared/stateful wiring**. Click's grouping and `ClickException` flow keep the parsing layer thin and the tools testable via `CliRunner`.

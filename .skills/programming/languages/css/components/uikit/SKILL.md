@@ -1,8 +1,24 @@
 ---
-name: uikit
-description: UIkit — lightweight, modular front-end framework with components, layout primitives, and customizable Sass/JavaScript modules.
+name: "uikit"
+description: "UIkit — lightweight, modular front-end framework with components, layout primitives, and customizable Sass/JavaScript modules."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "components"
+  - "uikit"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting UIkit in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../bootstrap/SKILL.md"
+  - "../materializecss/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 UIkit is a **lightweight modular front-end framework** with **modern layout primitives (flex/grid), a rich component library, and per-module Sass and JavaScript** you can theme and include selectively.
 
 ## 1. Installation and Setup

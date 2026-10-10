@@ -1,11 +1,27 @@
 ---
-name: biome-best-practices
-description: Best practices for using Biome as a unified linter, formatter, and import organizer — configuration, type-aware rules, safe fixes, migrations, and where Biome still falls short of ESLint and Prettier.
+name: "biome-best-practices"
+description: "Best practices for using Biome as a unified linter, formatter, and import organizer — configuration, type-aware rules, safe fixes, migrations, and where Biome still falls short of ESLint and Prettier."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "developer-tools"
+  - "biome"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Biome in a project."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../prettier/SKILL.md"
+  - "../eslint/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Biome
 
-Biome is a **single Rust binary that formats, lints, and organizes imports**, replacing the [eslint.md](./eslint.md) + [prettier.md](./prettier.md) pairing with one config file. That consolidation is genuinely valuable — 20-30x faster, one config, one binary — but it is a real trade, because Biome's ecosystem is a fraction of ESLint's. Practical Biome work leans on **`biome.json` alone, `check --write` locally with `ci` in pipelines, and a clear-eyed view of the gaps**.
+Biome is a **single Rust binary that formats, lints, and organizes imports**, replacing the [eslint.md](../eslint/SKILL.md) + [prettier.md](../prettier/SKILL.md) pairing with one config file. That consolidation is genuinely valuable — 20-30x faster, one config, one binary — but it is a real trade, because Biome's ecosystem is a fraction of ESLint's. Practical Biome work leans on **`biome.json` alone, `check --write` locally with `ci` in pipelines, and a clear-eyed view of the gaps**.
 
 _Verified against Biome 2.5.14._
 

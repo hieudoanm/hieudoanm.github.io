@@ -4,8 +4,7 @@ Different review types answer different research questions.
 
 Do not treat every literature review as a systematic review.
 
-## 1. Narrative Review
-
+## Narrative Review
 A narrative review provides a broad, interpretive synthesis of research
 on a topic.
 
@@ -30,8 +29,7 @@ narrative reviews may be more vulnerable to selection bias.
 
 ---
 
-## 2. Systematic Review
-
+## Systematic Review
 A systematic review uses a predefined and transparent methodology to
 identify, select, evaluate, and synthesize relevant studies.
 
@@ -57,8 +55,7 @@ could understand how the evidence was identified and selected.
 
 ---
 
-## 3. Scoping Review
-
+## Scoping Review
 A scoping review maps the breadth and characteristics of research on a
 topic.
 
@@ -84,8 +81,7 @@ estimating a single overall effect.
 
 ---
 
-## 4. Meta-analysis
-
+## Meta-analysis
 A meta-analysis statistically combines quantitative results from
 multiple studies.
 
@@ -119,8 +115,7 @@ between estimates.
 
 ---
 
-## 5. Integrative Review
-
+## Integrative Review
 An integrative review combines evidence from different research
 methodologies.
 
@@ -138,8 +133,7 @@ research methodology.
 
 ---
 
-## 6. Umbrella Review
-
+## Umbrella Review
 An umbrella review synthesizes existing systematic reviews and
 meta-analyses rather than primarily reviewing individual studies.
 
@@ -153,43 +147,7 @@ reviews rather than treating every review as independent evidence.
 
 ---
 
-## Choosing a Review Type
-
-Use the research question to determine the review type.
-
-```text
-Broad field mapping
-        ↓
-Scoping Review
-
-Focused evidence question
-        ↓
-Systematic Review
-
-Quantitative effect estimation
-        ↓
-Systematic Review + Meta-analysis
-
-Broad theoretical understanding
-        ↓
-Narrative Review
-
-Multiple evidence types
-        ↓
-Integrative Review
-
-Many existing systematic reviews
-        ↓
-Umbrella Review
-```
-
-These categories can overlap.
-
-A review should be described according to its actual methodology rather
-than simply choosing the label that sounds most rigorous.
-
 ## Common Mistakes
-
 Do not:
 
 - Call a narrative review "systematic" without a systematic methodology.

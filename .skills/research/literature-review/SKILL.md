@@ -1,6 +1,21 @@
 ---
-name: literature-review
-description: Conduct rigorous literature reviews by searching, screening, comparing, synthesizing, and critically evaluating research evidence.
+name: "literature-review"
+description: "Conduct rigorous literature reviews by searching, screening, comparing, synthesizing, and critically evaluating research evidence."
+tags:
+  - "research"
+  - "literature"
+  - "review"
+when_to_use: "Use when conducting or communicating work related to literature review, especially when a structured research workflow is needed."
+prerequisites:
+  - "A defined research topic or question."
+  - "Access to relevant sources or project materials."
+related_skills:
+  - "../meta-analysis/SKILL.md"
+  - "../research-gap/SKILL.md"
+  - "../research-writing/SKILL.md"
+avoid_when:
+  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+status: "active"
 ---
 
 # Literature Review
@@ -13,14 +28,12 @@ future research.
 A literature review is not a collection of paper summaries.
 
 ## Core Principle
-
 > Do not summarize papers independently. Synthesize evidence across papers.
 
 The goal is to understand the **research landscape**, not simply describe
 individual studies.
 
 ## Workflow
-
 Follow this workflow unless the user explicitly requests a narrower task:
 
 1. Define the research question.
@@ -41,7 +54,6 @@ Follow this workflow unless the user explicitly requests a narrower task:
 16. Identify useful directions for future research.
 
 ## Research Question
-
 Before searching, determine:
 
 - What is the main research question?
@@ -55,7 +67,6 @@ Before searching, determine:
 If the question is too broad, narrow it before conducting the review.
 
 ## Search Strategy
-
 Use multiple search terms and synonyms where appropriate.
 
 Consider:
@@ -75,21 +86,7 @@ Use reviews and meta-analyses to understand the field and discover
 additional relevant literature, but do not treat a review as a substitute
 for examining important primary studies.
 
-## Screening
-
-For each candidate paper, determine:
-
-- Is it relevant to the research question?
-- Does the population match?
-- Does the method address the question?
-- Is the evidence directly relevant or only tangentially related?
-- Is the study sufficiently rigorous?
-- Is the publication type appropriate?
-
-Do not include a paper merely because it contains similar keywords.
-
 ## Evidence Extraction
-
 For each important study, extract comparable information.
 
 At minimum:
@@ -109,7 +106,6 @@ At minimum:
 Add domain-specific fields when necessary.
 
 ## Synthesis
-
 Do not structure the review as:
 
 > Paper A found X.  
@@ -133,7 +129,6 @@ Organize evidence around meaningful patterns such as:
 - Historical development
 
 ## Compare and Contrast
-
 Explicitly examine differences between studies.
 
 Ask:
@@ -153,7 +148,6 @@ Do not interpret conflicting results as simple contradiction without
 examining methodological differences.
 
 ## Evidence Hierarchy
-
 Consider the strength of evidence.
 
 Distinguish between:
@@ -170,168 +164,9 @@ Distinguish between:
 Do not automatically assume that a newer or more complex study provides
 stronger evidence.
 
-## Critical Appraisal
+## Further detail
 
-Evaluate:
-
-### Internal validity
-
-Could the study's design support its conclusions?
-
-### External validity
-
-Can the findings generalize beyond the studied sample or setting?
-
-### Measurement validity
-
-Do the measurements actually capture the intended construct?
-
-### Statistical validity
-
-Are the statistical analyses appropriate?
-
-### Reproducibility
-
-Can the findings be independently reproduced?
-
-### Bias
-
-Consider:
-
-- Selection bias
-- Measurement bias
-- Publication bias
-- Confirmation bias
-- Attrition
-- Researcher degrees of freedom
-- Multiple comparisons
-
-## Consensus
-
-Distinguish between:
-
-### Strong consensus
-
-Multiple independent studies using appropriate methods converge on
-similar findings.
-
-### Emerging consensus
-
-Several studies support a finding, but evidence remains limited.
-
-### Mixed evidence
-
-Studies produce meaningfully different results.
-
-### Unknown
-
-There is insufficient evidence to draw a reliable conclusion.
-
-Never describe a topic as settled merely because several papers support
-the same conclusion.
-
-## Research Gaps
-
-A useful research gap should be specific.
-
-Weak:
-
-> More research is needed.
-
-Strong:
-
-> Existing studies have primarily examined X using cross-sectional
-> behavioral measures, while longitudinal neural measurements of Y remain
-> limited.
-
-Possible gap types include:
-
-- Population gap
-- Methodological gap
-- Measurement gap
-- Theoretical gap
-- Replication gap
-- Data gap
-- Computational gap
-- Temporal gap
-- Translational gap
-
-## Writing the Review
-
-A strong literature review usually follows:
-
-1. Introduction
-2. Scope and search strategy
-3. Thematic synthesis
-4. Comparison of evidence
-5. Methodological limitations
-6. Research gaps
-7. Conclusion
-
-The exact structure should follow the research question rather than a
-fixed template.
-
-## Citation Rules
-
-Cite claims that depend on published evidence.
-
-Prefer the original source for:
-
-- Specific experimental findings
-- Sample characteristics
-- Methods
-- Effect estimates
-- Dataset descriptions
-- Theoretical claims attributed to specific researchers
-
-Use review papers for:
-
-- Field-level context
-- Historical development
-- Broad consensus
-- Discovering primary literature
-
-Never fabricate citations.
-
-Never infer a finding that is not supported by the source.
-
-## Avoid
-
-Do not:
-
-- Produce a list of paper summaries.
-- Treat citation count as evidence quality.
-- Equate correlation with causation.
-- Treat absence of evidence as evidence of absence.
-- Ignore contradictory findings.
-- Overstate consensus.
-- Use a single paper to establish a field-wide conclusion.
-- Hide methodological limitations.
-- Invent research gaps.
-- Fabricate references.
-- Cite papers that were not actually examined.
-
-## Output
-
-When producing a literature review, prioritize:
-
-1. Research question
-2. Scope
-3. Evidence synthesis
-4. Consensus
-5. Disagreement
-6. Limitations
-7. Research gaps
-8. Conclusion
-
-The final review should answer:
-
-> What do we currently know?
-
-> How strong is the evidence?
-
-> Where does the evidence disagree?
-
-> What do we still not know?
-
-> What research would most usefully address those uncertainties?
+- [Critical Appraisal](references/critical-appraisal.md)
+- [Review Types](references/review-types.md)
+- [Search Strategy](references/search-strategy.md)
+- [Synthesis](references/synthesis.md)

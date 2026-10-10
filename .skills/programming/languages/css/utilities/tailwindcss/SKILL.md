@@ -1,8 +1,24 @@
 ---
-name: tailwindcss
-description: Tailwind CSS — utility-first CSS framework for rapidly building custom UIs without leaving your HTML.
+name: "tailwindcss"
+description: "Tailwind CSS — utility-first CSS framework for rapidly building custom UIs without leaving your HTML."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "utilities"
+  - "tailwindcss"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Tailwind CSS in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../unocss/SKILL.md"
+  - "../../components/tailwindcss-plus/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Tailwind CSS is a **utility-first CSS framework** that lets you build **arbitrary, bespoke designs directly in markup** using low-level utility classes, with **JIT compilation, theming via config, and zero component opinions**.
 
 ## 1. Installation and Setup (v3)

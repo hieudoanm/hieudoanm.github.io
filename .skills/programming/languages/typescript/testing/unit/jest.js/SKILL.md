@@ -1,8 +1,26 @@
 ---
-name: jest-best-practices
-description: Best practices for unit testing with Jest — the JavaScript testing framework conventions for the modern JS/TS ecosystem (including vitest-alike DX). Use when writing, structuring, or reviewing Jest suites — covers describe/it, matchers, mocking, fakes, coverage, and CI.
+name: "jest-best-practices"
+description: "Best practices for unit testing with Jest — the JavaScript testing framework conventions for the modern JS/TS ecosystem (including vitest-alike DX). Use when writing, structuring, or reviewing Jest suites — covers describe/it, matchers, mocking, fakes, coverage, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "unit-testing"
+  - "jest"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing Jest suites."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../vitest/SKILL.md"
+  - "../jasmine.js/SKILL.md"
+  - "../mocha.js/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Jest Best Practices
 
 Jest is the **default test framework in the JS/TS ecosystem** — everything in one runner (runner, matchers, mocking, coverage, watch). Practical Jest leans on **behavioral suites (`describe`/`it` sentences), `toEqual`/`toMatchObject` deep matchers, and `jest.mock`/`jest.spyOn` for seam isolation** — with the config minimal (one `jest.config.js`/pkg `"jest"` block). Tests document and verify the contract.

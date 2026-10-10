@@ -1,8 +1,25 @@
 ---
-name: selenium-best-practices
-description: Best practices for browser automation with Selenium — the cross-browser WebDriver conventions for end-to-end automation. Use when writing, structuring, or reviewing Selenium (WebDriver/remote) — covers WebDriver setup, element location, waits, frameworks, and CI.
+name: "selenium-best-practices"
+description: "Best practices for browser automation with Selenium — the cross-browser WebDriver conventions for end-to-end automation. Use when writing, structuring, or reviewing Selenium (WebDriver/remote) — covers WebDriver setup, element location, waits, frameworks, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "end-to-end-testing"
+  - "selenium"
+when_to_use: "Use when writing, structuring, or reviewing Selenium (WebDriver/remote)."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../cypress/SKILL.md"
+  - "../playwright/SKILL.md"
+  - "../puppeteer/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Selenium Best Practices
 
 Selenium WebDriver drives browsers (Chrome/Edge/Firefox/Safari) through the **WebDriver protocol** across many languages. Practical Selenium leans on **`WebDriver` lifecycle managed explicitly, `By`-based finders with explicit/fluent waits (`WebDriverWait`) instead of `Thread.sleep`, and page-object/AAA structure so the suite stays maintainable.** Selenium is the portability officer — words like "works on <browser>" are its reason to exist; keep waits explicit and locators stable.

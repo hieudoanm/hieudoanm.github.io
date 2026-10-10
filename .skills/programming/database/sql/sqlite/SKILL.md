@@ -1,8 +1,23 @@
 ---
-name: sqlite
-description: Best practices for using SQLite as an embedded application database. Use when designing schemas, choosing journal modes, writing queries, planning migrations, or debugging locking/concurrency — treats SQLite as a serious embedded database, not a server DB or toy.
+name: "sqlite"
+description: "Best practices for using SQLite as an embedded application database. Use when designing schemas, choosing journal modes, writing queries, planning migrations, or debugging locking/concurrency — treats SQLite as a serious embedded database, not a server DB or toy."
+tags:
+  - "programming"
+  - "database"
+  - "sql"
+  - "sqlite"
+when_to_use: "Use when designing schemas, choosing journal modes, writing queries, planning migrations, or debugging locking/concurrency."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../mysql/SKILL.md"
+  - "../postgresql/SKILL.md"
+  - "../mariadb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # SQLite Best Practices
 
 SQLite is a file-based, embedded SQL database — single-writer by design, with journaling (rollback/WAL) governing durability and concurrency. Best practice is treating it as a **serious embedded database**: explicit schemas, foreign keys on, WAL for concurrent reads, transactional batching, and no massaging into a multi-writer server role.

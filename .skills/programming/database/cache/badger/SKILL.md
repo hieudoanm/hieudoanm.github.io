@@ -1,8 +1,23 @@
 ---
-name: badger
-description: Badger — embedded, high-performance key-value store written in Go, optimized for LSM-tree with value-log separation.
+name: "badger"
+description: "Badger — embedded, high-performance key-value store written in Go, optimized for LSM-tree with value-log separation."
+tags:
+  - "programming"
+  - "database"
+  - "cache"
+  - "badger"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Badger in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../rocksdb/SKILL.md"
+  - "../leveldb/SKILL.md"
+  - "../valkey/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Badger is a **fast, embeddable Go key-value store** built on an **LSM tree with a separate value log (WiscKey paper)**, giving fast writes and high read performance without external dependencies.
 
 ## 1. Core Concepts

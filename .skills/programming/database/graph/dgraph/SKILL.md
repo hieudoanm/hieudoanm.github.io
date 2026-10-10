@@ -1,8 +1,23 @@
 ---
-name: dgraph
-description: Dgraph — distributed graph database with native GraphQL and DQL query support, built on a transactional key-value store.
+name: "dgraph"
+description: "Dgraph — distributed graph database with native GraphQL and DQL query support, built on a transactional key-value store."
+tags:
+  - "programming"
+  - "database"
+  - "graph"
+  - "dgraph"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Dgraph in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../neo4j/SKILL.md"
+  - "../../document/couchbase/SKILL.md"
+  - "../../cache/badger/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Dgraph is a **distributed, horizontally scalable graph database** that exposes **native GraphQL** (and its own DQL), backed by a transactional key-value store and a query planner optimized for large graph traversals.
 
 ## 1. Core Concepts

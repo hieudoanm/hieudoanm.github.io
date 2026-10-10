@@ -1,8 +1,26 @@
 ---
-name: chart-js-best-practices
-description: Best practices for data visualization with Chart.js — the canvas-based charting conventions for JS dashboards. Use when writing, structuring, or reviewing Chart.js — covers configuration, datasets, options, plugins, responsive behavior, and performance.
+name: "chart-js-best-practices"
+description: "Best practices for data visualization with Chart.js — the canvas-based charting conventions for JS dashboards. Use when writing, structuring, or reviewing Chart.js — covers configuration, datasets, options, plugins, responsive behavior, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "charts"
+  - "chart"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing Chart.js."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../recharts/SKILL.md"
+  - "../chartist/SKILL.md"
+  - "../google-charts/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Chart.js Best Practices
 
 Chart.js renders **canvas-based charts in the browser** — `new Chart(ctx, {...})` with datasets, scales, and options; responsive out of the box. Practical Chart.js leans on **a Chart-controller registry reuse pattern (`Chart.getChart(element)`), structured `datasets` with explicit colors/fill, option placement correct (global vs scales vs plugins), and `destroy`/`update` lifecycle discipline** — the canvas is the target; manage instance lifecycle or leak listeners.

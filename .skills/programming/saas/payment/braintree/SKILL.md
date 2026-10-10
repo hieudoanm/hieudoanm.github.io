@@ -1,8 +1,23 @@
 ---
-name: braintree
-description: Best practices for payment integration with Braintree (PayPal's gateway). Use when accepting cards, PayPal, and alternative methods, or adding subscriptions — covers client tokens, server-side transactions, and webhooks.
+name: "braintree"
+description: "Best practices for payment integration with Braintree (PayPal's gateway). Use when accepting cards, PayPal, and alternative methods, or adding subscriptions — covers client tokens, server-side transactions, and webhooks."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "braintree"
+when_to_use: "Use when accepting cards, PayPal, and alternative methods, or adding subscriptions."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../dodopayments/SKILL.md"
+  - "../paypal/SKILL.md"
+  - "../square/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Braintree Best Practices
 
 Braintree is a payments gateway with a strong async-first API and owned by PayPal. Best practice is keeping the **card/sensitive data out of your server** (client token + Drop-in UI), running transaction requests server-side with idempotency, and consuming **webhooks** for state changes.

@@ -1,8 +1,22 @@
 ---
-name: rust-best-practices
-description: Idiomatic Rust best practices covering project structure, error handling, ownership/borrowing, traits, testing, and tooling. Use when writing, structuring, or reviewing Rust code.
+name: "rust-best-practices"
+description: "Idiomatic Rust best practices covering project structure, error handling, ownership/borrowing, traits, testing, and tooling. Use when writing, structuring, or reviewing Rust code."
+tags:
+  - "programming"
+  - "language"
+  - "rust"
+when_to_use: "Use when writing, structuring, or reviewing Rust code."
+prerequisites:
+  - "Basic familiarity with Rust and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "backend/hyper/SKILL.md"
+  - "cli/argh/SKILL.md"
+  - "cli/clap/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Rust Best Practices
 
 Rust's compiler already enforces memory safety and a huge class of bugs — "best practice" here is mostly about working _with_ the ownership model instead of fighting it with excessive `clone()`/`Rc<RefCell<>>`, and following the ecosystem's strong conventions around errors, traits, and module layout.

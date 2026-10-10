@@ -1,8 +1,26 @@
 ---
-name: jotai-best-practices
-description: Best practices for state management with Jotai — the primitive-atomic conventions for React state. Use when writing, structuring, or reviewing Jotai — covers atoms, derived atoms, async atoms, persistence, selectors, and testing.
+name: "jotai-best-practices"
+description: "Best practices for state management with Jotai — the primitive-atomic conventions for React state. Use when writing, structuring, or reviewing Jotai — covers atoms, derived atoms, async atoms, persistence, selectors, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "state"
+  - "management"
+  - "jotai"
+when_to_use: "Use when writing, structuring, or reviewing Jotai."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../nano-stores/SKILL.md"
+  - "../redux/SKILL.md"
+  - "../zustand/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Jotai Best Practices
 
 Jotai is an **atomic state library** — every piece of state is an `atom([])`/`atom(value)` with fine-grained subscriptions; components read with `useAtomValue` and write with `useSetAtom`/`useAtom`. Practical Jotai leans on **small atoms (one concept each), derived atoms for computed state (no manual syncing), async atoms for data that arrives outside React**, and **`Provider` scoping for testability and multi-store pages**. "Atom = the smallest useful unit of truth" is the discipline.

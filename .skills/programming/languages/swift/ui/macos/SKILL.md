@@ -1,11 +1,27 @@
 ---
-name: macos-best-practices
-description: Best practices for building native macOS apps in Swift — windows and scenes, menus and commands, settings, sandboxing, Keychain, and AppKit interop. Use when creating, structuring, or reviewing a Mac app.
+name: "macos-best-practices"
+description: "Best practices for building native macOS apps in Swift — windows and scenes, menus and commands, settings, sandboxing, Keychain, and AppKit interop. Use when creating, structuring, or reviewing a Mac app."
+tags:
+  - "programming"
+  - "language"
+  - "swift"
+  - "ui"
+  - "macos"
+when_to_use: "Use when creating, structuring, or reviewing a Mac app."
+prerequisites:
+  - "Basic familiarity with Swift and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../ios/SKILL.md"
+  - "../ipados/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # macOS Development
 
-macOS is a **window-and-menu operating system**. There is no single screen, no app-level navigation stack, and no one app switcher entry — the user is always operating on documents and windows with a keyboard in hand. Practical Mac work leans on **scenes with stable window identities, a real menu bar with validated commands, the App Sandbox, and a keychain for secrets** — while SwiftUI conventions live in [swiftui.md](./swiftui.md), language rules in [swift.md](../swift.md), and touch platforms in [ios.md](./ios.md).
+macOS is a **window-and-menu operating system**. There is no single screen, no app-level navigation stack, and no one app switcher entry — the user is always operating on documents and windows with a keyboard in hand. Practical Mac work leans on **scenes with stable window identities, a real menu bar with validated commands, the App Sandbox, and a keychain for secrets** — while SwiftUI conventions live in [swiftui.md](../swiftui/SKILL.md), language rules in [swift.md](../../SKILL.md), and touch platforms in [ios.md](../ios/SKILL.md).
 
 ---
 

@@ -1,8 +1,21 @@
 ---
-name: graphql
-description: GraphQL — query language and runtime for APIs that lets clients request exactly the data they need through a typed schema.
+name: "graphql"
+description: "GraphQL — query language and runtime for APIs that lets clients request exactly the data they need through a typed schema."
+tags:
+  - "programming"
+  - "graphql"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting GraphQL in a project."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "typescript/apollo/server/SKILL.md"
+  - "go/graphql-go/SKILL.md"
+  - "typescript/apollo/client/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 GraphQL is a **query language for APIs and a server-side runtime**. Clients request **exactly the fields they need** through a **single typed schema**, replacing chatty REST round-trips with a powerful, evolvable contract.
 
 ## 1. Core Concepts

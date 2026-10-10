@@ -1,8 +1,25 @@
 ---
-name: chartist-best-practices
-description: Best practices for creating charts with Chartist — the lightweight SVG charting conventions for JS. Use when writing, structuring, or reviewing Chartist — covers configuration, responsive, animation, plugins, and maintenance notes.
+name: "chartist-best-practices"
+description: "Best practices for creating charts with Chartist — the lightweight SVG charting conventions for JS. Use when writing, structuring, or reviewing Chartist — covers configuration, responsive, animation, plugins, and maintenance notes."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "charts"
+  - "chartist"
+when_to_use: "Use when writing, structuring, or reviewing Chartist."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../chart.js/SKILL.md"
+  - "../highcharts/SKILL.md"
+  - "../plotly/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Chartist Best Practices
 
 Chartist.js is a **lightweight SVG-based charting library** — declarative config, CSS-styled (SVG into your stylesheet), and responsive-friendly. Practical Chartist leans on **declarative `data` + `options` per chart, styling through CSS of the generated SVG (`.ct-series`, `.ct-area`, `.ct-line`), setting the responsive scale via `X`/`Y` axis options, and awareness that Chartist's maintenance is legacy-slow — treat it as stable-but-frozen** — simple dashboards yes; heavy animation ecosystems look elsewhere.

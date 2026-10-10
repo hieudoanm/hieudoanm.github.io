@@ -1,8 +1,25 @@
 ---
-name: cypress-best-practices
-description: Best practices for end-to-end testing with Cypress — the browser automation conventions for web apps. Use when writing, structuring, or reviewing Cypress suites — covers commands, selectors, waiting, API stubbing, parallel CI, and reliability patterns.
+name: "cypress-best-practices"
+description: "Best practices for end-to-end testing with Cypress — the browser automation conventions for web apps. Use when writing, structuring, or reviewing Cypress suites — covers commands, selectors, waiting, API stubbing, parallel CI, and reliability patterns."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "end-to-end-testing"
+  - "cypress"
+when_to_use: "Use when writing, structuring, or reviewing Cypress suites."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../playwright/SKILL.md"
+  - "../puppeteer/SKILL.md"
+  - "../selenium/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Cypress Best Practices
 
 Cypress runs **real browser E2E tests** with an interactive runner and commands that auto-retry. Practical Cypress leans on **user-centric selectors (`data-testid`/roles), commands that mirror user intent (interact, assert), explicit waits avoided (auto-retry does the work), and API/network stubbing to keep tests deterministic.** Reliability is the product — a flaky suite is worse than none.

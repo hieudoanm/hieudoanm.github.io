@@ -1,8 +1,25 @@
 ---
-name: pnpm-best-practices
-description: Best practices for the pnpm package manager — strict, disk-efficient, and deterministic dependency conventions for JavaScript. Use when writing, structuring, or reviewing pnpm — covers install, store, workspaces, overrides, and CI.
+name: "pnpm-best-practices"
+description: "Best practices for the pnpm package manager — strict, disk-efficient, and deterministic dependency conventions for JavaScript. Use when writing, structuring, or reviewing pnpm — covers install, store, workspaces, overrides, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "package-management"
+  - "package-manager"
+  - "pnpm"
+when_to_use: "Use when writing, structuring, or reviewing pnpm."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../yarn/SKILL.md"
+  - "../npm/SKILL.md"
+  - "../volta/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # pnpm Best Practices
 
 pnpm is **a strict, disk-efficient package manager** — content-addressed global store symlinked into projects, with **strict node_modules isolation** (no phantom deps). Practical pnpm leans on **a committed lockfile (`pnpm-lock.yaml`) with `frozenLockfile` in CI, a shared global store (`--store-dir`) for disk savings, workspaces for monorepos, and deliberate `overrides`/peer handling** — isolation is the safety feature: packages can't import what they didn't declare.

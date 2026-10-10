@@ -1,8 +1,24 @@
 ---
-name: deno-runtime
-description: Best practices for building applications that run on the Deno runtime (TypeScript). Use when structuring or reviewing Deno scripts, servers, or tools — covers permissions, module URLs and JSR, the standard library, Web APIs, testing, and tooling.
+name: "deno-runtime"
+description: "Best practices for building applications that run on the Deno runtime (TypeScript). Use when structuring or reviewing Deno scripts, servers, or tools — covers permissions, module URLs and JSR, the standard library, Web APIs, testing, and tooling."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "runtime"
+  - "deno"
+when_to_use: "Use when structuring or reviewing Deno scripts, servers, or tools."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../bun/SKILL.md"
+  - "../node/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Deno Runtime Best Practices
 
 Deno is a secure-by-default TypeScript-first runtime: modules come from URLs/JSR, permissions are granted explicitly per-run, everything standard ships in the runtime and `deno_std`, and the toolchain (`fmt`, `lint`, `test`, `doc`, `compile`) is built in. Best practice here is embracing that model — sandboxed permissions as a feature, URL/JSR modules without `node_modules`, Web-standard APIs by default, and letting the built-in tools be the gates.

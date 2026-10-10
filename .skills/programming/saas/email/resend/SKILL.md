@@ -1,8 +1,23 @@
 ---
-name: resend
-description: Best practices for sending transactional email with Resend. Use when integrating outbound email, handling bounces, or setting up templates — covers API usage, deliverability, webhooks, and reliability.
+name: "resend"
+description: "Best practices for sending transactional email with Resend. Use when integrating outbound email, handling bounces, or setting up templates — covers API usage, deliverability, webhooks, and reliability."
+tags:
+  - "programming"
+  - "saas"
+  - "email"
+  - "resend"
+when_to_use: "Use when integrating outbound email, handling bounces, or setting up templates."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../sendgrid/SKILL.md"
+  - "../postmark/SKILL.md"
+  - "../mailgun/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Resend Best Practices
 
 Resend is a developer-focused email API for transactional and marketing email. Best practice is treating email as a **deliverability engineering problem**: single recipient-focused API calls, webhooks for events (delivered/opened/bounced/complained), proper DNS/DKIM/SPF setup, and idempotent by-email retry handling.

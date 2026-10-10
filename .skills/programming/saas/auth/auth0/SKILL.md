@@ -1,8 +1,23 @@
 ---
-name: auth0
-description: Best practices for integrating Auth0 into a backend. Use when adding authentication, configuring OIDC/OAuth2 clients, tenancy, or user management — covers token validation, MFA, rate limiting, and secure storage.
+name: "auth0"
+description: "Best practices for integrating Auth0 into a backend. Use when adding authentication, configuring OIDC/OAuth2 clients, tenancy, or user management — covers token validation, MFA, rate limiting, and secure storage."
+tags:
+  - "programming"
+  - "saas"
+  - "authentication"
+  - "auth0"
+when_to_use: "Use when adding authentication, configuring OIDC/OAuth2 clients, tenancy, or user management."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../okta/SKILL.md"
+  - "../keycloak/SKILL.md"
+  - "../zitadel/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Auth0 Best Practices
 
 Auth0 is a hosted identity platform (OIDC/OAuth2) providing login, MFA, and user management. Best practice is treating it as a **trust boundary**: validate tokens locally (JWKS), never trust the browser, keep secrets server-side, and enable MFA and brute-force protection for production tenants.

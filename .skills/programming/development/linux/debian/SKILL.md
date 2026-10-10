@@ -1,8 +1,23 @@
 ---
-name: debian-linux
-description: Best practices for administering Debian servers and desktops — apt and dpkg, pinning, releases lifecycle, minimal containers, systemd, and security. Use when provisioning or troubleshooting Debian.
+name: "debian-linux"
+description: "Best practices for administering Debian servers and desktops — apt and dpkg, pinning, releases lifecycle, minimal containers, systemd, and security. Use when provisioning or troubleshooting Debian."
+tags:
+  - "programming"
+  - "development"
+  - "linux"
+  - "debian"
+when_to_use: "Use when provisioning or troubleshooting Debian."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../ubuntu/SKILL.md"
+  - "../arch/SKILL.md"
+  - "../mint/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Debian Best Practices
 
 Debian is the upstream community distribution that Ubuntu, Mint, and most others derive from. Its defining traits are **a frozen stable release, a deliberately conservative policy, and freedom from vendor lock-in** — which makes it the default choice for servers where predictability beats novelty. Practical Debian work leans on **`apt` for daily use and `dpkg` for the underlying truth, pinning when you must hold a version, and `-slim` images for containers**.

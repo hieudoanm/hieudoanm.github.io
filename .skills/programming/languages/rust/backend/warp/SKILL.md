@@ -1,8 +1,24 @@
 ---
-name: warp-best-practices
-description: Best practices for building Rust web services with warp — the composable filter-based framework conventions. Use when writing, structuring, or reviewing warp — covers filter composition, routing, extractors, state, error handling, and testing.
+name: "warp-best-practices"
+description: "Best practices for building Rust web services with warp — the composable filter-based framework conventions. Use when writing, structuring, or reviewing warp — covers filter composition, routing, extractors, state, error handling, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "rust"
+  - "backend"
+  - "warp"
+when_to_use: "Use when writing, structuring, or reviewing warp."
+prerequisites:
+  - "Basic familiarity with Rust and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../actix/SKILL.md"
+  - "../gotham/SKILL.md"
+  - "../axum/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Warp Best Practices
 
 Warp builds servers from **composable `Filter`s** — every route/fact (path, method, query, body, header, state) is a `Filter` combined with `and`/`or`/`map`/`and_then`. Practical warp leans on **small named filters (`path("users").and(path::param::<u64>().or(...))`), filters declared once and reused, `warp::Filter`-based extractors returning typed tuples**, and **`Rejection`-based error handling with `warp::reject`/`recover`**. The filter pipeline is the API — compose it readably and test filters without a server.

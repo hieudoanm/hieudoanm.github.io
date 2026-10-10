@@ -1,8 +1,25 @@
 ---
-name: spider-monkey-best-practices
-description: Best practices for running JavaScript on SpiderMonkey — the Firefox/Mozilla JavaScript engine conventions. Use when writing, structuring, or reviewing code that targets SM — covers JIT tiers, Ion/optimizations, stability, memory, and diagnostics.
+name: "spider-monkey-best-practices"
+description: "Best practices for running JavaScript on SpiderMonkey — the Firefox/Mozilla JavaScript engine conventions. Use when writing, structuring, or reviewing code that targets SM — covers JIT tiers, Ion/optimizations, stability, memory, and diagnostics."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "engine"
+  - "spider"
+  - "monkey"
+when_to_use: "Use when writing, structuring, or reviewing code that targets SM."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../javascript-core/SKILL.md"
+  - "../v8/SKILL.md"
+  - "../hermes/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # SpiderMonkey Best Practices
 
 SpiderMonkey (SM) is **Mozilla's JS engine (Firefox, and the FirefoxOS / embedded contexts)** — with a pipeline of interpreter → baseline JIT → Ion (tiered optimization) plus a bytecode-to-native compiler. Practical SM-aware code follows the same shape-discipline but with SM's specifics: **stable hidden classes (current "group"/shape), consistent call-site types for Ion, generated structures to avoid `getter`/`setter` surprise deopts, and profiles from `--ion-monitoring`/gecko profiler before tuning.**

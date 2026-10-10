@@ -1,11 +1,26 @@
 ---
-name: renovate-best-practices
-description: Best practices for Renovate — configuration, grouping, lockfile maintenance, automerge policy, and the separation between update cadence and release risk. Use when setting up, or reviewing, dependency update automation.
+name: "renovate-best-practices"
+description: "Best practices for Renovate — configuration, grouping, lockfile maintenance, automerge policy, and the separation between update cadence and release risk. Use when setting up, or reviewing, dependency update automation."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "renovate"
+when_to_use: "Use when setting up, or reviewing, dependency update automation."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../snyk/SKILL.md"
+  - "../editor/antigravity/SKILL.md"
+  - "../editor/cursor/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Renovate
 
-Renovate is a dependency-update bot that opens pull requests across every ecosystem, and its real value is not the updates themselves — plenty of bots do that — but **the policy you encode about which updates group together, which merge automatically, and when a major is acceptable**. A Renovate config is a statement of your team's risk posture. Practical Renovate work is about **separating low-risk from high-risk updates so the safe ones stop costing attention, keeping the bot's own config reviewable, and never letting an automerge hide a breaking change**. Security scanning is complementary; see [snyk.md](./snyk.md).
+Renovate is a dependency-update bot that opens pull requests across every ecosystem, and its real value is not the updates themselves — plenty of bots do that — but **the policy you encode about which updates group together, which merge automatically, and when a major is acceptable**. A Renovate config is a statement of your team's risk posture. Practical Renovate work is about **separating low-risk from high-risk updates so the safe ones stop costing attention, keeping the bot's own config reviewable, and never letting an automerge hide a breaking change**. Security scanning is complementary; see [snyk.md](../snyk/SKILL.md).
 
 _Verified against Renovate's 2026 releases. The configuration schema evolves; validate against the current JSON schema after editing._
 

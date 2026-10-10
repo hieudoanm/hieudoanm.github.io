@@ -1,8 +1,24 @@
 ---
-name: akka-best-practices
-description: Best practices for building reactive systems with Akka — the actor-model and stream conventions for Scala/JVM. Use when writing, structuring, or reviewing Akka (classic/typed + Pekko forks) — covers actors, the actor hierarchy, typed/reception, streams, fault tolerance, persistence, and testing.
+name: "akka-best-practices"
+description: "Best practices for building reactive systems with Akka — the actor-model and stream conventions for Scala/JVM. Use when writing, structuring, or reviewing Akka (classic/typed + Pekko forks) — covers actors, the actor hierarchy, typed/reception, streams, fault tolerance, persistence, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "scala"
+  - "backend"
+  - "akka"
+when_to_use: "Use when writing, structuring, or reviewing Akka (classic/typed + Pekko forks)."
+prerequisites:
+  - "Basic familiarity with Scala and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../http4s/SKILL.md"
+  - "../play/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Akka Best Practices
 
 Akka gives an **actor model** for concurrency and **Akka Streams** for reactive data flows, with typed actors (`ActorRef[T]`) as the modern default. Practical Akka leans on **one concern per actor, a supervision hierarchy that is the failure policy (`SupervisorStrategy`), message-driven state (never shared mutable state), and streams for anything that flows**. Actors are units of isolation; streams are units of transformation. Use typed (`akka:actor.typed.*`); the classic untyped API is legacy.

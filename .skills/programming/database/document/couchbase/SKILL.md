@@ -1,8 +1,23 @@
 ---
-name: couchbase
-description: Couchbase — distributed JSON document database with N1QL, key-value access, and built-in caching by the Memcached protocol.
+name: "couchbase"
+description: "Couchbase — distributed JSON document database with N1QL, key-value access, and built-in caching by the Memcached protocol."
+tags:
+  - "programming"
+  - "database"
+  - "document-database"
+  - "couchbase"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Couchbase in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../couchdb/SKILL.md"
+  - "../dynamodb/SKILL.md"
+  - "../rethinkdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Couchbase combines **document storage, key-value access, N1QL querying, full-text search, and built-in caching** in one distributed database designed for low-latency, high-throughput workloads.
 
 ## 1. Core Concepts
@@ -59,7 +74,7 @@ services:
       COUCHBASE_SERVICES: data,index,query,fts
 ```
 
-Runnable: [`examples/docker/compose/databases/documental/couchbase/docker-compose.yaml`](../../../examples/docker/compose/databases/documental/couchbase/docker-compose.yaml)
+Runnable: [`examples/docker/compose/databases/documental/couchbase/docker-compose.yaml`](../../../devops/docker/docker-compose/SKILL.md)
 
 - **Swap-low-watermark / high-watermark** govern eviction; keep host memory allocation sane for the OS.
 - Use **XDCR** (cross-datacenter replication) for disaster recovery and active-active topologies.

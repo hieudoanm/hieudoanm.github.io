@@ -1,8 +1,26 @@
 ---
-name: redux-best-practices
-description: Best practices for state management with Redux and Redux Toolkit — the predictable-state conventions for React. Use when writing, structuring, or reviewing Redux — covers slices, actions, reducers, selectors, async thunks, middleware, and testing.
+name: "redux-best-practices"
+description: "Best practices for state management with Redux and Redux Toolkit — the predictable-state conventions for React. Use when writing, structuring, or reviewing Redux — covers slices, actions, reducers, selectors, async thunks, middleware, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "state"
+  - "management"
+  - "redux"
+when_to_use: "Use when writing, structuring, or reviewing Redux."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../zustand/SKILL.md"
+  - "../jotai/SKILL.md"
+  - "../xstate/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Redux Best Practices
 
 Redux keeps **app state in a single store with pure reducers reading an action stream** — and Redux Toolkit (RTK) removes 95% of the boilerplate. Practical Redux leans on **`createSlice` (name, initialState, reducers) for synchronous state + `createAsyncThunk` for async — selectors (`createSelector`) derived at the read boundary**, and **`reselect` memoization for derived state**. Rules: mutate-with-Immer inside reducers, write through thunks/actions, read through selectors.

@@ -1,8 +1,26 @@
 ---
-name: apache-airflow-best-practices
-description: Best practices for workflow orchestration with Apache Airflow — the DAG/task conventions for scheduled data pipelines. Use when writing, structuring, or reviewing Airflow — covers DAG structure, tasks, dependencies, retries, scheduling, secrets, and CI.
+name: "apache-airflow-best-practices"
+description: "Best practices for workflow orchestration with Apache Airflow — the DAG/task conventions for scheduled data pipelines. Use when writing, structuring, or reviewing Airflow — covers DAG structure, tasks, dependencies, retries, scheduling, secrets, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-engineering"
+  - "apache"
+  - "airflow"
+when_to_use: "Use when writing, structuring, or reviewing Airflow."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../apache-iceberg/SKILL.md"
+  - "../apache-spark/SKILL.md"
+  - "../apache-trino/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Apache Airflow Best Practices
 
 Airflow runs **DAGs = DAGs of tasks as code** — each task is a Python operator wired by dependencies; the scheduler launches them on schedules. Practical Airflow leans on **DAG-as-code with clear task structure (`@task` decorators / TaskGroups), idempotent tasks with retries, scheduling expressed declared (cron/interval with static start_date), and secrets/hooks (Connections & Variables) never inline** — "the DAG is a directed specification; each operator is a unit that can rerun alone."

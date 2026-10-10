@@ -1,8 +1,25 @@
 ---
-name: swift-argument-parser-best-practices
-description: Best practices for Swift Argument Parser. Use when building CLI tools with ParsableCommand, handling arguments, and configuring subcommands.
+name: "swift-argument-parser-best-practices"
+description: "Best practices for Swift Argument Parser. Use when building CLI tools with ParsableCommand, handling arguments, and configuring subcommands."
+tags:
+  - "programming"
+  - "language"
+  - "swift"
+  - "cli"
+  - "argument"
+  - "parser"
+when_to_use: "Use when building CLI tools with ParsableCommand, handling arguments, and configuring subcommands."
+prerequisites:
+  - "Basic familiarity with Swift and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../ide/xcode/SKILL.md"
+  - "../../ui/ios/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Swift Argument Parser Best Practices
 
 Swift Argument Parser (formerly `swift-argument-parser`) provides a declarative DSL for building CLI tools. Following conventions produces intuitive, discoverable, and consistent command-line interfaces.

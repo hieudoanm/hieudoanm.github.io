@@ -1,8 +1,25 @@
 ---
-name: xgboost-best-practices
-description: Best practices for gradient boosting with XGBoost — the tree-ensemble conventions for tabular ML in Python. Use when writing, structuring, or reviewing XGBoost — covers DMatrix, params, training/eval, native API vs sklearn wrapper, feature importance, and tuning.
+name: "xgboost-best-practices"
+description: "Best practices for gradient boosting with XGBoost — the tree-ensemble conventions for tabular ML in Python. Use when writing, structuring, or reviewing XGBoost — covers DMatrix, params, training/eval, native API vs sklearn wrapper, feature importance, and tuning."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-science"
+  - "xgboost"
+when_to_use: "Use when writing, structuring, or reviewing XGBoost."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../lightgbm/SKILL.md"
+  - "../pytorch/SKILL.md"
+  - "../scikit-learn/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # XGBoost Best Practices
 
 XGBoost is **a leading gradient-boosted tree library** — strong on tabular data — via the sklearn-compatible wrapper (`XGBClassifier`/`XGBRegressor`) or the native `DMatrix` API. Practical XGBoost leans on **`xgb.DMatrix` with explicit labels/weights and `eval_metric`, params tuned deliberately (learning rate/depth/reg), `early_stopping_rounds` against a validation split, and feature importance inspected with a grain of salt** — trees are cheap, control is the discipline (depth, subsample, regularization).

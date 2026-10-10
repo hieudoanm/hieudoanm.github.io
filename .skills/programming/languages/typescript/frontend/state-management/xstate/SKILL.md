@@ -1,8 +1,26 @@
 ---
-name: xstate-best-practices
-description: Best practices for modeling state machines with XState — the statechart conventions for events/actions/guards. Use when writing, structuring, or reviewing XState (v5) — covers machines, states/transitions, actions, guards, actors, and testing.
+name: "xstate-best-practices"
+description: "Best practices for modeling state machines with XState — the statechart conventions for events/actions/guards. Use when writing, structuring, or reviewing XState (v5) — covers machines, states/transitions, actions, guards, actors, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "state"
+  - "management"
+  - "xstate"
+when_to_use: "Use when writing, structuring, or reviewing XState (v5)."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../redux/SKILL.md"
+  - "../zustand/SKILL.md"
+  - "../jotai/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # XState Best Practices
 
 XState models **state machines & statecharts** — a machine is a graph of `states` with `on` transitions triggered by `events`, guarded by `guards` and executed by `actions`. Practical XState leans on **machines that mirror the domain's real state space (idle/loading/ready/error), events as the only input, guards for decision boundaries, actions for pure (or `invoke`-mediated) effects**, and **actors for living instances**. A machine is executable documentation — the states are the spec.

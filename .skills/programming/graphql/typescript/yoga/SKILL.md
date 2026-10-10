@@ -1,8 +1,23 @@
 ---
-name: yoga
-description: GraphQL Yoga — batteries-included, framework-agnostic GraphQL server for TypeScript, with subscriptions, file uploads, and plugins.
+name: "yoga"
+description: "GraphQL Yoga — batteries-included, framework-agnostic GraphQL server for TypeScript, with subscriptions, file uploads, and plugins."
+tags:
+  - "programming"
+  - "graphql"
+  - "typescript"
+  - "yoga"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting GraphQL Yoga in a project."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../garph/SKILL.md"
+  - "../mercurius/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 GraphQL Yoga (by The Guild, formerly `graphql-yoga`) is a **batteries-included GraphQL server** for Node/Edge environments. It is framework-agnostic, ships **SSE/WebSocket subscriptions, file uploads, and a powerful plugin system**, and pairs perfectly with tools like Envelop, Codegen, and GraphQL Tools.
 
 ## 1. Core Concepts

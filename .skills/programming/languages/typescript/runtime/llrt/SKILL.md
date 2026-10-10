@@ -1,8 +1,24 @@
 ---
-name: llrt-best-practices
-description: Best practices for building with LLRT (Low Latency Runtime) — the fast AWS Lambda JavaScript runtime conventions. Use when writing, structuring, or reviewing LLRT-based serverless — covers runtime install/pinning, compat surface, Cold starts, and AWS integration.
+name: "llrt-best-practices"
+description: "Best practices for building with LLRT (Low Latency Runtime) — the fast AWS Lambda JavaScript runtime conventions. Use when writing, structuring, or reviewing LLRT-based serverless — covers runtime install/pinning, compat surface, Cold starts, and AWS integration."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "runtime"
+  - "llrt"
+when_to_use: "Use when writing, structuring, or reviewing LLRT-based serverless."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../winter.js/SKILL.md"
+  - "../../SKILL.md"
+  - "../bun/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # LLRT Best Practices
 
 LLRT (**Low Latency Runtime**) is **an optimized-embedding runtime (QuickJS-based) for AWS Lambda JS functions — cold starts ~2–5x faster than Node** with a trimmed engine surface. Practical LLRT leans on **explicit runtime pinning (`aws-lambda-js-rt` extension / binary download), staying inside the supported JS surface (no Node-only globals), small bundles, and measuring cold-start under your own load** — LLRT's wins come from its env (embedding) — respect that: fewer deps, fewer Node-isms.

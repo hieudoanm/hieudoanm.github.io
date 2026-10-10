@@ -1,8 +1,24 @@
 ---
-name: pyramid-best-practices
-description: Best practices for building web apps with Pyramid — the lightweight, flexible Python web framework conventions. Use when writing, structuring, or reviewing Pyramid — covers config, routes/views, traversal, authentication, and deployment.
+name: "pyramid-best-practices"
+description: "Best practices for building web apps with Pyramid — the lightweight, flexible Python web framework conventions. Use when writing, structuring, or reviewing Pyramid — covers config, routes/views, traversal, authentication, and deployment."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "backend"
+  - "pyramid"
+when_to_use: "Use when writing, structuring, or reviewing Pyramid."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../flask/SKILL.md"
+  - "../django/SKILL.md"
+  - "../tornado/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Pyramid Best Practices
 
 Pyramid is **a minimalist-but-expansive Python web framework** — small core with batteries through add-ons; routes + views with declarative config. Practical Pyramid leans on **declarative configuration (`config.add_route`/decorators or include-mechanism), views as plain callables with typed decorators, `request`-driven context, and authentication via its security model (`authentication_policy` + `authorization_policy`)** — start small, add complexity you can justify.

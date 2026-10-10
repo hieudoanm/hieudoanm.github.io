@@ -1,8 +1,24 @@
 ---
-name: flask-best-practices
-description: Best practices for building Python web apps with Flask — the lightweight WSGI framework conventions. Use when writing, structuring, or reviewing Flask — covers app structure, blueprints, config, requests, ORM, and deployment.
+name: "flask-best-practices"
+description: "Best practices for building Python web apps with Flask — the lightweight WSGI framework conventions. Use when writing, structuring, or reviewing Flask — covers app structure, blueprints, config, requests, ORM, and deployment."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "backend"
+  - "flask"
+when_to_use: "Use when writing, structuring, or reviewing Flask."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../django/SKILL.md"
+  - "../pyramid/SKILL.md"
+  - "../tornado/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Flask Best Practices
 
 Flask is **a minimal WSGI micro-framework with a large extension ecosystem** — `app = Flask(__name__)` + routes; structure grows with blueprints. Practical Flask leans on **an application factory (`create_app`) + blueprints for modular structure, config objects/environment-driven settings, extensions as declared dependencies, and thin routes with the domain in services** — small core; the factory pattern keeps projects structured as they grow.

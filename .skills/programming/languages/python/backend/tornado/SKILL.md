@@ -1,8 +1,24 @@
 ---
-name: tornado-best-practices
-description: Best practices for building web services with Tornado — the asynchronous Python web framework / non-blocking server conventions. Use when writing, structuring, or reviewing Tornado — covers coroutines, handlers, async clients, ioloop, and deployment.
+name: "tornado-best-practices"
+description: "Best practices for building web services with Tornado — the asynchronous Python web framework / non-blocking server conventions. Use when writing, structuring, or reviewing Tornado — covers coroutines, handlers, async clients, ioloop, and deployment."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "backend"
+  - "tornado"
+when_to_use: "Use when writing, structuring, or reviewing Tornado."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../django/SKILL.md"
+  - "../flask/SKILL.md"
+  - "../pyramid/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Tornado Best Practices
 
 Tornado is a **non-blocking, async Python web framework and server** — `tornado.web` with `async def get/post` handlers, native coroutine support, and the `IOLoop` at the center. Practical Tornado leans on **async handler methods only (no blocking calls on the loop), `@gen.coroutine`-era discipline now via native `async/await`, non-blocking HTTP clients (`AsyncHTTPClient`) for downstream calls, and explicit `ioloop` lifecycle** — one blocking call freezes every request; the IOLoop is the heartbeat.

@@ -1,8 +1,24 @@
 ---
-name: beego-best-practices
-description: Best practices for building web apps with Beego — the Go MVC web framework conventions. Use when writing, structuring, or reviewing Beego — covers controllers, routing, ORM, configuration, middleware, and deployment.
+name: "beego-best-practices"
+description: "Best practices for building web apps with Beego — the Go MVC web framework conventions. Use when writing, structuring, or reviewing Beego — covers controllers, routing, ORM, configuration, middleware, and deployment."
+tags:
+  - "programming"
+  - "language"
+  - "go"
+  - "backend"
+  - "beego"
+when_to_use: "Use when writing, structuring, or reviewing Beego."
+prerequisites:
+  - "Basic familiarity with Go and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../chi/SKILL.md"
+  - "../echo/SKILL.md"
+  - "../gorilla/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Beego Best Practices
 
 Beego is **an MVC web framework for Go** — batteries-included (routing, ORM, session, config, filters) with `bee` tooling. Practical Beego leans on **clean controller/router structure, typed configuration via `conf/app.conf`, the ORM with explicit models/transactions, and middleware/FilterChain for cross-cutting concerns** — the framework gives you structure; keep handlers thin and domain logic in services.

@@ -1,8 +1,23 @@
 ---
-name: osso
-description: Best practices for self-hosting SSO for B2B SaaS with Osso. Use when adding enterprise SAML login, managing IdP connections, or syncing directory users — covers SAML flows, connection management, and production deployment.
+name: "osso"
+description: "Best practices for self-hosting SSO for B2B SaaS with Osso. Use when adding enterprise SAML login, managing IdP connections, or syncing directory users — covers SAML flows, connection management, and production deployment."
+tags:
+  - "programming"
+  - "saas"
+  - "authentication"
+  - "osso"
+when_to_use: "Use when adding enterprise SAML login, managing IdP connections, or syncing directory users."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../onelogin/SKILL.md"
+  - "../okta/SKILL.md"
+  - "../auth0/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Osso Best Practices
 
 Osso is an open-source, self-hosted SAML SSO service for B2B SaaS products — the "Auth0 for enterprise on your own infra." Best practice is treating it as an internal identity gateway: SAML termination handled by a single service, IdP connections managed as data, and directory users synced via SCIM for upstream apps like Okta/Azure AD.

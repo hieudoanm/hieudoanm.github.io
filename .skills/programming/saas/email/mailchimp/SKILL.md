@@ -1,8 +1,23 @@
 ---
-name: mailchimp
-description: Best practices for email marketing and audience management with Mailchimp. Use when running campaigns, managing audiences/automations, or integrating sign-ups — covers audience management, campaigns, and deliverability.
+name: "mailchimp"
+description: "Best practices for email marketing and audience management with Mailchimp. Use when running campaigns, managing audiences/automations, or integrating sign-ups — covers audience management, campaigns, and deliverability."
+tags:
+  - "programming"
+  - "saas"
+  - "email"
+  - "mailchimp"
+when_to_use: "Use when running campaigns, managing audiences/automations, or integrating sign-ups."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../sendgrid/SKILL.md"
+  - "../mailgun/SKILL.md"
+  - "../postmark/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Mailchimp Best Practices
 
 Mailchimp is a **marketing email platform** (campaigns, audiences, automations) — not a transactional mail service. Best practice is separating concerns: Mailchimp owns marketing/audience communication; your app sends transactional email elsewhere. Drive audiences from consent, honor suppression, and treat deliverability as reputation management.

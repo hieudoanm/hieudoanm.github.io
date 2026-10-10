@@ -1,8 +1,25 @@
 ---
-name: npm-best-practices
-description: Best practices for the npm package manager and registry — dependency management conventions for JavaScript. Use when writing, structuring, or reviewing npm usage — covers package.json, lockfiles, scripts, publishing, scoping, and security.
+name: "npm-best-practices"
+description: "Best practices for the npm package manager and registry — dependency management conventions for JavaScript. Use when writing, structuring, or reviewing npm usage — covers package.json, lockfiles, scripts, publishing, scoping, and security."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "package-management"
+  - "package-manager"
+  - "npm"
+when_to_use: "Use when writing, structuring, or reviewing npm usage."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../yarn/SKILL.md"
+  - "../pnpm/SKILL.md"
+  - "../volta/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # npm Best Practices
 
 npm is the **default package manager + registry for Node.js** — `package.json` declares the graph, `package-lock.json` pins it. Practical npm leans on **minimal, precise `dependencies` vs `devDependencies`, `npm install` determinism via the committed lockfile, `--save-exact`/workspaces discipline, and lifecycle through `npm ci` in CI** — the lockfile is the deployment artifact; the registry is upstream of trust (pin scopes/versions).

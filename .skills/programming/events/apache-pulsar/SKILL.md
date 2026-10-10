@@ -1,8 +1,23 @@
 ---
-name: apache-pulsar
-description: Best practices for event streaming with Apache Pulsar. Use when designing tenants/namespaces/topics, choosing subscription types, configuring schemas and retention, planning geo-replication, or debugging backlog/latency — treats Pulsar as a distributed log with cursor-based consumption, not an ephemeral queue.
+name: "apache-pulsar"
+description: "Best practices for event streaming with Apache Pulsar. Use when designing tenants/namespaces/topics, choosing subscription types, configuring schemas and retention, planning geo-replication, or debugging backlog/latency — treats Pulsar as a distributed log with cursor-based consumption, not an ephemeral queue."
+tags:
+  - "programming"
+  - "messaging"
+  - "apache"
+  - "pulsar"
+when_to_use: "Use when designing tenants/namespaces/topics, choosing subscription types, configuring schemas and retention, planning geo-replication, or debugging backlog/latency."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../apache-kafka/SKILL.md"
+  - "../rabbitmq/SKILL.md"
+  - "../activemq/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Apache Pulsar Best Practices
 
 Pulsar is a **distributed log with cursor-based consumption** — messages are retained independently of consumption and read positions (cursors) are first-class state managed by subscribers. Best practice is tenant/namespace design for isolation and quotas, intentional subscription types (exclusive/shared/failover/key_shared), schema-based messages with safe versioning, and explicit retention/TTL management separated from consumption.

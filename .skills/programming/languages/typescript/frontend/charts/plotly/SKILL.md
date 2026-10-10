@@ -1,8 +1,25 @@
 ---
-name: plotly-best-practices
-description: Best practices for creating interactive scientific charts with Plotly.js — the trace-layout WebGL/SVG charting conventions for JS. Use when writing, structuring, or reviewing Plotly — covers traces, layout, updates, and performance.
+name: "plotly-best-practices"
+description: "Best practices for creating interactive scientific charts with Plotly.js — the trace-layout WebGL/SVG charting conventions for JS. Use when writing, structuring, or reviewing Plotly — covers traces, layout, updates, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "charts"
+  - "plotly"
+when_to_use: "Use when writing, structuring, or reviewing Plotly."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../highcharts/SKILL.md"
+  - "../chartist/SKILL.md"
+  - "../tanstack-charts/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Plotly.js Best Practices
 
 Plotly.js is **an interactive, WebGL-era chart library** — config = `traces` + `layout` + `config`, rendered via `Plotly.newPlot`/`react`. Practical Plotly.js leans on **typed `trace` arrays per data series, layout structure (axes/layout/showlegend), `Plotly.react` for updates over shake-in-the-wind re-plotting, and the WebGL/`scattergl` fast path for large N** — the data-to-trace mapping and the update discipline are the craft.

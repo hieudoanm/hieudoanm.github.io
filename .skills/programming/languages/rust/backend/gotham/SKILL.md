@@ -1,8 +1,24 @@
 ---
-name: gotham-best-practices
-description: Best practices for building Rust web services with Gotham — the type-safe, principled framework conventions. Use when writing, structuring, or reviewing Gotham — covers router composition, state/handler design, extractors, error handling, concurrency, and testing.
+name: "gotham-best-practices"
+description: "Best practices for building Rust web services with Gotham — the type-safe, principled framework conventions. Use when writing, structuring, or reviewing Gotham — covers router composition, state/handler design, extractors, error handling, concurrency, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "rust"
+  - "backend"
+  - "gotham"
+when_to_use: "Use when writing, structuring, or reviewing Gotham."
+prerequisites:
+  - "Basic familiarity with Rust and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../warp/SKILL.md"
+  - "../actix/SKILL.md"
+  - "../axum/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Gotham Best Practices
 
 Gotham is a **type-safe, principled Rust web framework** — it threads `State` (an extensible request context) explicitly through handlers (`receive_and_respond` style) and is built on `hyper`. Practical Gotham leans on **`router::builder::tree` for typed routes, handler functions receiving `State` and returning responses, and explicit error types** converted at the boundary. Gotham's philosophy: fewer surprises, more compile-time structure — a good match for services where correctness is the top priority.

@@ -1,8 +1,26 @@
 ---
-name: quickjs-best-practices
-description: Best practices for embedding JavaScript with QuickJS — the small, embeddable JS engine conventions. Use when writing, structuring, or reviewing QuickJS deployments — covers embedding, context, isolation, memory limits, and integration with FFI/Rust bindings.
+name: "quickjs-best-practices"
+description: "Best practices for embedding JavaScript with QuickJS — the small, embeddable JS engine conventions. Use when writing, structuring, or reviewing QuickJS deployments — covers embedding, context, isolation, memory limits, and integration with FFI/Rust bindings."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "engine"
+  - "quick"
+  - "js"
+  - "quickjs"
+when_to_use: "Use when writing, structuring, or reviewing QuickJS deployments."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../hermes/SKILL.md"
+  - "../javascript-core/SKILL.md"
+  - "../spider-monkey/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # QuickJS Best Practices
 
 QuickJS is **a small, embeddable JS engine (nice perf, Tiny footprint) — used by Bun, deno, and as the embedded interpreter in many products** via the C library and Rust bindings. Practical QuickJS embeds in lean on **one `JSContext` per isolate with explicit lifetimes (`JS_NewRuntime`/`JS_NewContext`), memory limits and interrupts configured (`JS_SetMemoryLimit`, `JS_SetMaxStackSize`), and a tight object-lifecycle discipline (`JS_FreeValue`)** — the engine gives you the foot-gun ammo; containment is the discipline.

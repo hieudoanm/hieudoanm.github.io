@@ -1,8 +1,23 @@
 ---
-name: opensearch
-description: Best practices for designing indexes, queries, and operations with OpenSearch (search and analytics). Use when writing mappings, building queries/aggregations, configuring Index State Management, tuning shards, or planning upgrades — covers the security plugin, ISM, snapshots, and cluster stability.
+name: "opensearch"
+description: "Best practices for designing indexes, queries, and operations with OpenSearch (search and analytics). Use when writing mappings, building queries/aggregations, configuring Index State Management, tuning shards, or planning upgrades — covers the security plugin, ISM, snapshots, and cluster stability."
+tags:
+  - "programming"
+  - "database"
+  - "search"
+  - "opensearch"
+when_to_use: "Use when writing mappings, building queries/aggregations, configuring Index State Management, tuning shards, or planning upgrades."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../elasticsearch/SKILL.md"
+  - "../apache-solr/SKILL.md"
+  - "../../sql/mysql/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # OpenSearch Best Practices
 
 OpenSearch is a **search and analytics platform**, not a system of record. Best practice is operationally aware design: mappings before indexing, `text` vs `keyword` separated deliberately, controlled dynamic mappings, the security plugin enabled with least-privilege roles, ISM for lifecycle, and `search_after` over deep pagination.

@@ -1,11 +1,27 @@
 ---
-name: postman-best-practices
-description: Best practices for Postman — collections and environments as code, variables and scoping, contract testing with schema validation, and CI-friendly Newman runs. Use when designing, organising, or automating API testing.
+name: "postman-best-practices"
+description: "Best practices for Postman — collections and environments as code, variables and scoping, contract testing with schema validation, and CI-friendly Newman runs. Use when designing, organising, or automating API testing."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "api"
+  - "postman"
+when_to_use: "Use when designing, organising, or automating API testing."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../bruno/SKILL.md"
+  - "../insomnia/SKILL.md"
+  - "../../editor/cursor/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Postman
 
-Postman is the dominant API client, and its serious mode is **treating a collection as a checked-in artefact and a request as an executable specification**. Its common failure mode is the opposite: collections that live in someone's account, environments with values set by hand, and a "documented" API nobody can run. Practical Postman work is about **getting the collection and environments into the repository, using variables with a deliberate scope, and turning the collection into a test that fails CI when the contract breaks**. REST client alternatives are in [insomnia.md](./insomnia.md) and [bruno.md](./bruno.md).
+Postman is the dominant API client, and its serious mode is **treating a collection as a checked-in artefact and a request as an executable specification**. Its common failure mode is the opposite: collections that live in someone's account, environments with values set by hand, and a "documented" API nobody can run. Practical Postman work is about **getting the collection and environments into the repository, using variables with a deliberate scope, and turning the collection into a test that fails CI when the contract breaks**. REST client alternatives are in [insomnia.md](../insomnia/SKILL.md) and [bruno.md](../bruno/SKILL.md).
 
 _Verified against Postman's 2026 releases; the desktop app and the agentic/API features move quickly, the collection format and scoping rules are stable._
 

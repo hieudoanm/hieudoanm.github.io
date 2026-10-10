@@ -1,8 +1,25 @@
 ---
-name: apache-hbase
-description: Apache HBase — distributed, scalable, column-oriented NoSQL database on Hadoop HDFS for real-time read/write of large tables.
+name: "apache-hbase"
+description: "Apache HBase — distributed, scalable, column-oriented NoSQL database on Hadoop HDFS for real-time read/write of large tables."
+tags:
+  - "programming"
+  - "database"
+  - "wide"
+  - "column"
+  - "apache"
+  - "hbase"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting hbase shell -n runs non-interactively; in 2.x every table lives in a namespace in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../apache-cassandra/SKILL.md"
+  - "../../cache/valkey/SKILL.md"
+  - "../../document/rethinkdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Apache HBase is a **distributed, BigTable-style NoSQL database** running on **Hadoop HDFS**. It provides **real-time random read/write access** to very large tables with strong **row-level consistency**, horizontal scaling, and automatic fault tolerance.
 
 ## 1. Core Concepts
@@ -85,7 +102,7 @@ services:
       - hbase_data:/hbase-data
 ```
 
-Runnable: [`examples/docker/compose/databases/columns/apache-hbase/docker-compose.yaml`](../../../examples/docker/compose/databases/columns/apache-hbase/docker-compose.yaml)
+Runnable: [`examples/docker/compose/databases/columns/apache-hbase/docker-compose.yaml`](../../../devops/docker/docker-compose/SKILL.md)
 
 ## 6. Common Pitfalls
 

@@ -1,8 +1,25 @@
 ---
-name: puppeteer-best-practices
-description: Best practices for browser automation with Puppeteer — the Node.js Chrome automation conventions. Use when writing, structuring, or reviewing Puppeteer scripts/tests — covers launching, selectors, waits, screenshots, scraping, and CI.
+name: "puppeteer-best-practices"
+description: "Best practices for browser automation with Puppeteer — the Node.js Chrome automation conventions. Use when writing, structuring, or reviewing Puppeteer scripts/tests — covers launching, selectors, waits, screenshots, scraping, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "end-to-end-testing"
+  - "puppeteer"
+when_to_use: "Use when writing, structuring, or reviewing Puppeteer scripts/tests."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../cypress/SKILL.md"
+  - "../selenium/SKILL.md"
+  - "../karma/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Puppeteer Best Practices
 
 Puppeteer drives **Chromium via DevTools Protocol** from Node — headless or headed, with fine-grained control (`page.evaluate`, `page.goto`, `locator`). Practical Puppeteer leans on **`puppeteer.launch()` with an explicit browser/headless mode, `page.locator`/`waitForSelector` auto-waiting selectors over sleep loops, and tight `goto`-wait cycles** — plus screenshot/perf capture where the artifact matters. It's automation-first: great for scraping, PDF, and screenshot pipelines; use Playwright's test runner for full E2E suites.

@@ -1,8 +1,23 @@
 ---
-name: stripe
-description: Best practices for integrating Stripe payments into a backend. Use when building checkout, subscriptions, webhooks, or payment processing — covers idempotency, webhook signatures, payment-method handling, and monitoring.
+name: "stripe"
+description: "Best practices for integrating Stripe payments into a backend. Use when building checkout, subscriptions, webhooks, or payment processing — covers idempotency, webhook signatures, payment-method handling, and monitoring."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "stripe"
+when_to_use: "Use when building checkout, subscriptions, webhooks, or payment processing."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../square/SKILL.md"
+  - "../lemonsqueezy/SKILL.md"
+  - "../paddle/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Stripe Best Practices
 
 Stripe is the reference payments API. Best practice is treating every call as **idempotent and event-driven**: use idempotency keys, rely on **webhooks as the source of truth** for payment/intent/dispute state, verify signatures, keep secrets server-side, and never trust client-supplied amounts.

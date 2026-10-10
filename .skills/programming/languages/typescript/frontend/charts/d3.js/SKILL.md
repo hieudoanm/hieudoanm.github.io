@@ -1,8 +1,26 @@
 ---
-name: d3-best-practices
-description: Best practices for data-driven documents with D3 — the powerful data-visualization conventions for JS. Use when writing, structuring, or reviewing D3 — covers selections, data joins, scales/axes, SVG structure, and performance.
+name: "d3-best-practices"
+description: "Best practices for data-driven documents with D3 — the powerful data-visualization conventions for JS. Use when writing, structuring, or reviewing D3 — covers selections, data joins, scales/axes, SVG structure, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "charts"
+  - "d3"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing D3."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../chart.js/SKILL.md"
+  - "../recharts/SKILL.md"
+  - "../tanstack-charts/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # D3 Best Practices
 
 D3 is the **granular data-visualization library** — selections + data joins + scales control the DOM you build. Practical D3 leans on **the general update pattern (`selectAll(...).data(d)` with enter/update/exit), scales (`d3.scaleLinear`/`scaleBand`) as the mapping contracts, and explicit SVG structure (groups, axes via `d3.axis*`)** — D3 gives you every knob; the discipline is the structure.

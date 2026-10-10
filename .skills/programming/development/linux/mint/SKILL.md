@@ -1,8 +1,23 @@
 ---
-name: mint-linux
-description: Best practices for Linux Mint — Cinnamon desktops, the conservative Update Manager, timeshift snapshots, driver management, Flatpak, and release-to-release upgrades. Use when setting up or maintaining a Mint workstation.
+name: "mint-linux"
+description: "Best practices for Linux Mint — Cinnamon desktops, the conservative Update Manager, timeshift snapshots, driver management, Flatpak, and release-to-release upgrades. Use when setting up or maintaining a Mint workstation."
+tags:
+  - "programming"
+  - "development"
+  - "linux"
+  - "mint"
+when_to_use: "Use when setting up or maintaining a Mint workstation."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../ubuntu/SKILL.md"
+  - "../arch/SKILL.md"
+  - "../debian/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Linux Mint Best Practices
 
 Linux Mint is an Ubuntu derivative with a **deliberately conservative curation policy**: packages are held back until the team certifies them, and the project's stated goal is that an update never breaks your machine. Its default Cinnamon desktop, `timeshift` snapshots, and first-class Flatpak support are the reason people choose it. Practical Mint work leans on **the Update Manager rather than raw `apt upgrade`, snapshots before anything risky, and `mintupgrade` only across major versions**.
@@ -14,10 +29,10 @@ _Current: Linux Mint 22.3 "Zena" (Jan 2026) — Ubuntu 24.04 base, kernel 6.14, 
 ## 1. Editions & Base
 
 - **Three desktop editions ship**: Cinnamon (default), MATE (lighter, closer to classic GNOME 2), and XFCE. There are also community editions including GNOME. Pick at install time — switching afterwards is a project, not a preference.
-- **All standard editions are Ubuntu-based**, so every `apt` idiom from [ubuntu.md](./ubuntu.md) applies, including netplan on Server and the snapd discussion. Read that file rather than assuming Mint is simpler.
+- **All standard editions are Ubuntu-based**, so every `apt` idiom from [ubuntu.md](../ubuntu/SKILL.md) applies, including netplan on Server and the snapd discussion. Read that file rather than assuming Mint is simpler.
 - **Linux Mint Debian Edition (LMDE) is the exception** — it tracks Debian stable rather than an Ubuntu LTS. It has a different upgrade cadence and a smaller package pool. Do not mix advice between LMDE and the Ubuntu-based editions.
 - **The Mint repository sits alongside Ubuntu's** in your sources list. `apt` handles both; you should never have to think about which one a package came from.
-- **This is a workstation-oriented distribution.** For a headless server, use [debian.md](./debian.md) or [ubuntu.md](./ubuntu.md) — you gain nothing here and lose the deliberate update gating that is Mint's whole point.
+- **This is a workstation-oriented distribution.** For a headless server, use [debian.md](../debian/SKILL.md) or [ubuntu.md](../ubuntu/SKILL.md) — you gain nothing here and lose the deliberate update gating that is Mint's whole point.
 
 ---
 
@@ -100,7 +115,7 @@ flatpak update
 - **Mint publishes official images** as `linuxmintd/mint<N>-amd64` (for example `linuxmintd/mint22.3-amd64`), including a `core` variant with no desktop.
 - **Use the `core` image for CI.** The full desktop image is several gigabytes of X11 that a build container will never use.
 - **No `apt upgrade` in a Dockerfile** — and here the reason is stronger than usual, since the whole point of Mint's policy is that upgrading changes what you get.
-- **Prefer a `debian` or `ubuntu` base for containers** unless you specifically need Mint's package set. See [ubuntu.md](./ubuntu.md).
+- **Prefer a `debian` or `ubuntu` base for containers** unless you specifically need Mint's package set. See [ubuntu.md](../ubuntu/SKILL.md).
 
 ---
 

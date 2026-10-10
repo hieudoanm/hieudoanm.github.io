@@ -1,8 +1,25 @@
 ---
-name: volta-best-practices
-description: Best practices for managing Node toolchains with Volta — the per-project Node/yarn/pnpm launcher conventions. Use when writing, structuring, or reviewing Volta setups — covers hooks, tool pinning, environments, and CI.
+name: "volta-best-practices"
+description: "Best practices for managing Node toolchains with Volta — the per-project Node/yarn/pnpm launcher conventions. Use when writing, structuring, or reviewing Volta setups — covers hooks, tool pinning, environments, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "package-management"
+  - "package-manager"
+  - "volta"
+when_to_use: "Use when writing, structuring, or reviewing Volta setups."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../pnpm/SKILL.md"
+  - "../yarn/SKILL.md"
+  - "../../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Volta Best Practices
 
 Volta is **a JS toolchain manager that pins Node, yarn/pnpm, and nvm-style runtime per-project — via `volta` "hooks" in `package.json`** — routing the right version from the toolchain section. Practical Volta leans on **`volta pin node@20 yarn@4` in the project (committed), `Volta installs` env-consistency across shells, and CI reuse `volta setup`/`volta run` for an engine-exact build** — the package.json `volta` block IS the contract; the lockfile adds the rest.

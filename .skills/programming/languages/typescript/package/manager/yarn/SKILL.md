@@ -1,8 +1,25 @@
 ---
-name: yarn-best-practices
-description: Best practices for the Yarn package manager (Yarn classic and modern Yarn 4+ PnP) — dependency conventions for JavaScript. Use when writing, structuring, or reviewing Yarn projects — covers install modes, lockfiles, PnP/silent, workspaces, and CI.
+name: "yarn-best-practices"
+description: "Best practices for the Yarn package manager (Yarn classic and modern Yarn 4+ PnP) — dependency conventions for JavaScript. Use when writing, structuring, or reviewing Yarn projects — covers install modes, lockfiles, PnP/silent, workspaces, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "package-management"
+  - "package-manager"
+  - "yarn"
+when_to_use: "Use when writing, structuring, or reviewing Yarn projects."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../pnpm/SKILL.md"
+  - "../npm/SKILL.md"
+  - "../volta/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Yarn Best Practices
 
 Yarn is **a package manager focused on reliability and speed** — available as Yarn Classic (v1, `node_modules`) and Yarn Modern (v4+, with **Plug'n'Play / Zero-Install**). Practical Yarn leans on **sticking to ONE major version per repo (mixing v1/v4 configs breaks), committing the lockfile (`yarn.lock`), choosing `node_modules` vs PnP deliberately, and `yarn` classic-only flags gated in CI** — Pin the toolchain: `corepack` + a committed `.yarnrc.yml`.

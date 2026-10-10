@@ -1,8 +1,25 @@
 ---
-name: swr-best-practices
-description: Best practices for data fetching with SWR — the React hooks data-revalidation conventions for Vercel-style apps. Use when writing, structuring, or reviewing SWR — covers keys, fetcher, revalidation, mutations, fallback, and caching.
+name: "swr-best-practices"
+description: "Best practices for data fetching with SWR — the React hooks data-revalidation conventions for Vercel-style apps. Use when writing, structuring, or reviewing SWR — covers keys, fetcher, revalidation, mutations, fallback, and caching."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "query"
+  - "swr"
+when_to_use: "Use when writing, structuring, or reviewing SWR."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../apollo-client/SKILL.md"
+  - "../tanstack-query/SKILL.md"
+  - "../axios/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # SWR Best Practices
 
 SWR (**stale-while-revalidate**) is a **React data-fetching hooks library** — `useSWR(key, fetcher)` with caching, revalidation, focus refetch, and dedupe. Practical SWR leans on **a single typed `fetcher` per app, `key` = cache identity, `mutate`/`optimistic` updates for mutations, and revalidation strategy deliberate (focus/interval/throttle)** — the key is the cache contract; the fetcher is the seam.

@@ -1,8 +1,23 @@
 ---
-name: lemonsqueezy
-description: Best practices for selling digital products and subscriptions with Lemon Squeezy (now part of Stripe's merchant of record). Use when integrating checkout, managing licenses/entitlements, or consuming webhooks — covers MoR model, webhook signatures, and subscription lifecycle.
+name: "lemonsqueezy"
+description: "Best practices for selling digital products and subscriptions with Lemon Squeezy (now part of Stripe's merchant of record). Use when integrating checkout, managing licenses/entitlements, or consuming webhooks — covers MoR model, webhook signatures, and subscription lifecycle."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "lemonsqueezy"
+when_to_use: "Use when integrating checkout, managing licenses/entitlements, or consuming webhooks."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../paddle/SKILL.md"
+  - "../polar/SKILL.md"
+  - "../stripe/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Lemon Squeezy Best Practices
 
 Lemon Squeezy is a **merchant of record (MoR)** for digital products — it owns tax, invoicing, and compliance. Best practice is leaning on that: LS-driven checkout, **webhooks as the entitlement source of truth**, and your server both issuing licenses/entitlements and verifying them.

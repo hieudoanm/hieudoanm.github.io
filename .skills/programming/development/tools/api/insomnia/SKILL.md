@@ -1,11 +1,27 @@
 ---
-name: insomnia-best-practices
-description: Best practices for Insomnia — Git-sync'd collections and environments as files, templating, request tests, and design-first API workflows. Use when designing, organising, or automating API requests and tests.
+name: "insomnia-best-practices"
+description: "Best practices for Insomnia — Git-sync'd collections and environments as files, templating, request tests, and design-first API workflows. Use when designing, organising, or automating API requests and tests."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "api"
+  - "insomnia"
+when_to_use: "Use when designing, organising, or automating API requests and tests."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../bruno/SKILL.md"
+  - "../postman/SKILL.md"
+  - "../../editor/antigravity/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Insomnia
 
-Insomnia is an open-source API client with Git sync, a request designer, and test scripting on the same model as Postman. Its distinguishing feature is **designed API documents**: you can build a resource by describing its fields, and Insomnia derives the requests, environment variables, and mock responses from that description. Practical Insomnia work is about **keeping collections in Git as reviewable files, using the design-first workflow where it fits, and turning requests into executable tests**. Peers are covered in [postman.md](./postman.md) and [bruno.md](./bruno.md).
+Insomnia is an open-source API client with Git sync, a request designer, and test scripting on the same model as Postman. Its distinguishing feature is **designed API documents**: you can build a resource by describing its fields, and Insomnia derives the requests, environment variables, and mock responses from that description. Practical Insomnia work is about **keeping collections in Git as reviewable files, using the design-first workflow where it fits, and turning requests into executable tests**. Peers are covered in [postman.md](../postman/SKILL.md) and [bruno.md](../bruno/SKILL.md).
 
 _Verified against Insomnia's 2026 releases (v11+). The Git-sync file layout and the design-first feature have been stable for several major versions._
 
@@ -24,7 +40,7 @@ _Verified against Insomnia's 2026 releases (v11+). The Git-sync file layout and 
 ## 2. Environments and Templating
 
 - **Use environment variables with the `{{variable}}` syntax,** declared in an environment file per deployment, and keep the values in Git with secrets excluded.
-- **Do not put a live token in a request body template**; use a pre-request script to refresh it in one place, as in [postman.md](./postman.md).
+- **Do not put a live token in a request body template**; use a pre-request script to refresh it in one place, as in [postman.md](../postman/SKILL.md).
 - **Keep environments minimal** — base URL, credentials reference, feature flags. An environment that mirrors every request parameter is a second source of truth.
 - **Use the template helper for common values** (a base object, a timestamp) so a change to a shape is one edit rather than forty.
 

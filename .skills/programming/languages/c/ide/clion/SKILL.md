@@ -1,11 +1,27 @@
 ---
-name: clion-best-practices
-description: Best practices for working in CLion — CMake project models, compile_commands.json as the source of truth, the bundled LLVM toolchain, debugging and profiling workflows, and JetBrains shared conventions. Use when setting up, debugging, or profiling a C/C++ project in CLion.
+name: "clion-best-practices"
+description: "Best practices for working in CLion — CMake project models, compile_commands.json as the source of truth, the bundled LLVM toolchain, debugging and profiling workflows, and JetBrains shared conventions. Use when setting up, debugging, or profiling a C/C++ project in CLion."
+tags:
+  - "programming"
+  - "language"
+  - "c"
+  - "ide"
+  - "clion"
+when_to_use: "Use when setting up, debugging, or profiling a C/C++ project in CLion."
+prerequisites:
+  - "Basic familiarity with C and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../../php/ide/php-storm/SKILL.md"
+  - "../../../rust/ide/rust-rover/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # CLion
 
-CLion is JetBrains' cross-platform C/C++ IDE: a CMake-native build model, a debugger built around LLVM, bundled code insight for the standard library, and a performance profiler in the same window. Its main source of friction is that **its project model is a generated artefact, and CI never reads it**. Practical CLion work is about **treating `compile_commands.json` as the single source of truth, keeping the IDE out of the build, and using the bundled toolchain consistently so debugging reflects reality**. Language rules live in [c.md](../c.md) and [cpp.md](../cpp.md).
+CLion is JetBrains' cross-platform C/C++ IDE: a CMake-native build model, a debugger built around LLVM, bundled code insight for the standard library, and a performance profiler in the same window. Its main source of friction is that **its project model is a generated artefact, and CI never reads it**. Practical CLion work is about **treating `compile_commands.json` as the single source of truth, keeping the IDE out of the build, and using the bundled toolchain consistently so debugging reflects reality**. Language rules live in [c.md](../../SKILL.md) and [cpp.md](../../cpp/SKILL.md).
 
 _Verified against CLion 2026.2.3 (September 2026) with the bundled LLVM toolchain (Clang 21). C/C++ standards follow the compiler you point it at, not an IDE setting._
 

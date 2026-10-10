@@ -1,196 +1,85 @@
 ---
-name: emotion
-description: Emotion — CSS-in-JS library with tiny runtime, flexible styling APIs (css, styled, keyframes), and compatibility with React and vanilla JS.
+name: "emotion"
+description: "Emotion — CSS-in-JS library with tiny runtime, flexible styling APIs (css, styled, keyframes), and compatibility with React and vanilla JS."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "js"
+  - "emotion"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Emotion in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../styled-components/SKILL.md"
+  - "../stylex/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
 
-Emotion is a **CSS-in-JS library** with a **tiny runtime footprint**, offering both a **`styled`** API and a powerful **`css`** function, for React and plain JavaScript applications.
+# Emotion
 
-## 1. Setup and Babel
+Emotion is a **CSS-in-JS library** with a **tiny runtime footprint**, offering both a **styled** API and a powerful **css** function, for React and plain JavaScript applications.
 
-- React: `npm i @emotion/react @emotion/styled`.
-- Zero-config works with Vite/webpack (`@emotion/babel-plugin` optional for previews and details).
-- For SSR, configure an Emotion server instance (`createCache`, `@emotion/server`).
+## When to use
 
-```bash
-npm i @emotion/react @emotion/styled
-npm i -D @emotion/babel-plugin
-```
+Use when implementing, configuring, evaluating, or troubleshooting Emotion in a project.
 
-```javascript
-// babel.config.js — gives readable labels and stable class names in dev
-export default {
-  plugins: [
-    [
-      '@emotion/babel-plugin',
-      { sourceMap: true, autoLabel: 'dev-only', labelFormat: '[local]' },
-    ],
-  ],
-};
-```
+## Prerequisites
 
-## 2. The `css` API
+- Basic familiarity with CSS and the project conventions.
+- For implementation, access to the relevant source code and development environment.
 
-- `css` prop on React elements: `import { css } from '@emotion/react'` — `<div css={style}>`.
-- Define styles with object syntax or template strings; labels via `label:` in objects.
-- Objects support nested selectors, media queries, and the styled function pattern immediately.
+## Scope boundary
 
-```tsx
-/** @jsxImportSource @emotion/react */
-import type { ReactNode } from 'react';
+- When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions.
 
-const card = {
-  label: 'card',
-  display: 'grid',
-  gap: '0.75rem',
-  padding: '1.25rem',
-  borderRadius: 12,
-  '&:hover': { transform: 'translateY(-2px)' },
-  '@media (min-width: 768px)': { padding: '2rem' },
-};
+## Essential checks
 
-type ArticleCardProps = { title: string; children: ReactNode };
+- Server/client class mismatch with runtime CSS — use extraction on SSR
+- Passing internal prop through styled without shouldForwardProp
+- Mixing Emotion and other CSS-in-JS (duplicate cache/injectGlobal)
+- Pick one API per component (css for fragments, styled for component primitives)
+- Keep dynamic styles through props, not string concatenation, for caching benefit
+- Extract critical CSS on SSR
+- [ ] Install and configure Emotion (@emotion/react/@emotion/styled + optional babel plugin)
+- [ ] Build components with styled/css
 
-export const ArticleCard = ({ title, children }: ArticleCardProps) => (
-  <div css={card}>
-    <h3 css={{ margin: 0, fontSize: '1.125rem' }}>{title}</h3>
-    {children}
-  </div>
-);
-```
+## Focus areas
 
-## 3. The `styled` API
-
-- `styled.div\`color: red;\``or`styled.div({ color: 'red' })`.
-- Reuse with `shouldForwardProp`, dynamic `props` via function: `styled.div(p => ({ color: p.color }))`.
-- Compose: `styled(Component)` (needs `className` forwarding).
-
-```tsx
-import styled from '@emotion/styled';
-
-const Card = styled.section`
-  display: grid;
-  gap: 0.75rem;
-  padding: 1.25rem;
-  border-radius: 12px;
-`;
-
-// `tone` is styling-only — `shouldForwardProp` keeps it off the DOM node
-const Surface = styled(Card, {
-  shouldForwardProp: (prop) => prop !== 'tone',
-})<{ tone?: 'brand' | 'neutral' }>`
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: ${({ tone = 'brand' }) => (tone === 'brand' ? '#6d28d9' : '#f3f4f6')};
-  color: ${({ tone = 'brand' }) => (tone === 'brand' ? '#ffffff' : '#111827')};
-`;
-```
-
-## 4. Global Styles and Keyframes
-
-- `Global` component: `<Global styles={css\`body { margin: 0; }\`} />`.
-- `keyframes`: `const spin = keyframes\`...\``gives a named animation to use in`animation: ${spin}`.
-
-```tsx
-import { Global, css, keyframes } from '@emotion/react';
-
-const spin = keyframes`
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-export const AppShell = () => (
-  <>
-    <Global
-      styles={css`
-        body { margin: 0; font-family: system-ui, sans-serif; }
-        a { color: #6d28d9; }
-      `}
-    />
-    <div css={css`animation: ${spin} 1.2s linear infinite;`} />
-  </>
-);
-```
-
-## 5. Theming
-
-- `<ThemeProvider theme={theme}>` + `useTheme()` or `css={({ theme }) => ...}`.
-- `emotion-theming` provides `<ThemeProvider>`; type-safe with generics `ThemeProvider<MyTheme>`.
-
-```tsx
-/** @jsxImportSource @emotion/react */
-import styled from '@emotion/styled';
-import { ThemeProvider, useTheme } from '@emotion/react';
-
-const theme = {
-  colors: { brand: '#6d28d9', surface: '#ffffff', text: '#111827' },
-  space: (steps: number) => steps * 8,
-  radii: { md: 12 },
-} as const;
-
-type AppTheme = typeof theme;
-
-const PrimaryButton = styled.button`
-  padding: ${({ theme }: { theme: AppTheme }) => theme.space(2)}px;
-  border: none;
-  border-radius: ${({ theme }: { theme: AppTheme }) => theme.radii.md}px;
-  background: ${({ theme }: { theme: AppTheme }) => theme.colors.brand};
-`;
-
-const SaveHint = () => {
-  const active = useTheme<AppTheme>();
-  return <span css={{ color: active.colors.text }}>Unsaved changes</span>;
-};
-
-export const App = () => (
-  <ThemeProvider theme={theme}>
-    <PrimaryButton>Save</PrimaryButton>
-    <SaveHint />
-  </ThemeProvider>
-);
-```
-
-## 6. SSR and Performance
-
-- With zero-config, styles inject at runtime; for SSR, use `@emotion/server` to `extractCritical`.
-- Bundle smallest: tree-import only `@emotion/react` features; emotion is very small already.
-
-```tsx
-// server.tsx — extract critical CSS so server and client emit identical classes
-import type { ReactElement } from 'react';
-import { renderToString } from 'react-dom/server';
-import createCache from '@emotion/cache';
-import createEmotionServer from '@emotion/server/create-instance';
-import { CacheProvider } from '@emotion/react';
-
-export const render = (app: ReactElement) => {
-  const cache = createCache({ key: 'app' });
-  const { extractCriticalToChunks, constructStyleTagsFromChunks } = createEmotionServer(cache);
-  const html = renderToString(<CacheProvider value={cache}>{app}</CacheProvider>);
-  const chunks = extractCriticalToChunks(html);
-  return { html, styles: constructStyleTagsFromChunks(chunks) };
-};
-```
-
-## Common Pitfalls
-
-- Server/client class mismatch with runtime CSS — use extraction on SSR.
-- Passing internal prop through `styled` without `shouldForwardProp`.
-- Mixing Emotion and other CSS-in-JS (duplicate `cache`/`injectGlobal`).
+- 1. Setup and Babel
+- 2. The `css` API
+- 3. The `styled` API
+- 4. Global Styles and Keyframes
+- 5. Theming
+- 6. SSR and Performance
+- Common Pitfalls
 
 ## General Rules of Thumb
 
-- Pick one API per component (`css` for fragments, `styled` for component primitives).
-- Keep dynamic styles through props, not string concatenation, for caching benefit.
-- Extract critical CSS on SSR.
+- Choose one API per component: `css` for fragments, `styled` for reusable primitives.
+- Pass dynamic values as props rather than concatenating CSS strings.
+- Extract critical styles on the server and keep cache configuration consistent between server and client.
 
 ## Quick-Start Checklist
 
-- [ ] Install and configure Emotion (`@emotion/react`/`@emotion/styled` + optional babel plugin).
-- [ ] Build components with `styled`/`css`.
-- [ ] Add `<Global>` for base styles when needed.
-- [ ] Wire `<ThemeProvider>` + theme object.
-- [ ] Set up SSR extraction or verify runtime-injection approach.
-- [ ] Verify SSR/hydration stability.
+- [ ] Install and configure `@emotion/react` and `@emotion/styled`; add the optional Babel plugin if useful.
+- [ ] Build components with `styled` or `css`, and add `<Global>` for base styles when needed.
+- [ ] Define a theme and use `<ThemeProvider>` where shared design tokens are needed.
+- [ ] Configure SSR extraction or explicitly verify the runtime-injection approach.
+- [ ] Check that server rendering and client hydration produce stable classes.
+
+## Detailed references
+
+- [Common Pitfalls](./references/common-pitfalls.md)
+- [1. Setup and Babel](./references/setup-and-babel.md)
+- [6. SSR and Performance](./references/ssr-and-performance.md)
+- [2. The `css` API](./references/the-css-api.md)
+
+## Related materials
+
+- [Examples](./examples/)
+- [Supporting assets](./assets/)

@@ -1,8 +1,23 @@
 ---
-name: sendgrid
-description: Best practices for sending email with Twilio SendGrid. Use when integrating transactional/marketing email, configuring sender authentication, or handling delivery events — covers API usage, deliverability, and event webhooks.
+name: "sendgrid"
+description: "Best practices for sending email with Twilio SendGrid. Use when integrating transactional/marketing email, configuring sender authentication, or handling delivery events — covers API usage, deliverability, and event webhooks."
+tags:
+  - "programming"
+  - "saas"
+  - "email"
+  - "sendgrid"
+when_to_use: "Use when integrating transactional/marketing email, configuring sender authentication, or handling delivery events."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../mailgun/SKILL.md"
+  - "../resend/SKILL.md"
+  - "../postmark/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # SendGrid Best Practices
 
 SendGrid is the Twilio email platform for transactional and marketing email. Best practice is treating it as a **deliverability pipeline**: authenticated sender domains (DKIM/SPF/DMARC), a single sending strategy per type, and event webhooks over polling to react to bounces/complaints.

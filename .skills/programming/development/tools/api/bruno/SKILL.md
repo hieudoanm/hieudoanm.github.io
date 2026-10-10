@@ -1,11 +1,27 @@
 ---
-name: bruno-best-practices
-description: Best practices for Bruno — collections as plain files in the repository, environment variables, script-based assertions, and Git-native API testing without a cloud account. Use when designing, organising, or automating API requests and tests.
+name: "bruno-best-practices"
+description: "Best practices for Bruno — collections as plain files in the repository, environment variables, script-based assertions, and Git-native API testing without a cloud account. Use when designing, organising, or automating API requests and tests."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "api"
+  - "bruno"
+when_to_use: "Use when designing, organising, or automating API requests and tests."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../insomnia/SKILL.md"
+  - "../postman/SKILL.md"
+  - "../../editor/cursor/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Bruno
 
-Bruno is an open-source API client whose defining choice is **a collection is a directory of plain text files in your Git repository** — no account, no sync service, no proprietary collection format. A request is a `.bru` file you read in a diff. Practical Bruno work is about **leaning into that property, keeping scripts small and reviewable, and treating the collection as a test suite**. Peers are in [postman.md](./postman.md) and [insomnia.md](./insomnia.md).
+Bruno is an open-source API client whose defining choice is **a collection is a directory of plain text files in your Git repository** — no account, no sync service, no proprietary collection format. A request is a `.bru` file you read in a diff. Practical Bruno work is about **leaning into that property, keeping scripts small and reviewable, and treating the collection as a test suite**. Peers are in [postman.md](../postman/SKILL.md) and [insomnia.md](../insomnia/SKILL.md).
 
 _Verified against Bruno's 2026 releases (v2.x). The `.bru` format and collection layout are stable; scripting follows Postman-compatible APIs with Bruno-specific additions._
 

@@ -1,8 +1,23 @@
 ---
-name: ubuntu-linux
-description: Best practices for administering Ubuntu servers and desktops — apt components, PPAs, netplan, snaps, unattended-upgrades, cloud images, and LTS upgrades. Use when provisioning or troubleshooting Ubuntu.
+name: "ubuntu-linux"
+description: "Best practices for administering Ubuntu servers and desktops — apt components, PPAs, netplan, snaps, unattended-upgrades, cloud images, and LTS upgrades. Use when provisioning or troubleshooting Ubuntu."
+tags:
+  - "programming"
+  - "development"
+  - "linux"
+  - "ubuntu"
+when_to_use: "Use when provisioning or troubleshooting Ubuntu."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../debian/SKILL.md"
+  - "../arch/SKILL.md"
+  - "../mint/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Ubuntu Best Practices
 
 Ubuntu is Debian stable with a fixed two-year release cadence, a wider set of prebuilt components, and Canonical's cloud and desktop integration layered on top. Its defining trade is **a predictable schedule and commercial support in exchange for newer kernels and more opinionated defaults** — which makes it the pragmatic default for cloud, containers, and teams that want a vendor. Practical Ubuntu work leans on **`netplan` for networking, PPAs as the sanctioned extension mechanism, and `unattended-upgrades` for security patching**.
@@ -25,7 +40,7 @@ _Current LTS: Ubuntu 26.04 "Resolute Raccoon" (April 2026) — kernel 7.0, Rust-
 
 - **Four components**: `main`, `restricted`, `universe`, `multiverse`. `main` is community-built free software, `universe` is the big community archive, `restricted` is vendor drivers/firmware, `multiverse` is packages with licences requiring extra agreement.
 - **`universe` is the pragmatic default for servers.** Refusing it removes a large fraction of available tooling for no security benefit.
-- **`apt` interactively, `apt-get` in scripts**, exactly as on Debian — see [debian.md](./debian.md) for the mechanics, pinning, and `--no-install-recommends`.
+- **`apt` interactively, `apt-get` in scripts**, exactly as on Debian — see [debian.md](../debian/SKILL.md) for the mechanics, pinning, and `--no-install-recommends`.
 - **`apt-mark hold pkg` pins a package** in place. Reach for `/etc/apt/preferences.d/` pinning instead when the hold must survive a script that re-derives the package set.
 - **`unattended-upgrades` is configured in `/etc/apt/apt.conf.d/50unattended-upgrades`.** Keep `stable` out of it and let it apply `security` and `*-updates` only, so an unattended run can never push an unreviewed major change.
 

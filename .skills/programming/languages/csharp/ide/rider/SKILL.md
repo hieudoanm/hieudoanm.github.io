@@ -1,11 +1,27 @@
 ---
-name: rider-best-practices
-description: Best practices for working in Rider — .slnx solutions, ReSharper's analysis engine, cross-platform .NET debugging, the AI Assistant and Junie agent, and shared conventions with Visual Studio. Use when setting up, debugging, or refactoring C#/.NET in Rider.
+name: "rider-best-practices"
+description: "Best practices for working in Rider — .slnx solutions, ReSharper's analysis engine, cross-platform .NET debugging, the AI Assistant and Junie agent, and shared conventions with Visual Studio. Use when setting up, debugging, or refactoring C#/.NET in Rider."
+tags:
+  - "programming"
+  - "language"
+  - "csharp"
+  - "ide"
+  - "rider"
+when_to_use: "Use when setting up, debugging, or refactoring C#/.NET in Rider."
+prerequisites:
+  - "Basic familiarity with C# and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../visual-studio/SKILL.md"
+  - "../../SKILL.md"
+  - "../../../java/ide/idea/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Rider
 
-Rider is JetBrains' cross-platform .NET IDE, built on the same ReSharper analysis engine as Visual Studio's ReSharper extension. It runs on Windows, macOS, and Linux with a consistent UI, and it is the only first-class .NET IDE on non-Windows platforms. Its main advantage over Visual Studio is **uniform behaviour across operating systems**; its main risk is **Rider-specific settings that quietly diverge from the build**. Practical Rider work is about **treating MSBuild as the build, not Rider, and committing only the settings that belong to the project**. Language rules live in [csharp.md](../csharp.md) and [dotnet.md](../dotnet.md).
+Rider is JetBrains' cross-platform .NET IDE, built on the same ReSharper analysis engine as Visual Studio's ReSharper extension. It runs on Windows, macOS, and Linux with a consistent UI, and it is the only first-class .NET IDE on non-Windows platforms. Its main advantage over Visual Studio is **uniform behaviour across operating systems**; its main risk is **Rider-specific settings that quietly diverge from the build**. Practical Rider work is about **treating MSBuild as the build, not Rider, and committing only the settings that belong to the project**. Language rules live in [csharp.md](../../SKILL.md) and [dotnet.md](../../dotnet/SKILL.md).
 
 _Verified against Rider 2026.2.3 (September 2026) with .NET 10 LTS. Visual Studio 2026 `18.10.2` is current stable; Visual Studio for Mac is discontinued._
 

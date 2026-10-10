@@ -1,11 +1,27 @@
 ---
-name: zed-best-practices
-description: Best practices for the Zed editor — language servers and extensions, project settings in Zed, key bindings, collaboration, and formatting matching the repo. Use when configuring or working in Zed.
+name: "zed-best-practices"
+description: "Best practices for the Zed editor — language servers and extensions, project settings in Zed, key bindings, collaboration, and formatting matching the repo. Use when configuring or working in Zed."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "editor"
+  - "zed"
+when_to_use: "Use when configuring or working in Zed."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../vscode/SKILL.md"
+  - "../neovim/SKILL.md"
+  - "../antigravity/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Zed
 
-Zed is a high-performance native code editor: GPU-rendered, fast on large files, and built around language servers with a small, curated default extension set. Its trade-off against VS Code is deliberate — **fewer extensions and a smaller surface, in exchange for speed and a settings model that is committed as a project file**. Practical Zed work is about **using Zed's own project settings rather than per-user config, keeping the language server as the source of truth for diagnostics, and not reaching for an extension where the CLI does the job**. VS Code conventions are in [vscode.md](./vscode.md); Neovim in [neovim.md](./neovim.md).
+Zed is a high-performance native code editor: GPU-rendered, fast on large files, and built around language servers with a small, curated default extension set. Its trade-off against VS Code is deliberate — **fewer extensions and a smaller surface, in exchange for speed and a settings model that is committed as a project file**. Practical Zed work is about **using Zed's own project settings rather than per-user config, keeping the language server as the source of truth for diagnostics, and not reaching for an extension where the CLI does the job**. VS Code conventions are in [vscode.md](../vscode/SKILL.md); Neovim in [neovim.md](../neovim/SKILL.md).
 
 _Verified against Zed 1.x (September 2026) on macOS and Linux. Zed is macOS-only in early releases; Linux support has since shipped in stable — confirm the platform support for your build before planning around it._
 

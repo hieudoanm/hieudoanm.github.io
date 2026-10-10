@@ -1,8 +1,25 @@
 ---
-name: winter.js-best-practices
-description: Best practices for building with WinterJS — the WinterCG-compliant JavaScript runtime conventions. Use when writing, structuring, or reviewing WinterJS deployments — covers the runtime, WinterCG APIs, deployment (Cloudflare-style), and compatibility.
+name: "winter.js-best-practices"
+description: "Best practices for building with WinterJS — the WinterCG-compliant JavaScript runtime conventions. Use when writing, structuring, or reviewing WinterJS deployments — covers the runtime, WinterCG APIs, deployment (Cloudflare-style), and compatibility."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "runtime"
+  - "winter"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing WinterJS deployments."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../llrt/SKILL.md"
+  - "../../SKILL.md"
+  - "../bun/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # WinterJS Best Practices
 
 WinterJS (**Winter Runtime**, from wasmer/Sparkle) is **a WinterCG-compliant runtime for the modern web-beyond—a HTTP/Node-compatible, deploy-fast layer** — designed around the WinterCG interoperability spec (`fetch`-first, `Request`/`Response`, `WebStreams`, no Node-only process APIs). Practical WinterJS leans on **platform APIs over Node built-ins (WinterCG surface), declarative deployments (Cloudflare Workers-like), and strict third-party-bundle discipline** — code that is WinterCG-clean runs unmodified across Cloudflare Workerd, LLRT, and Node-with-adapters.

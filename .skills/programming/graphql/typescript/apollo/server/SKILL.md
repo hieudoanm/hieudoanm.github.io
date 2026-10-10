@@ -1,8 +1,24 @@
 ---
-name: apollo-server
-description: Apollo Server — production GraphQL server (Node.js/TypeScript) with schema, resolvers, directives, federation, and tracing.
+name: "apollo-server"
+description: "Apollo Server — production GraphQL server (Node.js/TypeScript) with schema, resolvers, directives, federation, and tracing."
+tags:
+  - "programming"
+  - "graphql"
+  - "typescript"
+  - "apollo"
+  - "server"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Apollo Server in a project."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../client/SKILL.md"
+  - "../../../SKILL.md"
+  - "../../garph/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Apollo Server is the **reference GraphQL server for Node.js/TypeScript** (uses `@apollo/server`). It provides a **typed schema, resolvers, context, directives, error formatting, subscriptions, and Apollo Federation** support.
 
 ## 1. Setup a Server

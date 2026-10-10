@@ -1,8 +1,24 @@
 ---
-name: bun-runtime
-description: Best practices for building applications that run on the Bun runtime (TypeScript/JavaScript). Use when structuring or reviewing Bun servers, CLIs, scripts, or tests — covers Bun.serve, file I/O, shell scripting, bun:test, the package manager, and tooling.
+name: "bun-runtime"
+description: "Best practices for building applications that run on the Bun runtime (TypeScript/JavaScript). Use when structuring or reviewing Bun servers, CLIs, scripts, or tests — covers Bun.serve, file I/O, shell scripting, bun:test, the package manager, and tooling."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "runtime"
+  - "bun"
+when_to_use: "Use when structuring or reviewing Bun servers, CLIs, scripts, or tests."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../deno/SKILL.md"
+  - "../node/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Bun Runtime Best Practices
 
 Bun is an all-in-one JavaScript/TypeScript runtime, bundler, transpiler, test runner, and package manager. It executes `.ts`/`.tsx` natively, implements web-standard APIs (`fetch`, `WebSocket`, `Request`/`Response`, `Blob`), and ships a fast filesystem, database (`bun:sqlite`), and shell-command layer. Best practice here is to lean into Bun's built-ins — `Bun.serve`/`Bun.file`/`Bun.$`/`bun:test` — instead of bolting on the node-style toolchain Bun replaces.

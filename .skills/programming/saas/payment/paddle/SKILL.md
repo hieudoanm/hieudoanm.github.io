@@ -1,8 +1,23 @@
 ---
-name: paddle
-description: Best practices for selling digital products and subscriptions with Paddle. Use when integrating checkout, handling merchant-of-record tax/refunds, or consuming webhooks — covers webhook signatures, product/subscription modeling, and revenue recognition.
+name: "paddle"
+description: "Best practices for selling digital products and subscriptions with Paddle. Use when integrating checkout, handling merchant-of-record tax/refunds, or consuming webhooks — covers webhook signatures, product/subscription modeling, and revenue recognition."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "paddle"
+when_to_use: "Use when integrating checkout, handling merchant-of-record tax/refunds, or consuming webhooks."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../lemonsqueezy/SKILL.md"
+  - "../dodopayments/SKILL.md"
+  - "../polar/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Paddle Best Practices
 
 Paddle is a **merchant of record** (MoR): it handles sales tax, VAT, invoicing, and refunds for digital goods. Best practice is leaning on that model — Paddle owns tax/fiscal obligations, you consume **webhooks** for payment/fulfillment, and you keep product/catalog and prices server-side while honoring Paddle's pricing model (License pricing / Catalogs).

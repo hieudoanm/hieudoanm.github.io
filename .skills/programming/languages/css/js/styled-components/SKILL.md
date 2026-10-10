@@ -1,190 +1,86 @@
 ---
-name: styled-components
-description: styled-components — CSS-in-JS for React with tagged template literals, theme support, and automatic critical CSS extraction.
+name: "styled-components"
+description: "styled-components — CSS-in-JS for React with tagged template literals, theme support, and automatic critical CSS extraction."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "js"
+  - "styled"
+  - "components"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting styled-components in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../emotion/SKILL.md"
+  - "../stylex/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
 
-styled-components is the **`styled`-first CSS-in-JS library for React**, building components from tagged template literals and **automatically extracting critical CSS** at runtime.
+# Styled Components
 
-## 1. Setup
+styled-components is the **styled-first CSS-in-JS library for React**, building components from tagged template literals and **automatically extracting critical CSS** at runtime.
 
-- Install: `npm i styled-components`.
-- Babel: optional `babel-plugin-styled-components` for better debugging (component display names) and SSR.
-- Micro-reify: `babel-preset-styled-components` improves bundle size in builds.
+## When to use
 
-```bash
-npm i styled-components
-npm i -D babel-plugin-styled-components
-```
+Use when implementing, configuring, evaluating, or troubleshooting styled-components in a project.
 
-```json
-// babel.config.json — displayName gives readable class names, ssr enables sheet reuse
-{
-  "plugins": [
-    [
-      "babel-plugin-styled-components",
-      { "displayName": true, "fileName": false, "pure": true, "ssr": true }
-    ]
-  ]
-}
-```
+## Prerequisites
 
-## 2. Creating Components
+- Basic familiarity with CSS and the project conventions.
+- For implementation, access to the relevant source code and development environment.
 
-- `const Button = styled.button\` background: coral; font-size: 18px; \`;`
-- Dynamic props: `styled.button(p => ({ background: p.primary ? 'coral' : '#fff' }))` — reuse `p.prop`.
-- Extend existing: `styled(Button)\`...\``forwards a`className` automatically.
+## Scope boundary
 
-```tsx
-import styled from 'styled-components';
+- When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions.
 
-const Card = styled.section`
-  display: grid;
-  gap: 0.75rem;
-  padding: 1.25rem;
-  border-radius: 12px;
-`;
+## Essential checks
 
-type PrimaryButtonProps = { tone?: 'brand' | 'danger' };
+- Passing internal props into DOM (shouldForwardProp to filter)
+- Server/client class mismatch when SSR extraction isn't wired
+- Compute functions referencing props wrongly (function form uses returns)
+- Use styled components for containers and simple primitives; css fragments from Emotion's sibling — but stick to one library
+- Keep prop-derived styles to a minimum for performance
+- Wire SSR extraction for any server-rendered app
+- [ ] Install and add the Babel plugin for development ergonomics
+- [ ] Build components with styled.* and dynamic props
 
-export const PrimaryButton = styled.button<PrimaryButtonProps>`
-  padding: ${({ theme }) => theme.space(2)}px;
-  border: 0;
-  border-radius: 8px;
-  cursor: pointer;
-  color: #fff;
-  background: ${({ tone = 'brand', theme }) =>
-    tone === 'brand' ? theme.colors.brand : theme.colors.danger};
-`;
-```
+## Focus areas
 
-```tsx
-// `tone` is styling-only — withConfig filters it before it reaches the DOM
-const ElevatedCard = styled(Card).withConfig({
-  shouldForwardProp: (prop) => prop !== 'tone',
-})<{ tone?: 'brand' | 'muted' }>`
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
-`;
-
-// attrs inject static props and per-instance data without touching markup
-const SaveAction = styled.button.attrs({ type: 'submit', 'data-testid': 'save' })`
-  font-weight: 600;
-`;
-```
-
-## 3. Theming
-
-- `<ThemeProvider theme={theme}>` injects `theme`; consume with `p.theme` or `useTheme()`.
-- Type-safe theme: declare `DefaultTheme` module augmentation.
-- Per-instance variants via `attrs` (`attrs({ 'data-testid': 'x' })`).
-
-```ts
-// src/styled/theme.ts
-export const theme = {
-  colors: {
-    brand: '#6d28d9',
-    danger: '#b91c1c',
-    surface: '#ffffff',
-  },
-  space: (steps: number) => steps * 8,
-} as const;
-
-export type AppTheme = typeof theme;
-```
-
-```ts
-// src/styled/styled.d.ts — module augmentation makes `p.theme` typed everywhere
-import 'styled-components';
-import type { AppTheme } from './theme';
-
-declare module 'styled-components' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-  export interface DefaultTheme extends AppTheme {}
-}
-```
-
-## 4. Global Styles and Animations
-
-- `createGlobalStyle\`body { margin:0; } \`` for resets — renders once.
-- `keyframes` for reusable animation names.
-
-```tsx
-import { createGlobalStyle, keyframes, styled } from 'styled-components';
-
-export const GlobalStyle = createGlobalStyle`
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-  }
-`;
-
-const spin = keyframes`
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-export const Spinner = styled.div`
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 2px solid #e5e7eb;
-  border-top-color: #6d28d9;
-  border-radius: 50%;
-  animation: ${spin} 0.8s linear infinite;
-`;
-```
-
-## 5. SSR and Extraction
-
-- With SSR, use `ServerStyleSheet` and `collectStyles`/`extractStyleTags` to render critical CSS into `<head>`.
-- For static extraction at build (Next.js), use `babel-plugin` + `secret-interpolation` or framework integrations.
-- Always hydrate the extracted styles on the client for same class names.
-
-```tsx
-// server.tsx — one sheet per request, styles inlined in <head>
-import type { ReactElement } from 'react';
-import { renderToString } from 'react-dom/server';
-import { ServerStyleSheet } from 'styled-components';
-
-export const renderApp = (app: ReactElement) => {
-  const sheet = new ServerStyleSheet();
-
-  try {
-    const html = renderToString(sheet.collectStyles(app));
-    const styles = sheet.getStyleTags();
-    return { html, styles };
-  } finally {
-    sheet.seal();
-  }
-};
-```
-
-## 6. Performance Notes
-
-- CSS-in-JS has runtime cost: render passes on every prop change; use memo/PureComponent where possible.
-- Consider `styled-components/macro` for combinator/to-something-safe builds.
-
-## Common Pitfalls
-
-- Passing internal props into DOM (`shouldForwardProp` to filter).
-- Server/client class mismatch when SSR extraction isn't wired.
-- Compute functions referencing `props` wrongly (function form uses `returns`).
+- 1. Setup
+- 2. Creating Components
+- 3. Theming
+- 4. Global Styles and Animations
+- 5. SSR and Extraction
+- 6. Performance Notes
+- Common Pitfalls
 
 ## General Rules of Thumb
 
-- Use `styled` components for containers and simple primitives; `css` fragments from Emotion's sibling — but stick to one library.
-- Keep prop-derived styles to a minimum for performance.
-- Wire SSR extraction for any server-rendered app.
+- Use styled components for reusable primitives and keep prop-derived styles bounded.
+- Filter styling-only props so they do not leak onto DOM elements.
+- Configure server-side style extraction for rendered applications and keep one sheet per request.
 
 ## Quick-Start Checklist
 
-- [ ] Install and add the Babel plugin for development ergonomics.
-- [ ] Build components with `styled.*` and dynamic props.
-- [ ] Add `<ThemeProvider>` + typed theme.
-- [ ] Add `createGlobalStyle` and `keyframes` where needed.
-- [ ] Configure SSR style-sheet extraction or hydration.
-- [ ] Verify no server/client class mismatch.
+- [ ] Install styled-components and configure the Babel plugin if the project uses it.
+- [ ] Build components with `styled.*`; introduce typed theme values through `<ThemeProvider>`.
+- [ ] Add `createGlobalStyle` and `keyframes` only where they clarify shared behavior.
+- [ ] Configure SSR extraction and client hydration when applicable.
+- [ ] Verify DOM props are filtered and server/client classes match.
+
+## Detailed references
+
+- [Common Pitfalls](./references/common-pitfalls.md)
+- [2. Creating Components](./references/creating-components.md)
+- [6. Performance Notes](./references/performance-notes.md)
+- [1. Setup](./references/setup.md)
+
+## Related materials
+
+- [Examples](./examples/)
+- [Supporting assets](./assets/)

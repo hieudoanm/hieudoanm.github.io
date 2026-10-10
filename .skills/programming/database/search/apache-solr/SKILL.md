@@ -1,8 +1,24 @@
 ---
-name: apache-solr
-description: Apache Solr — open-source enterprise search platform built on Apache Lucene, with REST APIs, faceting, and distributed search.
+name: "apache-solr"
+description: "Apache Solr — open-source enterprise search platform built on Apache Lucene, with REST APIs, faceting, and distributed search."
+tags:
+  - "programming"
+  - "database"
+  - "search"
+  - "apache"
+  - "solr"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Apache Solr in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../elasticsearch/SKILL.md"
+  - "../opensearch/SKILL.md"
+  - "../../wide-column/apache-cassandra/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Apache Solr is a **mature, extensible enterprise search platform** built on **Apache Lucene**. It exposes **RESTful JSON/**HTTP APIs, powerful **full-text search, faceting, filtering, highlighting, and distributed search** across shards and replicas.
 
 ## 1. Core Concepts

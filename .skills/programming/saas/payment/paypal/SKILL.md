@@ -1,8 +1,23 @@
 ---
-name: paypal
-description: Best practices for integrating PayPal payments. Use when adding checkout, subscriptions/billing, or handling webhooks — covers order/v2 API, webhook verification, and dispute handling.
+name: "paypal"
+description: "Best practices for integrating PayPal payments. Use when adding checkout, subscriptions/billing, or handling webhooks — covers order/v2 API, webhook verification, and dispute handling."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "paypal"
+when_to_use: "Use when adding checkout, subscriptions/billing, or handling webhooks."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../square/SKILL.md"
+  - "../stripe/SKILL.md"
+  - "../dodopayments/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # PayPal Best Practices
 
 PayPal offers checkout and merchant APIs (REST v2 Orders/Catalog/Subscriptions) plus the classic flow. Best practice is using the **Orders v2 API** for modern checkout, **verifying webhooks** for order/billing state, and reconciling against the order ID rather than trusting client callbacks.

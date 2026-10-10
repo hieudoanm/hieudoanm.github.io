@@ -1,8 +1,23 @@
 ---
-name: okta
-description: Best practices for integrating Okta into a backend. Use when adding enterprise authentication, SSO/SAML-OIDC federation, or provisioning — covers token validation, group claims, SSO, and lifecycle management.
+name: "okta"
+description: "Best practices for integrating Okta into a backend. Use when adding enterprise authentication, SSO/SAML-OIDC federation, or provisioning — covers token validation, group claims, SSO, and lifecycle management."
+tags:
+  - "programming"
+  - "saas"
+  - "authentication"
+  - "okta"
+when_to_use: "Use when adding enterprise authentication, SSO/SAML-OIDC federation, or provisioning."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../onelogin/SKILL.md"
+  - "../auth0/SKILL.md"
+  - "../keycloak/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Okta Best Practices
 
 Okta is an enterprise identity platform known for SSO, federation, and lifecycle management. Best practice is leveraging it for **federated identity** (SAML/OIDC with enterprise IdPs), validating tokens locally, and relying on **groups as the authorization primitive** rather than custom role plumbing.

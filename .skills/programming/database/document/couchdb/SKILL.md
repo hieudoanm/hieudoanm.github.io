@@ -1,8 +1,23 @@
 ---
-name: couchdb
-description: CouchDB — source-first JSON document database with HTTP API, multi-master replication, and map/reduce views.
+name: "couchdb"
+description: "CouchDB — source-first JSON document database with HTTP API, multi-master replication, and map/reduce views."
+tags:
+  - "programming"
+  - "database"
+  - "document-database"
+  - "couchdb"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting optimistic concurrency: create, then always send _rev back on update in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../couchbase/SKILL.md"
+  - "../rethinkdb/SKILL.md"
+  - "../dynamodb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 CouchDB is a **JSON document database with a pure HTTP API**, built around **master-master replication** and an **MVCC** document model designed for offline-friendly, fault-tolerant applications.
 
 ## 1. Core Concepts
@@ -43,7 +58,7 @@ services:
       - couchdb_data:/opt/couchdb/data
 ```
 
-Runnable: [`examples/docker/compose/databases/documental/couchdb/docker-compose.yaml`](../../../examples/docker/compose/databases/documental/couchdb/docker-compose.yaml)
+Runnable: [`examples/docker/compose/databases/documental/couchdb/docker-compose.yaml`](../../../devops/docker/docker-compose/SKILL.md)
 
 - Authentication: `Basic`, `JWT`, or `Cookie` (session) vs. `PW` / `Local` (DB setup). Use `_users` DB for `_design` docs? (Create dedicated users.)
 - Use `ETag`/If-Match and `_rev` to implement optimistic concurrency: always send `_rev` on update; a `409 Conflict` means a revision mismatch.

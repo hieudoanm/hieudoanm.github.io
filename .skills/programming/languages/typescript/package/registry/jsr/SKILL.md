@@ -1,8 +1,25 @@
 ---
-name: jsr-best-practices
-description: Best practices for publishing and consuming JavaScript packages on JSR (jsr.io) — the modern JS/TS registry conventions. Use when writing, structuring, or reviewing JSR packages — covers scope/name, deno assert/browser interop, publish flow, and CI.
+name: "jsr-best-practices"
+description: "Best practices for publishing and consuming JavaScript packages on JSR (jsr.io) — the modern JS/TS registry conventions. Use when writing, structuring, or reviewing JSR packages — covers scope/name, deno assert/browser interop, publish flow, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "package-management"
+  - "package-registry"
+  - "jsr"
+when_to_use: "Use when writing, structuring, or reviewing JSR packages."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../github-packages/SKILL.md"
+  - "../../../SKILL.md"
+  - "../../manager/npm/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # JSR Best Practices
 
 JSR (`jsr.io`) is **a modern registry for TypeScript-first packages, designed to work with Deno, Node, and the browser** — publishing via `jsr publish` with `deno.json`/`jsr.json` metadata and a source-driven package (JSR is native to JSR-typed Deno; interop via `npm:` and `jsr:` specifiers). Practical JSR leans on **a clean scope/name, an explicit `deno.json` `{ exports, name, version }`, publishing from CI with `--allow-dirty` gates, and compatibility tested across runtimes** — the package is source-first; the registry verifies metadata.

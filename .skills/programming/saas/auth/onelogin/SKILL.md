@@ -1,8 +1,23 @@
 ---
-name: onelogin
-description: Best practices for integrating OneLogin as an enterprise identity provider. Use when adding SSO (SAML/OIDC), directory sync, or policy-based authentication — covers federation, group-based access, and IdP-driven lifecycle.
+name: "onelogin"
+description: "Best practices for integrating OneLogin as an enterprise identity provider. Use when adding SSO (SAML/OIDC), directory sync, or policy-based authentication — covers federation, group-based access, and IdP-driven lifecycle."
+tags:
+  - "programming"
+  - "saas"
+  - "authentication"
+  - "onelogin"
+when_to_use: "Use when adding SSO (SAML/OIDC), directory sync, or policy-based authentication."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../okta/SKILL.md"
+  - "../osso/SKILL.md"
+  - "../keycloak/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # OneLogin Best Practices
 
 OneLogin is a cloud identity provider popular for enterprise SSO and lifecycle management. Best practice is using it as the **enterprise IdP and policy engine**: federate with SAML/OIDC, drive authorization from groups, and honor the directory as the source of truth for user lifecycle.

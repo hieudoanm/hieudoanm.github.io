@@ -1,8 +1,24 @@
 ---
-name: hermes-best-practices
-description: Best practices for running JavaScript on the Hermes engine — the Meta/React-Native JS engine conventions. Use when writing, structuring, or reviewing Hermes-targeted code — covers bytecode, GC, optimization limits, cold start, and RN integration.
+name: "hermes-best-practices"
+description: "Best practices for running JavaScript on the Hermes engine — the Meta/React-Native JS engine conventions. Use when writing, structuring, or reviewing Hermes-targeted code — covers bytecode, GC, optimization limits, cold start, and RN integration."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "engine"
+  - "hermes"
+when_to_use: "Use when writing, structuring, or reviewing Hermes-targeted code."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../v8/SKILL.md"
+  - "../javascript-core/SKILL.md"
+  - "../quick.js/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Hermes Best Practices
 
 Hermes is **Meta's JS engine optimized for React Native/Android — precompiled bytecode, low-memory footprint, and fast startup** (no JIT; ahead-of-time bytecode and a compact GC). Practical Hermes-aware code leans on **writing for the interpreter's reality (no JIT warmup hand-waves), keeping the initial module graph small for cold start, careful memory ownership (Engine.release vs image absence), and testing under RN's Hermes flag** — Hermes rewards frugal allocation and small boot graphs, not polymorphic-fast-path tricks.

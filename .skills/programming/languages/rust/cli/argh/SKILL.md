@@ -1,8 +1,24 @@
 ---
-name: argh-best-practices
-description: Best practices for building Rust CLIs with argh — the derive-based argument parsing conventions. Use when writing, structuring, or reviewing argh — covers derive usage, from_args, subcommands, docstring help, and error handling.
+name: "argh-best-practices"
+description: "Best practices for building Rust CLIs with argh — the derive-based argument parsing conventions. Use when writing, structuring, or reviewing argh — covers derive usage, from_args, subcommands, docstring help, and error handling."
+tags:
+  - "programming"
+  - "language"
+  - "rust"
+  - "cli"
+  - "argh"
+when_to_use: "Use when writing, structuring, or reviewing argh."
+prerequisites:
+  - "Basic familiarity with Rust and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../clap/SKILL.md"
+  - "../../SKILL.md"
+  - "../ratatui/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # argh Best Practices
 
 argh is a **derive-based argument parsing library for Rust** — `#[derive(FromArgs)]` structs with `#[argh(...)]` attributes; simple, dependency-light CLIs. Practical argh leans on **`derive(FromArgs)` with `description`/`option` attributes, a top-level struct excluding `argh(example = ...)`, subcommands via `#[argh(subcommand)]`, boosted by the 1-life `from_env` pattern**, and fine-grain error handling — fewer, typed branches. When the CLI grows an ecosystem scale, consider clap; argh stays lean-by-design.

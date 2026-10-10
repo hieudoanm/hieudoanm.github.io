@@ -1,8 +1,24 @@
 ---
-name: bulma
-description: Bulma — free, open-source CSS framework based on flexbox with minimal setup and a simple, modern aesthetic.
+name: "bulma"
+description: "Bulma — free, open-source CSS framework based on flexbox with minimal setup and a simple, modern aesthetic."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "components"
+  - "bulma"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Bulma in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../bootstrap/SKILL.md"
+  - "../daisyui/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Bulma is a **free, modern CSS framework built on flexbox** — an **output-ready styling layer** providing layout primitives (columns), components (cards, forms, modals), and utilities without JavaScript.
 
 ## 1. Installation and Setup

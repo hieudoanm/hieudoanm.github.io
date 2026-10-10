@@ -1,8 +1,23 @@
 ---
-name: neo4j
-description: Neo4j — native graph database using Cypher query language, property graph model, and index-free adjacency.
+name: "neo4j"
+description: "Neo4j — native graph database using Cypher query language, property graph model, and index-free adjacency."
+tags:
+  - "programming"
+  - "database"
+  - "graph"
+  - "neo4j"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Neo4j in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../dgraph/SKILL.md"
+  - "../../multi/fauna/SKILL.md"
+  - "../../document/rethinkdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Neo4j is a **property graph database** built on the principle of **index-free adjacency**, where nodes, relationships, and properties form a first-class graph structure queried with the **Cypher** language.
 
 ## 1. Core Concepts

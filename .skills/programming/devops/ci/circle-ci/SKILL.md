@@ -1,8 +1,23 @@
 ---
-name: circle-ci-best-practices
-description: Best practices for CircleCI configuration. Use when creating, structuring, or reviewing CircleCI pipelines for CI/CD workflows.
+name: "circle-ci-best-practices"
+description: "Best practices for CircleCI configuration. Use when creating, structuring, or reviewing CircleCI pipelines for CI/CD workflows."
+tags:
+  - "programming"
+  - "devops"
+  - "ci"
+  - "circle"
+when_to_use: "Use when creating, structuring, or reviewing CircleCI pipelines for CI/CD workflows."
+prerequisites:
+  - "Familiarity with the application and its deployment environment."
+  - "Access to the relevant pipeline, infrastructure, or runtime configuration."
+related_skills:
+  - "../gitlab-ci/SKILL.md"
+  - "../github-actions/SKILL.md"
+  - "../jenkins/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # CircleCI Best Practices
 
 CircleCI is a continuous integration and delivery platform that uses YAML configuration files (`config.yml`) to define pipelines. Following conventions makes pipelines readable, maintainable, and portable.

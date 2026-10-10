@@ -1,8 +1,26 @@
 ---
-name: apache-spark-best-practices
-description: Best practices for distributed data processing with Apache Spark — the DataFrame/Dataset and structured-streaming conventions. Use when writing, structuring, or reviewing Spark (PySpark or Scala) — covers dataframes, transformations, partitioning, joins, shuffle control, and streaming.
+name: "apache-spark-best-practices"
+description: "Best practices for distributed data processing with Apache Spark — the DataFrame/Dataset and structured-streaming conventions. Use when writing, structuring, or reviewing Spark (PySpark or Scala) — covers dataframes, transformations, partitioning, joins, shuffle control, and streaming."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-engineering"
+  - "apache"
+  - "spark"
+when_to_use: "Use when writing, structuring, or reviewing Spark (PySpark or Scala)."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../apache-trino/SKILL.md"
+  - "../apache-iceberg/SKILL.md"
+  - "../apache-airflow/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Apache Spark Best Practices
 
 Spark is a **distributed compute engine — DataFrames/RDD executed as lazy transformations against a cluster** (transfer: wide vs narrow dependencies). Practical Spark leans on **DataFrame/Dataset APIs (optimization, not RDD), narrow transformations, partitioning/skew management, broadcast joins for small tables, and shuffle minimization** — "lazy, partitioned, minimal-shuffle" describes the discipline; the Spark UI is your profiler.

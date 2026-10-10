@@ -1,8 +1,25 @@
 ---
-name: tensorflow-best-practices
-description: Best practices for deep learning with TensorFlow and Keras — the model-building and training conventions for Python. Use when writing, structuring, or reviewing TensorFlow/Keras — covers datasets, models, training, callbacks, TFDS/functional APIs, and production serving.
+name: "tensorflow-best-practices"
+description: "Best practices for deep learning with TensorFlow and Keras — the model-building and training conventions for Python. Use when writing, structuring, or reviewing TensorFlow/Keras — covers datasets, models, training, callbacks, TFDS/functional APIs, and production serving."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-science"
+  - "tensorflow"
+when_to_use: "Use when writing, structuring, or reviewing TensorFlow/Keras."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../pytorch/SKILL.md"
+  - "../lightgbm/SKILL.md"
+  - "../scikit-learn/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # TensorFlow Best Practices
 
 TensorFlow builds and trains **graphs of operations** — and Keras is the ergonomic front end (`Sequential`/`Functional`/`Subclassing`), with `tf.data` for input pipelines and `SavedModel` for serving. Practical TensorFlow leans on **`tf.data.Dataset` pipelines (batching/shuffling/prefetch), the Keras API with `Model.compile`/`fit` + `callbacks`, deterministic seeds, and checkpoints** — "datasets and callbacks are the discipline; the network is the variable".

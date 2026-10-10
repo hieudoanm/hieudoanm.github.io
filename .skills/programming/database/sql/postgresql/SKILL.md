@@ -1,8 +1,23 @@
 ---
-name: postgresql
-description: Best practices for designing, querying, and operating PostgreSQL. Use when writing schemas or SQL, optimizing slow queries, choosing indexes, or planning migrations — covers MVCC, transactions, indexing, EXPLAIN, and safe schema changes.
+name: "postgresql"
+description: "Best practices for designing, querying, and operating PostgreSQL. Use when writing schemas or SQL, optimizing slow queries, choosing indexes, or planning migrations — covers MVCC, transactions, indexing, EXPLAIN, and safe schema changes."
+tags:
+  - "programming"
+  - "database"
+  - "sql"
+  - "postgresql"
+when_to_use: "Use when writing schemas or SQL, optimizing slow queries, choosing indexes, or planning migrations."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../mysql/SKILL.md"
+  - "../cockroachdb/SKILL.md"
+  - "../sqlite/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # PostgreSQL Best Practices
 
 PostgreSQL is a production-grade relational database built on MVCC, a planner/executor, and rich data types. Best practice is treating it as a **mission-critical system**: database-enforced integrity over app-only checks, deliberate indexes, safe (additive) schema changes, and queries tuned against real row counts and workload.

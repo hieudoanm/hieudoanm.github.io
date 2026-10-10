@@ -1,8 +1,25 @@
 ---
-name: cobra-cli-design
-description: Best practices for building well-designed command-line tools with Cobra (Go). Use when creating, structuring, or reviewing a Cobra CLI app — covers command structure, flags, help text, output, and error conventions with suggested values.
+name: "cobra-cli-design"
+description: "Best practices for building well-designed command-line tools with Cobra (Go). Use when creating, structuring, or reviewing a Cobra CLI app — covers command structure, flags, help text, output, and error conventions with suggested values."
+tags:
+  - "programming"
+  - "language"
+  - "go"
+  - "cli"
+  - "cobra"
+  - "design"
+when_to_use: "Use when creating, structuring, or reviewing a Cobra CLI app."
+prerequisites:
+  - "Basic familiarity with Go and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../bubbletea/SKILL.md"
+  - "../../../rust/cli/clap/SKILL.md"
+  - "../../../typescript/cli/commander/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Cobra CLI Design Best Practices
 
 Cobra (spf13/cobra) gives you command trees, flag parsing, and help generation for free. Good CLI design is mostly about _conventions_ — following the shape users already expect from tools like `git`, `kubectl`, and `docker` — rather than fighting Cobra's defaults.

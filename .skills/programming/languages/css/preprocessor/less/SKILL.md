@@ -1,8 +1,24 @@
 ---
-name: less
-description: Less — CSS preprocessor with variables, nesting, mixins, and functions that compiles to plain CSS on Node.js and the browser.
+name: "less"
+description: "Less — CSS preprocessor with variables, nesting, mixins, and functions that compiles to plain CSS on Node.js and the browser."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "preprocessor"
+  - "less"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Less in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../sass/SKILL.md"
+  - "../../SKILL.md"
+  - "../../components/bootstrap/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Less is a **CSS preprocessor** that extends CSS with programming constructs — **variables, nesting, mixins, functions, and modularity** — compiling to plain, browser-ready CSS.
 
 ## 1. Installation and Setup

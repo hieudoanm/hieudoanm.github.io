@@ -1,8 +1,24 @@
 ---
-name: materializecss
-description: Materialize — CSS framework implementing Google Material Design with components, grid, and JavaScript behaviors.
+name: "materializecss"
+description: "Materialize — CSS framework implementing Google Material Design with components, grid, and JavaScript behaviors."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "components"
+  - "materializecss"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Materialize in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../bootstrap/SKILL.md"
+  - "../uikit/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Materialize is an **open-source CSS framework implementing Google Material Design** for the web — a **12-column grid, ready components, JavaScript widgets, and Sass variables** aligned with the (Material Design 2-era) design language.
 
 ## 1. Setup and Installation

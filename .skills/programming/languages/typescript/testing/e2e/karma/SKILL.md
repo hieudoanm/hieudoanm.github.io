@@ -1,8 +1,25 @@
 ---
-name: karma-best-practices
-description: Best practices for running browser tests with Karma — the test-runner conventions for Angular/Jasmine unit suites. Use when writing, structuring, or reviewing Karma — covers config, browsers, reporters, coverage, and CI.
+name: "karma-best-practices"
+description: "Best practices for running browser tests with Karma — the test-runner conventions for Angular/Jasmine unit suites. Use when writing, structuring, or reviewing Karma — covers config, browsers, reporters, coverage, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "end-to-end-testing"
+  - "karma"
+when_to_use: "Use when writing, structuring, or reviewing Karma."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../cypress/SKILL.md"
+  - "../playwright/SKILL.md"
+  - "../puppeteer/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Karma Best Practices
 
 Karma is a **test runner that executes unit tests in real browsers** — you write tests with Jasmine/Mocha, Karma launches Chrome/Firefox/headless, serves the bundle, and reports results. Practical Karma leans on **a minimal `karma.conf.js` (frameworks, browsers, bundling via webpack/vite/karma-esbuild), browser launchers matching CI (`ChromeHeadless`/custom launchers), and `karma-coverage` thresholds enforced as the CI gate.** Modern Angular CLIs bundle Karma by default; keep the config thin and purpose-driven.

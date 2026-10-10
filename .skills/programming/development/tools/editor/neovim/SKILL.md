@@ -1,11 +1,27 @@
 ---
-name: neovim-best-practices
-description: Best practices for Neovim — lazy plugin management with lazy.nvim, project config in Lua, LSP and formatting wired to project tools, telescope/fzf workflow, and a reproducible setup. Use when configuring or working in Neovim.
+name: "neovim-best-practices"
+description: "Best practices for Neovim — lazy plugin management with lazy.nvim, project config in Lua, LSP and formatting wired to project tools, telescope/fzf workflow, and a reproducible setup. Use when configuring or working in Neovim."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "editor"
+  - "neovim"
+when_to_use: "Use when configuring or working in Neovim."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../antigravity/SKILL.md"
+  - "../zed/SKILL.md"
+  - "../vscode/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Neovim
 
-Neovim is a terminal editor whose power comes from composition: a language server, a formatter, a fuzzy finder, and a plugin manager, assembled into a workflow that is fast, keyboard-driven, and entirely defined by a config file. Its cost is the same: **a personal configuration that is a large unreviewed codebase, and an editor that can be subtly broken in a way only a `:checkhealth` run will reveal**. Practical Neovim work is about **making the config reproducible and version-controlled, wiring diagnostics and formatting to the project's own tools, and keeping the plugin set small enough to reason about**. GUI-editor equivalents are in [vscode.md](./vscode.md) and [zed.md](./zed.md).
+Neovim is a terminal editor whose power comes from composition: a language server, a formatter, a fuzzy finder, and a plugin manager, assembled into a workflow that is fast, keyboard-driven, and entirely defined by a config file. Its cost is the same: **a personal configuration that is a large unreviewed codebase, and an editor that can be subtly broken in a way only a `:checkhealth` run will reveal**. Practical Neovim work is about **making the config reproducible and version-controlled, wiring diagnostics and formatting to the project's own tools, and keeping the plugin set small enough to reason about**. GUI-editor equivalents are in [vscode.md](../vscode/SKILL.md) and [zed.md](../zed/SKILL.md).
 
 _Verified against Neovim 0.10–0.11 era with lazy.nvim, `nvim-lspconfig`, and built-in LSP client. Plugin APIs move; check the current `:checkhealth` output after a jump._
 

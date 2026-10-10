@@ -1,8 +1,23 @@
 ---
-name: rocksdb
-description: RocksDB — high-performance embedded key-value store from Facebook, a pluggable LSM-based database used by many databases and applications.
+name: "rocksdb"
+description: "RocksDB — high-performance embedded key-value store from Facebook, a pluggable LSM-based database used by many databases and applications."
+tags:
+  - "programming"
+  - "database"
+  - "cache"
+  - "rocksdb"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting RocksDB in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../badger/SKILL.md"
+  - "../valkey/SKILL.md"
+  - "../leveldb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 RocksDB is a **high-performance embedded key-value store** developed by Facebook, built on the **LSM (log-structured merge) architecture** with pluggable components. It powers many production storage systems (MySQL/RocksDB, CockroachDB, TiKV, Kafka's RocksDB-based state stores, Rockset, TimescaleDB).
 
 ## 1. Core Concepts

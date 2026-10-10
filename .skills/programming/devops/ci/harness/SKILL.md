@@ -1,8 +1,23 @@
 ---
-name: ci-harness-best-practices
-description: Best practices for CI/CD harness configuration. Use when designing shared CI pipelines, orchestration, or multi-stage workflows across projects.
+name: "ci-harness-best-practices"
+description: "Best practices for CI/CD harness configuration. Use when designing shared CI pipelines, orchestration, or multi-stage workflows across projects."
+tags:
+  - "programming"
+  - "devops"
+  - "ci"
+  - "harness"
+when_to_use: "Use when designing shared CI pipelines, orchestration, or multi-stage workflows across projects."
+prerequisites:
+  - "Familiarity with the application and its deployment environment."
+  - "Access to the relevant pipeline, infrastructure, or runtime configuration."
+related_skills:
+  - "../circle-ci/SKILL.md"
+  - "../gitlab-ci/SKILL.md"
+  - "../github-actions/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # CI/CD Harness Best Practices
 
 A CI/CD harness provides shared pipeline logic, conventions, and abstractions used across multiple projects. It centralizes configuration, reduces duplication, and ensures consistency across teams.

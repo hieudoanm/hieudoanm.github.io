@@ -1,8 +1,23 @@
 ---
-name: rethinkdb
-description: RethinkDB — real-time JSON document database with ReQL query language and push-based change feeds forwarded to clients.
+name: "rethinkdb"
+description: "RethinkDB — real-time JSON document database with ReQL query language and push-based change feeds forwarded to clients."
+tags:
+  - "programming"
+  - "database"
+  - "document-database"
+  - "rethinkdb"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting RethinkDB in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../couchbase/SKILL.md"
+  - "../couchdb/SKILL.md"
+  - "../dynamodb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 RethinkDB is a **JSON document database that pushes real-time updates to applications**, using the expressive **ReQL** query language and a JS/JSON-friendly data model. Its superpower is **changefeeds** for live-updating UIs without polling.
 
 ## 1. Core Concepts

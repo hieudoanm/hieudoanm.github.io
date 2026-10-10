@@ -1,11 +1,27 @@
 ---
-name: ruby-mine-best-practices
-description: Best practices for working in RubyMine — Bundler as the dependency source, RVM/rbenv/mise interpreter selection, Rails plugins and generators, RSpec and Capybara, and the debugger. Use when setting up, debugging, or refactoring a Ruby or Rails project in RubyMine.
+name: "ruby-mine-best-practices"
+description: "Best practices for working in RubyMine — Bundler as the dependency source, RVM/rbenv/mise interpreter selection, Rails plugins and generators, RSpec and Capybara, and the debugger. Use when setting up, debugging, or refactoring a Ruby or Rails project in RubyMine."
+tags:
+  - "programming"
+  - "language"
+  - "ruby"
+  - "ide"
+  - "mine"
+when_to_use: "Use when setting up, debugging, or refactoring a Ruby or Rails project in RubyMine."
+prerequisites:
+  - "Basic familiarity with Ruby and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../../typescript/ide/web-storm/SKILL.md"
+  - "../../../php/ide/php-storm/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # RubyMine
 
-RubyMine is JetBrains' Ruby and Rails IDE, with a mature Rails plugin set: navigation for routes, models, and associations, Rails-aware generators, and a debugger that handles Ruby idioms well. Its main risk is **the IDE's Ruby environment drifting from the one Bundler installs**, which produces a project that behaves differently in the editor than in the terminal. Practical RubyMine work is about **letting Bundler own the gems, selecting the interpreter through a version manager, and keeping the Rails plugin reading the same app it will deploy**. Language rules live in [ruby.md](../ruby.md); Rails conventions live in [rails.md](../backend/rails.md).
+RubyMine is JetBrains' Ruby and Rails IDE, with a mature Rails plugin set: navigation for routes, models, and associations, Rails-aware generators, and a debugger that handles Ruby idioms well. Its main risk is **the IDE's Ruby environment drifting from the one Bundler installs**, which produces a project that behaves differently in the editor than in the terminal. Practical RubyMine work is about **letting Bundler own the gems, selecting the interpreter through a version manager, and keeping the Rails plugin reading the same app it will deploy**. Language rules live in [ruby.md](../../SKILL.md); Rails conventions live in [rails.md](../../backend/rails/SKILL.md).
 
 _Verified against RubyMine 2026.2.3 (September 2026) with Ruby 3.4 and Rails 8.x. Bundler 2.x, RSpec 3.x._
 

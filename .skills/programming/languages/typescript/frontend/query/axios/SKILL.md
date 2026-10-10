@@ -1,8 +1,25 @@
 ---
-name: axios-best-practices
-description: Best practices for HTTP requests with Axios — the promise-based HTTP client conventions for JS/TS apps. Use when writing, structuring, or reviewing Axios — covers instances, interceptors, error handling, typing, and testing.
+name: "axios-best-practices"
+description: "Best practices for HTTP requests with Axios — the promise-based HTTP client conventions for JS/TS apps. Use when writing, structuring, or reviewing Axios — covers instances, interceptors, error handling, typing, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "query"
+  - "axios"
+when_to_use: "Use when writing, structuring, or reviewing Axios."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../apollo-client/SKILL.md"
+  - "../tanstack-query/SKILL.md"
+  - "../../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Axios Best Practices
 
 Axios is the **promise-based HTTP client for browser + Node** — `axios.create(instance)` with interceptors, typed from TS generics. Practical Axios leans on **a single stamped `instance` per API (baseURL, timeout), interceptors for auth/error shaping only (not business logic), typed generic contracts, and defensive response validation** — the client is a boundary; interceptors cross it once.

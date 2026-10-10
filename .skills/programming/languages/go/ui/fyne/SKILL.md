@@ -1,8 +1,25 @@
 ---
-name: fyne-design
-description: Best practices for building visually polished desktop GUIs with Fyne (Go). Use when creating, styling, or reviewing a Fyne app — covers theming, color, spacing, typography, and widget patterns with suggested values.
+name: "fyne-design"
+description: "Best practices for building visually polished desktop GUIs with Fyne (Go). Use when creating, styling, or reviewing a Fyne app — covers theming, color, spacing, typography, and widget patterns with suggested values."
+tags:
+  - "programming"
+  - "language"
+  - "go"
+  - "ui"
+  - "fyne"
+  - "design"
+when_to_use: "Use when creating, styling, or reviewing a Fyne app."
+prerequisites:
+  - "Basic familiarity with Go and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../cli/bubbletea/SKILL.md"
+  - "../../../rust/cli/ratatui/SKILL.md"
+  - "../../../rust/ui/slint/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Fyne Design Best Practices
 
 A practical reference for making Fyne (Go GUI toolkit) apps look polished instead of default/plain. Includes concrete suggested values you can drop straight into code.

@@ -1,8 +1,25 @@
 ---
-name: typeorm-best-practices
-description: Best practices for using TypeORM — the TypeScript ORM conventions for relational databases. Use when writing, structuring, or reviewing TypeORM — covers datasource config, entities, relations, querying, migrations, performance, and testing.
+name: "typeorm-best-practices"
+description: "Best practices for using TypeORM — the TypeScript ORM conventions for relational databases. Use when writing, structuring, or reviewing TypeORM — covers datasource config, entities, relations, querying, migrations, performance, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "orm"
+  - "type"
+  - "typeorm"
+when_to_use: "Use when writing, structuring, or reviewing TypeORM."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../mikro-orm/SKILL.md"
+  - "../sequelize/SKILL.md"
+  - "../drizzle/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # TypeORM Best Practices
 
 TypeORM is a TypeScript ORM for relational databases that models tables as **classes decorated with metadata** (`@Entity`, `@Column`). Practical TypeORM leans on **a single `DataSource` created once, entities that are both the schema and the type shape, explicit relation loading (`relations:`/`FindOptions`), and migrations as the only schema evolution path**. The Repository/EntityManager boundary keeps queries typed; the query builder is there for the genuinely dynamic cases.

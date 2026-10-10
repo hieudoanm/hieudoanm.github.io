@@ -1,11 +1,28 @@
 ---
-name: phpstorm-best-practices
-description: Best practices for working in PhpStorm — Composer as the dependency source, the Laravel and Symfony plugins, Xdebug/PhpStorm profiler, code style, and JetBrains shared conventions. Use when setting up, debugging, or profiling a PHP project in PhpStorm.
+name: "phpstorm-best-practices"
+description: "Best practices for working in PhpStorm — Composer as the dependency source, the Laravel and Symfony plugins, Xdebug/PhpStorm profiler, code style, and JetBrains shared conventions. Use when setting up, debugging, or profiling a PHP project in PhpStorm."
+tags:
+  - "programming"
+  - "language"
+  - "php"
+  - "ide"
+  - "storm"
+  - "phpstorm"
+when_to_use: "Use when setting up, debugging, or profiling a PHP project in PhpStorm."
+prerequisites:
+  - "Basic familiarity with Php and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../../c/ide/clion/SKILL.md"
+  - "../../../python/ide/pycharm/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # PhpStorm
 
-PhpStorm is JetBrains' PHP IDE, and by a wide margin the strongest one: complete PHP 8.x support, first-class Composer integration, and the deepest framework plugins in the JetBrains catalogue — Laravel, Symfony, PHPUnit, and Rector among them. Its main risk is **IDE-side tooling quietly becoming a second, conflicting build system**. Practical PhpStorm work is about **letting Composer own the dependencies, keeping the code style the same one the repo enforces, and using the debugger and profiler the way a profiler is meant to be used**. Language rules live in [php.md](../php.md).
+PhpStorm is JetBrains' PHP IDE, and by a wide margin the strongest one: complete PHP 8.x support, first-class Composer integration, and the deepest framework plugins in the JetBrains catalogue — Laravel, Symfony, PHPUnit, and Rector among them. Its main risk is **IDE-side tooling quietly becoming a second, conflicting build system**. Practical PhpStorm work is about **letting Composer own the dependencies, keeping the code style the same one the repo enforces, and using the debugger and profiler the way a profiler is meant to be used**. Language rules live in [php.md](../../SKILL.md).
 
 _Verified against PhpStorm 2026.2.3 (September 2026) with PHP 8.4 and Composer 2. Laravel and Symfony plugin support tracks each framework's current major._
 

@@ -1,8 +1,25 @@
 ---
-name: artcraft-design
-description: Design system and page-building guide for the ArtCraft (getartcraft.com) look: near-black dark UI, editorial numbered sections, mono-style labels, confident short copy aimed at artists. Use whenever the user asks to build, mock up, restyle or write copy for a page, landing page, app screen, deck or component "in the ArtCraft style", "like getartcraft.com", or for a Craft app (PhotoCraft, VectorCraft, FilmCraft, etc.), even if they only say "match the ArtCraft site".
+name: "artcraft-design"
+description: "Design system and page-building guide for the ArtCraft (getartcraft.com) look: near-black dark UI, editorial numbered sections, mono-style labels, confident short copy aimed at artists. Use whenever the user asks to build, mock up, restyle or write copy for a page, landing page, app screen, deck or component \"in the ArtCraft style\", \"like getartcraft.com\", or for a Craft app (PhotoCraft, VectorCraft, FilmCraft, etc.), even if they only say \"match the ArtCraft site\"."
+tags:
+  - "programming"
+  - "design"
+  - "brand"
+  - "getartcraft"
+  - "com"
+  - "artcraft"
+when_to_use: "Use when creating or reviewing an interface that should follow ArtCraft design system design guidance."
+prerequisites:
+  - "A clear product or design goal."
+  - "Familiarity with the target audience and existing interface constraints."
+related_skills:
+  - "../claude.com/SKILL.md"
+  - "../opencode.ai/SKILL.md"
+  - "../notion.com/SKILL.md"
+avoid_when:
+  - "When the brief does not call for this design system or philosophy; follow the project’s existing design language instead."
+status: "active"
 ---
-
 # ArtCraft design system
 
 A skill for reproducing the visual and verbal style of getartcraft.com, the marketing site for ArtCraft, an open-source desktop and web studio for controllable AI image and video.

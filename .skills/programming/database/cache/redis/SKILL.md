@@ -1,8 +1,23 @@
 ---
-name: redis
-description: Best practices for using Redis as a data structure server. Use when designing caching strategies, modeling keys/data structures, building rate limits, queues, or pub/sub, or debugging memory/performance — covers structures, TTLs, eviction, persistence, and operational safety.
+name: "redis"
+description: "Best practices for using Redis as a data structure server. Use when designing caching strategies, modeling keys/data structures, building rate limits, queues, or pub/sub, or debugging memory/performance — covers structures, TTLs, eviction, persistence, and operational safety."
+tags:
+  - "programming"
+  - "database"
+  - "cache"
+  - "redis"
+when_to_use: "Use when designing caching strategies, modeling keys/data structures, building rate limits, queues, or pub/sub, or debugging memory/performance."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../memcached/SKILL.md"
+  - "../valkey/SKILL.md"
+  - "../badger/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Redis Best Practices
 
 Redis is a **data structure server** — Strings, Hashes, Lists, Sets, ZSets, Streams — not a magical cache. Best practice is deliberate usage: namespaced keys with clear ownership, explicit TTLs, bounded structures, correct structure per access pattern, and treating Redis as **ephemeral unless persistence is explicitly required**.

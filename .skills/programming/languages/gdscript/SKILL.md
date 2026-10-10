@@ -1,8 +1,22 @@
 ---
-name: gdscript-best-practices
-description: Best practices for writing games in GDScript — the Godot game-development language conventions. Use when writing, structuring, or reviewing GDScript — covers class structure, signals, exports, nodes, tree (_ready/_process/_physics_process), typing, and performance.
+name: "gdscript-best-practices"
+description: "Best practices for writing games in GDScript — the Godot game-development language conventions. Use when writing, structuring, or reviewing GDScript — covers class structure, signals, exports, nodes, tree (_ready/_process/_physics_process), typing, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "gdscript"
+when_to_use: "Use when writing, structuring, or reviewing GDScript."
+prerequisites:
+  - "Basic familiarity with Gdscript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "game/godot/SKILL.md"
+  - "../csharp/game/unity/SKILL.md"
+  - "../typescript/game/cocos-creator/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # GDScript Best Practices
 
 GDScript is **Godot's primary scripting language** — Python-flavored syntax with static typing, first-class `signal`s, and a scene-tree model where nodes communicate via `@onready`, `export`, and signals. Practical GDScript leans on **strong typing (`: int`, `-> void`), signal-based decoupling over direct node pokes, exported vars for tweakable parameters, and correct loop hooks (`_ready`/`_process`/`_physics_process`)** — the tree, not globals, is the composition model.

@@ -1,8 +1,22 @@
 ---
-name: makefile-best-practices
-description: Best practices for writing maintainable, idiomatic Makefiles. Use when creating or reviewing Makefiles for build, test, and deployment automation.
+name: "makefile-best-practices"
+description: "Best practices for writing maintainable, idiomatic Makefiles. Use when creating or reviewing Makefiles for build, test, and deployment automation."
+tags:
+  - "programming"
+  - "devops"
+  - "makefile"
+when_to_use: "Use when creating or reviewing Makefiles for build, test, and deployment automation."
+prerequisites:
+  - "Familiarity with the application and its deployment environment."
+  - "Access to the relevant pipeline, infrastructure, or runtime configuration."
+related_skills:
+  - "../docker/SKILL.md"
+  - "../kubernetes/SKILL.md"
+  - "../ci/travis-ci/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Makefile Best Practices
 
 Make is a build automation tool that uses a syntax of tab-indented recipes. Well-written Makefiles are declarative, idempotent, and easy to extend.

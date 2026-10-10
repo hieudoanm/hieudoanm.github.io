@@ -1,8 +1,23 @@
 ---
-name: square
-description: Best practices for integrating Square payments, including cards, subscriptions, and invoicing. Use when building checkout, commerce APIs, or processing online sales — covers API access tokens, webhooks, and secure payment handling.
+name: "square"
+description: "Best practices for integrating Square payments, including cards, subscriptions, and invoicing. Use when building checkout, commerce APIs, or processing online sales — covers API access tokens, webhooks, and secure payment handling."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "square"
+when_to_use: "Use when building checkout, commerce APIs, or processing online sales."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../stripe/SKILL.md"
+  - "../paypal/SKILL.md"
+  - "../dodopayments/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Square Best Practices
 
 Square provides commerce APIs (Payments, Subscriptions, Invoicing, Catalog). Best practice is using **access tokens scoped to a seller**, the **Payments API** with idempotency, hosted/fast checkout to avoid raw card handling, and **webhooks** as the source of payment truth.

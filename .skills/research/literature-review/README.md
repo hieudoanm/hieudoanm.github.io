@@ -56,15 +56,15 @@ Conclusion
 literature-review/
 ├── SKILL.md
 ├── README.md
-└── references/
-    ├── review-types.md
-    ├── synthesis.md
-    ├── critical-appraisal.md
-    ├── search-strategy.md
-    └── examples/
-        ├── neuroscience.md
-        ├── machine-learning.md
-        └── psychology.md
+├── references/
+│   ├── review-types.md
+│   ├── synthesis.md
+│   ├── critical-appraisal.md
+│   └── search-strategy.md
+└── examples/
+    ├── neuroscience.md
+    ├── machine-learning.md
+    └── psychology.md
 ```
 
 ## Related Skills
@@ -133,3 +133,12 @@ A strong literature review should allow a reader to understand:
 - Important limitations.
 - Specific research gaps.
 - Logical directions for future research.
+
+## References
+
+- [Reference materials](references/)
+- [Examples](examples)
+
+## Assets
+
+- [Supporting assets (4)](assets)

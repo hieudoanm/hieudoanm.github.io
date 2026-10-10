@@ -1,8 +1,24 @@
 ---
-name: notion-design
-description: Design system for Notion, covering both the notion.com marketing site (white canvas, strong blue CTA, pastel tint cards, dark campaign bands, big bold Inter-style headlines, product mockups) and the Notion app UI (warm-ink text on white or near-black, translucent hover fills, hairline alpha borders, tiny radii, emoji page icons, sidebar tree, block editor, callouts, toggles, to-dos, database tables, slash menu, popovers). Use whenever the user asks to build, mock up or restyle a landing page, docs/wiki page, knowledge base, notes app, workspace, database table view, sidebar layout or components "like Notion", "in the Notion style", "notion-like editor", or "clean minimal workspace app", even if they never name Notion.
+name: "notion-design"
+description: "Design system for Notion, covering both the notion.com marketing site (white canvas, strong blue CTA, pastel tint cards, dark campaign bands, big bold Inter-style headlines, product mockups) and the Notion app UI (warm-ink text on white or near-black, translucent hover fills, hairline alpha borders, tiny radii, emoji page icons, sidebar tree, block editor, callouts, toggles, to-dos, database tables, slash menu, popovers). Use whenever the user asks to build, mock up or restyle a landing page, docs/wiki page, knowledge base, notes app, workspace, database table view, sidebar layout or components \"like Notion\", \"in the Notion style\", \"notion-like editor\", or \"clean minimal workspace app\", even if they never name Notion."
+tags:
+  - "programming"
+  - "design"
+  - "brand"
+  - "notion"
+  - "com"
+when_to_use: "Use when creating or reviewing an interface that should follow Notion design system design guidance."
+prerequisites:
+  - "A clear product or design goal."
+  - "Familiarity with the target audience and existing interface constraints."
+related_skills:
+  - "../claude.com/SKILL.md"
+  - "../opencode.ai/SKILL.md"
+  - "../getartcraft.com/SKILL.md"
+avoid_when:
+  - "When the brief does not call for this design system or philosophy; follow the project’s existing design language instead."
+status: "active"
 ---
-
 # Notion design system
 
 Two related but different surfaces. Pick the one that matches the request:
@@ -72,11 +88,11 @@ Marketing: confident, benefit-led, short declaratives with action verbs and soci
 1. Copy `references/tokens.css`; use the marketing `--m-*` variables for the site and the `--app-*` variables (scoped to `[data-app]`) for app UI.
 2. Start from the matching template in `assets/` and replace content.
 3. Read `references/marketing-components.md` or `references/app-components.md` for component recipes.
-4. Before finishing, run the Design rules checklist and tell the user which values were proposed rather than verified, and that fonts were substituted.
+4. Before finishing, run the design rules checklist and tell the user which values are proposed rather than verified, and that fonts were substituted.
 
 ## Files
 
 - `references/tokens.css`: marketing and app tokens (light/dark), block color palette, base styles.
 - `references/marketing-components.md`, `references/app-components.md`: component recipes.
-- `assets/marketing-template.html`: landing page template.
-- `assets/app-template.html`: sidebar + page + blocks + database + slash menu template.
+- `assets/marketing-template.html`: accessible landing-page scaffold.
+- `assets/app-template.html`: sidebar, page, blocks, database, and slash-menu scaffold.

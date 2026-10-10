@@ -1,8 +1,26 @@
 ---
-name: auth-js-best-practices
-description: Best practices for authentication in JS apps with Auth.js (NextAuth) — the auth conventions for React/Next framework apps. Use when writing, structuring, or reviewing Auth.js — covers providers, session/JWT strategy, callbacks, database sessions, and security hygiene.
+name: "auth-js-best-practices"
+description: "Best practices for authentication in JS apps with Auth.js (NextAuth) — the auth conventions for React/Next framework apps. Use when writing, structuring, or reviewing Auth.js — covers providers, session/JWT strategy, callbacks, database sessions, and security hygiene."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "authentication"
+  - "auth"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing Auth.js."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../better-auth/SKILL.md"
+  - "../../../SKILL.md"
+  - "../../query/apollo-client/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Auth.js Best Practices
 
 Auth.js (NextAuth) is the **authentication library for Next.js/React apps** — provider-agnostic (`Credentials`, OAuth/OIDC, Email), with **session strategy (`jwt`/`database`), `callbacks`, and `adapters`** as its knobs. Practical Auth.js leans on **a single, typed `auth` config with providers declared for the app's real flows, a deliberate session strategy (JWT for stateless/edge, DB for long-lived/roles), callbacks that attach identity minimally (never secrets), and route/edge protection at the layout** — the library handles the artifacts; you own the trust boundary.

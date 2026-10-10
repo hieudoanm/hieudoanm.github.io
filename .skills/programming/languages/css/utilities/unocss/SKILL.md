@@ -1,8 +1,24 @@
 ---
-name: unocss
-description: UnoCSS — instant, atomic CSS engine with on-demand utility generation, preset system, and JavaScript-free config file.
+name: "unocss"
+description: "UnoCSS — instant, atomic CSS engine with on-demand utility generation, preset system, and JavaScript-free config file."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "utilities"
+  - "unocss"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting UnoCSS in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../tailwindcss/SKILL.md"
+  - "../../components/bootstrap/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 UnoCSS is an **instant, on-demand atomic CSS engine** (by Anthony Fu) that generates **utility classes as you type**, with an extremely efficient **preset + variant system** and no runtime JS. It powers Vite/Vue/Nuxt projects with near-zero CSS output initially.
 
 ## 1. Core Ideas

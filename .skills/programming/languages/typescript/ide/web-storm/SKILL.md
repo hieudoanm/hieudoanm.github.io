@@ -1,11 +1,29 @@
 ---
-name: webstorm-best-practices
-description: Best practices for working in WebStorm — TypeScript project config as the source of truth, the Node interpreter and package manager, React/Vue/Angular framework support, the JavaScript debugger and CPU profiler, and TypeScript 7. Use when setting up, debugging, or refactoring a TypeScript or JavaScript web project in WebStorm.
+name: "webstorm-best-practices"
+description: "Best practices for working in WebStorm — TypeScript project config as the source of truth, the Node interpreter and package manager, React/Vue/Angular framework support, the JavaScript debugger and CPU profiler, and TypeScript 7. Use when setting up, debugging, or refactoring a TypeScript or JavaScript web project in WebStorm."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "ide"
+  - "web"
+  - "storm"
+  - "webstorm"
+when_to_use: "Use when setting up, debugging, or refactoring a TypeScript or JavaScript web project in WebStorm."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../package/manager/volta/SKILL.md"
+  - "../../tools/eslint/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # WebStorm
 
-WebStorm is JetBrains' JavaScript and TypeScript IDE, and the strongest one available: a Node debugger and CPU profiler built in, framework support for React, Vue, Angular, and Next.js that understands routing and data flow, and refactorings that follow modules across the project. Its main risk is **the IDE's TypeScript service drifting from the `tsconfig` the build actually uses**, which produces a confidently wrong check. Practical WebStorm work is about **letting `tsconfig.json` own type checking, keeping the interpreter and package manager aligned with the repo, and using the debugger and profiler instead of console logs**. Language rules live in [typescript.md](../typescript.md) and [javascript.md](../javascript.md); Svelte and Nuxt work is covered in [svelte.md](../frontend/frameworks/web/svelte.md) and [astro.md](../frontend/frameworks/web/astro.md).
+WebStorm is JetBrains' JavaScript and TypeScript IDE, and the strongest one available: a Node debugger and CPU profiler built in, framework support for React, Vue, Angular, and Next.js that understands routing and data flow, and refactorings that follow modules across the project. Its main risk is **the IDE's TypeScript service drifting from the `tsconfig` the build actually uses**, which produces a confidently wrong check. Practical WebStorm work is about **letting `tsconfig.json` own type checking, keeping the interpreter and package manager aligned with the repo, and using the debugger and profiler instead of console logs**. Language rules live in [typescript.md](../../SKILL.md) and [javascript.md](../../javascript/SKILL.md); Svelte and Nuxt work is covered in [svelte.md](../../frontend/frameworks/web/svelte/SKILL.md) and [astro.md](../../frontend/frameworks/web/astro/SKILL.md).
 
 _Verified against WebStorm 2026.2.3 (September 2026) with TypeScript 7 support, Node LTS, and pnpm. React 19 support is current via the React Buddy plugin._
 

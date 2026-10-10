@@ -1,11 +1,27 @@
 ---
-name: eslint-best-practices
-description: Best practices for linting JavaScript and TypeScript with ESLint — flat config, typed linting, rule strategy, plugin selection, monorepo overrides, and CI gating. Use when setting up, structuring, or debugging an ESLint configuration.
+name: "eslint-best-practices"
+description: "Best practices for linting JavaScript and TypeScript with ESLint — flat config, typed linting, rule strategy, plugin selection, monorepo overrides, and CI gating. Use when setting up, structuring, or debugging an ESLint configuration."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "developer-tools"
+  - "eslint"
+when_to_use: "Use when setting up, structuring, or debugging an ESLint configuration."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../prettier/SKILL.md"
+  - "../../SKILL.md"
+  - "../husky/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # ESLint
 
-ESLint is the de facto linter for JavaScript and TypeScript. Its value is not style enforcement — that is [prettier.md](./prettier.md)'s job — but **catching whole classes of bug** (unhandled promises, unsafe `any`, broken hook rules, shadowed globals) statically. Practical ESLint work leans on **flat config with `defineConfig`, type-aware linting via `projectService`, and a deliberately small rule set** — while language-level type guidance lives in [typescript.md](../typescript.md).
+ESLint is the de facto linter for JavaScript and TypeScript. Its value is not style enforcement — that is [prettier.md](../prettier/SKILL.md)'s job — but **catching whole classes of bug** (unhandled promises, unsafe `any`, broken hook rules, shadowed globals) statically. Practical ESLint work leans on **flat config with `defineConfig`, type-aware linting via `projectService`, and a deliberately small rule set** — while language-level type guidance lives in [typescript.md](../../SKILL.md).
 
 _Verified against ESLint 10.11, typescript-eslint 8.71._
 
@@ -69,9 +85,9 @@ export default defineConfig(
 - **`no-floating-promises`** is the single highest-value rule in the ecosystem: it finds every `fetch()` or async call whose rejection is silently discarded, which is how unhandled rejections reach production.
 - **Add `no-misused-promises`** to catch promises passed where a synchronous callback is expected — the classic source of state updates firing after unmount.
 - **`await-thenable` and `no-unnecessary-type-assertion`** remove dead code paths that hide real errors.
-- **The `no-unsafe-*` family** (`no-unsafe-assignment`, `no-unsafe-member-access`, `no-unsafe-argument`, `no-unsafe-call`, `no-unsafe-return`) is the automated defence against `any` leaking in from an untyped boundary. This is the lint-level half of what [typescript.md](../typescript.md) covers at the type level.
+- **The `no-unsafe-*` family** (`no-unsafe-assignment`, `no-unsafe-member-access`, `no-unsafe-argument`, `no-unsafe-call`, `no-unsafe-return`) is the automated defence against `any` leaking in from an untyped boundary. This is the lint-level half of what [typescript.md](../../SKILL.md) covers at the type level.
 - **`restrict-template-expressions`** stops raw objects being interpolated into strings as `[object Object]`.
-- **Keep `no-explicit-any` on**, and prefer `unknown` at boundaries. See [typescript.md](../typescript.md) §8 for the validation side.
+- **Keep `no-explicit-any` on**, and prefer `unknown` at boundaries. See [typescript.md](../../SKILL.md) §8 for the validation side.
 - **Typed linting costs time.** Measure it; if it is the bottleneck, add a fast non-typed pass on pre-commit and reserve typed linting for CI.
 
 ---

@@ -1,8 +1,24 @@
 ---
-name: rocket-best-practices
-description: Best practices for building Rust web services with Rocket — the macro-driven, developer-friendly framework conventions. Use when writing, structuring, or reviewing Rocket — covers launching, routes, request guards, state, URI, error handling, and testing.
+name: "rocket-best-practices"
+description: "Best practices for building Rust web services with Rocket — the macro-driven, developer-friendly framework conventions. Use when writing, structuring, or reviewing Rocket — covers launching, routes, request guards, state, URI, error handling, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "rust"
+  - "backend"
+  - "rocket"
+when_to_use: "Use when writing, structuring, or reviewing Rocket."
+prerequisites:
+  - "Basic familiarity with Rust and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../actix/SKILL.md"
+  - "../gotham/SKILL.md"
+  - "../warp/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Rocket Best Practices
 
 Rocket is a **macro-driven Rust web framework** where routes are `#[get]`/`#[post]`-attributed functions and **argument types are extractors (Request Guards, `Query`, `Path`)** defined by `FromRequest`. Practical Rocket leans on **typed route signatures, `State` for shared context, `serde` outcomes on `Json<T>`**, and **`#[catch]` handlers for uniform error responses**. Rocket prizes type-safety and developer ergonomics — your compile errors ARE the API contract.

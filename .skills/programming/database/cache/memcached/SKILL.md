@@ -1,8 +1,23 @@
 ---
-name: memcached
-description: Best practices for using Memcached as a simple, non-persistent cache. Use when designing cache-aside strategies, choosing keys/TTLs, tuning slab/memory usage, or deciding between Memcached and Redis — covers eviction, consistent hashing, and cache-loss-tolerant design.
+name: "memcached"
+description: "Best practices for using Memcached as a simple, non-persistent cache. Use when designing cache-aside strategies, choosing keys/TTLs, tuning slab/memory usage, or deciding between Memcached and Redis — covers eviction, consistent hashing, and cache-loss-tolerant design."
+tags:
+  - "programming"
+  - "database"
+  - "cache"
+  - "memcached"
+when_to_use: "Use when designing cache-aside strategies, choosing keys/TTLs, tuning slab/memory usage, or deciding between Memcached and Redis."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../redis/SKILL.md"
+  - "../valkey/SKILL.md"
+  - "../leveldb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Memcached Best Practices
 
 Memcached is a **distributed, in-memory, non-persistent key-value cache** — values are opaque blobs, scaling is client-managed, and data loss is acceptable by design. Best practice is **boring, stable designs**: cache-aside for hot recomputable data, short deterministic keys, small values, explicit TTLs, and graceful handling of misses and evictions.

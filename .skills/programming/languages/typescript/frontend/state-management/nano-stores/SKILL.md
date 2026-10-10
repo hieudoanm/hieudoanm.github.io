@@ -1,8 +1,27 @@
 ---
-name: nano-stores-best-practices
-description: Best practices for state management with Nano Stores — the tiny atomic-store conventions for JavaScript frameworks. Use when writing, structuring, or reviewing Nano Stores — covers atoms/maps/stores, reactivity, derived values, framework bindings, and testing.
+name: "nano-stores-best-practices"
+description: "Best practices for state management with Nano Stores — the tiny atomic-store conventions for JavaScript frameworks. Use when writing, structuring, or reviewing Nano Stores — covers atoms/maps/stores, reactivity, derived values, framework bindings, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "state"
+  - "management"
+  - "nano"
+  - "stores"
+when_to_use: "Use when writing, structuring, or reviewing Nano Stores."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../jotai/SKILL.md"
+  - "../zustand/SKILL.md"
+  - "../redux/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Nano Stores Best Practices
 
 Nano Stores is a **tiny (sub-1KB) atomic store library** — `nanostores` gives `atom`, `map`, `computed`, and `action` primitives with a subscription model that works across React, Preact, Svelte, and Vue via bindings (`@nanostores/react`). Practical Nano Stores leans on **small named stores, `computed` for derived values, `action` for mutations with validation, and `useStore`/`useStore`-like bindings in components** — framework-agnostic state, framework-bound UI.

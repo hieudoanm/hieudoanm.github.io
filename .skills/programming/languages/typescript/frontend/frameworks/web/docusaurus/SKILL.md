@@ -1,8 +1,25 @@
 ---
-name: docusaurus-best-practices
-description: Best practices for Docusaurus documentation sites. Use when creating, structuring, or maintaining a Docusaurus site for project documentation.
+name: "docusaurus-best-practices"
+description: "Best practices for Docusaurus documentation sites. Use when creating, structuring, or maintaining a Docusaurus site for project documentation."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "web"
+  - "docusaurus"
+when_to_use: "Use when creating, structuring, or maintaining a Docusaurus site for project documentation."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../vuepress/SKILL.md"
+  - "../../../../SKILL.md"
+  - "../angular/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Docusaurus Best Practices
 
 Docusaurus is a modern static website generator focused on documentation. Following conventions ensures a consistent, maintainable, and searchable docs experience.

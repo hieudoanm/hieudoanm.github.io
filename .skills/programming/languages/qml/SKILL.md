@@ -1,8 +1,22 @@
 ---
-name: qml-best-practices
-description: Best practices for QML (Qt Modeling Language) development. Use when writing, structuring, or reviewing QML applications and components.
+name: "qml-best-practices"
+description: "Best practices for QML (Qt Modeling Language) development. Use when writing, structuring, or reviewing QML applications and components."
+tags:
+  - "programming"
+  - "language"
+  - "qml"
+when_to_use: "Use when writing, structuring, or reviewing QML applications and components."
+prerequisites:
+  - "Basic familiarity with Qml and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "ui/qt/SKILL.md"
+  - "../csharp/dotnet/SKILL.md"
+  - "../gdscript/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # QML Best Practices
 
 QML is a declarative language for designing user interface-centric applications. Following conventions ensures maintainable, performant, and scalable UI code.

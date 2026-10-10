@@ -1,8 +1,23 @@
 ---
-name: klarna
-description: Best practices for integrating Klarna payment and Pay Later services. Use when offering Klarna checkout, affecting order flows with a payment SDK/v2 API, or handling webhooks — covers session creation, authorization, and capture (order management).
+name: "klarna"
+description: "Best practices for integrating Klarna payment and Pay Later services. Use when offering Klarna checkout, affecting order flows with a payment SDK/v2 API, or handling webhooks — covers session creation, authorization, and capture (order management)."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "klarna"
+when_to_use: "Use when offering Klarna checkout, affecting order flows with a payment SDK/v2 API, or handling webhooks."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../paypal/SKILL.md"
+  - "../square/SKILL.md"
+  - "../paddle/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Klarna Best Practices
 
 Klarna offers **Checkout (v2), Payment (v3), and Pay Later** products. Best practice is session-first integration: create a **Checkout Session** server-side, the client renders the iframe, your server **captures/holds the order** after authorization, and **webhooks** tell you the final state.

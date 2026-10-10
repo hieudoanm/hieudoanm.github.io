@@ -1,8 +1,26 @@
 ---
-name: apache-iceberg-best-practices
-description: Best practices for open table formats with Apache Iceberg — the table-format conventions for data lakehouse infrastructure. Use when writing, structuring, or reviewing Iceberg tables — covers table creation, partitioning, snapshots, time travel, compaction, and maintenance.
+name: "apache-iceberg-best-practices"
+description: "Best practices for open table formats with Apache Iceberg — the table-format conventions for data lakehouse infrastructure. Use when writing, structuring, or reviewing Iceberg tables — covers table creation, partitioning, snapshots, time travel, compaction, and maintenance."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-engineering"
+  - "apache"
+  - "iceberg"
+when_to_use: "Use when writing, structuring, or reviewing Iceberg tables."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../apache-spark/SKILL.md"
+  - "../apache-airflow/SKILL.md"
+  - "../apache-trino/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Apache Iceberg Best Practices
 
 Iceberg is an **open table format for data lakes — ACID semantics, schema/propagation, snapshots of table state, and time travel on object storage.** Practical Iceberg leans on **partitioning designed around your access patterns (not imitation of old partitions), `PartitionSpec` set at creation (evolve-aware), snapshots as the version primitive (`AS OF` queries/expire), and routine maintenance (`optimize`/`expire_snapshots`/`remove_orphan_files`)** — governance and query speed are joined at the hip.

@@ -1,8 +1,26 @@
 ---
-name: sqlalchemy-best-practices
-description: Best practices for using SQLAlchemy — the ORM conventions for Python relational database access. Use when writing, structuring, or reviewing SQLAlchemy — covers engine/session lifecycle, ORM model design, queries, migrations, performance, and testing.
+name: "sqlalchemy-best-practices"
+description: "Best practices for using SQLAlchemy — the ORM conventions for Python relational database access. Use when writing, structuring, or reviewing SQLAlchemy — covers engine/session lifecycle, ORM model design, queries, migrations, performance, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "orm"
+  - "sql"
+  - "alchemy"
+  - "sqlalchemy"
+when_to_use: "Use when writing, structuring, or reviewing SQLAlchemy."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../data/engineer/apache-trino/SKILL.md"
+  - "../../../typescript/orm/drizzle/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # SQLAlchemy Best Practices
 
 SQLAlchemy is Python's relational toolkit: a **Core** (SQL expression language) and an **ORM** on top. Practical SQLAlchemy leans on **short-lived sessions with a transaction boundary (`Session`/`sessionmaker` + context manager), typed models with explicit relationships, and explicit queries (`select()`) over magic strings**. It wraps SQL rather than hiding it — a query you can't explain in SQL is a query you shouldn't ship with magic.

@@ -1,8 +1,23 @@
 ---
-name: gitlab-ci-best-practices
-description: Best practices for GitLab CI/CD configuration. Use when creating, structuring, or reviewing GitLab pipeline definitions for CI/CD workflows.
+name: "gitlab-ci-best-practices"
+description: "Best practices for GitLab CI/CD configuration. Use when creating, structuring, or reviewing GitLab pipeline definitions for CI/CD workflows."
+tags:
+  - "programming"
+  - "devops"
+  - "ci"
+  - "gitlab"
+when_to_use: "Use when creating, structuring, or reviewing GitLab pipeline definitions for CI/CD workflows."
+prerequisites:
+  - "Familiarity with the application and its deployment environment."
+  - "Access to the relevant pipeline, infrastructure, or runtime configuration."
+related_skills:
+  - "../circle-ci/SKILL.md"
+  - "../github-actions/SKILL.md"
+  - "../jenkins/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # GitLab CI/CD Best Practices
 
 GitLab CI/CD uses `.gitlab-ci.yml` to define pipelines. Following conventions makes pipelines readable, maintainable, and reusable across projects.

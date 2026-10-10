@@ -1,8 +1,25 @@
 ---
-name: pandas-best-practices
-description: Best practices for data analysis with pandas — the DataFrame conventions for Python. Use when writing, structuring, or reviewing pandas — covers import/read, dtypes, indexing, transformations, clean pipelines, and performance.
+name: "pandas-best-practices"
+description: "Best practices for data analysis with pandas — the DataFrame conventions for Python. Use when writing, structuring, or reviewing pandas — covers import/read, dtypes, indexing, transformations, clean pipelines, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-analysis"
+  - "pandas"
+when_to_use: "Use when writing, structuring, or reviewing pandas."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../numpy/SKILL.md"
+  - "../matplotlib/SKILL.md"
+  - "../statsmodels/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Pandas Best Practices
 
 Pandas provides **the `DataFrame` (tidy, column-typed) as the core structure for data analysis in Python.** Practical pandas leans on **explicit input typing (`dtype` mapping at read), column/category naming discipline, vectorized column ops over row-wise `.apply`, and chained transforms with `assign`/`query` for readability** — a tidy DataFrame (each column a variable, each row an observation) is the model.

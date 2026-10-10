@@ -1,8 +1,26 @@
 ---
-name: jasmine-best-practices
-description: Best practices for unit testing with Jasmine — the behavior-driven testing framework conventions for JavaScript. Use when writing, structuring, or reviewing Jasmine suites — covers specs, describe/it, matchers, spies, async, and setup.
+name: "jasmine-best-practices"
+description: "Best practices for unit testing with Jasmine — the behavior-driven testing framework conventions for JavaScript. Use when writing, structuring, or reviewing Jasmine suites — covers specs, describe/it, matchers, spies, async, and setup."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "unit-testing"
+  - "jasmine"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing Jasmine suites."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../jest.js/SKILL.md"
+  - "../mocha.js/SKILL.md"
+  - "../testing-library/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Jasmine Best Practices
 
 Jasmine is a **behavior-driven testing framework for JavaScript** — `describe`/`it` blocks with rich matchers and `spyOn` for fakes, no extra dependencies. Practical Jasmine leans on **sub-`describe` blocks per behavior, readable `expect(...).toEqual(...)` (avoiding `toBe` for objects), `beforeEach` for shared setup, and spies for seams** — mirroring how the object behaves, not how it computes. Tests read as sentences.

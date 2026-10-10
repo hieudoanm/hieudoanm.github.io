@@ -1,8 +1,24 @@
 ---
-name: apollo-client
-description: Apollo Client — TypeScript/JavaScript GraphQL client for caching, state management, and subscriptions in React, React Native, and other frameworks.
+name: "apollo-client"
+description: "Apollo Client — TypeScript/JavaScript GraphQL client for caching, state management, and subscriptions in React, React Native, and other frameworks."
+tags:
+  - "programming"
+  - "graphql"
+  - "typescript"
+  - "apollo"
+  - "client"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Apollo Client in a project."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../server/SKILL.md"
+  - "../../../SKILL.md"
+  - "../../mercurius/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Apollo Client is the **industry-standard GraphQL client** for TypeScript/JS apps. It provides **normalized, in-memory caching**, optimistic UI, pagination helpers, and reactive state management — letting you query a GraphQL API with confidence and performance.
 
 ## 1. Core Concepts

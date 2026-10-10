@@ -1,8 +1,25 @@
 ---
-name: testing-library-best-practices
-description: Best practices for React/DOM testing with Testing Library — the user-centric testing conventions. Use when writing, structuring, or reviewing Testing Library suites — covers queries, roles, userEvent/fireEvent, async, and anti-patterns.
+name: "testing-library-best-practices"
+description: "Best practices for React/DOM testing with Testing Library — the user-centric testing conventions. Use when writing, structuring, or reviewing Testing Library suites — covers queries, roles, userEvent/fireEvent, async, and anti-patterns."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "unit-testing"
+  - "library"
+when_to_use: "Use when writing, structuring, or reviewing Testing Library suites."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../../SKILL.md"
+  - "../jasmine.js/SKILL.md"
+  - "../mocha.js/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Testing Library Best Practices
 
 Testing Library tests the **behavior users experience — roles, labels, text — not implementation details** (`getByRole` over class/state assertions). Practical Testing Library leans on **accessible queries (`*ByRole`, `*ByLabelText`, `*ByText`), `userEvent` for interaction (over `fireEvent`), `screen.getByX` in preference to destructured queries, and `waitFor`/`findBy` for async settling** — the "don't test implementation" rule keeps the suite stepping with refactors.

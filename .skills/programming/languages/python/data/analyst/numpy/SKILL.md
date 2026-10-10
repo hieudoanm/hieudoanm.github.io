@@ -1,8 +1,25 @@
 ---
-name: numpy-best-practices
-description: Best practices for numerical computing with NumPy — the array library conventions for Python. Use when writing, structuring, or reviewing NumPy — covers ndarray creation, broadcasting, vectorization, masks, dtypes, and performance.
+name: "numpy-best-practices"
+description: "Best practices for numerical computing with NumPy — the array library conventions for Python. Use when writing, structuring, or reviewing NumPy — covers ndarray creation, broadcasting, vectorization, masks, dtypes, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-analysis"
+  - "numpy"
+when_to_use: "Use when writing, structuring, or reviewing NumPy."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../pandas/SKILL.md"
+  - "../matplotlib/SKILL.md"
+  - "../statsmodels/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # NumPy Best Practices
 
 NumPy is **the array computing core of the Python data stack** — homogeneous `ndarray`s with vectorized ops and broadcasting. Practical NumPy leans on **explicit array constructs (`np.array`/`np.zeros`/`np.arange`), vectorization over loops (batch semantics), broadcasting semantics understood (`shape` checks before ops), and immutable shape/dtype hygiene** — "an array is a vector of numbers, plus a contract about `dtype` and `shape`". Performance wins arrive from whole-array ops, not from fighting the library.

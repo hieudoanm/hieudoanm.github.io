@@ -1,8 +1,25 @@
 ---
-name: recharts-best-practices
-description: Best practices for data visualization with Recharts — the React charting conventions for composable dashboards. Use when writing, structuring, or reviewing Recharts — covers components, data shape, tooltips, responsiveness, animation, and performance.
+name: "recharts-best-practices"
+description: "Best practices for data visualization with Recharts — the React charting conventions for composable dashboards. Use when writing, structuring, or reviewing Recharts — covers components, data shape, tooltips, responsiveness, animation, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "charts"
+  - "recharts"
+when_to_use: "Use when writing, structuring, or reviewing Recharts."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../chart.js/SKILL.md"
+  - "../tanstack-charts/SKILL.md"
+  - "../d3.js/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Recharts Best Practices
 
 Recharts is the **composable React charting library** — SVG primitives (`LineChart` + `Line`, `BarChart` + `Bar`, etc.) driven by a **data array with named keys and reusable `ResponsiveContainer`**. Practical Recharts leans on **a consistent data shape across charts (default x[key]/value[key] coordinates), `ResponsiveContainer` for sizing, minimal `Tooltip`/`Legend`/`CartesianGrid` composition, and memoized chart components** — the chart is a tree of props; data transformation belongs outside it.

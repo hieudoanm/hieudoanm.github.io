@@ -1,8 +1,22 @@
 ---
-name: progressive-explanation
-description: Explain concepts progressively for four audiences: child, student, layperson, and expert.
+name: "progressive-explanation"
+description: "Explain concepts progressively for four audiences: child, student, layperson, and expert."
+tags:
+  - "research"
+  - "progressive"
+  - "explanation"
+when_to_use: "Use when conducting or communicating work related to progressive explanation, especially when a structured research workflow is needed."
+prerequisites:
+  - "A defined research topic or question."
+  - "Access to relevant sources or project materials."
+related_skills:
+  - "../literature-review/SKILL.md"
+  - "../meta-analysis/SKILL.md"
+  - "../paper-pdf-to-markdown/SKILL.md"
+avoid_when:
+  - "When the task is not focused on this research activity; use the skill for the actual research stage instead."
+status: "active"
 ---
-
 # Progressive Explanation
 
 Explain the same concept at four levels of depth without changing its underlying meaning.
@@ -58,8 +72,9 @@ Formal definition, mechanisms, assumptions, mathematics, limitations, and techni
 - For scientific topics, distinguish established knowledge from interpretation.
 - For mathematical topics, preserve correctness at every level.
 
-## References
+## Further detail
 
-- `references/levels.md`
-- `references/techniques.md`
-- `references/examples/`
+- [Levels](references/levels.md)
+- [Overview](references/overview.md)
+- [Techniques](references/techniques.md)
+- [Workflow Notes](references/workflow-notes.md)

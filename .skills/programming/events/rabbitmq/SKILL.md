@@ -1,8 +1,22 @@
 ---
-name: rabbitmq
-description: Best practices for message-driven workflows with RabbitMQ. Use when designing exchanges and queues, implementing producers/consumers, adding retries and dead-letter queues, or debugging message loss/backlog — treats RabbitMQ as a message broker for workflows, not an event log or data store.
+name: "rabbitmq"
+description: "Best practices for message-driven workflows with RabbitMQ. Use when designing exchanges and queues, implementing producers/consumers, adding retries and dead-letter queues, or debugging message loss/backlog — treats RabbitMQ as a message broker for workflows, not an event log or data store."
+tags:
+  - "programming"
+  - "messaging"
+  - "rabbitmq"
+when_to_use: "Use when designing exchanges and queues, implementing producers/consumers, adding retries and dead-letter queues, or debugging message loss/backlog."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../apache-kafka/SKILL.md"
+  - "../apache-pulsar/SKILL.md"
+  - "../activemq/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # RabbitMQ Best Practices
 
 RabbitMQ (AMQP) is a **message-queue-oriented broker**: messages are consumed and removed, routing is explicit via exchanges and bindings, and consumers provide backpressure through prefetch. Best practice is treating it as a reliable workflow broker, not a Kafka-style log or a store — model messages as commands/tasks, use DLQs and retry queues explicitly, ack deliberately, and design consumers to be idempotent.

@@ -1,8 +1,24 @@
 ---
-name: gorilla-best-practices
-description: Best practices for using Gorilla Toolkit in Go — the classic library conventions for HTTP routing, middleware, JSON handling, and WebSocket sessions. Use when writing, structuring, or reviewing Gorilla-based services — covers mux, middleware, JSON handling, WebSocket, sessions, testing, and deployment.
+name: "gorilla-best-practices"
+description: "Best practices for using Gorilla Toolkit in Go — the classic library conventions for HTTP routing, middleware, JSON handling, and WebSocket sessions. Use when writing, structuring, or reviewing Gorilla-based services — covers mux, middleware, JSON handling, WebSocket, sessions, testing, and deployment."
+tags:
+  - "programming"
+  - "language"
+  - "go"
+  - "backend"
+  - "gorilla"
+when_to_use: "Use when writing, structuring, or reviewing Gorilla-based services."
+prerequisites:
+  - "Basic familiarity with Go and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../chi/SKILL.md"
+  - "../echo/SKILL.md"
+  - "../beego/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Gorilla Best Practices
 
 Gorilla is a **library, not a framework** — `gorilla/mux` for routing, `gorilla/handlers`/`gorilla/mux.MiddlewareFunc` for middleware, `gorilla/encoding/json` for JSON, and `gorilla/websocket` for WebSocket. Practical Gorilla leans on **`mux.NewRouter` as a plain `http.Handler`, middleware via `r.Use`/`MiddlewareFunc`, and the `context` for request-scoped state**. The toolkit composes with `net/http` rather than replacing it — you write a standard handler, the framework helps where the stdlib is verbose.

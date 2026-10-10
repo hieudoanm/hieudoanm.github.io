@@ -1,8 +1,23 @@
 ---
-name: mercurius
-description: Mercurius — high-performance GraphQL adapter for Fastify, with schema, loaders, subscriptions, and federation support.
+name: "mercurius"
+description: "Mercurius — high-performance GraphQL adapter for Fastify, with schema, loaders, subscriptions, and federation support."
+tags:
+  - "programming"
+  - "graphql"
+  - "typescript"
+  - "mercurius"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Mercurius in a project."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../garph/SKILL.md"
+  - "../yoga/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Mercurius is a **GraphQL adapter for Fastify** (by Matteo Collina et al.) — fast (uses Fastify's serializer), **schema-based, with loaders, subscriptions, and Apollo Federation v1/v2 support**.
 
 ## 1. Setup

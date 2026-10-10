@@ -1,11 +1,27 @@
 ---
-name: rust-rover-best-practices
-description: Best practices for working in RustRover — Cargo as the project model, rustup toolchain selection, borrow-checker-aware inspections, the debugger and profiling, and JetBrains shared conventions. Use when setting up, debugging, or refactoring a Rust project in RustRover.
+name: "rust-rover-best-practices"
+description: "Best practices for working in RustRover — Cargo as the project model, rustup toolchain selection, borrow-checker-aware inspections, the debugger and profiling, and JetBrains shared conventions. Use when setting up, debugging, or refactoring a Rust project in RustRover."
+tags:
+  - "programming"
+  - "language"
+  - "rust"
+  - "ide"
+  - "rover"
+when_to_use: "Use when setting up, debugging, or refactoring a Rust project in RustRover."
+prerequisites:
+  - "Basic familiarity with Rust and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../../c/ide/clion/SKILL.md"
+  - "../../../java/ide/idea/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # RustRover
 
-RustRover is JetBrains' Rust IDE, built on the same platform as Rider and CLion: a real debugger, a memory and CPU profiler, refactorings backed by a semantic index, and the Cargo-aware project model JetBrains IDEs are good at. Its distinguishing feature against a `rust-analyzer`-only setup is **a debugger and profiler that require no separate toolchain setup**. Practical RustRover work is about **letting Cargo and `rust-toolchain.toml` own the build, and using the IDE's index for the refactorings it is better at than text tools**. Language rules live in [rust.md](../rust.md).
+RustRover is JetBrains' Rust IDE, built on the same platform as Rider and CLion: a real debugger, a memory and CPU profiler, refactorings backed by a semantic index, and the Cargo-aware project model JetBrains IDEs are good at. Its distinguishing feature against a `rust-analyzer`-only setup is **a debugger and profiler that require no separate toolchain setup**. Practical RustRover work is about **letting Cargo and `rust-toolchain.toml` own the build, and using the IDE's index for the refactorings it is better at than text tools**. Language rules live in [rust.md](../../SKILL.md).
 
 _Verified against RustRover 2026.2.3 (September 2026) with Rust 1.9x stable via rustup, Cargo, and the bundled LLDB-based debugger. MSVC toolchain on Windows, `llvm-tools` component for profiling._
 

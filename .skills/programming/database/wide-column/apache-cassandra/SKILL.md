@@ -1,8 +1,25 @@
 ---
-name: apache-cassandra
-description: Apache Cassandra — open-source NoSQL wide-column distributed database designed for high availability and horizontal scale across many commodity servers.
+name: "apache-cassandra"
+description: "Apache Cassandra — open-source NoSQL wide-column distributed database designed for high availability and horizontal scale across many commodity servers."
+tags:
+  - "programming"
+  - "database"
+  - "wide"
+  - "column"
+  - "apache"
+  - "cassandra"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Apache Cassandra in a project."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../apache-hbase/SKILL.md"
+  - "../../search/apache-solr/SKILL.md"
+  - "../../cache/rocksdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Apache Cassandra is a **distributed wide-column NoSQL database** built for **horizontal scalability, high availability, and tunable consistency** across many commodity servers, using a **peer-to-peer ring** architecture.
 
 ## 1. Core Concepts
@@ -86,7 +103,7 @@ services:
       - cassandra_data:/var/lib/cassandra
 ```
 
-Runnable: [`examples/docker/compose/databases/columns/apache-cassandra/docker-compose.yaml`](../../../examples/docker/compose/databases/columns/apache-cassandra/docker-compose.yaml)
+Runnable: [`examples/docker/compose/databases/columns/apache-cassandra/docker-compose.yaml`](../../../devops/docker/docker-compose/SKILL.md)
 
 ## 6. Common Pitfalls
 

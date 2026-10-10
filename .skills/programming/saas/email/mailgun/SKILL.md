@@ -1,8 +1,23 @@
 ---
-name: mailgun
-description: Best practices for sending and receiving email with Mailgun. Use when integrating transaction email, configuring inbound routing, or handling delivery events — covers sending API, inbound parsing, webhooks, and deliverability.
+name: "mailgun"
+description: "Best practices for sending and receiving email with Mailgun. Use when integrating transaction email, configuring inbound routing, or handling delivery events — covers sending API, inbound parsing, webhooks, and deliverability."
+tags:
+  - "programming"
+  - "saas"
+  - "email"
+  - "mailgun"
+when_to_use: "Use when integrating transaction email, configuring inbound routing, or handling delivery events."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../sendgrid/SKILL.md"
+  - "../postmark/SKILL.md"
+  - "../resend/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Mailgun Best Practices
 
 Mailgun is an email API strong at both **sending** and **inbound email processing** (routes/webhooks). Best practice is authenticating domains properly, using webhooks for delivery truth, and leveraging **inbound routes** to parse replies/notifications into your application.

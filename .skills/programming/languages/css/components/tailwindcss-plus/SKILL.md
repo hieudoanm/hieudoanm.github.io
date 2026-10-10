@@ -1,8 +1,25 @@
 ---
-name: tailwindcss-plus
-description: Tailwind CSS Plus — Tailwind CSS v4 with CSS-first configuration, container queries, and the plus-extended utilities palette.
+name: "tailwindcss-plus"
+description: "Tailwind CSS Plus — Tailwind CSS v4 with CSS-first configuration, container queries, and the plus-extended utilities palette."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "components"
+  - "tailwindcss"
+  - "plus"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Tailwind CSS Plus in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../bootstrap/SKILL.md"
+  - "../daisyui/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Tailwind CSS Plus (v4+) is the **next-generation Tailwind**, moving configuration into **CSS-first `@theme`**, adding native **container queries**, and expanding the utility API for modern styling without `tailwind.config.js`.
 
 ## 1. Core: CSS-First Configuration

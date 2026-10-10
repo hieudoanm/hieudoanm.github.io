@@ -1,8 +1,22 @@
 ---
-name: activemq
-description: Best practices for JMS-compliant messaging and enterprise integration with ActiveMQ (Classic or Artemis). Use when designing queues/topics, choosing acknowledgement modes, configuring redelivery and DLQs, transactions, or tuning broker operations — treats ActiveMQ as message-oriented middleware, not a stream.
+name: "activemq"
+description: "Best practices for JMS-compliant messaging and enterprise integration with ActiveMQ (Classic or Artemis). Use when designing queues/topics, choosing acknowledgement modes, configuring redelivery and DLQs, transactions, or tuning broker operations — treats ActiveMQ as message-oriented middleware, not a stream."
+tags:
+  - "programming"
+  - "messaging"
+  - "activemq"
+when_to_use: "Use when designing queues/topics, choosing acknowledgement modes, configuring redelivery and DLQs, transactions, or tuning broker operations."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../apache-pulsar/SKILL.md"
+  - "../rabbitmq/SKILL.md"
+  - "../apache-kafka/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # ActiveMQ Best Practices
 
 ActiveMQ (Classic or Artemis) is **message-oriented middleware** implementing JMS: messages are consumed, acknowledged, and removed. Best practice is JMS-first design — choose Queue vs Topic explicitly, prefer destination-level routing over selectors, acknowledge deliberately, use transactions for at-least-once + idempotency, and configure redelivery/DLQ as explicit design.

@@ -1,8 +1,23 @@
 ---
-name: clerk
-description: Best practices for adding authentication to modern apps with Clerk. Use when wiring up sign-in/sign-up, sessions, organization support, or webhooks — covers session validation, frontend/backend patterns, and identity data.
+name: "clerk"
+description: "Best practices for adding authentication to modern apps with Clerk. Use when wiring up sign-in/sign-up, sessions, organization support, or webhooks — covers session validation, frontend/backend patterns, and identity data."
+tags:
+  - "programming"
+  - "saas"
+  - "authentication"
+  - "clerk"
+when_to_use: "Use when wiring up sign-in/sign-up, sessions, organization support, or webhooks."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../auth0/SKILL.md"
+  - "../okta/SKILL.md"
+  - "../onelogin/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Clerk Best Practices
 
 Clerk is a developer-friendly authentication service with prebuilt components and session management. Best practice is leaning on its **sessions and prebuilt components** for speed while keeping authorization server-side: validate sessions (JWT or webhooks) in your backend, sync identity via webhooks, and never trust client-only state.

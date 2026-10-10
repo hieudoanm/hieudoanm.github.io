@@ -1,8 +1,24 @@
 ---
-name: daisyui
-description: DaisyUI — Tailwind CSS component classes for rapid, accessible UI building with theming plugins and pure-class components.
+name: "daisyui"
+description: "DaisyUI — Tailwind CSS component classes for rapid, accessible UI building with theming plugins and pure-class components."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "components"
+  - "daisyui"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting DaisyUI in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../bootstrap/SKILL.md"
+  - "../tailwindcss-plus/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 DaisyUI is a **plugin for Tailwind CSS** that adds **`.btn`, `.card`, `.modal`, `.dropdown` and dozens of other component classes** — designed to be **themeable and accessible** with class-only usage and zero extra JS.
 
 ## 1. Setup and Installation

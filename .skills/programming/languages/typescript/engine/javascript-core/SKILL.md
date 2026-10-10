@@ -1,8 +1,25 @@
 ---
-name: javascript-core-best-practices
-description: Best practices for running JavaScript on JavaScriptCore — the WebKit/Apple JS engine conventions. Use when writing, structuring, or reviewing code that targets JSC — covers compiler tiers, FTL/baseline, JIT behavior, memory, and diagnosis.
+name: "javascript-core-best-practices"
+description: "Best practices for running JavaScript on JavaScriptCore — the WebKit/Apple JS engine conventions. Use when writing, structuring, or reviewing code that targets JSC — covers compiler tiers, FTL/baseline, JIT behavior, memory, and diagnosis."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "engine"
+  - "javascript"
+  - "core"
+when_to_use: "Use when writing, structuring, or reviewing code that targets JSC."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../spider-monkey/SKILL.md"
+  - "../v8/SKILL.md"
+  - "../hermes/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # JavaScriptCore Best Practices
 
 JavaScriptCore (JSC) is **Apple's JS engine (WebKit, Safari, iOS/macOS JavaScript apps)** — with its own pipeline: parser → baseline JIT → DFG → FTL. Practical JSC-aware code shares V8-ish principles but with engine-specific levers: **stable shapes & monomorphic call sites still win; `--useJIT`/diagnostics via Safari's Performance tooling, not recipe-guessing** — steer code toward the fast paths JSC exposes, and read JSC's optimized IR only when profiling says so.

@@ -1,8 +1,23 @@
 ---
-name: dodopayments
-description: Best practices for integrating Dodo Payments, a payments platform for digital products. Use when accepting payments/subscriptions, handling local payment methods, or consuming webhooks — covers robust online payments, signature verification, and entitlement flow.
+name: "dodopayments"
+description: "Best practices for integrating Dodo Payments, a payments platform for digital products. Use when accepting payments/subscriptions, handling local payment methods, or consuming webhooks — covers robust online payments, signature verification, and entitlement flow."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "dodopayments"
+when_to_use: "Use when accepting payments/subscriptions, handling local payment methods, or consuming webhooks."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../paddle/SKILL.md"
+  - "../lemonsqueezy/SKILL.md"
+  - "../paypal/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Dodo Payments Best Practices
 
 Dodo Payments is a payments platform (payments + subscriptions, checkout links/SDK). Best practice is the standard payment-service contract: **server-side session/checkout**, **webhook signatures verified**, **idempotent entitlement grants**, and **no client-trusted amounts**.

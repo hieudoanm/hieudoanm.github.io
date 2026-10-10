@@ -1,8 +1,24 @@
 ---
-name: hyper-best-practices
-description: Best practices for building Rust HTTP applications with hyper — the low-level HTTP library conventions. Use when writing, structuring, or reviewing hyper-based services — covers Server/Client, service traits, body handling, routing, error handling, and testing.
+name: "hyper-best-practices"
+description: "Best practices for building Rust HTTP applications with hyper — the low-level HTTP library conventions. Use when writing, structuring, or reviewing hyper-based services — covers Server/Client, service traits, body handling, routing, error handling, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "rust"
+  - "backend"
+  - "hyper"
+when_to_use: "Use when writing, structuring, or reviewing hyper-based services."
+prerequisites:
+  - "Basic familiarity with Rust and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../warp/SKILL.md"
+  - "../actix/SKILL.md"
+  - "../axum/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Hyper Best Practices
 
 `hyper` is the underlying HTTP library for much of the Rust ecosystem — it gives you the **HTTP protocol (HTTP/2, client + server) while you own the composition**. Practical hyper leans on **`hyper::Server` with a `Service` implementing `call(req)`**, **typed requests/bodies (`hyper::Request`/`Response<Body>`)**, and **explicit routing/error mapping because hyper provides none of it**. It's the right choice when you need control or correctness-critical boundaries; for most products the framework layer (axum, actix-web) composes it for you.

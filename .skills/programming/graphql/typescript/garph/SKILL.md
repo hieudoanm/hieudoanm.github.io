@@ -1,8 +1,23 @@
 ---
-name: garph
-description: Garph — type-safe schema-first GraphQL server for TypeScript, with full TypeScript inference and no code-gen step.
+name: "garph"
+description: "Garph — type-safe schema-first GraphQL server for TypeScript, with full TypeScript inference and no code-gen step."
+tags:
+  - "programming"
+  - "graphql"
+  - "typescript"
+  - "garph"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Garph in a project."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../mercurius/SKILL.md"
+  - "../yoga/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Garph is a **type-safe, schema-first GraphQL framework for TypeScript** (by Dax Raad). It lets you **define GraphQL schemas with full TypeScript type inference and no code generation step**, perfect for library/graphQL-driven TypeScript projects.
 
 ## 1. Core Concepts

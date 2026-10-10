@@ -1,8 +1,23 @@
 ---
-name: dynamodb
-description: Best practices for modeling and operating DynamoDB. Use when designing access patterns, keys and single-table schemas, building GSIs, handling hot partitions, or tuning capacity — treats DynamoDB as a query-driven NoSQL store, not a schemaless SQL replacement.
+name: "dynamodb"
+description: "Best practices for modeling and operating DynamoDB. Use when designing access patterns, keys and single-table schemas, building GSIs, handling hot partitions, or tuning capacity — treats DynamoDB as a query-driven NoSQL store, not a schemaless SQL replacement."
+tags:
+  - "programming"
+  - "database"
+  - "document-database"
+  - "dynamodb"
+when_to_use: "Use when designing access patterns, keys and single-table schemas, building GSIs, handling hot partitions, or tuning capacity."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../mongodb/SKILL.md"
+  - "../couchbase/SKILL.md"
+  - "../rethinkdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # DynamoDB Best Practices
 
 DynamoDB scales automatically but only for the **access patterns you design for**. Best practice is access-pattern-first modeling: partition key + sort key encode relationships, GSIs are sparse and deliberate (each costs money), `Scan` is avoided, and every item has a clear query purpose.

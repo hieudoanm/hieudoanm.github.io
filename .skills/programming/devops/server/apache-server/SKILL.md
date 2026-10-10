@@ -1,8 +1,23 @@
 ---
-name: apache-server-best-practices
-description: Best practices for Apache HTTP Server configuration. Use when writing, reviewing, or optimizing httpd.conf and site configurations.
+name: "apache-server-best-practices"
+description: "Best practices for Apache HTTP Server configuration. Use when writing, reviewing, or optimizing httpd.conf and site configurations."
+tags:
+  - "programming"
+  - "devops"
+  - "server"
+  - "apache"
+when_to_use: "Use when writing, reviewing, or optimizing httpd.conf and site configurations."
+prerequisites:
+  - "Familiarity with the application and its deployment environment."
+  - "Access to the relevant pipeline, infrastructure, or runtime configuration."
+related_skills:
+  - "../nginx/SKILL.md"
+  - "../../kubernetes/SKILL.md"
+  - "../../ci/circle-ci/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Apache Server Best Practices
 
 Apache is a widely used web server. Proper configuration ensures performance, security, and maintainability.

@@ -1,11 +1,27 @@
 ---
-name: prettier-best-practices
-description: Best practices for formatting JavaScript and TypeScript with Prettier — configuration, intentional non-formatting, plugin selection, ESLint integration, and CI enforcement. Use when setting up, structuring, or debugging a Prettier setup.
+name: "prettier-best-practices"
+description: "Best practices for formatting JavaScript and TypeScript with Prettier — configuration, intentional non-formatting, plugin selection, ESLint integration, and CI enforcement. Use when setting up, structuring, or debugging a Prettier setup."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "developer-tools"
+  - "prettier"
+when_to_use: "Use when setting up, structuring, or debugging a Prettier setup."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../eslint/SKILL.md"
+  - "../../SKILL.md"
+  - "../husky/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Prettier
 
-Prettier is a **formatter**, not a linter. It parses your code and prints it back with a single canonical style, which is the whole point: it removes an entire category of code review. Practical Prettier work is mostly about **one formatter in the repo, a config that matches the house style, and knowing what Prettier deliberately does not do** — while linting belongs to [eslint.md](./eslint.md), and the alternative single-tool approach is [biome.md](./biome.md).
+Prettier is a **formatter**, not a linter. It parses your code and prints it back with a single canonical style, which is the whole point: it removes an entire category of code review. Practical Prettier work is mostly about **one formatter in the repo, a config that matches the house style, and knowing what Prettier deliberately does not do** — while linting belongs to [eslint.md](../eslint/SKILL.md), and the alternative single-tool approach is [biome.md](../biome/SKILL.md).
 
 _Verified against Prettier 3.9.9. There is no Prettier 4 — the "Prettier 4 Rust rewrite" circulating in blog posts is speculation, not a release._
 
@@ -89,7 +105,7 @@ export default defineConfig({
 ```
 
 - **Do not delete your own formatting config after adding `eslint-config-prettier`.** It disables ESLint rules; it does not configure Prettier. The two configs remain separate and both are still needed.
-- **See [eslint.md](./eslint.md)** for the full flat-config structure.
+- **See [eslint.md](../eslint/SKILL.md)** for the full flat-config structure.
 
 ---
 
@@ -107,7 +123,7 @@ export default defineConfig({
 
 - **Prettier 3.9 is still JavaScript on Node.** It is fast enough for most repos and slower than Rust-based alternatives on very large trees.
 - **An experimental OXC-based CLI shipped in 3.6** (`--experimental-cli`), and `@prettier/plugin-oxc` / `@prettier/plugin-hermes` exist as alternative parser backends. Treat these as opt-in experiments: benchmark on your own repo before standardising on them, and expect output differences while they stabilise.
-- **If formatting is genuinely your CI bottleneck,** that is a signal to evaluate [biome.md](./biome.md) — but measure the whole pipeline first, not the formatter in isolation.
+- **If formatting is genuinely your CI bottleneck,** that is a signal to evaluate [biome.md](../biome/SKILL.md) — but measure the whole pipeline first, not the formatter in isolation.
 
 ---
 

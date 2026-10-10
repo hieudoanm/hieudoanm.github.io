@@ -1,8 +1,24 @@
 ---
-name: qt-qml-ui-best-practices
-description: Best practices for Qt Quick UI development under QML scene graph. Use when designing, structuring, or optimizing QML user interfaces.
+name: "qt-qml-ui-best-practices"
+description: "Best practices for Qt Quick UI development under QML scene graph. Use when designing, structuring, or optimizing QML user interfaces."
+tags:
+  - "programming"
+  - "language"
+  - "qml"
+  - "ui"
+  - "qt"
+when_to_use: "Use when designing, structuring, or optimizing QML user interfaces."
+prerequisites:
+  - "Basic familiarity with Qml and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../../csharp/game/unity/SKILL.md"
+  - "../../../gdscript/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Qt Quick UI Best Practices
 
 Qt Quick provides a declarative framework for fluid, animated user interfaces. Following these conventions ensures smooth performance and maintainable UI code.

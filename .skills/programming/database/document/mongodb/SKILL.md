@@ -1,8 +1,23 @@
 ---
-name: mongodb
-description: Best practices for schema design and operations with MongoDB. Use when modeling documents, choosing embed vs reference, designing indexes, building aggregation pipelines, or preparing for scale — treats MongoDB as a schema-designed document database, not schemaless storage.
+name: "mongodb"
+description: "Best practices for schema design and operations with MongoDB. Use when modeling documents, choosing embed vs reference, designing indexes, building aggregation pipelines, or preparing for scale — treats MongoDB as a schema-designed document database, not schemaless storage."
+tags:
+  - "programming"
+  - "database"
+  - "document-database"
+  - "mongodb"
+when_to_use: "Use when modeling documents, choosing embed vs reference, designing indexes, building aggregation pipelines, or preparing for scale."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../dynamodb/SKILL.md"
+  - "../couchbase/SKILL.md"
+  - "../couchdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # MongoDB Best Practices
 
 MongoDB is a document database whose performance hinges on **schema design**, not SQL-style normalization. Best practice is designing documents around **query patterns**: embed for one-to-few, reference for fan-outs, index deliberately, never scan collections, and plan shard keys before scaling.

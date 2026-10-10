@@ -1,8 +1,22 @@
 ---
-name: groovy-best-practices
-description: Best practices for scripting and JVM automation with Groovy — the dynamic-JVM conventions for build scripts, pipelines, and DSLs. Use when writing, structuring, or reviewing Groovy — covers typing, closures, GDK, builders, Gradle/Jenkins scripts, and integration with Java.
+name: "groovy-best-practices"
+description: "Best practices for scripting and JVM automation with Groovy — the dynamic-JVM conventions for build scripts, pipelines, and DSLs. Use when writing, structuring, or reviewing Groovy — covers typing, closures, GDK, builders, Gradle/Jenkins scripts, and integration with Java."
+tags:
+  - "programming"
+  - "language"
+  - "groovy"
+when_to_use: "Use when writing, structuring, or reviewing Groovy."
+prerequisites:
+  - "Basic familiarity with Groovy and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../bash/SKILL.md"
+  - "../power-shell/SKILL.md"
+  - "../typescript/testing/e2e/puppeteer/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Groovy Best Practices
 
 Groovy is a **dynamic language for the JVM** — Java-compatible syntax with closures, the GDK (map/collection sugar), and powerful DSL/builder idioms. Practical Groovy leans on **optional typing with explicit `def`/types where it matters, closures for control flow, maps/lists-first data (`[:]`/`[]`), and builders/DSLs reserved for their named purpose** (Gradle/Jenkins scripts), while staying conservative: Groovy seduces with sugar, and sugar-debt creeps fast.

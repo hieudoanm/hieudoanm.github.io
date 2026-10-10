@@ -1,11 +1,26 @@
 ---
-name: snyk-best-practices
-description: Best practices for Snyk — Code, IaC, and container scanning, the difference between a finding and a reachable one, severity policy, and fix workflow ownership. Use when setting up, triaging, or acting on dependency vulnerabilities.
+name: "snyk-best-practices"
+description: "Best practices for Snyk — Code, IaC, and container scanning, the difference between a finding and a reachable one, severity policy, and fix workflow ownership. Use when setting up, triaging, or acting on dependency vulnerabilities."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "snyk"
+when_to_use: "Use when setting up, triaging, or acting on dependency vulnerabilities."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../renovate/SKILL.md"
+  - "../api/postman/SKILL.md"
+  - "../editor/antigravity/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Snyk
 
-Snyk is a security scanner across four surfaces — application code, dependencies, infrastructure as code, and container images — and its weakness is the same as every scanner's: **it reports what matches a signature, not what is exploitable in your code**. A critical finding in a dev-only dependency that never ships and is never imported is a false positive in everything but the letter of the rule. Practical Snyk work is about **triage by reachability and exposure, not by severity number, and fixing the cause rather than the finding**. Routine update automation is a different job; see [renovate.md](./renovate.md).
+Snyk is a security scanner across four surfaces — application code, dependencies, infrastructure as code, and container images — and its weakness is the same as every scanner's: **it reports what matches a signature, not what is exploitable in your code**. A critical finding in a dev-only dependency that never ships and is never imported is a false positive in everything but the letter of the rule. Practical Snyk work is about **triage by reachability and exposure, not by severity number, and fixing the cause rather than the finding**. Routine update automation is a different job; see [renovate.md](../renovate/SKILL.md).
 
 _Verified against Snyk's 2026 products. Plan names, the free tier's limits, and CLI behaviour change frequently; the triage discipline below does not._
 

@@ -1,8 +1,24 @@
 ---
-name: chi-best-practices
-description: Best practices for building Go web services with Chi — the lightweight, composable HTTP router conventions. Use when writing, structuring, or reviewing Chi services — covers routing, middleware, handlers, context, validation, errors, testing, and deployment.
+name: "chi-best-practices"
+description: "Best practices for building Go web services with Chi — the lightweight, composable HTTP router conventions. Use when writing, structuring, or reviewing Chi services — covers routing, middleware, handlers, context, validation, errors, testing, and deployment."
+tags:
+  - "programming"
+  - "language"
+  - "go"
+  - "backend"
+  - "chi"
+when_to_use: "Use when writing, structuring, or reviewing Chi services."
+prerequisites:
+  - "Basic familiarity with Go and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../echo/SKILL.md"
+  - "../gorilla/SKILL.md"
+  - "../beego/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Chi Best Practices
 
 Chi is a lightweight Go router that composes like `net/http` — **route groups (`chi.NewRouter`) with middleware, handlers returning `http.Handler`, and `chi.URLParam` for parameter extraction**. Practical Chi leans on **small, composable middleware, handlers that own one request concern, context-carried request IDs and scoped values**, and **errors as values (not panics) flowing to a uniform error handler**.

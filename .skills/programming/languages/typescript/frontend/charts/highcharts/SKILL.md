@@ -1,8 +1,25 @@
 ---
-name: highcharts-best-practices
-description: Best practices for creating interactive charts with Highcharts — the feature-rich SVG charting conventions for JS. Use when writing, structuring, or reviewing Highcharts — covers configuration, series/options, modules, accessibility, and performance.
+name: "highcharts-best-practices"
+description: "Best practices for creating interactive charts with Highcharts — the feature-rich SVG charting conventions for JS. Use when writing, structuring, or reviewing Highcharts — covers configuration, series/options, modules, accessibility, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "charts"
+  - "highcharts"
+when_to_use: "Use when writing, structuring, or reviewing Highcharts."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../plotly/SKILL.md"
+  - "../chart.js/SKILL.md"
+  - "../chartist/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Highcharts Best Practices
 
 Highcharts renders **feature-rich interactive SVG charts** — the `Highcharts.chart(container, options)` API with series, axes, tooltips, and modules. Practical Highcharts leans on **declarative `options` (series per data, axis config, accessibility), the module system loaded deliberately (`highcharts-more`, exporting, heatmap), and re-creation/`chart.update()` lifecycle discipline** — options are the contract; modules the extensions you genuinely use.

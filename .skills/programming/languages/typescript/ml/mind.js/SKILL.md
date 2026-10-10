@@ -1,8 +1,25 @@
 ---
-name: mind-js-best-practices
-description: Best practices for building neural networks in JS with Mind.js — the lightweight volatile NN conventions for browser/Node. Use when writing, structuring, or reviewing Mind.js — covers net construction, training, activation, serialization, and pitfalls.
+name: "mind-js-best-practices"
+description: "Best practices for building neural networks in JS with Mind.js — the lightweight volatile NN conventions for browser/Node. Use when writing, structuring, or reviewing Mind.js — covers net construction, training, activation, serialization, and pitfalls."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "ml"
+  - "mind"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing Mind.js."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../brain.js/SKILL.md"
+  - "../synaptic.js/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Mind.js Best Practices
 
 Mind.js is a **minimal neural network library for the browser/Node** — `new Mind()` with layers configured via `new Mind().learn(...)`/`predict(...)` and **JSON networks (`new Mind().upload(...)`)**. Practical Mind.js leans on **explicit `constructor`-time configuration (hidden layers, activation) via the `Mind` object, normalized input vectors, and the upload/save JSON path for persistence** — it's a small learning-tool API; the discipline is the data contract + verification, not framework lore.

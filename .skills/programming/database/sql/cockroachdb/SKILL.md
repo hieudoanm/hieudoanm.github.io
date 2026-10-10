@@ -1,8 +1,23 @@
 ---
-name: cockroachdb
-description: Best practices for operating CockroachDB as a distributed, globally consistent SQL database. Use when designing schemas, writing distributed queries, planning multi-region deployments, or migrating from Postgres — covers serializable isolation, distributed transactions, retries, and region-aware design.
+name: "cockroachdb"
+description: "Best practices for operating CockroachDB as a distributed, globally consistent SQL database. Use when designing schemas, writing distributed queries, planning multi-region deployments, or migrating from Postgres — covers serializable isolation, distributed transactions, retries, and region-aware design."
+tags:
+  - "programming"
+  - "database"
+  - "sql"
+  - "cockroachdb"
+when_to_use: "Use when designing schemas, writing distributed queries, planning multi-region deployments, or migrating from Postgres."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../mysql/SKILL.md"
+  - "../postgresql/SKILL.md"
+  - "../mariadb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # CockroachDB Best Practices
 
 CockroachDB is a **distributed SQL database with Raft-based replication and serializable isolation** — not "Postgres with replicas". Best practice is distributed-systems-first thinking: distributed transactions by default with retries as normal behavior, latency-aware keys and queries, retry-safe application logic, and no single-node database assumptions.

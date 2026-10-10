@@ -1,13 +1,29 @@
 ---
-name: vscode-best-practices
-description: Best practices for Visual Studio Code — settings committed not personal, workspace vs user settings, the extension set kept minimal, ESLint/Prettier/TS Server matching CI, launch configurations, and remote development. Use when configuring, debugging, or reviewing a project in VS Code.
+name: "vscode-best-practices"
+description: "Best practices for Visual Studio Code — settings committed not personal, workspace vs user settings, the extension set kept minimal, ESLint/Prettier/TS Server matching CI, launch configurations, and remote development. Use when configuring, debugging, or reviewing a project in VS Code."
+tags:
+  - "programming"
+  - "development"
+  - "developer-tools"
+  - "editor"
+  - "vscode"
+when_to_use: "Use when configuring, debugging, or reviewing a project in VS Code."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../zed/SKILL.md"
+  - "../antigravity/SKILL.md"
+  - "../cursor/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # VS Code
 
 VS Code is the most widely used editor and the weakest default configuration in most repositories. Out of the box it is fast, extensible, and quietly opinion-free: **nothing about the project is enforced, and every developer's setup differs**. Practical VS Code work is about **committing the settings that define the project, keeping the extension set small, and making the editor's diagnostics the same checks CI runs**. Runtime and build conventions still live in the language skills; this file is about the editor.
 
-_Verified against VS Code 1.10x (September 2026) with the built-in TypeScript server, ESLint 9 flat config, and Prettier 3. Neovim and Zed are covered in [neovim.md](./neovim.md) and [zed.md](./zed.md); AI-first forks in [cursor.md](./cursor.md) and [antigravity.md](./antigravity.md)._
+_Verified against VS Code 1.10x (September 2026) with the built-in TypeScript server, ESLint 9 flat config, and Prettier 3. Neovim and Zed are covered in [neovim.md](../neovim/SKILL.md) and [zed.md](../zed/SKILL.md); AI-first forks in [cursor.md](../cursor/SKILL.md) and [antigravity.md](../antigravity/SKILL.md)._
 
 ---
 

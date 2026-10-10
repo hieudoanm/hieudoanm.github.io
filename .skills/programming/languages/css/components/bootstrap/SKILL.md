@@ -1,8 +1,24 @@
 ---
-name: bootstrap
-description: Bootstrap — the most widely used CSS framework with responsive grid, utilities, components, and Sass-based theming.
+name: "bootstrap"
+description: "Bootstrap — the most widely used CSS framework with responsive grid, utilities, components, and Sass-based theming."
+tags:
+  - "programming"
+  - "language"
+  - "css"
+  - "components"
+  - "bootstrap"
+when_to_use: "Use when implementing, configuring, evaluating, or troubleshooting Bootstrap in a project."
+prerequisites:
+  - "Basic familiarity with CSS and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../bulma/SKILL.md"
+  - "../daisyui/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 Bootstrap is the **most widely used open-source CSS framework**, providing a **responsive grid system, ready-made components, JavaScript plugins, and a utility API**, themable through Sass variables and maps.
 
 ## 1. Installation and Setup

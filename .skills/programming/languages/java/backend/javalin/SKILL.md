@@ -1,8 +1,24 @@
 ---
-name: javalin-best-practices
-description: Best practices for building Java web APIs with Javalin — the lightweight Kotlin-originated HTTP framework conventions for Java. Use when writing, structuring, or reviewing Javalin — covers app setup, handlers, routing/context, middleware, validation, error handling, testing, and deployment.
+name: "javalin-best-practices"
+description: "Best practices for building Java web APIs with Javalin — the lightweight Kotlin-originated HTTP framework conventions for Java. Use when writing, structuring, or reviewing Javalin — covers app setup, handlers, routing/context, middleware, validation, error handling, testing, and deployment."
+tags:
+  - "programming"
+  - "language"
+  - "java"
+  - "backend"
+  - "javalin"
+when_to_use: "Use when writing, structuring, or reviewing Javalin."
+prerequisites:
+  - "Basic familiarity with Java and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../helidon/SKILL.md"
+  - "../micronaut/SKILL.md"
+  - "../quarkus/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Javalin Best Practices
 
 Javalin is a lightweight, opinionated HTTP framework with a **handler signature `Handler(ctx)` on a single `Context`** — routing, params, JSON, WebSockets, and error handling all flow through one object. Practical Javalin leans on **`app.get/post/route(...)` builders, handler registration with `use` middleware layers, `ctx.queryParam`/`pathParam`/`bodyAsClass` typed access**, and **`exceptionHandler` mapping exceptions to responses**. Javalin's smallest surface makes "everything is a Context method" the discipline.

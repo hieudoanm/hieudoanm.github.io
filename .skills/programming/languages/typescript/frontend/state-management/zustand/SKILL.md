@@ -1,8 +1,26 @@
 ---
-name: zustand-best-practices
-description: Best practices for state management with Zustand — the minimal hook-store conventions for React. Use when writing, structuring, or reviewing Zustand — covers stores, selectors, actions, middleware (persist/devtools/immer), and testing.
+name: "zustand-best-practices"
+description: "Best practices for state management with Zustand — the minimal hook-store conventions for React. Use when writing, structuring, or reviewing Zustand — covers stores, selectors, actions, middleware (persist/devtools/immer), and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "state"
+  - "management"
+  - "zustand"
+when_to_use: "Use when writing, structuring, or reviewing Zustand."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../redux/SKILL.md"
+  - "../jotai/SKILL.md"
+  - "../nano-stores/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Zustand Best Practices
 
 Zustand is a **minimal hook-based store** — a `create()` store with `set`/`get` returns a hook (`useCountStore`) where **selectors (`(s) => s.count`) drive granular re-renders**. Practical Zustand leans on **small stores per domain, selector functions over whole-store reads, actions as plain functions (no strict reducers)**, and **middleware (`persist`, `devtools`, `immer`) only where the feature is genuinely used**. The knobs are few — the discipline is in the selector and state shape.

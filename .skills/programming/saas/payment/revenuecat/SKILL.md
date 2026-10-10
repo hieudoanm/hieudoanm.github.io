@@ -1,8 +1,23 @@
 ---
-name: revenuecat
-description: Best practices for in-app purchases and subscriptions with RevenueCat. Use when integrating IAP on iOS/Android (and web), managing entitlement state, or this offering trial promotions — treats RevenueCat as the entitlement source of truth for native stores.
+name: "revenuecat"
+description: "Best practices for in-app purchases and subscriptions with RevenueCat. Use when integrating IAP on iOS/Android (and web), managing entitlement state, or this offering trial promotions — treats RevenueCat as the entitlement source of truth for native stores."
+tags:
+  - "programming"
+  - "saas"
+  - "payments"
+  - "revenuecat"
+when_to_use: "Use when integrating IAP on iOS/Android (and web), managing entitlement state, or this offering trial promotions."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../dodopayments/SKILL.md"
+  - "../lemonsqueezy/SKILL.md"
+  - "../polar/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # RevenueCat Best Practices
 
 RevenueCat abstracts **App Store / Play Store IAP** into one API — products, purchases, entitlements, and webhooks. Best practice is treating RevenueCat as the **single source of entitlement truth**: purchase through their SDK, consume their webhooks for the backend, and only grant features when entitlements are active.

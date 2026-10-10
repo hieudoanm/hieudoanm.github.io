@@ -1,8 +1,24 @@
 ---
-name: tRPC-best-practices
-description: Best practices for building TypeScript client/server APIs with tRPC — the end-to-end typed procedure framework conventions. Use when writing, structuring, or reviewing tRPC — covers routers/procedures, input schemas, middleware, context, error handling, and testing.
+name: "tRPC-best-practices"
+description: "Best practices for building TypeScript client/server APIs with tRPC — the end-to-end typed procedure framework conventions. Use when writing, structuring, or reviewing tRPC — covers routers/procedures, input schemas, middleware, context, error handling, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "backend"
+  - "trpc"
+when_to_use: "Use when writing, structuring, or reviewing tRPC."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../hono.js/SKILL.md"
+  - "../koa.js/SKILL.md"
+  - "../express.js/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # tRPC Best Practices
 
 tRPC gives **end-to-end typed APIs** — the same `Router` types flow from server (`@trpc/server`) to client (`@trpc/client`) without codegen. Practical tRPC leans on **small routers per domain exposing sub routers, `zod` input/output schemas on every procedure, middleware for context/auth/rate-limit**, and **`Context` built at request time (never global)**. Type theory isn't the feature — the total package (types + validation + errors) is the API contract.

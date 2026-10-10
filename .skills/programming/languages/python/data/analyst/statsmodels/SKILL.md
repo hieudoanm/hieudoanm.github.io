@@ -1,8 +1,25 @@
 ---
-name: statsmodels-best-practices
-description: Best practices for statistical modeling in Python with Statsmodels — the linear models, GLM, time-series, and hypothesis-testing conventions. Use when writing, structuring, or reviewing statsmodels — covers formula API, results interpretation, diagnostics, and reproducibility.
+name: "statsmodels-best-practices"
+description: "Best practices for statistical modeling in Python with Statsmodels — the linear models, GLM, time-series, and hypothesis-testing conventions. Use when writing, structuring, or reviewing statsmodels — covers formula API, results interpretation, diagnostics, and reproducibility."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-analysis"
+  - "statsmodels"
+when_to_use: "Use when writing, structuring, or reviewing statsmodels."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../../SKILL.md"
+  - "../matplotlib/SKILL.md"
+  - "../numpy/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Statsmodels Best Practices
 
 Statsmodels provides **formal statistical models (OLS, GLM, logit, time-series via ARIMA/ETS) with rich inference outputs — p-values, CIs, and assumption diagnostics** (vs sklearn's prediction-only focus). Practical statsmodels leans on **the formula API (`smf.ols("y ~ x1 + x2", data)`) for readable specs, `.fit()` results read deliberately (`.params`, `.summary()`, `.conf_int()`), and diagnostics (`.resid`, tests) as part of the model contract** — the model is a claim backed by checks.

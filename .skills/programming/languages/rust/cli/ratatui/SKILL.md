@@ -1,8 +1,25 @@
 ---
-name: ratatui-design
-description: Best practices for building visually polished terminal UIs with Ratatui (Rust). Use when creating, styling, or reviewing a Ratatui TUI app — covers layout constraints, color, widgets, and theming patterns with suggested values.
+name: "ratatui-design"
+description: "Best practices for building visually polished terminal UIs with Ratatui (Rust). Use when creating, styling, or reviewing a Ratatui TUI app — covers layout constraints, color, widgets, and theming patterns with suggested values."
+tags:
+  - "programming"
+  - "language"
+  - "rust"
+  - "cli"
+  - "ratatui"
+  - "design"
+when_to_use: "Use when creating, styling, or reviewing a Ratatui TUI app."
+prerequisites:
+  - "Basic familiarity with Rust and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../clap/SKILL.md"
+  - "../../SKILL.md"
+  - "../argh/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Ratatui Design Best Practices
 
 Ratatui is immediate-mode: every frame you fully redraw the UI from a `Frame`. Visual polish comes from disciplined use of `Style`, `Layout` constraints, and consistent widget choices — there's no CSS-equivalent to fall back on.

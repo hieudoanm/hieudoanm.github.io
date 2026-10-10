@@ -1,8 +1,25 @@
 ---
-name: matplotlib-best-practices
-description: Best practices for plotting and visualization with Matplotlib — the plotting conventions for Python. Use when writing, structuring, or reviewing Matplotlib — covers figures/axes, styling, subplots, savefig, and interactive/exploratory use.
+name: "matplotlib-best-practices"
+description: "Best practices for plotting and visualization with Matplotlib — the plotting conventions for Python. Use when writing, structuring, or reviewing Matplotlib — covers figures/axes, styling, subplots, savefig, and interactive/exploratory use."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-analysis"
+  - "matplotlib"
+when_to_use: "Use when writing, structuring, or reviewing Matplotlib."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../numpy/SKILL.md"
+  - "../pandas/SKILL.md"
+  - "../statsmodels/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Matplotlib Best Practices
 
 Matplotlib is **the foundational plotting library in Python** — figure/axes objects give complete control from a minimal script up to publication figures. Practical Matplotlib leans on **the OO API (`fig, ax = plt.subplots()`; draw on `ax`) over stateful `pyplot`, explicit styling to a consistent theme, subplots composed deliberately, and `savefig` with explicit resolution/formats** — "always know which axes you're drawing on".

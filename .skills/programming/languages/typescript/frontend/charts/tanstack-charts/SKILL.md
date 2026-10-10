@@ -1,8 +1,25 @@
 ---
-name: tanstack-charts-best-practices
-description: Best practices for building charts with TanStack Charts (formerly TanCharts) — the headless charting conventions for JS/React. Use when writing, structuring, or reviewing TanStack Charts — covers data/options model, axes, series, themes, performance, and updates.
+name: "tanstack-charts-best-practices"
+description: "Best practices for building charts with TanStack Charts (formerly TanCharts) — the headless charting conventions for JS/React. Use when writing, structuring, or reviewing TanStack Charts — covers data/options model, axes, series, themes, performance, and updates."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "charts"
+  - "tanstack"
+when_to_use: "Use when writing, structuring, or reviewing TanStack Charts."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../chart.js/SKILL.md"
+  - "../highcharts/SKILL.md"
+  - "../recharts/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # TanStack Charts Best Practices
 
 TanStack Charts is the **headless charting library from the TanStack family** — you bring the rendering (`react-table`-style control: charts as composable primitives, canvas/SVG choice), powered by a **typed `data` + `series` + `axes` model and declarative options**. Practical TanStack Charts leans on **structuring data per axis semantics, declaring `series` with the options model, `axes` configuration explicit, and updating via the library's `chart.updateOptions` rather than recreation** — headless means you own rendering/hooks; the model stays the single source of truth.

@@ -1,8 +1,23 @@
 ---
-name: mysql
-description: Best practices for designing, querying, and operating MySQL in production. Use when writing schemas, optimizing slow queries, reviewing indexes, planning migrations, or debugging locks/deadlocks — covers InnoDB, transactions, indexing, replication, and observability.
+name: "mysql"
+description: "Best practices for designing, querying, and operating MySQL in production. Use when writing schemas, optimizing slow queries, reviewing indexes, planning migrations, or debugging locks/deadlocks — covers InnoDB, transactions, indexing, replication, and observability."
+tags:
+  - "programming"
+  - "database"
+  - "sql"
+  - "mysql"
+when_to_use: "Use when writing schemas, optimizing slow queries, reviewing indexes, planning migrations, or debugging locks/deadlocks."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../postgresql/SKILL.md"
+  - "../cockroachdb/SKILL.md"
+  - "../mariadb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # MySQL Best Practices
 
 MySQL is a client/server RDBMS whose behavior depends heavily on storage engine, isolation level, and locking. Best practice is respecting it as **critical infrastructure**: InnoDB by default, always-on primary keys, explicit transactions, deliberate indexes, versioned migrations, and observability over cargo-cult tuning.

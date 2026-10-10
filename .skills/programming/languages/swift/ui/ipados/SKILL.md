@@ -1,11 +1,27 @@
 ---
-name: ipados-best-practices
-description: Best practices for building iPad apps in Swift — adaptive multi-column layouts, resizable windows, multitasking, pointer and Pencil input, and scene restoration. Use when creating, structuring, or reviewing an iPad experience.
+name: "ipados-best-practices"
+description: "Best practices for building iPad apps in Swift — adaptive multi-column layouts, resizable windows, multitasking, pointer and Pencil input, and scene restoration. Use when creating, structuring, or reviewing an iPad experience."
+tags:
+  - "programming"
+  - "language"
+  - "swift"
+  - "ui"
+  - "ipados"
+when_to_use: "Use when creating, structuring, or reviewing an iPad experience."
+prerequisites:
+  - "Basic familiarity with Swift and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../ios/SKILL.md"
+  - "../macos/SKILL.md"
+  - "../../SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # iPadOS Development
 
-iPadOS is not an iPhone with a bigger screen — since iPadOS 26 it runs a **full desktop-style windowing system**: resizable windows, a menu bar, traffic-light controls, and free movement between displays. Practical iPad work leans on **`NavigationSplitView` doing the adapting for you, zero device or orientation checks, and layouts that stay sane down to 375pt wide** — while SwiftUI conventions live in [swiftui.md](./swiftui.md), language rules in [swift.md](../swift.md), and iPhone specifics in [ios.md](./ios.md).
+iPadOS is not an iPhone with a bigger screen — since iPadOS 26 it runs a **full desktop-style windowing system**: resizable windows, a menu bar, traffic-light controls, and free movement between displays. Practical iPad work leans on **`NavigationSplitView` doing the adapting for you, zero device or orientation checks, and layouts that stay sane down to 375pt wide** — while SwiftUI conventions live in [swiftui.md](../swiftui/SKILL.md), language rules in [swift.md](../../SKILL.md), and iPhone specifics in [ios.md](../ios/SKILL.md).
 
 ---
 

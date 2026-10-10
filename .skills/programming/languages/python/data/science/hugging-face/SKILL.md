@@ -1,8 +1,26 @@
 ---
-name: hugging-face-best-practices
-description: Best practices for using Hugging Face libraries (transformers, datasets, evaluate, tokenizers, pipelines). Use when loading, fine-tuning, or deploying transformer models with Hugging Face — covers pipelines, tokenizer/model pairing, dataset handling, fine-tuning, and local caching.
+name: "hugging-face-best-practices"
+description: "Best practices for using Hugging Face libraries (transformers, datasets, evaluate, tokenizers, pipelines). Use when loading, fine-tuning, or deploying transformer models with Hugging Face — covers pipelines, tokenizer/model pairing, dataset handling, fine-tuning, and local caching."
+tags:
+  - "programming"
+  - "language"
+  - "python"
+  - "data"
+  - "data-science"
+  - "hugging"
+  - "face"
+when_to_use: "Use when loading, fine-tuning, or deploying transformer models with Hugging Face."
+prerequisites:
+  - "Basic familiarity with Python and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../lightgbm/SKILL.md"
+  - "../tensorflow/SKILL.md"
+  - "../scikit-learn/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Hugging Face Best Practices
 
 Hugging Face provides the **transformers/tokenizers/datasets/evaluate ecosystem** — pretrained models, paired tokenizers, `Pipeline`s, and caching. Practical Hugging Face leans on **`pipeline(...)` for inference-first work, `AutoModelForX`/`AutoTokenizer` paired by checkpoint name, `datasets` for versioned data, adversarial dimension: always pass explicit `tokenizer`, `model`, `device`, and pad/truncate correctly** — the trio tokenizer+model+preprocessing must stay aligned.

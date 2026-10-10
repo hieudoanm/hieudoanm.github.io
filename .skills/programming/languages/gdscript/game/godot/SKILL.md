@@ -1,8 +1,24 @@
 ---
-name: godot-best-practices
-description: Best practices for building games with Godot — the scene-tree and engine conventions for GDScript/C# projects. Use when writing, structuring, or reviewing Godot projects — covers scene organization, nodes, the main loop, resources, inputs, audio, and export/optimization.
+name: "godot-best-practices"
+description: "Best practices for building games with Godot — the scene-tree and engine conventions for GDScript/C# projects. Use when writing, structuring, or reviewing Godot projects — covers scene organization, nodes, the main loop, resources, inputs, audio, and export/optimization."
+tags:
+  - "programming"
+  - "language"
+  - "gdscript"
+  - "game"
+  - "godot"
+when_to_use: "Use when writing, structuring, or reviewing Godot projects."
+prerequisites:
+  - "Basic familiarity with Gdscript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../../../csharp/game/unity/SKILL.md"
+  - "../../../c/game/unreal/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Godot Best Practices
 
 Godot is a **scene-based game engine** — everything is a tree of `Node`s, scenes are reusable `.tscn` containers, and the **main loop calls `_process`/`_physics_process` with `delta`**. Practical Godot leans on **composition via nested scenes, node paths resolved at `_ready` (`@onready`), signal-first communication, Resources for data-driven tweaks, and intentional scene resolution (fixed timestep)** — the scene tree IS the architecture; globals are the smell.

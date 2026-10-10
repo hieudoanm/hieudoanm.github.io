@@ -1,8 +1,25 @@
 ---
-name: ml5-best-practices
-description: Best practices for machine learning in the browser with ml5.js — the friendly-ML conventions for education and creative coding. Use when writing, structuring, or reviewing ml5.js — covers models (image classification, pose, transfer learning), load/ready, inference, and browser constraints.
+name: "ml5-best-practices"
+description: "Best practices for machine learning in the browser with ml5.js — the friendly-ML conventions for education and creative coding. Use when writing, structuring, or reviewing ml5.js — covers models (image classification, pose, transfer learning), load/ready, inference, and browser constraints."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "ml"
+  - "ml5"
+  - "js"
+when_to_use: "Use when writing, structuring, or reviewing ml5.js."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../brain.js/SKILL.md"
+  - "../mind.js/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # ml5.js Best Practices
 
 ml5.js is **a friendly ML layer over TensorFlow.js for the browser** — pre-trained models (image classification, object detection, pose estimation) with simple `ml5.x(..., modelReady)` callbacks. Practical ml5.js leans on **model loading once plus `ready` handlers, `p5.js`-style callbacks (`results`) for inference, async-friendly `await` patterns, and browser constraints respected (model weights → network/cache, device memory)** — the models are magic; the discipline is loading, caching, and callback structure.

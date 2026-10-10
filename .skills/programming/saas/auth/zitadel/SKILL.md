@@ -1,8 +1,23 @@
 ---
-name: zitadel
-description: Best practices for running ZITADEL as a self-hosted or managed identity provider. Use when deploying realms/projects, configuring OIDC clients, or integrating IAM for your product — covers project/isolation model, token validation, and production operations.
+name: "zitadel"
+description: "Best practices for running ZITADEL as a self-hosted or managed identity provider. Use when deploying realms/projects, configuring OIDC clients, or integrating IAM for your product — covers project/isolation model, token validation, and production operations."
+tags:
+  - "programming"
+  - "saas"
+  - "authentication"
+  - "zitadel"
+when_to_use: "Use when deploying realms/projects, configuring OIDC clients, or integrating IAM for your product."
+prerequisites:
+  - "Basic familiarity with the project and the problem being addressed."
+  - "For implementation, access to the relevant source code or development environment."
+related_skills:
+  - "../keycloak/SKILL.md"
+  - "../auth0/SKILL.md"
+  - "../okta/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # ZITADEL Best Practices
 
 ZITADEL is an identity and access management platform built on event sourcing (like Auth0/Keycloak but open source, Go-native). Best practice is using its **project/org model** for isolation, letting it own the authn user experience while your services enforce authz from verified claims, and validating tokens locally.

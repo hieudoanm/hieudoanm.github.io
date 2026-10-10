@@ -7,7 +7,6 @@ objective is to combine evidence across studies into a coherent
 understanding of the research question.
 
 ## Summary vs Synthesis
-
 ### Summary
 
 > Smith et al. found X.
@@ -27,7 +26,6 @@ This describes papers independently.
 This identifies a pattern across studies.
 
 ## Unit of Synthesis
-
 The basic unit should usually be a **finding, theme, method, or
 theoretical claim**, rather than an individual paper.
 
@@ -36,7 +34,6 @@ Ask:
 > What do several studies collectively tell us?
 
 ## Build an Evidence Matrix
-
 Before writing the synthesis, organize important studies.
 
 | Study | Population | Method | Main finding | Limitation           | Relevance |
@@ -47,74 +44,7 @@ Before writing the synthesis, organize important studies.
 
 The matrix makes similarities and differences easier to identify.
 
-## Synthesis Dimensions
-
-Group studies using dimensions that matter to the research question.
-
-### Thematic
-
-Group studies by scientific topic.
-
-```text
-Language
-├── Speech perception
-├── Semantic processing
-├── Syntax
-└── Narrative processing
-```
-
-### Methodological
-
-Group studies by research method.
-
-```text
-Methods
-├── Behavioral
-├── EEG
-├── MEG
-├── fMRI
-└── Computational modelling
-```
-
-### Population
-
-Compare findings across populations.
-
-```text
-Adults
-Children
-Clinical populations
-Healthy ageing
-```
-
-### Theoretical
-
-Organize studies according to competing explanations.
-
-```text
-Theory A
-   vs
-Theory B
-   vs
-Theory C
-```
-
-### Historical
-
-Use when understanding how ideas developed over time.
-
-```text
-Early theory
-    ↓
-New evidence
-    ↓
-Modified theory
-    ↓
-Current model
-```
-
 ## Compare Findings
-
 When studies disagree, investigate the source of the disagreement.
 
 Ask:
@@ -132,7 +62,6 @@ Ask:
 Do not assume that disagreement means one study is wrong.
 
 ## Consensus
-
 A consensus should be supported by convergence across evidence.
 
 Useful language:
@@ -151,7 +80,6 @@ Avoid:
 unless the evidence genuinely justifies such certainty.
 
 ## Mixed Evidence
-
 When evidence is inconsistent, explain the inconsistency.
 
 Weak:
@@ -166,7 +94,6 @@ Better:
 > for part of this variation.
 
 ## Evidence Strength
-
 Distinguish:
 
 ```text
@@ -186,35 +113,7 @@ These are not interchangeable.
 A variable predicting another variable does not automatically establish
 causation.
 
-## Thematic Narrative
-
-A useful paragraph often follows:
-
-```text
-Claim
-  ↓
-Evidence
-  ↓
-Comparison
-  ↓
-Explanation
-  ↓
-Limitation
-  ↓
-Implication
-```
-
-Example:
-
-> Several studies suggest that X is associated with Y. This pattern has
-> been observed using both behavioral and neuroimaging methods. However,
-> studies using method A generally report larger effects than studies
-> using method B, potentially because of differences in measurement
-> sensitivity. Therefore, the evidence supports an association between
-> X and Y, but the underlying mechanism remains uncertain.
-
 ## Avoid Citation Dumping
-
 Do not write:
 
 > X is important (Smith, 2019; Jones, 2020; Lee, 2021; Wang, 2022;
@@ -223,7 +122,6 @@ Do not write:
 Instead, explain what the cited studies collectively contribute.
 
 ## Research Gaps
-
 A synthesis should naturally lead to gaps.
 
 Look for:
@@ -241,7 +139,6 @@ Look for:
 A gap should emerge from the evidence, not be invented after the review.
 
 ## Final Synthesis
-
 End by moving from individual findings to the state of knowledge:
 
 ```text

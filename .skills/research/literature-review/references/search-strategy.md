@@ -6,7 +6,6 @@ The purpose of a search strategy is to identify relevant literature
 systematically and efficiently while minimizing avoidable selection bias.
 
 ## Start With the Research Question
-
 Do not begin with random keyword searches.
 
 First identify:
@@ -21,49 +20,7 @@ First identify:
 
 Not every question needs all of these components.
 
-## Build Search Concepts
-
-Break the research question into concept groups.
-
-Example:
-
-```text
-Speech decoding from brain activity
-```
-
-could become:
-
-```text
-Concept 1: Speech
-    speech
-    language
-    spoken language
-    auditory speech
-
-Concept 2: Neural activity
-    brain activity
-    neural activity
-    neural signals
-
-Concept 3: Decoding
-    decoding
-    neural decoding
-    classification
-    prediction
-```
-
-Then combine related terms with `OR` and concepts with `AND`.
-
-```text
-(speech OR language OR "spoken language")
-AND
-("brain activity" OR "neural activity")
-AND
-(decoding OR prediction OR classification)
-```
-
 ## Search Terms
-
 Include:
 
 ### Synonyms
@@ -96,7 +53,6 @@ Do not add every vaguely related concept simply to increase the number
 of results.
 
 ## Search Sources
-
 Use appropriate scholarly databases and sources.
 
 Examples include:
@@ -118,7 +74,6 @@ For neuroscience, relevant sources may include PubMed, Web of Science,
 Scopus, PsycINFO, and specialist repositories.
 
 ## Search Iteratively
-
 A strong search is usually iterative.
 
 ```text
@@ -138,92 +93,7 @@ Identify additional papers
 Important papers often reveal terminology that was missing from the
 initial search.
 
-## Citation Chaining
-
-Use relevant papers to discover additional literature.
-
-### Backward chaining
-
-Examine references cited by an important paper.
-
-```text
-Important paper
-      ↓
-References
-      ↓
-Earlier studies
-```
-
-### Forward chaining
-
-Find later papers that cite the important paper.
-
-```text
-Important paper
-      ↓
-Citing papers
-      ↓
-Later research
-```
-
-### Related-paper searching
-
-Search for papers addressing similar questions using different
-terminology.
-
-Citation chaining is especially useful after identifying landmark
-papers or high-quality reviews.
-
-## Screening
-
-Search results should be screened systematically.
-
-A simple screening sequence is:
-
-```text
-Search results
-      ↓
-Title screening
-      ↓
-Abstract screening
-      ↓
-Full-text screening
-      ↓
-Included studies
-```
-
-Apply predefined inclusion and exclusion criteria where possible.
-
-## Inclusion Criteria
-
-Examples:
-
-- Relevant population.
-- Relevant phenomenon.
-- Appropriate study design.
-- Relevant outcome.
-- Publication within a defined time period.
-- Peer-reviewed publication.
-- Sufficient methodological information.
-
-Criteria should reflect the research question.
-
-## Exclusion Criteria
-
-Examples:
-
-- Wrong population.
-- Wrong phenomenon.
-- Irrelevant outcome.
-- Insufficient methodological information.
-- Duplicate publication.
-- Outside the defined scope.
-
-Do not exclude studies simply because their findings contradict the
-expected conclusion.
-
 ## Search Documentation
-
 For systematic or reproducible reviews, record:
 
 - Database.
@@ -254,7 +124,6 @@ Included: N
 ```
 
 ## Search Completeness
-
 A search is not necessarily complete because it returned many papers.
 
 Useful checks include:
@@ -265,21 +134,7 @@ Useful checks include:
 - Did citation chaining reveal important studies missed by keyword search?
 - Did the search include alternative terminology?
 
-## Recency
-
-Use recent literature when the field changes quickly.
-
-However, do not exclude older foundational studies simply because they
-are old.
-
-Distinguish:
-
-- Foundational evidence.
-- Current evidence.
-- Recent methodological developments.
-
 ## Search Bias
-
 Be aware of:
 
 - Publication bias.
@@ -293,7 +148,6 @@ A search strategy can systematically miss research even when it appears
 comprehensive.
 
 ## Search Strategy Output
-
 When documenting a literature search, report enough information that
 another researcher can understand how the literature was identified.
 
@@ -313,6 +167,5 @@ Final evidence set
 ```
 
 ## Core Principle
-
 > Search broadly enough to discover the evidence, then narrow systematically
 > according to the research question.

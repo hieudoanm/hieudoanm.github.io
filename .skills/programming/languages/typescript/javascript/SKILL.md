@@ -1,8 +1,23 @@
 ---
-name: javascript-best-practices
-description: Best practices for writing JavaScript (as distinct from TypeScript) — the plain-JS conventions for scripts, tooling, and running code. Use when writing, structuring, or reviewing JavaScript — covers types, modules, async, errors, DOM, and project conventions.
+name: "javascript-best-practices"
+description: "Best practices for writing JavaScript (as distinct from TypeScript) — the plain-JS conventions for scripts, tooling, and running code. Use when writing, structuring, or reviewing JavaScript — covers types, modules, async, errors, DOM, and project conventions."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "javascript"
+when_to_use: "Use when writing, structuring, or reviewing JavaScript."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../SKILL.md"
+  - "../engine/hermes/SKILL.md"
+  - "../engine/javascript-core/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # JavaScript Best Practices
 
 JavaScript is the **runtime language of the web and Node** — dynamically typed, prototype-based, with promises/async at the core. Practical "ours is JS, not TS" leans on **strict mode (`"use strict"`/ESM instead of sloppy), explicit typing discipline (JSDoc for API contracts), modules (`import`/`export`) over globals, async/await with explicit error handling, and default-parameter/nullish-cqality over truthy-traps.** JS prefers clarity: types are conventions you enforce, so encode them.

@@ -1,8 +1,24 @@
 ---
-name: http4s-best-practices
-description: Best practices for building Scala HTTP services with http4s — the functional, cats-effect-based framework conventions. Use when writing, structuring, or reviewing http4s — covers server/client, routes, Kleisli/DSL, mtl-structured effects, error handling, and testing.
+name: "http4s-best-practices"
+description: "Best practices for building Scala HTTP services with http4s — the functional, cats-effect-based framework conventions. Use when writing, structuring, or reviewing http4s — covers server/client, routes, Kleisli/DSL, mtl-structured effects, error handling, and testing."
+tags:
+  - "programming"
+  - "language"
+  - "scala"
+  - "backend"
+  - "http4s"
+when_to_use: "Use when writing, structuring, or reviewing http4s."
+prerequisites:
+  - "Basic familiarity with Scala and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../SKILL.md"
+  - "../akka/SKILL.md"
+  - "../play/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # http4s Best Practices
 
 http4s is a **purely functional HTTP library on cats-effect** — routes are `HttpRoutes`/`Kleisli[F, Request[F], Response[F]]`, and every handler returns an `F[_]`. Practical http4s leans on **the `routes` DSL (pattern-matching methods), services composed with `orNotFound` + middlewares, `F` threaded everywhere with the effect type in the signature**, and **`EntityCodec`/`EntityDecoder` for typed JSON**. The type system IS the HTTP contract; errors are values in the `F`.

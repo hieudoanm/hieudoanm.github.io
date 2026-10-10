@@ -1,8 +1,23 @@
 ---
-name: mariadb
-description: Best practices for operating MariaDB in production. Use when designing schemas, choosing storage engines, migrating from MySQL, tuning replication/Galera, or planning backups — treats MariaDB as independent infrastructure, not a MySQL clone.
+name: "mariadb"
+description: "Best practices for operating MariaDB in production. Use when designing schemas, choosing storage engines, migrating from MySQL, tuning replication/Galera, or planning backups — treats MariaDB as independent infrastructure, not a MySQL clone."
+tags:
+  - "programming"
+  - "database"
+  - "sql"
+  - "mariadb"
+when_to_use: "Use when designing schemas, choosing storage engines, migrating from MySQL, tuning replication/Galera, or planning backups."
+prerequisites:
+  - "Familiarity with the application’s data model and access patterns."
+  - "For implementation, access to the database environment or representative schema."
+related_skills:
+  - "../mysql/SKILL.md"
+  - "../sqlite/SKILL.md"
+  - "../cockroachdb/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # MariaDB Best Practices
 
 MariaDB is a MySQL-compatible RDBMS that has diverged over time with its own storage engines (InnoDB, XtraDB, Aria, ColumnStore) and replication (standard primary–replica, Galera). Best practice is treating it as **independent infrastructure**: choose engines deliberately, treat MySQL compatibility as a decision rather than a guarantee, and validate schemas and topology under production-scale conditions.

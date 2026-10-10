@@ -1,8 +1,23 @@
 ---
-name: go-best-practices
-description: Idiomatic Go best practices covering project structure, error handling, concurrency, naming, testing, and tooling. Use when writing, structuring, or reviewing Go code.
+name: "go-best-practices"
+description: "Idiomatic Go best practices covering project structure, error handling, concurrency, naming, testing, and tooling. Use when writing, structuring, or reviewing Go code."
+tags:
+  - "programming"
+  - "language"
+  - "go"
+  - "golang"
+when_to_use: "Use when writing, structuring, or reviewing Go code."
+prerequisites:
+  - "Basic familiarity with Go and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../../java/SKILL.md"
+  - "../../kotlin/SKILL.md"
+  - "../../python/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Go Best Practices
 
 Go values simplicity and explicitness over cleverness. Most "best practice" here is really "match what `gofmt`, `go vet`, and the standard library already do" — fighting Go's grain (heavy abstraction, generic-everything, exception-style control flow) is the most common source of un-idiomatic code.

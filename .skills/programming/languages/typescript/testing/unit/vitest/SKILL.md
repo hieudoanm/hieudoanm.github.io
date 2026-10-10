@@ -1,8 +1,25 @@
 ---
-name: vitest-best-practices
-description: Best practices for unit testing with Vitest — the Vite-native test runner conventions for the modern JS/TS ecosystem. Use when writing, structuring, or reviewing Vitest suites — covers config, matchers, mocking, coverage, watch mode, and CI.
+name: "vitest-best-practices"
+description: "Best practices for unit testing with Vitest — the Vite-native test runner conventions for the modern JS/TS ecosystem. Use when writing, structuring, or reviewing Vitest suites — covers config, matchers, mocking, coverage, watch mode, and CI."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "testing"
+  - "unit-testing"
+  - "vitest"
+when_to_use: "Use when writing, structuring, or reviewing Vitest suites."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../jest.js/SKILL.md"
+  - "../jasmine.js/SKILL.md"
+  - "../mocha.js/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Vitest Best Practices
 
 Vitest is the **Vite-native test runner** — near-zero-config for Vite projects, ESM-first, fast watch mode, Jest-compatible API combined with Vite's HMR and aliases. Practical Vitest leans on **`expect` matchers + `vi` mocks (Jest-style), config that leans on Vite `resolve.alias`, and `test.environment` matched to the target (node vs jsdom/happy-dom)** — with the same behavioral discipline: describe/it sentences, boundary mocking, no sleep-based waits. Browser tests (`vitest` browser mode) fill the E2E gap where DOM behavior matters.

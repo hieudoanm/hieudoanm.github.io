@@ -15,13 +15,18 @@
 
 ## [Open Releases (30)](https://hieudoanm.github.io/open)
 
-### Browser Extensions and Native Apps (3)
+### Browser Extensions (1)
 
-| No  | Platform         | Category  | Name     | Open                  | Releases                      |
-| --- | ---------------- | --------- | -------- | --------------------- | ----------------------------- |
-| 1   | Browser          | Extension | BrowserX | [Open][open-browserx] | [Releases][releases-browserx] |
-| 2   | Native - Android | Extension | AndroidX | [Open][open-androidx] | [Releases][releases-androidx] |
-| 3   | Native - MacOS   | Extension | MacOSX   | [Open][open-macosx]   | [Releases][releases-macosx]   |
+| No  | Platform | Category  | Name     | Open                  | Releases                      |
+| --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
+| 1   | Browser  | Extension | BrowserX | [Open][open-browserx] | [Releases][releases-browserx] |
+
+### Native Apps (2)
+
+| No  | Platform | Category | Name     | Open                  | Releases                      |
+| --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
+| 2   | Native   | Android  | AndroidX | [Open][open-androidx] | [Releases][releases-androidx] |
+| 3   | Native   | MacOS    | MacOSX   | [Open][open-macosx]   | [Releases][releases-macosx]   |
 
 ---
 

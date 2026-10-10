@@ -1,8 +1,26 @@
 ---
-name: apollo-client-best-practices
-description: Best practices for GraphQL data fetching with Apollo Client — the GraphQL client conventions for React apps. Use when writing, structuring, or reviewing Apollo Client — covers setup, queries/mutations, caching, fragments, and performance.
+name: "apollo-client-best-practices"
+description: "Best practices for GraphQL data fetching with Apollo Client — the GraphQL client conventions for React apps. Use when writing, structuring, or reviewing Apollo Client — covers setup, queries/mutations, caching, fragments, and performance."
+tags:
+  - "programming"
+  - "language"
+  - "typescript"
+  - "frontend"
+  - "query"
+  - "apollo"
+  - "client"
+when_to_use: "Use when writing, structuring, or reviewing Apollo Client."
+prerequisites:
+  - "Basic familiarity with TypeScript and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../swr/SKILL.md"
+  - "../tanstack-query/SKILL.md"
+  - "../axios/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Apollo Client Best Practices
 
 Apollo Client is **the GraphQL client for React** — `ApolloProvider` + `useQuery`/`useMutation` with a normalized cache. Practical Apollo leans on **declarative `useQuery` per view (with `fetchPolicy` deliberate), mutations `useMutation` + cache update strategy (refetchQueries vs `update`), fragment reuse (`gql` strings modularized), and cache normalization understood (`id`)**, with error/loading states explicit — GraphQL gives you control; Apollo bakes it into the cache.

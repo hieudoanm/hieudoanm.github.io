@@ -1,8 +1,24 @@
 ---
-name: echo-best-practices
-description: Best practices for building Go web services with Echo — the high-performance HTTP framework conventions. Use when writing, structuring, or reviewing Echo — covers routing, middleware, handlers, context, validation, errors, testing, and deployment.
+name: "echo-best-practices"
+description: "Best practices for building Go web services with Echo — the high-performance HTTP framework conventions. Use when writing, structuring, or reviewing Echo — covers routing, middleware, handlers, context, validation, errors, testing, and deployment."
+tags:
+  - "programming"
+  - "language"
+  - "go"
+  - "backend"
+  - "echo"
+when_to_use: "Use when writing, structuring, or reviewing Echo."
+prerequisites:
+  - "Basic familiarity with Go and the project conventions."
+  - "For implementation, access to the relevant source code and development environment."
+related_skills:
+  - "../chi/SKILL.md"
+  - "../gorilla/SKILL.md"
+  - "../beego/SKILL.md"
+avoid_when:
+  - "When the project does not use this technology or pattern, or the task falls outside its scope; follow the project’s existing stack and conventions."
+status: "active"
 ---
-
 # Echo Best Practices
 
 Echo is a high-performance Go web framework with a rich ecosystem of middleware and an elegant **handler signature** `func(c echo.Context) error` that centralizes request/response handling. Practical Echo leans on **route groups with layered middleware, one handler per request concern, a `Context`-owned request boundary that flows cancellation downstream**, and **errors returned, not thrown, with a uniform error handler**.
