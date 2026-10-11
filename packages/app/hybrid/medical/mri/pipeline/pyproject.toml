@@ -14,7 +14,7 @@ dependencies = [
     "pyyaml==6.0.3",
     # Exact pins, like every other dependency. These are the newest releases and
     # declare Python >=3.12, which the pinned interpreter above satisfies.
-    "numpy==2.5.3",
+    "numpy==2.5.4",
     "pandas==3.0.6",
     "scikit-learn==1.9.1",
     "scipy==1.18.1",
