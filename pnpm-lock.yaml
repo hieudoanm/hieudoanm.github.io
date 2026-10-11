@@ -444,8 +444,8 @@ importers:
         specifier: 2.12.2
         version: 2.12.2
       '@tauri-apps/plugin-dialog':
-        specifier: 2.8.1
-        version: 2.8.1
+        specifier: 2.8.2
+        version: 2.8.2
       '@tauri-apps/plugin-fs':
         specifier: 2.6.0
         version: 2.6.0
@@ -738,8 +738,8 @@ importers:
         specifier: 2.12.2
         version: 2.12.2
       '@tauri-apps/plugin-dialog':
-        specifier: 2.8.1
-        version: 2.8.1
+        specifier: 2.8.2
+        version: 2.8.2
       '@tauri-apps/plugin-notification':
         specifier: 2.5.1
         version: 2.5.1
@@ -868,8 +868,8 @@ importers:
         specifier: 2.12.2
         version: 2.12.2
       '@tauri-apps/plugin-dialog':
-        specifier: 2.8.1
-        version: 2.8.1
+        specifier: 2.8.2
+        version: 2.8.2
       '@tauri-apps/plugin-notification':
         specifier: 2.5.1
         version: 2.5.1
@@ -998,8 +998,8 @@ importers:
         specifier: 2.12.2
         version: 2.12.2
       '@tauri-apps/plugin-dialog':
-        specifier: 2.8.1
-        version: 2.8.1
+        specifier: 2.8.2
+        version: 2.8.2
       '@tauri-apps/plugin-notification':
         specifier: 2.5.1
         version: 2.5.1
@@ -1307,8 +1307,8 @@ importers:
         specifier: 2.12.2
         version: 2.12.2
       '@tauri-apps/plugin-dialog':
-        specifier: 2.8.1
-        version: 2.8.1
+        specifier: 2.8.2
+        version: 2.8.2
       '@tauri-apps/plugin-notification':
         specifier: 2.5.1
         version: 2.5.1
@@ -1410,8 +1410,8 @@ importers:
         specifier: 2.12.2
         version: 2.12.2
       '@tauri-apps/plugin-dialog':
-        specifier: 2.8.1
-        version: 2.8.1
+        specifier: 2.8.2
+        version: 2.8.2
       next:
         specifier: 16.4.0
         version: 16.4.0(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.4.1)(@playwright/test@1.64.0)(@types/node@26.6.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sass@1.105.1)
@@ -6347,8 +6347,8 @@ packages:
     engines: {node: '>= 10'}
     hasBin: true
 
-  '@tauri-apps/plugin-dialog@2.8.1':
-    resolution: {integrity: sha512-/DtE3B62JgpYuWFL5ATXM6KOXUq7pca7cJWOgSqULhZsgyjLk0PWKek1dbRDvhNBW6flNsOfWphsKnb+738Dmw==}
+  '@tauri-apps/plugin-dialog@2.8.2':
+    resolution: {integrity: sha512-LFqp8OTx0bHOwhKRhMMDyRDlo/2IO5XxoOclpf8+yvjAfM2ytVdbB6tk63dBlicsR8pRw38maj/GxrU6cW8mXw==}
 
   '@tauri-apps/plugin-fs@2.6.0':
     resolution: {integrity: sha512-MhBAZ4rryd+h9fijd/GWDfArqiAeGI0ZNduV4wuRyUVI6wDZ+oDBY7atqtoXKDwlTUVSvpvmWJAY0ehQd/v6Uw==}
@@ -17551,7 +17551,7 @@ snapshots:
       '@tauri-apps/cli-win32-ia32-msvc': 2.12.1
       '@tauri-apps/cli-win32-x64-msvc': 2.12.1
 
-  '@tauri-apps/plugin-dialog@2.8.1':
+  '@tauri-apps/plugin-dialog@2.8.2':
     dependencies:
       '@tauri-apps/api': 2.12.2
 
