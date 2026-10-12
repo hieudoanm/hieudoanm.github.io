@@ -39,14 +39,6 @@ code,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-
 code,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.rpm
 code,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.msi
 code,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.exe
-database,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.aab
-database,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.apk
-database,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.dmg
-database,appimage,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.AppImage
-database,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.deb
-database,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.rpm
-database,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.msi
-database,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.exe
 diagram,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.aab
 diagram,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.apk
 diagram,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.dmg
@@ -195,3 +187,7 @@ vectify,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/d
 vectify,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-vectify-latest/app-headless-vectify-vectify-darwin-arm64
 vectify,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-vectify-latest/app-headless-vectify-vectify-linux-amd64
 vectify,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-vectify-latest/app-headless-vectify-vectify-linux-arm64
+dbml,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-amd64
+dbml,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-arm64
+dbml,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-amd64
+dbml,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-arm64

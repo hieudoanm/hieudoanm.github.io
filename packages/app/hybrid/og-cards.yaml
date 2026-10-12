@@ -68,23 +68,6 @@ cards:
       success: '#10b981'
       error: '#ef4444'
 
-  - app: developer-tools/database
-    url: 'https://hieudoanm.github.io/open/database/'
-    name: SQLite Manager
-    kicker: 'SQLite, compiled to WASM'
-    title: 'Open a database, edit rows'
-    description: 'A modern SQLite database manager: run queries, browse tables and edit rows in the browser.'
-    tags: ['sql.js · WASM', 'Query editor', 'Table browser', 'IndexedDB']
-    theme:
-      base: '#f0fdfa'
-      content: '#0f2e27'
-      primary: '#0d9488'
-      secondary: '#10b981'
-      info: '#0891b2'
-      warning: '#d97706'
-      success: '#059669'
-      error: '#dc2626'
-
   - app: developer-tools/diagram
     url: 'https://hieudoanm.github.io/open/diagram/'
     name: Diagram

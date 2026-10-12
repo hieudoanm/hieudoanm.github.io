@@ -210,50 +210,6 @@
         ]
       },
       {
-        "label": "Database",
-        "primaryCategory": "Developer Tools",
-        "secondaryCategory": "Business",
-        "icon": "PiDatabase",
-        "href": "https://hieudoanm.github.io/open/database",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.exe"
-          }
-        ]
-      },
-      {
         "label": "Diagram",
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Graphics & Design",
@@ -966,7 +922,7 @@
       {
         "label": "Backbone",
         "primaryCategory": "Developer Tools",
-        "secondaryCategory": "",
+        "secondaryCategory": "Productivity",
         "icon": "PiPlugs",
         "href": "https://hieudoanm.github.io/open/backbone/",
         "version": "latest",
@@ -994,7 +950,7 @@
       {
         "label": "Browserverless",
         "primaryCategory": "Developer Tools",
-        "secondaryCategory": "",
+        "secondaryCategory": "Productivity",
         "icon": "PiBrowser",
         "href": "https://hieudoanm.github.io/open/browserverless/",
         "version": "latest",
@@ -1020,9 +976,37 @@
         ]
       },
       {
+        "label": "DBML",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
+        "icon": "PiDatabase",
+        "href": "https://hieudoanm.github.io/open/dbml",
+        "version": "latest",
+        "lastUpdated": "2026-10-12",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-arm64"
+          }
+        ]
+      },
+      {
         "label": "J.A.C.K.",
         "primaryCategory": "Developer Tools",
-        "secondaryCategory": "",
+        "secondaryCategory": "Productivity",
         "icon": "PiTerminalWindow",
         "href": "https://hieudoanm.github.io/open/jack/",
         "version": "latest",
@@ -1050,7 +1034,7 @@
       {
         "label": "KeVIN",
         "primaryCategory": "Developer Tools",
-        "secondaryCategory": "",
+        "secondaryCategory": "Productivity",
         "icon": "PiDatabase",
         "href": "https://hieudoanm.github.io/open/kevin/",
         "version": "latest",
@@ -1078,7 +1062,7 @@
       {
         "label": "Landify",
         "primaryCategory": "Developer Tools",
-        "secondaryCategory": "",
+        "secondaryCategory": "Productivity",
         "icon": "PiFileCode",
         "href": "https://hieudoanm.github.io/open/landify/",
         "version": "latest",
@@ -1106,7 +1090,7 @@
       {
         "label": "Pagify",
         "primaryCategory": "Developer Tools",
-        "secondaryCategory": "",
+        "secondaryCategory": "Productivity",
         "icon": "PiMarkdownLogo",
         "href": "https://hieudoanm.github.io/open/pagify/",
         "version": "latest",
@@ -1134,7 +1118,7 @@
       {
         "label": "Vectify",
         "primaryCategory": "Developer Tools",
-        "secondaryCategory": "",
+        "secondaryCategory": "Productivity",
         "icon": "PiVectorThree",
         "href": "https://hieudoanm.github.io/open/vectify",
         "version": "latest",

@@ -1,0 +1,36 @@
+name: CI - App - Headless - DBML
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/headless/dbml/languages/go/**'
+      - '.github/workflows/ci-app-headless-dbml.yaml'
+      - '.github/workflows/ci-app-headless-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-dbml-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-headless-template.yaml
+    with:
+      package: packages/app/headless/dbml/languages/go
+      rustPackage: ''
+      releaseName: app-headless-dbml-latest
+      releaseTitle: App - Headless - DBML (latest)
+      artifactName: app-headless-dbml
+      artifactPath: packages/app/headless/dbml/languages/go/bin/*
+      rustArtifactPath: ''
+      installZig: false
+      installRustDeps: false
