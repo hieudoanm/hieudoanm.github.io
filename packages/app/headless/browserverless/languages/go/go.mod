@@ -1,8 +1,8 @@
 module github.com/hieudoanm/browserverless
 
-go 1.27.1
+go 1.27.2
 
-require github.com/go-webengine/engine v0.5.4
+require github.com/go-webengine/engine v0.5.7
 
 require (
 	github.com/ajroetker/go-highway v0.0.4 // indirect
@@ -31,9 +31,9 @@ require (
 	github.com/srwiley/oksvg v0.0.0-20221011165216-be6e8873101c // indirect
 	github.com/srwiley/rasterx v0.0.0-20220730225603-2ab79fcdd4ef // indirect
 	github.com/tannevaled/gobig2 v0.2.0 // indirect
-	golang.org/x/crypto v0.57.0 // indirect
+	golang.org/x/crypto v0.58.0 // indirect
 	golang.org/x/image v0.46.0 // indirect
-	golang.org/x/net v0.59.0 // indirect
-	golang.org/x/sys v0.48.0 // indirect
-	golang.org/x/text v0.42.0 // indirect
+	golang.org/x/net v0.61.0 // indirect
+	golang.org/x/sys v0.49.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
 )
