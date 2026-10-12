@@ -82,7 +82,7 @@
     "three": "0.186.1",
     "uuid": "14.0.3",
     "yaml": "2.9.1",
-    "zod": "4.6.5",
+    "zod": "4.6.6",
     "zustand": "5.0.15"
   },
   "devDependencies": {
