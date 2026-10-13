@@ -13,6 +13,12 @@
 [twitter]: https://x.com/hieudoanm
 [instagram]: https://instagram.com/hieudoanm.github.io
 
+## Neuroimaging Projects
+
+- [EEG Lab](https://github.com/hieudoanm/lab.eeg)
+- [MEG Lab](https://github.com/hieudoanm/lab.meg)
+- [MRI Lab](https://github.com/hieudoanm/lab.mri)
+
 ## [Open Releases (30)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions (1)
