@@ -16,7 +16,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0")
     implementation("com.google.code.gson:gson:2.14.0")
     implementation("com.squareup.okhttp3:okhttp:5.5.0")
-    implementation("commons-codec:commons-codec:1.22.1")
+    implementation("commons-codec:commons-codec:1.23.0")
     implementation("org.jsoup:jsoup:1.23.2")
     testImplementation(kotlin("test"))
     testImplementation("com.squareup.okhttp3:mockwebserver:5.5.0")
