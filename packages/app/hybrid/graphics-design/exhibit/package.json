@@ -38,9 +38,9 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "2.12.2",
+    "@tauri-apps/api": "2.12.3",
     "idb": "8.0.4",
-    "motion": "14.1.0",
+    "motion": "14.2.0",
     "next": "16.4.0",
     "qrcode": "1.5.4",
     "qrcode.react": "4.2.0",
@@ -52,16 +52,16 @@
   "devDependencies": {
     "@playwright/test": "1.64.0",
     "@tailwindcss/postcss": "4.3.3",
-    "@tauri-apps/cli": "2.12.1",
+    "@tauri-apps/cli": "2.12.2",
     "@testing-library/jest-dom": "7.0.1",
     "@testing-library/react": "16.3.3",
-    "@testing-library/user-event": "14.6.7",
+    "@testing-library/user-event": "14.6.8",
     "@types/jest": "30.0.0",
     "@types/node": "26.6.5",
     "@types/qrcode": "1.5.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "daisyui": "5.7.47",
+    "daisyui": "5.7.50",
     "eslint": "10.12.0",
     "eslint-config-next": "16.4.0",
     "fake-indexeddb": "6.2.5",
@@ -74,6 +74,6 @@
     "tailwindcss": "4.3.3",
     "ts-jest": "29.4.14",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.71.1"
+    "typescript-eslint": "8.71.2"
   }
 }
