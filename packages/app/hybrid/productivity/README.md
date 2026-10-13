@@ -7,4 +7,3 @@
    4. Tasks (Projects Management)
    5. Keynotes (HTML)
 2. PDF - Portable Document Format
-3. Resume

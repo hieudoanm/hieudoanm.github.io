@@ -15,12 +15,11 @@
 | 11  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                    | No       | DONE   | Medical           | Health & Fitness   |
 | 12  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes    | No       | DONE   | Productivity      | Education          |
 | 13  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                | No       | DONE   | Productivity      | Business           |
-| 14  | resume      | [Resume][resume]           | Resume Builder                                                   | No       | DONE   | Productivity      | Business           |
-| 15  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
-| 16  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
-| 17  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
-| 18  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
-| 19  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
+| 14  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
+| 15  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
+| 16  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
+| 17  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
+| 18  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/
@@ -34,7 +33,6 @@
 [mri]: https://hieudoanm.github.io/open/mri/
 [office]: https://hieudoanm.github.io/open/office/
 [pdf]: https://hieudoanm.github.io/open/pdf/
-[resume]: https://hieudoanm.github.io/open/resume/
 [store]: https://hieudoanm.github.io/open/store/
 [chess]: https://hieudoanm.github.io/open/chess/
 [football]: https://hieudoanm.github.io/open/football/

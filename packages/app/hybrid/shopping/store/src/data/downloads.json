@@ -650,50 +650,6 @@
         ]
       },
       {
-        "label": "Resume",
-        "primaryCategory": "Productivity",
-        "secondaryCategory": "Business",
-        "icon": "PiFilePdf",
-        "href": "https://hieudoanm.github.io/open/resume",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.exe"
-          }
-        ]
-      },
-      {
         "label": "Store",
         "primaryCategory": "Shopping",
         "secondaryCategory": "Business",
@@ -972,6 +928,34 @@
           {
             "label": "Linux ARM64",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-linux-arm64"
+          }
+        ]
+      },
+      {
+        "label": "CV",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
+        "icon": "PiFilePdf",
+        "href": "https://hieudoanm.github.io/open/cv",
+        "version": "latest",
+        "lastUpdated": "2026-10-13",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-linux-arm64"
           }
         ]
       },

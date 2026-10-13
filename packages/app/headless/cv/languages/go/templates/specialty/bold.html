@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - {{.Personal.FullName}}</title>
+  <style>
+    @page { margin: 0; size: A4; }
+    html, body { margin: 0; padding: 0; width: 210mm; height: 297mm; }
+    body {
+      margin: 0;
+      margin: 0;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      color: #ffffff;
+      background: #111827;
+    }
+    header {
+      background: #111827;
+      color: #ffffff;
+      padding: 38px 44px;
+      border-bottom: 6px solid #dc2626;
+    }
+    h1 {
+      font-size: 38px;
+      font-weight: 900;
+      margin: 0 0 6px;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: 1.1;
+    }
+    .job-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #dc2626;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+    }
+    .contact { font-size: 10px; font-weight: 600; color: #d1d5db; letter-spacing: 0.5px; }
+    main { padding: 28px 44px; }
+    .section-title {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+      padding-left: 14px;
+      border-left: 8px solid #dc2626;
+    }
+    .section { margin-bottom: 22px; }
+    .item { margin-bottom: 14px; }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .primary { font-size: 15px; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; }
+    .right { font-size: 10.5px; font-weight: 700; color: #dc2626; letter-spacing: 1px; }
+    .company { font-size: 12px; font-weight: 700; color: #9ca3af; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1.5px; }
+    .degree { font-size: 12px; font-weight: 600; }
+    .tech { font-size: 10px; color: #9ca3af; margin-bottom: 2px; font-weight: 600; letter-spacing: 1px; }
+    .skill-cat { font-size: 11px; font-weight: 800; color: #dc2626; text-transform: uppercase; }
+    .skill-items { font-size: 11px; font-weight: 600; }
+    .cred { font-size: 11px; font-weight: 600; margin-bottom: 6px; }
+    .lang { font-size: 11px; font-weight: 600; }
+    .interests { font-size: 11px; font-weight: 600; color: #d1d5db; }
+    p { font-size: 11px; margin: 4px 0; line-height: 1.55; color: #e5e7eb; }
+    ul { margin: 4px 0 0 18px; padding: 0; }
+    li { font-size: 11px; margin-bottom: 2px; color: #e5e7eb; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{{.Personal.FullName}}</h1>
+    <div class="job-title">{{.Personal.JobTitle}}</div>
+    <div class="contact">
+      {{if .Personal.Email}}{{.Personal.Email}} • {{end}}
+      {{if .Personal.Phone}}{{.Personal.Phone}} • {{end}}
+      {{if .Personal.Address}}{{.Personal.Address}}{{end}}
+      {{if .Personal.Website}} • {{.Personal.Website}}{{end}}
+      {{if .Personal.Linkedin}} • {{.Personal.Linkedin}}{{end}}
+      {{if .Personal.Github}} • {{.Personal.Github}}{{end}}
+    </div>
+  </header>
+
+  <main>
+    {{if .Summary}}
+    <div class="section">
+      <div class="section-title">Summary</div>
+      <p>{{.Summary}}</p>
+    </div>
+    {{end}}
+
+    {{if .Experience}}
+    <div class="section">
+      <div class="section-title">Experience</div>
+      {{range .Experience}}
+      <div class="item">
+        <div class="header">
+          <div class="primary">{{.Role}}</div>
+          <div class="right">{{.StartDate}} – {{.EndDate}}</div>
+        </div>
+        <div class="company">{{.Company}}{{if .Location}} · {{.Location}}{{end}}</div>
+        {{if .Description}}<p>{{.Description}}</p>{{end}}
+      </div>
+      {{end}}
+    </div>
+    {{end}}
+
+    {{if .Education}}
+    <div class="section">
+      <div class="section-title">Education</div>
+      {{range .Education}}
+      <div class="item">
+        <div class="header">
+          <div class="primary">{{.School}}</div>
+          <div class="right">{{.StartDate}} – {{.EndDate}}</div>
+        </div>
+        <div class="degree">{{.Degree}}{{if .Field}} in {{.Field}}{{end}}</div>
+      </div>
+      {{end}}
+    </div>
+    {{end}}
+
+    {{if .Projects}}
+    <div class="section">
+      <div class="section-title">Projects</div>
+      {{range .Projects}}
+      <div class="item">
+        <div class="header">
+          <div class="primary">{{.Name}}</div>
+          <div class="right">{{.Organization}}</div>
+        </div>
+        {{if .Technologies}}<div class="tech">{{.Technologies}}</div>{{end}}
+        <p>{{.Description}}</p>
+      </div>
+      {{end}}
+    </div>
+    {{end}}
+
+    {{if .Skills}}
+    <div class="section">
+      <div class="section-title">Skills</div>
+      {{range .Skills}}
+      <div class="item">
+        <span class="skill-cat">{{.Category}}: </span><span class="skill-items">{{.Items}}</span>
+      </div>
+      {{end}}
+    </div>
+    {{end}}
+
+    {{if or .Certifications .Languages}}
+    <div class="section">
+      <div class="section-title">Credentials</div>
+      {{if .Certifications}}
+      <div class="cred">{{range .Certifications}}{{.Name}} · {{end}}</div>
+      {{end}}
+      {{if .Languages}}
+      <div class="lang">{{range .Languages}}{{.Name}}{{if .Proficiency}} ({{.Proficiency}}){{end}} · {{end}}</div>
+      {{end}}
+    </div>
+    {{end}}
+
+    {{if .Interests}}
+    <div class="section">
+      <div class="section-title">Interests</div>
+      <div class="interests">{{.Interests}}</div>
+    </div>
+    {{end}}
+  </main>
+</body>
+</html>

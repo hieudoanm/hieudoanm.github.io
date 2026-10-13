@@ -1,0 +1,167 @@
+personal:
+  fullName: Hieu Doan
+  jobTitle: Engineer Lead
+  email: hieudoanm@gmail.com
+  phone: +44 745 969 7476
+  address: Birmingham, United Kingdom
+  website: https://hieudoanm.github.io
+  linkedin: https://linkedin.com/in/hieudoanm
+  github: https://github.com/hieudoanm
+
+summary: |
+  Software engineer with 10+ years of experience in full-stack development and AI systems, with a strong academic foundation in psychology. Passionate about applying computational models and data-driven approaches to understand brain function and behavior.
+
+experience:
+  - id: exp-1
+    company: National Australia Bank (NAB)
+    role: Engineer Lead
+    location: Ho Chi Minh City, Vietnam
+    startDate: July 2025
+    endDate: Present
+    description: |
+      - Lead a cross-functional team delivering generative AI solutions for banking.
+      - Architect secure, cloud-native AI platforms, ensuring scalability and regulatory compliance.
+      - Collaborate with stakeholders to define AI roadmaps aligned with business strategy and customer needs.
+      - Establish engineering standards for model deployment, testing, and monitoring in production.
+      - Mentor engineers and foster a customer-obsessed culture of innovation and responsible AI.
+      - Key projects: House Pricing Prediction (automated property valuation using machine learning); Document Classification & Extraction (streamlined mortgage document processing with NLP and computer vision).
+
+  - id: exp-2
+    company: National Australia Bank (NAB)
+    role: Senior Software Engineer
+    location: Ho Chi Minh City, Vietnam
+    startDate: August 2021
+    endDate: June 2025
+    description: |
+      - Built and maintained full-stack web applications supporting millions of daily transactions.
+      - Developed scalable back-end services and RESTful APIs using Java, Spring Boot and Kafka.
+      - Enhanced front-end interfaces for internal banking systems, focusing on usability and performance.
+      - Implemented CI/CD pipelines, automated testing, and improved deployment reliability.
+      - Collaborated closely with product and security teams to meet compliance and regulatory standards.
+
+  - id: exp-3
+    company: BoostCommerce
+    role: Software Engineer
+    location: Hanoi, Vietnam
+    startDate: March 2019
+    endDate: March 2021
+    description: |
+      - Developed Shopify applications used by thousands of merchants worldwide.
+      - Worked on both front-end and back-end features, integrating third-party services and APIs.
+      - Improved system scalability and performance through optimized database queries and code refactoring.
+      - Participated in sprint planning and Agile ceremonies to deliver customer-focused features.
+
+  - id: exp-4
+    company: Admetrics
+    role: Software Engineer
+    location: Frankfurt am Main, Germany
+    startDate: February 2017
+    endDate: January 2019
+    description: |
+      - Built and optimized data visualization dashboards for marketing analytics products.
+      - Implemented interactive UI components using modern JavaScript frameworks.
+      - Collaborated with data scientists to integrate statistical models into web applications.
+
+  - id: exp-5
+    company: Witrafi
+    role: Software Engineer
+    location: Lahti, Finland
+    startDate: January 2015
+    endDate: January 2017
+    description: |
+      - Developed core UI features for a smart parking management system.
+      - Worked closely with cross-border teams to deliver customer-facing solutions.
+
+education:
+  - id: edu-1
+    school: University of Birmingham
+    degree: Master of Science
+    field: MSc of Cognitive Neuroimaging & Data Science
+    location: Birmingham, United Kingdom
+    startDate: September 2026 - September 2027 (1 year)
+    endDate:
+    gpa:
+    description: |
+      TBD
+    relevantSubjects:
+    interests:
+
+  - id: edu-2
+    school: Royal Melbourne Institute of Technology (RMIT)
+    degree: Bachelor of Psychology
+    field:
+    location: Ho Chi Minh City, Vietnam
+    startDate: October 2022 - September 2025 (3 years)
+    endDate:
+    gpa: 3.6/4
+    description: |
+      Capstone project: Effects of Antidepressant and Antimuscarinic on Obstructive Sleep Apnea: A Meta-Analysis of Combination Treatment (systematic review and meta-analysis of combined pharmacological therapy)
+    relevantSubjects: Biological Psychology, Cognitive Psychology, Developmental Psychology, Research Methods in Psychology, Research Project, Psychology Assessment & Individual Differences, Foundations of AI for STEM
+    interests: Cognitive Neuroscience, Computational Modelling of Neural Systems, Artificial Intelligence in Neuroscience, Neuropsychological Rehabilitation, Neuroinformatics
+
+  - id: edu-3
+    school: LAB University of Applied Sciences
+    degree: Bachelor of Business Information Technology
+    field:
+    location: Lahti, Finland
+    startDate: September 2013 - December 2016 (3.5 years)
+    endDate:
+    gpa: 4.36/5
+    description: |
+      Capstone project: Application of CI/CD in Software Development (Continuous Integration and Continuous Delivery for Web Applications)
+    relevantSubjects: Introduction to Programming, Object-Oriented Programming, Web Application Development, Agile Software Development Methods, Testing, Databases, Structured Data Representation, Information Systems Analysis and Design, Hardware and Operating Systems
+    interests: Software Development, Web Application Development, Database Systems, Agile Methodologies, Cloud-based Solutions
+
+projects:
+  - id: proj-1
+    name: House Pricing Prediction
+    organization: National Australia Bank (NAB)
+    description: |
+      Automated property valuation using machine learning.
+
+  - id: proj-2
+    name: Document Classification & Extraction
+    organization: National Australia Bank (NAB)
+    description: |
+      Streamlined mortgage document processing with NLP and computer vision.
+
+skills:
+  - id: skill-1
+    category: Programming Languages
+    items: TypeScript, Go, Rust, Java, Python, Kotlin, Swift
+  - id: skill-2
+    category: Web Technologies
+    items: React, Next.js, GraphQL, tRPC, TailwindCSS
+  - id: skill-3
+    category: DevOps
+    items: Docker, GitHub Actions, AWS
+  - id: skill-4
+    category: Back-end
+    items: Spring Boot, Kafka, RESTful APIs
+  - id: skill-5
+    category: AI & Data
+    items: Generative AI, Machine Learning, NLP, Computer Vision
+
+certifications: []
+
+languages:
+  - id: lang-1
+    name: English
+    proficiency: Fluent
+  - id: lang-2
+    name: Vietnamese
+    proficiency: Native
+
+interests: Open Source, Reading, Learning
+
+references:
+  - id: ref-1
+    name: Eric Truong Quang
+    title: Product Consultant
+    organization: National Australia Bank
+    email: eric.truongquang@nab.com.au
+  - id: ref-2
+    name: Le Tran Hoang Duy
+    title: Associate Lecturer, Psychology
+    organization: RMIT
+    email: duy.le28@rmit.edu.vn

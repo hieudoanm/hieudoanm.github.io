@@ -111,14 +111,6 @@ pdf,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-h
 pdf,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.rpm
 pdf,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.msi
 pdf,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.exe
-resume,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.aab
-resume,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.apk
-resume,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.dmg
-resume,appimage,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.AppImage
-resume,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.deb
-resume,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.rpm
-resume,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.msi
-resume,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.exe
 store,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.aab
 store,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.apk
 store,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.dmg
@@ -191,3 +183,7 @@ dbml,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/down
 dbml,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-arm64
 dbml,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-amd64
 dbml,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-arm64
+cv,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-darwin-amd64
+cv,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-darwin-arm64
+cv,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-linux-amd64
+cv,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-linux-arm64

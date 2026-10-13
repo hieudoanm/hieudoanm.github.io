@@ -1,0 +1,98 @@
+# landify.yaml for CV
+type: product
+
+theme:
+  base: '#f7f8fa'
+  primary: '#7c3aed'
+  secondary: '#0ea5e9'
+  neutral: '#555f6e'
+  info: '#2563eb'
+  warning: '#d97706'
+  success: '#16a34a'
+  error: '#dc2626'
+  radius: '10px'
+
+site:
+  name: CV
+  mark: '📄'
+  description: >-
+    A Go CLI and HTTP server to convert CV YAML into PDF, HTML, and Markdown.
+  nav:
+    - label: Features
+      href: '#features'
+    - label: Templates
+      href: '#templates'
+    - label: Get started
+      href: '#cta'
+
+  og:
+    title: CV - Resume Builder
+    description: >-
+      Convert CV YAML to PDF, HTML, and Markdown using beautiful templates. CLI and HTTP API.
+    image: 'https://hieudoanm.github.io/packages/app/headless/cv/public/og/og.png'
+    image_alt: 'CV — Resume Builder'
+    url: 'https://hieudoanm.github.io/packages/app/headless/cv/public/'
+    kicker: 'CLI + HTTP API'
+    tags:
+      - 'Resume builder'
+      - 'PDF generation'
+      - 'CV templates'
+
+hero:
+  badge: '⚡ Fast & Simple'
+  headline: Convert CV YAML to PDF, HTML & Markdown
+  subheadline: >-
+    Write your CV once in YAML. Generate beautiful PDFs with 64 templates across 8 styles.
+    Available as CLI and HTTP API.
+  primary:
+    label: Get started
+    href: '#cta'
+  secondary:
+    label: View templates
+    href: '#templates'
+  image:
+    src: 'demo/demo.png'
+    alt: CV template gallery
+
+features:
+  heading: Features
+  sub: Everything you need to build professional resumes.
+  items:
+    - icon: '⚡'
+      title: Zero dependencies
+      body: >-
+        Single binary with no runtime dependencies. Uses pure Go HTML-to-PDF engine.
+    - icon: '🔧'
+      title: CLI & HTTP API
+      body: >-
+        Use as a command-line tool or expose as a REST API server for programmatic PDF generation.
+    - icon: '🎨'
+      title: 64 Beautiful Templates
+      body: >-
+        8 styles × 8 variants: Classic, Minimal, Sidebar, Bands, Colorful, Natural, Soft, Specialty.
+
+demo:
+  heading: Demo
+  sub: A short video walkthrough of your product.
+  video:
+    src: 'demo/demo.mp4'
+    poster: 'demo/poster.png'
+
+cta:
+  icon: '🚀'
+  heading: Ready to build your resume?
+  body: >-
+    Build the CLI in seconds and start generating professional PDFs from YAML.
+  button:
+    label: Get Started
+    href: 'https://github.com/hieudoanm/hieudoanm.github.io/tree/main/packages/app/headless/cv'
+
+footer:
+  copyright: '© 2026 CV. Built with Landify.'
+  links:
+    - label: Features
+      href: '#features'
+    - label: Templates
+      href: '#templates'
+    - label: Get started
+      href: '#cta'

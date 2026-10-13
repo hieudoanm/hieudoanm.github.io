@@ -256,23 +256,6 @@ cards:
       success: '#16a34a'
       error: '#b91c1c'
 
-  - app: productivity/resume
-    url: 'https://hieudoanm.github.io/open/resume/'
-    name: Resume
-    kicker: '64 templates, one export'
-    title: 'A resume builder that exports'
-    description: 'A free resume builder with 64 templates, live preview and PDF export.'
-    tags: ['64 templates', 'Live preview', 'PDF export']
-    theme:
-      base: '#fdfbf7'
-      content: '#1a2530'
-      primary: '#1e3a5f'
-      secondary: '#b08d2e'
-      info: '#2563eb'
-      warning: '#b45309'
-      success: '#1e8449'
-      error: '#9f1239'
-
   - app: shopping/store
     url: 'https://hieudoanm.github.io/open/store/'
     name: Store
