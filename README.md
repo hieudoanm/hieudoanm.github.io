@@ -13,11 +13,20 @@
 [twitter]: https://x.com/hieudoanm
 [instagram]: https://instagram.com/hieudoanm.github.io
 
-## Neuroimaging Projects
+## Neuroimaging Projects (3)
 
-- [EEG Lab](https://github.com/hieudoanm/lab.eeg)
-- [MEG Lab](https://github.com/hieudoanm/lab.meg)
-- [MRI Lab](https://github.com/hieudoanm/lab.mri)
+| No  | Name      | Repository         | Releases                    |
+| --- | --------- | ------------------ | --------------------------- |
+| 01  | `EEG Lab` | [lab.eeg][lab-eeg] | [Download][lab-eeg-release] |
+| 02  | `MEG Lab` | [lab.meg][lab-meg] | [Download][lab-meg-release] |
+| 03  | `MRI Lab` | [lab.mri][lab-mri] | [Download][lab-mri-release] |
+
+[lab-eeg]: https://github.com/hieudoanm/lab.eeg
+[lab-meg]: https://github.com/hieudoanm/lab.meg
+[lab-mri]: https://github.com/hieudoanm/lab.mri
+[lab-eeg-release]: https://github.com/hieudoanm/lab.eeg/releases/tag/latest
+[lab-meg-release]: https://github.com/hieudoanm/lab.meg/releases/tag/latest
+[lab-mri-release]: https://github.com/hieudoanm/lab.mri/releases/tag/latest
 
 ## [Open Releases (30)](https://hieudoanm.github.io/open)
 
@@ -36,13 +45,13 @@
 
 ---
 
-### Headless (7)
+### Headless (8)
 
 | No  | Platform | Category        | Name           | Open                        | Releases                            |
 | --- | -------- | --------------- | -------------- | --------------------------- | ----------------------------------- |
 | 4   | Headless | Developer Tools | Backbone       | [Open][open-backbone]       | [Releases][releases-backbone]       |
 | 5   | Headless | Developer Tools | Browserverless | [Open][open-browserverless] | [Releases][releases-browserverless] |
-| 6   | Hybrid   | Developer Tools | DBML           | [Open][open-dbml]           | [Releases][releases-dbml]           |
+| 6   | Headless | Developer Tools | DBML           | [Open][open-dbml]           | [Releases][releases-dbml]           |
 | 7   | Headless | Developer Tools | J.A.C.K.       | [Open][open-jack]           | [Releases][releases-jack]           |
 | 8   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
 | 9   | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
@@ -51,7 +60,7 @@
 
 ---
 
-### Hybrid (20)
+### Hybrid (19)
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
