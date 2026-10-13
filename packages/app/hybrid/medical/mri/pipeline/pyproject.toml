@@ -6,7 +6,7 @@ readme = "README.md"
 # Pinned to the exact interpreter the lock was resolved for; the project targets
 # this one version only. ruff's target-version and pyright's pythonVersion below
 # match it so the source language level and the runtime agree.
-requires-python = "==3.14.8"
+requires-python = "==3.15.0"
 dependencies = [
     "typer==0.27.3",
     "pydantic==2.14.1",
