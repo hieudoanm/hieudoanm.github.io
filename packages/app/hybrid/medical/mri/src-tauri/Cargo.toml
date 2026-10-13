@@ -22,7 +22,7 @@ serde_json = "=1.0.154"
 serde_yaml = "=0.9.34"
 tauri = { version = "=2.12.3", features = [] }
 tauri-plugin-dialog = "=2.8.2"
-tauri-plugin-log = "=2.10.0"
+tauri-plugin-log = "=2.10.1"
 thiserror = "=2.0.21"
 
 [dev-dependencies]
