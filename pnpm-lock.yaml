@@ -2139,8 +2139,8 @@ importers:
         specifier: 16.4.0
         version: 16.4.0(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.4.1)(@playwright/test@1.64.0)(@types/node@26.6.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sass@1.105.1)
       openai:
-        specifier: 7.32.0
-        version: 7.32.0(@aws-sdk/credential-provider-node@3.972.86)(@smithy/signature-v4@5.7.4)(undici@7.28.0)(ws@8.21.3)(zod@4.6.7)
+        specifier: 7.33.0
+        version: 7.33.0(@aws-sdk/credential-provider-node@3.972.86)(@smithy/signature-v4@5.7.4)(undici@7.28.0)(ws@8.21.3)(zod@4.6.7)
       pdf-lib:
         specifier: 1.17.1
         version: 1.17.1
@@ -11091,8 +11091,8 @@ packages:
     resolution: {integrity: sha512-MVHddDVweXZF3awtlAS+6pgKLlm/JgxZ90+/NBurBoQctVOOB/zDdVjcyPzQ+0laDGbsWgrRkflI65sQeOgT9Q==}
     engines: {node: '>=8'}
 
-  openai@7.32.0:
-    resolution: {integrity: sha512-avqxu/jl1gsVBCBgFNPr9sTh+wZppQphuhhFy1zEvAJxEaJ4t0ery6hZdOT9kws/EcNTARoQcZs2IT3bliE1SA==}
+  openai@7.33.0:
+    resolution: {integrity: sha512-OtC8xefTzjyamDjagrVvuZzoB8YiT/xhg9QbBo8cFt+FtaL5wj2eX5CuQcAS2DqNEYqzXIhV3+q4GG2dweYgiw==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
@@ -23537,7 +23537,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openai@7.32.0(@aws-sdk/credential-provider-node@3.972.86)(@smithy/signature-v4@5.7.4)(undici@7.28.0)(ws@8.21.3)(zod@4.6.7):
+  openai@7.33.0(@aws-sdk/credential-provider-node@3.972.86)(@smithy/signature-v4@5.7.4)(undici@7.28.0)(ws@8.21.3)(zod@4.6.7):
     optionalDependencies:
       '@aws-sdk/credential-provider-node': 3.972.86
       '@smithy/signature-v4': 5.7.4
