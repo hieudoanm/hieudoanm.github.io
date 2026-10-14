@@ -24,7 +24,8 @@ Examples:
   dbml mermaid schema.dbml -o diagram.mmd
   dbml svg schema.dbml -o diagram.svg
   dbml all schema.dbml --output-dir ./output
-  dbml serve --port 8080`,
+  dbml serve --port 8080
+  dbml mcp serve`,
 		SilenceUsage:  true,
 		SilenceErrors: true,
 		Version:       version,
@@ -39,6 +40,7 @@ Examples:
 		newSVGCommand(stdout),
 		newAllCommand(stdout),
 		newServeCommand(stdout),
+		newMCPCommand(stdout),
 	)
 	return root
 }

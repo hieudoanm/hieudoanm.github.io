@@ -74,7 +74,7 @@ Parser (internal/dbml)
     ↓
 Generators (SQL, Mermaid, SVG)
     ↓
-CLI Commands (cmd/) / HTTP Handlers (internal/server)
+CLI Commands (cmd/) / HTTP Handlers (internal/server) / MCP Tools (internal/mcp)
 ```
 
 Do not mix HTTP logic into the parser.
@@ -97,6 +97,9 @@ dbml/
 ├── internal/
 │   ├── dbml/
 │   │   ├── parser.go    # DBML parser + SQL/Mermaid/SVG generators
+│   ├── mcp/
+│   │   ├── protocol.go  # MCP JSON-RPC transport over stdio
+│   │   └── tools.go     # MCP tool catalogue + handlers
 │   └── server/
 │       └── server.go    # HTTP server with REST API
 │
@@ -122,6 +125,7 @@ dbml mermaid schema.dbml -o diagram.mmd
 dbml svg schema.dbml -o diagram.svg
 dbml all schema.dbml --output-dir ./output
 dbml serve --port 8080
+dbml mcp serve
 ```
 
 ### `sql`
@@ -150,6 +154,11 @@ POST /api/v1/convert                  - Convert DBML to multiple formats
 POST /api/v1/convert/sql              - Convert DBML to SQL only
 POST /api/v1/convert/mermaid          - Convert DBML to Mermaid only
 ```
+
+### `mcp`
+
+Starts an MCP (Model Context Protocol) server over stdio (`dbml mcp serve`) for
+LLM clients. Tools: `dbml_sql`, `dbml_mermaid`, `dbml_svg`, `dbml_parse`.
 
 Request (JSON):
 ```json

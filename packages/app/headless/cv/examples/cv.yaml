@@ -1,114 +1,120 @@
 personal:
   fullName: Hieu Doan
-  jobTitle: Engineer Lead
-  email: hieudoanm@gmail.com
+  jobTitle: Fullstack Software Engineer
+
+contact:
+  email: hieumdoan@gmail.com
   phone: +44 745 969 7476
   address: Birmingham, United Kingdom
+
+websites:
   website: https://hieudoanm.github.io
   linkedin: https://linkedin.com/in/hieudoanm
   github: https://github.com/hieudoanm
 
-summary: |
-  Software engineer with 10+ years of experience in full-stack development and AI systems, with a strong academic foundation in psychology. Passionate about applying computational models and data-driven approaches to understand brain function and behavior.
+summary: ''
 
 experience:
   - id: exp-1
     company: National Australia Bank (NAB)
     role: Engineer Lead
     location: Ho Chi Minh City, Vietnam
-    startDate: July 2025
-    endDate: Present
+    startDate: October 2025
+    endDate: September 2026
     description: |
-      - Lead a cross-functional team delivering generative AI solutions for banking.
-      - Architect secure, cloud-native AI platforms, ensuring scalability and regulatory compliance.
-      - Collaborate with stakeholders to define AI roadmaps aligned with business strategy and customer needs.
-      - Establish engineering standards for model deployment, testing, and monitoring in production.
-      - Mentor engineers and foster a customer-obsessed culture of innovation and responsible AI.
-      - Key projects: House Pricing Prediction (automated property valuation using machine learning); Document Classification & Extraction (streamlined mortgage document processing with NLP and computer vision).
+      - Led a cross-functional engineering team delivering AI solutions for personal home lending, translating mortgage business requirements into secure, production-ready applications.
+      - Architected cloud-native AI platforms supporting home lending workflows, with an emphasis on scalability, reliability, data security, and compliance with enterprise banking standards.
+      - Led AI initiatives for automated property valuation and mortgage document classification and information extraction using machine learning, natural language processing, and computer vision.
+      - Supported the modernisation of mortgage processing through AI-driven capabilities designed to streamline property assessment, document handling, and information extraction for lending operations.
+      - Collaborated with business stakeholders and engineering teams to define AI delivery roadmaps, establish production engineering standards, and mentor engineers in building reliable, maintainable banking solutions.
 
   - id: exp-2
     company: National Australia Bank (NAB)
-    role: Senior Software Engineer
+    role: Senior Analyst Engineer (Fullstack)
     location: Ho Chi Minh City, Vietnam
-    startDate: August 2021
-    endDate: June 2025
+    startDate: October 2023
+    endDate: September 2025
     description: |
-      - Built and maintained full-stack web applications supporting millions of daily transactions.
-      - Developed scalable back-end services and RESTful APIs using Java, Spring Boot and Kafka.
-      - Enhanced front-end interfaces for internal banking systems, focusing on usability and performance.
-      - Implemented CI/CD pipelines, automated testing, and improved deployment reliability.
-      - Collaborated closely with product and security teams to meet compliance and regulatory standards.
+      - Played a core engineering role in the Virtual Squad modernisation initiative, helping migrate Banker Tools from AngularJS to React to improve the maintainability and usability of internal banking applications.
+      - Contributed to full-stack development and integration for banking applications supporting personal home lending operations, collaborating with engineering teams and stakeholders to deliver business-focused functionality.
+      - Earned a Top 3 placement in an NAB hackathon with a generative AI application and reached the Top 8 finalists with a Feature Flags Manager solution, demonstrating innovation and rapid prototyping in an enterprise banking environment.
 
   - id: exp-3
+    company: National Australia Bank (NAB)
+    role: Analyst Engineer (Fullstack)
+    location: Ho Chi Minh City, Vietnam
+    startDate: August 2021
+    endDate: September 2023
+    description: |
+      - Developed frontend applications using React and Apollo GraphQL for enterprise banking systems, building interactive user interfaces and integrating GraphQL APIs to support banking workflows.
+      - Implemented backend services and RESTful APIs using Java and Spring Boot, with Kafka for event-driven integration across enterprise banking systems.
+      - Contributed to the NAB Data Hub (NDH) initiative, supporting data migration from the HOD database to the central data platform and enabling data integration across banking systems.
+
+  - id: exp-4
     company: BoostCommerce
-    role: Software Engineer
+    role: Software Engineer (Fullstack)
     location: Hanoi, Vietnam
     startDate: March 2019
     endDate: March 2021
     description: |
-      - Developed Shopify applications used by thousands of merchants worldwide.
-      - Worked on both front-end and back-end features, integrating third-party services and APIs.
-      - Improved system scalability and performance through optimized database queries and code refactoring.
-      - Participated in sprint planning and Agile ceremonies to deliver customer-focused features.
+      - Built and optimised full-stack Shopify applications used by thousands of merchants worldwide, delivering customer-facing features and third-party integrations while improving application performance, scalability, and maintainability.
 
-  - id: exp-4
+  - id: exp-5
     company: Admetrics
-    role: Software Engineer
+    role: Software Engineer (Front-end)
     location: Frankfurt am Main, Germany
     startDate: February 2017
     endDate: January 2019
     description: |
-      - Built and optimized data visualization dashboards for marketing analytics products.
-      - Implemented interactive UI components using modern JavaScript frameworks.
-      - Collaborated with data scientists to integrate statistical models into web applications.
+      - Developed interactive marketing analytics dashboards and data visualisations, transforming analytical outputs and statistical models into intuitive user interfaces for data-driven business decisions.
 
-  - id: exp-5
+  - id: exp-6
     company: Witrafi
-    role: Software Engineer
+    role: Software Engineer (Front-end)
     location: Lahti, Finland
     startDate: January 2015
     endDate: January 2017
     description: |
-      - Developed core UI features for a smart parking management system.
-      - Worked closely with cross-border teams to deliver customer-facing solutions.
+      - Developed frontend features for a smart parking management system, collaborating with cross-border engineering teams to deliver reliable, customer-facing software.
 
 education:
   - id: edu-1
-    school: University of Birmingham
+    school: University of Birmingham, School of Psychology
     degree: Master of Science
     field: MSc of Cognitive Neuroimaging & Data Science
     location: Birmingham, United Kingdom
-    startDate: September 2026 - September 2027 (1 year)
-    endDate:
+    startDate: September 2026
+    endDate: September 2027 (1 year)
     gpa:
     description: |
       TBD
     relevantSubjects:
     interests:
-
   - id: edu-2
-    school: Royal Melbourne Institute of Technology (RMIT)
+    school: Royal Melbourne Institute of Technology (RMIT), School of Science, Engineering & Technology
     degree: Bachelor of Psychology
     field:
     location: Ho Chi Minh City, Vietnam
-    startDate: October 2022 - September 2025 (3 years)
-    endDate:
+    startDate: October 2022
+    endDate: September 2025 (3 years)
     gpa: 3.6/4
     description: |
-      Capstone project: Effects of Antidepressant and Antimuscarinic on Obstructive Sleep Apnea: A Meta-Analysis of Combination Treatment (systematic review and meta-analysis of combined pharmacological therapy)
+      - Graduated with Distinction
+      - Research Project: Effects of Antidepressant and Antimuscarinic on Obstructive Sleep Apnea: A Meta-Analysis of Combination Treatment (systematic review and meta-analysis of combined pharmacological therapy)
     relevantSubjects: Biological Psychology, Cognitive Psychology, Developmental Psychology, Research Methods in Psychology, Research Project, Psychology Assessment & Individual Differences, Foundations of AI for STEM
     interests: Cognitive Neuroscience, Computational Modelling of Neural Systems, Artificial Intelligence in Neuroscience, Neuropsychological Rehabilitation, Neuroinformatics
 
   - id: edu-3
-    school: LAB University of Applied Sciences
+    school: LAB University of Applied Sciences, Lahti Campus
     degree: Bachelor of Business Information Technology
     field:
     location: Lahti, Finland
-    startDate: September 2013 - December 2016 (3.5 years)
-    endDate:
+    startDate: September 2013
+    endDate: December 2016 (3.5 years)
     gpa: 4.36/5
     description: |
-      Capstone project: Application of CI/CD in Software Development (Continuous Integration and Continuous Delivery for Web Applications)
+      - Graduated Top of Class
+      - Capstone Project: Application of CI/CD in Software Development (Continuous Integration and Continuous Delivery for Web Applications)
     relevantSubjects: Introduction to Programming, Object-Oriented Programming, Web Application Development, Agile Software Development Methods, Testing, Databases, Structured Data Representation, Information Systems Analysis and Design, Hardware and Operating Systems
     interests: Software Development, Web Application Development, Database Systems, Agile Methodologies, Cloud-based Solutions
 
@@ -117,32 +123,42 @@ projects:
     name: House Pricing Prediction
     organization: National Australia Bank (NAB)
     description: |
-      Automated property valuation using machine learning.
+      Automated Property Valuation using Machine Learning.
 
   - id: proj-2
     name: Document Classification & Extraction
     organization: National Australia Bank (NAB)
     description: |
-      Streamlined mortgage document processing with NLP and computer vision.
+      Streamlined Document Classification/Processing with Computer Vision and NLP.
+
+  - id: proj-3
+    name: Mortgage Factory Applications
+    organization: National Australia Bank (NAB)
+    description: |
+      Automate Home Loan Verification and Approval Process.
 
 skills:
   - id: skill-1
     category: Programming Languages
-    items: TypeScript, Go, Rust, Java, Python, Kotlin, Swift
+    items: TypeScript, Go, Java, Python
   - id: skill-2
-    category: Web Technologies
-    items: React, Next.js, GraphQL, tRPC, TailwindCSS
+    category: Web Development
+    items: React / Next.js, Apollo GraphQL, tRPC, TailwindCSS
   - id: skill-3
     category: DevOps
     items: Docker, GitHub Actions, AWS
   - id: skill-4
     category: Back-end
-    items: Spring Boot, Kafka, RESTful APIs
+    items: Spring Boot, Kafka, RESTful
   - id: skill-5
     category: AI & Data
-    items: Generative AI, Machine Learning, NLP, Computer Vision
+    items: Machine Learning, Natural Language Processing, Computer Vision
 
-certifications: []
+certifications:
+  - id: cert-1
+    name: AWS Certified Solutions Architect - Associate
+    issuer: Amazon Web Services (AWS)
+    date: 2021-09-11
 
 languages:
   - id: lang-1
@@ -152,16 +168,6 @@ languages:
     name: Vietnamese
     proficiency: Native
 
-interests: Open Source, Reading, Learning
+interests: ''
 
-references:
-  - id: ref-1
-    name: Eric Truong Quang
-    title: Product Consultant
-    organization: National Australia Bank
-    email: eric.truongquang@nab.com.au
-  - id: ref-2
-    name: Le Tran Hoang Duy
-    title: Associate Lecturer, Psychology
-    organization: RMIT
-    email: duy.le28@rmit.edu.vn
+references: []

@@ -2,6 +2,8 @@ package cv
 
 type CVData struct {
 	Personal      Personal      `yaml:"personal" json:"personal"`
+	Contact       Contact       `yaml:"contact" json:"contact"`
+	Websites      Websites      `yaml:"websites" json:"websites"`
 	Summary       string        `yaml:"summary" json:"summary"`
 	Experience    []Experience  `yaml:"experience" json:"experience"`
 	Education     []Education   `yaml:"education" json:"education"`
@@ -16,9 +18,15 @@ type CVData struct {
 type Personal struct {
 	FullName string `yaml:"fullName" json:"fullName"`
 	JobTitle string `yaml:"jobTitle" json:"jobTitle"`
-	Email    string `yaml:"email" json:"email"`
-	Phone    string `yaml:"phone" json:"phone"`
-	Address  string `yaml:"address" json:"address"`
+}
+
+type Contact struct {
+	Email   string `yaml:"email" json:"email"`
+	Phone   string `yaml:"phone" json:"phone"`
+	Address string `yaml:"address" json:"address"`
+}
+
+type Websites struct {
 	Website  string `yaml:"website" json:"website"`
 	Linkedin string `yaml:"linkedin" json:"linkedin"`
 	Github   string `yaml:"github" json:"github"`

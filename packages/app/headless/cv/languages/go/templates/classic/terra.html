@@ -5,15 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV - {{.Personal.FullName}}</title>
   <style>
-    @page { margin: 0; size: A4; }
+    @page { margin: 40px; size: A4; }
     html, body {
       margin: 0;
       padding: 0;
-      width: 210mm;
-      height: 297mm;
     }
     body {
-      padding: 36px 40px;
       margin: 0;
       font-family: Garamond, "Times New Roman", serif;
       color: #292524;
@@ -38,11 +35,11 @@
       font-style: italic;
       color: #a16207;
     }
-    .contact {
+    .contact, .websites {
       font-size: 9.5px;
       color: #a8a29e;
-      margin-bottom: 4px;
     }
+    .websites { margin-bottom: 4px; }
     .section-title {
       color: #a16207;
       font-size: 11px;
@@ -63,8 +60,9 @@
     .role { font-size: 11px; font-style: italic; color: #a16207; margin-bottom: 4px; }
     .degree { font-size: 11px; color: #a16207; }
     .tech { font-size: 10px; color: #a8a29e; margin-bottom: 2px; }
-    .skill-cat { font-size: 10.5px; font-weight: 600; color: #a16207; }
+    .skill-cat { font-size: 10.5px; font-weight: 700; color: #a16207; }
     .skill-items { font-size: 10.5px; }
+    .skill-row { margin-bottom: 3px; }
     .cred { font-size: 10.5px; margin-bottom: 4px; }
     .lang { font-size: 10.5px; }
     .interests { font-size: 10.5px; }
@@ -80,12 +78,14 @@
       <div class="job-title">{{.Personal.JobTitle}}</div>
     </div>
     <div class="contact">
-      {{if .Personal.Email}}{{.Personal.Email}} • {{end}}
-      {{if .Personal.Phone}}{{.Personal.Phone}} • {{end}}
-      {{if .Personal.Address}}{{.Personal.Address}}{{end}}
-      {{if .Personal.Website}} • {{.Personal.Website}}{{end}}
-      {{if .Personal.Linkedin}} • {{.Personal.Linkedin}}{{end}}
-      {{if .Personal.Github}} • {{.Personal.Github}}{{end}}
+      {{if .Contact.Email}}{{.Contact.Email}} • {{end}}
+      {{if .Contact.Phone}}{{.Contact.Phone}} • {{end}}
+      {{if .Contact.Address}}{{.Contact.Address}}{{end}}
+    </div>
+    <div class="websites">
+      {{if .Websites.Website}}{{.Websites.Website}}{{end}}
+      {{if .Websites.Linkedin}} • {{.Websites.Linkedin}}{{end}}
+      {{if .Websites.Github}} • {{.Websites.Github}}{{end}}
     </div>
   </header>
 
@@ -102,11 +102,11 @@
     {{range .Experience}}
     <div class="item">
       <div class="header">
-        <div class="primary">{{.Company}}</div>
+        <div class="primary"><strong>{{.Company}}</strong></div>
         <div class="right">{{.StartDate}} – {{.EndDate}}</div>
       </div>
       <div class="role">{{.Role}}{{if .Location}} · {{.Location}}{{end}}</div>
-      {{if .Description}}<p>{{.Description}}</p>{{end}}
+      {{if .Description}}<p>{{description .Description}}</p>{{end}}
     </div>
     {{end}}
   </div>
@@ -118,7 +118,7 @@
     {{range .Education}}
     <div class="item">
       <div class="header">
-        <div class="primary">{{.School}}</div>
+        <div class="primary"><strong>{{.School}}</strong></div>
         <div class="right">{{.StartDate}} – {{.EndDate}}</div>
       </div>
       <div class="degree">{{.Degree}}{{if .Field}} in {{.Field}}{{end}}</div>
@@ -133,11 +133,11 @@
     {{range .Projects}}
     <div class="item">
       <div class="header">
-        <div class="primary">{{.Name}}</div>
+        <div class="primary"><strong>{{.Name}}</strong></div>
         <div class="right">{{.Organization}}</div>
       </div>
       {{if .Technologies}}<div class="tech">{{.Technologies}}</div>{{end}}
-      <p>{{.Description}}</p>
+      <p>{{description .Description}}</p>
     </div>
     {{end}}
   </div>
@@ -147,17 +147,23 @@
   <div class="section">
     <div class="section-title">Skills</div>
     {{range .Skills}}
-    <div class="item">
+    <div class="skill-row">
       <span class="skill-cat">{{.Category}}: </span><span class="skill-items">{{.Items}}</span>
     </div>
     {{end}}
   </div>
   {{end}}
 
-  {{if or .Certifications .Languages}}
+  {{if .Certifications}}
   <div class="section">
-    <div class="section-title">Credentials</div>
-    {{range .Certifications}}<div class="cred">{{.Name}}</div>{{end}}
+    <div class="section-title">Certifications</div>
+    {{range .Certifications}}<div class="cred"><strong>{{.Name}}</strong>{{if .Issuer}} — {{.Issuer}}{{end}}{{if .Date}} ({{.Date}}){{end}}</div>{{end}}
+  </div>
+  {{end}}
+
+  {{if .Languages}}
+  <div class="section">
+    <div class="section-title">Languages</div>
     {{range .Languages}}<div class="lang">{{.Name}}{{if .Proficiency}} ({{.Proficiency}}){{end}}</div>{{end}}
   </div>
   {{end}}

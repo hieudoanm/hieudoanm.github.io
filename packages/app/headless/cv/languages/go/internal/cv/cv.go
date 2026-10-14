@@ -161,7 +161,7 @@ func renderTemplate(data *CVData, templateName string) (string, error) {
 		}
 	}
 
-	tmpl, err := template.ParseFiles(tmplPath)
+	tmpl, err := template.New(filepath.Base(tmplPath)).Funcs(TemplateFuncs()).ParseFiles(tmplPath)
 	if err != nil {
 		return "", err
 	}

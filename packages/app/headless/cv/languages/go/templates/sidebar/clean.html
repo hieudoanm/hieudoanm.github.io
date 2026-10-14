@@ -23,7 +23,9 @@
     .main { flex: 1; padding: 28px 26px; }
     h1 { font-size: 20px; font-weight: 700; margin: 0 0 4px; color: #ffffff; }
     .job-title { font-size: 12px; color: #e0f2fe; margin-bottom: 18px; }
-    .contact { font-size: 10px; margin-bottom: 18px; }
+    .contact, .websites { font-size: 10px; }
+    .contact { margin-bottom: 18px; }
+    .websites { margin-bottom: 18px; }
     .section-title {
       color: #0ea5e9;
       border-bottom: 2px solid #0ea5e9;
@@ -53,8 +55,9 @@
       margin-bottom: 10px;
       color: #e0f2fe;
     }
-    .side-item { margin-bottom: 6px; }
+    .side-item { margin-bottom: 3px; }
     .side-label {
+      font-weight: 700;
       font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 1.2px;
@@ -72,12 +75,14 @@
       <h1>{{.Personal.FullName}}</h1>
       <div class="job-title">{{.Personal.JobTitle}}</div>
       <div class="contact">
-        {{if .Personal.Email}}<div>{{.Personal.Email}}</div>{{end}}
-        {{if .Personal.Phone}}<div>{{.Personal.Phone}}</div>{{end}}
-        {{if .Personal.Address}}<div>{{.Personal.Address}}</div>{{end}}
-        {{if .Personal.Website}}<div>{{.Personal.Website}}</div>{{end}}
-        {{if .Personal.Linkedin}}<div>{{.Personal.Linkedin}}</div>{{end}}
-        {{if .Personal.Github}}<div>{{.Personal.Github}}</div>{{end}}
+        {{if .Contact.Email}}<div>{{.Contact.Email}}</div>{{end}}
+        {{if .Contact.Phone}}<div>{{.Contact.Phone}}</div>{{end}}
+        {{if .Contact.Address}}<div>{{.Contact.Address}}</div>{{end}}
+      </div>
+      <div class="websites">
+        {{if .Websites.Website}}<div>{{.Websites.Website}}</div>{{end}}
+        {{if .Websites.Linkedin}}<div>{{.Websites.Linkedin}}</div>{{end}}
+        {{if .Websites.Github}}<div>{{.Websites.Github}}</div>{{end}}
       </div>
 
       {{if .Skills}}
@@ -109,8 +114,8 @@
         <div class="side-title">Certifications</div>
         {{range .Certifications}}
         <div class="side-item">
-          <div class="side-label">{{.Name}}</div>
-          <div class="side-value">{{.Issuer}}</div>
+          <div class="side-label"><strong>{{.Name}}</strong></div>
+          <div class="side-value">{{.Issuer}}{{if .Date}} · {{.Date}}{{end}}</div>
         </div>
         {{end}}
       </div>
@@ -134,8 +139,8 @@
             <div class="primary">{{.Role}}</div>
             <div class="right">{{.StartDate}} – {{.EndDate}}</div>
           </div>
-          <div class="sub">{{.Company}}{{if .Location}} · {{.Location}}{{end}}</div>
-          {{if .Description}}<p>{{.Description}}</p>{{end}}
+          <div class="sub"><strong>{{.Company}}</strong>{{if .Location}} · {{.Location}}{{end}}</div>
+          {{if .Description}}<p>{{description .Description}}</p>{{end}}
         </div>
         {{end}}
       </div>
@@ -147,7 +152,7 @@
         {{range .Education}}
         <div class="item">
           <div class="header">
-            <div class="primary">{{.School}}</div>
+            <div class="primary"><strong>{{.School}}</strong></div>
             <div class="right">{{.StartDate}} – {{.EndDate}}</div>
           </div>
           <div class="sub">{{.Degree}}{{if .Field}} in {{.Field}}{{end}}</div>
@@ -162,11 +167,11 @@
         {{range .Projects}}
         <div class="item">
           <div class="header">
-            <div class="primary">{{.Name}}</div>
+            <div class="primary"><strong>{{.Name}}</strong></div>
             <div class="right">{{.Organization}}</div>
           </div>
           {{if .Technologies}}<div class="sub">{{.Technologies}}</div>{{end}}
-          <p>{{.Description}}</p>
+          <p>{{description .Description}}</p>
         </div>
         {{end}}
       </div>

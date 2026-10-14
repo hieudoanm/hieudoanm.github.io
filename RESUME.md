@@ -1,166 +1,121 @@
 # Hieu Doan
 
-## Skip To
+## Personal
 
-- [Hieu Doan](#hieu-doan)
-  - [Skip To](#skip-to)
-  - [Overview](#overview)
-  - [Education](#education)
-    - [Master of Science (MSc) of Cognitive Neuroimaging \& Data Science (Computational Neuroscience)](#master-of-science-msc-of-cognitive-neuroimaging--data-science-computational-neuroscience)
-    - [Bachelor of Psychology](#bachelor-of-psychology)
-    - [Bachelor of Business Information Technology](#bachelor-of-business-information-technology)
-  - [Experiences](#experiences)
-    - [Lead Engineer (Full-stack)](#lead-engineer-full-stack)
-    - [Senior Analyst Engineer (Full-stack)](#senior-analyst-engineer-full-stack)
-    - [Analyst Engineer (Full-stack)](#analyst-engineer-full-stack)
-    - [Full-stack Engineer](#full-stack-engineer)
-    - [Front-end Engineer](#front-end-engineer)
-    - [Front-end Developer](#front-end-developer)
+- **Job Title:** Fullstack Software Engineer
 
-## Overview
+## Contact
 
-- `BFF`: Back-end for Front-end
-- `CLI`: Command-Line Interface
-- `DevOps`: Development and Operations
+- **Email:** hieumdoan@gmail.com
+- **Phone:** +44 745 969 7476
+- **Address:** Birmingham, United Kingdom
 
-| No  | Development        | Languages        | Techstack                                       |
-| --- | ------------------ | ---------------- | ----------------------------------------------- |
-| 1   | Data Analyst       | [Python][python] | `pandas` / `numpy` / `matplotlib`               |
-| 2   | Data Science       | [Python][python] | `TensorFlow` / `PyTorch`                        |
-| 3   | Web                | [TypeScript][ts] | `React` - `Next.js` / `TailwindCSS` / `DaisyUI` |
-| 4   | BFF                | [TypeScript][ts] | `GraphQL` / `tRPC`                              |
-| 5   | Back-end           | `Java`           | `Spring Boot` / `PostgreSQL` / `Kafka`          |
-| 6   | DevOps             | `Bash`           | `Docker` / `GitHub Actions`                     |
-| 7   | CLI ([Go][go])     | [Go][go]         | `Cobra` / `BubbleTea`                           |
-| 8   | CLI ([Rust][rust]) | [Rust][rust]     | `Clap` / `RatatUI`                              |
-| 9   | Android            | [Kotlin][kotlin] | `Jetpack Compose`                               |
-| 10  | iOS                | [Swift][swift]   | `SwiftUI`                                       |
+## Websites
 
-[Back to Skip To](#skip-to)
+- **Website:** [https://hieudoanm.github.io](https://hieudoanm.github.io)
+- **LinkedIn:** [https://linkedin.com/in/hieudoanm](https://linkedin.com/in/hieudoanm)
+- **GitHub:** [https://github.com/hieudoanm](https://github.com/hieudoanm)
+
+## Experience
+
+### Engineer Lead at National Australia Bank (NAB)
+
+- **Period:** October 2025 - September 2026
+- **Location:** Ho Chi Minh City, Vietnam
+- Led a cross-functional engineering team delivering AI solutions for personal home lending, translating mortgage business requirements into secure, production-ready applications.
+- Architected cloud-native AI platforms supporting home lending workflows, with an emphasis on scalability, reliability, data security, and compliance with enterprise banking standards.
+- Led AI initiatives for automated property valuation and mortgage document classification and information extraction using machine learning, natural language processing, and computer vision.
+- Supported the modernisation of mortgage processing through AI-driven capabilities designed to streamline property assessment, document handling, and information extraction for lending operations.
+- Collaborated with business stakeholders and engineering teams to define AI delivery roadmaps, establish production engineering standards, and mentor engineers in building reliable, maintainable banking solutions.
+
+### Senior Analyst Engineer (Fullstack) at National Australia Bank (NAB)
+
+- **Period:** October 2023 - September 2025
+- **Location:** Ho Chi Minh City, Vietnam
+- Played a core engineering role in the Virtual Squad modernisation initiative, helping migrate Banker Tools from AngularJS to React to improve the maintainability and usability of internal banking applications.
+- Contributed to full-stack development and integration for banking applications supporting personal home lending operations, collaborating with engineering teams and stakeholders to deliver business-focused functionality.
+- Earned a Top 3 placement in an NAB hackathon with a generative AI application and reached the Top 8 finalists with a Feature Flags Manager solution, demonstrating innovation and rapid prototyping in an enterprise banking environment.
+
+### Analyst Engineer (Fullstack) at National Australia Bank (NAB)
+
+- **Period:** August 2021 - September 2023
+- **Location:** Ho Chi Minh City, Vietnam
+- Developed frontend applications using React and Apollo GraphQL for enterprise banking systems, building interactive user interfaces and integrating GraphQL APIs to support banking workflows.
+- Implemented backend services and RESTful APIs using Java and Spring Boot, with Kafka for event-driven integration across enterprise banking systems.
+- Contributed to the NAB Data Hub (NDH) initiative, supporting data migration from the HOD database to the central data platform and enabling data integration across banking systems.
+
+### Software Engineer (Fullstack) at BoostCommerce
+
+- **Period:** March 2019 - March 2021
+- **Location:** Hanoi, Vietnam
+- Built and optimised full-stack Shopify applications used by thousands of merchants worldwide, delivering customer-facing features and third-party integrations while improving application performance, scalability, and maintainability.
+
+### Software Engineer (Front-end) at Admetrics
+
+- **Period:** February 2017 - January 2019
+- **Location:** Frankfurt am Main, Germany
+- Developed interactive marketing analytics dashboards and data visualisations, transforming analytical outputs and statistical models into intuitive user interfaces for data-driven business decisions.
+
+### Software Engineer (Front-end) at Witrafi
+
+- **Period:** January 2015 - January 2017
+- **Location:** Lahti, Finland
+- Developed frontend features for a smart parking management system, collaborating with cross-border engineering teams to deliver reliable, customer-facing software.
 
 ## Education
 
-### Master of Science (MSc) of Cognitive Neuroimaging & Data Science (Computational Neuroscience)
+### Master of Science in MSc of Cognitive Neuroimaging & Data Science - University of Birmingham, School of Psychology
 
-- University: [University of Birmingham][uob]
-- Location: [Birmingham, United Kingdom][birmingham]
-- Period: September 2026 - September 2027 (1 year)
-- Research Project: TBD
+- **Period:** September 2026 - September 2027 (1 year)
+- **Location:** Birmingham, United Kingdom
 
----
+TBD
 
-### Bachelor of Psychology
+### Bachelor of Psychology - Royal Melbourne Institute of Technology (RMIT), School of Science, Engineering & Technology
 
-- University: [Royal Melbourne Institute of Technology (RMIT)][rmit]
-- Location: [Ho Chi Minh City, Vietnam][hcm]
-- Period: October 2022 - September 2025 (3 years)
-- Research Project: Effects of Antidepressant and Antimuscarinic on Obstructive Sleep Apnea: A Meta-Analysis of Combination Treatment
+- **Period:** October 2022 - September 2025 (3 years)
+- **Location:** Ho Chi Minh City, Vietnam
+- **GPA:** 3.6/4
 
----
+- Graduated with Distinction
+- Research Project: Effects of Antidepressant and Antimuscarinic on Obstructive Sleep Apnea: A Meta-Analysis of Combination Treatment (systematic review and meta-analysis of combined pharmacological therapy)
 
-### Bachelor of Business Information Technology
+### Bachelor of Business Information Technology - LAB University of Applied Sciences, Lahti Campus
 
-- University: [LAB University of Applied Sciences][lab]
-- Location: [Lahti, Finland][lahti]
-- Period: September 2013 - December 2016 (3.5 years)
-- Thesis: Application of CI/CD in Software Development
+- **Period:** September 2013 - December 2016 (3.5 years)
+- **Location:** Lahti, Finland
+- **GPA:** 4.36/5
 
----
+- Graduated Top of Class
+- Capstone Project: Application of CI/CD in Software Development (Continuous Integration and Continuous Delivery for Web Applications)
 
-[Back to Skip To](#skip-to)
+## Projects
 
-## Experiences
+### House Pricing Prediction at National Australia Bank (NAB)
 
-### Lead Engineer (Full-stack)
+Automated Property Valuation using Machine Learning.
 
-- Company: [NAB][nab]
-- Location: [Ho Chi Minh City, Vietnam][hcm]
-- Period: October 2026 to September 2027 (1 year)
-- Techstack
-  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`, `Kafka`
-  - Front-end: [TypeScript][ts], `React`, `Apollo GraphQL`
+### Document Classification & Extraction at National Australia Bank (NAB)
 
----
+Streamlined Document Classification/Processing with Computer Vision and NLP.
 
-### Senior Analyst Engineer (Full-stack)
+### Mortgage Factory Applications at National Australia Bank (NAB)
 
-- Company: [NAB][nab]
-- Location: [Ho Chi Minh City, Vietnam][hcm]
-- Period: October 2023 to September 2025 (2 years)
-  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`, `Kafka`
-  - Front-end: [TypeScript][ts], `React`, `Apollo GraphQL`
+Automate Home Loan Verification and Approval Process.
 
----
+## Skills
 
-### Analyst Engineer (Full-stack)
+- **Programming Languages:** TypeScript, Go, Java, Python
+- **Web Development:** React / Next.js, Apollo GraphQL, tRPC, TailwindCSS
+- **DevOps:** Docker, GitHub Actions, AWS
+- **Back-end:** Spring Boot, Kafka, RESTful
+- **AI & Data:** Machine Learning, Natural Language Processing, Computer Vision
 
-- Company: [NAB][nab]
-- Location: [Ho Chi Minh City, Vietnam][hcm]
-- Period: August 2021 to September 2023 (2 years 1 month)
-- Techstack
-  - Back-end: `Java`, `Spring Boot`, `PostgreSQL`, `Kafka`
-  - Front-end: [TypeScript][ts], `React`, `Apollo GraphQL`
+## Certifications
 
----
+- **AWS Certified Solutions Architect - Associate** — Amazon Web Services (AWS) (2021-09-11)
 
-### Full-stack Engineer
+## Languages
 
-- Company: [BoostCommerce][boostcommerce]
-- Location: [Hanoi, Vietnam][hanoi]
-- Period: March 2019 to April 2021 (2 years 2 months)
-- Techstack
-  - Front-end: [TypeScript][ts], `React`, `Redux`
-  - Back-end: `Node.js`, `Express.js`, `MongoDB`, `AWS`
-
----
-
-### Front-end Engineer
-
-- Company: [admetrics][admetrics]
-- Location: [Frankfurt am Main, Germany][frankfurt]
-- Period: March 2017 to February 2019 (2 years)
-- Techstack: [TypeScript][ts], `angular.js`, `Angular`
-
----
-
-### Front-end Developer
-
-- Company: [Witrafi][witrafi]
-- Location: [Helsinki, Finland][helsinki]
-- Period: January 2015 to February 2017 (2 years 2 months)
-- Techstack: `JavaScript`, `angular.js`
-
-[Back to Skip To](#skip-to)
-
----
-
-<!-- Universities -->
-
-[rmit]: https://www.rmit.edu.vn/study-at-rmit/study-areas/psychology
-[uob]: https://www.birmingham.ac.uk/study/postgraduate/subjects/psychology-courses/cognitive-neuroimaging-and-data-science-msc
-[lab]: https://lab.fi/en/study/bachelor-business-administration-business-information-systems
-
-<!-- Companines -->
-
-[nab]: https://www.nab.com.au/
-[boostcommerce]: https://boostcommerce.net
-[admetrics]: https://www.admetrics.io/en/
-[witrafi]: https://witrafi.com/en
-
-<!-- Location -->
-
-[hcm]: https://maps.app.goo.gl/PBf5Eu7qu3Uut6iu6
-[hanoi]: https://maps.app.goo.gl/zN1noboq7zR3fuxC7
-[lahti]: https://maps.app.goo.gl/y7djVyhpTKNMzPK5A
-[frankfurt]: https://maps.app.goo.gl/mx4bEs328h1j86sK8
-[helsinki]: https://maps.app.goo.gl/wERe3bugttAKcAGUA
-[birmingham]: https://maps.app.goo.gl/ZP7kJfwY2mN4BpzD6
-
-<!-- Techstack -->
-
-[ts]: https://www.typescriptlang.org/
-[go]: https://go.dev/
-[rust]: https://www.rust-lang.org/
-[kotlin]: https://kotlinlang.org/
-[swift]: https://www.swift.org/
-[python]: https://www.python.org/
+- **English:** Fluent
+- **Vietnamese:** Native

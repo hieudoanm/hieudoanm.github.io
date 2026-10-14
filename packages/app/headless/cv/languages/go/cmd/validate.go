@@ -42,8 +42,8 @@ func validateCV(data *cv.CVData) error {
 	if data.Personal.FullName == "" {
 		return fmt.Errorf("personal.fullName is required")
 	}
-	if data.Personal.Email == "" {
-		return fmt.Errorf("personal.email is required")
+	if data.Contact.Email == "" {
+		return fmt.Errorf("contact.email is required")
 	}
 	if data.Personal.JobTitle == "" {
 		return fmt.Errorf("personal.jobTitle is required")

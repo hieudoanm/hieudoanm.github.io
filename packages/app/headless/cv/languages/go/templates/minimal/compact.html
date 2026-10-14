@@ -23,7 +23,7 @@
     }
     h1 { font-size: 20px; font-weight: 700; margin: 0; color: #111827; }
     .job-title { font-size: 11px; color: #6b7280; }
-    .contact {
+    .contact, .websites {
       flex-direction: column;
       align-items: flex-end;
       font-size: 8.5px;
@@ -49,8 +49,9 @@
     .role-line { font-size: 9.5px; line-height: 1.4; }
     .degree-line { font-size: 10px; }
     .tech { font-size: 9px; color: #6b7280; }
-    .skill-cat { font-size: 9.5px; font-weight: 600; }
+    .skill-cat { font-size: 9.5px; font-weight: 700; }
     .skill-items { font-size: 9.5px; }
+    .skill-row { margin-bottom: 3px; }
     .cred { font-size: 9.5px; line-height: 1.5; }
     .lang { font-size: 9.5px; }
     .interests { font-size: 9.5px; line-height: 1.5; }
@@ -66,8 +67,8 @@
       <div class="job-title">{{.Personal.JobTitle}}</div>
     </div>
     <div class="contact">
-      {{if .Personal.Email}}{{.Personal.Email}}<br>{{end}}
-      {{if .Personal.Phone}}{{.Personal.Phone}}{{end}}
+      {{if .Contact.Email}}{{.Contact.Email}}<br>{{end}}
+      {{if .Contact.Phone}}{{.Contact.Phone}}{{end}}
     </div>
   </header>
 
@@ -84,11 +85,11 @@
     {{range .Experience}}
     <div class="item">
       <div class="header">
-        <div class="primary">{{.Role}}, {{.Company}}</div>
+        <div class="primary">{{.Role}}, <strong>{{.Company}}</strong></div>
         <div class="right">{{.StartDate}} – {{.EndDate}}</div>
       </div>
       {{if .Location}}<div class="location">{{.Location}}</div>{{end}}
-      {{if .Description}}<div class="role-line"><p>{{.Description}}</p></div>{{end}}
+      {{if .Description}}<div class="role-line"><p>{{description .Description}}</p></div>{{end}}
     </div>
     {{end}}
   </div>
@@ -99,7 +100,7 @@
     <div class="section-title">Skills</div>
     <div style="font-size:9.5px;line-height:1.5">
       {{range .Skills}}
-      <div><span class="skill-cat">{{.Category}}: </span><span class="skill-items">{{.Items}}</span></div>
+      <div class="skill-row"><span class="skill-cat">{{.Category}}: </span><span class="skill-items">{{.Items}}</span></div>
       {{end}}
     </div>
   </div>
@@ -111,7 +112,7 @@
     {{range .Education}}
     <div class="item">
       <div class="header">
-        <div class="primary">{{.Degree}}{{if .Field}} in {{.Field}}{{end}} — {{.School}}</div>
+        <div class="primary">{{.Degree}}{{if .Field}} in {{.Field}}{{end}} — <strong>{{.School}}</strong></div>
         <div class="right">{{.StartDate}} – {{.EndDate}}</div>
       </div>
     </div>
@@ -127,19 +128,35 @@
       <strong>{{.Name}}</strong>
       {{if .Organization}}<span style="color:#6b7280"> — {{.Organization}}</span>{{end}}
       {{if .Technologies}}<div style="color:#6b7280">{{.Technologies}}</div>{{end}}
-      {{if .Description}}<div>{{.Description}}</div>{{end}}
+      {{if .Description}}<div>{{description .Description}}</div>{{end}}
     </div>
     {{end}}
   </div>
   {{end}}
 
-  {{if or .Certifications .Languages .Interests}}
+  {{if .Certifications}}
   <div class="section">
-    <div class="section-title">Certifications & Languages</div>
+    <div class="section-title">Certifications</div>
     <div style="font-size:9.5px;line-height:1.5">
-      {{if .Certifications}}<div>{{range .Certifications}}{{.Name}} · {{end}}</div>{{end}}
-      {{if .Languages}}<div>{{range .Languages}}{{.Name}}{{if .Proficiency}} ({{.Proficiency}}){{end}} · {{end}}</div>{{end}}
-      {{if .Interests}}<div>Interests: {{.Interests}}</div>{{end}}
+      <div>{{range .Certifications}}<strong>{{.Name}}</strong>{{if .Issuer}} — {{.Issuer}}{{end}}{{if .Date}} ({{.Date}}){{end}} · {{end}}</div>
+    </div>
+  </div>
+  {{end}}
+
+  {{if .Languages}}
+  <div class="section">
+    <div class="section-title">Languages</div>
+    <div style="font-size:9.5px;line-height:1.5">
+      <div>{{range .Languages}}{{.Name}}{{if .Proficiency}} ({{.Proficiency}}){{end}} · {{end}}</div>
+    </div>
+  </div>
+  {{end}}
+
+  {{if .Interests}}
+  <div class="section">
+    <div class="section-title">Interests</div>
+    <div style="font-size:9.5px;line-height:1.5">
+      <div>{{.Interests}}</div>
     </div>
   </div>
   {{end}}

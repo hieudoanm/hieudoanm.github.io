@@ -6,6 +6,7 @@ A Go-based CLI tool and HTTP server to convert Database Markup Language (DBML) i
 
 - **CLI** — Convert DBML files to SQL, Mermaid, SVG from command line
 - **HTTP Server** — REST API for programmatic conversion
+- **MCP Server** — Model Context Protocol server for LLM clients
 - **Multiple Formats** — SQL (PostgreSQL), Mermaid ERD, SVG
 - **Zero Config** — Works out of the box with sensible defaults
 - **Single Binary** — No runtime dependencies
@@ -46,6 +47,9 @@ dbml all schema.dbml --output-dir ./output
 
 # Start HTTP server
 dbml serve --port 8080
+
+# Start MCP server on stdio
+dbml mcp serve
 ```
 
 ## CLI Usage
@@ -59,6 +63,7 @@ Commands:
   svg       Generate SVG ER diagram from DBML
   all       Generate SQL, Mermaid, and SVG from DBML
   serve     Start HTTP server for DBML conversion API
+  mcp       Run MCP server for LLM clients
   help      Help about any command
 
 Flags:
@@ -163,6 +168,38 @@ curl -X POST http://localhost:8080/api/v1/convert \
   -F "dbml=Table users { id integer [pk] }"
 ```
 
+## MCP Server
+
+Start a Model Context Protocol (MCP) server over stdio for LLM clients:
+
+```bash
+dbml mcp serve
+```
+
+### Tools
+
+| Tool | Description |
+|------|-------------|
+| `dbml_sql` | Convert DBML source to a PostgreSQL SQL schema |
+| `dbml_mermaid` | Convert DBML source to a Mermaid ER diagram |
+| `dbml_svg` | Render DBML source as an SVG ER diagram |
+| `dbml_parse` | Parse DBML source and return a JSON summary of the schema |
+
+Every tool takes a single `dbml` string argument containing the DBML source.
+
+### Client Configuration
+
+```json
+{
+  "mcpServers": {
+    "dbml": {
+      "command": "dbml",
+      "args": ["mcp", "serve"]
+    }
+  }
+}
+```
+
 ## DBML Syntax Support
 
 The parser supports standard DBML syntax:
@@ -245,6 +282,8 @@ dbml/
 ├── internal/
 │   ├── dbml/         # DBML parser + generators
 │   │   └── parser.go
+│   ├── mcp/          # MCP server (stdio)
+│   │   └── protocol.go
 │   └── server/       # HTTP server
 │       └── server.go
 ├── bin/              # Build output

@@ -33,6 +33,9 @@ go/
 │   │   ├── parser.go    # DBML parser + SQL/Mermaid generators
 │   │   ├── svg.go       # SVG layout + ToSVG
 │   │   └── svg_draw.go  # SVG element rendering
+│   ├── mcp/             # MCP server over stdio
+│   │   ├── protocol.go  # JSON-RPC transport, dispatch
+│   │   └── tools.go     # Tool definitions + handlers
 │   └── server/
 │       └── server.go    # HTTP server with REST API
 ├── bin/                 # Build output directory
@@ -59,8 +62,8 @@ Generators
     ├─ Mermaid (erDiagram syntax)
     └─ SVG (rendered directly in Go)
     ↓
-CLI Commands (cmd/) or HTTP Handlers (internal/server/)
-    └─ Write files or return JSON
+CLI Commands (cmd/) or HTTP Handlers (internal/server/) or MCP Tools (internal/mcp/)
+    └─ Write files, return JSON, or return tool text
 ```
 
 ## Modules
@@ -104,6 +107,7 @@ All commands are thin Cobra wrappers that delegate to the parser and generators:
 - `svg` — reads DBML, renders an SVG ER diagram, writes to file
 - `all` — runs sql + mermaid + svg in sequence
 - `serve` — starts HTTP server with REST API
+- `mcp` — starts MCP server over stdio (`mcp serve`)
 
 ### HTTP Server (`internal/server/server.go`)
 
@@ -134,6 +138,26 @@ The server provides:
 
 JSON with `sql`, `mermaid`, and `svg` fields (empty strings if not requested).
 
+### MCP Server (`internal/mcp/`)
+
+An alternate transport for LLM clients. It speaks JSON-RPC 2.0 over stdio,
+implementing `initialize`, `ping`, `tools/list`, and `tools/call`.
+
+`protocol.go` owns the transport and dispatch; `tools.go` owns the tool
+catalogue and handlers, delegating to `internal/dbml` exactly like the CLI and
+HTTP handlers. No MCP logic leaks into the parser or generators.
+
+#### Tools
+
+| Tool            | Description                                          |
+| --------------- | ---------------------------------------------------- |
+| `dbml_sql`      | Convert DBML source to a PostgreSQL SQL schema        |
+| `dbml_mermaid`  | Convert DBML source to a Mermaid ER diagram           |
+| `dbml_svg`      | Render DBML source as an SVG ER diagram               |
+| `dbml_parse`    | Parse DBML source and return a JSON schema summary    |
+
+Each tool accepts a single `dbml` string argument.
+
 ## Configuration
 
 dbml reads no environment variables and writes no config files. Everything is
@@ -151,6 +175,9 @@ Current dependencies:
 
 - `github.com/spf13/cobra` — CLI framework
 - `github.com/gorilla/mux` — HTTP routing
+
+The MCP server is implemented with the standard library only — no additional
+dependency.
 
 Before adding a dependency:
 
