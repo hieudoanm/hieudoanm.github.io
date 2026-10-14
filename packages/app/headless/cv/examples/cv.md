@@ -22,11 +22,11 @@
 
 - **Period:** October 2025 - September 2026
 - **Location:** Ho Chi Minh City, Vietnam
-- Led a cross-functional engineering team delivering AI solutions for personal home lending, translating mortgage business requirements into secure, production-ready applications.
-- Architected cloud-native AI platforms supporting home lending workflows, with an emphasis on scalability, reliability, data security, and compliance with enterprise banking standards.
-- Led AI initiatives for automated property valuation and mortgage document classification and information extraction using machine learning, natural language processing, and computer vision.
-- Supported the modernisation of mortgage processing through AI-driven capabilities designed to streamline property assessment, document handling, and information extraction for lending operations.
-- Collaborated with business stakeholders and engineering teams to define AI delivery roadmaps, establish production engineering standards, and mentor engineers in building reliable, maintainable banking solutions.
+- Led and managed a 10-member cross-functional engineering team spanning Junior to Senior Software Engineers, Quality Engineers, DevOps Engineers, and Production Support, delivering solutions for personal home lending.
+- Partnered with the Product Owner to understand business requirements, prioritise initiatives, and design end-user-focused solutions for bankers, lending assessors, and mortgage brokers.
+- Architected and designed scalable, secure, and maintainable software solutions to support personal home lending workflows, balancing user needs, technical constraints, operational reliability, and enterprise banking standards.
+- Oversaw production support activities, including incident investigation, root-cause analysis, troubleshooting, and cross-functional coordination to restore services and improve system reliability.
+- Led AI initiatives for automated property valuation and mortgage document classification and information extraction, applying machine learning, natural language processing, and computer vision to streamline lending operations.
 
 ### Senior Analyst Engineer (Fullstack) at National Australia Bank (NAB)
 
