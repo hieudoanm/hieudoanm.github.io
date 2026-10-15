@@ -1,4 +1,7 @@
-package mcp
+// Package workspace confines file access to a single root directory. The API
+// server lets a caller name content directories, so every path it receives must
+// be resolved back inside one root.
+package workspace
 
 import (
 	"errors"
@@ -9,17 +12,12 @@ import (
 )
 
 // DefaultRoot is the directory the sandbox resolves relative paths against when
-// the CLI is started without --root.
+// the CLI is started without a root.
 const DefaultRoot = "."
 
-// DefaultConfigPath is the file the tools read when a caller names no source.
-// It matches the --file default of the landify CLI.
-const DefaultConfigPath = "landify.yaml"
-
-// Workspace is the file access the MCP tools are allowed to perform. A model
-// chooses every path that reaches it, so all access is confined to one root
-// directory: without this an LLM client could read or overwrite any file the
-// server process can reach.
+// Workspace is the file access a caller is allowed to perform. A caller chooses
+// every path that reaches it, so all access is confined to one root directory:
+// without this a request could read any file the server process can reach.
 //
 // The zero value is not usable; construct one with NewWorkspace.
 type Workspace struct {
@@ -145,40 +143,6 @@ func isSymlink(path string) (bool, error) {
 		return false, fmt.Errorf("inspect %s: %w", path, err)
 	}
 	return info.Mode()&os.ModeSymlink != 0, nil
-}
-
-// Read returns the contents of a file inside the root.
-func (w *Workspace) Read(path string) ([]byte, error) {
-	target, err := w.Resolve(path)
-	if err != nil {
-		return nil, err
-	}
-	data, err := os.ReadFile(target)
-	if err != nil {
-		if errors.Is(err, os.ErrNotExist) {
-			return nil, fmt.Errorf("no such file in the server root: %s", path)
-		}
-		return nil, fmt.Errorf("read %s: %w", path, err)
-	}
-	return data, nil
-}
-
-// Write creates or replaces a file inside the root, creating parent
-// directories as needed.
-func (w *Workspace) Write(path string, data []byte) error {
-	target, err := w.Resolve(path)
-	if err != nil {
-		return err
-	}
-	if dir := filepath.Dir(target); dir != w.root {
-		if err := os.MkdirAll(dir, 0o755); err != nil {
-			return fmt.Errorf("create %s: %w", filepath.Dir(target), err)
-		}
-	}
-	if err := os.WriteFile(target, data, 0o644); err != nil {
-		return fmt.Errorf("write %s: %w", path, err)
-	}
-	return nil
 }
 
 // Exists reports whether a path inside the root names an existing file.

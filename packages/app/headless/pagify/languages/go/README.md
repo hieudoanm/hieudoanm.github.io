@@ -29,13 +29,15 @@ make install    # $HOME/bin/pagify
 | --- | --- |
 | `pagify init [dir]` | Write a starter project: `docs/` with example pages |
 | `pagify build [content]` | Build the site into `./dist` |
-| `pagify serve [content]` | Build and serve on localhost, rebuilding on every request |
+| `pagify preview [content]` | Build and serve on localhost, rebuilding on every request |
+| `pagify serve` | Start the JSON API server (build a page over HTTP), with Swagger UI at `/api/v1/docs` |
 
 ```bash
 pagify init my-site                  # scaffold ./my-site/docs
 pagify build                         # ./docs -> ./dist
 pagify build ./docs --output ./public
-pagify serve ./docs --port 8080
+pagify preview ./docs --port 8080
+pagify serve                         # JSON API at /api/v1, Swagger UI at /api/v1/docs
 ```
 
 Both `build` and `serve` default the content directory to `./docs` and the
@@ -99,7 +101,7 @@ footer: © 2026 Example
 ```
 
 `basePath` is applied to every generated URL — navigation, assets, Markdown
-links and search results — and `pagify serve` serves the same paths, so a
+links and search results — and `pagify preview` serves the same paths, so a
 project page behaves locally exactly as it does once deployed.
 
 ## Markdown

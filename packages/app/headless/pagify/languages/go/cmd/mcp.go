@@ -23,7 +23,7 @@ func newMCPCommand(stdout io.Writer) *cobra.Command {
 		Long: `Run an MCP (Model Context Protocol) server that provides tools and resources
 for working with pagify sites.
 
-The server exposes tools for building, serving, initializing, and validating
+The server exposes tools for building, previewing, serving an API, initializing, and validating
 pagify sites, plus resources for Markdown features, frontmatter, and configuration.`,
 		RunE: func(command *cobra.Command, args []string) error {
 			return runMCP(stdout, command.ErrOrStderr())
@@ -56,8 +56,8 @@ func runMCP(stdout, stderr io.Writer) error {
 		),
 	), handleMCPBuild)
 
-	s.AddTool(mcp.NewTool("pagify_serve",
-		mcp.WithDescription("Get command to serve a pagify site locally with live rebuild"),
+	s.AddTool(mcp.NewTool("pagify_preview",
+		mcp.WithDescription("Get command to preview a pagify site locally with live rebuild"),
 		mcp.WithString("content_dir",
 			mcp.Required(),
 			mcp.Description("Path to the content directory containing Markdown files"),
@@ -68,7 +68,7 @@ func runMCP(stdout, stderr io.Writer) error {
 		mcp.WithString("host",
 			mcp.Description("Host to bind to (default: 127.0.0.1)"),
 		),
-	), handleMCPServe)
+	), handleMCPPreview)
 
 	s.AddTool(mcp.NewTool("pagify_init",
 		mcp.WithDescription("Initialize a new pagify project with starter content"),
@@ -137,7 +137,7 @@ func handleMCPBuild(ctx context.Context, request mcp.CallToolRequest) (*mcp.Call
 	return mcp.NewToolResultText(fmt.Sprintf("Site built successfully to %s\n%s", outputDir, string(output))), nil
 }
 
-func handleMCPServe(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
+func handleMCPPreview(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
 	contentDir, err := request.RequireString("content_dir")
 	if err != nil {
 		return mcp.NewToolResultError("content_dir is required"), nil
@@ -146,9 +146,9 @@ func handleMCPServe(ctx context.Context, request mcp.CallToolRequest) (*mcp.Call
 	port := request.GetInt("port", 8080)
 	host := request.GetString("host", "127.0.0.1")
 
-	cmdArgs := []string{"serve", contentDir, "--port", fmt.Sprintf("%d", port), "--host", host}
+	cmdArgs := []string{"preview", contentDir, "--port", fmt.Sprintf("%d", port), "--host", host}
 
-	return mcp.NewToolResultText(fmt.Sprintf("To serve the site, run:\n%s %s\n\nThis will start a server at http://%s:%d", os.Args[0], strings.Join(cmdArgs, " "), host, port)), nil
+	return mcp.NewToolResultText(fmt.Sprintf("To preview the site, run:\n%s %s\n\nThis will start a server at http://%s:%d", os.Args[0], strings.Join(cmdArgs, " "), host, port)), nil
 }
 
 func handleMCPInit(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
@@ -324,15 +324,17 @@ func handleMCPConfigResource(ctx context.Context, request mcp.ReadResourceReques
 		"## CLI Options\n\n" +
 		"```bash\n" +
 		"pagify build [content] [--output dir] [--base-path path]\n" +
-		"pagify serve [content] [--port N] [--host H]\n" +
+		"pagify preview [content] [--port N] [--host H]\n" +
+		"pagify serve [--root dir] [--port N] [--host H]\n" +
 		"pagify init [dir]\n" +
 		"```\n\n" +
-		"| Flag | Build | Serve | Init | Description |\n" +
-		"|------|-------|-------|------|-------------|\n" +
-		"| `--output` | \u2713 | | | Output directory (default: `./dist`) |\n" +
-		"| `--base-path` | \u2713 | \u2713 | | URL prefix for project pages |\n" +
-		"| `--port` | | \u2713 | | Server port (default: 8080) |\n" +
-		"| `--host` | | \u2713 | | Bind address (default: 127.0.0.1) |\n\n" +
+		"| Flag | Build | Preview | Serve | Init | Description |\n" +
+		"|------|-------|---------|-------|------|-------------|\n" +
+		"| `--output` | \u2713 | | | | Output directory (default: `./dist`) |\n" +
+		"| `--base-path` | \u2713 | \u2713 | | | URL prefix for project pages |\n" +
+		"| `--root` | | | \u2713 | | API server sandbox directory (default: `.`) |\n" +
+		"| `--port` | | \u2713 | \u2713 | | Server port (default: 8080) |\n" +
+		"| `--host` | | \u2713 | \u2713 | | Bind address (default: 127.0.0.1) |\n\n" +
 		"## Environment Variables\n\n" +
 		"| Variable | Description |\n" +
 		"|----------|-------------|\n" +

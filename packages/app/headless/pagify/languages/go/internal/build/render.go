@@ -1,7 +1,6 @@
 package build
 
 import (
-	"fmt"
 	"html/template"
 	"path"
 
@@ -68,40 +67,20 @@ type navigation []navEntry
 func writePages(outputDir string, selected *theme.Theme, config Config, pages site.Pages) error {
 	nav := site.BuildNav(pages)
 	for _, page := range pages {
-		data := render{
-			Site:       config.siteMeta(),
-			Page:       pageDataFor(page),
-			Navigation: navigationFor(nav, config, page.URL),
-			Links:      config.assetURL,
-		}
-		html, err := selected.Execute(data)
+		html, err := pageHTML(selected, config, nav, page)
 		if err != nil {
-			return fmt.Errorf("render page %s: %w", page.Source, err)
+			return err
 		}
 		if err := writeFile(outputDir, page.Output, html); err != nil {
 			return err
 		}
 	}
-	return writeLandingPage(outputDir, selected, config, nav, pages)
-}
-
-// writeLandingPage generates the site's root URL from the navigation when the
-// content has no index page of its own, so a visitor who opens the site never
-// meets a 404.
-func writeLandingPage(outputDir string, selected *theme.Theme, config Config, nav *site.Nav, pages site.Pages) error {
 	if pages.HasLandingPage() {
 		return nil
 	}
-	data := render{
-		Site:       config.siteMeta(),
-		Page:       pageData{Title: config.Title},
-		Navigation: navigationFor(nav, config, ""),
-		Links:      config.assetURL,
-		Index:      true,
-	}
-	html, err := selected.Execute(data)
+	html, err := landingHTML(selected, config, nav)
 	if err != nil {
-		return fmt.Errorf("render landing page: %w", err)
+		return err
 	}
 	return writeFile(outputDir, site.OutputPathForSource(landingSource), html)
 }

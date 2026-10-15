@@ -56,20 +56,9 @@ type BuildResult struct {
 // block also gets its 1200 × 630 card written beside the page. A non-empty
 // themeName overrides the YAML's theme: section with a built-in preset.
 func BuildFile(path, output, themeName string) (*BuildResult, error) {
-	cfg, err := LoadFile(path)
+	cfg, err := renderConfig(path, themeName)
 	if err != nil {
 		return nil, err
-	}
-	if themeName != "" {
-		theme, ok := ThemeByName(themeName)
-		if !ok {
-			available := strings.Join(ThemeNames(), ", ")
-			return nil, fmt.Errorf("unknown theme %q (available: %s)", themeName, available)
-		}
-		cfg.Theme = theme
-	}
-	if errs := Errors(cfg); len(errs) > 0 {
-		return nil, fmt.Errorf("%s is invalid:\n  - %s", path, strings.Join(errs, "\n  - "))
 	}
 	html, err := Render(cfg)
 	if err != nil {
@@ -92,6 +81,40 @@ func BuildFile(path, output, themeName string) (*BuildResult, error) {
 		result.Card = OGCardPath(output)
 	}
 	return result, nil
+}
+
+// RenderFile loads path, validates it, and returns the rendered landing page
+// without writing it, applying a built-in theme override when themeName is set.
+// It is the read-only counterpart of BuildFile for callers that return the page
+// over HTTP instead of writing it to disk.
+func RenderFile(path, themeName string) ([]byte, error) {
+	cfg, err := renderConfig(path, themeName)
+	if err != nil {
+		return nil, err
+	}
+	return Render(cfg)
+}
+
+// renderConfig loads path, applies an optional built-in theme override, and
+// rejects an invalid config. It is the parsing half shared by BuildFile and
+// RenderFile.
+func renderConfig(path, themeName string) (*Config, error) {
+	cfg, err := LoadFile(path)
+	if err != nil {
+		return nil, err
+	}
+	if themeName != "" {
+		theme, ok := ThemeByName(themeName)
+		if !ok {
+			available := strings.Join(ThemeNames(), ", ")
+			return nil, fmt.Errorf("unknown theme %q (available: %s)", themeName, available)
+		}
+		cfg.Theme = theme
+	}
+	if errs := Errors(cfg); len(errs) > 0 {
+		return nil, fmt.Errorf("%s is invalid:\n  - %s", path, strings.Join(errs, "\n  - "))
+	}
+	return cfg, nil
 }
 
 // writeOGCard renders the social card beside the page. The SVG is the source of

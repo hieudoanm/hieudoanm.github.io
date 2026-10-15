@@ -82,7 +82,7 @@ CMD ["--help"]
 #   docker run --rm -v $(pwd)/docs:/content -v $(pwd)/dist:/output pagify build /content --output /output
 #
 # Serve locally:
-#   docker run --rm -p 8080:8080 -v $(pwd)/docs:/content pagify serve /content --port 8080
+#   docker run --rm -p 8080:8080 -v $(pwd)/docs:/content pagify preview /content --port 8080
 #
 # With custom config (frontmatter in index.md):
 #   # No extra config needed - uses index.md frontmatter

@@ -13,7 +13,7 @@ import (
 var serveCmd = &cobra.Command{
 	Use:   "serve",
 	Short: "Start HTTP server",
-	Long:  `Start HTTP server with endpoint POST /pdf to generate PDF from JSON.`,
+	Long:  `Start HTTP server with endpoint POST /api/v1/pdf to generate PDF from JSON.`,
 	Args:  cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		port := os.Getenv("PORT")
@@ -21,10 +21,12 @@ var serveCmd = &cobra.Command{
 			port = "8080"
 		}
 
-		http.HandleFunc("/pdf", handlePDF)
-		http.HandleFunc("/health", handleHealth)
+		http.HandleFunc("/api/v1/pdf", handlePDF)
+		http.HandleFunc("/api/v1/health", handleHealth)
+		http.HandleFunc("/api/v1/openapi.json", handleOpenAPI)
+		http.HandleFunc("/api/v1/docs", handleSwaggerUI)
 
-		cmd.Printf("Server starting on :%s\n", port)
+		printServerBox(cmd.OutOrStdout(), port)
 		return http.ListenAndServe(":"+port, nil)
 	},
 }

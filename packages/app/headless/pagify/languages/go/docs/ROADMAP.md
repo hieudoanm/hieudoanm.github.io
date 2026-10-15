@@ -51,8 +51,8 @@ pagify aims to be the simplest path from Markdown files to a polished, productio
 ## v1.1 — Developer Experience
 
 ### CLI
-- [ ] `--watch` flag for `pagify serve` (file watching instead of per-request rebuild)
-- [ ] `--port` / `--host` for serve
+- [ ] `--watch` flag for `pagify preview` (file watching instead of per-request rebuild)
+- [x] `--port` / `--host` for preview and serve
 - [ ] `--base-path` CLI flag (override frontmatter)
 - [ ] Shell completions (bash, zsh, fish, PowerShell)
 

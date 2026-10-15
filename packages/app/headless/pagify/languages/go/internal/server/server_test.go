@@ -14,9 +14,9 @@ import (
 	"pagify/internal/build"
 )
 
-// serve starts a preview handler over the given content and returns its root
+// preview starts a preview handler over the given content and returns its root
 // directory plus a recorder for issuing requests.
-func serve(t *testing.T, files map[string]string) (root string, request func(path string) *httptest.ResponseRecorder) {
+func preview(t *testing.T, files map[string]string) (root string, request func(path string) *httptest.ResponseRecorder) {
 	t.Helper()
 	base := t.TempDir()
 	contentDir := filepath.Join(base, "docs")
@@ -43,7 +43,7 @@ func serve(t *testing.T, files map[string]string) (root string, request func(pat
 	}
 }
 
-func TestServeResolvesDirectoryURLs(t *testing.T) {
+func TestPreviewResolvesDirectoryURLs(t *testing.T) {
 	files := map[string]string{
 		"index.md":       "# Home\n",
 		"guide/index.md": "# Guide\n",
@@ -60,7 +60,7 @@ func TestServeResolvesDirectoryURLs(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.url, func(t *testing.T) {
-			_, request := serve(t, files)
+			_, request := preview(t, files)
 			if got := request(test.url).Code; got != test.want {
 				t.Errorf("GET %s = %d, want %d", test.url, got, test.want)
 			}
@@ -68,8 +68,8 @@ func TestServeResolvesDirectoryURLs(t *testing.T) {
 	}
 }
 
-func TestServeRebuildsOnRequest(t *testing.T) {
-	root, request := serve(t, map[string]string{"index.md": "# Home\n"})
+func TestPreviewRebuildsOnRequest(t *testing.T) {
+	root, request := preview(t, map[string]string{"index.md": "# Home\n"})
 
 	if got := request("/").Code; got != http.StatusOK {
 		t.Fatalf("first request = %d, want %d", got, http.StatusOK)
@@ -86,8 +86,8 @@ func TestServeRebuildsOnRequest(t *testing.T) {
 	}
 }
 
-func TestServeServesThemeAssets(t *testing.T) {
-	_, request := serve(t, map[string]string{"index.md": "# Home\n"})
+func TestPreviewServesThemeAssets(t *testing.T) {
+	_, request := preview(t, map[string]string{"index.md": "# Home\n"})
 
 	response := request("/assets/styles.css")
 	if response.Code != http.StatusOK {
@@ -98,7 +98,7 @@ func TestServeServesThemeAssets(t *testing.T) {
 	}
 }
 
-func TestServeRendersNotFound(t *testing.T) {
+func TestPreviewRendersNotFound(t *testing.T) {
 	files := map[string]string{"index.md": "# Home\n"}
 
 	tests := []struct {
@@ -111,7 +111,7 @@ func TestServeRendersNotFound(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			_, request := serve(t, files)
+			_, request := preview(t, files)
 			response := request(test.url)
 			if response.Code != http.StatusNotFound {
 				t.Fatalf("GET %s = %d, want %d", test.url, response.Code, http.StatusNotFound)
@@ -126,7 +126,7 @@ func TestServeRendersNotFound(t *testing.T) {
 	}
 }
 
-func TestServeAppliesBasePath(t *testing.T) {
+func TestPreviewAppliesBasePath(t *testing.T) {
 	files := map[string]string{
 		"index.md":       "# Home\n",
 		"guide/index.md": "# Guide\n",
@@ -148,7 +148,7 @@ func TestServeAppliesBasePath(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			_, request := serve(t, files)
+			_, request := preview(t, files)
 			if got := request(test.url).Code; got != test.want {
 				t.Errorf("GET %s = %d, want %d", test.url, got, test.want)
 			}
@@ -156,7 +156,7 @@ func TestServeAppliesBasePath(t *testing.T) {
 	}
 }
 
-func TestServeFailsOnMissingContentDirectory(t *testing.T) {
+func TestPreviewFailsOnMissingContentDirectory(t *testing.T) {
 	base := t.TempDir()
 	handler := previewHandler(filepath.Join(base, "absent"), filepath.Join(base, "dist"))
 
@@ -168,13 +168,13 @@ func TestServeFailsOnMissingContentDirectory(t *testing.T) {
 	}
 }
 
-func TestServeAnnouncesTheURLItListensOn(t *testing.T) {
+func TestServeAPIAnnouncesTheURLItListensOn(t *testing.T) {
 	announced := make(chan string, 1)
 	go func() {
 		// Port zero asks the OS for a free port, so nothing can collide.
-		err := Serve(t.TempDir(), Options{Port: 0, Announce: func(url string) { announced <- url }})
+		err := ServeAPI(Options{Root: t.TempDir(), Port: 0, Announce: func(url string) { announced <- url }})
 		if err != nil {
-			t.Errorf("Serve: %v", err)
+			t.Errorf("ServeAPI: %v", err)
 		}
 	}()
 
@@ -184,11 +184,11 @@ func TestServeAnnouncesTheURLItListensOn(t *testing.T) {
 			t.Errorf("announced %q, want a loopback URL", url)
 		}
 	case <-time.After(5 * time.Second):
-		t.Fatal("Serve never announced its URL")
+		t.Fatal("ServeAPI never announced its URL")
 	}
 }
 
-func TestServeReportsABusyPort(t *testing.T) {
+func TestServeAPIReportsABusyPort(t *testing.T) {
 	held, err := net.Listen("tcp", "127.0.0.1:0")
 	if err != nil {
 		t.Fatalf("reserve a port: %v", err)
@@ -196,16 +196,16 @@ func TestServeReportsABusyPort(t *testing.T) {
 	defer func() { _ = held.Close() }()
 
 	port := held.Addr().(*net.TCPAddr).Port
-	err = Serve(t.TempDir(), Options{Port: port})
+	err = ServeAPI(Options{Root: t.TempDir(), Port: port})
 	if err == nil {
-		t.Fatal("Serve accepted a port that was already in use")
+		t.Fatal("ServeAPI accepted a port that was already in use")
 	}
 	if !strings.Contains(err.Error(), fmt.Sprintf("%d", port)) {
 		t.Errorf("error %q does not name the port that was busy", err)
 	}
 }
 
-func TestBuildIsUsableThroughServe(t *testing.T) {
+func TestBuildIsUsableThroughPreview(t *testing.T) {
 	contentDir := filepath.Join(t.TempDir(), "docs")
 	outputDir := filepath.Join(t.TempDir(), "dist")
 

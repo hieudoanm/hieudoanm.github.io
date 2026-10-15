@@ -31,12 +31,13 @@ type Options struct {
 // directory on every request, so it should not be reachable from the network.
 const defaultHost = "127.0.0.1"
 
-// Serve builds the site and serves it until the process is interrupted.
+// Preview builds the site and serves it until the process is interrupted.
 //
 // It rebuilds on each request rather than watching the filesystem: a Markdown
 // build is fast enough that watch machinery would cost more than it saves, and
-// it removes an entire class of missed-change bugs.
-func Serve(contentDir string, opts Options) error {
+// it removes an entire class of missed-change bugs. It serves static files
+// only; the JSON API lives on the serve command.
+func Preview(contentDir string, opts Options) error {
 	if opts.Host == "" {
 		opts.Host = defaultHost
 	}

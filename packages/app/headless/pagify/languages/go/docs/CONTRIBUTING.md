@@ -6,7 +6,7 @@ Thanks for helping improve `pagify`.
 
 ```bash
 make all          # format, vet, test, build
-./bin/pagify serve # preview your changes at localhost
+./bin/pagify preview # preview your changes at localhost
 ```
 
 Go 1.27 or newer is required. There is nothing to install beyond Go: the
@@ -49,7 +49,7 @@ scripts, build a real site and look at it:
 
 ```bash
 ./bin/pagify init /tmp/preview
-./bin/pagify serve /tmp/preview/docs
+./bin/pagify preview /tmp/preview/docs
 ```
 
 Check at least a narrow and a wide viewport, light and dark mode, and the

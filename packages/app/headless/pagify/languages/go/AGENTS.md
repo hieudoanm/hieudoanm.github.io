@@ -149,6 +149,7 @@ The CLI should eventually support:
 
 ```bash
 pagify build
+pagify preview
 pagify serve
 pagify init
 ```
@@ -158,7 +159,8 @@ Potential usage:
 ```bash
 pagify build ./docs
 pagify build ./docs --output ./dist
-pagify serve ./docs
+pagify preview ./docs
+pagify serve
 pagify init
 ```
 
@@ -176,19 +178,27 @@ Expected responsibilities:
 6. Copy theme assets.
 7. Write the static site.
 
-### `serve`
+### `preview`
 
-Runs a local development server.
-
-It should eventually support a workflow such as:
+Runs a local development server that rebuilds the site on every request.
 
 ```bash
-pagify serve ./docs
+pagify preview ./docs
 ```
 
-and serve the generated site locally.
-
 Live reload may be added later.
+
+### `serve`
+
+Runs the JSON API server: it renders individual pages over HTTP and exposes
+`/api/v1/health`, `/api/v1/build`, `/api/v1/openapi.json` and `/api/v1/docs`.
+All file access is confined to `--root`.
+
+```bash
+pagify serve
+```
+
+To serve the built site itself, use `preview`.
 
 ### `init`
 

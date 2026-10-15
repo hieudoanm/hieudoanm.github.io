@@ -75,7 +75,7 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 ./bin/landify new                 # writes landify.yaml (product layout)
 ./bin/landify validate            # strict schema check
 ./bin/landify build               # writes index.html
-./bin/landify serve -p 8080       # preview at http://localhost:8080
+./bin/landify preview -p 8080     # preview at http://localhost:8080
 ```
 
 Everything is embeddable — copy the generated HTML and CSS anywhere.

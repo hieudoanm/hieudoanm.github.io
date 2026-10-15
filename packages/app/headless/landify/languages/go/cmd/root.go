@@ -21,7 +21,8 @@ Commands:
   validate  check the schema of landify.yaml
   build     generate index.html from landify.yaml
   themes    list the sixty-four built-in theme presets
-  serve     preview the result over HTTP
+  preview   serve the built files over HTTP
+  serve     start the JSON API server (render, validate, themes)
   tui       open the terminal editor (ships with every build)
   studio    open the optional desktop editor (GUI build)
   mcp       run the Model Context Protocol server for LLM clients`,
@@ -39,5 +40,5 @@ func Execute() {
 
 func init() {
 	rootCmd.PersistentFlags().StringP("file", "f", "landify.yaml", "path to the YAML content file")
-	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, serveCmd, tuiCmd, studioCmd, mcpCmd)
+	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, previewCmd, serveCmd, tuiCmd, studioCmd, mcpCmd)
 }

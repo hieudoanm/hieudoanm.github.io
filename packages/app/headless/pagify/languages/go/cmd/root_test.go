@@ -26,7 +26,7 @@ func TestRootShowsHelpAndVersion(t *testing.T) {
 	if err != nil {
 		t.Fatalf("--help: %v", err)
 	}
-	for _, want := range []string{"build", "serve", "init", "pagify"} {
+	for _, want := range []string{"build", "preview", "serve", "init", "pagify"} {
 		if !strings.Contains(stdout, want) {
 			t.Errorf("--help output missing %q\ngot:\n%s", want, stdout)
 		}
@@ -97,7 +97,7 @@ func TestInitCreatesAProject(t *testing.T) {
 	if err != nil {
 		t.Fatalf("init: %v", err)
 	}
-	if !strings.Contains(stdout, "pagify serve") {
+	if !strings.Contains(stdout, "pagify preview") {
 		t.Errorf("init output missing next steps\ngot:\n%s", stdout)
 	}
 
@@ -161,9 +161,28 @@ func TestServeHasTheExpectedFlags(t *testing.T) {
 	if serve == nil {
 		t.Fatal("no serve subcommand")
 	}
-	for _, name := range []string{"host", "port"} {
+	for _, name := range []string{"root", "host", "port"} {
 		if serve.Flags().Lookup(name) == nil {
 			t.Errorf("serve has no --%s flag", name)
+		}
+	}
+}
+
+func TestPreviewHasTheExpectedFlags(t *testing.T) {
+	command := NewRootCommand(&bytes.Buffer{}, &bytes.Buffer{})
+
+	var preview *cobra.Command
+	for _, sub := range command.Commands() {
+		if sub.Name() == "preview" {
+			preview = sub
+		}
+	}
+	if preview == nil {
+		t.Fatal("no preview subcommand")
+	}
+	for _, name := range []string{"host", "port"} {
+		if preview.Flags().Lookup(name) == nil {
+			t.Errorf("preview has no --%s flag", name)
 		}
 	}
 }

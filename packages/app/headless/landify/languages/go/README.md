@@ -48,7 +48,8 @@ make clean        # remove ./bin, ./coverage and the generated index.html
 ./bin/landify validate      # check the schema (strict: unknown fields are errors)
 ./bin/landify build         # write index.html from landify.yaml
 ./bin/landify themes        # list the 64 built-in theme presets
-./bin/landify serve -p 8080 # preview the built page locally
+./bin/landify preview -p 8080 # preview the built page locally
+./bin/landify serve         # start the JSON API server (render, validate, themes)
 ./bin/landify tui           # open the terminal editor (ships with every build)
 ./bin/landify mcp serve     # expose Landify to LLM clients over MCP
 

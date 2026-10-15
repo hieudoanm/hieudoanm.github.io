@@ -33,25 +33,11 @@ type Result struct {
 // Build renders the site described by opts. Config is loaded first because the
 // base path it may declare changes the URLs every page is published at.
 func Build(opts Options) (Result, error) {
-	content, err := site.Discover(opts.ContentDir)
-	if err != nil {
-		return Result{}, fmt.Errorf("discover content: %w", err)
-	}
-	config, err := LoadConfig(opts.ContentDir, content.IndexFrontmatter)
-	if err != nil {
-		return Result{}, err
-	}
-	selected, err := theme.Default()
+	content, config, selected, pages, err := loadSite(opts)
 	if err != nil {
 		return Result{}, err
 	}
 	if err := clearOutput(opts.OutputDir); err != nil {
-		return Result{}, err
-	}
-
-	resolver := site.LinkResolverFor(content.Pages, content.Assets, config.prefix)
-	pages, err := renderPages(content.Pages, markdown.NewRenderer(), resolver)
-	if err != nil {
 		return Result{}, err
 	}
 	if err := writePages(opts.OutputDir, selected, config, pages); err != nil {
@@ -66,6 +52,30 @@ func Build(opts Options) (Result, error) {
 		return Result{}, err
 	}
 	return Result{Pages: len(pages), Assets: assets + index}, nil
+}
+
+// loadSite discovers the content, resolves its config and theme, and renders
+// every page's Markdown into HTML. It is the shared read-only front half of
+// Build and RenderPage.
+func loadSite(opts Options) (*site.Content, Config, *theme.Theme, site.Pages, error) {
+	content, err := site.Discover(opts.ContentDir)
+	if err != nil {
+		return nil, Config{}, nil, nil, fmt.Errorf("discover content: %w", err)
+	}
+	config, err := LoadConfig(opts.ContentDir, content.IndexFrontmatter)
+	if err != nil {
+		return nil, Config{}, nil, nil, err
+	}
+	selected, err := theme.Default()
+	if err != nil {
+		return nil, Config{}, nil, nil, err
+	}
+	resolver := site.LinkResolverFor(content.Pages, content.Assets, config.prefix)
+	pages, err := renderPages(content.Pages, markdown.NewRenderer(), resolver)
+	if err != nil {
+		return nil, Config{}, nil, nil, err
+	}
+	return content, config, selected, pages, nil
 }
 
 // clearOutput removes a previous build so deleted pages do not survive.

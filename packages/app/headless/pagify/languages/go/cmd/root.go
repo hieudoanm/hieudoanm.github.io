@@ -26,7 +26,7 @@ Point it at your docs and it discovers the pages, builds the navigation,
 renders every page and writes a site you can deploy to any static host:
 
   pagify build ./docs
-  pagify serve ./docs
+  pagify preview ./docs
 
 No configuration, no theme wiring, no Node.js required.`,
 		SilenceUsage:  true,
@@ -39,6 +39,7 @@ No configuration, no theme wiring, no Node.js required.`,
 
 	root.AddCommand(
 		newBuildCommand(stdout),
+		newPreviewCommand(stdout),
 		newServeCommand(stdout),
 		newInitCommand(stdout),
 		newMCPCommand(stdout),
@@ -48,7 +49,7 @@ No configuration, no theme wiring, no Node.js required.`,
 
 // Execute runs the pagify command tree and returns the process exit code.
 //
-// Diagnostics from the build and preview packages travel through slog, so the
+// Diagnostics from the build and server packages travel through slog, so the
 // handler is pointed at the error stream here: a command that succeeds prints
 // only what it was asked to print.
 func Execute() int {

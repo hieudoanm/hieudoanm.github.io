@@ -22,7 +22,7 @@ pagify init my-docs
 pagify build ./my-docs/docs
 
 # Preview locally
-pagify serve ./my-docs/docs
+pagify preview ./my-docs/docs
 ```
 
 ## Write Content

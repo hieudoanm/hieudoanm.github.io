@@ -18,7 +18,7 @@ external assets. The `landify tui` terminal editor (bubbletea) is a plain
 dependency and ships in this single artifact with no build tag. The optional
 `studio` fyne GUI is the only CGO binary, produced separately by
 `make build-gui` as `bin/landify-gui`. The binary is meant to run standalone or
-embedded in other tooling; the container is for the `serve` use case only.
+embedded in other tooling; the container is for the `preview` use case only.
 
 ## Container
 

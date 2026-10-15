@@ -149,10 +149,12 @@ Generates SQL, Mermaid, and optionally SVG in one command.
 Starts an HTTP server with REST API:
 
 ```
-GET  /health                          - Health check
-POST /api/v1/convert                  - Convert DBML to multiple formats
-POST /api/v1/convert/sql              - Convert DBML to SQL only
-POST /api/v1/convert/mermaid          - Convert DBML to Mermaid only
+GET  /api/v1/health             - Health check
+POST /api/v1/convert            - Convert DBML to multiple formats
+POST /api/v1/convert/sql        - Convert DBML to SQL only
+POST /api/v1/convert/mermaid    - Convert DBML to Mermaid only
+GET  /api/v1/openapi.json       - OpenAPI 3 document
+GET  /api/v1/docs               - Swagger UI
 ```
 
 ### `mcp`

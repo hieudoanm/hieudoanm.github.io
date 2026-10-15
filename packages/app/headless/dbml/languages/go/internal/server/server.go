@@ -46,10 +46,12 @@ func NewServer(port string) *Server {
 }
 
 func (s *Server) setupRoutes() {
-	s.router.HandleFunc("/health", s.healthHandler).Methods("GET")
+	s.router.HandleFunc("/api/v1/health", s.healthHandler).Methods("GET")
 	s.router.HandleFunc("/api/v1/convert", s.convertHandler).Methods("POST")
 	s.router.HandleFunc("/api/v1/convert/sql", s.convertSQLHandler).Methods("POST")
 	s.router.HandleFunc("/api/v1/convert/mermaid", s.convertMermaidHandler).Methods("POST")
+	s.router.HandleFunc("/api/v1/openapi.json", handleOpenAPI).Methods("GET")
+	s.router.HandleFunc("/api/v1/docs", handleSwaggerUI).Methods("GET")
 }
 
 func (s *Server) Start() error {

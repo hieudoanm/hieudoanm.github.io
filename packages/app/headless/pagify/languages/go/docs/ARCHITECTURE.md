@@ -100,12 +100,18 @@ needs nothing but the `pagify` executable.
   browser. Search is a separate file because it is a separate concern, and
   because a site with no search box should not download it.
 
-## internal/server — preview
+## internal/server — preview and serve
 
-Rebuilds on every request instead of watching the filesystem: a Markdown build
-is fast, and rebuilding per request removes an entire class of missed-change
-bugs. It honours `basePath`, so a site configured for a GitHub project page
-previews under the same prefix it will deploy to.
+`preview` rebuilds on every request instead of watching the filesystem: a
+Markdown build is fast, and rebuilding per request removes an entire class of
+missed-change bugs. It honours `basePath`, so a site configured for a GitHub
+project page previews under the same prefix it will deploy to, and it serves
+static files only.
+
+`serve` runs the JSON API instead: `POST /api/v1/build` renders one page in
+memory (nothing is written to disk) and `/api/v1/health`, `/api/v1/openapi.json`
+and `/api/v1/docs` describe it. Every content path a request names is resolved
+through `internal/workspace`, so the API cannot read outside its `--root`.
 
 ## Adding a theme
 

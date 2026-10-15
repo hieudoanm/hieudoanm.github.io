@@ -33,13 +33,21 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 - Standard Go layout: `main.go` + `cmd/` + `internal/landify/`. Keep commands
   thin: `cmd/*.go` parse flags and delegate to `internal/landify` (e.g.
   `BuildFile`, `ValidateFile`, `WritePlaceholder`).
-- The `cmd/` files register exactly eight subcommands on the root: `new`,
-  `validate`, `build`, `themes`, `serve`, `tui`, `studio`, `mcp`. `--file` (`-f`,
-  default `landify.yaml`) is a persistent root flag; `build` adds
+- The `cmd/` files register exactly nine subcommands on the root: `new`,
+  `validate`, `build`, `themes`, `preview`, `serve`, `tui`, `studio`, `mcp`.
+  `--file` (`-f`, default `landify.yaml`) is a persistent root flag; `build` adds
   `--output`/`-o` (`index.html`) and `--theme`/`-t`; `new` adds `--type`/`-t`
-  (`product`) and `--force`/`-F`; `serve` adds `--dir`/`-d` (`.`), `--bind`/`-b`
-  (`127.0.0.1`) and `--port`/`-p` (`8080`); `mcp serve` adds `--root` (`.`).
-  `serve` shuts down gracefully on `SIGINT`/`SIGTERM`.
+  (`product`) and `--force`/`-F`; `preview` adds `--dir`/`-d` (`.`) and is a
+  plain static file server (`internal/landify.Preview`); `serve` adds
+  `--root`/`-r` (`.`), `--bind`/`-b` (`127.0.0.1`) and `--port`/`-p` (`8080`)
+  and starts the JSON API (`internal/landify.ServeAPI`); `mcp serve` adds
+  `--root` (`.`) and shares the same sandbox. `preview` and `serve` both shut
+  down gracefully on `SIGINT`/`SIGTERM`.
+- The `serve` API answers `GET /api/v1/health`, `POST /api/v1/build` (returns
+  the rendered page as `text/html`), `POST /api/v1/validate`, `GET
+  /api/v1/themes`, `GET /api/v1/openapi.json` and `GET /api/v1/docs` (Swagger
+  UI). Every request path is resolved through `internal/workspace`, so no
+  request can read outside `--root`; nothing is written to disk.
 - `tui` takes an optional positional `[path]` (defaults to `landify.yaml`)
   and delegates to `internal/tui.Run`. It is a bubbletea editor that ships in
   **every** build with no build tag: a `textarea` YAML pane plus a `:`

@@ -1,57 +1,48 @@
 package cmd
 
 import (
-	"fmt"
 	"io"
-	"os"
 
 	"github.com/spf13/cobra"
 
 	"pagify/internal/server"
 )
 
-// newServeCommand builds the serve subcommand.
+// newServeCommand builds the serve subcommand, which starts the JSON API.
 func newServeCommand(stdout io.Writer) *cobra.Command {
+	var root string
 	var host string
 	var port int
 
 	command := &cobra.Command{
-		Use:   "serve [content]",
-		Short: "Serve the site locally and rebuild as you edit",
-		Long: `Serve builds the site and serves it over HTTP, rebuilding on every request.
-
-Edit any Markdown file and reload the browser to see the change:
+		Use:   "serve",
+		Short: "Start the JSON API server",
+		Long: `Serve starts a JSON API server for rendering individual pages of a
+site, alongside an OpenAPI document and a Swagger UI. All file access is
+confined to --root. To preview the built site instead, use "preview".
 
   pagify serve
-  pagify serve ./docs --port 8080`,
-		Args:      cobra.MaximumNArgs(1),
-		ValidArgs: []string{defaultContentDir},
+  pagify serve --root ./docs --port 8080`,
 		RunE: func(command *cobra.Command, args []string) error {
-			contentDir := defaultContentDir
-			if len(args) == 1 {
-				contentDir = args[0]
-			}
-			return server.Serve(contentDir, server.Options{
-				Root:     defaultOutputDir,
+			return server.ServeAPI(server.Options{
+				Root:     root,
 				Host:     host,
 				Port:     port,
-				Announce: announceFunc(stdout),
+				Announce: announceFunc(stdout, host != "" && !isLoopbackHost(host)),
 			})
 		},
 	}
 
+	command.Flags().StringVar(&root, "root", ".", "directory the API is confined to")
 	command.Flags().StringVar(&host, "host", "", "interface to bind (default 127.0.0.1)")
-	command.Flags().IntVarP(&port, "port", "p", 0, "port to bind (default a free port)")
+	command.Flags().IntVarP(&port, "port", "p", 8080, "port to bind")
 	return command
 }
 
-// announceFunc prints the URL the server is listening on, with an escape
-// sequence so a terminal can make it clickable.
-func announceFunc(stdout io.Writer) func(string) {
+// announceFunc prints a box with the URL the API server is listening on. Links
+// are wrapped in an escape sequence so a terminal can make them clickable.
+func announceFunc(stdout io.Writer, exposeNetwork bool) func(string) {
 	return func(url string) {
-		fmt.Fprintf(stdout, "\n  pagify is serving %s\n  Press Ctrl+C to stop.\n\n", url)
-		if term := os.Getenv("TERM"); term != "" && term != "dumb" {
-			fmt.Fprintf(stdout, "  \x1b]8;;%s\x1b\\%s\x1b]8;;\x1b\\\n", url, url)
-		}
+		printServerBox(stdout, serveLinks(url, exposeNetwork))
 	}
 }

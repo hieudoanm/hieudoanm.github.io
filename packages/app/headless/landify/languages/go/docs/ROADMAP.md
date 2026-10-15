@@ -7,8 +7,8 @@
 
 - [x] Go module layout (`main.go` + `cmd/` + `internal/landify/`)
 - [x] Strict YAML parsing (`KnownFields(true)`)
-- [x] Cobra CLI (`new`, `validate`, `build`, `themes`, `serve`, `tui`,
-      `studio`)
+- [x] Cobra CLI (`new`, `validate`, `build`, `themes`, `preview`, `serve`,
+      `tui`, `studio`)
 - [x] Embedded asset pipeline (`static/` via `//go:embed`)
 - [x] Shared `base-css`/`header`/`footer` partials
 
@@ -27,7 +27,7 @@
 - [x] `landify themes` listing command
 - [x] `build --theme <name>` preset override + validation
 - [x] Annotated `landify new` scaffolding per page type
-- [x] `landify serve` local preview server (127.0.0.1)
+- [x] `landify preview` local preview server (127.0.0.1)
 - [x] Theme gallery (64 built pages + screenshots) and page-type gallery in
       the parent `landify/examples/` directory
 - [x] Rolling GitHub Release via the reusable Go CI template

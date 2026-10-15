@@ -16,7 +16,7 @@ import (
 var starterFiles = []starter{
 	{
 		path:    "docs/index.md",
-		content: "# Welcome\n\nThis site was created with `pagify init`.\n\nEdit the files in `docs/` and run `pagify serve` to see your changes.\n",
+		content: "# Welcome\n\nThis site was created with `pagify init`.\n\nEdit the files in `docs/` and run `pagify preview` to see your changes.\n",
 	},
 	{
 		path: "docs/guide/index.md",
@@ -76,7 +76,7 @@ func runInit(stdout io.Writer, target string, force bool) error {
 	fmt.Fprintf(stdout, "Created a pagify project in %s\n\n", filepath.Join(target, "docs"))
 	fmt.Fprintln(stdout, "Next steps:")
 	fmt.Fprintf(stdout, "  cd %s\n", target)
-	fmt.Fprintln(stdout, "  pagify serve")
+	fmt.Fprintln(stdout, "  pagify preview")
 	fmt.Fprintln(stdout, "  pagify build")
 	return nil
 }

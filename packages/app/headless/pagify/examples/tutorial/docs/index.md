@@ -114,7 +114,7 @@ pagify build ./my-docs/docs --output ./my-docs/dist
 ## Step 4: Preview Locally
 
 ```bash
-pagify serve ./my-docs/docs --port 8080
+pagify preview ./my-docs/docs --port 8080
 ```
 
 Open http://localhost:8080 in your browser.

@@ -29,10 +29,12 @@ Examples:
   dbml serve -p 3000
 
 API Endpoints:
-  GET  /health                    - Health check
+  GET  /api/v1/health             - Health check
   POST /api/v1/convert            - Convert DBML to multiple formats
   POST /api/v1/convert/sql        - Convert DBML to SQL only
   POST /api/v1/convert/mermaid    - Convert DBML to Mermaid only
+  GET  /api/v1/openapi.json       - OpenAPI 3 document
+  GET  /api/v1/docs               - Swagger UI
 
 Request body (JSON):
   {
@@ -75,9 +77,7 @@ func runServe(stdout io.Writer, port string) error {
 		os.Exit(0)
 	}()
 
-	fmt.Fprintf(stdout, "Starting dbml server on port %s\n", port)
-	fmt.Fprintf(stdout, "Health check: http://localhost:%s/health\n", port)
-	fmt.Fprintf(stdout, "API endpoint: http://localhost:%s/api/v1/convert\n", port)
+	printServerBox(stdout, serveLinks("http://localhost:"+port, true))
 
 	return srv.Start()
 }

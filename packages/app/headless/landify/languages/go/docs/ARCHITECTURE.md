@@ -30,7 +30,8 @@ go/
 │   ├── validate.go      # landify validate [-f file]
 │   ├── build.go         # landify build [-f file] [-o output] [-t theme]
 │   ├── themes.go        # landify themes
-│   ├── serve.go         # landify serve [-d dir] [-p port]
+│   ├── preview.go       # landify preview [-d dir] [-p port] — static preview
+│   ├── serve.go         # landify serve [--root] [-p port] — JSON API server
 │   ├── tui.go           # landify tui [path] — terminal editor
 │   ├── studio.go        # landify studio [path]
 │   └── mcp.go           # landify mcp serve [--root]
@@ -281,8 +282,9 @@ is expressed through the YAML content file and CLI flags:
 | `--theme` / `-t` (build)  | (YAML theme)   | Override with a named preset  |
 | `--type` / `-t` (new)     | `product`      | Page type to scaffold         |
 | `--force` / `-F` (new)    | `false`        | Overwrite existing file       |
-| `--dir` / `-d` (serve)    | `.`            | Directory to serve            |
-| `--port` / `-p` (serve)   | `8080`         | Listen port (127.0.0.1)       |
+| `--dir` / `-d` (preview)  | `.`            | Directory to serve statically |
+| `--root` / `-r` (serve)   | `.`            | Directory the API is confined to |
+| `--port` / `-p` (server)  | `8080`         | Listen port (127.0.0.1)       |
 | `[path]` (studio)         | (new product)  | YAML file to open in the GUI  |
 | `[path]` (tui)            | `landify.yaml` | YAML file to open in terminal |
 | `--root` (mcp serve)      | `.`            | Directory the MCP tools may touch |
