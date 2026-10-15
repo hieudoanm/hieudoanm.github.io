@@ -11,15 +11,13 @@
 | 07  | foody       | [Foody][foody]             | Random Food Suggestion                                           | No       | DONE   | Food & Drink      | Health & Fitness   |
 | 08  | exhibit     | [Exhibit][exhibit]         | UI Showcase                                                      | Required | DONE   | Graphics & Design | Photo & Video      |
 | 09  | svg         | [SVG][svg]                 | Adobe Illustrator / CorelDRAW                                    | No       | DONE   | Graphics & Design | Photo & Video      |
-| 10  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                     | No       | DONE   | Medical           | Health & Fitness   |
-| 11  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                    | No       | DONE   | Medical           | Health & Fitness   |
-| 12  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes    | No       | DONE   | Productivity      | Education          |
-| 13  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                | No       | DONE   | Productivity      | Business           |
-| 14  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
-| 15  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
-| 16  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
-| 17  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
-| 18  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
+| 10  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes    | No       | DONE   | Productivity      | Education          |
+| 11  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                | No       | DONE   | Productivity      | Business           |
+| 12  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
+| 13  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
+| 14  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
+| 15  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
+| 16  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/

@@ -28,7 +28,7 @@
 [lab-meg-release]: https://github.com/hieudoanm/lab.meg/releases/tag/latest
 [lab-mri-release]: https://github.com/hieudoanm/lab.mri/releases/tag/latest
 
-## [Open Releases (30)](https://hieudoanm.github.io/open)
+## [Open Releases (28)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions (1)
 
@@ -61,7 +61,7 @@
 
 ---
 
-### Hybrid (18)
+### Hybrid (16)
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
@@ -74,15 +74,13 @@
 | 19  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
 | 20  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
 | 21  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
-| 22  | Hybrid   | Medical           | Brainbow    | [Open][open-brainbow]    | [Releases][releases-brainbow]    |
-| 23  | Hybrid   | Medical           | MRI         | [Open][open-mri]         | [Releases][releases-mri]         |
-| 24  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
-| 25  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
-| 26  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
-| 27  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 28  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 29  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 30  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 22  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
+| 23  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
+| 24  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
+| 25  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 26  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 27  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 28  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -100,8 +98,6 @@
 [open-doi]: https://hieudoanm.github.io/open/doi/
 [open-foody]: https://hieudoanm.github.io/open/foody/
 [open-svg]: https://hieudoanm.github.io/open/svg/
-[open-brainbow]: https://hieudoanm.github.io/open/brainbow/
-[open-mri]: https://hieudoanm.github.io/open/mri/
 [open-office]: https://hieudoanm.github.io/open/office/
 [open-pdf]: https://hieudoanm.github.io/open/pdf/
 [open-cv]: https://hieudoanm.github.io/open/cv/
@@ -130,8 +126,6 @@
 [releases-doi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-doi-latest
 [releases-foody]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest
 [releases-svg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-svg-latest
-[releases-brainbow]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-brainbow-latest
-[releases-mri]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-mri-latest
 [releases-office]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-office-latest
 [releases-pdf]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-pdf-latest
 [releases-store]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-shopping-store-latest

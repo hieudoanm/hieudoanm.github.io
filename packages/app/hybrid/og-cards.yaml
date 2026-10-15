@@ -188,40 +188,6 @@ cards:
       success: '#10b981'
       error: '#e11d48'
 
-  - app: medical/brainbow
-    url: 'https://hieudoanm.github.io/open/brainbow/'
-    name: Brainbow
-    kicker: 'Channels, stacks, annotations'
-    title: 'Microscopy, annotated in place'
-    description: 'A microscopy image viewer and annotator for multi-channel rasters, z-stacks and large images.'
-    tags: ['Multi-channel', 'Z-stacks', 'Annotations', 'Large images']
-    theme:
-      base: '#faf9ff'
-      content: '#201a3a'
-      primary: '#7c3aed'
-      secondary: '#06b6d4'
-      info: '#6366f1'
-      warning: '#f59e0b'
-      success: '#10b981'
-      error: '#e11d48'
-
-  - app: medical/mri
-    url: 'https://hieudoanm.github.io/open/mri/'
-    name: MRI
-    kicker: 'From scan to result'
-    title: 'An MRI research workspace'
-    description: 'MRI research workspace and orchestration layer: studies, protocols, pipelines, models and a viewer.'
-    tags: ['DICOMweb', 'Pipelines', 'Protocols', 'Model library']
-    theme:
-      base: '#f8fafc'
-      content: '#0f1a26'
-      primary: '#2563eb'
-      secondary: '#64748b'
-      info: '#0284c7'
-      warning: '#d97706'
-      success: '#16a34a'
-      error: '#dc2626'
-
   - app: productivity/office
     url: 'https://hieudoanm.github.io/open/office/'
     name: Office
