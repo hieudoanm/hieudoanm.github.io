@@ -37,8 +37,8 @@
     "@tauri-apps/plugin-notification": "2.6.0",
     "@tauri-apps/plugin-updater": "2.13.3",
     "next": "16.4.0",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "react-icons": "5.7.0",
     "zod": "4.6.7"
   },

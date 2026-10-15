@@ -32,7 +32,7 @@
     "@ton/ton": "16.3.0",
     "@tonconnect/ui-react": "5.0.1",
     "buffer": "6.0.3",
-    "react": "19.3.0"
+    "react": "19.3.1"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

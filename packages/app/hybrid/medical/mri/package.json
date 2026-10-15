@@ -37,8 +37,8 @@
     "@tauri-apps/api": "2.12.3",
     "@tauri-apps/plugin-dialog": "2.8.3",
     "next": "16.4.0",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "zod": "4.6.7"
   },
   "devDependencies": {

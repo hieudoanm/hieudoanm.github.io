@@ -45,10 +45,10 @@
     "gif.js": "0.2.0",
     "html2canvas-pro": "2.5.2",
     "next": "16.4.0",
-    "react": "19.3.0",
+    "react": "19.3.1",
     "react-chartjs-2": "5.3.1",
     "react-chessboard": "5.12.1",
-    "react-dom": "19.3.0",
+    "react-dom": "19.3.1",
     "react-icons": "5.7.0"
   },
   "devDependencies": {
