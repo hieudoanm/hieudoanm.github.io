@@ -47,7 +47,7 @@ dependencies {
     // foundation are declared directly because the studio imports them.
     implementation(compose.desktop.currentOs)
     implementation("org.jetbrains.compose.material3:material3:1.9.0")
-    implementation("org.jetbrains.compose.foundation:foundation:1.12.1")
+    implementation("org.jetbrains.compose.foundation:foundation:1.12.2")
     testImplementation(kotlin("test"))
 }
 
