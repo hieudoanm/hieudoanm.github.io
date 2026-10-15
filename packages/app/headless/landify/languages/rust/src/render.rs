@@ -140,8 +140,14 @@ pub fn build_file(path: &str, output: &str, theme_name: &str) -> Result<()> {
 fn env() -> Result<Environment<'static>> {
     let mut env = Environment::new();
     env.set_auto_escape_callback(|_| AutoEscape::Html);
-    // Go's `html/template` preserves the template's final newline.
-    env.set_keep_trailing_newline(true);
+    // Go's `html/template` preserves the template's final newline; minijinja
+    // strips a single trailing newline unless configured otherwise.
+    env.set_syntax(
+        minijinja::syntax::SyntaxConfig::builder()
+            .keep_trailing_newline(true)
+            .build()
+            .map_err(|e| anyhow!("configure syntax: {e}"))?,
+    );
     for (name, source) in PARTIALS.iter().chain(PAGE_TEMPLATES) {
         env.add_template(name, source)
             .map_err(|e| anyhow!("parse template {name}: {e}"))?;
@@ -150,13 +156,13 @@ fn env() -> Result<Environment<'static>> {
 }
 
 /// The render context: the serialized `Config` under a `config` key.
-#[derive(serde::Serialize)]
-struct RenderContext<'a> {
-    config: &'a Config,
-}
-
 fn context(cfg: &Config) -> Value {
-    Value::from_serialize(RenderContext { config: cfg })
+    let mut m = std::collections::BTreeMap::new();
+    m.insert(
+        "config".to_string(),
+        Value::from(minijinja::value::Serde(cfg)),
+    );
+    Value::from_object(m)
 }
 
 #[cfg(test)]
