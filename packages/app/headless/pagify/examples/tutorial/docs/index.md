@@ -48,8 +48,8 @@ This is the home page of my documentation site.
 
 ## Quick Links
 
-- [Getting Started](./getting-started/)
-- [API Reference](./reference/)
+- [Getting Started](getting-started.md)
+- [API Reference](reference/index.md)
 ```
 
 Create `my-docs/docs/getting-started.md`:
@@ -82,7 +82,7 @@ setting: value
 
 ## Next Steps
 
-Read the [API Reference](./reference/) to learn more.
+Read the [API Reference](reference/index.md) to learn more.
 ```
 
 Create `my-docs/docs/reference/index.md`:
@@ -134,6 +134,6 @@ You've built and deployed your first pagify site!
 
 ## Next Steps
 
-- Read the [Customization Guide](../blog/customizing-your-site/)
-- Explore [Markdown Features](../blog/writing-markdown-for-pagify/)
-- Check the [API Reference](../reference/)
+- Read the [Getting Started](getting-started.md) guide
+- Explore the [API Reference](reference/index.md)
+- Browse the [blog](../blog/index.md) for updates (external reference)

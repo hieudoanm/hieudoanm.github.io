@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "root": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/headless/pagify/examples/reference/docs",
+  "nodes": [
+    {
+      "id": "build.md",
+      "path": "build.md",
+      "extension": ".md"
+    },
+    {
+      "id": "index.md",
+      "path": "index.md",
+      "extension": ".md"
+    },
+    {
+      "id": "markdown.md",
+      "path": "markdown.md",
+      "extension": ".md"
+    },
+    {
+      "id": "server.md",
+      "path": "server.md",
+      "extension": ".md"
+    },
+    {
+      "id": "site.md",
+      "path": "site.md",
+      "extension": ".md"
+    },
+    {
+      "id": "theme.md",
+      "path": "theme.md",
+      "extension": ".md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "build.md",
+      "target": "markdown.md",
+      "raw_link": "markdown.md",
+      "line": 70,
+      "status": "resolved"
+    },
+    {
+      "source": "build.md",
+      "target": "site.md",
+      "raw_link": "site.md",
+      "line": 71,
+      "status": "resolved"
+    },
+    {
+      "source": "build.md",
+      "target": "theme.md",
+      "raw_link": "theme.md",
+      "line": 72,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "build.md",
+      "raw_link": "build.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "markdown.md",
+      "raw_link": "markdown.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "server.md",
+      "raw_link": "server.md",
+      "line": 18,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "site.md",
+      "raw_link": "site.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "theme.md",
+      "raw_link": "theme.md",
+      "line": 17,
+      "status": "resolved"
+    },
+    {
+      "source": "markdown.md",
+      "target": "site.md",
+      "raw_link": "site.md",
+      "line": 93,
+      "status": "resolved"
+    },
+    {
+      "source": "markdown.md",
+      "target": "theme.md",
+      "raw_link": "theme.md",
+      "line": 94,
+      "status": "resolved"
+    },
+    {
+      "source": "server.md",
+      "target": "build.md",
+      "raw_link": "build.md",
+      "line": 46,
+      "status": "resolved"
+    },
+    {
+      "source": "server.md",
+      "target": "site.md",
+      "raw_link": "site.md",
+      "line": 47,
+      "status": "resolved"
+    },
+    {
+      "source": "server.md",
+      "target": "theme.md",
+      "raw_link": "theme.md",
+      "line": 48,
+      "status": "resolved"
+    },
+    {
+      "source": "site.md",
+      "target": "theme.md",
+      "raw_link": "theme.md",
+      "line": 97,
+      "status": "resolved"
+    }
+  ],
+  "stats": {
+    "files": 6,
+    "ignored_files": 0,
+    "links": 14,
+    "broken_links": 0,
+    "resolved_links": 14,
+    "self_links": 0,
+    "orphan_files": 1,
+    "components": 0
+  }
+}

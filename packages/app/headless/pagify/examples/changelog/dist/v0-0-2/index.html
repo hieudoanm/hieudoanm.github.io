@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="auto">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Installation · basic-docs</title>
+    <title>v0.0.2 · Changelog</title>
+    
+    <meta name="description" content="Added themes, navigation and link rewriting" />
     
     <link rel="stylesheet" href="/assets/styles.css" />
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
@@ -25,7 +27,7 @@
           <span class="visually-hidden">Menu</span>
         </button>
         
-        <a class="header__title" href="/">basic-docs</a>
+        <a class="header__title" href="/">Changelog</a>
         <div class="header__actions">
           <label class="header__search" for="search">
             <span class="visually-hidden">Search</span>
@@ -56,69 +58,96 @@
   <li class="nav__item">
   <a
     class="nav__link"
-    href="/docs/"
-    >Basic Docs</a
-  > <ul class="nav nav--nested">
-  <li class="nav__item">
-  <a
-    class="nav__link"
-    href="/docs/getting-started/"
-    >Getting Started</a
+    href="/"
+    >Changelog</a
   > 
 </li><li class="nav__item">
   <a
     class="nav__link"
-    href="/docs/guide/"
-    >Guide</a
-  > <ul class="nav nav--nested">
-  <li class="nav__item">
-  <a
-    class="nav__link"
-    href="/docs/guide/configuration/"
-    >Configuration</a
+    href="/v0-0-1/"
+    >v0.0.1</a
   > 
 </li><li class="nav__item">
   <a
     class="nav__link nav__link--current"
-    href="/docs/guide/installation/"
-    aria-current="page">Installation</a
+    href="/v0-0-2/"
+    aria-current="page">v0.0.2</a
   > 
-</li>
-</ul>
-</li>
-</ul>
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-3/"
+    >v0.0.3</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-1-0/"
+    >v0.1.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-2-0/"
+    >v0.2.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-3-0/"
+    >v0.3.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v1-0-0/"
+    >v1.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v2-0-0/"
+    >v2.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v3-0-0/"
+    >v3.0.0</a
+  > 
 </li>
 </ul>
       </nav>
       
 
       <main class="main" id="main">
-        <article class="markdown"><h1 id="page-title" class="markdown__title">Installation</h1>
+        <article class="markdown"><h1 id="page-title" class="markdown__title">v0.0.2</h1>
           
-          <h2 id="requirements">Requirements</h2>
+          <p class="markdown__lede">Added themes, navigation and link rewriting</p>
+          
+          <p>Released: December 20, 2023</p>
+<h2 id="added">Added</h2>
 <ul>
-<li>Go 1.21+ (for building from source)</li>
-<li>No Node.js, npm, or Python required</li>
+<li><strong>Themes</strong> — Pluggable template + asset tree, embedded via <code>go:embed</code></li>
+<li><strong>Navigation</strong> — Generated from the file tree; <code>index.md</code> becomes a section landing page</li>
+<li><strong>Link rewriting</strong> — <code>.md</code> links rewritten to clean URLs</li>
+<li><strong>Frontmatter</strong> — Page metadata: title, description, order, label, draft</li>
+<li><strong>Site config</strong> — <code>pagify.yaml</code> at the content root</li>
 </ul>
-<h2 id="methods">Methods</h2>
-<h3 id="go-install-recommended">Go Install (Recommended)</h3>
-<pre><code class="language-bash">go install github.com/hieudoanm/pagify@latest
-</code></pre>
-<p>Ensure <code>$(go env GOPATH)/bin</code> is in your <code>$PATH</code>.</p>
-<h3 id="build-from-source">Build from Source</h3>
-<pre><code class="language-bash">git clone https://github.com/hieudoanm/pagify
-cd pagify
-make build
-./bin/pagify --help
-</code></pre>
-<h3 id="homebrew-macos">Homebrew (macOS)</h3>
-<pre><code class="language-bash">brew tap hieudoanm/pagify
-brew install pagify
-</code></pre>
-<h2 id="verify-installation">Verify Installation</h2>
-<pre><code class="language-bash">pagify --version
-</code></pre>
-<p>Should output something like <code>pagify version 0.1.0</code>.</p>
+<h2 id="fixed">Fixed</h2>
+<ul>
+<li>Output directory now cleared before each build so deleted pages do not survive</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>N/A</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/">Changelog home</a></li>
+<li><a href="/v0-0-1/">v0.0.1</a> — previous release</li>
+<li><a href="/v0-0-3/">v0.0.3</a> — next release</li>
+</ul>
 
           
         </article>
@@ -128,27 +157,19 @@ brew install pagify
   <ul class="outline__list">
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#requirements">Requirements</a>
+      <a class="outline__link" href="#added">Added</a>
     </li>
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#methods">Methods</a>
-    </li>
-    
-    <li class="outline__item outline__item--3">
-      <a class="outline__link" href="#go-install-recommended">Go Install (Recommended)</a>
-    </li>
-    
-    <li class="outline__item outline__item--3">
-      <a class="outline__link" href="#build-from-source">Build from Source</a>
-    </li>
-    
-    <li class="outline__item outline__item--3">
-      <a class="outline__link" href="#homebrew-macos">Homebrew (macOS)</a>
+      <a class="outline__link" href="#fixed">Fixed</a>
     </li>
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#verify-installation">Verify Installation</a>
+      <a class="outline__link" href="#security">Security</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
     </li>
     
   </ul>
@@ -158,7 +179,7 @@ brew install pagify
     </div>
 
     <footer class="footer">
-      <p>Built with pagify</p>
+      <p>Built with pagify · © 2024 pagify</p>
     </footer>
 
     <script src="/assets/script.js" defer></script>

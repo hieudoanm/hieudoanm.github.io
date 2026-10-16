@@ -95,12 +95,14 @@
           
           <p>Learn how to use <strong>pagify</strong> to build your documentation site.</p>
 <h2 id="installation">Installation</h2>
+<p>Install pagify via one of these methods:</p>
 <pre><code class="language-bash"># Install via Go
 go install github.com/hieudoanm/pagify@latest
 
 # Or build from source
 make build
 </code></pre>
+<p>See the <a href="/guide/installation/">Installation</a> page for full details on every install method.</p>
 <h2 id="create-your-first-site">Create Your First Site</h2>
 <pre><code class="language-bash"># Scaffold a starter project
 pagify init my-docs
@@ -109,7 +111,7 @@ pagify init my-docs
 pagify build ./my-docs/docs
 
 # Preview locally
-pagify serve ./my-docs/docs
+pagify preview ./my-docs/docs
 </code></pre>
 <h2 id="write-content">Write Content</h2>
 <p>Create <code>.md</code> files in your content directory:</p>
@@ -160,6 +162,18 @@ pagify build ./docs --output ./dist
 
 # Deploy ./dist to GitHub Pages, Netlify, Vercel, Cloudflare Pages...
 </code></pre>
+<h2 id="learn-more">Learn More</h2>
+<ul>
+<li>Read the <a href="/guide/">Guide</a> section for installation and configuration.</li>
+<li>Browse <a href="/guide/configuration/">Configuration</a> to customise your site.</li>
+<li>Return to the <a href="/">home page</a> for an overview.</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li><a href="/guide/">Guide</a></li>
+<li><a href="/guide/configuration/">Configuration</a></li>
+<li><a href="/">Home</a></li>
+</ul>
 <aside class="callout callout--tip" role="note">
 <p class="callout__title" data-no-search><span class="callout__icon" aria-hidden="true">✓</span>Tip</p>
 <p>
@@ -191,6 +205,14 @@ The <code>dist/</code> directory contains only static files — no server requir
     
     <li class="outline__item outline__item--2">
       <a class="outline__link" href="#build--deploy">Build &amp; Deploy</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#learn-more">Learn More</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#next-steps">Next Steps</a>
     </li>
     
   </ul>

@@ -56,8 +56,10 @@
   /* Shadows */
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
   --content-width: 760px;
   --sidebar-width: 17rem;
@@ -79,11 +81,13 @@
   --space-8: 4rem;
   --space-10: 6rem;
 
-  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", roboto,
-    "Helvetica Neue", arial, sans-serif;
+  --font-body:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', roboto,
+    'Helvetica Neue', arial, sans-serif;
   --font-heading: var(--font-body);
-  --font-mono: ui-monospace, sfmono-regular, "SF Mono", menlo, consolas,
-    "Liberation Mono", monospace;
+  --font-mono:
+    ui-monospace, sfmono-regular, 'SF Mono', menlo, consolas, 'Liberation Mono',
+    monospace;
 
   --duration-fast: 150ms;
   --duration-normal: 250ms;
@@ -226,7 +230,8 @@ hr {
   border: 1px solid transparent;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: color var(--duration-fast) var(--ease),
+  transition:
+    color var(--duration-fast) var(--ease),
     background var(--duration-fast) var(--ease);
 }
 
@@ -250,7 +255,7 @@ hr {
 
 .header__toggle-icon::before,
 .header__toggle-icon::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   width: 100%;
@@ -286,7 +291,8 @@ hr {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  transition: width var(--duration-normal) var(--ease),
+  transition:
+    width var(--duration-normal) var(--ease),
     border-color var(--duration-fast) var(--ease);
 }
 
@@ -417,7 +423,8 @@ mark {
   line-height: 1.5;
   text-decoration: none;
   border-radius: var(--radius-sm);
-  transition: color var(--duration-fast) var(--ease),
+  transition:
+    color var(--duration-fast) var(--ease),
     background var(--duration-fast) var(--ease);
 }
 
@@ -603,7 +610,7 @@ mark {
 }
 
 /* Anchored headings reveal their link on hover, without shifting layout. */
-.markdown :is(h1, h2, h3, h4, h5, h6) > a[href^="#"] {
+.markdown :is(h1, h2, h3, h4, h5, h6) > a[href^='#'] {
   margin-left: var(--space-2);
   color: var(--text-muted);
   opacity: 0;
@@ -612,8 +619,8 @@ mark {
   transition: opacity var(--duration-fast) var(--ease);
 }
 
-.markdown :is(h1, h2, h3, h4, h5, h6):hover > a[href^="#"],
-.markdown :is(h1, h2, h3, h4, h5, h6) > a[href^="#"]:focus-visible {
+.markdown :is(h1, h2, h3, h4, h5, h6):hover > a[href^='#'],
+.markdown :is(h1, h2, h3, h4, h5, h6) > a[href^='#']:focus-visible {
   opacity: 1;
 }
 
@@ -704,7 +711,8 @@ pre {
   box-shadow: var(--shadow-sm);
   cursor: pointer;
   opacity: 0;
-  transition: opacity var(--duration-fast) var(--ease),
+  transition:
+    opacity var(--duration-fast) var(--ease),
     color var(--duration-fast) var(--ease),
     box-shadow var(--duration-fast) var(--ease);
 }
@@ -1151,7 +1159,7 @@ pre {
 
 /* 15. Dark mode ------------------------------------------------------------------ */
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   color-scheme: dark;
 
   --bg: #0c0c0e;
@@ -1184,32 +1192,34 @@ pre {
   /* Shadows - dark mode */
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.2);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
 }
 
-[data-theme="dark"] .callout--note {
+[data-theme='dark'] .callout--note {
   --callout-accent: #7aa2f7;
 }
 
-[data-theme="dark"] .callout--info {
+[data-theme='dark'] .callout--info {
   --callout-accent: #38b6c9;
 }
 
-[data-theme="dark"] .callout--tip,
-[data-theme="dark"] .callout--success {
+[data-theme='dark'] .callout--tip,
+[data-theme='dark'] .callout--success {
   --callout-accent: #34d399;
 }
 
-[data-theme="dark"] .callout--warning {
+[data-theme='dark'] .callout--warning {
   --callout-accent: #fbbf24;
 }
 
-[data-theme="dark"] .callout--caution {
+[data-theme='dark'] .callout--caution {
   --callout-accent: #fb923c;
 }
 
-[data-theme="dark"] .callout--danger {
+[data-theme='dark'] .callout--danger {
   --callout-accent: #f87171;
 }
 
@@ -1253,7 +1263,7 @@ pre {
 
   /* A scrim keeps the page behind the drawer from stealing taps. */
   [data-nav-open]::after {
-    content: "";
+    content: '';
     position: fixed;
     inset: var(--header-height) 0 0 0;
     z-index: 10;
@@ -1384,8 +1394,8 @@ pre {
     color: inherit;
   }
 
-  a[href^="http"]::after {
-    content: " (" attr(href) ")";
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
     font-size: 0.8em;
     color: #666;
   }

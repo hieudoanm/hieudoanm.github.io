@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="auto">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Basic Docs · basic-docs</title>
+    <title>v0.0.3 · Changelog</title>
+    
+    <meta name="description" content="Added search index, callouts and the preview server" />
     
     <link rel="stylesheet" href="/assets/styles.css" />
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
@@ -25,7 +27,7 @@
           <span class="visually-hidden">Menu</span>
         </button>
         
-        <a class="header__title" href="/">basic-docs</a>
+        <a class="header__title" href="/">Changelog</a>
         <div class="header__actions">
           <label class="header__search" for="search">
             <span class="visually-hidden">Search</span>
@@ -55,73 +57,98 @@
         <ul class="nav">
   <li class="nav__item">
   <a
+    class="nav__link"
+    href="/"
+    >Changelog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-1/"
+    >v0.0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-2/"
+    >v0.0.2</a
+  > 
+</li><li class="nav__item">
+  <a
     class="nav__link nav__link--current"
-    href="/docs/"
-    aria-current="page">Basic Docs</a
-  > <ul class="nav nav--nested">
-  <li class="nav__item">
-  <a
-    class="nav__link"
-    href="/docs/getting-started/"
-    >Getting Started</a
+    href="/v0-0-3/"
+    aria-current="page">v0.0.3</a
   > 
 </li><li class="nav__item">
   <a
     class="nav__link"
-    href="/docs/guide/"
-    >Guide</a
-  > <ul class="nav nav--nested">
-  <li class="nav__item">
-  <a
-    class="nav__link"
-    href="/docs/guide/configuration/"
-    >Configuration</a
+    href="/v0-1-0/"
+    >v0.1.0</a
   > 
 </li><li class="nav__item">
   <a
     class="nav__link"
-    href="/docs/guide/installation/"
-    >Installation</a
+    href="/v0-2-0/"
+    >v0.2.0</a
   > 
-</li>
-</ul>
-</li>
-</ul>
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-3-0/"
+    >v0.3.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v1-0-0/"
+    >v1.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v2-0-0/"
+    >v2.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v3-0-0/"
+    >v3.0.0</a
+  > 
 </li>
 </ul>
       </nav>
       
 
       <main class="main" id="main">
-        <article class="markdown"><h1 id="page-title" class="markdown__title">Basic Docs</h1>
+        <article class="markdown"><h1 id="page-title" class="markdown__title">v0.0.3</h1>
           
-          <p>This is a minimal <strong>pagify</strong> example showing how to create a documentation site with zero configuration.</p>
-<h2 id="quick-start">Quick Start</h2>
-<pre><code class="language-bash">pagify build ./docs
-</code></pre>
-<p>The output appears in <code>./dist</code> — ready to deploy anywhere.</p>
-<h2 id="features">Features</h2>
+          <p class="markdown__lede">Added search index, callouts and the preview server</p>
+          
+          <p>Released: January 5, 2024</p>
+<h2 id="added">Added</h2>
 <ul>
-<li><strong>Zero config</strong> — just Markdown files in a directory</li>
-<li><strong>Clean URLs</strong> — no <code>.html</code> extensions</li>
-<li><strong>Auto navigation</strong> — built from your file tree</li>
-<li><strong>Search</strong> — client-side, no backend needed</li>
-<li><strong>Dark mode</strong> — automatic + manual toggle</li>
-<li><strong>Responsive</strong> — works on mobile, tablet, desktop</li>
+<li><strong>Search index</strong> — Client-side search over a generated <code>search-index.json</code></li>
+<li><strong>Callouts</strong> — GitHub-style <code>&gt; [!NOTE]</code>, <code>&gt; [!TIP]</code>, <code>&gt; [!WARNING]</code>, <code>&gt; [!DANGER]</code></li>
+<li><strong>Preview server</strong> — <code>pagify preview</code> rebuilds on every request</li>
+<li><strong>Goldmark v2</strong> — GFM, footnotes, auto heading IDs, raw HTML passthrough</li>
+<li><strong>Dark/light theme</strong> — Automatic OS detection with manual toggle</li>
 </ul>
-<h2 id="project-structure">Project Structure</h2>
-<pre><code class="language-text">docs/
-├── index.md              # Home page
-├── getting-started.md    # First guide
-├── guide/
-│   ├── index.md          # Section landing
-│   ├── installation.md
-│   └── configuration.md
-└── reference/
-    └── cli.md
-</code></pre>
-<h2 id="next-steps">Next Steps</h2>
-<p>Read the <a href="./getting-started/">Getting Started</a> guide to learn more.</p>
+<h2 id="fixed">Fixed</h2>
+<ul>
+<li>Sidebar now takes full viewport height on all browsers</li>
+<li>Callout aliases (<code>info</code>, <code>success</code>, <code>check</code>, <code>caution</code>, <code>attention</code>, <code>error</code>) accepted</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>N/A</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/">Changelog home</a></li>
+<li><a href="/v0-0-2/">v0.0.2</a> — previous release</li>
+<li><a href="/v0-1-0/">v0.1.0</a> — next release</li>
+</ul>
 
           
         </article>
@@ -131,19 +158,19 @@
   <ul class="outline__list">
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#quick-start">Quick Start</a>
+      <a class="outline__link" href="#added">Added</a>
     </li>
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#features">Features</a>
+      <a class="outline__link" href="#fixed">Fixed</a>
     </li>
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#project-structure">Project Structure</a>
+      <a class="outline__link" href="#security">Security</a>
     </li>
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#next-steps">Next Steps</a>
+      <a class="outline__link" href="#related">Related</a>
     </li>
     
   </ul>
@@ -153,7 +180,7 @@
     </div>
 
     <footer class="footer">
-      <p>Built with pagify</p>
+      <p>Built with pagify · © 2024 pagify</p>
     </footer>
 
     <script src="/assets/script.js" defer></script>

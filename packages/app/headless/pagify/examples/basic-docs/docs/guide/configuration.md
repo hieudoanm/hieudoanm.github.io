@@ -39,3 +39,10 @@ A site with no `pagify.yaml` builds with sensible defaults:
 - Auto theme (follows OS)
 - No footer
 - Root path `/`
+
+## Related
+
+- [Installation](./installation.md) — install pagify first
+- [Guide](./index.md) — back to the guide landing page
+- [Getting Started](../getting-started.md) — create your first site
+- [Home](../index.md) — home page

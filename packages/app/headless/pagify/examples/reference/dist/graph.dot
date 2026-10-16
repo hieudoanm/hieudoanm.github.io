@@ -1,0 +1,24 @@
+digraph graph {
+  rankdir=TB;
+  splines=polyline;
+  "build.md" [label="build.md", shape=note];
+  "index.md" [label="index.md", shape=note];
+  "markdown.md" [label="markdown.md", shape=note];
+  "server.md" [label="server.md", shape=note];
+  "site.md" [label="site.md", shape=note];
+  "theme.md" [label="theme.md", shape=note];
+  "build.md" -> "markdown.md";
+  "build.md" -> "site.md";
+  "build.md" -> "theme.md";
+  "index.md" -> "build.md";
+  "index.md" -> "markdown.md";
+  "index.md" -> "server.md";
+  "index.md" -> "site.md";
+  "index.md" -> "theme.md";
+  "markdown.md" -> "site.md";
+  "markdown.md" -> "theme.md";
+  "server.md" -> "build.md";
+  "server.md" -> "site.md";
+  "server.md" -> "theme.md";
+  "site.md" -> "theme.md";
+}

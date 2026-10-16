@@ -69,6 +69,18 @@ Add a footer with Markdown support:
 footer: '© 2024 [My Project](https://example.com) — Built with pagify'
 ```
 
+## Related
+
+- [Introducing pagify v0.1](introducing-pagify-v0-1.md) — what's new
+- [Writing Markdown for pagify](writing-markdown-for-pagify.md) — authoring tips
+- Browse the [Tutorials](category/tutorials.md) section for more guides.
+
+## See Also
+
+- [Releases](category/releases.md)
+- [Tutorials](category/tutorials.md)
+- [Tips](category/tips.md)
+
 ---
 
 _More customization options coming soon!_

@@ -76,8 +76,20 @@
 </li><li class="nav__item">
   <a
     class="nav__link"
+    href="/server/"
+    >server Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
     href="/site/"
     >site Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/theme/"
+    >theme Package</a
   > 
 </li>
 </ul>
@@ -152,6 +164,12 @@ Content here.
 <p>Frontmatter is parsed separately using <code>SplitFrontmatter()</code>:</p>
 <pre><code class="language-go">fm, body, ok, err := markdown.SplitFrontmatter(src)
 </code></pre>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/build/">build Package</a> — how markdown is rendered during a build</li>
+<li><a href="/site/">site Package</a> — content discovery and navigation</li>
+<li><a href="/theme/">theme Package</a> — how rendered HTML is presented</li>
+</ul>
 
           
         </article>
@@ -186,6 +204,10 @@ Content here.
     
     <li class="outline__item outline__item--2">
       <a class="outline__link" href="#frontmatter">Frontmatter</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
     </li>
     
   </ul>

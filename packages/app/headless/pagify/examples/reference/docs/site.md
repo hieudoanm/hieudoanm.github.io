@@ -89,3 +89,9 @@ func printNav(pages []*site.Page, indent int) {
     }
 }
 ```
+
+## Related
+
+- [build Package](build.md) — how site content is rendered
+- [markdown Package](markdown.md) — parsing and rendering
+- [theme Package](theme.md) — how rendered HTML is presented

@@ -59,6 +59,18 @@
     href="/"
     aria-current="page">pagify Tutorial</a
   > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/getting-started/"
+    >Getting Started</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/reference/"
+    >API Reference</a
+  > 
 </li>
 </ul>
       </nav>
@@ -99,8 +111,8 @@ This is the home page of my documentation site.
 
 ## Quick Links
 
-- [Getting Started](./getting-started/)
-- [API Reference](./reference/)
+- [Getting Started](getting-started.md)
+- [API Reference](reference/index.md)
 </code></pre>
 <p>Create <code>my-docs/docs/getting-started.md</code>:</p>
 <pre><code class="language-markdown">---
@@ -124,7 +136,7 @@ go install github.com/my/project@latest
 setting: value
 </code></pre>
 <h2 id="next-steps">Next Steps</h2>
-<p>Read the <a href="./reference/">API Reference</a> to learn more.</p>
+<p>Read the <a href="/reference/">API Reference</a> to learn more.</p>
 <pre><code>
 Create `my-docs/docs/reference/index.md`:
 
@@ -149,7 +161,7 @@ Builds the project.
 <pre><code class="language-bash">pagify build ./my-docs/docs --output ./my-docs/dist
 </code></pre>
 <h2 id="step-4-preview-locally">Step 4: Preview Locally</h2>
-<pre><code class="language-bash">pagify serve ./my-docs/docs --port 8080
+<pre><code class="language-bash">pagify preview ./my-docs/docs --port 8080
 </code></pre>
 <p>Open http://localhost:8080 in your browser.</p>
 <h2 id="step-5-deploy">Step 5: Deploy</h2>
@@ -164,9 +176,9 @@ Builds the project.
 <p>You've built and deployed your first pagify site!</p>
 <h2 id="next-steps-1">Next Steps</h2>
 <ul>
-<li>Read the <a href="../blog/customizing-your-site/">Customization Guide</a></li>
-<li>Explore <a href="../blog/writing-markdown-for-pagify/">Markdown Features</a></li>
-<li>Check the <a href="../reference/">API Reference</a></li>
+<li>Read the <a href="/getting-started/">Getting Started</a> guide</li>
+<li>Explore the <a href="/reference/">API Reference</a></li>
+<li>Browse the <a href="../blog/index.md">blog</a> for updates (external reference)</li>
 </ul>
 
           

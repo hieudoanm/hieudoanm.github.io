@@ -73,6 +73,18 @@ Sidebar navigation on desktop, collapsible drawer on mobile.
 - 💡 Request features
 - 🤝 Contribute code
 
+## Related Posts
+
+- [Writing Markdown for pagify](writing-markdown-for-pagify.md) — authoring tips
+- [Customizing Your Site](customizing-your-site.md) — themes and config
+- Browse the [Tutorials](category/tutorials.md) and [Tips](category/tips.md) sections.
+
+## See Also
+
+- [Releases](category/releases.md)
+- [Tutorials](category/tutorials.md)
+- [Tips](category/tips.md)
+
 ---
 
 _Happy documenting!_

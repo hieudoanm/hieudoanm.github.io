@@ -73,13 +73,11 @@ func main() {
 Link to other pages using relative paths:
 
 ```markdown
-[Getting Started](getting-started.md)
-[API Reference](../reference/api.md)
+[Introducing pagify v0.1](introducing-pagify-v0-1.md)
+[Customizing Your Site](customizing-your-site.md)
 ```
 
 pagify rewrites these to clean URLs automatically.
-
-## Frontmatter
 
 Add metadata to your pages:
 
@@ -110,6 +108,18 @@ Images are copied to `assets/` and paths rewritten.
 3. **Keep lines under 120 chars** — Easier to review diffs
 4. **Use callouts** — Highlight important information
 5. **Add descriptions** — Improves SEO and search results
+
+## Related
+
+- [Introducing pagify v0.1](introducing-pagify-v0-1.md) — the first release
+- [Customizing Your Site](customizing-your-site.md) — themes and config
+- Browse the [Tutorials](category/tutorials.md) section for more guides.
+
+## See Also
+
+- [Releases](category/releases.md)
+- [Tutorials](category/tutorials.md)
+- [Tips](category/tips.md)
 
 ---
 

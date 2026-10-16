@@ -12,41 +12,6 @@ All notable changes to pagify.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
-### Added
-
-- MCP server command (`pagify mcp`)
-- Frontmatter-based site configuration
-- Light/dark theme favicons
-- Full-height sidebar
-
-### Changed
-
-- Migrated to Goldmark v2
-- Sidebar now takes full viewport height
-
-## [v0.1.0] - 2024-01-15
-
-### Added
-
-- Initial release
-- Zero-config Markdown to static site
-- GitHub-flavored Markdown support
-- Built-in search (client-side)
-- Dark/light theme with toggle
-- Responsive navigation
-- Syntax highlighting
-- Callouts (NOTE, TIP, WARNING, DANGER)
-- Footnotes
-- Tables and task lists
-- Cross-page link rewriting
-- Frontmatter support
-- Local development server
-- MCP server for AI integration
-
----
-
 ## Release Types
 
 | Type           | Description                       |
@@ -62,3 +27,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [GitHub Releases](https://github.com/hieudoanm/pagify/releases)
 - [GitHub Commits](https://github.com/hieudoanm/pagify/commits/main)
+
+## Releases
+
+- [v0.0.1](v0-0-1.md) — December 1, 2023
+- [v0.0.2](v0-0-2.md) — December 20, 2023
+- [v0.0.3](v0-0-3.md) — January 5, 2024
+- [v0.1.0](v0-1-0.md) — January 15, 2024
+- [v0.2.0](v0-2-0.md) — March 1, 2024
+- [v0.3.0](v0-3-0.md) — May 15, 2024
+- [v1.0.0](v1-0-0.md) — September 1, 2024
+- [v2.0.0](v2-0-0.md) — February 10, 2025
+- [v3.0.0](v3-0-0.md) — October 1, 2025

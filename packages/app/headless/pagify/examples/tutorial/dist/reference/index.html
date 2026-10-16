@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="auto">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guide · basic-docs</title>
+    <title>API Reference · pagify Tutorial</title>
     
     <link rel="stylesheet" href="/assets/styles.css" />
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
@@ -25,7 +25,7 @@
           <span class="visually-hidden">Menu</span>
         </button>
         
-        <a class="header__title" href="/">basic-docs</a>
+        <a class="header__title" href="/">pagify Tutorial</a>
         <div class="header__actions">
           <label class="header__search" for="search">
             <span class="visually-hidden">Search</span>
@@ -56,50 +56,39 @@
   <li class="nav__item">
   <a
     class="nav__link"
-    href="/docs/"
-    >Basic Docs</a
-  > <ul class="nav nav--nested">
-  <li class="nav__item">
+    href="/"
+    >pagify Tutorial</a
+  > 
+</li><li class="nav__item">
   <a
     class="nav__link"
-    href="/docs/getting-started/"
+    href="/getting-started/"
     >Getting Started</a
   > 
 </li><li class="nav__item">
   <a
     class="nav__link nav__link--current"
-    href="/docs/guide/"
-    aria-current="page">Guide</a
-  > <ul class="nav nav--nested">
-  <li class="nav__item">
-  <a
-    class="nav__link"
-    href="/docs/guide/configuration/"
-    >Configuration</a
+    href="/reference/"
+    aria-current="page">API Reference</a
   > 
-</li><li class="nav__item">
-  <a
-    class="nav__link"
-    href="/docs/guide/installation/"
-    >Installation</a
-  > 
-</li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
       </nav>
       
 
       <main class="main" id="main">
-        <article class="markdown"><h1 id="page-title" class="markdown__title">Guide</h1>
+        <article class="markdown"><h1 id="page-title" class="markdown__title">API Reference</h1>
           
-          <p>Welcome to the guides section. Choose a topic to get started.</p>
-<h2 id="installation">Installation</h2>
-<p>Learn how to <a href="./installation/">install pagify</a> on your system.</p>
-<h2 id="configuration">Configuration</h2>
-<p>See how to <a href="./configuration/">configure your site</a> with <code>pagify.yaml</code>.</p>
+          <h2 id="commands">Commands</h2>
+<h3 id="my-project-run"><code>my-project run</code></h3>
+<p>Runs the application.</p>
+<h3 id="my-project-build"><code>my-project build</code></h3>
+<p>Builds the project.</p>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/">Tutorial Home</a></li>
+<li><a href="/getting-started/">Getting Started</a></li>
+</ul>
 
           
         </article>
@@ -109,11 +98,19 @@
   <ul class="outline__list">
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#installation">Installation</a>
+      <a class="outline__link" href="#commands">Commands</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#my-project-run">my-project run</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#my-project-build">my-project build</a>
     </li>
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#configuration">Configuration</a>
+      <a class="outline__link" href="#related">Related</a>
     </li>
     
   </ul>
@@ -123,7 +120,7 @@
     </div>
 
     <footer class="footer">
-      <p>Built with pagify</p>
+      <p>Built with pagify · © 2024 pagify Tutorial</p>
     </footer>
 
     <script src="/assets/script.js" defer></script>

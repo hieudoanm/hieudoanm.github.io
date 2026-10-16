@@ -11,11 +11,11 @@ Complete API reference for pagify's internal packages.
 
 ## Packages
 
-- [build](./build/) — Site building pipeline
-- [markdown](./markdown/) — Markdown rendering
-- [site](./site/) — Content discovery and navigation
-- [theme](./theme/) — Theme and template system
-- [server](./server/) — Local development server
+- [build](build.md) — Site building pipeline
+- [markdown](markdown.md) — Markdown rendering
+- [site](site.md) — Content discovery and navigation
+- [theme](theme.md) — Theme and template system
+- [server](server.md) — Local development server
 
 ## Quick Reference
 
@@ -30,3 +30,11 @@ Complete API reference for pagify's internal packages.
 ## Version
 
 Current version: **v0.1.0**
+
+## Related
+
+- [build](build.md)
+- [markdown](markdown.md)
+- [site](site.md)
+- [theme](theme.md)
+- [server](server.md)

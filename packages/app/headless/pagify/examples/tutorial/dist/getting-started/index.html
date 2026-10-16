@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="auto">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Configuration · basic-docs</title>
+    <title>Getting Started · pagify Tutorial</title>
+    
+    <meta name="description" content="Learn how to get started with My Project" />
     
     <link rel="stylesheet" href="/assets/styles.css" />
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
@@ -25,7 +27,7 @@
           <span class="visually-hidden">Menu</span>
         </button>
         
-        <a class="header__title" href="/">basic-docs</a>
+        <a class="header__title" href="/">pagify Tutorial</a>
         <div class="header__actions">
           <label class="header__search" for="search">
             <span class="visually-hidden">Search</span>
@@ -56,102 +58,48 @@
   <li class="nav__item">
   <a
     class="nav__link"
-    href="/docs/"
-    >Basic Docs</a
-  > <ul class="nav nav--nested">
-  <li class="nav__item">
-  <a
-    class="nav__link"
-    href="/docs/getting-started/"
-    >Getting Started</a
+    href="/"
+    >pagify Tutorial</a
   > 
 </li><li class="nav__item">
-  <a
-    class="nav__link"
-    href="/docs/guide/"
-    >Guide</a
-  > <ul class="nav nav--nested">
-  <li class="nav__item">
   <a
     class="nav__link nav__link--current"
-    href="/docs/guide/configuration/"
-    aria-current="page">Configuration</a
+    href="/getting-started/"
+    aria-current="page">Getting Started</a
   > 
 </li><li class="nav__item">
   <a
     class="nav__link"
-    href="/docs/guide/installation/"
-    >Installation</a
+    href="/reference/"
+    >API Reference</a
   > 
-</li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
       </nav>
       
 
       <main class="main" id="main">
-        <article class="markdown"><h1 id="page-title" class="markdown__title">Configuration</h1>
+        <article class="markdown"><h1 id="page-title" class="markdown__title">Getting Started</h1>
           
-          <p>Create <code>pagify.yaml</code> at your content root to customize the site. All fields are optional.</p>
-<pre><code class="language-yaml">title: My Documentation
-language: en
-basePath: /my-repo # For GitHub Pages project sites
-theme: light # light | dark | auto
-footer: '© 2024 Example'
+          <p class="markdown__lede">Learn how to get started with My Project</p>
+          
+          <p>Welcome! This guide will help you get up and running.</p>
+<h2 id="installation">Installation</h2>
+<pre><code class="language-bash"># Install the CLI
+go install github.com/my/project@latest
 </code></pre>
-<h2 id="fields">Fields</h2>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>title</code></td>
-<td>Directory name</td>
-<td>Site title in header/meta</td>
-</tr>
-<tr>
-<td><code>language</code></td>
-<td><code>en</code></td>
-<td>HTML lang attribute</td>
-</tr>
-<tr>
-<td><code>basePath</code></td>
-<td><code>/</code></td>
-<td>URL prefix for GitHub Pages project sites</td>
-</tr>
-<tr>
-<td><code>theme</code></td>
-<td><code>auto</code></td>
-<td>Initial color scheme</td>
-</tr>
-<tr>
-<td><code>footer</code></td>
-<td>—</td>
-<td>Footer text (supports Markdown)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="example-github-pages">Example: GitHub Pages</h2>
-<p>For a repo at <code>github.com/user/my-docs</code>:</p>
-<pre><code class="language-yaml">title: My Project Docs
-basePath: /my-docs
+<h2 id="configuration">Configuration</h2>
+<p>Create a config file:</p>
+<pre><code class="language-yaml"># config.yaml
+setting: value
 </code></pre>
-<p>Then in your repo settings, enable GitHub Pages from the <code>dist/</code> folder.</p>
-<h2 id="no-config-needed">No Config Needed</h2>
-<p>A site with no <code>pagify.yaml</code> builds with sensible defaults:</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Read the <a href="/reference/">API Reference</a> to learn more, or return to the
+<a href="/">tutorial home</a> for the full walkthrough.</p>
+<h2 id="related">Related</h2>
 <ul>
-<li>Title from directory name</li>
-<li>Auto theme (follows OS)</li>
-<li>No footer</li>
-<li>Root path <code>/</code></li>
+<li><a href="/">Tutorial Home</a></li>
+<li><a href="/reference/">API Reference</a></li>
 </ul>
 
           
@@ -162,15 +110,19 @@ basePath: /my-docs
   <ul class="outline__list">
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#fields">Fields</a>
+      <a class="outline__link" href="#installation">Installation</a>
     </li>
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#example-github-pages">Example: GitHub Pages</a>
+      <a class="outline__link" href="#configuration">Configuration</a>
     </li>
     
     <li class="outline__item outline__item--2">
-      <a class="outline__link" href="#no-config-needed">No Config Needed</a>
+      <a class="outline__link" href="#next-steps">Next Steps</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
     </li>
     
   </ul>
@@ -180,7 +132,7 @@ basePath: /my-docs
     </div>
 
     <footer class="footer">
-      <p>Built with pagify</p>
+      <p>Built with pagify · © 2024 pagify Tutorial</p>
     </footer>
 
     <script src="/assets/script.js" defer></script>

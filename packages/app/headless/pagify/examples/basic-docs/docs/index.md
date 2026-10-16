@@ -33,14 +33,21 @@ The output appears in `./dist` — ready to deploy anywhere.
 docs/
 ├── index.md              # Home page
 ├── getting-started.md    # First guide
-├── guide/
-│   ├── index.md          # Section landing
-│   ├── installation.md
-│   └── configuration.md
-└── reference/
-    └── cli.md
+└── guide/
+    ├── index.md          # Section landing
+    ├── installation.md
+    └── configuration.md
 ```
 
 ## Next Steps
 
-Read the [Getting Started](./getting-started/) guide to learn more.
+- Read the [Getting Started](./getting-started.md) guide to learn more.
+- Browse the [Guide](./guide/index.md) section for installation and configuration.
+- See [Installation](./guide/installation.md) and [Configuration](./guide/configuration.md) for setup details.
+
+## Related
+
+- [Getting Started](./getting-started.md)
+- [Guide](./guide/index.md)
+- [Installation](./guide/installation.md)
+- [Configuration](./guide/configuration.md)

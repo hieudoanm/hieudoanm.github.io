@@ -75,9 +75,21 @@
   > 
 </li><li class="nav__item">
   <a
+    class="nav__link"
+    href="/server/"
+    >server Package</a
+  > 
+</li><li class="nav__item">
+  <a
     class="nav__link nav__link--current"
     href="/site/"
     aria-current="page">site Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/theme/"
+    >theme Package</a
   > 
 </li>
 </ul>
@@ -155,6 +167,12 @@ func printNav(pages []*site.Page, indent int) {
     }
 }
 </code></pre>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/build/">build Package</a> — how site content is rendered</li>
+<li><a href="/markdown/">markdown Package</a> — parsing and rendering</li>
+<li><a href="/theme/">theme Package</a> — how rendered HTML is presented</li>
+</ul>
 
           
         </article>
@@ -189,6 +207,10 @@ func printNav(pages []*site.Page, indent int) {
     
     <li class="outline__item outline__item--2">
       <a class="outline__link" href="#example">Example</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
     </li>
     
   </ul>

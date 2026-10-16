@@ -64,3 +64,9 @@ func main() {
     fmt.Printf("Built %d pages, %d assets\n", result.Pages, result.Assets)
 }
 ```
+
+## Related
+
+- [markdown Package](markdown.md) — parsing and rendering
+- [site Package](site.md) — content discovery and navigation
+- [theme Package](theme.md) — theme and template system

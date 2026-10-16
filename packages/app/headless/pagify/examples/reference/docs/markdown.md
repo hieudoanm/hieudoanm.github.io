@@ -86,3 +86,9 @@ Frontmatter is parsed separately using `SplitFrontmatter()`:
 ```go
 fm, body, ok, err := markdown.SplitFrontmatter(src)
 ```
+
+## Related
+
+- [build Package](build.md) — how markdown is rendered during a build
+- [site Package](site.md) — content discovery and navigation
+- [theme Package](theme.md) — how rendered HTML is presented

@@ -38,3 +38,17 @@ pagify --version
 ```
 
 Should output something like `pagify version 0.1.0`.
+
+## Next Steps
+
+- Read [Configuration](./configuration.md) to customise your site.
+- Go back to the [Guide](./index.md) section landing page.
+- Return to the [home page](../index.md) for an overview.
+- Check [Getting Started](../getting-started.md) to create your first site.
+
+## Related
+
+- [Guide](./index.md)
+- [Configuration](./configuration.md)
+- [Getting Started](../getting-started.md)
+- [Home](../index.md)
