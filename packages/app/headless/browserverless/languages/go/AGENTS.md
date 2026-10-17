@@ -94,8 +94,9 @@
 | Document                                       | Description                                               |
 | ---------------------------------------------- | --------------------------------------------------------- |
 | [docs](./docs/)                                | Architecture, contributing, downloads, packaging, roadmap |
-| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Tech stack, module map, request flow                      |
-| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing                     |
-| [docs/DOWNLOADS.md](./docs/DOWNLOADS.md)       | Get the binary, Docker image, or source                   |
-| [docs/PACKAGING.md](./docs/PACKAGING.md)       | Binary + container + CI artifact pipeline                 |
-| [docs/ROADMAP.md](./docs/ROADMAP.md)           | Phased feature roadmap                                    |
+| [docs/00-overview.md](./docs/00-overview.md)   | Project overview, installation, and getting started       |
+| [docs/04-architecture.md](./docs/04-architecture.md) | Tech stack, module map, request flow                      |
+| [docs/09-testing-strategy.md](./docs/09-testing-strategy.md) | Testing conventions and strategies                        |
+| [docs/10-implementation-plan.md](./docs/10-implementation-plan.md) | Phased feature roadmap                                    |
+| [docs/10-implementation-plan/development.md](./docs/10-implementation-plan/development.md) | Setup, commands, conventions                              |
+| [docs/11-deployment.md](./docs/11-deployment.md) | Binary + container + CI artifact pipeline                 |

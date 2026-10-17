@@ -201,9 +201,9 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 
 | Document                                       | Description                                               |
 | ---------------------------------------------- | --------------------------------------------------------- |
-| [docs](./docs/)                                | Architecture, contributing, downloads, packaging, roadmap |
-| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Pipeline, types, themes, CLI wiring                       |
-| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing                     |
-| [docs/DOWNLOADS.md](./docs/DOWNLOADS.md)       | Get the binary or build from source                       |
-| [docs/PACKAGING.md](./docs/PACKAGING.md)       | Build + CI artifact pipeline                              |
-| [docs/ROADMAP.md](./docs/ROADMAP.md)           | Phased feature roadmap                                    |
+| [docs](./docs/)                                | Numbered docs layout (overview → operations)              |
+| [docs/00-overview.md](./docs/00-overview.md)   | What Landify is, install, getting started                 |
+| [docs/04-architecture.md](./docs/04-architecture.md) | Pipeline, modules, configuration, directory tree   |
+| [docs/09-testing-strategy.md](./docs/09-testing-strategy.md) | Setup, commands, conventions, testing        |
+| [docs/10-implementation-plan.md](./docs/10-implementation-plan.md) | Phased feature roadmap                   |
+| [docs/11-deployment.md](./docs/11-deployment.md)       | Binary, container, CI pipeline, checklist        |

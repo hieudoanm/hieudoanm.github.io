@@ -1,0 +1,26 @@
+flowchart LR
+  subgraph content [Content directory]
+    MD[Markdown files]
+    AS[Assets]
+  end
+  subgraph pagify [pagify CLI]
+    SITE[internal/site]
+    MDW[internal/markdown]
+    BUILD[internal/build]
+    THEME[internal/theme]
+  end
+  subgraph dist [dist/]
+    HTML[Static HTML]
+    IDX[search-index.json]
+    CSS[styles.css]
+    JS[script.js]
+  end
+  MD --> SITE
+  AS --> SITE
+  SITE --> MDW
+  MDW --> BUILD
+  BUILD --> THEME
+  THEME --> HTML
+  BUILD --> IDX
+  THEME --> CSS
+  THEME --> JS

@@ -282,8 +282,8 @@ GET /api/docs                    # Swagger UI
 
 | Document                              | Description                          |
 | ------------------------------------- | ------------------------------------ |
-| [Architecture](./docs/ARCHITECTURE.md)| Tech stack, module map, request flow |
-| [Contributing](./docs/CONTRIBUTING.md)| Setup, commands, conventions, testing|
-| [Downloads](./docs/DOWNLOADS.md)      | Binary, Docker image, or source      |
-| [Packaging](./docs/PACKAGING.md)      | Build + CI artifact pipeline         |
-| [Roadmap](./docs/ROADMAP.md)          | Phased feature roadmap               |
+| [Product specification](./docs/README.md) | Numbered `00`–`12` normative documents |
+| [04-architecture](./docs/04-architecture.md) | Tech stack, module map, request flow |
+| [08-tech-stack](./docs/08-tech-stack.md) | Allowed technologies, dependency policy |
+| [10-implementation-plan](./docs/10-implementation-plan.md) | Phased delivery roadmap |
+| [11-deployment](./docs/11-deployment.md) | CI, Docker, packaging |

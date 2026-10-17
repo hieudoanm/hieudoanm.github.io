@@ -1,0 +1,8 @@
+[project]
+name = "pagify-prototypes"
+version = "0.1.0"
+description = "Screenshot tooling for pagify prototypes"
+requires-python = ">=3.12"
+
+[tool.ruff]
+target-version = "py312"

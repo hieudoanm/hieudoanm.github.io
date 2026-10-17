@@ -39,8 +39,8 @@ Start with the [Go implementation](./languages/go/README.md).
 ## Documentation
 
 - [Go README](./languages/go/README.md) — install, commands, frontmatter, configuration, output
-- [Architecture](./languages/go/docs/ARCHITECTURE.md) — how a build flows from Markdown to HTML
-- [Contributing](./languages/go/docs/CONTRIBUTING.md) — workflow and the rules the code follows
+- [Architecture](./languages/go/docs/04-architecture.md) — how a build flows from Markdown to HTML
+- [Contributing](./languages/go/docs/09-testing-strategy.md) — workflow and the rules the code follows
 - [AGENTS.md](./languages/go/AGENTS.md) — the specification this implementation is held to
 
 ## Licence
