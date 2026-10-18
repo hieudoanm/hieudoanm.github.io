@@ -34,6 +34,8 @@ github.com/go-sourcemap/sourcemap v2.1.4+incompatible h1:a+iTbH5auLKxaNwQFg0B+TC
 github.com/go-sourcemap/sourcemap v2.1.4+incompatible/go.mod h1:F8jJfvm2KbVjc5NqelyYJmf/v5J0dwNLS2mL4sNA1Jg=
 github.com/go-webengine/engine v0.5.7 h1:ej8hq3HRNQ4u9tfufPgea50vJ545k8YQvI7D4CFH/20=
 github.com/go-webengine/engine v0.5.7/go.mod h1:wSZ/zIfN7rvvWjHtzguSm+2AcUj7U6CrtKyJhIYjEFc=
+github.com/go-webengine/engine v0.6.0 h1:UzseVU9tv0XSLPZjojkDbKk0aeaN3Ltwat7XoANXTuY=
+github.com/go-webengine/engine v0.6.0/go.mod h1:wSZ/zIfN7rvvWjHtzguSm+2AcUj7U6CrtKyJhIYjEFc=
 github.com/go-webengine/esbuildsandbox v0.1.0 h1:1LdmX+0/yJarQlxZgJ7JIMu+Qy6P7Yzu4NFcX9+jFl8=
 github.com/go-webengine/esbuildsandbox v0.1.0/go.mod h1:za8oj1vbDfVkTpHLeRk7JfEQjmJfj+GHNq4R47681vQ=
 github.com/go-widgets/painter v0.13.0 h1:xBPbopFuYfeDVbQKUKviU6HnP2mAhztJ+BpasahlJLU=
