@@ -12,8 +12,8 @@
 ## Latest release
 
 - **Version:** `app-headless-cv-latest` — rebuilt automatically on every push
-  to the default branch (see [11-deployment.md](11-deployment.md)).
-- **What's new:** see the [10-implementation-plan.md](10-implementation-plan.md).
+  to the default branch (see [11-deployment.md](../11-deployment.md)).
+- **What's new:** see the [10-implementation-plan.md](../10-implementation-plan.md).
 
 ---
 
@@ -42,7 +42,7 @@ chmod +x cv
 ```
 
 > The pipeline cross-compiles all four platforms with `make build-all`; see
-> [11-deployment.md](11-deployment.md). The binary is pure Go (no CGO) and ships
+> [11-deployment.md](../11-deployment.md). The binary is pure Go (no CGO) and ships
 > as a standalone artifact.
 
 ### Build from source
@@ -56,7 +56,7 @@ make build
 ./bin/cv init
 ```
 
-See [11-deployment.md](11-deployment.md) for the CI artifact pipeline.
+See [11-deployment.md](../11-deployment.md) for the CI artifact pipeline.
 
 ---
 
@@ -130,10 +130,10 @@ HTML is converted to PDF in-process by a pure-Go renderer. There is no
 
 ## Next steps
 
-- Curious what's coming? Check the [10-implementation-plan.md](10-implementation-plan.md).
+- Curious what's coming? Check the [10-implementation-plan.md](../10-implementation-plan.md).
 
 ---
 
 ## License
 
-See [../../LICENSE](../../LICENSE).
+See [LICENSE](../LICENSE).

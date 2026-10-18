@@ -8,4 +8,4 @@ Go backend technologies for pagify.
 | [`cobra.md`](cobra.md)        | CLI framework        |
 | [`goldmark.md`](goldmark.md)  | Markdown parser      |
 
-See [`08-tech-stack.md`](../08-tech-stack.md) for the dependency policy.
+See [`08-tech-stack.md`](../../08-tech-stack.md) for the dependency policy.

@@ -1,6 +1,6 @@
 # Backbone — Functional and Non-Functional Requirements
 
-See [`00-overview.md`](00-overview.md) for the product vision and [`AGENTS.md`](../AGENTS.md) for contribution conventions.
+See [`00-overview.md`](00-overview.md) for the product vision and [`AGENTS.md`](AGENTS.md) for contribution conventions.
 
 ## Functional Requirements (FR)
 

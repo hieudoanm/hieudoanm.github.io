@@ -73,6 +73,14 @@ func formatExt(format string) string {
 	}
 }
 
+// graphTotals summarises a scanned graph: total files, total links, how many
+// of those links resolved to a file, and how many are broken.
+func graphTotals(g *graph.Graph) string {
+	s := g.Stats
+	return fmt.Sprintf("%d files, %d links, %d resolved links, %d broken links",
+		s.Files, s.Links, s.ResolvedLinks, s.BrokenLinks)
+}
+
 func newGraphCommand(stdout io.Writer) *cobra.Command {
 	var (
 		output string
@@ -131,9 +139,9 @@ func newGraphCommand(stdout io.Writer) *cobra.Command {
 
 			if len(formats) == 1 {
 				outPath, _ := pathFor(output, formats[0], false)
-				fmt.Fprintf(stdout, "Wrote %s (%d nodes, %d edges)\n", outPath, len(g.Nodes), len(g.Edges))
+				fmt.Fprintf(stdout, "Wrote %s (%s)\n", outPath, graphTotals(g))
 			} else {
-				fmt.Fprintf(stdout, "Wrote graph.dot, graph.json and graph.html (%d nodes, %d edges)\n", len(g.Nodes), len(g.Edges))
+				fmt.Fprintf(stdout, "Wrote graph.dot, graph.json and graph.html (%s)\n", graphTotals(g))
 			}
 			return nil
 		},

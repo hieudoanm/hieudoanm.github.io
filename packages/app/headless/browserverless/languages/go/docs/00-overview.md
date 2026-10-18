@@ -145,4 +145,4 @@ browserverless scrape https://example.com/ > page.html
 
 ## License
 
-See [LICENSE](../LICENSE).
+See [LICENSE](LICENSE).

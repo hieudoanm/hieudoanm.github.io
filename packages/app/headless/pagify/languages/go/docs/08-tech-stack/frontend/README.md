@@ -9,4 +9,4 @@ Frontend theme technologies for pagify.
 | [`testing/`](testing/) | Frontend testing technologies     |
 | [`tools/`](tools/)   | Frontend tooling                   |
 
-See [`08-tech-stack.md`](../08-tech-stack.md) for the dependency policy.
+See [`08-tech-stack.md`](../../08-tech-stack.md) for the dependency policy.

@@ -224,4 +224,4 @@ See `AGENTS.md` for contributor guidelines and [`docs/CONTRIBUTING.md`](CONTRIBU
 
 ## 14. License
 
-See [LICENSE](../LICENSE).
+See [LICENSE](LICENSE).

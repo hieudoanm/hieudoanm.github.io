@@ -20,4 +20,4 @@ GitHub Actions run lint/test/build-all and publish rolling release `app-headless
 
 ## 5. Installation
 
-See [DOWNLOADS.md](./04-architecture/DOWNLOADS.md) and [install.sh](../scripts/install.sh).
+See [DOWNLOADS.md](./04-architecture/DOWNLOADS.md) and `scripts/install.sh`.

@@ -13,9 +13,9 @@ User goals and acceptance scenarios for pagify.
 | US-005 | Search site content client-side                  |
 | US-006 | Toggle between light and dark theme              |
 
-See [`03-user-stories.md`](../03-user-stories.md) for full acceptance scenarios.
+See [`03-user-stories.md`](03-user-stories.md) for full acceptance scenarios.
 
 ## Cross-references
 
-- Features: [`02-features.md`](../02-features.md)
-- Requirements: [`01-requirements.md`](../01-requirements.md)
+- Features: [`02-features.md`](02-features.md)
+- Requirements: [`01-requirements.md`](01-requirements.md)

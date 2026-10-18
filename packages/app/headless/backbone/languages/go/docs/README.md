@@ -116,7 +116,7 @@ client → http.ServeMux
 
 ## 8. Current implementation status
 
-See [`AGENTS.md`](../AGENTS.md) and [`10-implementation-plan.md`](10-implementation-plan.md) for the implementation snapshot and phased plan.
+See [`AGENTS.md`](AGENTS.md) and [`10-implementation-plan.md`](10-implementation-plan.md) for the implementation snapshot and phased plan.
 
 ### Shipped (Phase 1–2)
 
@@ -175,7 +175,7 @@ See [`11-deployment.md`](11-deployment.md) for the complete deployment strategy 
 
 ## 13. Contributing
 
-See [`AGENTS.md`](../AGENTS.md) for development setup and guidelines.
+See [`AGENTS.md`](AGENTS.md) for development setup and guidelines.
 
 ### Repository conventions
 
@@ -185,4 +185,4 @@ See [`AGENTS.md`](../AGENTS.md) for development setup and guidelines.
 
 ## 14. License
 
-See [LICENSE](../LICENSE).
+See [LICENSE](LICENSE).

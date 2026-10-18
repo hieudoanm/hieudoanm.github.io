@@ -27,7 +27,7 @@ go build ./...
 
 ## Coding Conventions
 
-Follow the repo-wide [Go conventions](../../../../../AGENTS.md) — in short:
+Follow the repo-wide [Go conventions](../AGENTS.md) — in short:
 
 - `error` as the last return value; handle errors explicitly, never `_ = err`
 - Prefer `var` zero-initialization over `:=` for zero values

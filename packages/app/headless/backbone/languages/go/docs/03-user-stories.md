@@ -13,9 +13,9 @@ User goals and acceptance scenarios for Backbone.
 | US-005 | Run scheduled cron jobs                          |
 | US-006 | Receive webhooks on data events                  |
 
-See [`03-user-stories.md`](../03-user-stories.md) for full acceptance scenarios.
+See [`03-user-stories.md`](03-user-stories.md) for full acceptance scenarios.
 
 ## Cross-references
 
-- Features: [`02-features.md`](../02-features.md)
-- Requirements: [`01-requirements.md`](../01-requirements.md)
+- Features: [`02-features.md`](02-features.md)
+- Requirements: [`01-requirements.md`](01-requirements.md)

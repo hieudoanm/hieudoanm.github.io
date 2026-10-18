@@ -77,7 +77,7 @@ The initial release will not:
 | Container | Docker / Alpine | Self-hosted HTTP server |
 | CI/CD | GitHub Actions | Lint, test, cross-build, release |
 
-Local commits use Husky and lint-staged to apply fast formatting and lint checks to staged source files. CI remains the authoritative full quality gate.
+Local commits run a Husky pre-commit hook that executes `pnpm run lint`, `pnpm run typecheck` and `pnpm run format` for changed JS/TS packages; it does not run on this Go package, where `make all` is the local gate. CI remains the authoritative full quality gate.
 
 ## 9. Security and Privacy Principles
 

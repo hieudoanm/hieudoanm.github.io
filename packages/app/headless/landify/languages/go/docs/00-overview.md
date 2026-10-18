@@ -98,4 +98,4 @@ Everything is embeddable — copy the generated HTML and CSS anywhere.
 
 ## License
 
-See [LICENSE](../LICENSE).
+See [LICENSE](LICENSE).

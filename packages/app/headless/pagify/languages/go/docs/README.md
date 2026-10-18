@@ -141,7 +141,7 @@ Each package depends only on the one above it. Nothing below knows what a URL lo
 
 ## 8. Current implementation status
 
-See [`AGENTS.md`](../AGENTS.md) for the implementation snapshot and contribution conventions.
+See [`AGENTS.md`](AGENTS.md) for the implementation snapshot and contribution conventions.
 
 ## 9. Non-functional requirements
 
@@ -186,7 +186,7 @@ See [`11-deployment.md`](11-deployment.md) for the complete deployment strategy 
 
 ## 13. Contributing
 
-See [`AGENTS.md`](../AGENTS.md) and [`CONTRIBUTING`](CONTRIBUTING.md) for development setup and guidelines.
+See [`AGENTS.md`](AGENTS.md) for development setup and guidelines.
 
 ### Repository conventions
 

@@ -31,7 +31,7 @@ describes linting with `golangci-lint`; this module uses `go vet` (via
 
 ## Coding Conventions
 
-Follow the repo-wide [Go conventions](../../../../../AGENTS.md) — in short:
+Follow the repo-wide [Go conventions](AGENTS.md) — in short:
 
 - `error` as the last return value; handle errors explicitly, never `_ = err`
 - Prefer `var` zero-initialization (`var s string`) over `s := ""`

@@ -15,10 +15,10 @@ User-visible behaviour of pagify.
 | FEATURE-07     | Local preview server                     |
 | FEATURE-08     | JSON API (serve)                         |
 
-See [`02-features.md`](../02-features.md) for consolidated behaviour descriptions.
+See [`02-features.md`](02-features.md) for consolidated behaviour descriptions.
 
 ## Cross-references
 
-- Requirements: [`01-requirements.md`](../01-requirements.md)
-- User stories: [`03-user-stories.md`](../03-user-stories.md)
-- Architecture: [`04-architecture.md`](../04-architecture.md)
+- Requirements: [`01-requirements.md`](01-requirements.md)
+- User stories: [`03-user-stories.md`](03-user-stories.md)
+- Architecture: [`04-architecture.md`](04-architecture.md)

@@ -109,7 +109,7 @@ mermaid-cli, Graphviz, Node.js, Python, Kubernetes, cloud object storage, MLflow
 
 ## 10. Package manager & git hooks
 
-Go modules for dependency management; `go mod tidy` to keep `go.mod`/`go.sum` clean. Husky + lint-staged: `gofmt`, `go vet`.
+Go modules for dependency management; `go mod tidy` to keep `go.mod`/`go.sum` clean. Git hooks: Husky (`.husky/pre-commit`) runs `pnpm run lint`, `typecheck` and `format` for changed packages. There is no lint-staged configuration, and no hook runs `gofmt` or `go vet` — those are enforced by `make all` locally and by the CI `go` job (`make lint`, `make test`, `make build-all`).
 
 Details:
 

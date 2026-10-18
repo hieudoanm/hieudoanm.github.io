@@ -10,4 +10,4 @@ HTML page prototypes and screenshot tooling for the default theme.
 | [`html/`](html/)                    | Page prototypes                |
 | [`images/`](images/)                | Prototype screenshots          |
 
-See [`07-ui-ux-design.md`](../07-ui-ux-design.md) for design direction.
+See [`07-ui-ux-design.md`](../../07-ui-ux-design.md) for design direction.

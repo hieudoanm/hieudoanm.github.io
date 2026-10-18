@@ -146,7 +146,7 @@ See [`11-deployment.md`](11-deployment.md) for CI, Docker, and release; [`12-ope
 
 ## 13. Contributing
 
-See the repo-wide [`AGENTS.md`](../../../../../../AGENTS.md) for contributor guidelines.
+See the repo-wide [`AGENTS.md`](AGENTS.md) for contributor guidelines.
 
 Update `docs/04-architecture.md` when the pipeline, data model, or command surface changes. Update `docs/11-deployment.md` when commands or flags change. Keep `docs/10-implementation-plan.md` checkboxes in sync with what actually ships.
 

@@ -121,4 +121,4 @@ Tools are named with dot notation matching the CLI path — `file.read`,
 
 ## License
 
-See [LICENSE](../LICENSE).
+See [LICENSE](LICENSE).

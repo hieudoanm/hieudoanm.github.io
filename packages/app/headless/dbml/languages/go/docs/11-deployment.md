@@ -40,7 +40,7 @@ The default command is `serve --port 8080`, bound to all interfaces because the 
 
 | Stage | What it does |
 | ----- | ------------ |
-| `ci` | gofmt check, `make lint`, `make test`, `make build-all`, upload `bin/*` |
+| `ci` | `make lint`, `make test`, `make build-all`, upload `bin/*` |
 | `publish` | Publishes a rolling GitHub Release from the uploaded artifact |
 
 Artifacts:

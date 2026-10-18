@@ -20,7 +20,7 @@ The phase numbering below is canonical — see [`10-implementation-plan.md`](10-
 | 7     | Polish (accessibility, performance)    | Planned |
 | 8     | Release (cross-platform builds, CI)    | Planned |
 
-See [`10-implementation-plan.md`](../10-implementation-plan.md) for detailed phases.
+See [`10-implementation-plan.md`](10-implementation-plan.md) for detailed phases.
 
 ## Cross-references
 

@@ -13,4 +13,4 @@ Brand tokens, logos, and wordmarks for the pagify default theme.
 - `logo-mark-dark.svg` / `logo-mark-light.svg` — icon mark
 - `logo-text-dark.svg` / `logo-text-light.svg` — wordmark
 
-See [`07-ui-ux-design.md`](../07-ui-ux-design.md) for design direction.
+See [`07-ui-ux-design.md`](../../07-ui-ux-design.md) for design direction.

@@ -26,10 +26,10 @@ User-visible behaviour of Backbone.
 | FEATURE-18     | Docker packaging                         |
 | FEATURE-19     | CI pipeline                              |
 
-See [`02-features.md`](../02-features.md) for consolidated behaviour descriptions.
+See [`02-features.md`](02-features.md) for consolidated behaviour descriptions.
 
 ## Cross-references
 
-- Requirements: [`01-requirements.md`](../01-requirements.md)
-- User stories: [`03-user-stories.md`](../03-user-stories.md)
-- Architecture: [`04-architecture.md`](../04-architecture.md)
+- Requirements: [`01-requirements.md`](01-requirements.md)
+- User stories: [`03-user-stories.md`](03-user-stories.md)
+- Architecture: [`04-architecture.md`](04-architecture.md)
