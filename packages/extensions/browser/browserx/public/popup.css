@@ -3,13 +3,13 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #12090a;
-      --surface: #1a0d0e;
-      --border: #331416;
-      --accent: #D71921;
-      --accent2: #FFD700;
-      --text: #f0e6e6;
-      --muted: #6f5a5f;
+      --bg: #050a14;
+      --surface: #0b1020;
+      --border: #13233d;
+      --accent: #0F7BFF;
+      --accent2: #7FC9FF;
+      --text: #e6f0ff;
+      --muted: #7a8aa8;
       --danger: #ff4757;
       --radius: 8px;
     }
@@ -34,7 +34,7 @@
       position: absolute;
       top: -30px; right: -30px;
       width: 100px; height: 100px;
-      background: radial-gradient(circle, rgba(215,25,33,0.18) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(15,123,255,0.18) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -159,136 +159,67 @@
       display: flex;
       flex-direction: column;
       gap: 4px;
-      transition: border-color 0.15s, transform 0.15s;
+      transition: border-color 0.15s, color 0.15s;
     }
-    .mode-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
-    .mode-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-    .mode-title { font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em; color: var(--accent); }
-    .mode-desc { font-size: 9px; color: var(--muted); line-height: 1.4; }
+    .mode-btn:hover { border-color: var(--accent); }
+    .mode-title { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .mode-desc { font-size: 9px; color: var(--muted); }
 
-    .options-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
+    .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
     .option-box {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 10px 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
     .option-label {
       font-size: 9px;
       color: var(--muted);
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 5px;
     }
-    .toggle-row { display: flex; align-items: center; justify-content: space-between; }
-    .toggle-label { font-size: 11px; color: var(--text); }
-    .toggle { position: relative; width: 32px; height: 18px; flex-shrink: 0; }
-    .toggle input { opacity: 0; width: 0; height: 0; }
+
+    .toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .toggle-label { font-size: 10px; color: var(--text); }
+
+    .toggle { position: relative; width: 38px; height: 20px; flex-shrink: 0; }
+    .toggle input { position: absolute; opacity: 0; width: 0; height: 0; }
     .toggle-track {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: var(--border);
-      border-radius: 18px;
-      cursor: pointer;
-      transition: background 0.2s;
+      border-radius: 999px;
+      transition: background 0.15s;
     }
-    .toggle input:checked + .toggle-track { background: var(--accent); }
     .toggle-thumb {
-      position: absolute;
-      top: 3px; left: 3px;
-      width: 12px; height: 12px;
-      background: #fff;
+      position: absolute; top: 2px; left: 2px;
+      width: 16px; height: 16px;
+      background: var(--muted);
       border-radius: 50%;
-      transition: transform 0.2s;
-      pointer-events: none;
+      transition: transform 0.15s, background 0.15s;
     }
-    .toggle input:checked ~ .toggle-thumb { transform: translateX(14px); }
+    .toggle input:checked ~ .toggle-track { background: rgba(15,123,255,0.5); }
+    .toggle input:checked ~ .toggle-thumb { transform: translateX(18px); background: var(--accent); }
 
     .url-input {
       width: 100%;
+      padding: 8px 10px;
       background: transparent;
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      color: var(--text);
       font-family: 'DM Mono', monospace;
-      font-size: 11px;
-      padding: 8px 10px;
-      outline: none;
-      transition: border-color 0.15s;
-    }
-    .url-input:focus { border-color: var(--accent); }
-    .hint { margin-top: 6px; font-size: 9px; color: var(--muted); line-height: 1.5; }
-    .pane > .hint { margin-top: 0; padding: 0 2px; }
-
-    .select-wrap { position: relative; }
-    .select-wrap select {
-      width: 100%;
-      background: transparent;
-      border: none;
-      color: var(--text);
-      font-family: 'DM Mono', monospace;
-      font-size: 11px;
-      cursor: pointer;
-      appearance: none;
-      padding-right: 14px;
-      outline: none;
-    }
-    .select-wrap::after {
-      content: '▾';
-      position: absolute;
-      right: 0; top: 50%;
-      transform: translateY(-50%);
-      color: var(--muted);
       font-size: 10px;
-      pointer-events: none;
+      color: var(--text);
     }
-    .select-wrap select option { background: #241012; }
-
-    .divider { height: 1px; background: var(--border); }
-
-    .preview-wrap { display: none; flex-direction: column; gap: 8px; }
-    .preview-wrap.visible { display: flex; }
-    .preview-label {
-      font-size: 9px;
-      color: var(--muted);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-    .preview-img-box {
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      position: relative;
-    }
-    .preview-img-box img {
-      width: 100%;
-      display: block;
-      max-height: 160px;
-      object-fit: contain;
-    }
-    .preview-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(18,9,10,0.6) 0%, transparent 50%);
-      display: flex;
-      align-items: flex-end;
-      padding: 8px 10px;
-    }
-    .preview-size {
-      font-size: 9px;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-    }
+    .url-input:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
 
     .btn-row { display: flex; gap: 8px; }
-    .btn-secondary {
+    .btn-primary, .btn-secondary {
       flex: 1;
-      padding: 9px 12px;
+      padding: 10px 12px;
       background: var(--surface);
       color: var(--text);
       border: 1px solid var(--border);

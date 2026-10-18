@@ -1,5 +1,5 @@
 {
-  "name": "BrowserX",
+  "name": "Omni",
   "version": "0.0.1",
   "description": "Redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, block distracting sites and ads, open external links from GitHub pages in new tabs, detect Shopify stores as you browse, hide ratings and overlays on Chess.com, track Claude.ai API rate-limit usage, and control tab sound: mute or unmute any tab, mute all, or mute everything except the active tab.",
   "author": "Hieu Doan",
@@ -12,7 +12,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "browserx-extension@hieudoanm.github.io"
+      "id": "omni-extension@hieudoanm.github.io"
     }
   },
   "homepage_url": "https://hieudoanm.github.io",
@@ -35,7 +35,7 @@
   },
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "BrowserX",
+    "default_title": "Omni",
     "default_icon": {
       "16": "icons/16x16.png",
       "32": "icons/32x32.png",
