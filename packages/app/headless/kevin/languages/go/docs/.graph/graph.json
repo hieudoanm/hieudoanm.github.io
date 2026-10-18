@@ -583,6 +583,48 @@
       "status": "resolved"
     },
     {
+      "source": "07-ui-ux-design.md",
+      "target": "../internal/gui/",
+      "raw_link": "../internal/gui/",
+      "line": 125,
+      "status": "outside_root"
+    },
+    {
+      "source": "07-ui-ux-design.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 126,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design.md",
+      "target": "07-ui-ux-design/prototypes",
+      "raw_link": "07-ui-ux-design/prototypes/",
+      "line": 108,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design.md",
+      "target": "07-ui-ux-design/system/components.md",
+      "raw_link": "07-ui-ux-design/system/components.md",
+      "line": 121,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "08-tech-stack.md",
+      "line": 127,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 128,
+      "status": "resolved"
+    },
+    {
       "source": "10-implementation-plan.md",
       "target": "04-architecture/ROADMAP.md",
       "raw_link": "./04-architecture/ROADMAP.md",
@@ -697,12 +739,12 @@
   ],
   "stats": {
     "files": 82,
-    "ignored_files": 0,
-    "links": 40,
+    "ignored_files": 20,
+    "links": 46,
     "broken_links": 0,
-    "resolved_links": 40,
+    "resolved_links": 45,
     "self_links": 0,
-    "orphan_files": 51,
+    "orphan_files": 50,
     "components": 0
   }
 }

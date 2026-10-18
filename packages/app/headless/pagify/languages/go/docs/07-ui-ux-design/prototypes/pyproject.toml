@@ -1,8 +1,11 @@
 [project]
-name = "pagify-prototypes"
+name = "pagify"
 version = "0.1.0"
-description = "Screenshot tooling for pagify prototypes"
-requires-python = "==3.15.0"
+description = "pagify design screenshot generation"
+requires-python = ">=3.12"
+dependencies = [
+    "playwright==1.64.0",
+]
 
-[tool.ruff]
-target-version = "py312"
+[dependency-groups]
+dev = []

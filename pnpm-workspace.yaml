@@ -1,5 +1,7 @@
 packages:
   - packages/**
+  - '!packages/**/.venv'
+
 allowBuilds:
   '@parcel/watcher': true
   '@prisma/engines': true

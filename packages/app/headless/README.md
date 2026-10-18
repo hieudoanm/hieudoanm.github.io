@@ -34,3 +34,6 @@
 [fyne]: https://fyne.io/
 [slint]: https://slint.dev/
 [compose-multiplatform]: https://github.com/JetBrains/compose-multiplatform
+
+Desktop GUI conventions (theme contract, colour roles, spacing):
+[FYNE.md](./FYNE.md).

@@ -92,7 +92,28 @@ Every page implements loading, empty, validation-error, and success states. Neve
 
 Light and dark theme with a toggle. The preference persists across page loads. No flash of incorrect theme on load.
 
-## 7. Animation
+## 7. Design system
+
+Colours, type scale, and shapes follow a Material Design 3-inspired token set:
+
+- Colour roles: primary/on-primary/primary-container, secondary, tertiary, error, surface/on-surface, surface-container, outline, inverse
+- Type scale: display-large, headline-large, title-large, body-large/medium/small, label-large/medium/small
+- Shape tokens: small 6px, medium 10px, large 14px, extra-large 28px
+- Theme switching persisted in `localStorage` under `pagify-theme` (`pagify-light` / `pagify-dark`), honoring `prefers-color-scheme`
+
+## 8. GUI prototype
+
+pagify has no compiled GUI yet; the interactive HTML prototypes live under
+`docs/07-ui-ux-design/prototypes/html/`:
+
+- `00-components.html` — pagify colour tokens, typography, buttons, chips, cards, fields, table, Markdown rendering, states
+- `01-landing.html` — landing page (nav, hero, features, footer), light/dark themes
+- `02-page.html` — content page with Markdown rendering, callouts, and token table
+- `03-builder.html` — site builder window (site title, theme selector, Markdown source, live preview, Build/Preview/Export)
+
+Screenshots are generated with Playwright via `prototypes/screenshot.sh`.
+
+## 9. Animation
 
 Animation is part of the default visual language. Prefer subtle CSS animations for page entrance, navigation transitions, hover states, expanding sections, modal appearance, theme transitions, and copy-button feedback. Always respect `prefers-reduced-motion: reduce`. Do not use JavaScript for animation when CSS can do it cleanly.
 

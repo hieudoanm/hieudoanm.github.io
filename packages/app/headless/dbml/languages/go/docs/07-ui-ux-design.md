@@ -12,6 +12,25 @@ The design must be:
 - Consistent across screens.
 - Explicit about loading, empty, validation-error, network-error, unexpected-error, and success.
 
+## Design system (Material Design 3)
+
+dbml's real surface is the SVG ER diagram emitted by `internal/dbml/svg_draw.go`, with the tokens in
+[`07-ui-ux-design/system/design-tokens.md`](./07-ui-ux-design/system/design-tokens.md). The GUI prototype below adapts those tokens to a Material Design 3 structure, using dbml's violet brand (`#7c3aed`) as the MD3 primary role:
+
+- Colour roles: primary/on-primary/primary-container, secondary, tertiary, error, surface/on-surface, surface-container, outline, inverse
+- Type scale: display-large, headline-large, title-large, body-large/medium/small, label-large/medium/small
+- Shape tokens: small 4px, medium 12px, large 16px, extra-large 28px
+- Theme switching persisted in `localStorage` under `dbml-theme` (`dbml-light` / `dbml-dark`), honoring `prefers-color-scheme`
+
+## GUI prototype
+
+dbml ships no compiled GUI (CLI + HTTP JSON API + MCP only). The interactive HTML prototype lives under
+`docs/07-ui-ux-design/prototypes/html/`:
+
+- `00-components.html` — DBML converter window (DBML source editor, input/output paths, format selector, Convert/Export, live output preview), light and dark themes
+
+Screenshots are generated with Playwright via `prototypes/screenshot.sh`.
+
 ## 2. Design Tokens
 
 | Document | Covers |

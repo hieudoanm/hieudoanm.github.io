@@ -107,6 +107,12 @@ digraph graph {
   "04-architecture/DOWNLOADS.md" -> "04-architecture/ROADMAP.md";
   "04-architecture/DOWNLOADS.md" -> "LICENSE";
   "05-data-model/README.md" -> "05-data-model.md";
+  "07-ui-ux-design.md" -> "../internal/gui/";
+  "07-ui-ux-design.md" -> "04-architecture.md";
+  "07-ui-ux-design.md" -> "07-ui-ux-design/prototypes";
+  "07-ui-ux-design.md" -> "07-ui-ux-design/system/components.md";
+  "07-ui-ux-design.md" -> "08-tech-stack.md";
+  "07-ui-ux-design.md" -> "09-testing-strategy.md";
   "10-implementation-plan.md" -> "04-architecture/ROADMAP.md";
   "11-deployment.md" -> "04-architecture/DOWNLOADS.md";
   "AGENTS.md" -> ".";

@@ -1,18 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>pagify — Landing Prototype</title>
-</head>
-<body>
-<header>pagify</header>
-<nav>Navigation</nav>
-<main>
-  <article class="markdown">
-    <h1>Getting Started</h1>
-    <p>Write Markdown. Run one command. Get a beautiful website.</p>
-  </article>
-</main>
-</body>
+<!doctype html>
+<html lang="en" data-theme="pagify-light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing · pagify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans:
+          Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --font-mono:
+          'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco,
+          Consolas, 'Liberation Mono', monospace;
+        /* pagify design tokens (light) */
+        --color-background: #FFFFFF;
+        --color-on-background: #18181B;
+        --color-surface: #FAFAFA;
+        --color-surface-container: #F3F4F6;
+        --color-surface-container-highest: #E4E4E7;
+        --color-surface-dim: #E4E4E7;
+        --color-surface-bright: #FFFFFF;
+        --color-on-surface: #18181B;
+        --color-primary: #2563EB;
+        --color-on-primary: #FFFFFF;
+        --color-primary-container: #DBEAFE;
+        --color-on-primary-container: #1D4ED8;
+        --color-secondary: #71717A;
+        --color-on-secondary: #FFFFFF;
+        --color-secondary-container: #E4E4E7;
+        --color-on-secondary-container: #404040;
+        --color-tertiary: #6B7280;
+        --color-on-tertiary: #FFFFFF;
+        --color-tertiary-container: #E5E7EB;
+        --color-on-tertiary-container: #374151;
+        --color-error: #DC2626;
+        --color-on-error: #FFFFFF;
+        --color-error-container: #FEE2E2;
+        --color-on-error-container: #991B1B;
+        --color-outline: #71717A;
+        --color-outline-variant: #E4E4E7;
+        --color-inverse-surface: #18181B;
+        --color-inverse-on-surface: #FAFAFA;
+        --color-inverse-primary: #60A5FA;
+      }
+    </style>
+    <style>
+      [data-theme='pagify-dark'] {
+        color-scheme: dark;
+        --color-background: #18181B;
+        --color-on-background: #F3F4F6;
+        --color-surface: #18181B;
+        --color-surface-container: #27272A;
+        --color-surface-container-highest: #3F3F46;
+        --color-surface-dim: #18181B;
+        --color-surface-bright: #18181B;
+        --color-on-surface: #F3F4F6;
+        --color-primary: #60A5FA;
+        --color-on-primary: #18181B;
+        --color-primary-container: #1D4ED8;
+        --color-on-primary-container: #DBEAFE;
+        --color-secondary: #A1A1AA;
+        --color-on-secondary: #18181B;
+        --color-secondary-container: #3F3F46;
+        --color-on-secondary-container: #E4E4E7;
+        --color-tertiary: #A1A1AA;
+        --color-on-tertiary: #18181B;
+        --color-tertiary-container: #3F3F46;
+        --color-on-tertiary-container: #E5E7EB;
+        --color-error: #F87171;
+        --color-on-error: #18181B;
+        --color-error-container: #450A0A;
+        --color-on-error-container: #FEE2E2;
+        --color-outline: #A1A1AA;
+        --color-outline-variant: #3F3F46;
+        --color-inverse-surface: #F3F4F6;
+        --color-inverse-on-surface: #18181B;
+        --color-inverse-primary: #2563EB;
+      }
+      body {
+        background-color: var(--color-background);
+        color: var(--color-on-surface);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        margin: 0;
+        min-height: 100vh;
+      }
+      :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+      .md3-type-headline-large {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 300;
+        letter-spacing: 0;
+      }
+      .md3-type-title-large {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 300;
+        letter-spacing: 0;
+      }
+      .md3-type-body-large {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+      .md3-type-body-medium {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+      }
+      .md3-type-body-small {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+      }
+      .md3-type-label-large {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+      }
+      .md3-type-label-small {
+        font-size: 11px;
+        line-height: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        overflow-wrap: anywhere;
+        max-width: 100%;
+      }
+      .theme-switcher {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 60;
+        display: inline-flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 999px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08),
+          0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      .theme-switcher button {
+        font: inherit;
+        font-size: 11px;
+        line-height: 1;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        border: 0;
+        background: transparent;
+        color: var(--color-on-surface);
+        opacity: 0.65;
+        cursor: pointer;
+      }
+      .theme-switcher button[aria-pressed='true'] {
+        background: var(--color-surface-container);
+        opacity: 1;
+      }
+      .icon {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: -0.125em;
+      }
+      .icon-sm {
+        font-size: 18px;
+      }
+      .section {
+        padding: 0 1rem;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .section-title {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+        margin: 0 0 16px 0;
+      }
+      .section-card {
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 14px;
+        background: var(--color-surface);
+        padding: 24px;
+      }
+      .btn-md3 {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 12px;
+        border: 0;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .btn-filled {
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+      }
+      .btn-tonal {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .btn-outlined {
+        background: transparent;
+        color: var(--color-on-surface);
+        border: 1px solid var(--color-outline);
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 32px;
+        padding: 0 12px;
+        border-radius: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border: 0;
+      }
+      .chip-filled {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 260px;
+      }
+      .field label {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+      }
+      .field-input {
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 12px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        color: var(--color-on-surface);
+        font: inherit;
+        font-size: 16px;
+      }
+      .field-input:focus {
+        border-color: var(--color-primary);
+        outline: none;
+      }
+      .field-helper {
+        font-size: 12px;
+        color: var(--color-outline);
+      }
+      .markdown h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+        letter-spacing: -0.25px;
+        color: var(--color-on-surface);
+      }
+      .markdown p {
+        margin: 0 0 12px 0;
+        color: var(--color-on-surface);
+        opacity: 0.9;
+      }
+      .markdown code {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        background: var(--color-surface-container);
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+    </style>
+    <script>
+      (function () {
+        try {
+          var t = window.localStorage.getItem('pagify-theme');
+          if (t !== 'pagify-light' && t !== 'pagify-dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'pagify-dark'
+              : 'pagify-light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="theme-switcher" role="group" aria-label="Colour theme">
+      <button type="button" data-theme-value="pagify-light" aria-pressed="true">
+        Light
+      </button>
+      <button type="button" data-theme-value="pagify-dark" aria-pressed="false">
+        Dark
+      </button>
+    </div>
+    <script>
+      (function () {
+        var key = 'pagify-theme';
+        function apply(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          Array.prototype.forEach.call(
+            document.querySelectorAll('.theme-switcher button'),
+            function (button) {
+              button.setAttribute(
+                'aria-pressed',
+                String(button.getAttribute('data-theme-value') === theme)
+              );
+            }
+          );
+        }
+        apply(
+          document.documentElement.getAttribute('data-theme') || 'pagify-light'
+        );
+        Array.prototype.forEach.call(
+          document.querySelectorAll('.theme-switcher button'),
+          function (button) {
+            button.addEventListener('click', function () {
+              var theme = button.getAttribute('data-theme-value');
+              try {
+                window.localStorage.setItem(key, theme);
+              } catch (error) {}
+              apply(theme);
+            });
+          }
+        );
+      })();
+    </script>
+
+    <header class="border-b border-outline-variant px-4 py-3">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span
+            class="bg-primary text-on-primary flex h-8 w-8 items-center justify-center rounded-extra-large text-xs font-semibold"
+            aria-hidden="true"
+          >
+            PG
+          </span>
+          <span class="ml-2 text-title-large font-medium">pagify</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+          <a
+            href="01-landing.html"
+            class="text-label-medium text-outline hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="02-page.html"
+            class="text-label-medium text-outline hover:text-primary"
+            >Content page</a
+          >
+          <a
+            href="00-components.html"
+            class="text-label-medium text-primary hover:text-primary"
+            >Design system</a
+          >
+        </nav>
+        <div class="flex items-center gap-3">
+          <button class="btn-outlined btn-md3">Sign in</button>
+          <button class="btn-filled btn-md3">Get started</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="section flex-1">
+      <section class="pt-12 pb-16">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <span
+              class="bg-primary-container text-on-primary-container inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
+              >Zero build step</span
+            >
+            <h1 class="md3-type-headline-large mb-4 text-on-surface font-medium">
+              Write Markdown. Run one command. Get a beautiful website.
+            </h1>
+            <p class="md3-type-body-large mb-8 text-outline max-w-md">
+              pagify converts a directory of Markdown files into a complete,
+              static website — navigable, themed, and ready for any static host.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <button class="btn-filled btn-md3">Build site</button>
+              <button class="btn-tonal btn-md3">Preview</button>
+            </div>
+          </div>
+          <div class="bg-surface border-outline border p-6 rounded-large">
+            <div class="md3-type-label-large mb-1 text-on-surface">index.md</div>
+            <pre class="md3-type-body-small mb-0 text-outline"><code># Getting Started
+
+Write Markdown. Run one command.
+
+```bash
+pagify build ./docs
+```
+
+Get a beautiful static website.</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-outline-variant py-12">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="md3-type-title-large mb-4 text-on-surface font-medium">
+            Features
+          </h2>
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="p-4 rounded-medium bg-surface-container">
+              <i class="ph ph-file-text icon-md mb-3 text-primary" aria-hidden="true"></i>
+              <div class="md3-type-label-large mb-2 text-on-surface">Markdown first</div>
+              <p class="md3-type-body-small text-outline">Point pagify at a folder of Markdown files and get a website.</p>
+            </div>
+            <div class="p-4 rounded-medium bg-surface-container">
+              <i class="ph ph-cpu icon-md mb-3 text-primary" aria-hidden="true"></i>
+              <div class="md3-type-label-large mb-2 text-on-surface">Static output</div>
+              <p class="md3-type-body-small text-outline">Deployable HTML, CSS, JS — no backend required.</p>
+            </div>
+            <div class="p-4 rounded-medium bg-surface-container">
+              <i class="ph ph-palette icon-md mb-3 text-primary" aria-hidden="true"></i>
+              <div class="md3-type-label-large mb-2 text-on-surface">Themed</div>
+              <p class="md3-type-body-small text-outline">Light/dark design tokens from docs/07-ui-ux-design.md.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-outline-variant px-4 py-8">
+      <div class="max-w-6xl mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-center">
+        <div class="flex items-center gap-2">
+          <span
+            class="bg-primary text-on-primary flex h-6 w-6 items-center justify-center rounded-medium text-[10px] font-semibold"
+            aria-hidden="true"
+          >
+            PG
+          </span>
+          <span class="ml-1 text-label-medium font-medium">pagify</span>
+        </div>
+        <p class="text-label-small text-outline">&copy; 2026 pagify. Prototype only.</p>
+      </div>
+    </footer>
+  </body>
 </html>
