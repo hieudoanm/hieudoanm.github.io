@@ -1,22 +1,6 @@
-# AndroidX
+# 02 — Features
 
-## Installation
-
-| Platform | Requirements  | Download Link                   |
-| -------- | ------------- | ------------------------------- |
-| Android  | 8.0+ (API 26) | [Download `.aab`][download-aab] |
-| Android  | 8.0+ (API 26) | [Download `.apk`][download-apk] |
-
-[download-aab]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-android-androidx-latest/app-release.aab
-[download-apk]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-android-androidx-latest/app-release.apk
-
-## About
-
-AndroidX — two apps under one icon:
-
-- **Focus Blocker** — block distracting apps with a single toggle, powered by
-  the Accessibility Service.
-- **NFC Toolkit** — read, scan, and emulate NFC tags.
+User-visible behaviour of AndroidX.
 
 ## The Hub
 
@@ -71,6 +55,6 @@ AndroidX — two apps under one icon:
 - Accessibility Service permission required for blocking
 - NFC hardware required for read/write; HCE for card emulation
 
-## LICENSE
+## Supporting files
 
-No LICENSE file is included for this project.
+See `02-features/` for the feature matrix and screen flow diagrams.

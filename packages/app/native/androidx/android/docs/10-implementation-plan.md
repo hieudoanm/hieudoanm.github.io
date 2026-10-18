@@ -1,13 +1,10 @@
-# Roadmap
+# 10 — Implementation Plan
 
-> Local-first Android super app. No sign-in. Data stays on device. Two features
-> under one launcher icon: Focus Blocker (AccessibilityService) and NFC Toolkit
-> (NFC + HCE). Preferences live in DataStore; per-feature data in Room.
+Phased delivery plan for AndroidX.
 
 ## Phase 1 — Super App Merge (Shipped)
 
-- [x] Merge `block` and `nfc` into one Gradle project: single `:app` module
-  bundling the hub + `block` + `nfc` source packages
+- [x] Merge `block` and `nfc` into one Gradle project: single `:app` module bundling the hub + `block` + `nfc` source packages
 - [x] Single `AndroidXApp` `@HiltAndroidApp` (removed old application classes)
 - [x] Hub home screen — card list launching each feature activity
 - [x] Remove launcher icons/filters from features; move to the hub
@@ -62,3 +59,7 @@
 - [ ] Material You dynamic color polish
 - [ ] Accessibility pass — TalkBack labels on all interactive elements
 - [ ] E2E testing with Espresso / Compose Testing
+
+## Supporting files
+
+See `10-implementation-plan/` for the phase timeline and milestone dates.
