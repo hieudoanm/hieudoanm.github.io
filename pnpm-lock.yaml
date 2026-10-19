@@ -637,8 +637,8 @@ importers:
         specifier: 5.7.0
         version: 5.7.0(react@19.3.1)
       sql.js:
-        specifier: 1.15.0
-        version: 1.15.0
+        specifier: 1.15.1
+        version: 1.15.1
     devDependencies:
       '@playwright/test':
         specifier: 1.64.1
@@ -10882,8 +10882,8 @@ packages:
     resolution: {integrity: sha512-6CKD38c31SENivxOADeMNLdukOnUxUcflKtzVWzace7Riv1v7cAEym5Cx9Q7gYZ3ezIJI7ZpqecQq8cqNeSSFg==}
     engines: {bun: '>=1.0.0', deno: '>=2.0.0', node: '>=12.0.0'}
 
-  sql.js@1.15.0:
-    resolution: {integrity: sha512-54VT5h9/VGlLaQan5pX/Zx8k6Vbykwl5hRUtl4h4+VYnaZCTraUs4P1i2WLz21O6oPVp6Gvg+d1OyPo01ZG5ig==}
+  sql.js@1.15.1:
+    resolution: {integrity: sha512-i0M/6s+lcl67Flm/1m8/AeVU5caDramlILXU/udUwpTQym2qKMSe2sJiXB5d5WXFB272aj4B2v1JbtQ93ID3Pg==}
 
   ssri@10.0.6:
     resolution: {integrity: sha512-MGrFH9Z4NP9Iyhqn16sDtBpRRNJ0Y2hNa6D65h736fVSaPCHr4DM4sWUNvVaSuC+0OBGhwsrydQwmgfg5LncqQ==}
@@ -21668,7 +21668,7 @@ snapshots:
 
   sql-escaper@1.5.2: {}
 
-  sql.js@1.15.0: {}
+  sql.js@1.15.1: {}
 
   ssri@10.0.6:
     dependencies:
