@@ -14,6 +14,7 @@ User-visible behaviour of pagify.
 | FEATURE-06     | Responsive layout                        |
 | FEATURE-07     | Local preview server                     |
 | FEATURE-08     | JSON API (serve)                         |
+| FEATURE-09     | Jupyter notebook conversion             |
 
 See [`02-features.md`](02-features.md) for consolidated behaviour descriptions.
 

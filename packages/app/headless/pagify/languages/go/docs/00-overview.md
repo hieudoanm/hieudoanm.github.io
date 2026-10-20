@@ -4,7 +4,7 @@
 
 **pagify** is a Go-based CLI that converts a directory of Markdown files into a beautiful, modern, static HTML website.
 
-A user points `pagify` at a directory of Markdown and gets a complete navigable site — no configuration required, no Node.js, no frontend toolchain, no runtime server dependency.
+A user points `pagify` at a directory of Markdown and gets a complete navigable site — no configuration required, no Node.js, no frontend toolchain, no runtime server dependency. Jupyter notebooks can be converted to Markdown for inclusion in the site.
 
 The project showcases end-to-end engineering across a Go CLI (Cobra), Goldmark Markdown parsing, `html/template` generation, embedded theme assets, and client-side search.
 
@@ -46,6 +46,7 @@ Primary needs:
 - Place Markdown files in a directory and build a site.
 - Get navigation and URLs inferred from the file structure.
 - Write standard Markdown with common extensions.
+- Convert Jupyter notebooks to Markdown for inclusion.
 - Preview changes locally while authoring.
 - Deploy static output anywhere.
 
@@ -57,6 +58,7 @@ Primary needs:
 
 - Run `pagify build` with no toolchain beyond Go.
 - Preview with `pagify preview` and serve with `pagify serve`.
+- Convert notebooks with `pagify ipynb`.
 - Diagnose build failures from actionable error messages.
 - Cross-compile binaries for Linux, macOS, and Windows.
 - Confirm generated output is static and self-contained.

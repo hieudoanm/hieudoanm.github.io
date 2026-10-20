@@ -44,6 +44,7 @@ No configuration, no theme wiring, no Node.js required.`,
 		newInitCommand(stdout),
 		newGraphCommand(stdout),
 		newMCPCommand(stdout),
+		newIpynbCommand(stdout),
 	)
 	return root
 }
