@@ -41,7 +41,7 @@ dependencies {
     // Strict YAML: kaml rejects unknown keys by default, matching the Go
     // original's yaml.Decoder.KnownFields(true).
     implementation("com.charleskorn.kaml:kaml:0.104.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.12.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0")
     // The desktop bundle supplies the ui/runtime artifacts; material3 and
     // foundation are declared directly because the studio imports them.
