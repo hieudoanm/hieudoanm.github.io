@@ -31,6 +31,7 @@ See [`00-overview.md`](00-overview.md) for the product vision and [`AGENTS.md`](
 | FR-023 | Code-block copy buttons work without JavaScript being required for reading. | P0 |
 | FR-024 | `pagify init <dir>` creates a minimal pagify project.              | P1       |
 | FR-025 | `pagify ipynb <path>` converts Jupyter notebooks to Markdown.      | P1       |
+| FR-026 | `pagify pdf <dir>` converts Markdown to PDF in A4 format.          | P1       |
 
 ## Non-Functional Requirements (NFR)
 

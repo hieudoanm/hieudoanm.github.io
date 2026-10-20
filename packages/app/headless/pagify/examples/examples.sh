@@ -13,6 +13,11 @@ for dir in */; do
   rm -rf "$name/dist"
   "$PGFY" build "$name/docs" --output "$name/dist"
   "$PGFY" graph "$name/docs" --output "$name/dist"
+  # Build PDF for basic-docs
+  if [ "$name" = "basic-docs" ]; then
+    rm -rf "$name/pdfs"
+    "$PGFY" pdf "$name/docs" --output "$name/pdfs"
+  fi
 done
 
 # Build notebooks example separately (requires ipynb conversion first)

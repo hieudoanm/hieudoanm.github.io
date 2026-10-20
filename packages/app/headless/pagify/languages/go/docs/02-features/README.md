@@ -13,5 +13,6 @@ This directory contains the detailed feature specifications.
 | [`FEATURE-07-Local-Preview.md`](FEATURE-07-Local-Preview.md)           | Preview server         |
 | [`FEATURE-08-JSON-API.md`](FEATURE-08-JSON-API.md)                     | Serve API              |
 | [`FEATURE-09-Jupyter-Notebook-Conversion.md`](FEATURE-09-Jupyter-Notebook-Conversion.md) | Jupyter → Markdown     |
+| [`FEATURE-10-PDF-Export.md`](FEATURE-10-PDF-Export.md)                 | Markdown → PDF         |
 
 See [`02-features.md`](../02-features.md) for the consolidated feature table.

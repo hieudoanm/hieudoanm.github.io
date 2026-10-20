@@ -15,6 +15,7 @@ User-visible behaviour of pagify.
 | FEATURE-07     | Local preview server                     |
 | FEATURE-08     | JSON API (serve)                         |
 | FEATURE-09     | Jupyter notebook conversion             |
+| FEATURE-10     | PDF export                               |
 
 See [`02-features.md`](02-features.md) for consolidated behaviour descriptions.
 

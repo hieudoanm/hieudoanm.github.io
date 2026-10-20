@@ -47,6 +47,7 @@ Primary needs:
 - Get navigation and URLs inferred from the file structure.
 - Write standard Markdown with common extensions.
 - Convert Jupyter notebooks to Markdown for inclusion.
+- Export Markdown to PDF for offline distribution.
 - Preview changes locally while authoring.
 - Deploy static output anywhere.
 
