@@ -48,7 +48,7 @@ val generateVersion = tasks.register("generateVersion") {
 dependencies {
     implementation("com.github.ajalt.clikt:clikt:5.1.0")
     implementation("com.github.ajalt.mordant:mordant:3.1.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.12.0")
     testImplementation(kotlin("test"))
 }
 
