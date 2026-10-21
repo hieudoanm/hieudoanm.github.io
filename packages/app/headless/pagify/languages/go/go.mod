@@ -6,7 +6,7 @@ require (
 	github.com/carlos7ags/folio v0.10.1
 	github.com/mark3labs/mcp-go v1.3.0
 	github.com/spf13/cobra v1.10.2
-	github.com/yuin/goldmark/v2 v2.1.7
+	github.com/yuin/goldmark/v2 v2.1.8
 	gopkg.in/yaml.v3 v3.0.1
 )
 
