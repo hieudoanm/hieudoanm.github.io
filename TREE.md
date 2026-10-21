@@ -1513,9 +1513,13 @@
 │   │   │   │   │   │   │   ├── [mcp.go](./packages/app/headless/cv/languages/go/cmd/mcp.go)
 │   │   │   │   │   │   │   ├── [md.go](./packages/app/headless/cv/languages/go/cmd/md.go)
 │   │   │   │   │   │   │   ├── [md_test.go](./packages/app/headless/cv/languages/go/cmd/md_test.go)
+│   │   │   │   │   │   │   ├── [openapi.go](./packages/app/headless/cv/languages/go/cmd/openapi.go)
+│   │   │   │   │   │   │   ├── [openapi_test.go](./packages/app/headless/cv/languages/go/cmd/openapi_test.go)
 │   │   │   │   │   │   │   ├── [pdf.go](./packages/app/headless/cv/languages/go/cmd/pdf.go)
 │   │   │   │   │   │   │   ├── [root.go](./packages/app/headless/cv/languages/go/cmd/root.go)
 │   │   │   │   │   │   │   ├── [serve.go](./packages/app/headless/cv/languages/go/cmd/serve.go)
+│   │   │   │   │   │   │   ├── [server_info.go](./packages/app/headless/cv/languages/go/cmd/server_info.go)
+│   │   │   │   │   │   │   ├── [server_info_test.go](./packages/app/headless/cv/languages/go/cmd/server_info_test.go)
 │   │   │   │   │   │   │   └── [validate.go](./packages/app/headless/cv/languages/go/cmd/validate.go)
 │   │   │   │   │   │   ├── internal/
 │   │   │   │   │   │   │   ├── cv/
@@ -1632,6 +1636,8 @@
 │   │   │   │   │   ├── go/
 │   │   │   │   │   │   ├── cmd/
 │   │   │   │   │   │   │   ├── [all.go](./packages/app/headless/dbml/languages/go/cmd/all.go)
+│   │   │   │   │   │   │   ├── [box.go](./packages/app/headless/dbml/languages/go/cmd/box.go)
+│   │   │   │   │   │   │   ├── [box_test.go](./packages/app/headless/dbml/languages/go/cmd/box_test.go)
 │   │   │   │   │   │   │   ├── [mcp.go](./packages/app/headless/dbml/languages/go/cmd/mcp.go)
 │   │   │   │   │   │   │   ├── [mermaid.go](./packages/app/headless/dbml/languages/go/cmd/mermaid.go)
 │   │   │   │   │   │   │   ├── [root.go](./packages/app/headless/dbml/languages/go/cmd/root.go)
@@ -1649,6 +1655,8 @@
 │   │   │   │   │   │   │   │   ├── [tools.go](./packages/app/headless/dbml/languages/go/internal/mcp/tools.go)
 │   │   │   │   │   │   │   │   └── [tools_test.go](./packages/app/headless/dbml/languages/go/internal/mcp/tools_test.go)
 │   │   │   │   │   │   │   └── server/
+│   │   │   │   │   │   │       ├── [openapi.go](./packages/app/headless/dbml/languages/go/internal/server/openapi.go)
+│   │   │   │   │   │   │       ├── [openapi_test.go](./packages/app/headless/dbml/languages/go/internal/server/openapi_test.go)
 │   │   │   │   │   │   │       └── [server.go](./packages/app/headless/dbml/languages/go/internal/server/server.go)
 │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/headless/dbml/languages/go/AGENTS.md)
 │   │   │   │   │   │   ├── [Dockerfile](./packages/app/headless/dbml/languages/go/Dockerfile)
@@ -5368,7 +5376,6 @@
 │   │   │   │   │   │   │   │   ├── [requests.rs](./packages/app/headless/jack/languages/rust/src/libs/requests.rs)
 │   │   │   │   │   │   │   │   └── [theme.rs](./packages/app/headless/jack/languages/rust/src/libs/theme.rs)
 │   │   │   │   │   │   │   └── [main.rs](./packages/app/headless/jack/languages/rust/src/main.rs)
-│   │   │   │   │   │   ├── target/
 │   │   │   │   │   │   ├── tests/
 │   │   │   │   │   │   │   ├── [calc.rs](./packages/app/headless/jack/languages/rust/tests/calc.rs)
 │   │   │   │   │   │   │   ├── [casino.rs](./packages/app/headless/jack/languages/rust/tests/casino.rs)
@@ -6033,10 +6040,13 @@
 │   │   │   │   ├── languages/
 │   │   │   │   │   ├── go/
 │   │   │   │   │   │   ├── cmd/
+│   │   │   │   │   │   │   ├── [box.go](./packages/app/headless/landify/languages/go/cmd/box.go)
+│   │   │   │   │   │   │   ├── [box_test.go](./packages/app/headless/landify/languages/go/cmd/box_test.go)
 │   │   │   │   │   │   │   ├── [build.go](./packages/app/headless/landify/languages/go/cmd/build.go)
 │   │   │   │   │   │   │   ├── [mcp.go](./packages/app/headless/landify/languages/go/cmd/mcp.go)
 │   │   │   │   │   │   │   ├── [mcp_test.go](./packages/app/headless/landify/languages/go/cmd/mcp_test.go)
 │   │   │   │   │   │   │   ├── [new.go](./packages/app/headless/landify/languages/go/cmd/new.go)
+│   │   │   │   │   │   │   ├── [preview.go](./packages/app/headless/landify/languages/go/cmd/preview.go)
 │   │   │   │   │   │   │   ├── [root.go](./packages/app/headless/landify/languages/go/cmd/root.go)
 │   │   │   │   │   │   │   ├── [serve.go](./packages/app/headless/landify/languages/go/cmd/serve.go)
 │   │   │   │   │   │   │   ├── [studio.go](./packages/app/headless/landify/languages/go/cmd/studio.go)
@@ -6065,6 +6075,9 @@
 │   │   │   │   │   │   │   │   ├── [wcag.go](./packages/app/headless/landify/languages/go/internal/gui/wcag.go)
 │   │   │   │   │   │   │   │   └── [wcag_test.go](./packages/app/headless/landify/languages/go/internal/gui/wcag_test.go)
 │   │   │   │   │   │   │   ├── landify/
+│   │   │   │   │   │   │   │   ├── [api.go](./packages/app/headless/landify/languages/go/internal/landify/api.go)
+│   │   │   │   │   │   │   │   ├── [api_handlers.go](./packages/app/headless/landify/languages/go/internal/landify/api_handlers.go)
+│   │   │   │   │   │   │   │   ├── [api_test.go](./packages/app/headless/landify/languages/go/internal/landify/api_test.go)
 │   │   │   │   │   │   │   │   ├── [build.go](./packages/app/headless/landify/languages/go/internal/landify/build.go)
 │   │   │   │   │   │   │   │   ├── [build_test.go](./packages/app/headless/landify/languages/go/internal/landify/build_test.go)
 │   │   │   │   │   │   │   │   ├── [color.go](./packages/app/headless/landify/languages/go/internal/landify/color.go)
@@ -6076,11 +6089,13 @@
 │   │   │   │   │   │   │   │   ├── [oglayout.go](./packages/app/headless/landify/languages/go/internal/landify/oglayout.go)
 │   │   │   │   │   │   │   │   ├── [ogpalette.go](./packages/app/headless/landify/languages/go/internal/landify/ogpalette.go)
 │   │   │   │   │   │   │   │   ├── [ogtext.go](./packages/app/headless/landify/languages/go/internal/landify/ogtext.go)
+│   │   │   │   │   │   │   │   ├── [openapi.go](./packages/app/headless/landify/languages/go/internal/landify/openapi.go)
+│   │   │   │   │   │   │   │   ├── [openapi_test.go](./packages/app/headless/landify/languages/go/internal/landify/openapi_test.go)
 │   │   │   │   │   │   │   │   ├── [placeholder.go](./packages/app/headless/landify/languages/go/internal/landify/placeholder.go)
 │   │   │   │   │   │   │   │   ├── [placeholder_test.go](./packages/app/headless/landify/languages/go/internal/landify/placeholder_test.go)
+│   │   │   │   │   │   │   │   ├── [preview.go](./packages/app/headless/landify/languages/go/internal/landify/preview.go)
+│   │   │   │   │   │   │   │   ├── [preview_test.go](./packages/app/headless/landify/languages/go/internal/landify/preview_test.go)
 │   │   │   │   │   │   │   │   ├── [sections.go](./packages/app/headless/landify/languages/go/internal/landify/sections.go)
-│   │   │   │   │   │   │   │   ├── [serve.go](./packages/app/headless/landify/languages/go/internal/landify/serve.go)
-│   │   │   │   │   │   │   │   ├── [serve_test.go](./packages/app/headless/landify/languages/go/internal/landify/serve_test.go)
 │   │   │   │   │   │   │   │   ├── [themes.go](./packages/app/headless/landify/languages/go/internal/landify/themes.go)
 │   │   │   │   │   │   │   │   ├── [themes_test.go](./packages/app/headless/landify/languages/go/internal/landify/themes_test.go)
 │   │   │   │   │   │   │   │   ├── [types_test.go](./packages/app/headless/landify/languages/go/internal/landify/types_test.go)
@@ -6103,14 +6118,16 @@
 │   │   │   │   │   │   │   │   ├── [tools_test.go](./packages/app/headless/landify/languages/go/internal/mcp/tools_test.go)
 │   │   │   │   │   │   │   │   ├── [transport.go](./packages/app/headless/landify/languages/go/internal/mcp/transport.go)
 │   │   │   │   │   │   │   │   ├── [validate_test.go](./packages/app/headless/landify/languages/go/internal/mcp/validate_test.go)
-│   │   │   │   │   │   │   │   ├── [workspace.go](./packages/app/headless/landify/languages/go/internal/mcp/workspace.go)
+│   │   │   │   │   │   │   │   ├── [workspace_alias.go](./packages/app/headless/landify/languages/go/internal/mcp/workspace_alias.go)
 │   │   │   │   │   │   │   │   ├── [workspace_escape_test.go](./packages/app/headless/landify/languages/go/internal/mcp/workspace_escape_test.go)
 │   │   │   │   │   │   │   │   └── [workspace_test.go](./packages/app/headless/landify/languages/go/internal/mcp/workspace_test.go)
-│   │   │   │   │   │   │   └── tui/
-│   │   │   │   │   │   │       ├── [action.go](./packages/app/headless/landify/languages/go/internal/tui/action.go)
-│   │   │   │   │   │   │       ├── [styles.go](./packages/app/headless/landify/languages/go/internal/tui/styles.go)
-│   │   │   │   │   │   │       ├── [tui.go](./packages/app/headless/landify/languages/go/internal/tui/tui.go)
-│   │   │   │   │   │   │       └── [tui_test.go](./packages/app/headless/landify/languages/go/internal/tui/tui_test.go)
+│   │   │   │   │   │   │   ├── tui/
+│   │   │   │   │   │   │   │   ├── [action.go](./packages/app/headless/landify/languages/go/internal/tui/action.go)
+│   │   │   │   │   │   │   │   ├── [styles.go](./packages/app/headless/landify/languages/go/internal/tui/styles.go)
+│   │   │   │   │   │   │   │   ├── [tui.go](./packages/app/headless/landify/languages/go/internal/tui/tui.go)
+│   │   │   │   │   │   │   │   └── [tui_test.go](./packages/app/headless/landify/languages/go/internal/tui/tui_test.go)
+│   │   │   │   │   │   │   └── workspace/
+│   │   │   │   │   │   │       └── [workspace.go](./packages/app/headless/landify/languages/go/internal/workspace/workspace.go)
 │   │   │   │   │   │   ├── scripts/
 │   │   │   │   │   │   │   └── [install.sh](./packages/app/headless/landify/languages/go/scripts/install.sh)
 │   │   │   │   │   │   ├── static/
@@ -6421,22 +6438,6 @@
 │   │   │   ├── pagify/
 │   │   │   │   ├── examples/
 │   │   │   │   │   ├── basic-docs/
-│   │   │   │   │   │   └── dist/
-│   │   │   │   │   │       ├── assets/
-│   │   │   │   │   │       │   ├── [favicon.ico](./packages/app/headless/pagify/examples/basic-docs/dist/assets/favicon.ico)
-│   │   │   │   │   │       │   ├── [script.js](./packages/app/headless/pagify/examples/basic-docs/dist/assets/script.js)
-│   │   │   │   │   │       │   ├── [search-index.json](./packages/app/headless/pagify/examples/basic-docs/dist/assets/search-index.json)
-│   │   │   │   │   │       │   ├── [search.js](./packages/app/headless/pagify/examples/basic-docs/dist/assets/search.js)
-│   │   │   │   │   │       │   └── [styles.css](./packages/app/headless/pagify/examples/basic-docs/dist/assets/styles.css)
-│   │   │   │   │   │       ├── getting-started/
-│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/getting-started/index.html)
-│   │   │   │   │   │       ├── guide/
-│   │   │   │   │   │       │   ├── configuration/
-│   │   │   │   │   │       │   │   └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/guide/configuration/index.html)
-│   │   │   │   │   │       │   ├── installation/
-│   │   │   │   │   │       │   │   └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/guide/installation/index.html)
-│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/guide/index.html)
-│   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/basic-docs/dist/index.html)
 │   │   │   │   │   ├── blog/
 │   │   │   │   │   │   └── dist/
 │   │   │   │   │   │       ├── assets/
@@ -6458,6 +6459,9 @@
 │   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/blog/dist/introducing-pagify-v0-1/index.html)
 │   │   │   │   │   │       ├── writing-markdown-for-pagify/
 │   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/blog/dist/writing-markdown-for-pagify/index.html)
+│   │   │   │   │   │       ├── [graph.dot](./packages/app/headless/pagify/examples/blog/dist/graph.dot)
+│   │   │   │   │   │       ├── [graph.html](./packages/app/headless/pagify/examples/blog/dist/graph.html)
+│   │   │   │   │   │       ├── [graph.json](./packages/app/headless/pagify/examples/blog/dist/graph.json)
 │   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/blog/dist/index.html)
 │   │   │   │   │   ├── changelog/
 │   │   │   │   │   │   └── dist/
@@ -6467,9 +6471,34 @@
 │   │   │   │   │   │       │   ├── [search-index.json](./packages/app/headless/pagify/examples/changelog/dist/assets/search-index.json)
 │   │   │   │   │   │       │   ├── [search.js](./packages/app/headless/pagify/examples/changelog/dist/assets/search.js)
 │   │   │   │   │   │       │   └── [styles.css](./packages/app/headless/pagify/examples/changelog/dist/assets/styles.css)
+│   │   │   │   │   │       ├── v0-0-1/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v0-0-1/index.html)
+│   │   │   │   │   │       ├── v0-0-2/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v0-0-2/index.html)
+│   │   │   │   │   │       ├── v0-0-3/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v0-0-3/index.html)
 │   │   │   │   │   │       ├── v0-1-0/
 │   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v0-1-0/index.html)
+│   │   │   │   │   │       ├── v0-2-0/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v0-2-0/index.html)
+│   │   │   │   │   │       ├── v0-3-0/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v0-3-0/index.html)
+│   │   │   │   │   │       ├── v1-0-0/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v1-0-0/index.html)
+│   │   │   │   │   │       ├── v2-0-0/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v2-0-0/index.html)
+│   │   │   │   │   │       ├── v3-0-0/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/v3-0-0/index.html)
+│   │   │   │   │   │       ├── [graph.dot](./packages/app/headless/pagify/examples/changelog/dist/graph.dot)
+│   │   │   │   │   │       ├── [graph.html](./packages/app/headless/pagify/examples/changelog/dist/graph.html)
+│   │   │   │   │   │       ├── [graph.json](./packages/app/headless/pagify/examples/changelog/dist/graph.json)
 │   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/changelog/dist/index.html)
+│   │   │   │   │   ├── notebooks/
+│   │   │   │   │   │   ├── notebooks/
+│   │   │   │   │   │   │   ├── [data-analysis.ipynb](./packages/app/headless/pagify/examples/notebooks/notebooks/data-analysis.ipynb)
+│   │   │   │   │   │   │   ├── [machine-learning.ipynb](./packages/app/headless/pagify/examples/notebooks/notebooks/machine-learning.ipynb)
+│   │   │   │   │   │   │   └── [visualization.ipynb](./packages/app/headless/pagify/examples/notebooks/notebooks/visualization.ipynb)
+│   │   │   │   │   │   └── [README.md](./packages/app/headless/pagify/examples/notebooks/README.md)
 │   │   │   │   │   ├── reference/
 │   │   │   │   │   │   └── dist/
 │   │   │   │   │   │       ├── assets/
@@ -6482,19 +6511,36 @@
 │   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/reference/dist/build/index.html)
 │   │   │   │   │   │       ├── markdown/
 │   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/reference/dist/markdown/index.html)
+│   │   │   │   │   │       ├── server/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/reference/dist/server/index.html)
 │   │   │   │   │   │       ├── site/
 │   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/reference/dist/site/index.html)
+│   │   │   │   │   │       ├── theme/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/reference/dist/theme/index.html)
+│   │   │   │   │   │       ├── [graph.dot](./packages/app/headless/pagify/examples/reference/dist/graph.dot)
+│   │   │   │   │   │       ├── [graph.html](./packages/app/headless/pagify/examples/reference/dist/graph.html)
+│   │   │   │   │   │       ├── [graph.json](./packages/app/headless/pagify/examples/reference/dist/graph.json)
 │   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/reference/dist/index.html)
-│   │   │   │   │   └── tutorial/
-│   │   │   │   │       └── dist/
-│   │   │   │   │           ├── assets/
-│   │   │   │   │           │   ├── [favicon.ico](./packages/app/headless/pagify/examples/tutorial/dist/assets/favicon.ico)
-│   │   │   │   │           │   ├── [script.js](./packages/app/headless/pagify/examples/tutorial/dist/assets/script.js)
-│   │   │   │   │           │   ├── [search-index.json](./packages/app/headless/pagify/examples/tutorial/dist/assets/search-index.json)
-│   │   │   │   │           │   ├── [search.js](./packages/app/headless/pagify/examples/tutorial/dist/assets/search.js)
-│   │   │   │   │           │   └── [styles.css](./packages/app/headless/pagify/examples/tutorial/dist/assets/styles.css)
-│   │   │   │   │           └── [index.html](./packages/app/headless/pagify/examples/tutorial/dist/index.html)
+│   │   │   │   │   ├── tutorial/
+│   │   │   │   │   │   └── dist/
+│   │   │   │   │   │       ├── assets/
+│   │   │   │   │   │       │   ├── [favicon.ico](./packages/app/headless/pagify/examples/tutorial/dist/assets/favicon.ico)
+│   │   │   │   │   │       │   ├── [script.js](./packages/app/headless/pagify/examples/tutorial/dist/assets/script.js)
+│   │   │   │   │   │       │   ├── [search-index.json](./packages/app/headless/pagify/examples/tutorial/dist/assets/search-index.json)
+│   │   │   │   │   │       │   ├── [search.js](./packages/app/headless/pagify/examples/tutorial/dist/assets/search.js)
+│   │   │   │   │   │       │   └── [styles.css](./packages/app/headless/pagify/examples/tutorial/dist/assets/styles.css)
+│   │   │   │   │   │       ├── getting-started/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/tutorial/dist/getting-started/index.html)
+│   │   │   │   │   │       ├── reference/
+│   │   │   │   │   │       │   └── [index.html](./packages/app/headless/pagify/examples/tutorial/dist/reference/index.html)
+│   │   │   │   │   │       ├── [graph.dot](./packages/app/headless/pagify/examples/tutorial/dist/graph.dot)
+│   │   │   │   │   │       ├── [graph.html](./packages/app/headless/pagify/examples/tutorial/dist/graph.html)
+│   │   │   │   │   │       ├── [graph.json](./packages/app/headless/pagify/examples/tutorial/dist/graph.json)
+│   │   │   │   │   │       └── [index.html](./packages/app/headless/pagify/examples/tutorial/dist/index.html)
+│   │   │   │   │   └── [examples.sh](./packages/app/headless/pagify/examples/examples.sh)
 │   │   │   │   ├── languages/
+│   │   │   │   │   ├── bin/
+│   │   │   │   │   │   └── [pagify](./packages/app/headless/pagify/languages/bin/pagify)
 │   │   │   │   │   ├── go/
 │   │   │   │   │   └── [README.md](./packages/app/headless/pagify/languages/README.md)
 │   │   │   │   ├── public/
@@ -6634,6 +6680,7 @@
 │   │   │   │   ├── [README.md](./packages/app/headless/vectify/README.md)
 │   │   │   │   ├── [TREE.md](./packages/app/headless/vectify/TREE.md)
 │   │   │   │   └── [landify.yaml](./packages/app/headless/vectify/landify.yaml)
+│   │   │   ├── [FYNE.md](./packages/app/headless/FYNE.md)
 │   │   │   └── [README.md](./packages/app/headless/README.md)
 │   │   ├── hybrid/
 │   │   │   ├── developer-tools/
@@ -10749,406 +10796,6 @@
 │   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/developer-tools/code/playwright.config.ts)
 │   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/developer-tools/code/postcss.config.mjs)
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/developer-tools/code/tsconfig.json)
-│   │   │   │   ├── diagram/
-│   │   │   │   │   ├── e2e/
-│   │   │   │   │   │   ├── screenshots/
-│   │   │   │   │   │   │   ├── [about.png](./packages/app/hybrid/developer-tools/diagram/e2e/screenshots/about.png)
-│   │   │   │   │   │   │   ├── [downloads.png](./packages/app/hybrid/developer-tools/diagram/e2e/screenshots/downloads.png)
-│   │   │   │   │   │   │   ├── [home.png](./packages/app/hybrid/developer-tools/diagram/e2e/screenshots/home.png)
-│   │   │   │   │   │   │   └── [version.png](./packages/app/hybrid/developer-tools/diagram/e2e/screenshots/version.png)
-│   │   │   │   │   │   ├── [about.spec.ts](./packages/app/hybrid/developer-tools/diagram/e2e/about.spec.ts)
-│   │   │   │   │   │   ├── [downloads.spec.ts](./packages/app/hybrid/developer-tools/diagram/e2e/downloads.spec.ts)
-│   │   │   │   │   │   ├── [home.spec.ts](./packages/app/hybrid/developer-tools/diagram/e2e/home.spec.ts)
-│   │   │   │   │   │   ├── [posts.spec.ts](./packages/app/hybrid/developer-tools/diagram/e2e/posts.spec.ts)
-│   │   │   │   │   │   ├── [smoke.spec.ts](./packages/app/hybrid/developer-tools/diagram/e2e/smoke.spec.ts)
-│   │   │   │   │   │   └── [version.spec.ts](./packages/app/hybrid/developer-tools/diagram/e2e/version.spec.ts)
-│   │   │   │   │   ├── public/
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── [icon-128x128.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-128x128.png)
-│   │   │   │   │   │   │   ├── [icon-144x144.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-144x144.png)
-│   │   │   │   │   │   │   ├── [icon-152x152.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-152x152.png)
-│   │   │   │   │   │   │   ├── [icon-16x16.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-16x16.png)
-│   │   │   │   │   │   │   ├── [icon-180x180.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-180x180.png)
-│   │   │   │   │   │   │   ├── [icon-192x192.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-192x192.png)
-│   │   │   │   │   │   │   ├── [icon-256x256.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-256x256.png)
-│   │   │   │   │   │   │   ├── [icon-32x32.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-32x32.png)
-│   │   │   │   │   │   │   ├── [icon-384x384.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-384x384.png)
-│   │   │   │   │   │   │   ├── [icon-48x48.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-48x48.png)
-│   │   │   │   │   │   │   ├── [icon-512x512.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-512x512.png)
-│   │   │   │   │   │   │   ├── [icon-64x64.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-64x64.png)
-│   │   │   │   │   │   │   ├── [icon-72x72.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-72x72.png)
-│   │   │   │   │   │   │   ├── [icon-96x96.png](./packages/app/hybrid/developer-tools/diagram/public/icons/icon-96x96.png)
-│   │   │   │   │   │   │   └── [icon.svg](./packages/app/hybrid/developer-tools/diagram/public/icons/icon.svg)
-│   │   │   │   │   │   ├── og/
-│   │   │   │   │   │   │   ├── [og.png](./packages/app/hybrid/developer-tools/diagram/public/og/og.png)
-│   │   │   │   │   │   │   └── [og.svg](./packages/app/hybrid/developer-tools/diagram/public/og/og.svg)
-│   │   │   │   │   │   ├── [apple-touch-icon.png](./packages/app/hybrid/developer-tools/diagram/public/apple-touch-icon.png)
-│   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/developer-tools/diagram/public/favicon.ico)
-│   │   │   │   │   │   ├── [manifest.json](./packages/app/hybrid/developer-tools/diagram/public/manifest.json)
-│   │   │   │   │   │   ├── [robots.txt](./packages/app/hybrid/developer-tools/diagram/public/robots.txt)
-│   │   │   │   │   │   ├── [sitemap.xml](./packages/app/hybrid/developer-tools/diagram/public/sitemap.xml)
-│   │   │   │   │   │   └── [sw.js](./packages/app/hybrid/developer-tools/diagram/public/sw.js)
-│   │   │   │   │   ├── src/
-│   │   │   │   │   │   ├── app/
-│   │   │   │   │   │   │   ├── (auth)/
-│   │   │   │   │   │   │   │   ├── forget-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── profile/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/profile/page.tsx)
-│   │   │   │   │   │   │   │   ├── reset-password/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   │   │   │   │   ├── sign-in/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   │   │   │   │   └── sign-up/
-│   │   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │   │       │   └── [page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(auth)/sign-up/page.tsx)
-│   │   │   │   │   │   │   ├── (info)/
-│   │   │   │   │   │   │   │   ├── about/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(info)/about/page.tsx)
-│   │   │   │   │   │   │   │   ├── downloads/
-│   │   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   │   └── [page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(info)/downloads/page.tsx)
-│   │   │   │   │   │   │   │   └── version/
-│   │   │   │   │   │   │   │       └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/(info)/version/page.tsx)
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [default.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/default.test.tsx)
-│   │   │   │   │   │   │   │   ├── [error.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [forbidden.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   │   │   │   │   ├── [global-error.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   │   │   │   │   ├── [layout.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/layout.test.tsx)
-│   │   │   │   │   │   │   │   ├── [loading.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/loading.test.tsx)
-│   │   │   │   │   │   │   │   ├── [not-found.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   ├── [robots.test.ts](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/robots.test.ts)
-│   │   │   │   │   │   │   │   ├── [template.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/template.test.tsx)
-│   │   │   │   │   │   │   │   └── [unauthorized.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   │   │   │   ├── posts/
-│   │   │   │   │   │   │   │   ├── [slug]/
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/posts/[slug]/page.tsx)
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/posts/__tests__/page.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [post-page.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/posts/__tests__/post-page.test.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/posts/page.tsx)
-│   │   │   │   │   │   │   ├── [default.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/default.tsx)
-│   │   │   │   │   │   │   ├── [error.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/error.tsx)
-│   │   │   │   │   │   │   ├── [favicon.ico](./packages/app/hybrid/developer-tools/diagram/src/app/favicon.ico)
-│   │   │   │   │   │   │   ├── [forbidden.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/forbidden.tsx)
-│   │   │   │   │   │   │   ├── [global-error.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/global-error.tsx)
-│   │   │   │   │   │   │   ├── [layout.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/layout.tsx)
-│   │   │   │   │   │   │   ├── [loading.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/loading.tsx)
-│   │   │   │   │   │   │   ├── [not-found.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/not-found.tsx)
-│   │   │   │   │   │   │   ├── [page.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/page.tsx)
-│   │   │   │   │   │   │   ├── [robots.ts](./packages/app/hybrid/developer-tools/diagram/src/app/robots.ts)
-│   │   │   │   │   │   │   ├── [template.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/template.tsx)
-│   │   │   │   │   │   │   └── [unauthorized.tsx](./packages/app/hybrid/developer-tools/diagram/src/app/unauthorized.tsx)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── editor/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [Canvas.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/__tests__/Canvas.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Editor.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/__tests__/Editor.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ErrorStrip.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/__tests__/ErrorStrip.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ExamplesModal.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/__tests__/ExamplesModal.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [HelpModal.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/__tests__/HelpModal.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [StatusBar.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/__tests__/StatusBar.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [TextPane.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/__tests__/TextPane.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [Toolbar.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/__tests__/Toolbar.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Canvas.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/Canvas.tsx)
-│   │   │   │   │   │   │   │   ├── [Editor.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/Editor.tsx)
-│   │   │   │   │   │   │   │   ├── [ErrorStrip.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/ErrorStrip.tsx)
-│   │   │   │   │   │   │   │   ├── [ExamplesModal.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/ExamplesModal.tsx)
-│   │   │   │   │   │   │   │   ├── [HelpModal.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/HelpModal.tsx)
-│   │   │   │   │   │   │   │   ├── [StatusBar.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/StatusBar.tsx)
-│   │   │   │   │   │   │   │   ├── [TextPane.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/TextPane.tsx)
-│   │   │   │   │   │   │   │   └── [Toolbar.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/editor/Toolbar.tsx)
-│   │   │   │   │   │   │   ├── organisms/
-│   │   │   │   │   │   │   │   └── [Header.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/organisms/Header.tsx)
-│   │   │   │   │   │   │   ├── posts/
-│   │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   │   ├── [PostContent.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/posts/__tests__/PostContent.test.tsx)
-│   │   │   │   │   │   │   │   │   ├── [PostDiagram.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/posts/__tests__/PostDiagram.test.tsx)
-│   │   │   │   │   │   │   │   │   └── [PostsBrowser.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/posts/__tests__/PostsBrowser.test.tsx)
-│   │   │   │   │   │   │   │   ├── [PostContent.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/posts/PostContent.tsx)
-│   │   │   │   │   │   │   │   ├── [PostDiagram.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/posts/PostDiagram.tsx)
-│   │   │   │   │   │   │   │   ├── [PostPageView.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/posts/PostPageView.tsx)
-│   │   │   │   │   │   │   │   └── [PostsBrowser.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/posts/PostsBrowser.tsx)
-│   │   │   │   │   │   │   └── templates/
-│   │   │   │   │   │   │       ├── __tests__/
-│   │   │   │   │   │   │       │   ├── [AboutTemplate.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [DownloadsTemplate.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   │   │       │   ├── [ErrorTemplate.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   │   │       │   └── [VersionTemplate.test.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   │   │   │       ├── [AboutTemplate.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   │   │   │       ├── [DownloadsTemplate.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   │   │   │       ├── [ErrorTemplate.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   │   │   │       └── [VersionTemplate.tsx](./packages/app/hybrid/developer-tools/diagram/src/components/templates/VersionTemplate.tsx)
-│   │   │   │   │   │   ├── content/
-│   │   │   │   │   │   │   ├── [about.ts](./packages/app/hybrid/developer-tools/diagram/src/content/about.ts)
-│   │   │   │   │   │   │   ├── [download.ts](./packages/app/hybrid/developer-tools/diagram/src/content/download.ts)
-│   │   │   │   │   │   │   └── [version.ts](./packages/app/hybrid/developer-tools/diagram/src/content/version.ts)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [useDiagramState.test.ts](./packages/app/hybrid/developer-tools/diagram/src/hooks/__tests__/useDiagramState.test.ts)
-│   │   │   │   │   │   │   │   └── [useTheme.test.ts](./packages/app/hybrid/developer-tools/diagram/src/hooks/__tests__/useTheme.test.ts)
-│   │   │   │   │   │   │   ├── [useDiagramState.ts](./packages/app/hybrid/developer-tools/diagram/src/hooks/useDiagramState.ts)
-│   │   │   │   │   │   │   └── [useTheme.ts](./packages/app/hybrid/developer-tools/diagram/src/hooks/useTheme.ts)
-│   │   │   │   │   │   ├── lib/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [examples.test.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/__tests__/examples.test.ts)
-│   │   │   │   │   │   │   │   ├── [export.test.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/__tests__/export.test.ts)
-│   │   │   │   │   │   │   │   ├── [icons.test.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/__tests__/icons.test.ts)
-│   │   │   │   │   │   │   │   ├── [layout.test.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/__tests__/layout.test.ts)
-│   │   │   │   │   │   │   │   ├── [parser.test.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/__tests__/parser.test.ts)
-│   │   │   │   │   │   │   │   ├── [posts.test.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/__tests__/posts.test.ts)
-│   │   │   │   │   │   │   │   └── [special-layouts.test.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/__tests__/special-layouts.test.ts)
-│   │   │   │   │   │   │   ├── [colors.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/colors.ts)
-│   │   │   │   │   │   │   ├── [dates.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/dates.ts)
-│   │   │   │   │   │   │   ├── [default.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/default.ts)
-│   │   │   │   │   │   │   ├── [examples.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/examples.ts)
-│   │   │   │   │   │   │   ├── [export.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/export.ts)
-│   │   │   │   │   │   │   ├── [fonts.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/fonts.ts)
-│   │   │   │   │   │   │   ├── [force.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/force.ts)
-│   │   │   │   │   │   │   ├── [icons.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/icons.ts)
-│   │   │   │   │   │   │   ├── [layout.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/layout.ts)
-│   │   │   │   │   │   │   ├── [measure.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/measure.ts)
-│   │   │   │   │   │   │   ├── [parser.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/parser.ts)
-│   │   │   │   │   │   │   ├── [posts.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/posts.ts)
-│   │   │   │   │   │   │   ├── [sequence.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/sequence.ts)
-│   │   │   │   │   │   │   ├── [timeline.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/timeline.ts)
-│   │   │   │   │   │   │   ├── [types.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/types.ts)
-│   │   │   │   │   │   │   ├── [venn.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/venn.ts)
-│   │   │   │   │   │   │   └── [xml.ts](./packages/app/hybrid/developer-tools/diagram/src/lib/xml.ts)
-│   │   │   │   │   │   ├── posts/
-│   │   │   │   │   │   │   ├── [ad-serving.md](./packages/app/hybrid/developer-tools/diagram/src/posts/ad-serving.md)
-│   │   │   │   │   │   │   ├── [airbnb.md](./packages/app/hybrid/developer-tools/diagram/src/posts/airbnb.md)
-│   │   │   │   │   │   │   ├── [amazon.md](./packages/app/hybrid/developer-tools/diagram/src/posts/amazon.md)
-│   │   │   │   │   │   │   ├── [anomaly-detection.md](./packages/app/hybrid/developer-tools/diagram/src/posts/anomaly-detection.md)
-│   │   │   │   │   │   │   ├── [api-gateway.md](./packages/app/hybrid/developer-tools/diagram/src/posts/api-gateway.md)
-│   │   │   │   │   │   │   ├── [app-store.md](./packages/app/hybrid/developer-tools/diagram/src/posts/app-store.md)
-│   │   │   │   │   │   │   ├── [backup-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/backup-service.md)
-│   │   │   │   │   │   │   ├── [batch-processing.md](./packages/app/hybrid/developer-tools/diagram/src/posts/batch-processing.md)
-│   │   │   │   │   │   │   ├── [bot-detection.md](./packages/app/hybrid/developer-tools/diagram/src/posts/bot-detection.md)
-│   │   │   │   │   │   │   ├── [cdn.md](./packages/app/hybrid/developer-tools/diagram/src/posts/cdn.md)
-│   │   │   │   │   │   │   ├── [change-data-capture.md](./packages/app/hybrid/developer-tools/diagram/src/posts/change-data-capture.md)
-│   │   │   │   │   │   │   ├── [code-search.md](./packages/app/hybrid/developer-tools/diagram/src/posts/code-search.md)
-│   │   │   │   │   │   │   ├── [comments-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/comments-service.md)
-│   │   │   │   │   │   │   ├── [config-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/config-service.md)
-│   │   │   │   │   │   │   ├── [container-registry.md](./packages/app/hybrid/developer-tools/diagram/src/posts/container-registry.md)
-│   │   │   │   │   │   │   ├── [content-moderation.md](./packages/app/hybrid/developer-tools/diagram/src/posts/content-moderation.md)
-│   │   │   │   │   │   │   ├── [crm.md](./packages/app/hybrid/developer-tools/diagram/src/posts/crm.md)
-│   │   │   │   │   │   │   ├── [crypto-exchange.md](./packages/app/hybrid/developer-tools/diagram/src/posts/crypto-exchange.md)
-│   │   │   │   │   │   │   ├── [customer-support.md](./packages/app/hybrid/developer-tools/diagram/src/posts/customer-support.md)
-│   │   │   │   │   │   │   ├── [data-warehouse.md](./packages/app/hybrid/developer-tools/diagram/src/posts/data-warehouse.md)
-│   │   │   │   │   │   │   ├── [datadog.md](./packages/app/hybrid/developer-tools/diagram/src/posts/datadog.md)
-│   │   │   │   │   │   │   ├── [discord.md](./packages/app/hybrid/developer-tools/diagram/src/posts/discord.md)
-│   │   │   │   │   │   │   ├── [distributed-cache.md](./packages/app/hybrid/developer-tools/diagram/src/posts/distributed-cache.md)
-│   │   │   │   │   │   │   ├── [distributed-cron.md](./packages/app/hybrid/developer-tools/diagram/src/posts/distributed-cron.md)
-│   │   │   │   │   │   │   ├── [distributed-database.md](./packages/app/hybrid/developer-tools/diagram/src/posts/distributed-database.md)
-│   │   │   │   │   │   │   ├── [distributed-file-system.md](./packages/app/hybrid/developer-tools/diagram/src/posts/distributed-file-system.md)
-│   │   │   │   │   │   │   ├── [distributed-lock.md](./packages/app/hybrid/developer-tools/diagram/src/posts/distributed-lock.md)
-│   │   │   │   │   │   │   ├── [doordash.md](./packages/app/hybrid/developer-tools/diagram/src/posts/doordash.md)
-│   │   │   │   │   │   │   ├── [dropbox.md](./packages/app/hybrid/developer-tools/diagram/src/posts/dropbox.md)
-│   │   │   │   │   │   │   ├── [ebay.md](./packages/app/hybrid/developer-tools/diagram/src/posts/ebay.md)
-│   │   │   │   │   │   │   ├── [email-delivery.md](./packages/app/hybrid/developer-tools/diagram/src/posts/email-delivery.md)
-│   │   │   │   │   │   │   ├── [experimentation.md](./packages/app/hybrid/developer-tools/diagram/src/posts/experimentation.md)
-│   │   │   │   │   │   │   ├── [facebook.md](./packages/app/hybrid/developer-tools/diagram/src/posts/facebook.md)
-│   │   │   │   │   │   │   ├── [fantasy-sports.md](./packages/app/hybrid/developer-tools/diagram/src/posts/fantasy-sports.md)
-│   │   │   │   │   │   │   ├── [feature-flag.md](./packages/app/hybrid/developer-tools/diagram/src/posts/feature-flag.md)
-│   │   │   │   │   │   │   ├── [fitness-tracker.md](./packages/app/hybrid/developer-tools/diagram/src/posts/fitness-tracker.md)
-│   │   │   │   │   │   │   ├── [flight-booking.md](./packages/app/hybrid/developer-tools/diagram/src/posts/flight-booking.md)
-│   │   │   │   │   │   │   ├── [fraud-detection.md](./packages/app/hybrid/developer-tools/diagram/src/posts/fraud-detection.md)
-│   │   │   │   │   │   │   ├── [game-matchmaking.md](./packages/app/hybrid/developer-tools/diagram/src/posts/game-matchmaking.md)
-│   │   │   │   │   │   │   ├── [git-hosting.md](./packages/app/hybrid/developer-tools/diagram/src/posts/git-hosting.md)
-│   │   │   │   │   │   │   ├── [gmail.md](./packages/app/hybrid/developer-tools/diagram/src/posts/gmail.md)
-│   │   │   │   │   │   │   ├── [google-analytics.md](./packages/app/hybrid/developer-tools/diagram/src/posts/google-analytics.md)
-│   │   │   │   │   │   │   ├── [google-calendar.md](./packages/app/hybrid/developer-tools/diagram/src/posts/google-calendar.md)
-│   │   │   │   │   │   │   ├── [google-docs.md](./packages/app/hybrid/developer-tools/diagram/src/posts/google-docs.md)
-│   │   │   │   │   │   │   ├── [google-maps.md](./packages/app/hybrid/developer-tools/diagram/src/posts/google-maps.md)
-│   │   │   │   │   │   │   ├── [google-photos.md](./packages/app/hybrid/developer-tools/diagram/src/posts/google-photos.md)
-│   │   │   │   │   │   │   ├── [google-search.md](./packages/app/hybrid/developer-tools/diagram/src/posts/google-search.md)
-│   │   │   │   │   │   │   ├── [grammar-checker.md](./packages/app/hybrid/developer-tools/diagram/src/posts/grammar-checker.md)
-│   │   │   │   │   │   │   ├── [graph-database.md](./packages/app/hybrid/developer-tools/diagram/src/posts/graph-database.md)
-│   │   │   │   │   │   │   ├── [grocery-delivery.md](./packages/app/hybrid/developer-tools/diagram/src/posts/grocery-delivery.md)
-│   │   │   │   │   │   │   ├── [hotel-booking.md](./packages/app/hybrid/developer-tools/diagram/src/posts/hotel-booking.md)
-│   │   │   │   │   │   │   ├── [iam.md](./packages/app/hybrid/developer-tools/diagram/src/posts/iam.md)
-│   │   │   │   │   │   │   ├── [id-generator.md](./packages/app/hybrid/developer-tools/diagram/src/posts/id-generator.md)
-│   │   │   │   │   │   │   ├── [incident-management.md](./packages/app/hybrid/developer-tools/diagram/src/posts/incident-management.md)
-│   │   │   │   │   │   │   ├── [instagram.md](./packages/app/hybrid/developer-tools/diagram/src/posts/instagram.md)
-│   │   │   │   │   │   │   ├── [iot-hub.md](./packages/app/hybrid/developer-tools/diagram/src/posts/iot-hub.md)
-│   │   │   │   │   │   │   ├── [issue-tracker.md](./packages/app/hybrid/developer-tools/diagram/src/posts/issue-tracker.md)
-│   │   │   │   │   │   │   ├── [key-value-store.md](./packages/app/hybrid/developer-tools/diagram/src/posts/key-value-store.md)
-│   │   │   │   │   │   │   ├── [leaderboard.md](./packages/app/hybrid/developer-tools/diagram/src/posts/leaderboard.md)
-│   │   │   │   │   │   │   ├── [ledger-system.md](./packages/app/hybrid/developer-tools/diagram/src/posts/ledger-system.md)
-│   │   │   │   │   │   │   ├── [linkedin.md](./packages/app/hybrid/developer-tools/diagram/src/posts/linkedin.md)
-│   │   │   │   │   │   │   ├── [load-balancer.md](./packages/app/hybrid/developer-tools/diagram/src/posts/load-balancer.md)
-│   │   │   │   │   │   │   ├── [log-aggregation.md](./packages/app/hybrid/developer-tools/diagram/src/posts/log-aggregation.md)
-│   │   │   │   │   │   │   ├── [medium.md](./packages/app/hybrid/developer-tools/diagram/src/posts/medium.md)
-│   │   │   │   │   │   │   ├── [message-queue.md](./packages/app/hybrid/developer-tools/diagram/src/posts/message-queue.md)
-│   │   │   │   │   │   │   ├── [multiplayer-game.md](./packages/app/hybrid/developer-tools/diagram/src/posts/multiplayer-game.md)
-│   │   │   │   │   │   │   ├── [netflix.md](./packages/app/hybrid/developer-tools/diagram/src/posts/netflix.md)
-│   │   │   │   │   │   │   ├── [news-aggregator.md](./packages/app/hybrid/developer-tools/diagram/src/posts/news-aggregator.md)
-│   │   │   │   │   │   │   ├── [newsletter.md](./packages/app/hybrid/developer-tools/diagram/src/posts/newsletter.md)
-│   │   │   │   │   │   │   ├── [notes-app.md](./packages/app/hybrid/developer-tools/diagram/src/posts/notes-app.md)
-│   │   │   │   │   │   │   ├── [notification-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/notification-service.md)
-│   │   │   │   │   │   │   ├── [oauth-provider.md](./packages/app/hybrid/developer-tools/diagram/src/posts/oauth-provider.md)
-│   │   │   │   │   │   │   ├── [object-storage.md](./packages/app/hybrid/developer-tools/diagram/src/posts/object-storage.md)
-│   │   │   │   │   │   │   ├── [online-banking.md](./packages/app/hybrid/developer-tools/diagram/src/posts/online-banking.md)
-│   │   │   │   │   │   │   ├── [online-ide.md](./packages/app/hybrid/developer-tools/diagram/src/posts/online-ide.md)
-│   │   │   │   │   │   │   ├── [online-judge.md](./packages/app/hybrid/developer-tools/diagram/src/posts/online-judge.md)
-│   │   │   │   │   │   │   ├── [online-learning.md](./packages/app/hybrid/developer-tools/diagram/src/posts/online-learning.md)
-│   │   │   │   │   │   │   ├── [otp-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/otp-service.md)
-│   │   │   │   │   │   │   ├── [package-delivery.md](./packages/app/hybrid/developer-tools/diagram/src/posts/package-delivery.md)
-│   │   │   │   │   │   │   ├── [package-registry.md](./packages/app/hybrid/developer-tools/diagram/src/posts/package-registry.md)
-│   │   │   │   │   │   │   ├── [password-manager.md](./packages/app/hybrid/developer-tools/diagram/src/posts/password-manager.md)
-│   │   │   │   │   │   │   ├── [payroll-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/payroll-service.md)
-│   │   │   │   │   │   │   ├── [photo-editing.md](./packages/app/hybrid/developer-tools/diagram/src/posts/photo-editing.md)
-│   │   │   │   │   │   │   ├── [podcast.md](./packages/app/hybrid/developer-tools/diagram/src/posts/podcast.md)
-│   │   │   │   │   │   │   ├── [quiz-game.md](./packages/app/hybrid/developer-tools/diagram/src/posts/quiz-game.md)
-│   │   │   │   │   │   │   ├── [quora.md](./packages/app/hybrid/developer-tools/diagram/src/posts/quora.md)
-│   │   │   │   │   │   │   ├── [rate-limiter.md](./packages/app/hybrid/developer-tools/diagram/src/posts/rate-limiter.md)
-│   │   │   │   │   │   │   ├── [read-it-later.md](./packages/app/hybrid/developer-tools/diagram/src/posts/read-it-later.md)
-│   │   │   │   │   │   │   ├── [realtime-analytics.md](./packages/app/hybrid/developer-tools/diagram/src/posts/realtime-analytics.md)
-│   │   │   │   │   │   │   ├── [recommendation-system.md](./packages/app/hybrid/developer-tools/diagram/src/posts/recommendation-system.md)
-│   │   │   │   │   │   │   ├── [reddit.md](./packages/app/hybrid/developer-tools/diagram/src/posts/reddit.md)
-│   │   │   │   │   │   │   ├── [restaurant-reservation.md](./packages/app/hybrid/developer-tools/diagram/src/posts/restaurant-reservation.md)
-│   │   │   │   │   │   │   ├── [reviews-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/reviews-service.md)
-│   │   │   │   │   │   │   ├── [sentiment-analysis.md](./packages/app/hybrid/developer-tools/diagram/src/posts/sentiment-analysis.md)
-│   │   │   │   │   │   │   ├── [sentry.md](./packages/app/hybrid/developer-tools/diagram/src/posts/sentry.md)
-│   │   │   │   │   │   │   ├── [service-discovery.md](./packages/app/hybrid/developer-tools/diagram/src/posts/service-discovery.md)
-│   │   │   │   │   │   │   ├── [session-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/session-service.md)
-│   │   │   │   │   │   │   ├── [shopify.md](./packages/app/hybrid/developer-tools/diagram/src/posts/shopify.md)
-│   │   │   │   │   │   │   ├── [slack.md](./packages/app/hybrid/developer-tools/diagram/src/posts/slack.md)
-│   │   │   │   │   │   │   ├── [sms-gateway.md](./packages/app/hybrid/developer-tools/diagram/src/posts/sms-gateway.md)
-│   │   │   │   │   │   │   ├── [speech-recognition.md](./packages/app/hybrid/developer-tools/diagram/src/posts/speech-recognition.md)
-│   │   │   │   │   │   │   ├── [spell-checker.md](./packages/app/hybrid/developer-tools/diagram/src/posts/spell-checker.md)
-│   │   │   │   │   │   │   ├── [spotify.md](./packages/app/hybrid/developer-tools/diagram/src/posts/spotify.md)
-│   │   │   │   │   │   │   ├── [stock-trading.md](./packages/app/hybrid/developer-tools/diagram/src/posts/stock-trading.md)
-│   │   │   │   │   │   │   ├── [stream-processing.md](./packages/app/hybrid/developer-tools/diagram/src/posts/stream-processing.md)
-│   │   │   │   │   │   │   ├── [stripe.md](./packages/app/hybrid/developer-tools/diagram/src/posts/stripe.md)
-│   │   │   │   │   │   │   ├── [telehealth.md](./packages/app/hybrid/developer-tools/diagram/src/posts/telehealth.md)
-│   │   │   │   │   │   │   ├── [ticketmaster.md](./packages/app/hybrid/developer-tools/diagram/src/posts/ticketmaster.md)
-│   │   │   │   │   │   │   ├── [tiktok.md](./packages/app/hybrid/developer-tools/diagram/src/posts/tiktok.md)
-│   │   │   │   │   │   │   ├── [time-series.md](./packages/app/hybrid/developer-tools/diagram/src/posts/time-series.md)
-│   │   │   │   │   │   │   ├── [tinder.md](./packages/app/hybrid/developer-tools/diagram/src/posts/tinder.md)
-│   │   │   │   │   │   │   ├── [translation-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/translation-service.md)
-│   │   │   │   │   │   │   ├── [twitch.md](./packages/app/hybrid/developer-tools/diagram/src/posts/twitch.md)
-│   │   │   │   │   │   │   ├── [twitter.md](./packages/app/hybrid/developer-tools/diagram/src/posts/twitter.md)
-│   │   │   │   │   │   │   ├── [typeahead.md](./packages/app/hybrid/developer-tools/diagram/src/posts/typeahead.md)
-│   │   │   │   │   │   │   ├── [uber.md](./packages/app/hybrid/developer-tools/diagram/src/posts/uber.md)
-│   │   │   │   │   │   │   ├── [url-shortener.md](./packages/app/hybrid/developer-tools/diagram/src/posts/url-shortener.md)
-│   │   │   │   │   │   │   ├── [vector-database.md](./packages/app/hybrid/developer-tools/diagram/src/posts/vector-database.md)
-│   │   │   │   │   │   │   ├── [video-editing.md](./packages/app/hybrid/developer-tools/diagram/src/posts/video-editing.md)
-│   │   │   │   │   │   │   ├── [voice-assistant.md](./packages/app/hybrid/developer-tools/diagram/src/posts/voice-assistant.md)
-│   │   │   │   │   │   │   ├── [voting-system.md](./packages/app/hybrid/developer-tools/diagram/src/posts/voting-system.md)
-│   │   │   │   │   │   │   ├── [wallet.md](./packages/app/hybrid/developer-tools/diagram/src/posts/wallet.md)
-│   │   │   │   │   │   │   ├── [weather-service.md](./packages/app/hybrid/developer-tools/diagram/src/posts/weather-service.md)
-│   │   │   │   │   │   │   ├── [web-crawler.md](./packages/app/hybrid/developer-tools/diagram/src/posts/web-crawler.md)
-│   │   │   │   │   │   │   ├── [webhook-delivery.md](./packages/app/hybrid/developer-tools/diagram/src/posts/webhook-delivery.md)
-│   │   │   │   │   │   │   ├── [whatsapp.md](./packages/app/hybrid/developer-tools/diagram/src/posts/whatsapp.md)
-│   │   │   │   │   │   │   ├── [wiki.md](./packages/app/hybrid/developer-tools/diagram/src/posts/wiki.md)
-│   │   │   │   │   │   │   ├── [youtube.md](./packages/app/hybrid/developer-tools/diagram/src/posts/youtube.md)
-│   │   │   │   │   │   │   └── [zoom.md](./packages/app/hybrid/developer-tools/diagram/src/posts/zoom.md)
-│   │   │   │   │   │   ├── styles/
-│   │   │   │   │   │   │   ├── [globals.css](./packages/app/hybrid/developer-tools/diagram/src/styles/globals.css)
-│   │   │   │   │   │   │   └── [themes.css](./packages/app/hybrid/developer-tools/diagram/src/styles/themes.css)
-│   │   │   │   │   │   └── test/
-│   │   │   │   │   │       └── [style-mock.js](./packages/app/hybrid/developer-tools/diagram/src/test/style-mock.js)
-│   │   │   │   │   ├── src-tauri/
-│   │   │   │   │   │   ├── capabilities/
-│   │   │   │   │   │   │   └── [default.json](./packages/app/hybrid/developer-tools/diagram/src-tauri/capabilities/default.json)
-│   │   │   │   │   │   ├── icons/
-│   │   │   │   │   │   │   ├── android/
-│   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   │   │   │   │   ├── [ic_launcher_foreground.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   │   │   │   │   └── [ic_launcher_round.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │       └── [ic_launcher_background.xml](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   │   │   │   │   ├── ios/
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@1x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x-1.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@2x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-20x20@3x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@1x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x-1.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@2x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-29x29@3x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@1x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x-1.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@2x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-40x40@3x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-512@2x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@2x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-60x60@3x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@1x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   │   │   │   │   ├── [AppIcon-76x76@2x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   │   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   │   │   │   │   ├── [128x128.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/128x128.png)
-│   │   │   │   │   │   │   ├── [128x128@2x.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/128x128@2x.png)
-│   │   │   │   │   │   │   ├── [256x256.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/256x256.png)
-│   │   │   │   │   │   │   ├── [32x32.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/32x32.png)
-│   │   │   │   │   │   │   ├── [64x64.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/64x64.png)
-│   │   │   │   │   │   │   ├── [Square107x107Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square107x107Logo.png)
-│   │   │   │   │   │   │   ├── [Square142x142Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square142x142Logo.png)
-│   │   │   │   │   │   │   ├── [Square150x150Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square150x150Logo.png)
-│   │   │   │   │   │   │   ├── [Square284x284Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square284x284Logo.png)
-│   │   │   │   │   │   │   ├── [Square30x30Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square30x30Logo.png)
-│   │   │   │   │   │   │   ├── [Square310x310Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square310x310Logo.png)
-│   │   │   │   │   │   │   ├── [Square44x44Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square44x44Logo.png)
-│   │   │   │   │   │   │   ├── [Square71x71Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square71x71Logo.png)
-│   │   │   │   │   │   │   ├── [Square89x89Logo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/Square89x89Logo.png)
-│   │   │   │   │   │   │   ├── [StoreLogo.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/StoreLogo.png)
-│   │   │   │   │   │   │   ├── [create-icons.sh](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/create-icons.sh)
-│   │   │   │   │   │   │   ├── [icon.icns](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/icon.icns)
-│   │   │   │   │   │   │   ├── [icon.ico](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/icon.ico)
-│   │   │   │   │   │   │   └── [icon.png](./packages/app/hybrid/developer-tools/diagram/src-tauri/icons/icon.png)
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── [lib.rs](./packages/app/hybrid/developer-tools/diagram/src-tauri/src/lib.rs)
-│   │   │   │   │   │   │   └── [main.rs](./packages/app/hybrid/developer-tools/diagram/src-tauri/src/main.rs)
-│   │   │   │   │   │   ├── [Cargo.lock](./packages/app/hybrid/developer-tools/diagram/src-tauri/Cargo.lock)
-│   │   │   │   │   │   ├── [Cargo.toml](./packages/app/hybrid/developer-tools/diagram/src-tauri/Cargo.toml)
-│   │   │   │   │   │   ├── [build.rs](./packages/app/hybrid/developer-tools/diagram/src-tauri/build.rs)
-│   │   │   │   │   │   └── [tauri.conf.json](./packages/app/hybrid/developer-tools/diagram/src-tauri/tauri.conf.json)
-│   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/developer-tools/diagram/AGENTS.md)
-│   │   │   │   │   ├── [Dockerfile](./packages/app/hybrid/developer-tools/diagram/Dockerfile)
-│   │   │   │   │   ├── [LICENSE](./packages/app/hybrid/developer-tools/diagram/LICENSE)
-│   │   │   │   │   ├── [README.md](./packages/app/hybrid/developer-tools/diagram/README.md)
-│   │   │   │   │   ├── [docker-compose.yaml](./packages/app/hybrid/developer-tools/diagram/docker-compose.yaml)
-│   │   │   │   │   ├── [eslint.config.mts](./packages/app/hybrid/developer-tools/diagram/eslint.config.mts)
-│   │   │   │   │   ├── [jest.config.ts](./packages/app/hybrid/developer-tools/diagram/jest.config.ts)
-│   │   │   │   │   ├── [jest.setup.ts](./packages/app/hybrid/developer-tools/diagram/jest.setup.ts)
-│   │   │   │   │   ├── [next.config.ts](./packages/app/hybrid/developer-tools/diagram/next.config.ts)
-│   │   │   │   │   ├── [package.json](./packages/app/hybrid/developer-tools/diagram/package.json)
-│   │   │   │   │   ├── [playwright.config.ts](./packages/app/hybrid/developer-tools/diagram/playwright.config.ts)
-│   │   │   │   │   ├── [postcss.config.mjs](./packages/app/hybrid/developer-tools/diagram/postcss.config.mjs)
-│   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/developer-tools/diagram/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/developer-tools/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/developer-tools/TREE.md)
 │   │   │   ├── education/
@@ -19485,12 +19132,46 @@
 │   │   │   │   ├── apple/
 │   │   │   │   │   ├── macos/
 │   │   │   │   │   │   ├── Docs/
-│   │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/native/macosx/apple/macos/Docs/ARCHITECTURE.md)
-│   │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/native/macosx/apple/macos/Docs/CONTRIBUTING.md)
-│   │   │   │   │   │   │   ├── [DESIGN-SYSTEM.md](./packages/app/native/macosx/apple/macos/Docs/DESIGN-SYSTEM.md)
-│   │   │   │   │   │   │   ├── [DOWNLOADS.md](./packages/app/native/macosx/apple/macos/Docs/DOWNLOADS.md)
-│   │   │   │   │   │   │   ├── [PACKAGING.md](./packages/app/native/macosx/apple/macos/Docs/PACKAGING.md)
-│   │   │   │   │   │   │   └── [ROADMAP.md](./packages/app/native/macosx/apple/macos/Docs/ROADMAP.md)
+│   │   │   │   │   │   │   ├── 00-overview/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/00-overview/README.md)
+│   │   │   │   │   │   │   ├── 01-requirements/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/01-requirements/README.md)
+│   │   │   │   │   │   │   ├── 02-features/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/02-features/README.md)
+│   │   │   │   │   │   │   ├── 03-user-stories/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/03-user-stories/README.md)
+│   │   │   │   │   │   │   ├── 04-architecture/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/04-architecture/README.md)
+│   │   │   │   │   │   │   ├── 05-data-model/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/05-data-model/README.md)
+│   │   │   │   │   │   │   ├── 06-api-specification/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/06-api-specification/README.md)
+│   │   │   │   │   │   │   ├── 07-ui-ux-design/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/07-ui-ux-design/README.md)
+│   │   │   │   │   │   │   ├── 08-tech-stack/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/08-tech-stack/README.md)
+│   │   │   │   │   │   │   ├── 09-testing-strategy/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/09-testing-strategy/README.md)
+│   │   │   │   │   │   │   ├── 10-implementation-plan/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/10-implementation-plan/README.md)
+│   │   │   │   │   │   │   ├── 11-deployment/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/11-deployment/README.md)
+│   │   │   │   │   │   │   ├── 12-operations/
+│   │   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/12-operations/README.md)
+│   │   │   │   │   │   │   ├── [00-overview.md](./packages/app/native/macosx/apple/macos/Docs/00-overview.md)
+│   │   │   │   │   │   │   ├── [01-requirements.md](./packages/app/native/macosx/apple/macos/Docs/01-requirements.md)
+│   │   │   │   │   │   │   ├── [02-features.md](./packages/app/native/macosx/apple/macos/Docs/02-features.md)
+│   │   │   │   │   │   │   ├── [03-user-stories.md](./packages/app/native/macosx/apple/macos/Docs/03-user-stories.md)
+│   │   │   │   │   │   │   ├── [04-architecture.md](./packages/app/native/macosx/apple/macos/Docs/04-architecture.md)
+│   │   │   │   │   │   │   ├── [05-data-model.md](./packages/app/native/macosx/apple/macos/Docs/05-data-model.md)
+│   │   │   │   │   │   │   ├── [06-api-specification.md](./packages/app/native/macosx/apple/macos/Docs/06-api-specification.md)
+│   │   │   │   │   │   │   ├── [07-ui-ux-design.md](./packages/app/native/macosx/apple/macos/Docs/07-ui-ux-design.md)
+│   │   │   │   │   │   │   ├── [08-tech-stack.md](./packages/app/native/macosx/apple/macos/Docs/08-tech-stack.md)
+│   │   │   │   │   │   │   ├── [09-testing-strategy.md](./packages/app/native/macosx/apple/macos/Docs/09-testing-strategy.md)
+│   │   │   │   │   │   │   ├── [10-implementation-plan.md](./packages/app/native/macosx/apple/macos/Docs/10-implementation-plan.md)
+│   │   │   │   │   │   │   ├── [11-deployment.md](./packages/app/native/macosx/apple/macos/Docs/11-deployment.md)
+│   │   │   │   │   │   │   ├── [12-operations.md](./packages/app/native/macosx/apple/macos/Docs/12-operations.md)
+│   │   │   │   │   │   │   └── [README.md](./packages/app/native/macosx/apple/macos/Docs/README.md)
 │   │   │   │   │   │   ├── Resources/
 │   │   │   │   │   │   │   ├── AppIcon.iconset/
 │   │   │   │   │   │   │   │   ├── [AppIcon-render.swift](./packages/app/native/macosx/apple/macos/Resources/AppIcon.iconset/AppIcon-render.swift)
@@ -22642,4 +22323,4 @@
 └── [turbo.json](./turbo.json)
 ```
 
-4937 directories, 17702 files
+4902 directories, 17418 files

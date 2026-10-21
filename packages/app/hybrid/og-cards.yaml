@@ -68,29 +68,6 @@ cards:
       success: '#10b981'
       error: '#ef4444'
 
-  - app: developer-tools/diagram
-    url: 'https://hieudoanm.github.io/open/diagram/'
-    name: Diagram
-    kicker: 'Text in, diagram out'
-    title: 'A diagram editor you type'
-    description: 'A minimal text-driven diagram editor: write the DSL, watch a styled SVG preview update live.'
-    tags:
-      [
-        'Live SVG preview',
-        '128 examples',
-        'Sequence & ER',
-        'Web · desktop · mobile',
-      ]
-    theme:
-      base: '#ffffff'
-      content: '#1e1b4b'
-      primary: '#7c3aed'
-      secondary: '#06b6d4'
-      info: '#3b82f6'
-      warning: '#f59e0b'
-      success: '#10b981'
-      error: '#ef4444'
-
   - app: education/doi
     url: 'https://hieudoanm.github.io/open/doi/'
     name: DOI

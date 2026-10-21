@@ -5,7 +5,8 @@ _Part of [07-ui-ux-design.md](../../07-ui-ux-design.md)._
 All values below are mirrored by:
 
 - the DaisyUI themes `sml-light` / `sml-dark` in
-  [`packages/frontend/src/styles/globals.css`](../../../packages/frontend/src/styles/globals.css), and
+  [`packages/frontend/src/styles/globals.css`](../../../packages/frontend/src/styles/globals.css),
+  and
 - the `@theme` / `[data-theme]` blocks in the
   [prototypes](../prototypes/README.md).
 
@@ -13,14 +14,15 @@ Change a token here, then change it in both places.
 
 ## Brand
 
-Product name: **Simple Machine Learning** (short: **SML**). Wordmark in the UI navbar; no
-third-party AutoML marks. See [`brand/README.md`](../brand/README.md) for the marks themselves.
+Product name: **Simple Machine Learning** (short: **SML**). Wordmark in the UI
+navbar; no third-party AutoML marks. See [`brand/README.md`](../brand/README.md)
+for the marks themselves.
 
 ## Colour
 
-Tokens are exposed to Tailwind as `--color-<name>`, so `--color-text-primary` is the utility
-`text-text-primary`. DaisyUI semantic tokens (`primary`, `base-100`, …) are also available as
-`btn-primary`, `bg-base-100`, and so on.
+Tokens are exposed to Tailwind as `--color-<name>`, so `--color-text-primary` is
+the utility `text-text-primary`. DaisyUI semantic tokens (`primary`, `base-100`,
+…) are also available as `btn-primary`, `bg-base-100`, and so on.
 
 ### Semantic (DaisyUI)
 
@@ -74,18 +76,20 @@ Tokens are exposed to Tailwind as `--color-<name>`, so `--color-text-primary` is
 Rules:
 
 1. Do not use raw hex in components when a semantic class exists.
-2. Status colours are always used as a pair (`bg-<x>-bg` with `text-<x>-fg`) so contrast holds.
+2. Status colours are always used as a pair (`bg-<x>-bg` with `text-<x>-fg`) so
+   contrast holds.
 3. Keep the `light` and `dark` values in step — every token has both.
 
 ## Typography
 
-- Sans: **Inter** (the product and brand typeface), loaded with `next/font` and exposed as
-  `--font-sans` / `font-sans`, with a system sans-serif fallback.
-- Monospace: **JetBrains Mono**, loaded with `next/font` and exposed as `--font-mono` /
-  `font-mono`, for hashes, job ids, dtypes, and metrics at `text-sm`.
+- Sans: **Inter** (the product and brand typeface), loaded with `next/font` and
+  exposed as `--font-sans` / `font-sans`, with a system sans-serif fallback.
+- Monospace: **JetBrains Mono**, loaded with `next/font` and exposed as
+  `--font-mono` / `font-mono`, for hashes, job ids, dtypes, and metrics at
+  `text-sm`.
 
-Scale: `text-xs` helper, `text-sm` body, `text-xl` / `text-2xl` section headings, `text-3xl`
-page/hero headings.
+Scale: `text-xs` helper, `text-sm` body, `text-xl` / `text-2xl` section
+headings, `text-3xl` page/hero headings.
 
 ## Spacing
 
@@ -93,6 +97,6 @@ Use the Tailwind scale: page padding `p-4 md:p-8`, card `p-6`, stack `gap-4`.
 
 ## Radius and shadow
 
-Use DaisyUI defaults (`rounded-box`, `shadow`, `shadow-sm`). Cards for upload, mapping, and
-metrics. Radius is configured once in the themes (`--radius-selector`, `--radius-field`,
-`--radius-box`).
+Use DaisyUI defaults (`rounded-box`, `shadow`, `shadow-sm`). Cards for upload,
+mapping, and metrics. Radius is configured once in the themes
+(`--radius-selector`, `--radius-field`, `--radius-box`).

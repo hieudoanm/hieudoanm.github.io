@@ -4,7 +4,8 @@ _Part of [07-ui-ux-design.md](../../07-ui-ux-design.md)._
 
 ## Global states
 
-See [`FEATURE-08`](../../02-features/FEATURE-08-UI-States-Global.md). Every screen implements:
+See [`FEATURE-08`](../../02-features/FEATURE-08-UI-States-Global.md). Every
+screen implements:
 
 | State            | Treatment                                               |
 | ---------------- | ------------------------------------------------------- |

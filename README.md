@@ -28,7 +28,7 @@
 [lab-meg-release]: https://github.com/hieudoanm/lab.meg/releases/tag/latest
 [lab-mri-release]: https://github.com/hieudoanm/lab.mri/releases/tag/latest
 
-## [Open Releases (28)](https://hieudoanm.github.io/open)
+## [Open Releases (27)](https://hieudoanm.github.io/open)
 
 ### Browser Extensions (1)
 
@@ -61,26 +61,25 @@
 
 ---
 
-### Hybrid (16)
+### Hybrid (15)
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
 | 13  | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
 | 14  | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
 | 15  | Hybrid   | Developer Tools   | Code        | [Open][open-code]        | [Releases][releases-code]        |
-| 16  | Hybrid   | Developer Tools   | Diagram     | [Open][open-diagram]     | [Releases][releases-diagram]     |
-| 17  | Hybrid   | Education         | DOI         | [Open][open-doi]         | [Releases][releases-doi]         |
-| 18  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
-| 19  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
-| 20  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
-| 21  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
-| 22  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
-| 23  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
-| 24  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
-| 25  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 26  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 27  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 28  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 16  | Hybrid   | Education         | DOI         | [Open][open-doi]         | [Releases][releases-doi]         |
+| 17  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
+| 18  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
+| 19  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
+| 20  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
+| 21  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
+| 22  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
+| 23  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
+| 24  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 25  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 26  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 27  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -93,7 +92,6 @@
 [open-boilerplate]: https://hieudoanm.github.io/open/boilerplate/
 [open-code]: https://hieudoanm.github.io/open/code/
 [open-dbml]: https://hieudoanm.github.io/open/dbml/
-[open-diagram]: https://hieudoanm.github.io/open/diagram/
 [open-lingo]: https://hieudoanm.github.io/open/lingo/
 [open-doi]: https://hieudoanm.github.io/open/doi/
 [open-foody]: https://hieudoanm.github.io/open/foody/
@@ -121,7 +119,6 @@
 [releases-api]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-api-latest
 [releases-boilerplate]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-boilerplate-latest
 [releases-code]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-code-latest
-[releases-diagram]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-diagram-latest
 [releases-lingo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest
 [releases-doi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-doi-latest
 [releases-foody]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest
