@@ -84,7 +84,7 @@ dependencies {
     implementation("androidx.room:room-ktx:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
 
-    val datastoreVersion = "1.2.1"
+    val datastoreVersion = "1.3.0"
     implementation("androidx.datastore:datastore-preferences:$datastoreVersion")
 
     val hiltVersion = "2.60.1"
