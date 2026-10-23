@@ -1,79 +1,5 @@
 [
   {
-    "id": "extensions",
-    "label": "Extensions",
-    "items": [
-      {
-        "label": "BrowserX",
-        "primaryCategory": "Extensions",
-        "secondaryCategory": "Utilities",
-        "icon": "PiTabs",
-        "href": "https://hieudoanm.github.io/open/browserx",
-        "version": "latest",
-        "lastUpdated": "2026-09-09",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.crx"
-          },
-          {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.xpi"
-          },
-          {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.zip"
-          },
-          {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.zip"
-          }
-        ]
-      },
-      {
-        "label": "AndroidX",
-        "primaryCategory": "Extensions",
-        "secondaryCategory": "Utilities",
-        "icon": "PiAndroidLogo",
-        "href": "https://hieudoanm.github.io/open/androidx",
-        "version": "latest",
-        "lastUpdated": "2026-09-15",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-android-androidx-latest/app-release.apk"
-          }
-        ]
-      },
-      {
-        "label": "MacOSX",
-        "primaryCategory": "Extensions",
-        "secondaryCategory": "Utilities",
-        "icon": "PiGauge",
-        "href": "https://hieudoanm.github.io/open/macosx",
-        "version": "latest",
-        "lastUpdated": "2026-08-29",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macos-macosx-latest/MacOSX-0.0.1.dmg"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "hybrid",
     "label": "Hybrid",
     "items": [
@@ -206,50 +132,6 @@
           {
             "label": ".exe",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.exe"
-          }
-        ]
-      },
-      {
-        "label": "Diagram",
-        "primaryCategory": "Developer Tools",
-        "secondaryCategory": "Graphics & Design",
-        "icon": "PiPaintBrush",
-        "href": "https://hieudoanm.github.io/open/diagram",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.exe"
           }
         ]
       },
@@ -896,34 +778,6 @@
           {
             "label": "Linux ARM64",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-arm64"
-          }
-        ]
-      },
-      {
-        "label": "J.A.C.K.",
-        "primaryCategory": "Developer Tools",
-        "secondaryCategory": "Productivity",
-        "icon": "PiTerminalWindow",
-        "href": "https://hieudoanm.github.io/open/jack/",
-        "version": "latest",
-        "lastUpdated": "2026-09-06",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "macOS (Intel)",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-amd64"
-          },
-          {
-            "label": "macOS (Apple Silicon)",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-arm64"
-          },
-          {
-            "label": "Linux x64",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-linux-amd64"
-          },
-          {
-            "label": "Linux ARM64",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-linux-arm64"
           }
         ]
       },

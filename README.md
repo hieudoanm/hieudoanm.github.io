@@ -13,6 +13,16 @@
 [twitter]: https://x.com/hieudoanm
 [instagram]: https://instagram.com/hieudoanm.github.io
 
+## Main Projects (2)
+
+| No  | Name                   | Repository                                   |
+| --- | ---------------------- | -------------------------------------------- |
+| 01  | Design (System) Design | [design.system.design][design.system.design] |
+| 02  | Omni                   | [omni][omni]                                 |
+
+[design.system.design]: https://github.com/hieudoanm/design.system.design
+[omni]: https://github.com/hieudoanm/omni
+
 ## Neuroimaging Projects (3)
 
 | No  | Name      | Repository         | Releases                    |
@@ -30,34 +40,18 @@
 
 ## [Open Releases (27)](https://hieudoanm.github.io/open)
 
-### Browser Extensions (1)
-
-| No  | Platform | Category  | Name     | Open                  | Releases                      |
-| --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
-| 1   | Browser  | Extension | BrowserX | [Open][open-browserx] | [Releases][releases-browserx] |
-
-### Native Apps (2)
-
-| No  | Platform | Category | Name     | Open                  | Releases                      |
-| --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
-| 2   | Native   | Android  | AndroidX | [Open][open-androidx] | [Releases][releases-androidx] |
-| 3   | Native   | MacOS    | MacOSX   | [Open][open-macosx]   | [Releases][releases-macosx]   |
-
----
-
-### Headless (9)
+### Headless (8)
 
 | No  | Platform | Category        | Name           | Open                        | Releases                            |
 | --- | -------- | --------------- | -------------- | --------------------------- | ----------------------------------- |
-| 4   | Headless | Developer Tools | Backbone       | [Open][open-backbone]       | [Releases][releases-backbone]       |
-| 5   | Headless | Developer Tools | Browserverless | [Open][open-browserverless] | [Releases][releases-browserverless] |
-| 6   | Headless | Developer Tools | CV             | [Open][open-cv]             | [Releases][releases-cv]             |
-| 7   | Headless | Developer Tools | DBML           | [Open][open-dbml]           | [Releases][releases-dbml]           |
-| 8   | Headless | Developer Tools | J.A.C.K.       | [Open][open-jack]           | [Releases][releases-jack]           |
-| 9   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
-| 10  | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
-| 11  | Headless | Developer Tools | Pagify         | [Open][open-pagify]         | [Releases][releases-pagify]         |
-| 12  | Headless | Developer Tools | Vectify        | [Open][open-vectify]        | [Releases][releases-vectify]        |
+| 1   | Headless | Developer Tools | Backbone       | [Open][open-backbone]       | [Releases][releases-backbone]       |
+| 2   | Headless | Developer Tools | Browserverless | [Open][open-browserverless] | [Releases][releases-browserverless] |
+| 3   | Headless | Developer Tools | CV             | [Open][open-cv]             | [Releases][releases-cv]             |
+| 4   | Headless | Developer Tools | DBML           | [Open][open-dbml]           | [Releases][releases-dbml]           |
+| 5   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
+| 6   | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
+| 7   | Headless | Developer Tools | Pagify         | [Open][open-pagify]         | [Releases][releases-pagify]         |
+| 8   | Headless | Developer Tools | Vectify        | [Open][open-vectify]        | [Releases][releases-vectify]        |
 
 ---
 
@@ -65,28 +59,26 @@
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
-| 13  | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
-| 14  | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
-| 15  | Hybrid   | Developer Tools   | Code        | [Open][open-code]        | [Releases][releases-code]        |
-| 16  | Hybrid   | Education         | DOI         | [Open][open-doi]         | [Releases][releases-doi]         |
-| 17  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
-| 18  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
-| 19  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
-| 20  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
-| 21  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
-| 22  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
-| 23  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
-| 24  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 25  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 26  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 27  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 9   | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 10  | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 11  | Hybrid   | Developer Tools   | Code        | [Open][open-code]        | [Releases][releases-code]        |
+| 12  | Hybrid   | Education         | DOI         | [Open][open-doi]         | [Releases][releases-doi]         |
+| 13  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
+| 14  | Hybrid   | Food & Drink      | Foody       | [Open][open-foody]       | [Releases][releases-foody]       |
+| 15  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
+| 16  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
+| 17  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
+| 18  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
+| 19  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
+| 20  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 21  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 22  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 23  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
 <!-- Open -->
 
-[open-androidx]: https://hieudoanm.github.io/open/androidx/
-[open-browserx]: https://hieudoanm.github.io/open/browserx/
 [open-exhibit]: https://hieudoanm.github.io/open/exhibit/
 [open-api]: https://hieudoanm.github.io/open/api/
 [open-boilerplate]: https://hieudoanm.github.io/open/boilerplate/
@@ -104,10 +96,8 @@
 [open-football]: https://hieudoanm.github.io/open/football/
 [open-tourney]: https://hieudoanm.github.io/open/tourney/
 [open-docs]: https://hieudoanm.github.io/
-[open-jack]: https://hieudoanm.github.io/open/jack/
 [open-browserverless]: https://hieudoanm.github.io/open/browserverless/
 [open-backbone]: https://hieudoanm.github.io/open/backbone/
-[open-macosx]: https://hieudoanm.github.io/open/macosx/
 [open-kevin]: https://hieudoanm.github.io/open/kevin/
 [open-landify]: https://hieudoanm.github.io/open/landify/
 [open-pagify]: https://hieudoanm.github.io/open/pagify/
@@ -130,15 +120,11 @@
 [releases-football]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-football-latest
 [releases-tourney]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-tourney-latest
 [releases-docs]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-docs-latest
-[releases-macosx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-macosx-latest
-[releases-androidx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-androidx-latest
 [releases-browserverless]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
-[releases-jack]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-jack-latest
 [releases-backbone]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
 [releases-kevin]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
 [releases-landify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest
 [releases-pagify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-pagify-latest
-[releases-browserx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-browserx-latest
 [releases-vectify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-vectify-latest
 [releases-dbml]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-dbml-latest
 [releases-cv]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-cv-latest
