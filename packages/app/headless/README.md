@@ -8,11 +8,10 @@
 | 2   | [Browserverless](./browserverless/) |
 | 3   | [CV](./cv)                          |
 | 4   | [DBML](./dbml/)                     |
-| 5   | [J.A.C.K.](./jack/)                 |
-| 6   | [KeVIN](./kevin/)                   |
-| 7   | [Landify](./landify/)               |
-| 8   | [Pagify](./pagify/)                 |
-| 9   | [Vectify](./vectify/)               |
+| 5   | [KeVIN](./kevin/)                   |
+| 6   | [Landify](./landify/)               |
+| 7   | [Pagify](./pagify/)                 |
+| 8   | [Vectify](./vectify/)               |
 
 ## Techstack
 
