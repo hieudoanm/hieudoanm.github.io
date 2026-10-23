@@ -1,44 +1,6 @@
-# 👨‍💻 I'm [Hieu Doan][hieudoanm]
+# `hieudoanm.github.io`
 
-| About    | Links                                                                                 |
-| -------- | ------------------------------------------------------------------------------------- |
-| Monorepo | [hieudoanm/hieudoanm.github.io](https://github.com/hieudoanm/hieudoanm.github.io)     |
-| Profile  | [Resume][resume] - [LinkedIn][linkedin] - [Twitter][twitter] - [Instagram][instagram] |
-
-<!-- Profile -->
-
-[hieudoanm]: https://hieudoanm.github.io
-[resume]: https://github.com/hieudoanm/hieudoanm.github.io/blob/master/RESUME.md
-[linkedin]: https://www.linkedin.com/in/hieudoanm/
-[twitter]: https://x.com/hieudoanm
-[instagram]: https://instagram.com/hieudoanm.github.io
-
-## Main Projects (2)
-
-| No  | Name                   | Repository                                   |
-| --- | ---------------------- | -------------------------------------------- |
-| 01  | Design (System) Design | [design.system.design][design.system.design] |
-| 02  | Omni                   | [omni][omni]                                 |
-
-[design.system.design]: https://github.com/hieudoanm/design.system.design
-[omni]: https://github.com/hieudoanm/omni
-
-## Neuroimaging Projects (3)
-
-| No  | Name      | Repository         | Releases                    |
-| --- | --------- | ------------------ | --------------------------- |
-| 01  | `EEG Lab` | [lab.eeg][lab-eeg] | [Download][lab-eeg-release] |
-| 02  | `MEG Lab` | [lab.meg][lab-meg] | [Download][lab-meg-release] |
-| 03  | `MRI Lab` | [lab.mri][lab-mri] | [Download][lab-mri-release] |
-
-[lab-eeg]: https://github.com/hieudoanm/lab.eeg
-[lab-meg]: https://github.com/hieudoanm/lab.meg
-[lab-mri]: https://github.com/hieudoanm/lab.mri
-[lab-eeg-release]: https://github.com/hieudoanm/lab.eeg/releases/tag/latest
-[lab-meg-release]: https://github.com/hieudoanm/lab.meg/releases/tag/latest
-[lab-mri-release]: https://github.com/hieudoanm/lab.mri/releases/tag/latest
-
-## [Open Releases (27)](https://hieudoanm.github.io/open)
+## [Open Releases (23)](https://hieudoanm.github.io/open)
 
 ### Headless (8)
 
