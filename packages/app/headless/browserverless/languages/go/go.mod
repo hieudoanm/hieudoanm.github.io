@@ -2,7 +2,7 @@ module github.com/hieudoanm/browserverless
 
 go 1.27.2
 
-require github.com/go-webengine/engine v0.10.2
+require github.com/go-webengine/engine v0.13.2
 
 require (
 	github.com/ajroetker/go-highway v0.0.12 // indirect
