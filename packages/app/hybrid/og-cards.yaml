@@ -182,23 +182,6 @@ cards:
       success: '#188038'
       error: '#d93025'
 
-  - app: productivity/pdf
-    url: 'https://hieudoanm.github.io/open/pdf/'
-    name: PDF
-    kicker: 'Read, merge, compare'
-    title: 'A PDF viewer and editor'
-    description: 'A modern PDF viewer and editor: annotate, merge and compare files, with a toolbox of page tools.'
-    tags: ['Viewer & editor', 'Merge & compare', 'Page tools', 'Client-side']
-    theme:
-      base: '#fdf7f7'
-      content: '#2b1313'
-      primary: '#b91c1c'
-      secondary: '#374151'
-      info: '#2563eb'
-      warning: '#d97706'
-      success: '#16a34a'
-      error: '#b91c1c'
-
   - app: shopping/store
     url: 'https://hieudoanm.github.io/open/store/'
     name: Store

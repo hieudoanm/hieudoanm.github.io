@@ -11,12 +11,11 @@
 | 07  | exhibit     | [Exhibit][exhibit]         | UI Showcase                                                      | Required | DONE   | Graphics & Design | Photo & Video      |
 | 08  | svg         | [SVG][svg]                 | Adobe Illustrator / CorelDRAW                                    | No       | DONE   | Graphics & Design | Photo & Video      |
 | 09  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes    | No       | DONE   | Productivity      | Education          |
-| 10  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                | No       | DONE   | Productivity      | Business           |
-| 11  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
-| 12  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
-| 13  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
-| 14  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
-| 15  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
+| 10  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
+| 11  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
+| 12  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
+| 13  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
+| 14  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/
@@ -26,7 +25,6 @@
 [foody]: https://hieudoanm.github.io/open/foody/
 [svg]: https://hieudoanm.github.io/open/svg/
 [office]: https://hieudoanm.github.io/open/office/
-[pdf]: https://hieudoanm.github.io/open/pdf/
 [store]: https://hieudoanm.github.io/open/store/
 [chess]: https://hieudoanm.github.io/open/chess/
 [football]: https://hieudoanm.github.io/open/football/

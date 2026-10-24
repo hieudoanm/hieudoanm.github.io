@@ -1,6 +1,6 @@
 # `hieudoanm.github.io`
 
-## [Open Releases (23)](https://hieudoanm.github.io/open)
+## [Open Releases (22)](https://hieudoanm.github.io/open)
 
 ### Headless (8)
 
@@ -17,7 +17,7 @@
 
 ---
 
-### Hybrid (15)
+### Hybrid (14)
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
@@ -30,12 +30,11 @@
 | 15  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
 | 16  | Hybrid   | Graphics & Design | SVG         | [Open][open-svg]         | [Releases][releases-svg]         |
 | 17  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
-| 18  | Hybrid   | Productivity      | PDF         | [Open][open-pdf]         | [Releases][releases-pdf]         |
-| 19  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
-| 20  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 21  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 22  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 23  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 18  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
+| 19  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 20  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 21  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 22  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -51,7 +50,6 @@
 [open-foody]: https://hieudoanm.github.io/open/foody/
 [open-svg]: https://hieudoanm.github.io/open/svg/
 [open-office]: https://hieudoanm.github.io/open/office/
-[open-pdf]: https://hieudoanm.github.io/open/pdf/
 [open-cv]: https://hieudoanm.github.io/open/cv/
 [open-store]: https://hieudoanm.github.io/open/store/
 [open-chess]: https://hieudoanm.github.io/open/chess/
@@ -76,7 +74,6 @@
 [releases-foody]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest
 [releases-svg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-svg-latest
 [releases-office]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-office-latest
-[releases-pdf]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-pdf-latest
 [releases-store]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-shopping-store-latest
 [releases-chess]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-chess-latest
 [releases-football]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-football-latest
