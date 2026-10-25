@@ -3,5 +3,5 @@ name = "api"
 version = "0.0.1"
 description = "API client library for various external APIs"
 readme = "README.md"
-requires-python = "==3.15.0"
+requires-python = "==3.15.1"
 dependencies = ["httpx"]
