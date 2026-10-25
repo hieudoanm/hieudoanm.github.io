@@ -73,7 +73,7 @@
     "next": "16.4.3",
     "openai": "7.43.0",
     "pdf-lib": "1.17.1",
-    "pdfmake": "0.3.12",
+    "pdfmake": "0.3.13",
     "react": "19.3.1",
     "react-chartjs-2": "5.3.1",
     "react-dom": "19.3.1",
