@@ -11,7 +11,6 @@
 | 5   | [KeVIN](./kevin/)                   |
 | 6   | [Landify](./landify/)               |
 | 7   | [Pagify](./pagify/)                 |
-| 8   | [Vectify](./vectify/)               |
 
 ## Techstack
 

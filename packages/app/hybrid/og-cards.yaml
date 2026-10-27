@@ -148,23 +148,6 @@ cards:
       success: '#2e7d32'
       error: '#d32f2f'
 
-  - app: graphics-design/svg
-    url: 'https://hieudoanm.github.io/open/svg/'
-    name: SVG
-    kicker: 'Canvas and code, side by side'
-    title: 'Draw vectors, read the source'
-    description: 'A modern vector graphics editor: shape tools on a canvas with the SVG source open beside it.'
-    tags: ['Shape tools', 'Live SVG source', 'Canvas + code', 'Export SVG']
-    theme:
-      base: '#fff5fb'
-      content: '#3b0a2b'
-      primary: '#ec4899'
-      secondary: '#06b6d4'
-      info: '#3b82f6'
-      warning: '#f59e0b'
-      success: '#10b981'
-      error: '#e11d48'
-
   - app: productivity/office
     url: 'https://hieudoanm.github.io/open/office/'
     name: Office

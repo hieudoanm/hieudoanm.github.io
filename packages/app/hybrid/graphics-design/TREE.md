@@ -3,19 +3,82 @@
 ```text
 ├── exhibit/
 │   ├── docs/
-│   │   ├── [ARCHITECTURE.md](./exhibit/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./exhibit/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./exhibit/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./exhibit/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./exhibit/docs/ROADMAP.md)
+│   │   ├── 00-overview/
+│   │   │   └── [README.md](./exhibit/docs/00-overview/README.md)
+│   │   ├── 01-requirements/
+│   │   │   ├── [README.md](./exhibit/docs/01-requirements/README.md)
+│   │   │   ├── [functional-requirements.md](./exhibit/docs/01-requirements/functional-requirements.md)
+│   │   │   └── [non-functional-requirements.md](./exhibit/docs/01-requirements/non-functional-requirements.md)
+│   │   ├── 02-features/
+│   │   │   └── [README.md](./exhibit/docs/02-features/README.md)
+│   │   ├── 03-user-stories/
+│   │   │   └── [README.md](./exhibit/docs/03-user-stories/README.md)
+│   │   ├── 04-architecture/
+│   │   │   └── [README.md](./exhibit/docs/04-architecture/README.md)
+│   │   ├── 05-data-model/
+│   │   │   └── [README.md](./exhibit/docs/05-data-model/README.md)
+│   │   ├── 06-api-specification/
+│   │   │   └── [README.md](./exhibit/docs/06-api-specification/README.md)
+│   │   ├── 07-ui-ux-design/
+│   │   │   ├── brand/
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── [logo-mark-dark.png](./exhibit/docs/07-ui-ux-design/brand/images/logo-mark-dark.png)
+│   │   │   │   │   ├── [logo-mark-light.png](./exhibit/docs/07-ui-ux-design/brand/images/logo-mark-light.png)
+│   │   │   │   │   ├── [logo-text-dark.png](./exhibit/docs/07-ui-ux-design/brand/images/logo-text-dark.png)
+│   │   │   │   │   └── [logo-text-light.png](./exhibit/docs/07-ui-ux-design/brand/images/logo-text-light.png)
+│   │   │   │   ├── svg/
+│   │   │   │   │   ├── [logo-mark-dark.svg](./exhibit/docs/07-ui-ux-design/brand/svg/logo-mark-dark.svg)
+│   │   │   │   │   ├── [logo-mark-light.svg](./exhibit/docs/07-ui-ux-design/brand/svg/logo-mark-light.svg)
+│   │   │   │   │   ├── [logo-text-dark.svg](./exhibit/docs/07-ui-ux-design/brand/svg/logo-text-dark.svg)
+│   │   │   │   │   └── [logo-text-light.svg](./exhibit/docs/07-ui-ux-design/brand/svg/logo-text-light.svg)
+│   │   │   │   └── [brand.sh](./exhibit/docs/07-ui-ux-design/brand/brand.sh)
+│   │   │   ├── system/
+│   │   │   │   ├── [accessibility.md](./exhibit/docs/07-ui-ux-design/system/accessibility.md)
+│   │   │   │   ├── [animation.md](./exhibit/docs/07-ui-ux-design/system/animation.md)
+│   │   │   │   ├── [components.md](./exhibit/docs/07-ui-ux-design/system/components.md)
+│   │   │   │   ├── [design-tokens.md](./exhibit/docs/07-ui-ux-design/system/design-tokens.md)
+│   │   │   │   ├── [iconography.md](./exhibit/docs/07-ui-ux-design/system/iconography.md)
+│   │   │   │   ├── [layout.md](./exhibit/docs/07-ui-ux-design/system/layout.md)
+│   │   │   │   ├── [responsive.md](./exhibit/docs/07-ui-ux-design/system/responsive.md)
+│   │   │   │   ├── [screens.md](./exhibit/docs/07-ui-ux-design/system/screens.md)
+│   │   │   │   └── [states.md](./exhibit/docs/07-ui-ux-design/system/states.md)
+│   │   │   └── [README.md](./exhibit/docs/07-ui-ux-design/README.md)
+│   │   ├── 08-tech-stack/
+│   │   │   └── [README.md](./exhibit/docs/08-tech-stack/README.md)
+│   │   ├── 09-testing-strategy/
+│   │   │   └── [README.md](./exhibit/docs/09-testing-strategy/README.md)
+│   │   ├── 10-implementation-plan/
+│   │   │   └── [README.md](./exhibit/docs/10-implementation-plan/README.md)
+│   │   ├── 11-deployment/
+│   │   │   └── [README.md](./exhibit/docs/11-deployment/README.md)
+│   │   ├── 12-operations/
+│   │   │   └── [README.md](./exhibit/docs/12-operations/README.md)
+│   │   ├── [00-overview.md](./exhibit/docs/00-overview.md)
+│   │   ├── [01-requirements.md](./exhibit/docs/01-requirements.md)
+│   │   ├── [02-features.md](./exhibit/docs/02-features.md)
+│   │   ├── [03-user-stories.md](./exhibit/docs/03-user-stories.md)
+│   │   ├── [04-architecture.md](./exhibit/docs/04-architecture.md)
+│   │   ├── [05-data-model.md](./exhibit/docs/05-data-model.md)
+│   │   ├── [06-api-specification.md](./exhibit/docs/06-api-specification.md)
+│   │   ├── [07-ui-ux-design.md](./exhibit/docs/07-ui-ux-design.md)
+│   │   ├── [08-tech-stack.md](./exhibit/docs/08-tech-stack.md)
+│   │   ├── [09-testing-strategy.md](./exhibit/docs/09-testing-strategy.md)
+│   │   ├── [10-implementation-plan.md](./exhibit/docs/10-implementation-plan.md)
+│   │   ├── [11-deployment.md](./exhibit/docs/11-deployment.md)
+│   │   ├── [12-operations.md](./exhibit/docs/12-operations.md)
+│   │   └── [README.md](./exhibit/docs/README.md)
 │   ├── e2e/
+│   │   ├── tax/
+│   │   │   ├── [helpers.ts](./exhibit/e2e/tax/helpers.ts)
+│   │   │   ├── [index.spec.ts](./exhibit/e2e/tax/index.spec.ts)
+│   │   │   └── [navigation.spec.ts](./exhibit/e2e/tax/navigation.spec.ts)
 │   │   ├── wallet/
-│   │   │   ├── [auth-guard.spec.ts](./exhibit/e2e/wallet/auth-guard.spec.ts)
 │   │   │   ├── [cards.spec.ts](./exhibit/e2e/wallet/cards.spec.ts)
 │   │   │   ├── [exchange.spec.ts](./exhibit/e2e/wallet/exchange.spec.ts)
 │   │   │   ├── [helpers.ts](./exhibit/e2e/wallet/helpers.ts)
 │   │   │   ├── [index.spec.ts](./exhibit/e2e/wallet/index.spec.ts)
 │   │   │   ├── [navigation.spec.ts](./exhibit/e2e/wallet/navigation.spec.ts)
+│   │   │   ├── [open-access.spec.ts](./exhibit/e2e/wallet/open-access.spec.ts)
 │   │   │   ├── [pay.spec.ts](./exhibit/e2e/wallet/pay.spec.ts)
 │   │   │   ├── [profile.spec.ts](./exhibit/e2e/wallet/profile.spec.ts)
 │   │   │   ├── [transactions.spec.ts](./exhibit/e2e/wallet/transactions.spec.ts)
@@ -53,12 +116,44 @@
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── (app)/
+│   │   │   │   ├── ai/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/ai/__tests__/page.test.tsx)
+│   │   │   │   │   ├── chat/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/ai/chat/__tests__/page.test.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/ai/chat/page.tsx)
+│   │   │   │   │   ├── settings/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/ai/settings/__tests__/page.test.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/ai/settings/page.tsx)
+│   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/ai/page.tsx)
 │   │   │   │   ├── chat/
 │   │   │   │   │   ├── settings/
 │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/chat/settings/__tests__/page.test.tsx)
 │   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/chat/settings/page.tsx)
 │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/chat/page.tsx)
+│   │   │   │   ├── gallery/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/gallery/__tests__/page.test.tsx)
+│   │   │   │   │   ├── album/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/gallery/album/__tests__/page.test.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/gallery/album/page.tsx)
+│   │   │   │   │   ├── albums/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/gallery/albums/__tests__/page.test.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/gallery/albums/page.tsx)
+│   │   │   │   │   ├── photo/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/gallery/photo/__tests__/page.test.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/gallery/photo/page.tsx)
+│   │   │   │   │   ├── search/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/gallery/search/__tests__/page.test.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/gallery/search/page.tsx)
+│   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/gallery/page.tsx)
 │   │   │   │   ├── menu/
 │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/menu/page.tsx)
 │   │   │   │   ├── password/
@@ -87,6 +182,29 @@
 │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/password/page.tsx)
 │   │   │   │   ├── pos/
 │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/pos/page.tsx)
+│   │   │   │   ├── tax/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/tax/__tests__/page.test.tsx)
+│   │   │   │   │   ├── audit/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [detail-page.test.tsx](./exhibit/src/app/(app)/tax/audit/__tests__/detail-page.test.tsx)
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/tax/audit/__tests__/page.test.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/tax/audit/page.tsx)
+│   │   │   │   │   ├── settings/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/tax/settings/__tests__/page.test.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/tax/settings/page.tsx)
+│   │   │   │   │   ├── submission/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [detail-page.test.tsx](./exhibit/src/app/(app)/tax/submission/__tests__/detail-page.test.tsx)
+│   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/tax/submission/__tests__/page.test.tsx)
+│   │   │   │   │   │   ├── new/
+│   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/tax/submission/new/__tests__/page.test.tsx)
+│   │   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/tax/submission/new/page.tsx)
+│   │   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/tax/submission/page.tsx)
+│   │   │   │   │   ├── [layout.tsx](./exhibit/src/app/(app)/tax/layout.tsx)
+│   │   │   │   │   └── [page.tsx](./exhibit/src/app/(app)/tax/page.tsx)
 │   │   │   │   ├── video/
 │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   └── [page.test.tsx](./exhibit/src/app/(app)/video/__tests__/page.test.tsx)
@@ -272,6 +390,38 @@
 │   │   │   ├── [template.tsx](./exhibit/src/app/template.tsx)
 │   │   │   └── [unauthorized.tsx](./exhibit/src/app/unauthorized.tsx)
 │   │   ├── components/
+│   │   │   ├── ai/
+│   │   │   │   ├── atoms/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   ├── [MessageBubble.test.tsx](./exhibit/src/components/ai/atoms/__tests__/MessageBubble.test.tsx)
+│   │   │   │   │   │   └── [ModelBadge.test.tsx](./exhibit/src/components/ai/atoms/__tests__/ModelBadge.test.tsx)
+│   │   │   │   │   ├── [MessageBubble.tsx](./exhibit/src/components/ai/atoms/MessageBubble.tsx)
+│   │   │   │   │   ├── [ModelBadge.tsx](./exhibit/src/components/ai/atoms/ModelBadge.tsx)
+│   │   │   │   │   └── [index.ts](./exhibit/src/components/ai/atoms/index.ts)
+│   │   │   │   ├── molecules/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   ├── [ChatInput.test.tsx](./exhibit/src/components/ai/molecules/__tests__/ChatInput.test.tsx)
+│   │   │   │   │   │   └── [ConversationCard.test.tsx](./exhibit/src/components/ai/molecules/__tests__/ConversationCard.test.tsx)
+│   │   │   │   │   ├── [ChatInput.tsx](./exhibit/src/components/ai/molecules/ChatInput.tsx)
+│   │   │   │   │   ├── [ConversationCard.tsx](./exhibit/src/components/ai/molecules/ConversationCard.tsx)
+│   │   │   │   │   └── [index.ts](./exhibit/src/components/ai/molecules/index.ts)
+│   │   │   │   ├── organisms/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   ├── [ChatHeader.test.tsx](./exhibit/src/components/ai/organisms/__tests__/ChatHeader.test.tsx)
+│   │   │   │   │   │   ├── [OfflineBanner.test.tsx](./exhibit/src/components/ai/organisms/__tests__/OfflineBanner.test.tsx)
+│   │   │   │   │   │   ├── [Sidebar.test.tsx](./exhibit/src/components/ai/organisms/__tests__/Sidebar.test.tsx)
+│   │   │   │   │   │   └── [ToastContainer.test.tsx](./exhibit/src/components/ai/organisms/__tests__/ToastContainer.test.tsx)
+│   │   │   │   │   ├── [ChatHeader.tsx](./exhibit/src/components/ai/organisms/ChatHeader.tsx)
+│   │   │   │   │   ├── [OfflineBanner.tsx](./exhibit/src/components/ai/organisms/OfflineBanner.tsx)
+│   │   │   │   │   ├── [Sidebar.tsx](./exhibit/src/components/ai/organisms/Sidebar.tsx)
+│   │   │   │   │   ├── [ToastContainer.tsx](./exhibit/src/components/ai/organisms/ToastContainer.tsx)
+│   │   │   │   │   └── [index.ts](./exhibit/src/components/ai/organisms/index.ts)
+│   │   │   │   ├── templates/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [PageTransition.test.tsx](./exhibit/src/components/ai/templates/__tests__/PageTransition.test.tsx)
+│   │   │   │   │   ├── [PageTransition.tsx](./exhibit/src/components/ai/templates/PageTransition.tsx)
+│   │   │   │   │   └── [index.ts](./exhibit/src/components/ai/templates/index.ts)
+│   │   │   │   └── [index.ts](./exhibit/src/components/ai/index.ts)
 │   │   │   ├── chat/
 │   │   │   │   ├── atoms/
 │   │   │   │   │   ├── __tests__/
@@ -387,6 +537,41 @@
 │   │   │   │   │   ├── [VersionTemplate.tsx](./exhibit/src/components/chat/templates/VersionTemplate.tsx)
 │   │   │   │   │   └── [index.ts](./exhibit/src/components/chat/templates/index.ts)
 │   │   │   │   └── [index.ts](./exhibit/src/components/chat/index.ts)
+│   │   │   ├── gallery/
+│   │   │   │   ├── atoms/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [PhotoThumb.test.tsx](./exhibit/src/components/gallery/atoms/__tests__/PhotoThumb.test.tsx)
+│   │   │   │   │   ├── [PhotoThumb.tsx](./exhibit/src/components/gallery/atoms/PhotoThumb.tsx)
+│   │   │   │   │   └── [index.ts](./exhibit/src/components/gallery/atoms/index.ts)
+│   │   │   │   ├── molecules/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   ├── [AlbumTile.test.tsx](./exhibit/src/components/gallery/molecules/__tests__/AlbumTile.test.tsx)
+│   │   │   │   │   │   ├── [CameraCapture.test.tsx](./exhibit/src/components/gallery/molecules/__tests__/CameraCapture.test.tsx)
+│   │   │   │   │   │   ├── [ConfirmDialog.test.tsx](./exhibit/src/components/gallery/molecules/__tests__/ConfirmDialog.test.tsx)
+│   │   │   │   │   │   ├── [EmptyState.test.tsx](./exhibit/src/components/gallery/molecules/__tests__/EmptyState.test.tsx)
+│   │   │   │   │   │   ├── [NameDialog.test.tsx](./exhibit/src/components/gallery/molecules/__tests__/NameDialog.test.tsx)
+│   │   │   │   │   │   ├── [PhotoTile.test.tsx](./exhibit/src/components/gallery/molecules/__tests__/PhotoTile.test.tsx)
+│   │   │   │   │   │   └── [SearchBar.test.tsx](./exhibit/src/components/gallery/molecules/__tests__/SearchBar.test.tsx)
+│   │   │   │   │   ├── [AlbumTile.tsx](./exhibit/src/components/gallery/molecules/AlbumTile.tsx)
+│   │   │   │   │   ├── [CameraCapture.tsx](./exhibit/src/components/gallery/molecules/CameraCapture.tsx)
+│   │   │   │   │   ├── [ConfirmDialog.tsx](./exhibit/src/components/gallery/molecules/ConfirmDialog.tsx)
+│   │   │   │   │   ├── [EmptyState.tsx](./exhibit/src/components/gallery/molecules/EmptyState.tsx)
+│   │   │   │   │   ├── [NameDialog.tsx](./exhibit/src/components/gallery/molecules/NameDialog.tsx)
+│   │   │   │   │   ├── [PhotoTile.tsx](./exhibit/src/components/gallery/molecules/PhotoTile.tsx)
+│   │   │   │   │   ├── [SearchBar.tsx](./exhibit/src/components/gallery/molecules/SearchBar.tsx)
+│   │   │   │   │   └── [index.ts](./exhibit/src/components/gallery/molecules/index.ts)
+│   │   │   │   ├── organisms/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   ├── [PhoneFrame.test.tsx](./exhibit/src/components/gallery/organisms/__tests__/PhoneFrame.test.tsx)
+│   │   │   │   │   │   ├── [PhotoViewer.test.tsx](./exhibit/src/components/gallery/organisms/__tests__/PhotoViewer.test.tsx)
+│   │   │   │   │   │   ├── [TabBar.test.tsx](./exhibit/src/components/gallery/organisms/__tests__/TabBar.test.tsx)
+│   │   │   │   │   │   └── [ToastContainer.test.tsx](./exhibit/src/components/gallery/organisms/__tests__/ToastContainer.test.tsx)
+│   │   │   │   │   ├── [PhoneFrame.tsx](./exhibit/src/components/gallery/organisms/PhoneFrame.tsx)
+│   │   │   │   │   ├── [PhotoViewer.tsx](./exhibit/src/components/gallery/organisms/PhotoViewer.tsx)
+│   │   │   │   │   ├── [TabBar.tsx](./exhibit/src/components/gallery/organisms/TabBar.tsx)
+│   │   │   │   │   ├── [ToastContainer.tsx](./exhibit/src/components/gallery/organisms/ToastContainer.tsx)
+│   │   │   │   │   └── [index.ts](./exhibit/src/components/gallery/organisms/index.ts)
+│   │   │   │   └── [index.ts](./exhibit/src/components/gallery/index.ts)
 │   │   │   ├── menu/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   └── [CustomerMenu.test.tsx](./exhibit/src/components/menu/__tests__/CustomerMenu.test.tsx)
@@ -398,8 +583,6 @@
 │   │   │   │   ├── [RestaurantManager.tsx](./exhibit/src/components/menu/RestaurantManager.tsx)
 │   │   │   │   ├── [index.ts](./exhibit/src/components/menu/index.ts)
 │   │   │   │   └── [types.ts](./exhibit/src/components/menu/types.ts)
-│   │   │   ├── molecules/
-│   │   │   │   └── __tests__/
 │   │   │   ├── password/
 │   │   │   │   ├── molecules/
 │   │   │   │   │   ├── __tests__/
@@ -520,7 +703,9 @@
 │   │   │   │   ├── organisms/
 │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   └── [Header.test.tsx](./exhibit/src/components/shared/organisms/__tests__/Header.test.tsx)
-│   │   │   │   │   └── [Header.tsx](./exhibit/src/components/shared/organisms/Header.tsx)
+│   │   │   │   │   ├── [Header.tsx](./exhibit/src/components/shared/organisms/Header.tsx)
+│   │   │   │   │   ├── [OfflineBanner.tsx](./exhibit/src/components/shared/organisms/OfflineBanner.tsx)
+│   │   │   │   │   └── [SkipToContent.tsx](./exhibit/src/components/shared/organisms/SkipToContent.tsx)
 │   │   │   │   └── templates/
 │   │   │   │       ├── __tests__/
 │   │   │   │       │   ├── [AboutTemplate.test.tsx](./exhibit/src/components/shared/templates/__tests__/AboutTemplate.test.tsx)
@@ -531,6 +716,25 @@
 │   │   │   │       ├── [DownloadsTemplate.tsx](./exhibit/src/components/shared/templates/DownloadsTemplate.tsx)
 │   │   │   │       ├── [ErrorTemplate.tsx](./exhibit/src/components/shared/templates/ErrorTemplate.tsx)
 │   │   │   │       └── [VersionTemplate.tsx](./exhibit/src/components/shared/templates/VersionTemplate.tsx)
+│   │   │   ├── tax/
+│   │   │   │   ├── organisms/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   ├── [AuditDetail.test.tsx](./exhibit/src/components/tax/organisms/__tests__/AuditDetail.test.tsx)
+│   │   │   │   │   │   ├── [AuditList.test.tsx](./exhibit/src/components/tax/organisms/__tests__/AuditList.test.tsx)
+│   │   │   │   │   │   ├── [BottomNav.test.tsx](./exhibit/src/components/tax/organisms/__tests__/BottomNav.test.tsx)
+│   │   │   │   │   │   ├── [Sidebar.test.tsx](./exhibit/src/components/tax/organisms/__tests__/Sidebar.test.tsx)
+│   │   │   │   │   │   ├── [SubmissionDetail.test.tsx](./exhibit/src/components/tax/organisms/__tests__/SubmissionDetail.test.tsx)
+│   │   │   │   │   │   └── [SubmissionList.test.tsx](./exhibit/src/components/tax/organisms/__tests__/SubmissionList.test.tsx)
+│   │   │   │   │   ├── [AuditDetail.tsx](./exhibit/src/components/tax/organisms/AuditDetail.tsx)
+│   │   │   │   │   ├── [AuditList.tsx](./exhibit/src/components/tax/organisms/AuditList.tsx)
+│   │   │   │   │   ├── [BottomNav.tsx](./exhibit/src/components/tax/organisms/BottomNav.tsx)
+│   │   │   │   │   ├── [Sidebar.tsx](./exhibit/src/components/tax/organisms/Sidebar.tsx)
+│   │   │   │   │   ├── [SubmissionDetail.tsx](./exhibit/src/components/tax/organisms/SubmissionDetail.tsx)
+│   │   │   │   │   └── [SubmissionList.tsx](./exhibit/src/components/tax/organisms/SubmissionList.tsx)
+│   │   │   │   └── templates/
+│   │   │   │       ├── __tests__/
+│   │   │   │       │   └── [DashboardTemplate.test.tsx](./exhibit/src/components/tax/templates/__tests__/DashboardTemplate.test.tsx)
+│   │   │   │       └── [DashboardTemplate.tsx](./exhibit/src/components/tax/templates/DashboardTemplate.tsx)
 │   │   │   ├── video/
 │   │   │   │   ├── atoms/
 │   │   │   │   │   ├── __tests__/
@@ -575,8 +779,6 @@
 │   │   │   │   │   └── [index.ts](./exhibit/src/components/video/templates/index.ts)
 │   │   │   │   └── [index.ts](./exhibit/src/components/video/index.ts)
 │   │   │   └── wallet/
-│   │   │       ├── __tests__/
-│   │   │       │   └── [RouteGuard.test.tsx](./exhibit/src/components/wallet/__tests__/RouteGuard.test.tsx)
 │   │   │       ├── atoms/
 │   │   │       │   ├── __tests__/
 │   │   │       │   │   ├── [AccountCard.test.tsx](./exhibit/src/components/wallet/atoms/__tests__/AccountCard.test.tsx)
@@ -655,10 +857,7 @@
 │   │   │       │   │   └── [DashboardTemplate.test.tsx](./exhibit/src/components/wallet/templates/__tests__/DashboardTemplate.test.tsx)
 │   │   │       │   ├── [DashboardTemplate.tsx](./exhibit/src/components/wallet/templates/DashboardTemplate.tsx)
 │   │   │       │   └── [index.ts](./exhibit/src/components/wallet/templates/index.ts)
-│   │   │       ├── [OfflineBanner.tsx](./exhibit/src/components/wallet/OfflineBanner.tsx)
-│   │   │       ├── [PageTransition.tsx](./exhibit/src/components/wallet/PageTransition.tsx)
-│   │   │       ├── [RouteGuard.tsx](./exhibit/src/components/wallet/RouteGuard.tsx)
-│   │   │       └── [SkipToContent.tsx](./exhibit/src/components/wallet/SkipToContent.tsx)
+│   │   │       └── [PageTransition.tsx](./exhibit/src/components/wallet/PageTransition.tsx)
 │   │   ├── content/
 │   │   │   ├── [about.ts](./exhibit/src/content/about.ts)
 │   │   │   ├── [download.ts](./exhibit/src/content/download.ts)
@@ -666,6 +865,13 @@
 │   │   ├── data/
 │   │   │   ├── __tests__/
 │   │   │   │   └── [items.test.ts](./exhibit/src/data/__tests__/items.test.ts)
+│   │   │   ├── ai/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [models.test.ts](./exhibit/src/data/ai/__tests__/models.test.ts)
+│   │   │   │   │   └── [seed.test.ts](./exhibit/src/data/ai/__tests__/seed.test.ts)
+│   │   │   │   ├── [index.ts](./exhibit/src/data/ai/index.ts)
+│   │   │   │   ├── [models.ts](./exhibit/src/data/ai/models.ts)
+│   │   │   │   └── [seed.ts](./exhibit/src/data/ai/seed.ts)
 │   │   │   ├── chat/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [models.test.ts](./exhibit/src/data/chat/__tests__/models.test.ts)
@@ -674,6 +880,13 @@
 │   │   │   │   ├── [models.ts](./exhibit/src/data/chat/models.ts)
 │   │   │   │   ├── [seed.ts](./exhibit/src/data/chat/seed.ts)
 │   │   │   │   └── [stickers.ts](./exhibit/src/data/chat/stickers.ts)
+│   │   │   ├── gallery/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [models.test.ts](./exhibit/src/data/gallery/__tests__/models.test.ts)
+│   │   │   │   │   └── [seed.test.ts](./exhibit/src/data/gallery/__tests__/seed.test.ts)
+│   │   │   │   ├── [index.ts](./exhibit/src/data/gallery/index.ts)
+│   │   │   │   ├── [models.ts](./exhibit/src/data/gallery/models.ts)
+│   │   │   │   └── [seed.ts](./exhibit/src/data/gallery/seed.ts)
 │   │   │   ├── password/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [models.test.ts](./exhibit/src/data/password/__tests__/models.test.ts)
@@ -681,6 +894,12 @@
 │   │   │   │   ├── [index.ts](./exhibit/src/data/password/index.ts)
 │   │   │   │   ├── [models.ts](./exhibit/src/data/password/models.ts)
 │   │   │   │   └── [seed.ts](./exhibit/src/data/password/seed.ts)
+│   │   │   ├── tax/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [mock.test.ts](./exhibit/src/data/tax/__tests__/mock.test.ts)
+│   │   │   │   │   └── [nav.test.ts](./exhibit/src/data/tax/__tests__/nav.test.ts)
+│   │   │   │   ├── [mock.ts](./exhibit/src/data/tax/mock.ts)
+│   │   │   │   └── [nav.ts](./exhibit/src/data/tax/nav.ts)
 │   │   │   ├── video/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   └── [video-tools.test.ts](./exhibit/src/data/video/__tests__/video-tools.test.ts)
@@ -690,6 +909,15 @@
 │   │   │   │   └── [nav.ts](./exhibit/src/data/wallet/nav.ts)
 │   │   │   └── [items.ts](./exhibit/src/data/items.ts)
 │   │   ├── hooks/
+│   │   │   ├── ai/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [useKeyboard.test.ts](./exhibit/src/hooks/ai/__tests__/useKeyboard.test.ts)
+│   │   │   │   │   ├── [useSWRegister.test.ts](./exhibit/src/hooks/ai/__tests__/useSWRegister.test.ts)
+│   │   │   │   │   └── [useStreaming.test.ts](./exhibit/src/hooks/ai/__tests__/useStreaming.test.ts)
+│   │   │   │   ├── [index.ts](./exhibit/src/hooks/ai/index.ts)
+│   │   │   │   ├── [useKeyboard.ts](./exhibit/src/hooks/ai/useKeyboard.ts)
+│   │   │   │   ├── [useSWRegister.ts](./exhibit/src/hooks/ai/useSWRegister.ts)
+│   │   │   │   └── [useStreaming.ts](./exhibit/src/hooks/ai/useStreaming.ts)
 │   │   │   ├── chat/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   └── [useSWRegister.test.ts](./exhibit/src/hooks/chat/__tests__/useSWRegister.test.ts)
@@ -703,6 +931,11 @@
 │   │   │   │   ├── [usePrivacyActions.ts](./exhibit/src/hooks/chat/usePrivacyActions.ts)
 │   │   │   │   ├── [useSWRegister.ts](./exhibit/src/hooks/chat/useSWRegister.ts)
 │   │   │   │   └── [useSettingsActions.ts](./exhibit/src/hooks/chat/useSettingsActions.ts)
+│   │   │   ├── gallery/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [useSWRegister.test.ts](./exhibit/src/hooks/gallery/__tests__/useSWRegister.test.ts)
+│   │   │   │   ├── [index.ts](./exhibit/src/hooks/gallery/index.ts)
+│   │   │   │   └── [useSWRegister.ts](./exhibit/src/hooks/gallery/useSWRegister.ts)
 │   │   │   ├── menu/
 │   │   │   │   ├── [index.ts](./exhibit/src/hooks/menu/index.ts)
 │   │   │   │   └── [useMenuStore.ts](./exhibit/src/hooks/menu/useMenuStore.ts)
@@ -711,6 +944,10 @@
 │   │   │   │   │   └── [useSWRegister.test.tsx](./exhibit/src/hooks/password/__tests__/useSWRegister.test.tsx)
 │   │   │   │   ├── [index.ts](./exhibit/src/hooks/password/index.ts)
 │   │   │   │   └── [useSWRegister.ts](./exhibit/src/hooks/password/useSWRegister.ts)
+│   │   │   ├── tax/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [useEntitySync.test.ts](./exhibit/src/hooks/tax/__tests__/useEntitySync.test.ts)
+│   │   │   │   └── [useEntitySync.ts](./exhibit/src/hooks/tax/useEntitySync.ts)
 │   │   │   └── wallet/
 │   │   │       ├── [useEntitySync.ts](./exhibit/src/hooks/wallet/useEntitySync.ts)
 │   │   │       ├── [useHaptic.ts](./exhibit/src/hooks/wallet/useHaptic.ts)
@@ -721,6 +958,11 @@
 │   │   ├── lib/
 │   │   │   ├── __tests__/
 │   │   │   │   └── [storage.test.ts](./exhibit/src/lib/__tests__/storage.test.ts)
+│   │   │   ├── ai/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [db.test.ts](./exhibit/src/lib/ai/__tests__/db.test.ts)
+│   │   │   │   ├── [db.ts](./exhibit/src/lib/ai/db.ts)
+│   │   │   │   └── [index.ts](./exhibit/src/lib/ai/index.ts)
 │   │   │   ├── chat/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [crypto.test.ts](./exhibit/src/lib/chat/__tests__/crypto.test.ts)
@@ -736,6 +978,13 @@
 │   │   │   │   ├── [selectors.ts](./exhibit/src/lib/chat/selectors.ts)
 │   │   │   │   ├── [url.ts](./exhibit/src/lib/chat/url.ts)
 │   │   │   │   └── [webrtc.ts](./exhibit/src/lib/chat/webrtc.ts)
+│   │   │   ├── gallery/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [db.test.ts](./exhibit/src/lib/gallery/__tests__/db.test.ts)
+│   │   │   │   │   └── [selectors.test.ts](./exhibit/src/lib/gallery/__tests__/selectors.test.ts)
+│   │   │   │   ├── [db.ts](./exhibit/src/lib/gallery/db.ts)
+│   │   │   │   ├── [index.ts](./exhibit/src/lib/gallery/index.ts)
+│   │   │   │   └── [selectors.ts](./exhibit/src/lib/gallery/selectors.ts)
 │   │   │   ├── menu/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   └── [menu.test.ts](./exhibit/src/lib/menu/__tests__/menu.test.ts)
@@ -776,6 +1025,14 @@
 │   │   │   │   ├── [payment.ts](./exhibit/src/lib/pos/payment.ts)
 │   │   │   │   ├── [reports.ts](./exhibit/src/lib/pos/reports.ts)
 │   │   │   │   └── [transactions.ts](./exhibit/src/lib/pos/transactions.ts)
+│   │   │   ├── tax/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [constants.test.ts](./exhibit/src/lib/tax/__tests__/constants.test.ts)
+│   │   │   │   │   ├── [db.test.ts](./exhibit/src/lib/tax/__tests__/db.test.ts)
+│   │   │   │   │   └── [seed.test.ts](./exhibit/src/lib/tax/__tests__/seed.test.ts)
+│   │   │   │   ├── [constants.ts](./exhibit/src/lib/tax/constants.ts)
+│   │   │   │   ├── [db.ts](./exhibit/src/lib/tax/db.ts)
+│   │   │   │   └── [seed.ts](./exhibit/src/lib/tax/seed.ts)
 │   │   │   ├── video/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   └── [video-tools.test.ts](./exhibit/src/lib/video/__tests__/video-tools.test.ts)
@@ -789,6 +1046,17 @@
 │   │   │   │   └── [session.ts](./exhibit/src/lib/wallet/session.ts)
 │   │   │   └── [storage.ts](./exhibit/src/lib/storage.ts)
 │   │   ├── providers/
+│   │   │   ├── ai/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [DataProvider.test.tsx](./exhibit/src/providers/ai/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   ├── [Providers.test.tsx](./exhibit/src/providers/ai/__tests__/Providers.test.tsx)
+│   │   │   │   │   ├── [SWProvider.test.tsx](./exhibit/src/providers/ai/__tests__/SWProvider.test.tsx)
+│   │   │   │   │   └── [ToastProvider.test.tsx](./exhibit/src/providers/ai/__tests__/ToastProvider.test.tsx)
+│   │   │   │   ├── [DataProvider.tsx](./exhibit/src/providers/ai/DataProvider.tsx)
+│   │   │   │   ├── [Providers.tsx](./exhibit/src/providers/ai/Providers.tsx)
+│   │   │   │   ├── [SWProvider.tsx](./exhibit/src/providers/ai/SWProvider.tsx)
+│   │   │   │   ├── [ToastProvider.tsx](./exhibit/src/providers/ai/ToastProvider.tsx)
+│   │   │   │   └── [index.ts](./exhibit/src/providers/ai/index.ts)
 │   │   │   ├── chat/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [DataProvider.test.tsx](./exhibit/src/providers/chat/__tests__/DataProvider.test.tsx)
@@ -802,6 +1070,16 @@
 │   │   │   │   ├── [ToastProvider.tsx](./exhibit/src/providers/chat/ToastProvider.tsx)
 │   │   │   │   ├── [data-helpers.ts](./exhibit/src/providers/chat/data-helpers.ts)
 │   │   │   │   └── [index.ts](./exhibit/src/providers/chat/index.ts)
+│   │   │   ├── gallery/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [DataProvider.test.tsx](./exhibit/src/providers/gallery/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   ├── [SWProvider.test.tsx](./exhibit/src/providers/gallery/__tests__/SWProvider.test.tsx)
+│   │   │   │   │   └── [ToastProvider.test.tsx](./exhibit/src/providers/gallery/__tests__/ToastProvider.test.tsx)
+│   │   │   │   ├── [DataProvider.tsx](./exhibit/src/providers/gallery/DataProvider.tsx)
+│   │   │   │   ├── [Providers.tsx](./exhibit/src/providers/gallery/Providers.tsx)
+│   │   │   │   ├── [SWProvider.tsx](./exhibit/src/providers/gallery/SWProvider.tsx)
+│   │   │   │   ├── [ToastProvider.tsx](./exhibit/src/providers/gallery/ToastProvider.tsx)
+│   │   │   │   └── [index.ts](./exhibit/src/providers/gallery/index.ts)
 │   │   │   ├── password/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [DataProvider.test.tsx](./exhibit/src/providers/password/__tests__/DataProvider.test.tsx)
@@ -814,6 +1092,25 @@
 │   │   │   │   ├── [SecurityProvider.tsx](./exhibit/src/providers/password/SecurityProvider.tsx)
 │   │   │   │   ├── [ToastProvider.tsx](./exhibit/src/providers/password/ToastProvider.tsx)
 │   │   │   │   └── [index.ts](./exhibit/src/providers/password/index.ts)
+│   │   │   ├── tax/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [DataProvider.test.tsx](./exhibit/src/providers/tax/__tests__/DataProvider.test.tsx)
+│   │   │   │   │   └── [ToastProvider.test.tsx](./exhibit/src/providers/tax/__tests__/ToastProvider.test.tsx)
+│   │   │   │   ├── auth/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [AuthProvider.test.tsx](./exhibit/src/providers/tax/auth/__tests__/AuthProvider.test.tsx)
+│   │   │   │   │   └── [AuthProvider.tsx](./exhibit/src/providers/tax/auth/AuthProvider.tsx)
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   ├── [crud.test.tsx](./exhibit/src/providers/tax/entities/__tests__/crud.test.tsx)
+│   │   │   │   │   │   └── [providers.test.tsx](./exhibit/src/providers/tax/entities/__tests__/providers.test.tsx)
+│   │   │   │   │   ├── [AuditsProvider.tsx](./exhibit/src/providers/tax/entities/AuditsProvider.tsx)
+│   │   │   │   │   ├── [CompaniesProvider.tsx](./exhibit/src/providers/tax/entities/CompaniesProvider.tsx)
+│   │   │   │   │   ├── [SubmissionsProvider.tsx](./exhibit/src/providers/tax/entities/SubmissionsProvider.tsx)
+│   │   │   │   │   └── [UserProvider.tsx](./exhibit/src/providers/tax/entities/UserProvider.tsx)
+│   │   │   │   ├── [DataProvider.tsx](./exhibit/src/providers/tax/DataProvider.tsx)
+│   │   │   │   ├── [Providers.tsx](./exhibit/src/providers/tax/Providers.tsx)
+│   │   │   │   └── [ToastProvider.tsx](./exhibit/src/providers/tax/ToastProvider.tsx)
 │   │   │   └── wallet/
 │   │   │       ├── __tests__/
 │   │   │       │   ├── [DataProvider.crud.test.tsx](./exhibit/src/providers/wallet/__tests__/DataProvider.crud.test.tsx)
@@ -850,6 +1147,9 @@
 │   │   │   ├── [globals.css](./exhibit/src/styles/globals.css)
 │   │   │   └── [themes.css](./exhibit/src/styles/themes.css)
 │   │   ├── test-helpers/
+│   │   │   ├── gallery/
+│   │   │   │   ├── [fakeDb.ts](./exhibit/src/test-helpers/gallery/fakeDb.ts)
+│   │   │   │   └── [index.ts](./exhibit/src/test-helpers/gallery/index.ts)
 │   │   │   ├── password/
 │   │   │   │   ├── [fakeDb.ts](./exhibit/src/test-helpers/password/fakeDb.ts)
 │   │   │   │   └── [index.ts](./exhibit/src/test-helpers/password/index.ts)
@@ -859,6 +1159,8 @@
 │   │   │       ├── [nav-mock.ts](./exhibit/src/test-helpers/wallet/nav-mock.ts)
 │   │   │       └── [render.tsx](./exhibit/src/test-helpers/wallet/render.tsx)
 │   │   ├── types/
+│   │   │   ├── ai/
+│   │   │   │   └── [index.ts](./exhibit/src/types/ai/index.ts)
 │   │   │   ├── chat/
 │   │   │   │   ├── [call.ts](./exhibit/src/types/chat/call.ts)
 │   │   │   │   ├── [chat.ts](./exhibit/src/types/chat/chat.ts)
@@ -867,6 +1169,8 @@
 │   │   │   │   ├── [peer.ts](./exhibit/src/types/chat/peer.ts)
 │   │   │   │   ├── [settings.ts](./exhibit/src/types/chat/settings.ts)
 │   │   │   │   └── [user.ts](./exhibit/src/types/chat/user.ts)
+│   │   │   ├── gallery/
+│   │   │   │   └── [index.ts](./exhibit/src/types/gallery/index.ts)
 │   │   │   ├── menu/
 │   │   │   │   ├── [index.ts](./exhibit/src/types/menu/index.ts)
 │   │   │   │   └── [menu.ts](./exhibit/src/types/menu/menu.ts)
@@ -874,16 +1178,32 @@
 │   │   │   │   └── [index.ts](./exhibit/src/types/password/index.ts)
 │   │   │   ├── pos/
 │   │   │   │   └── [index.ts](./exhibit/src/types/pos/index.ts)
+│   │   │   ├── tax/
+│   │   │   │   └── [index.ts](./exhibit/src/types/tax/index.ts)
 │   │   │   ├── video/
 │   │   │   │   └── [speech-recognition.d.ts](./exhibit/src/types/video/speech-recognition.d.ts)
 │   │   │   └── wallet/
 │   │   │       └── [index.ts](./exhibit/src/types/wallet/index.ts)
 │   │   └── utils/
-│   │       └── password/
+│   │       ├── ai/
+│   │       │   ├── __tests__/
+│   │       │   │   └── [format.test.ts](./exhibit/src/utils/ai/__tests__/format.test.ts)
+│   │       │   ├── [format.ts](./exhibit/src/utils/ai/format.ts)
+│   │       │   └── [index.ts](./exhibit/src/utils/ai/index.ts)
+│   │       ├── gallery/
+│   │       │   ├── __tests__/
+│   │       │   │   └── [format.test.ts](./exhibit/src/utils/gallery/__tests__/format.test.ts)
+│   │       │   ├── [format.ts](./exhibit/src/utils/gallery/format.ts)
+│   │       │   └── [index.ts](./exhibit/src/utils/gallery/index.ts)
+│   │       ├── password/
+│   │       │   ├── __tests__/
+│   │       │   │   └── [format.test.ts](./exhibit/src/utils/password/__tests__/format.test.ts)
+│   │       │   ├── [format.ts](./exhibit/src/utils/password/format.ts)
+│   │       │   └── [index.ts](./exhibit/src/utils/password/index.ts)
+│   │       └── tax/
 │   │           ├── __tests__/
-│   │           │   └── [format.test.ts](./exhibit/src/utils/password/__tests__/format.test.ts)
-│   │           ├── [format.ts](./exhibit/src/utils/password/format.ts)
-│   │           └── [index.ts](./exhibit/src/utils/password/index.ts)
+│   │           │   └── [format.test.ts](./exhibit/src/utils/tax/__tests__/format.test.ts)
+│   │           └── [format.ts](./exhibit/src/utils/tax/format.ts)
 │   ├── src-tauri/
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./exhibit/src-tauri/capabilities/default.json)
@@ -973,679 +1293,8 @@
 │   ├── [playwright.config.ts](./exhibit/playwright.config.ts)
 │   ├── [postcss.config.mjs](./exhibit/postcss.config.mjs)
 │   └── [tsconfig.json](./exhibit/tsconfig.json)
-├── photo/
-│   ├── docs/
-│   │   ├── [ARCHITECTURE.md](./photo/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./photo/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./photo/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./photo/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./photo/docs/ROADMAP.md)
-│   ├── e2e/
-│   │   ├── [about.spec.ts](./photo/e2e/about.spec.ts)
-│   │   ├── [albums.spec.ts](./photo/e2e/albums.spec.ts)
-│   │   ├── [crop.spec.ts](./photo/e2e/crop.spec.ts)
-│   │   ├── [downloads.spec.ts](./photo/e2e/downloads.spec.ts)
-│   │   ├── [edit.spec.ts](./photo/e2e/edit.spec.ts)
-│   │   ├── [home.spec.ts](./photo/e2e/home.spec.ts)
-│   │   ├── [layers.spec.ts](./photo/e2e/layers.spec.ts)
-│   │   ├── [navigation.spec.ts](./photo/e2e/navigation.spec.ts)
-│   │   ├── [profile.spec.ts](./photo/e2e/profile.spec.ts)
-│   │   ├── [settings.spec.ts](./photo/e2e/settings.spec.ts)
-│   │   └── [version.spec.ts](./photo/e2e/version.spec.ts)
-│   ├── public/
-│   │   ├── icons/
-│   │   │   ├── [icon-128x128.png](./photo/public/icons/icon-128x128.png)
-│   │   │   ├── [icon-144x144.png](./photo/public/icons/icon-144x144.png)
-│   │   │   ├── [icon-152x152.png](./photo/public/icons/icon-152x152.png)
-│   │   │   ├── [icon-16x16.png](./photo/public/icons/icon-16x16.png)
-│   │   │   ├── [icon-180x180.png](./photo/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192x192.png](./photo/public/icons/icon-192x192.png)
-│   │   │   ├── [icon-256x256.png](./photo/public/icons/icon-256x256.png)
-│   │   │   ├── [icon-32x32.png](./photo/public/icons/icon-32x32.png)
-│   │   │   ├── [icon-384x384.png](./photo/public/icons/icon-384x384.png)
-│   │   │   ├── [icon-48x48.png](./photo/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512x512.png](./photo/public/icons/icon-512x512.png)
-│   │   │   ├── [icon-64x64.png](./photo/public/icons/icon-64x64.png)
-│   │   │   ├── [icon-72x72.png](./photo/public/icons/icon-72x72.png)
-│   │   │   ├── [icon-96x96.png](./photo/public/icons/icon-96x96.png)
-│   │   │   └── [icon.svg](./photo/public/icons/icon.svg)
-│   │   ├── og/
-│   │   │   ├── [og.png](./photo/public/og/og.png)
-│   │   │   └── [og.svg](./photo/public/og/og.svg)
-│   │   ├── [apple-touch-icon.png](./photo/public/apple-touch-icon.png)
-│   │   ├── [favicon.ico](./photo/public/favicon.ico)
-│   │   ├── [manifest.json](./photo/public/manifest.json)
-│   │   ├── [robots.txt](./photo/public/robots.txt)
-│   │   ├── [sitemap.xml](./photo/public/sitemap.xml)
-│   │   └── [sw.js](./photo/public/sw.js)
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── (auth)/
-│   │   │   │   ├── forget-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./photo/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./photo/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   ├── profile/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./photo/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./photo/src/app/(auth)/profile/page.tsx)
-│   │   │   │   ├── reset-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./photo/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./photo/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   ├── sign-in/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./photo/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./photo/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   └── sign-up/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./photo/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./photo/src/app/(auth)/sign-up/page.tsx)
-│   │   │   ├── (info)/
-│   │   │   │   ├── about/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./photo/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./photo/src/app/(info)/about/page.tsx)
-│   │   │   │   ├── downloads/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./photo/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./photo/src/app/(info)/downloads/page.tsx)
-│   │   │   │   └── version/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./photo/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./photo/src/app/(info)/version/page.tsx)
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [error.test.tsx](./photo/src/app/__tests__/error.test.tsx)
-│   │   │   │   ├── [forbidden.test.tsx](./photo/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   ├── [global-error.test.tsx](./photo/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   ├── [layout.test.tsx](./photo/src/app/__tests__/layout.test.tsx)
-│   │   │   │   ├── [loading.test.tsx](./photo/src/app/__tests__/loading.test.tsx)
-│   │   │   │   ├── [not-found.test.tsx](./photo/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   ├── [page.test.tsx](./photo/src/app/__tests__/page.test.tsx)
-│   │   │   │   ├── [robots.test.ts](./photo/src/app/__tests__/robots.test.ts)
-│   │   │   │   ├── [template.test.tsx](./photo/src/app/__tests__/template.test.tsx)
-│   │   │   │   └── [unauthorized.test.tsx](./photo/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   ├── albums/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [page.test.tsx](./photo/src/app/albums/__tests__/page.test.tsx)
-│   │   │   │   └── [page.tsx](./photo/src/app/albums/page.tsx)
-│   │   │   ├── edit/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [page.test.tsx](./photo/src/app/edit/__tests__/page.test.tsx)
-│   │   │   │   ├── crop/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./photo/src/app/edit/crop/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./photo/src/app/edit/crop/page.tsx)
-│   │   │   │   ├── layers/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./photo/src/app/edit/layers/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./photo/src/app/edit/layers/page.tsx)
-│   │   │   │   └── [page.tsx](./photo/src/app/edit/page.tsx)
-│   │   │   ├── settings/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [page.test.tsx](./photo/src/app/settings/__tests__/page.test.tsx)
-│   │   │   │   └── [page.tsx](./photo/src/app/settings/page.tsx)
-│   │   │   ├── tools/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [page.test.tsx](./photo/src/app/tools/__tests__/page.test.tsx)
-│   │   │   │   └── [page.tsx](./photo/src/app/tools/page.tsx)
-│   │   │   ├── [default.tsx](./photo/src/app/default.tsx)
-│   │   │   ├── [error.tsx](./photo/src/app/error.tsx)
-│   │   │   ├── [favicon.ico](./photo/src/app/favicon.ico)
-│   │   │   ├── [forbidden.tsx](./photo/src/app/forbidden.tsx)
-│   │   │   ├── [global-error.tsx](./photo/src/app/global-error.tsx)
-│   │   │   ├── [layout.tsx](./photo/src/app/layout.tsx)
-│   │   │   ├── [loading.tsx](./photo/src/app/loading.tsx)
-│   │   │   ├── [not-found.tsx](./photo/src/app/not-found.tsx)
-│   │   │   ├── [page.tsx](./photo/src/app/page.tsx)
-│   │   │   ├── [robots.ts](./photo/src/app/robots.ts)
-│   │   │   ├── [template.tsx](./photo/src/app/template.tsx)
-│   │   │   └── [unauthorized.tsx](./photo/src/app/unauthorized.tsx)
-│   │   ├── components/
-│   │   │   ├── atoms/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [ImageFileUpload.test.tsx](./photo/src/components/atoms/__tests__/ImageFileUpload.test.tsx)
-│   │   │   │   └── [ImageFileUpload.tsx](./photo/src/components/atoms/ImageFileUpload.tsx)
-│   │   │   ├── organisms/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [ToastContainer.test.tsx](./photo/src/components/organisms/__tests__/ToastContainer.test.tsx)
-│   │   │   │   ├── [Header.tsx](./photo/src/components/organisms/Header.tsx)
-│   │   │   │   └── [ToastContainer.tsx](./photo/src/components/organisms/ToastContainer.tsx)
-│   │   │   ├── templates/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [AboutTemplate.test.tsx](./photo/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./photo/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   ├── [ErrorTemplate.test.tsx](./photo/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   └── [VersionTemplate.test.tsx](./photo/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   ├── [AboutTemplate.tsx](./photo/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   ├── [DownloadsTemplate.tsx](./photo/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   ├── [ErrorTemplate.tsx](./photo/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   └── [VersionTemplate.tsx](./photo/src/components/templates/VersionTemplate.tsx)
-│   │   │   └── tools/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [AiColorizeTool.test.tsx](./photo/src/components/tools/__tests__/AiColorizeTool.test.tsx)
-│   │   │       │   ├── [AiGenerateTool.test.tsx](./photo/src/components/tools/__tests__/AiGenerateTool.test.tsx)
-│   │   │       │   ├── [AiRemoveBgTool.test.tsx](./photo/src/components/tools/__tests__/AiRemoveBgTool.test.tsx)
-│   │   │       │   ├── [AiRemoveObjectTool.test.tsx](./photo/src/components/tools/__tests__/AiRemoveObjectTool.test.tsx)
-│   │   │       │   ├── [AiRemovePersonTool.test.tsx](./photo/src/components/tools/__tests__/AiRemovePersonTool.test.tsx)
-│   │   │       │   ├── [AiRemoveWatermarkTool.test.tsx](./photo/src/components/tools/__tests__/AiRemoveWatermarkTool.test.tsx)
-│   │   │       │   ├── [AiRestoreTool.test.tsx](./photo/src/components/tools/__tests__/AiRestoreTool.test.tsx)
-│   │   │       │   ├── [AiUnblurTool.test.tsx](./photo/src/components/tools/__tests__/AiUnblurTool.test.tsx)
-│   │   │       │   ├── [AiUpscaleTool.test.tsx](./photo/src/components/tools/__tests__/AiUpscaleTool.test.tsx)
-│   │   │       │   ├── [BarcodeReadTool.test.tsx](./photo/src/components/tools/__tests__/BarcodeReadTool.test.tsx)
-│   │   │       │   ├── [BarcodeTool.test.tsx](./photo/src/components/tools/__tests__/BarcodeTool.test.tsx)
-│   │   │       │   ├── [Base64Tool.test.tsx](./photo/src/components/tools/__tests__/Base64Tool.test.tsx)
-│   │   │       │   ├── [BreakingBadTool.test.tsx](./photo/src/components/tools/__tests__/BreakingBadTool.test.tsx)
-│   │   │       │   ├── [CameraTool.test.tsx](./photo/src/components/tools/__tests__/CameraTool.test.tsx)
-│   │   │       │   ├── [ChartMakerTool.test.tsx](./photo/src/components/tools/__tests__/ChartMakerTool.test.tsx)
-│   │   │       │   ├── [CollageMakerTool.test.tsx](./photo/src/components/tools/__tests__/CollageMakerTool.test.tsx)
-│   │   │       │   ├── [ColorsTool.test.tsx](./photo/src/components/tools/__tests__/ColorsTool.test.tsx)
-│   │   │       │   ├── [ContrastCheckerTool.test.tsx](./photo/src/components/tools/__tests__/ContrastCheckerTool.test.tsx)
-│   │   │       │   ├── [GitHubSocialPreviewTool.test.tsx](./photo/src/components/tools/__tests__/GitHubSocialPreviewTool.test.tsx)
-│   │   │       │   ├── [GradientGeneratorTool.test.tsx](./photo/src/components/tools/__tests__/GradientGeneratorTool.test.tsx)
-│   │   │       │   ├── [HouseTool.test.tsx](./photo/src/components/tools/__tests__/HouseTool.test.tsx)
-│   │   │       │   ├── [ImageAdjustTool.test.tsx](./photo/src/components/tools/__tests__/ImageAdjustTool.test.tsx)
-│   │   │       │   ├── [ImageBlurBackgroundTool.test.tsx](./photo/src/components/tools/__tests__/ImageBlurBackgroundTool.test.tsx)
-│   │   │       │   ├── [ImageBorderTool.test.tsx](./photo/src/components/tools/__tests__/ImageBorderTool.test.tsx)
-│   │   │       │   ├── [ImageBwTool.test.tsx](./photo/src/components/tools/__tests__/ImageBwTool.test.tsx)
-│   │   │       │   ├── [ImageColorizeTool.test.tsx](./photo/src/components/tools/__tests__/ImageColorizeTool.test.tsx)
-│   │   │       │   ├── [ImageCombinerSideBySideTool.test.tsx](./photo/src/components/tools/__tests__/ImageCombinerSideBySideTool.test.tsx)
-│   │   │       │   ├── [ImageCombinerStackedTool.test.tsx](./photo/src/components/tools/__tests__/ImageCombinerStackedTool.test.tsx)
-│   │   │       │   ├── [ImageCompressTool.test.tsx](./photo/src/components/tools/__tests__/ImageCompressTool.test.tsx)
-│   │   │       │   ├── [ImageConvertTool.test.tsx](./photo/src/components/tools/__tests__/ImageConvertTool.test.tsx)
-│   │   │       │   ├── [ImageCropTool.test.tsx](./photo/src/components/tools/__tests__/ImageCropTool.test.tsx)
-│   │   │       │   ├── [ImageDominantColorTool.test.tsx](./photo/src/components/tools/__tests__/ImageDominantColorTool.test.tsx)
-│   │   │       │   ├── [ImageFlipTool.test.tsx](./photo/src/components/tools/__tests__/ImageFlipTool.test.tsx)
-│   │   │       │   ├── [ImageMorphingTool.test.tsx](./photo/src/components/tools/__tests__/ImageMorphingTool.test.tsx)
-│   │   │       │   ├── [ImageOcrTool.test.tsx](./photo/src/components/tools/__tests__/ImageOcrTool.test.tsx)
-│   │   │       │   ├── [ImagePhotoFiltersTool.test.tsx](./photo/src/components/tools/__tests__/ImagePhotoFiltersTool.test.tsx)
-│   │   │       │   ├── [ImagePixelateFaceTool.test.tsx](./photo/src/components/tools/__tests__/ImagePixelateFaceTool.test.tsx)
-│   │   │       │   ├── [ImagePixelateTool.test.tsx](./photo/src/components/tools/__tests__/ImagePixelateTool.test.tsx)
-│   │   │       │   ├── [ImageProfileTool.test.tsx](./photo/src/components/tools/__tests__/ImageProfileTool.test.tsx)
-│   │   │       │   ├── [ImageResizeTool.test.tsx](./photo/src/components/tools/__tests__/ImageResizeTool.test.tsx)
-│   │   │       │   ├── [ImageRotateTool.test.tsx](./photo/src/components/tools/__tests__/ImageRotateTool.test.tsx)
-│   │   │       │   ├── [ImageRoundTool.test.tsx](./photo/src/components/tools/__tests__/ImageRoundTool.test.tsx)
-│   │   │       │   ├── [ImageShadowTool.test.tsx](./photo/src/components/tools/__tests__/ImageShadowTool.test.tsx)
-│   │   │       │   ├── [ImageSharpenTool.test.tsx](./photo/src/components/tools/__tests__/ImageSharpenTool.test.tsx)
-│   │   │       │   ├── [ImageSplitTool.test.tsx](./photo/src/components/tools/__tests__/ImageSplitTool.test.tsx)
-│   │   │       │   ├── [ImageTextTool.test.tsx](./photo/src/components/tools/__tests__/ImageTextTool.test.tsx)
-│   │   │       │   ├── [ImageTranslateTool.test.tsx](./photo/src/components/tools/__tests__/ImageTranslateTool.test.tsx)
-│   │   │       │   ├── [ImageTransparentBgTool.test.tsx](./photo/src/components/tools/__tests__/ImageTransparentBgTool.test.tsx)
-│   │   │       │   ├── [ImageVignetteTool.test.tsx](./photo/src/components/tools/__tests__/ImageVignetteTool.test.tsx)
-│   │   │       │   ├── [ImageWatermarkTool.test.tsx](./photo/src/components/tools/__tests__/ImageWatermarkTool.test.tsx)
-│   │   │       │   ├── [InstaSizeTool.test.tsx](./photo/src/components/tools/__tests__/InstaSizeTool.test.tsx)
-│   │   │       │   ├── [InvoiceParserTool.test.tsx](./photo/src/components/tools/__tests__/InvoiceParserTool.test.tsx)
-│   │   │       │   ├── [MemeMakerTool.test.tsx](./photo/src/components/tools/__tests__/MemeMakerTool.test.tsx)
-│   │   │       │   ├── [PixelTool.test.tsx](./photo/src/components/tools/__tests__/PixelTool.test.tsx)
-│   │   │       │   ├── [QRCodeTool.test.tsx](./photo/src/components/tools/__tests__/QRCodeTool.test.tsx)
-│   │   │       │   ├── [QrReadTool.test.tsx](./photo/src/components/tools/__tests__/QrReadTool.test.tsx)
-│   │   │       │   └── [YouTubeThumbnailsTool.test.tsx](./photo/src/components/tools/__tests__/YouTubeThumbnailsTool.test.tsx)
-│   │   │       ├── [AiColorizeTool.tsx](./photo/src/components/tools/AiColorizeTool.tsx)
-│   │   │       ├── [AiGenerateTool.tsx](./photo/src/components/tools/AiGenerateTool.tsx)
-│   │   │       ├── [AiRemoveBgTool.tsx](./photo/src/components/tools/AiRemoveBgTool.tsx)
-│   │   │       ├── [AiRemoveObjectTool.tsx](./photo/src/components/tools/AiRemoveObjectTool.tsx)
-│   │   │       ├── [AiRemovePersonTool.tsx](./photo/src/components/tools/AiRemovePersonTool.tsx)
-│   │   │       ├── [AiRemoveWatermarkTool.tsx](./photo/src/components/tools/AiRemoveWatermarkTool.tsx)
-│   │   │       ├── [AiRestoreTool.tsx](./photo/src/components/tools/AiRestoreTool.tsx)
-│   │   │       ├── [AiUnblurTool.tsx](./photo/src/components/tools/AiUnblurTool.tsx)
-│   │   │       ├── [AiUpscaleTool.tsx](./photo/src/components/tools/AiUpscaleTool.tsx)
-│   │   │       ├── [BarcodeReadTool.tsx](./photo/src/components/tools/BarcodeReadTool.tsx)
-│   │   │       ├── [BarcodeTool.tsx](./photo/src/components/tools/BarcodeTool.tsx)
-│   │   │       ├── [Base64Tool.tsx](./photo/src/components/tools/Base64Tool.tsx)
-│   │   │       ├── [BreakingBadTool.tsx](./photo/src/components/tools/BreakingBadTool.tsx)
-│   │   │       ├── [CameraTool.tsx](./photo/src/components/tools/CameraTool.tsx)
-│   │   │       ├── [ChartMakerTool.tsx](./photo/src/components/tools/ChartMakerTool.tsx)
-│   │   │       ├── [CollageMakerTool.tsx](./photo/src/components/tools/CollageMakerTool.tsx)
-│   │   │       ├── [ColorsTool.tsx](./photo/src/components/tools/ColorsTool.tsx)
-│   │   │       ├── [ContrastCheckerTool.tsx](./photo/src/components/tools/ContrastCheckerTool.tsx)
-│   │   │       ├── [GitHubSocialPreviewTool.tsx](./photo/src/components/tools/GitHubSocialPreviewTool.tsx)
-│   │   │       ├── [GradientGeneratorTool.tsx](./photo/src/components/tools/GradientGeneratorTool.tsx)
-│   │   │       ├── [HouseTool.tsx](./photo/src/components/tools/HouseTool.tsx)
-│   │   │       ├── [ImageAdjustTool.tsx](./photo/src/components/tools/ImageAdjustTool.tsx)
-│   │   │       ├── [ImageBlurBackgroundTool.tsx](./photo/src/components/tools/ImageBlurBackgroundTool.tsx)
-│   │   │       ├── [ImageBorderTool.tsx](./photo/src/components/tools/ImageBorderTool.tsx)
-│   │   │       ├── [ImageBwTool.tsx](./photo/src/components/tools/ImageBwTool.tsx)
-│   │   │       ├── [ImageColorizeTool.tsx](./photo/src/components/tools/ImageColorizeTool.tsx)
-│   │   │       ├── [ImageCombinerSideBySideTool.tsx](./photo/src/components/tools/ImageCombinerSideBySideTool.tsx)
-│   │   │       ├── [ImageCombinerStackedTool.tsx](./photo/src/components/tools/ImageCombinerStackedTool.tsx)
-│   │   │       ├── [ImageCompressTool.tsx](./photo/src/components/tools/ImageCompressTool.tsx)
-│   │   │       ├── [ImageConvertTool.tsx](./photo/src/components/tools/ImageConvertTool.tsx)
-│   │   │       ├── [ImageCropTool.tsx](./photo/src/components/tools/ImageCropTool.tsx)
-│   │   │       ├── [ImageDominantColorTool.tsx](./photo/src/components/tools/ImageDominantColorTool.tsx)
-│   │   │       ├── [ImageFlipTool.tsx](./photo/src/components/tools/ImageFlipTool.tsx)
-│   │   │       ├── [ImageMorphingTool.tsx](./photo/src/components/tools/ImageMorphingTool.tsx)
-│   │   │       ├── [ImageOcrTool.tsx](./photo/src/components/tools/ImageOcrTool.tsx)
-│   │   │       ├── [ImagePhotoFiltersTool.tsx](./photo/src/components/tools/ImagePhotoFiltersTool.tsx)
-│   │   │       ├── [ImagePixelateFaceTool.tsx](./photo/src/components/tools/ImagePixelateFaceTool.tsx)
-│   │   │       ├── [ImagePixelateTool.tsx](./photo/src/components/tools/ImagePixelateTool.tsx)
-│   │   │       ├── [ImageProfileTool.tsx](./photo/src/components/tools/ImageProfileTool.tsx)
-│   │   │       ├── [ImageResizeTool.tsx](./photo/src/components/tools/ImageResizeTool.tsx)
-│   │   │       ├── [ImageRotateTool.tsx](./photo/src/components/tools/ImageRotateTool.tsx)
-│   │   │       ├── [ImageRoundTool.tsx](./photo/src/components/tools/ImageRoundTool.tsx)
-│   │   │       ├── [ImageShadowTool.tsx](./photo/src/components/tools/ImageShadowTool.tsx)
-│   │   │       ├── [ImageSharpenTool.tsx](./photo/src/components/tools/ImageSharpenTool.tsx)
-│   │   │       ├── [ImageSplitTool.tsx](./photo/src/components/tools/ImageSplitTool.tsx)
-│   │   │       ├── [ImageTextTool.tsx](./photo/src/components/tools/ImageTextTool.tsx)
-│   │   │       ├── [ImageTranslateTool.tsx](./photo/src/components/tools/ImageTranslateTool.tsx)
-│   │   │       ├── [ImageTransparentBgTool.tsx](./photo/src/components/tools/ImageTransparentBgTool.tsx)
-│   │   │       ├── [ImageVignetteTool.tsx](./photo/src/components/tools/ImageVignetteTool.tsx)
-│   │   │       ├── [ImageWatermarkTool.tsx](./photo/src/components/tools/ImageWatermarkTool.tsx)
-│   │   │       ├── [InstaSizeTool.tsx](./photo/src/components/tools/InstaSizeTool.tsx)
-│   │   │       ├── [InvoiceParserTool.tsx](./photo/src/components/tools/InvoiceParserTool.tsx)
-│   │   │       ├── [MemeMakerTool.tsx](./photo/src/components/tools/MemeMakerTool.tsx)
-│   │   │       ├── [PixelTool.tsx](./photo/src/components/tools/PixelTool.tsx)
-│   │   │       ├── [QRCodeTool.tsx](./photo/src/components/tools/QRCodeTool.tsx)
-│   │   │       ├── [QrReadTool.tsx](./photo/src/components/tools/QrReadTool.tsx)
-│   │   │       └── [YouTubeThumbnailsTool.tsx](./photo/src/components/tools/YouTubeThumbnailsTool.tsx)
-│   │   ├── content/
-│   │   │   ├── [about.ts](./photo/src/content/about.ts)
-│   │   │   ├── [download.ts](./photo/src/content/download.ts)
-│   │   │   └── [version.ts](./photo/src/content/version.ts)
-│   │   ├── data/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [data.test.ts](./photo/src/data/__tests__/data.test.ts)
-│   │   │   ├── [models.ts](./photo/src/data/models.ts)
-│   │   │   ├── [photo-tools.ts](./photo/src/data/photo-tools.ts)
-│   │   │   └── [seed.ts](./photo/src/data/seed.ts)
-│   │   ├── hooks/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [useSWRegister.test.ts](./photo/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   └── [useSWRegister.ts](./photo/src/hooks/useSWRegister.ts)
-│   │   ├── lib/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [db.test.ts](./photo/src/lib/__tests__/db.test.ts)
-│   │   │   │   └── [photo-tools.test.ts](./photo/src/lib/__tests__/photo-tools.test.ts)
-│   │   │   ├── [db.ts](./photo/src/lib/db.ts)
-│   │   │   └── [photo-tools.ts](./photo/src/lib/photo-tools.ts)
-│   │   ├── providers/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [DataProvider.test.tsx](./photo/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   └── [ToastProvider.test.tsx](./photo/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   ├── [DataProvider.tsx](./photo/src/providers/DataProvider.tsx)
-│   │   │   ├── [Providers.tsx](./photo/src/providers/Providers.tsx)
-│   │   │   ├── [SWProvider.tsx](./photo/src/providers/SWProvider.tsx)
-│   │   │   └── [ToastProvider.tsx](./photo/src/providers/ToastProvider.tsx)
-│   │   ├── server/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [openrouter.test.ts](./photo/src/server/__tests__/openrouter.test.ts)
-│   │   │   └── trpc/
-│   │   │       ├── routers/
-│   │   │       │   ├── openrouter/
-│   │   │       │   │   └── [index.ts](./photo/src/server/trpc/routers/openrouter/index.ts)
-│   │   │       │   └── [_app.ts](./photo/src/server/trpc/routers/_app.ts)
-│   │   │       └── [trpc.ts](./photo/src/server/trpc/trpc.ts)
-│   │   ├── styles/
-│   │   │   ├── [globals.css](./photo/src/styles/globals.css)
-│   │   │   └── [themes.css](./photo/src/styles/themes.css)
-│   │   ├── types/
-│   │   │   └── [index.ts](./photo/src/types/index.ts)
-│   │   └── utils/
-│   │       ├── __tests__/
-│   │       │   └── [format.test.ts](./photo/src/utils/__tests__/format.test.ts)
-│   │       ├── [format.ts](./photo/src/utils/format.ts)
-│   │       └── [trpc.ts](./photo/src/utils/trpc.ts)
-│   ├── src-tauri/
-│   │   ├── capabilities/
-│   │   │   └── [default.json](./photo/src-tauri/capabilities/default.json)
-│   │   ├── icons/
-│   │   │   ├── android/
-│   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   └── [ic_launcher.xml](./photo/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./photo/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./photo/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./photo/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./photo/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./photo/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./photo/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./photo/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./photo/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./photo/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./photo/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./photo/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./photo/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./photo/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./photo/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./photo/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   └── values/
-│   │   │   │       └── [ic_launcher_background.xml](./photo/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   ├── ios/
-│   │   │   │   ├── [AppIcon-20x20@1x.png](./photo/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./photo/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   ├── [AppIcon-20x20@2x.png](./photo/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   ├── [AppIcon-20x20@3x.png](./photo/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   ├── [AppIcon-29x29@1x.png](./photo/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./photo/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   ├── [AppIcon-29x29@2x.png](./photo/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   ├── [AppIcon-29x29@3x.png](./photo/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   ├── [AppIcon-40x40@1x.png](./photo/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./photo/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   ├── [AppIcon-40x40@2x.png](./photo/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   ├── [AppIcon-40x40@3x.png](./photo/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   ├── [AppIcon-512@2x.png](./photo/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   ├── [AppIcon-60x60@2x.png](./photo/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   ├── [AppIcon-60x60@3x.png](./photo/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   ├── [AppIcon-76x76@1x.png](./photo/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   ├── [AppIcon-76x76@2x.png](./photo/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./photo/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   ├── [128x128.png](./photo/src-tauri/icons/128x128.png)
-│   │   │   ├── [128x128@2x.png](./photo/src-tauri/icons/128x128@2x.png)
-│   │   │   ├── [256x256.png](./photo/src-tauri/icons/256x256.png)
-│   │   │   ├── [32x32.png](./photo/src-tauri/icons/32x32.png)
-│   │   │   ├── [64x64.png](./photo/src-tauri/icons/64x64.png)
-│   │   │   ├── [Square107x107Logo.png](./photo/src-tauri/icons/Square107x107Logo.png)
-│   │   │   ├── [Square142x142Logo.png](./photo/src-tauri/icons/Square142x142Logo.png)
-│   │   │   ├── [Square150x150Logo.png](./photo/src-tauri/icons/Square150x150Logo.png)
-│   │   │   ├── [Square284x284Logo.png](./photo/src-tauri/icons/Square284x284Logo.png)
-│   │   │   ├── [Square30x30Logo.png](./photo/src-tauri/icons/Square30x30Logo.png)
-│   │   │   ├── [Square310x310Logo.png](./photo/src-tauri/icons/Square310x310Logo.png)
-│   │   │   ├── [Square44x44Logo.png](./photo/src-tauri/icons/Square44x44Logo.png)
-│   │   │   ├── [Square71x71Logo.png](./photo/src-tauri/icons/Square71x71Logo.png)
-│   │   │   ├── [Square89x89Logo.png](./photo/src-tauri/icons/Square89x89Logo.png)
-│   │   │   ├── [StoreLogo.png](./photo/src-tauri/icons/StoreLogo.png)
-│   │   │   ├── [create-icons.sh](./photo/src-tauri/icons/create-icons.sh)
-│   │   │   ├── [icon.icns](./photo/src-tauri/icons/icon.icns)
-│   │   │   ├── [icon.ico](./photo/src-tauri/icons/icon.ico)
-│   │   │   └── [icon.png](./photo/src-tauri/icons/icon.png)
-│   │   ├── src/
-│   │   │   ├── [lib.rs](./photo/src-tauri/src/lib.rs)
-│   │   │   └── [main.rs](./photo/src-tauri/src/main.rs)
-│   │   ├── [Cargo.lock](./photo/src-tauri/Cargo.lock)
-│   │   ├── [Cargo.toml](./photo/src-tauri/Cargo.toml)
-│   │   ├── [build.rs](./photo/src-tauri/build.rs)
-│   │   └── [tauri.conf.json](./photo/src-tauri/tauri.conf.json)
-│   ├── [AGENTS.md](./photo/AGENTS.md)
-│   ├── [Dockerfile](./photo/Dockerfile)
-│   ├── [LICENSE](./photo/LICENSE)
-│   ├── [README.md](./photo/README.md)
-│   ├── [TREE.md](./photo/TREE.md)
-│   ├── [docker-compose.yaml](./photo/docker-compose.yaml)
-│   ├── [eslint.config.mts](./photo/eslint.config.mts)
-│   ├── [jest.config.ts](./photo/jest.config.ts)
-│   ├── [jest.setup.ts](./photo/jest.setup.ts)
-│   ├── [next.config.ts](./photo/next.config.ts)
-│   ├── [package.json](./photo/package.json)
-│   ├── [playwright.config.ts](./photo/playwright.config.ts)
-│   ├── [postcss.config.mjs](./photo/postcss.config.mjs)
-│   └── [tsconfig.json](./photo/tsconfig.json)
-├── svg/
-│   ├── docs/
-│   │   ├── [ARCHITECTURE.md](./svg/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./svg/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./svg/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./svg/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./svg/docs/ROADMAP.md)
-│   ├── e2e/
-│   │   ├── [about.spec.ts](./svg/e2e/about.spec.ts)
-│   │   ├── [canvas-editor.spec.ts](./svg/e2e/canvas-editor.spec.ts)
-│   │   ├── [code-editor.spec.ts](./svg/e2e/code-editor.spec.ts)
-│   │   ├── [downloads.spec.ts](./svg/e2e/downloads.spec.ts)
-│   │   ├── [home.spec.ts](./svg/e2e/home.spec.ts)
-│   │   ├── [navigation.spec.ts](./svg/e2e/navigation.spec.ts)
-│   │   ├── [profile.spec.ts](./svg/e2e/profile.spec.ts)
-│   │   ├── [settings.spec.ts](./svg/e2e/settings.spec.ts)
-│   │   └── [version.spec.ts](./svg/e2e/version.spec.ts)
-│   ├── public/
-│   │   ├── icons/
-│   │   │   ├── [icon-128x128.png](./svg/public/icons/icon-128x128.png)
-│   │   │   ├── [icon-144x144.png](./svg/public/icons/icon-144x144.png)
-│   │   │   ├── [icon-152x152.png](./svg/public/icons/icon-152x152.png)
-│   │   │   ├── [icon-16x16.png](./svg/public/icons/icon-16x16.png)
-│   │   │   ├── [icon-180x180.png](./svg/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192x192.png](./svg/public/icons/icon-192x192.png)
-│   │   │   ├── [icon-256x256.png](./svg/public/icons/icon-256x256.png)
-│   │   │   ├── [icon-32x32.png](./svg/public/icons/icon-32x32.png)
-│   │   │   ├── [icon-384x384.png](./svg/public/icons/icon-384x384.png)
-│   │   │   ├── [icon-48x48.png](./svg/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512x512.png](./svg/public/icons/icon-512x512.png)
-│   │   │   ├── [icon-64x64.png](./svg/public/icons/icon-64x64.png)
-│   │   │   ├── [icon-72x72.png](./svg/public/icons/icon-72x72.png)
-│   │   │   ├── [icon-96x96.png](./svg/public/icons/icon-96x96.png)
-│   │   │   └── [icon.svg](./svg/public/icons/icon.svg)
-│   │   ├── og/
-│   │   │   ├── [og.png](./svg/public/og/og.png)
-│   │   │   └── [og.svg](./svg/public/og/og.svg)
-│   │   ├── [apple-touch-icon.png](./svg/public/apple-touch-icon.png)
-│   │   ├── [favicon.ico](./svg/public/favicon.ico)
-│   │   ├── [manifest.json](./svg/public/manifest.json)
-│   │   ├── [robots.txt](./svg/public/robots.txt)
-│   │   ├── [sitemap.xml](./svg/public/sitemap.xml)
-│   │   └── [sw.js](./svg/public/sw.js)
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── (auth)/
-│   │   │   │   ├── forget-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./svg/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./svg/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   ├── profile/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./svg/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./svg/src/app/(auth)/profile/page.tsx)
-│   │   │   │   ├── reset-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./svg/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./svg/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   ├── sign-in/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./svg/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./svg/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   └── sign-up/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./svg/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./svg/src/app/(auth)/sign-up/page.tsx)
-│   │   │   ├── (info)/
-│   │   │   │   ├── about/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./svg/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./svg/src/app/(info)/about/page.tsx)
-│   │   │   │   ├── downloads/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./svg/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./svg/src/app/(info)/downloads/page.tsx)
-│   │   │   │   └── version/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./svg/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./svg/src/app/(info)/version/page.tsx)
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [error.test.tsx](./svg/src/app/__tests__/error.test.tsx)
-│   │   │   │   ├── [forbidden.test.tsx](./svg/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   ├── [global-error.test.tsx](./svg/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   ├── [home-page.test.tsx](./svg/src/app/__tests__/home-page.test.tsx)
-│   │   │   │   ├── [layout.test.tsx](./svg/src/app/__tests__/layout.test.tsx)
-│   │   │   │   ├── [loading.test.tsx](./svg/src/app/__tests__/loading.test.tsx)
-│   │   │   │   ├── [not-found.test.tsx](./svg/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   ├── [robots.test.ts](./svg/src/app/__tests__/robots.test.ts)
-│   │   │   │   ├── [template.test.tsx](./svg/src/app/__tests__/template.test.tsx)
-│   │   │   │   └── [unauthorized.test.tsx](./svg/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   ├── edit/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [page.test.tsx](./svg/src/app/edit/__tests__/page.test.tsx)
-│   │   │   │   ├── code/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./svg/src/app/edit/code/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./svg/src/app/edit/code/page.tsx)
-│   │   │   │   └── [page.tsx](./svg/src/app/edit/page.tsx)
-│   │   │   ├── settings/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [page.test.tsx](./svg/src/app/settings/__tests__/page.test.tsx)
-│   │   │   │   └── [page.tsx](./svg/src/app/settings/page.tsx)
-│   │   │   ├── [default.tsx](./svg/src/app/default.tsx)
-│   │   │   ├── [error.tsx](./svg/src/app/error.tsx)
-│   │   │   ├── [favicon.ico](./svg/src/app/favicon.ico)
-│   │   │   ├── [forbidden.tsx](./svg/src/app/forbidden.tsx)
-│   │   │   ├── [global-error.tsx](./svg/src/app/global-error.tsx)
-│   │   │   ├── [layout.tsx](./svg/src/app/layout.tsx)
-│   │   │   ├── [loading.tsx](./svg/src/app/loading.tsx)
-│   │   │   ├── [not-found.tsx](./svg/src/app/not-found.tsx)
-│   │   │   ├── [page.tsx](./svg/src/app/page.tsx)
-│   │   │   ├── [robots.ts](./svg/src/app/robots.ts)
-│   │   │   ├── [template.tsx](./svg/src/app/template.tsx)
-│   │   │   └── [unauthorized.tsx](./svg/src/app/unauthorized.tsx)
-│   │   ├── components/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [SWProvider.test.tsx](./svg/src/components/__tests__/SWProvider.test.tsx)
-│   │   │   ├── atoms/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [FileDropzone.test.tsx](./svg/src/components/atoms/__tests__/FileDropzone.test.tsx)
-│   │   │   │   │   └── [PageTransition.test.tsx](./svg/src/components/atoms/__tests__/PageTransition.test.tsx)
-│   │   │   │   ├── [FileDropzone.tsx](./svg/src/components/atoms/FileDropzone.tsx)
-│   │   │   │   └── [PageTransition.tsx](./svg/src/components/atoms/PageTransition.tsx)
-│   │   │   ├── organisms/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [IconGenerator.test.tsx](./svg/src/components/organisms/__tests__/IconGenerator.test.tsx)
-│   │   │   │   │   ├── [IconWorkbench.test.tsx](./svg/src/components/organisms/__tests__/IconWorkbench.test.tsx)
-│   │   │   │   │   └── [ToastContainer.test.tsx](./svg/src/components/organisms/__tests__/ToastContainer.test.tsx)
-│   │   │   │   ├── [Header.tsx](./svg/src/components/organisms/Header.tsx)
-│   │   │   │   ├── [IconGenerator.tsx](./svg/src/components/organisms/IconGenerator.tsx)
-│   │   │   │   ├── [IconWorkbench.tsx](./svg/src/components/organisms/IconWorkbench.tsx)
-│   │   │   │   └── [ToastContainer.tsx](./svg/src/components/organisms/ToastContainer.tsx)
-│   │   │   └── templates/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [AboutTemplate.test.tsx](./svg/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │       │   ├── [DownloadsTemplate.test.tsx](./svg/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │       │   ├── [ErrorTemplate.test.tsx](./svg/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │       │   └── [VersionTemplate.test.tsx](./svg/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │       ├── [AboutTemplate.tsx](./svg/src/components/templates/AboutTemplate.tsx)
-│   │   │       ├── [DownloadsTemplate.tsx](./svg/src/components/templates/DownloadsTemplate.tsx)
-│   │   │       ├── [ErrorTemplate.tsx](./svg/src/components/templates/ErrorTemplate.tsx)
-│   │   │       └── [VersionTemplate.tsx](./svg/src/components/templates/VersionTemplate.tsx)
-│   │   ├── content/
-│   │   │   ├── [about.ts](./svg/src/content/about.ts)
-│   │   │   ├── [download.ts](./svg/src/content/download.ts)
-│   │   │   └── [version.ts](./svg/src/content/version.ts)
-│   │   ├── data/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [models.test.ts](./svg/src/data/__tests__/models.test.ts)
-│   │   │   │   └── [seed.test.ts](./svg/src/data/__tests__/seed.test.ts)
-│   │   │   ├── [iconPresets.ts](./svg/src/data/iconPresets.ts)
-│   │   │   ├── [models.ts](./svg/src/data/models.ts)
-│   │   │   └── [seed.ts](./svg/src/data/seed.ts)
-│   │   ├── hooks/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [useSWRegister.test.ts](./svg/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   └── [useSWRegister.ts](./svg/src/hooks/useSWRegister.ts)
-│   │   ├── lib/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [db.ssr.test.ts](./svg/src/lib/__tests__/db.ssr.test.ts)
-│   │   │   │   └── [db.test.ts](./svg/src/lib/__tests__/db.test.ts)
-│   │   │   └── [db.ts](./svg/src/lib/db.ts)
-│   │   ├── providers/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [DataProvider.test.tsx](./svg/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   ├── [Providers.test.tsx](./svg/src/providers/__tests__/Providers.test.tsx)
-│   │   │   │   └── [ToastProvider.test.tsx](./svg/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   ├── [DataProvider.tsx](./svg/src/providers/DataProvider.tsx)
-│   │   │   ├── [Providers.tsx](./svg/src/providers/Providers.tsx)
-│   │   │   ├── [SWProvider.tsx](./svg/src/providers/SWProvider.tsx)
-│   │   │   └── [ToastProvider.tsx](./svg/src/providers/ToastProvider.tsx)
-│   │   ├── styles/
-│   │   │   ├── [globals.css](./svg/src/styles/globals.css)
-│   │   │   └── [themes.css](./svg/src/styles/themes.css)
-│   │   ├── types/
-│   │   │   └── [index.ts](./svg/src/types/index.ts)
-│   │   └── utils/
-│   │       ├── __tests__/
-│   │       │   ├── [format.test.ts](./svg/src/utils/__tests__/format.test.ts)
-│   │       │   ├── [iconGenerator.test.ts](./svg/src/utils/__tests__/iconGenerator.test.ts)
-│   │       │   └── [svgToCanvas.test.ts](./svg/src/utils/__tests__/svgToCanvas.test.ts)
-│   │       ├── [format.ts](./svg/src/utils/format.ts)
-│   │       ├── [iconGenerator.ts](./svg/src/utils/iconGenerator.ts)
-│   │       └── [svgToCanvas.ts](./svg/src/utils/svgToCanvas.ts)
-│   ├── src-tauri/
-│   │   ├── capabilities/
-│   │   │   └── [default.json](./svg/src-tauri/capabilities/default.json)
-│   │   ├── icons/
-│   │   │   ├── android/
-│   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   └── [ic_launcher.xml](./svg/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./svg/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./svg/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./svg/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./svg/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./svg/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./svg/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./svg/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./svg/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./svg/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./svg/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./svg/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./svg/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./svg/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./svg/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./svg/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   └── values/
-│   │   │   │       └── [ic_launcher_background.xml](./svg/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   ├── ios/
-│   │   │   │   ├── [AppIcon-20x20@1x.png](./svg/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./svg/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   ├── [AppIcon-20x20@2x.png](./svg/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   ├── [AppIcon-20x20@3x.png](./svg/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   ├── [AppIcon-29x29@1x.png](./svg/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./svg/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   ├── [AppIcon-29x29@2x.png](./svg/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   ├── [AppIcon-29x29@3x.png](./svg/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   ├── [AppIcon-40x40@1x.png](./svg/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./svg/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   ├── [AppIcon-40x40@2x.png](./svg/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   ├── [AppIcon-40x40@3x.png](./svg/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   ├── [AppIcon-512@2x.png](./svg/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   ├── [AppIcon-60x60@2x.png](./svg/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   ├── [AppIcon-60x60@3x.png](./svg/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   ├── [AppIcon-76x76@1x.png](./svg/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   ├── [AppIcon-76x76@2x.png](./svg/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./svg/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   ├── [128x128.png](./svg/src-tauri/icons/128x128.png)
-│   │   │   ├── [128x128@2x.png](./svg/src-tauri/icons/128x128@2x.png)
-│   │   │   ├── [256x256.png](./svg/src-tauri/icons/256x256.png)
-│   │   │   ├── [32x32.png](./svg/src-tauri/icons/32x32.png)
-│   │   │   ├── [64x64.png](./svg/src-tauri/icons/64x64.png)
-│   │   │   ├── [Square107x107Logo.png](./svg/src-tauri/icons/Square107x107Logo.png)
-│   │   │   ├── [Square142x142Logo.png](./svg/src-tauri/icons/Square142x142Logo.png)
-│   │   │   ├── [Square150x150Logo.png](./svg/src-tauri/icons/Square150x150Logo.png)
-│   │   │   ├── [Square284x284Logo.png](./svg/src-tauri/icons/Square284x284Logo.png)
-│   │   │   ├── [Square30x30Logo.png](./svg/src-tauri/icons/Square30x30Logo.png)
-│   │   │   ├── [Square310x310Logo.png](./svg/src-tauri/icons/Square310x310Logo.png)
-│   │   │   ├── [Square44x44Logo.png](./svg/src-tauri/icons/Square44x44Logo.png)
-│   │   │   ├── [Square71x71Logo.png](./svg/src-tauri/icons/Square71x71Logo.png)
-│   │   │   ├── [Square89x89Logo.png](./svg/src-tauri/icons/Square89x89Logo.png)
-│   │   │   ├── [StoreLogo.png](./svg/src-tauri/icons/StoreLogo.png)
-│   │   │   ├── [create-icons.sh](./svg/src-tauri/icons/create-icons.sh)
-│   │   │   ├── [icon.icns](./svg/src-tauri/icons/icon.icns)
-│   │   │   ├── [icon.ico](./svg/src-tauri/icons/icon.ico)
-│   │   │   └── [icon.png](./svg/src-tauri/icons/icon.png)
-│   │   ├── src/
-│   │   │   ├── [lib.rs](./svg/src-tauri/src/lib.rs)
-│   │   │   └── [main.rs](./svg/src-tauri/src/main.rs)
-│   │   ├── [Cargo.lock](./svg/src-tauri/Cargo.lock)
-│   │   ├── [Cargo.toml](./svg/src-tauri/Cargo.toml)
-│   │   ├── [build.rs](./svg/src-tauri/build.rs)
-│   │   └── [tauri.conf.json](./svg/src-tauri/tauri.conf.json)
-│   ├── [AGENTS.md](./svg/AGENTS.md)
-│   ├── [Dockerfile](./svg/Dockerfile)
-│   ├── [LICENSE](./svg/LICENSE)
-│   ├── [README.md](./svg/README.md)
-│   ├── [TREE.md](./svg/TREE.md)
-│   ├── [docker-compose.yaml](./svg/docker-compose.yaml)
-│   ├── [eslint.config.mts](./svg/eslint.config.mts)
-│   ├── [jest.config.ts](./svg/jest.config.ts)
-│   ├── [jest.setup.ts](./svg/jest.setup.ts)
-│   ├── [next.config.ts](./svg/next.config.ts)
-│   ├── [package.json](./svg/package.json)
-│   ├── [playwright.config.ts](./svg/playwright.config.ts)
-│   ├── [postcss.config.mjs](./svg/postcss.config.mjs)
-│   └── [tsconfig.json](./svg/tsconfig.json)
 ├── [README.md](./README.md)
 └── [TREE.md](./TREE.md)
 ```
 
-370 directories, 1275 files
+324 directories, 970 files
