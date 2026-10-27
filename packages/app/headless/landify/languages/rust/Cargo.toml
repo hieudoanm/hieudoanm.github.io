@@ -24,7 +24,7 @@ anyhow = "=1.0.104"
 arboard = { version = "=3.7.0", optional = true }
 clap = { version = "=4.6.7", features = ["derive"] }
 crossterm = "=0.29.0"
-minijinja = { version = "=3.0.3", features = ["serde"] }
+minijinja = { version = "=3.0.4", features = ["serde"] }
 ratatui = "=0.30.2"
 serde = { version = "=1.0.229", features = ["derive"] }
 serde_json = "=1.0.154"
