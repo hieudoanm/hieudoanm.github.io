@@ -4,7 +4,7 @@ go 1.27.2
 
 require (
 	charm.land/bubbles/v2 v2.2.1
-	charm.land/bubbletea/v2 v2.1.0
+	charm.land/bubbletea/v2 v2.1.1
 	fyne.io/fyne/v2 v2.8.2
 	github.com/spf13/cobra v1.10.2
 )
