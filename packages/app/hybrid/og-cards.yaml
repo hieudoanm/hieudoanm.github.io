@@ -45,29 +45,6 @@ cards:
       success: '#00c853'
       error: '#ff0030'
 
-  - app: developer-tools/code
-    url: 'https://hieudoanm.github.io/open/code/'
-    name: Code Editor
-    kicker: 'CodeMirror 6, no server'
-    title: 'A code editor in the tab'
-    description: 'A web-based code editor with highlighting for JavaScript, TypeScript, Python, Rust and more.'
-    tags:
-      [
-        'CodeMirror 6',
-        'JS · TS · Python · Rust',
-        'Markdown · JSON',
-        'Runs client-side',
-      ]
-    theme:
-      base: '#f8fafc'
-      content: '#0b1220'
-      primary: '#3b82f6'
-      secondary: '#0ea5e9'
-      info: '#06b6d4'
-      warning: '#f59e0b'
-      success: '#10b981'
-      error: '#ef4444'
-
   - app: education/doi
     url: 'https://hieudoanm.github.io/open/doi/'
     name: DOI

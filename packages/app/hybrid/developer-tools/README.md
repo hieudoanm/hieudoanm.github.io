@@ -2,5 +2,3 @@
 
 1. API (Application Programming Interface)
 2. Boilerplate
-3. Code
-4. Diagram

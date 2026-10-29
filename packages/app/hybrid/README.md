@@ -4,7 +4,6 @@
 | --- | ----------- | -------------------------- | ---------------------------------------------------------------- | -------- | ------ | ----------------- | ------------------ |
 | 01  | api         | [API][api]                 | Postman / Insomnia / Bruno                                       | Optional | DONE   | Developer Tools   | Productivity       |
 | 02  | boilerplate | [Boilerplate][boilerplate] | Nextjs + Tauri (Foundation)                                      | Optional | DONE   | Developer Tools   | Productivity       |
-| 03  | code        | [Code][code]               | VSCode / Zed                                                     | No       | DONE   | Developer Tools   | Productivity       |
 | 04  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                             | No       | DONE   | Education         | Developer Tools    |
 | 05  | lingo       | [Lingo][lingo]             | Duolingo / Flashcards / Sign Language                            | No       | DONE   | Education         | Games              |
 | 06  | foody       | [Foody][foody]             | Random Food Suggestion                                           | No       | DONE   | Food & Drink      | Health & Fitness   |
@@ -18,7 +17,6 @@
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/
-[code]: https://hieudoanm.github.io/open/code/
 [lingo]: https://hieudoanm.github.io/open/lingo/
 [exhibit]: https://hieudoanm.github.io/open/exhibit/
 [foody]: https://hieudoanm.github.io/open/foody/
