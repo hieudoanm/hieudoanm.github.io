@@ -91,23 +91,6 @@ cards:
       success: '#58cc02'
       error: '#ff4b4b'
 
-  - app: food-drink/foody
-    url: 'https://hieudoanm.github.io/open/foody/'
-    name: Foody
-    kicker: 'Let fate choose'
-    title: 'Spin the wheel, eat better'
-    description: 'Spin the reel and let fate pick your next meal, with a weekly schedule and a reusable dish list.'
-    tags: ['Spin the wheel', 'Random picker', 'Weekly schedule', 'Dish lists']
-    theme:
-      base: '#fffaf3'
-      content: '#43302b'
-      primary: '#e2543f'
-      secondary: '#6da34d'
-      info: '#3d8fd1'
-      warning: '#f0a202'
-      success: '#6da34d'
-      error: '#d7263d'
-
   - app: graphics-design/exhibit
     url: 'https://hieudoanm.github.io/open/exhibit/'
     name: Exhibit
