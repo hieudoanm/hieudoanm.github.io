@@ -4,7 +4,7 @@ go 1.27.2
 
 require (
 	github.com/carlos7ags/folio v0.11.0
-	github.com/mark3labs/mcp-go v1.4.0
+	github.com/mark3labs/mcp-go v1.5.0
 	github.com/spf13/cobra v1.10.2
 	github.com/yuin/goldmark/v2 v2.1.13
 	gopkg.in/yaml.v3 v3.0.1
