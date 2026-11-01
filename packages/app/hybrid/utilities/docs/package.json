@@ -59,7 +59,7 @@
     "@mediapipe/camera_utils": "0.3.1675466862",
     "@mediapipe/drawing_utils": "0.3.1675466124",
     "@mediapipe/hands": "0.4.1675469240",
-    "@tanstack/react-query": "5.105.0",
+    "@tanstack/react-query": "5.105.1",
     "@tauri-apps/api": "2.12.4",
     "chart.js": "4.6.1",
     "codemirror": "6.0.2",
