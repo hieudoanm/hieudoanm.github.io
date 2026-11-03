@@ -45,7 +45,7 @@
     "@codemirror/view": "6.43.15",
     "@lodashx/ts": "workspace:*",
     "@tauri-apps/api": "2.12.4",
-    "d3-force": "3.0.0",
+    "d3-force": "3.0.1",
     "dompurify": "3.4.17",
     "file-saver": "2.0.5",
     "github-markdown-css": "5.9.0",
