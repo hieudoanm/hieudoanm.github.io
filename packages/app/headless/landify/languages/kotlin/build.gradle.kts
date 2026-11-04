@@ -37,7 +37,7 @@ val generateVersion = tasks.register("generateVersion") {
 
 dependencies {
     implementation("com.github.ajalt.clikt:clikt:5.1.0")
-    implementation("com.github.ajalt.mordant:mordant:3.1.0")
+    implementation("com.github.ajalt.mordant:mordant:3.1.1")
     // Strict YAML: kaml rejects unknown keys by default, matching the Go
     // original's yaml.Decoder.KnownFields(true).
     implementation("com.charleskorn.kaml:kaml:0.104.0")
