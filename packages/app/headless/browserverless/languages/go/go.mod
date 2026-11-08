@@ -2,7 +2,7 @@ module github.com/hieudoanm/browserverless
 
 go 1.27.3
 
-require github.com/go-webengine/engine v0.45.0
+require github.com/go-webengine/engine v0.45.11
 
 require (
 	github.com/ajroetker/go-highway v0.0.12 // indirect
@@ -22,7 +22,7 @@ require (
 	github.com/go-images/jpeg v0.3.0 // indirect
 	github.com/go-images/jpeg2000 v0.14.0 // indirect
 	github.com/go-images/png v0.2.0 // indirect
-	github.com/go-macos/metal v0.6.1 // indirect
+	github.com/go-macos/metal v0.7.0 // indirect
 	github.com/go-macos/objc v0.12.0 // indirect
 	github.com/go-opentype/fonts v0.14.0 // indirect
 	github.com/go-opentype/opentype v0.16.2-0.20261027113239-5e69589e9a5e // indirect
