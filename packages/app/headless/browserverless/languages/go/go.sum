@@ -67,6 +67,8 @@ github.com/go-images/png v0.2.0 h1:RFPkHPuRYRvrDJol/Mmn9P1DSaLV8VPmEQ8BkZoCpL0=
 github.com/go-images/png v0.2.0/go.mod h1:g1qayDmWLClHo9R5KQ+RrcUNTBcaA4c1thaIfEoS3vg=
 github.com/go-macos/metal v0.6.1 h1:OSsbs3HFScp8x8GPrURoB6ntEp7I77TF1YxZcGbl2Ls=
 github.com/go-macos/metal v0.6.1/go.mod h1:BiclSGJgONDekug12CQtlINic9zMmXF7m/iA7bQn4hM=
+github.com/go-macos/metal v0.7.0 h1:c/ymPqCzoLcDxcZ3i6cNSgOScsOlIz4yVbik5asVp+w=
+github.com/go-macos/metal v0.7.0/go.mod h1:BiclSGJgONDekug12CQtlINic9zMmXF7m/iA7bQn4hM=
 github.com/go-macos/objc v0.12.0 h1:/WmB4C1CQd5RkqBRvnHNljEFtOTvytPA9fkD87xuJVQ=
 github.com/go-macos/objc v0.12.0/go.mod h1:ao+SmTFBrkZdP+488hFTrSFvCtJ36McKKhNNOlcFXrQ=
 github.com/go-opentype/fonts v0.10.0 h1:9f7ik795SlBEJjz6iqBE/ZV2PaTauAj537MMWw9t4OQ=
@@ -113,6 +115,8 @@ github.com/go-webengine/engine v0.23.5 h1:Q/oBnsG+C8nRcjawmLYU1W3nN9200AZs8Nw8wN
 github.com/go-webengine/engine v0.23.5/go.mod h1:uaApvTBLq+cXfeX4WsbUzCKJRDmM12G/aTBE0sVaRxs=
 github.com/go-webengine/engine v0.45.0 h1:rhTSSW9qRiSrCU+ntRn0WODcDZk41om8sSlOpyXwtak=
 github.com/go-webengine/engine v0.45.0/go.mod h1:qJMIs5Myt3FUPJntBiz8zkIFpV3zaaE8AiKKhyxaf0c=
+github.com/go-webengine/engine v0.45.11 h1:WnxvHTHHHDIkNzclDOqmHc9OHgZtEzyahiDVcacrpik=
+github.com/go-webengine/engine v0.45.11/go.mod h1:XGd9ad6pT3W6HYD1N73ElFGxqoD7d+FNaBEIeLq3hrU=
 github.com/go-webengine/esbuildsandbox v0.1.0 h1:1LdmX+0/yJarQlxZgJ7JIMu+Qy6P7Yzu4NFcX9+jFl8=
 github.com/go-webengine/esbuildsandbox v0.1.0/go.mod h1:za8oj1vbDfVkTpHLeRk7JfEQjmJfj+GHNq4R47681vQ=
 github.com/go-widgets/painter v0.13.0 h1:xBPbopFuYfeDVbQKUKviU6HnP2mAhztJ+BpasahlJLU=
