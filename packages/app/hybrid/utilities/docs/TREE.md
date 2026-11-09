@@ -155,8 +155,6 @@
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/editors/slides/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/editors/page.tsx)
 │   │   │   │   ├── education/
-│   │   │   │   │   ├── doi/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/doi/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/page.tsx)
 │   │   │   │   ├── trivia/
 │   │   │   │   │   ├── palindrome/

@@ -5,26 +5,27 @@ import { FC, useEffect, useState } from 'react';
 import { FiMenu, FiMoon, FiSun } from 'react-icons/fi';
 
 const NAV_LINKS = [
-  { href: '/about', label: 'About' },
-  { href: '/downloads', label: 'Downloads' },
-  { href: '/version', label: 'Version' },
+  { href: '/store/about', label: 'About' },
+  { href: '/store/downloads', label: 'Downloads' },
+  { href: '/store/version', label: 'Version' },
 ] as const;
 
-const APP_NAME: string = 'Docs';
-const THEME_KEY: string = 'docs-theme';
-const THEME_DARK: string = 'nothing';
-const THEME_LIGHT: string = 'light';
+const APP_NAME: string = 'Store';
+const THEME_KEY: string = 'store-theme';
+const THEME_DARK: string = 'store-dark';
+const THEME_LIGHT: string = 'store-light';
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return THEME_LIGHT;
-  return localStorage.getItem(THEME_KEY) || THEME_LIGHT;
+  if (typeof window === 'undefined') return THEME_DARK;
+  return localStorage.getItem(THEME_KEY) || THEME_DARK;
 };
 
 export const Header: FC = () => {
   const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    const storeRoot = document.getElementById('store-root');
+    (storeRoot ?? document.documentElement).setAttribute('data-theme', theme);
     localStorage.setItem(THEME_KEY, theme);
   }, [theme]);
 
@@ -35,7 +36,7 @@ export const Header: FC = () => {
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 w-full border-b px-4 py-3 sm:px-6">
       <div className="flex items-center justify-between">
         <div>
-          <Link href="/" className="text-base-content text-sm font-bold">
+          <Link href="/store" className="text-base-content text-sm font-bold">
             {APP_NAME}
           </Link>
         </div>
@@ -63,7 +64,7 @@ export const Header: FC = () => {
             <ul
               tabIndex={0}
               role="menu"
-              className="dropdown-content bg-base-100 border-base-300 menu rounded-box border px-2 py-2 shadow">
+              className="dropdown-content bg-base-100 border-base-300 menu rounded-box border px-2 py-2">
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-xs">

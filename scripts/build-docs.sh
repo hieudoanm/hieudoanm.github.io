@@ -6,8 +6,6 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HYBRID_DIR="$ROOT_DIR/packages/app/hybrid"
 DOCS_DIR="$ROOT_DIR/docs"
 ROOT_APP="utilities/docs"
-PAGIFY_DIR="$ROOT_DIR/packages/app/headless/pagify/languages/go"
-PAGIFY_BIN="$PAGIFY_DIR/bin/pagify"
 
 build_app() {
     local app_path="$1"
@@ -118,57 +116,6 @@ copy_data_public() {
     touch "$dest_dir/.nojekyll"
 }
 
-ensure_pagify() {
-    if [[ ! -x "$PAGIFY_BIN" ]]; then
-        echo "Building pagify..."
-        (
-            cd "$PAGIFY_DIR"
-            make build
-        )
-    fi
-}
-
-build_pagify_docs() {
-    ensure_pagify
-    local content_dir="$DOCS_DIR/content"
-    local output_dir="$DOCS_DIR/open"
-    local temp_dir="$DOCS_DIR/.pagify-tmp"
-
-    echo "Building documentation with pagify..."
-
-    mkdir -p "$content_dir"
-
-    # Copy README.md as index.md (like docsify default)
-    cp "$ROOT_DIR/README.md" "$content_dir/index.md"
-
-    # Add frontmatter to the README
-    cat > "$content_dir/index.md.tmp" <<'EOF'
----
-title: 👨‍💻 I'm Hieu Doan
-language: en
-theme: auto
-basePath: /open
-footer: "© 2026 hieudoanm · Built with pagify"
----
-
-EOF
-    cat "$content_dir/index.md" >> "$content_dir/index.md.tmp"
-    mv "$content_dir/index.md.tmp" "$content_dir/index.md"
-
-    # Build with pagify to a temp directory to avoid cleaning the open/ directory
-    # which already contains Next.js apps from copy_landing_pages
-    rm -rf "$temp_dir"
-    mkdir -p "$temp_dir"
-    "$PAGIFY_BIN" build "$content_dir" --output "$temp_dir"
-
-    # Copy pagify output to open/ (preserving existing Next.js apps)
-    echo "Merging pagify output into $output_dir..."
-    cp -R "$temp_dir"/* "$output_dir"/
-    touch "$output_dir/.nojekyll"
-    rm -rf "$temp_dir"
-    echo "Documentation built to $output_dir"
-}
-
 verify_open() {
     local missing=()
     for category_dir in "$HYBRID_DIR"/*/; do
@@ -247,8 +194,6 @@ copy_landing_pages "$ROOT_DIR/packages/app/native"
 copy_landing_pages "$ROOT_DIR/packages/extensions/browser"
 
 copy_data_public
-
-build_pagify_docs
 
 echo "Done."
 

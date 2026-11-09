@@ -1,8 +1,0 @@
-category,name
-csr,Angular.js
-csr,Backbone
-csr,Ember
-csr-jsx,Preact
-csr-jsx,Qwik
-ssr,htmx
-ssr,Remix

@@ -19,7 +19,7 @@
   "license": "GPL-3.0",
   "packageManager": "pnpm@12.18.0",
   "engines": {
-    "node": "26.13.0"
+    "node": "26.13.1"
   },
   "scripts": {
     "format": "prettier --cache --write .",
@@ -29,9 +29,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "3.1164.0",
-    "@aws-sdk/s3-presigned-post": "3.1164.0",
-    "@aws-sdk/s3-request-presigner": "3.1164.0"
+    "@aws-sdk/client-s3": "3.1168.0",
+    "@aws-sdk/s3-presigned-post": "3.1168.0",
+    "@aws-sdk/s3-request-presigner": "3.1168.0"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -41,11 +41,11 @@
     "globals": "17.14.0",
     "jest": "30.5.2",
     "jiti": "2.7.0",
-    "prettier": "3.9.10",
+    "prettier": "3.10.1",
     "rimraf": "6.1.4",
     "ts-jest": "29.4.15",
     "ts-node": "10.9.2",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.72.1"
+    "typescript-eslint": "8.72.2"
   }
 }

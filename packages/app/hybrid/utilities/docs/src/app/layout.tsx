@@ -12,13 +12,13 @@ const beVietnamPro = Be_Vietnam_Pro({
 
 export const metadata: Metadata = {
   title: 'Hieu Doan',
-  description: 'Start Page',
+  description: 'Hieu Doan — resume and portfolio',
   metadataBase: new URL('https://hieudoanm.github.io/open/docs/'),
   openGraph: {
     type: 'website',
     siteName: 'Hieu Doan',
     url: 'https://hieudoanm.github.io/open/docs/',
-    title: 'A start page that works',
+    title: 'Hieu Doan',
     description:
       'A start page with a calculator, clocks, data converters, developer utilities and a writing space.',
     images: [
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
         url: '/og/og.png',
         width: 1200,
         height: 630,
-        alt: 'Hieu Doan — A start page that works',
+        alt: 'Hieu Doan',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'A start page that works',
+    title: 'Hieu Doan',
     description:
       'A start page with a calculator, clocks, data converters, developer utilities and a writing space.',
     images: ['/og/og.png'],

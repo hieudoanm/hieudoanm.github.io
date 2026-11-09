@@ -5,7 +5,6 @@ export const exportToSQLite = async (
   participants: Participant[],
   matches: Match[]
 ): Promise<Blob> => {
-  // @ts-expect-error sql.js is a dynamic dependency loaded at runtime
   const initSqlJs = (await import('sql.js')).default;
   const SQL = await initSqlJs();
   const db = new SQL.Database();
@@ -116,5 +115,5 @@ export const exportToSQLite = async (
   const data = db.export();
   db.close();
 
-  return new Blob([data], { type: 'application/x-sqlite3' });
+  return new Blob([new Uint8Array(data)], { type: 'application/x-sqlite3' });
 };

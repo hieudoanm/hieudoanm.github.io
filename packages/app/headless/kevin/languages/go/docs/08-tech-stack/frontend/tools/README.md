@@ -1,3 +1,0 @@
-# Tools
-
-Frontend tooling.

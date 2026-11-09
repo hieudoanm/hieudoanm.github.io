@@ -18,7 +18,7 @@
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "packageManager": "pnpm@12.18.0",
   "engines": {
-    "node": "26.13.0"
+    "node": "26.13.1"
   },
   "scripts": {
     "lint": "eslint . --fix",
@@ -43,8 +43,8 @@
     "@tauri-apps/api": "2.12.4",
     "chart.js": "4.6.1",
     "gif.js": "0.2.0",
-    "html2canvas-pro": "2.6.3",
-    "next": "16.4.5",
+    "html2canvas-pro": "2.6.4",
+    "next": "16.4.6",
     "react": "19.3.1",
     "react-chartjs-2": "5.3.1",
     "react-chessboard": "5.12.1",
@@ -57,24 +57,24 @@
     "@tauri-apps/cli": "2.12.4",
     "@testing-library/jest-dom": "7.0.1",
     "@testing-library/react": "16.3.3",
-    "@testing-library/user-event": "14.6.8",
+    "@testing-library/user-event": "14.6.10",
     "@types/gif.js": "0.2.5",
     "@types/jest": "30.0.0",
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "daisyui": "5.7.50",
+    "daisyui": "5.8.0",
     "eslint": "10.14.0",
-    "eslint-config-next": "16.4.5",
+    "eslint-config-next": "16.4.6",
     "jest": "30.5.2",
     "jest-environment-jsdom": "30.5.2",
     "kill-port": "2.0.1",
-    "prettier": "3.9.10",
+    "prettier": "3.10.1",
     "prettier-plugin-tailwindcss": "0.8.1",
     "rimraf": "6.1.4",
     "tailwindcss": "4.3.5",
     "ts-jest": "29.4.15",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.72.1"
+    "typescript-eslint": "8.72.2"
   }
 }
