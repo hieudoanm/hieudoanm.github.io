@@ -45,29 +45,6 @@ cards:
       success: '#00c853'
       error: '#ff0030'
 
-  - app: education/doi
-    url: 'https://hieudoanm.github.io/open/doi/'
-    name: DOI
-    kicker: 'Crossref as a graph'
-    title: 'Explore the citation network'
-    description: 'Explore the Crossref citation network interactively: search works, trace references, follow clusters.'
-    tags:
-      [
-        'Force-directed graph',
-        'Crossref data',
-        'Search & filters',
-        'Cluster view',
-      ]
-    theme:
-      base: '#fafaff'
-      content: '#1f2140'
-      primary: '#4f46e5'
-      secondary: '#0ea5e9'
-      info: '#0891b2'
-      warning: '#d97706'
-      success: '#059669'
-      error: '#dc2626'
-
   - app: education/lingo
     url: 'https://hieudoanm.github.io/open/lingo/'
     name: Lingo
@@ -107,7 +84,6 @@ cards:
       warning: '#f9a825'
       success: '#2e7d32'
       error: '#d32f2f'
-
 
   - app: sports/chess
     url: 'https://hieudoanm.github.io/open/chess/'
