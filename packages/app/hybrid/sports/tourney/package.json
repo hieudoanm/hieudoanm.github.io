@@ -41,7 +41,8 @@
     "next": "16.4.5",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "react-icons": "5.7.0"
+    "react-icons": "5.7.0",
+    "sql.js": "1.15.2"
   },
   "devDependencies": {
     "@playwright/test": "1.65.0",
@@ -54,6 +55,7 @@
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
+    "@types/sql.js": "1.4.11",
     "daisyui": "5.7.50",
     "eslint": "10.14.0",
     "eslint-config-next": "16.4.5",
