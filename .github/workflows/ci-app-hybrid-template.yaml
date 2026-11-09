@@ -109,7 +109,7 @@ jobs:
             librsvg2-dev \
             patchelf
       - name: Install Tauri CLI
-        run: pnpm add -D @tauri-apps/cli
+        run: pnpm add -D @tauri-apps/cli --filter=${{ inputs.filter }}
       - name: Download Build Output
         uses: actions/download-artifact@v8.0.2
         with:
@@ -153,7 +153,7 @@ jobs:
         with:
           node-version-file: .nvmrc
       - name: Install Tauri CLI
-        run: pnpm add -D @tauri-apps/cli
+        run: pnpm add -D @tauri-apps/cli --filter=${{ inputs.filter }}
       - name: Install Java
         uses: actions/setup-java@v6.2.0
         with:
