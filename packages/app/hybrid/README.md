@@ -7,17 +7,15 @@
 | 03  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                             | No       | DONE   | Education         | Developer Tools    |
 | 04  | lingo       | [Lingo][lingo]             | Duolingo / Flashcards / Sign Language                            | No       | DONE   | Education         | Games              |
 | 05  | exhibit     | [Exhibit][exhibit]         | UI Showcase                                                      | Required | DONE   | Graphics & Design | Photo & Video      |
-| 06  | office      | [Office][office]           | Productivity suite — Calendar, CSV, Markdown, Tasks, Keynotes    | No       | DONE   | Productivity      | Education          |
-| 07  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
-| 08  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
-| 09  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
-| 10  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
+| 06  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
+| 07  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
+| 08  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
+| 09  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
 
 [api]: https://hieudoanm.github.io/open/api/
 [boilerplate]: https://hieudoanm.github.io/open/boilerplate/
 [lingo]: https://hieudoanm.github.io/open/lingo/
 [exhibit]: https://hieudoanm.github.io/open/exhibit/
-[office]: https://hieudoanm.github.io/open/office/
 [chess]: https://hieudoanm.github.io/open/chess/
 [football]: https://hieudoanm.github.io/open/football/
 [tourney]: https://hieudoanm.github.io/open/tourney/

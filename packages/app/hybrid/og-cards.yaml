@@ -108,22 +108,6 @@ cards:
       success: '#2e7d32'
       error: '#d32f2f'
 
-  - app: productivity/office
-    url: 'https://hieudoanm.github.io/open/office/'
-    name: Office
-    kicker: 'Docs, sheets and slides'
-    title: 'A productivity suite, local'
-    description: 'A suite of productivity tools: calendar, tasks, CSV, Markdown and keynotes with a presenter view.'
-    tags: ['Calendar & tasks', 'CSV & Markdown', 'Keynotes', 'Presenter view']
-    theme:
-      base: '#ffffff'
-      content: '#202124'
-      primary: '#1a73e8'
-      secondary: '#188038'
-      info: '#1a73e8'
-      warning: '#f9ab00'
-      success: '#188038'
-      error: '#d93025'
 
   - app: sports/chess
     url: 'https://hieudoanm.github.io/open/chess/'
