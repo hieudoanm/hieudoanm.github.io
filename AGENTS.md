@@ -114,7 +114,6 @@ native modules and `overrides` for transitive deps — change those, not the loc
 | `packages/app`        | Next.js web app, plus `headless`, `hybrid`, `native` variants     |
 | `packages/cli`        | Command-line tooling (`jack`), with a `bash` variant              |
 | `packages/data`       | Data projects (`github`, `world.bank`, `machine-learning`, …)     |
-| `packages/extensions` | Browser and VS Code extensions                                    |
 | `packages/modules`    | Shared libraries (`api`, `css`, `frontend`, `lodash`, `chess`, …) |
 | `packages/watch`      | Device integrations (`garmin`)                                    |
 | `examples/`           | Runnable configs — see below                                      |

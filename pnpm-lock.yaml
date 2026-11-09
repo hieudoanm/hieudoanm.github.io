@@ -1122,18 +1122,6 @@ importers:
         specifier: 8.72.1
         version: 8.72.1(eslint@10.14.0(jiti@2.7.0)(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
 
-  packages/extensions/vscode/themes:
-    devDependencies:
-      '@vscode/vsce':
-        specifier: 4.1.0
-        version: 4.1.0(supports-color@8.1.1)
-      prettier:
-        specifier: 3.9.10
-        version: 3.9.10
-      rimraf:
-        specifier: 6.1.4
-        version: 6.1.4
-
   packages/modules/api/typescript:
     devDependencies:
       '@eslint/js':

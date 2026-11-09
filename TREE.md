@@ -13876,20 +13876,6 @@
 │   │   │   ├── [pyproject.toml](./packages/data/world.bank/pyproject.toml)
 │   │   │   └── [uv.lock](./packages/data/world.bank/uv.lock)
 │   │   └── [data.png](./packages/data/data.png)
-│   ├── extensions/
-│   │   └── vscode/
-│   │       └── themes/
-│   │           ├── icons/
-│   │           │   ├── nothing/
-│   │           │   │   └── [css.svg](./packages/extensions/vscode/themes/icons/nothing/css.svg)
-│   │           │   └── original/
-│   │           │       └── [css.svg](./packages/extensions/vscode/themes/icons/original/css.svg)
-│   │           ├── themes/
-│   │           │   └── [nothing.json](./packages/extensions/vscode/themes/themes/nothing.json)
-│   │           ├── [AGENTS.md](./packages/extensions/vscode/themes/AGENTS.md)
-│   │           ├── [LICENSE](./packages/extensions/vscode/themes/LICENSE)
-│   │           ├── [README.md](./packages/extensions/vscode/themes/README.md)
-│   │           └── [package.json](./packages/extensions/vscode/themes/package.json)
 │   ├── modules/
 │   │   ├── api/
 │   │   │   ├── go/
@@ -15322,4 +15308,4 @@
 └── [turbo.json](./turbo.json)
 ```
 
-3430 directories, 11889 files
+3423 directories, 11876 files
