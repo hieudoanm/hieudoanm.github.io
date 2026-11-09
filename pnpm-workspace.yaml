@@ -24,3 +24,6 @@ minimumReleaseAge: 0
 overrides:
   '@codemirror/state': 6.7.6
   '@codemirror/view': 6.43.15
+
+patchedDependencies:
+  daisyui@5.7.50: patches/daisyui@5.7.50.patch

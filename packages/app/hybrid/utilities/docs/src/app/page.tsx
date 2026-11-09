@@ -1,12 +1,12 @@
 'use client';
 
-import { AppsStoreTemplate } from '@hieudoanm.github.io/components/templates/app/AppsStoreTemplate';
-import { getHomeSections } from '@hieudoanm.github.io/components/routes/apps/data/apps';
+import { useRouter } from 'next/navigation';
+import { Resume } from '@hieudoanm.github.io/components/routes/resume';
 
-const sections = getHomeSections();
+const MePage = () => {
+  const router = useRouter();
 
-const StartPage = () => (
-  <AppsStoreTemplate title="Start Page" sections={sections} />
-);
+  return <Resume onClose={() => router.back()} />;
+};
 
-export default StartPage;
+export default MePage;

@@ -1,6 +1,6 @@
 # `hieudoanm.github.io`
 
-## [Open Releases (18)](https://hieudoanm.github.io/open)
+## [Open Releases (17)](https://hieudoanm.github.io/open)
 
 ### Headless (7)
 
@@ -16,7 +16,7 @@
 
 ---
 
-### Hybrid (11)
+### Hybrid (10)
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
@@ -26,11 +26,10 @@
 | 11  | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
 | 12  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
 | 13  | Hybrid   | Productivity      | Office      | [Open][open-office]      | [Releases][releases-office]      |
-| 14  | Hybrid   | Shopping          | Store       | [Open][open-store]       | [Releases][releases-store]       |
-| 15  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 16  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 17  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 18  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 14  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 15  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 16  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 17  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -42,10 +41,8 @@
 [open-dbml]: https://hieudoanm.github.io/open/dbml/
 [open-lingo]: https://hieudoanm.github.io/open/lingo/
 [open-doi]: https://hieudoanm.github.io/open/doi/
-[open-foody]: https://hieudoanm.github.io/open/foody/
 [open-office]: https://hieudoanm.github.io/open/office/
 [open-cv]: https://hieudoanm.github.io/open/cv/
-[open-store]: https://hieudoanm.github.io/open/store/
 [open-chess]: https://hieudoanm.github.io/open/chess/
 [open-football]: https://hieudoanm.github.io/open/football/
 [open-tourney]: https://hieudoanm.github.io/open/tourney/
@@ -63,9 +60,7 @@
 [releases-boilerplate]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-boilerplate-latest
 [releases-lingo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest
 [releases-doi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-doi-latest
-[releases-foody]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest
 [releases-office]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-office-latest
-[releases-store]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-shopping-store-latest
 [releases-chess]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-chess-latest
 [releases-football]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-football-latest
 [releases-tourney]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-tourney-latest

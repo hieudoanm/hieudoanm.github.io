@@ -125,29 +125,6 @@ cards:
       success: '#188038'
       error: '#d93025'
 
-  - app: shopping/store
-    url: 'https://hieudoanm.github.io/open/store/'
-    name: Store
-    kicker: 'The whole shelf'
-    title: 'Browse and download apps'
-    description: 'Browse the collection and download each app for the web, desktop or mobile.'
-    tags:
-      [
-        '35 apps & extensions',
-        'Every platform',
-        'Signed releases',
-        'Version tracking',
-      ]
-    theme:
-      base: '#ffffff'
-      content: '#1c1c1e'
-      primary: '#0071e3'
-      secondary: '#5e5ce6'
-      info: '#0a84ff'
-      warning: '#ff9f0a'
-      success: '#34c759'
-      error: '#ff3b30'
-
   - app: sports/chess
     url: 'https://hieudoanm.github.io/open/chess/'
     name: Chess
