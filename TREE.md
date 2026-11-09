@@ -1,6 +1,15 @@
 # TREE
 
 ```text
+├── assets/
+│   ├── branding/
+│   │   ├── png/
+│   │   │   ├── [logo.png](./assets/branding/png/logo.png)
+│   │   │   └── [og.png](./assets/branding/png/og.png)
+│   │   └── svg/
+│   │       ├── [logo.svg](./assets/branding/svg/logo.svg)
+│   │       └── [og.svg](./assets/branding/svg/og.svg)
+│   └── [svg-to-png.sh](./assets/svg-to-png.sh)
 ├── examples/
 │   ├── ci/
 │   │   ├── github-actions/
@@ -10746,8 +10755,6 @@
 │   │   │   │   │   └── [tsconfig.json](./packages/app/hybrid/graphics-design/exhibit/tsconfig.json)
 │   │   │   │   ├── [README.md](./packages/app/hybrid/graphics-design/README.md)
 │   │   │   │   └── [TREE.md](./packages/app/hybrid/graphics-design/TREE.md)
-│   │   │   ├── productivity/
-│   │   │   │   └── [README.md](./packages/app/hybrid/productivity/README.md)
 │   │   │   ├── sports/
 │   │   │   │   ├── chess/
 │   │   │   │   │   ├── __mocks__/
@@ -15045,32 +15052,9 @@
 │   │   │       ├── [Makefile](./packages/modules/simple/packages/Makefile)
 │   │   │       └── [README.md](./packages/modules/simple/packages/README.md)
 │   │   └── [README.md](./packages/modules/README.md)
-│   ├── watch/
-│   │   ├── garmin/
-│   │   │   ├── resources/
-│   │   │   │   ├── drawables/
-│   │   │   │   │   ├── [drawables.xml](./packages/watch/garmin/resources/drawables/drawables.xml)
-│   │   │   │   │   └── [launcher_icon.svg](./packages/watch/garmin/resources/drawables/launcher_icon.svg)
-│   │   │   │   ├── fonts/
-│   │   │   │   │   └── Nothing/
-│   │   │   │   │       ├── [Nothing.otf](./packages/watch/garmin/resources/fonts/Nothing/Nothing.otf)
-│   │   │   │   │       └── [Nothing.ttf](./packages/watch/garmin/resources/fonts/Nothing/Nothing.ttf)
-│   │   │   │   ├── layouts/
-│   │   │   │   │   └── [layout.xml](./packages/watch/garmin/resources/layouts/layout.xml)
-│   │   │   │   └── strings/
-│   │   │   │       └── [strings.xml](./packages/watch/garmin/resources/strings/strings.xml)
-│   │   │   ├── source/
-│   │   │   │   ├── watchfaces/
-│   │   │   │   │   ├── [HandsView.mc](./packages/watch/garmin/source/watchfaces/HandsView.mc)
-│   │   │   │   │   ├── [MaximalismView.mc](./packages/watch/garmin/source/watchfaces/MaximalismView.mc)
-│   │   │   │   │   ├── [MinimalismView.mc](./packages/watch/garmin/source/watchfaces/MinimalismView.mc)
-│   │   │   │   │   └── [TimeZonesView.mc](./packages/watch/garmin/source/watchfaces/TimeZonesView.mc)
-│   │   │   │   └── [NothingApp.mc](./packages/watch/garmin/source/NothingApp.mc)
-│   │   │   ├── [LICENSE](./packages/watch/garmin/LICENSE)
-│   │   │   ├── [manifest.xml](./packages/watch/garmin/manifest.xml)
-│   │   │   └── [monkey.jungle](./packages/watch/garmin/monkey.jungle)
-│   │   └── [README.md](./packages/watch/README.md)
 │   └── [README.md](./packages/README.md)
+├── patches/
+│   └── [daisyui@5.7.50.patch](./patches/daisyui@5.7.50.patch)
 ├── scripts/
 │   ├── renovate/
 │   │   ├── lib/
@@ -15102,4 +15086,4 @@
 └── [turbo.json](./turbo.json)
 ```
 
-3423 directories, 11876 files
+3368 directories, 11715 files
