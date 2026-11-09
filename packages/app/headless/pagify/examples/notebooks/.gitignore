@@ -1,7 +1,0 @@
-# Ignore converted markdown files (generated from notebooks)
-docs/data-analysis.md
-docs/visualization.md
-docs/machine-learning.md
-
-# Ignore dist (generated)
-dist/

@@ -79,10 +79,6 @@ landify,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/d
 landify,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-darwin-arm64
 landify,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-amd64
 landify,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-arm64
-pagify,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-darwin-amd64
-pagify,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-darwin-arm64
-pagify,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-linux-amd64
-pagify,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-pagify-pagify-linux-arm64
 dbml,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-amd64
 dbml,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-arm64
 dbml,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-amd64

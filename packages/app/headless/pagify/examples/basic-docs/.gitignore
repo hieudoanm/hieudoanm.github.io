@@ -1,5 +1,0 @@
-# Ignore dist (generated)
-dist/
-
-# Ignore pdfs (generated)
-pdfs/
