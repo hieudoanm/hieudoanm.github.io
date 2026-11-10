@@ -472,34 +472,6 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-linux-arm64"
           }
         ]
-      },
-      {
-        "label": "Landify",
-        "primaryCategory": "Developer Tools",
-        "secondaryCategory": "Productivity",
-        "icon": "PiFileCode",
-        "href": "https://hieudoanm.github.io/open/landify/",
-        "version": "latest",
-        "lastUpdated": "2026-09-07",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "macOS (Intel)",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-darwin-amd64"
-          },
-          {
-            "label": "macOS (Apple Silicon)",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-darwin-arm64"
-          },
-          {
-            "label": "Linux x64",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-amd64"
-          },
-          {
-            "label": "Linux ARM64",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-arm64"
-          }
-        ]
       }
     ]
   }

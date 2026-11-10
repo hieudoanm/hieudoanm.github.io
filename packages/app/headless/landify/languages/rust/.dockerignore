@@ -1,9 +1,0 @@
-.git
-.gitignore
-target
-docs
-tests
-*.md
-LICENSE
-Dockerfile
-.dockerignore

@@ -8,7 +8,6 @@
 | 2   | [CV](./cv)                          |
 | 3   | [DBML](./dbml/)                     |
 | 4   | [KeVIN](./kevin/)                   |
-| 5   | [Landify](./landify/)               |
 
 ## Techstack
 

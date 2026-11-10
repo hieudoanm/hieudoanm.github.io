@@ -124,5 +124,4 @@ When either side changes a role, update both and this file.
 
 - KeVIN theme: [`kevin/languages/go/internal/gui/theme.go`](./kevin/languages/go/internal/gui/theme.go)
 - KeVIN UI/UX design: [`kevin/languages/go/docs/07-ui-ux-design.md`](./kevin/languages/go/docs/07-ui-ux-design.md)
-- Landify studio GUI: [`landify/languages/go/internal/gui/`](./landify/languages/go/internal/gui/)
 - Fyne theming docs: <https://docs.fyne.io/theme/>
