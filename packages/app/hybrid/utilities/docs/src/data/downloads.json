@@ -362,34 +362,6 @@
     "label": "Headless",
     "items": [
       {
-        "label": "Backbone",
-        "primaryCategory": "Developer Tools",
-        "secondaryCategory": "Productivity",
-        "icon": "PiPlugs",
-        "href": "https://hieudoanm.github.io/open/backbone/",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "macOS (Intel)",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-amd64"
-          },
-          {
-            "label": "macOS (Apple Silicon)",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-arm64"
-          },
-          {
-            "label": "Linux x64",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-amd64"
-          },
-          {
-            "label": "Linux ARM64",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-arm64"
-          }
-        ]
-      },
-      {
         "label": "Browserverless",
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Productivity",

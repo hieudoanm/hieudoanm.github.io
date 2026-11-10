@@ -2,16 +2,15 @@
 
 ## [Open Releases (14)](https://hieudoanm.github.io/open)
 
-### Headless (6)
+### Headless (5)
 
 | No  | Platform | Category        | Name           | Open                        | Releases                            |
 | --- | -------- | --------------- | -------------- | --------------------------- | ----------------------------------- |
-| 1   | Headless | Developer Tools | Backbone       | [Open][open-backbone]       | [Releases][releases-backbone]       |
-| 2   | Headless | Developer Tools | Browserverless | [Open][open-browserverless] | [Releases][releases-browserverless] |
-| 3   | Headless | Developer Tools | CV             | [Open][open-cv]             | [Releases][releases-cv]             |
-| 4   | Headless | Developer Tools | DBML           | [Open][open-dbml]           | [Releases][releases-dbml]           |
-| 5   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
-| 6   | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
+| 1   | Headless | Developer Tools | Browserverless | [Open][open-browserverless] | [Releases][releases-browserverless] |
+| 2   | Headless | Developer Tools | CV             | [Open][open-cv]             | [Releases][releases-cv]             |
+| 3   | Headless | Developer Tools | DBML           | [Open][open-dbml]           | [Releases][releases-dbml]           |
+| 4   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
+| 5   | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
 
 ---
 
@@ -19,14 +18,14 @@
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
-| 7   | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
-| 8   | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
-| 9   | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
-| 10  | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
-| 11  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 12  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 13  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 14  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 6   | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 7   | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 8   | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
+| 9   | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
+| 10  | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 11  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 12  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 13  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -43,10 +42,8 @@
 [open-tourney]: https://hieudoanm.github.io/open/tourney/
 [open-docs]: https://hieudoanm.github.io/
 [open-browserverless]: https://hieudoanm.github.io/open/browserverless/
-[open-backbone]: https://hieudoanm.github.io/open/backbone/
 [open-kevin]: https://hieudoanm.github.io/open/kevin/
 [open-landify]: https://hieudoanm.github.io/open/landify/
-[open-pagify]: https://hieudoanm.github.io/open/pagify/
 
 <!-- Releases -->
 
@@ -59,9 +56,7 @@
 [releases-tourney]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-tourney-latest
 [releases-docs]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-docs-latest
 [releases-browserverless]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
-[releases-backbone]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
 [releases-kevin]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
 [releases-landify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest
-[releases-pagify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-pagify-latest
 [releases-dbml]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-dbml-latest
 [releases-cv]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-cv-latest

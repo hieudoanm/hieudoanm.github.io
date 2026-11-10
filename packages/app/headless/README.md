@@ -4,12 +4,11 @@
 
 | No  | Headless                            |
 | --- | ----------------------------------- |
-| 1   | [Backbone](./backbone/)             |
-| 2   | [Browserverless](./browserverless/) |
-| 3   | [CV](./cv)                          |
-| 4   | [DBML](./dbml/)                     |
-| 5   | [KeVIN](./kevin/)                   |
-| 6   | [Landify](./landify/)               |
+| 1   | [Browserverless](./browserverless/) |
+| 2   | [CV](./cv)                          |
+| 3   | [DBML](./dbml/)                     |
+| 4   | [KeVIN](./kevin/)                   |
+| 5   | [Landify](./landify/)               |
 
 ## Techstack
 
