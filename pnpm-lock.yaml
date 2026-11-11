@@ -640,8 +640,8 @@ importers:
         specifier: 0.2.0
         version: 0.2.0
       html2canvas-pro:
-        specifier: 2.6.3
-        version: 2.6.3
+        specifier: 2.6.4
+        version: 2.6.4
       next:
         specifier: 16.4.6
         version: 16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.4.1)(@playwright/test@1.65.0)(@types/node@26.6.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.108.2)
@@ -740,8 +740,8 @@ importers:
         specifier: 2.12.4
         version: 2.12.4
       html2canvas-pro:
-        specifier: 2.6.3
-        version: 2.6.3
+        specifier: 2.6.4
+        version: 2.6.4
       next:
         specifier: 16.4.6
         version: 16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.4.1)(@playwright/test@1.65.0)(@types/node@26.6.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.108.2)
@@ -5022,8 +5022,8 @@ packages:
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
 
-  html2canvas-pro@2.6.3:
-    resolution: {integrity: sha512-le85rmO0p7b0lkkMJsb0TTb7w6zFgn7jol18N0pAUYRPkjYIkYQz+jMf1mznrRIzi2x7sKWpErIpP11ZsUjjtQ==}
+  html2canvas-pro@2.6.4:
+    resolution: {integrity: sha512-1SMOfXwMACgQPt1wcKOtuRnBxkcREiJQdOyVpgp6a4/z9Rb/v7QPcvyu5GlxdDDiMznLwKxX5KwvtSlNlZJ7Wg==}
     engines: {node: '>=24.0.0'}
 
   http-proxy-agent@7.0.0:
@@ -11168,7 +11168,7 @@ snapshots:
 
   html-escaper@2.0.2: {}
 
-  html2canvas-pro@2.6.3: {}
+  html2canvas-pro@2.6.4: {}
 
   http-proxy-agent@7.0.0(supports-color@8.1.1):
     dependencies:
