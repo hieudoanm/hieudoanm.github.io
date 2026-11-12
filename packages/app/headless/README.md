@@ -7,7 +7,6 @@
 | 1   | [Browserverless](./browserverless/) |
 | 2   | [CV](./cv)                          |
 | 3   | [DBML](./dbml/)                     |
-| 4   | [KeVIN](./kevin/)                   |
 
 ## Techstack
 

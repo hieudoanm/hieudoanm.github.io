@@ -1,3 +1,0 @@
-# Tools
-
-Development tooling documentation.

@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/hieudoanm/hieudoanm.github.io/actions/workflows/ci-github-pages.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/hieudoanm.github.io/actions/workflows/ci-github-pages.yaml?branch=master)  [![License: GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
+keywords: `github-pages`, `organization`, `monorepo`
 
 ## [Open Releases (12)](https://hieudoanm.github.io/open)
 
@@ -12,7 +13,6 @@
 | 1   | Headless | Developer Tools | Browserverless | [Open][open-browserverless] | [Releases][releases-browserverless] |
 | 2   | Headless | Developer Tools | CV             | [Open][open-cv]             | [Releases][releases-cv]             |
 | 3   | Headless | Developer Tools | DBML           | [Open][open-dbml]           | [Releases][releases-dbml]           |
-| 4   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
 
 ---
 
@@ -20,14 +20,14 @@
 
 | No  | Platform | Category          | Name        | Open                     | Releases                         |
 | --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
-| 5   | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
-| 6   | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
-| 7   | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
-| 8   | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
-| 9   | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 10  | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 11  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 12  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 4   | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 5   | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 6   | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
+| 7   | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
+| 8   | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 9   | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 10  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 11  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -44,7 +44,6 @@
 [open-tourney]: https://hieudoanm.github.io/open/tourney/
 [open-docs]: https://hieudoanm.github.io/
 [open-browserverless]: https://hieudoanm.github.io/open/browserverless/
-[open-kevin]: https://hieudoanm.github.io/open/kevin/
 
 <!-- Releases -->
 
@@ -57,6 +56,5 @@
 [releases-tourney]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-tourney-latest
 [releases-docs]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-docs-latest
 [releases-browserverless]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
-[releases-kevin]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
 [releases-dbml]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-dbml-latest
 [releases-cv]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-cv-latest
