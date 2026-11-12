@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/hieudoanm/hieudoanm.github.io/actions/workflows/ci-github-pages.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/hieudoanm.github.io/actions/workflows/ci-github-pages.yaml?branch=master)  [![License: GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
-keywords: `github-pages`, `organization`, `monorepo`
+Topics: `github-pages`, `organization`, `monorepo`
 
 ## [Open Releases (12)](https://hieudoanm.github.io/open)
 
