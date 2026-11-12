@@ -4,9 +4,9 @@
 
 Topics: `github-pages`, `organization`, `monorepo`
 
-## [Open Releases (12)](https://hieudoanm.github.io/open)
+## [Open Releases (10)](https://hieudoanm.github.io/open)
 
-### Headless (4)
+### Headless (3)
 
 | No  | Platform | Category        | Name           | Open                        | Releases                            |
 | --- | -------- | --------------- | -------------- | --------------------------- | ----------------------------------- |
@@ -16,24 +16,22 @@ Topics: `github-pages`, `organization`, `monorepo`
 
 ---
 
-### Hybrid (8)
+### Hybrid (7)
 
-| No  | Platform | Category          | Name        | Open                     | Releases                         |
-| --- | -------- | ----------------- | ----------- | ------------------------ | -------------------------------- |
-| 4   | Hybrid   | Developer Tools   | API         | [Open][open-api]         | [Releases][releases-api]         |
-| 5   | Hybrid   | Developer Tools   | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
-| 6   | Hybrid   | Education         | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
-| 7   | Hybrid   | Graphics & Design | Exhibit     | [Open][open-exhibit]     | [Releases][releases-exhibit]     |
-| 8   | Hybrid   | Sports            | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 9   | Hybrid   | Sports            | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 10  | Hybrid   | Sports            | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 11  | Hybrid   | Utilities         | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| No  | Platform | Category        | Name        | Open                     | Releases                         |
+| --- | -------- | --------------- | ----------- | ------------------------ | -------------------------------- |
+| 4   | Hybrid   | Developer Tools | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 5   | Hybrid   | Developer Tools | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 6   | Hybrid   | Education       | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
+| 7   | Hybrid   | Sports          | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 8   | Hybrid   | Sports          | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 9   | Hybrid   | Sports          | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 10  | Hybrid   | Utilities       | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
 <!-- Open -->
 
-[open-exhibit]: https://hieudoanm.github.io/open/exhibit/
 [open-api]: https://hieudoanm.github.io/open/api/
 [open-boilerplate]: https://hieudoanm.github.io/open/boilerplate/
 [open-dbml]: https://hieudoanm.github.io/open/dbml/
@@ -47,7 +45,6 @@ Topics: `github-pages`, `organization`, `monorepo`
 
 <!-- Releases -->
 
-[releases-exhibit]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-exhibit-latest
 [releases-api]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-api-latest
 [releases-boilerplate]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-boilerplate-latest
 [releases-lingo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest

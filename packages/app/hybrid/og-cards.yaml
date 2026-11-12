@@ -68,23 +68,6 @@ cards:
       success: '#58cc02'
       error: '#ff4b4b'
 
-  - app: graphics-design/exhibit
-    url: 'https://hieudoanm.github.io/open/exhibit/'
-    name: Exhibit
-    kicker: 'Screens worth copying'
-    title: 'A UI component showcase'
-    description: 'A showcase of UI applications: a full banking wallet, a point of sale, a chat and a menu builder.'
-    tags: ['Wallet & banking', 'Point of sale', 'Chat UI', 'Menu builder']
-    theme:
-      base: '#ffffff'
-      content: '#1c1c1c'
-      primary: '#7c3aed'
-      secondary: '#06b6d4'
-      info: '#0288d1'
-      warning: '#f9a825'
-      success: '#2e7d32'
-      error: '#d32f2f'
-
   - app: sports/chess
     url: 'https://hieudoanm.github.io/open/chess/'
     name: Chess
