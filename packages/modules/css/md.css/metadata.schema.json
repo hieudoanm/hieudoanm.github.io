@@ -1,6 +1,0 @@
-{
-  "md.css": { "size": "<bytes>", "kb": "<kilobytes>" },
-  "md.css.map": { "size": "<bytes>", "kb": "<kilobytes>" },
-  "md.min.css": { "size": "<bytes>", "kb": "<kilobytes>" },
-  "md.min.css.map": { "size": "<bytes>", "kb": "<kilobytes>" }
-}

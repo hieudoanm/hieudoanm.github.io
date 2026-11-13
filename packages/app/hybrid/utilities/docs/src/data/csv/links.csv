@@ -1,12 +1,4 @@
 appId,type,url
-exhibit,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-exhibit-latest/exhibit.aab
-exhibit,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-exhibit-latest/exhibit.apk
-exhibit,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-exhibit-latest/exhibit.dmg
-exhibit,appimage,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-exhibit-latest/exhibit.AppImage
-exhibit,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-exhibit-latest/exhibit.deb
-exhibit,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-exhibit-latest/exhibit.rpm
-exhibit,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-exhibit-latest/exhibit.msi
-exhibit,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-exhibit-latest/exhibit.exe
 api,aab,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.aab
 api,apk,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.apk
 api,dmg,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.dmg
@@ -63,14 +55,6 @@ docs,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-
 docs,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.rpm
 docs,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.msi
 docs,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.exe
-browserverless,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-darwin-amd64
-browserverless,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-darwin-arm64
-browserverless,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-linux-amd64
-browserverless,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-linux-arm64
-kevin,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-darwin-amd64
-kevin,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-darwin-arm64
-kevin,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-linux-amd64
-kevin,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-linux-arm64
 dbml,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-amd64
 dbml,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-darwin-arm64
 dbml,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-dbml-latest/app-headless-dbml-dbml-linux-amd64
