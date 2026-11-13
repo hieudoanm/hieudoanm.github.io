@@ -4,25 +4,25 @@ The CLI is the primary transport for dbml: one Cobra-based binary that converts 
 
 ## 1. Stack
 
-| Concern       | Choice                              | Notes                                            |
-| ------------- | ----------------------------------- | ------------------------------------------------ |
-| Framework     | `github.com/spf13/cobra` v1.10.2    | Subcommands, help, version; pinned in `go.mod`   |
-| Flags         | `github.com/spf13/pflag` (indirect) | POSIX-style `-o`/`--output` shorthands           |
-| Logging       | `log/slog` text handler             | Warn level by default, stderr                    |
-| Everything else | Go standard library              | File I/O, signals, formatting                    |
+| Concern         | Choice                              | Notes                                          |
+| --------------- | ----------------------------------- | ---------------------------------------------- |
+| Framework       | `github.com/spf13/cobra` v1.10.2    | Subcommands, help, version; pinned in `go.mod` |
+| Flags           | `github.com/spf13/pflag` (indirect) | POSIX-style `-o`/`--output` shorthands         |
+| Logging         | `log/slog` text handler             | Warn level by default, stderr                  |
+| Everything else | Go standard library                 | File I/O, signals, formatting                  |
 
 Decision record: [`../../08-tech-stack.md`](../../08-tech-stack.md) §4.2. Rejected: stdlib `flag` (no subcommands), urfave/cli.
 
 ## 2. Commands
 
-| Command            | File              | Default input     | Default output                          |
-| ------------------ | ----------------- | ----------------- | --------------------------------------- |
-| `dbml sql`         | `cmd/sql.go`      | `schema.dbml`     | `initial_schema.sql` (`-o` overrides)   |
-| `dbml mermaid`     | `cmd/mermaid.go`  | `schema.dbml`     | `database-erd.mmd` (`-o` overrides)     |
-| `dbml svg`         | `cmd/svg.go`      | `schema.dbml`     | `schema.svg` (`-o` overrides)           |
-| `dbml all`         | `cmd/all.go`      | `schema.dbml`     | `initial_schema.sql` + `database-erd.mmd` + `schema.svg` in `--output-dir` (default `.`) |
-| `dbml serve`       | `cmd/serve.go`    | n/a               | HTTP server on `--port` (default `8080`)|
-| `dbml mcp serve`   | `cmd/mcp.go`      | n/a               | JSON-RPC 2.0 over stdio                  |
+| Command          | File             | Default input | Default output                                                                           |
+| ---------------- | ---------------- | ------------- | ---------------------------------------------------------------------------------------- |
+| `dbml sql`       | `cmd/sql.go`     | `schema.dbml` | `initial_schema.sql` (`-o` overrides)                                                    |
+| `dbml mermaid`   | `cmd/mermaid.go` | `schema.dbml` | `database-erd.mmd` (`-o` overrides)                                                      |
+| `dbml svg`       | `cmd/svg.go`     | `schema.dbml` | `schema.svg` (`-o` overrides)                                                            |
+| `dbml all`       | `cmd/all.go`     | `schema.dbml` | `initial_schema.sql` + `database-erd.mmd` + `schema.svg` in `--output-dir` (default `.`) |
+| `dbml serve`     | `cmd/serve.go`   | n/a           | HTTP server on `--port` (default `8080`)                                                 |
+| `dbml mcp serve` | `cmd/mcp.go`     | n/a           | JSON-RPC 2.0 over stdio                                                                  |
 
 Global flags: `-h/--help`, `-v/--version` (renders `dbml <version>`, `dev` unless ldflags set it). `serve` adds `--debug` for Debug-level slog output.
 
@@ -36,7 +36,7 @@ Global flags: `-h/--help`, `-v/--version` (renders `dbml <version>`, `dev` unles
 
 ## 4. Structure
 
-```
+```text
 cmd/
 ├── root.go      # root command, version template, Execute(), logging setup
 ├── sql.go       # sql subcommand

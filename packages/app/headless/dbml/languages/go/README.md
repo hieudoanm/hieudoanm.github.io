@@ -54,7 +54,7 @@ dbml mcp serve
 
 ## CLI Usage
 
-```
+```text
 dbml [command] [flags]
 
 Commands:
@@ -127,12 +127,12 @@ dbml serve --port 8080
 
 ### Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/health` | Health check |
-| POST | `/api/v1/convert` | Convert DBML to multiple formats |
-| POST | `/api/v1/convert/sql` | Convert DBML to SQL only |
-| POST | `/api/v1/convert/mermaid` | Convert DBML to Mermaid only |
+| Method | Endpoint                  | Description                      |
+| ------ | ------------------------- | -------------------------------- |
+| GET    | `/health`                 | Health check                     |
+| POST   | `/api/v1/convert`         | Convert DBML to multiple formats |
+| POST   | `/api/v1/convert/sql`     | Convert DBML to SQL only         |
+| POST   | `/api/v1/convert/mermaid` | Convert DBML to Mermaid only     |
 
 ### Request (JSON)
 
@@ -178,12 +178,12 @@ dbml mcp serve
 
 ### Tools
 
-| Tool | Description |
-|------|-------------|
-| `dbml_sql` | Convert DBML source to a PostgreSQL SQL schema |
-| `dbml_mermaid` | Convert DBML source to a Mermaid ER diagram |
-| `dbml_svg` | Render DBML source as an SVG ER diagram |
-| `dbml_parse` | Parse DBML source and return a JSON summary of the schema |
+| Tool           | Description                                               |
+| -------------- | --------------------------------------------------------- |
+| `dbml_sql`     | Convert DBML source to a PostgreSQL SQL schema            |
+| `dbml_mermaid` | Convert DBML source to a Mermaid ER diagram               |
+| `dbml_svg`     | Render DBML source as an SVG ER diagram                   |
+| `dbml_parse`   | Parse DBML source and return a JSON summary of the schema |
 
 Every tool takes a single `dbml` string argument containing the DBML source.
 
@@ -270,7 +270,7 @@ make install     # Install to ~/bin
 
 ### Project Structure
 
-```
+```text
 dbml/
 ├── cmd/              # Cobra commands
 │   ├── root.go       # Root command

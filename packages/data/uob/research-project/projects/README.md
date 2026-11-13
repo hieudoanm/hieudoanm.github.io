@@ -14,7 +14,7 @@ The pipeline has three layers, so analysis never depends on scraping a generated
 2. **Store** — `public/research.sqlite`, a normalised analytical store rebuilt from the inputs.
 3. **Outputs** — CSV exports, plus `public/`, which is the deployable site.
 
-```
+```text
 data/md/projects/*.md ─┐
 data/csv/projects_*.csv ─┴─▶ scripts/ingest.py ─▶ public/research.sqlite ─┬─▶ data/csv/*.csv
                         scripts/schema.sql                           └─▶ public/index.html
@@ -38,13 +38,13 @@ data/csv/ranking_weights.csv ─▶ scripts/runs.py (scores, exports)
 
 ## Scoring
 
-| Dimension            | Weight | Active when |
-| -------------------- | ------ | ----------- |
-| Programme relevance  | 0.40   | your programme is chosen |
-| Interest match       | 0.40   | always, from your top 3 ranked subject areas |
-| Supervisor focus     | 0.10   | a supervisor has verified research focus |
-| Method match         | 0.05   | your top 3 ranked methods are non-empty |
-| Feasibility          | 0.05   | all three ratings are filled for every project |
+| Dimension           | Weight | Active when                                    |
+| ------------------- | ------ | ---------------------------------------------- |
+| Programme relevance | 0.40   | your programme is chosen                       |
+| Interest match      | 0.40   | always, from your top 3 ranked subject areas   |
+| Supervisor focus    | 0.10   | a supervisor has verified research focus       |
+| Method match        | 0.05   | your top 3 ranked methods are non-empty        |
+| Feasibility         | 0.05   | all three ratings are filled for every project |
 
 Programme relevance is graded: it scores `100` when the project offers the degree and route you chose, or leaves the route open; `50` when the degree matches a different route or shares a stem; and `0` otherwise. The route after the dash (such as `COMPUTATIONAL neuroscience`) is matched leniently, so it never forces a miss on the degree itself.
 
