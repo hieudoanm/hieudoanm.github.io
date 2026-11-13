@@ -2,11 +2,10 @@
 
 ## Projects
 
-| No  | Headless                            |
-| --- | ----------------------------------- |
-| 1   | [Browserverless](./browserverless/) |
-| 2   | [CV](./cv)                          |
-| 3   | [DBML](./dbml/)                     |
+| No  | Headless        |
+| --- | --------------- |
+| 1   | [CV](./cv)      |
+| 2   | [DBML](./dbml/) |
 
 ## Techstack
 

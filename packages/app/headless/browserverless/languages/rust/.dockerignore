@@ -1,9 +1,0 @@
-.git
-.gitignore
-target
-Cargo.lock
-Dockerfile
-docker
-.dockerignore
-README.md
-*.md

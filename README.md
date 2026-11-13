@@ -4,15 +4,14 @@
 
 Topics: `github-pages`, `organization`, `monorepo`
 
-## [Open Releases (10)](https://hieudoanm.github.io/open)
+## [Open Releases (9)](https://hieudoanm.github.io/open)
 
-### Headless (3)
+### Headless (2)
 
-| No  | Platform | Category        | Name           | Open                        | Releases                            |
-| --- | -------- | --------------- | -------------- | --------------------------- | ----------------------------------- |
-| 1   | Headless | Developer Tools | Browserverless | [Open][open-browserverless] | [Releases][releases-browserverless] |
-| 2   | Headless | Developer Tools | CV             | [Open][open-cv]             | [Releases][releases-cv]             |
-| 3   | Headless | Developer Tools | DBML           | [Open][open-dbml]           | [Releases][releases-dbml]           |
+| No  | Platform | Category        | Name | Open              | Releases                  |
+| --- | -------- | --------------- | ---- | ----------------- | ------------------------- |
+| 1   | Headless | Developer Tools | CV   | [Open][open-cv]   | [Releases][releases-cv]   |
+| 2   | Headless | Developer Tools | DBML | [Open][open-dbml] | [Releases][releases-dbml] |
 
 ---
 
@@ -20,13 +19,13 @@ Topics: `github-pages`, `organization`, `monorepo`
 
 | No  | Platform | Category        | Name        | Open                     | Releases                         |
 | --- | -------- | --------------- | ----------- | ------------------------ | -------------------------------- |
-| 4   | Hybrid   | Developer Tools | API         | [Open][open-api]         | [Releases][releases-api]         |
-| 5   | Hybrid   | Developer Tools | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
-| 6   | Hybrid   | Education       | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
-| 7   | Hybrid   | Sports          | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
-| 8   | Hybrid   | Sports          | Football    | [Open][open-football]    | [Releases][releases-football]    |
-| 9   | Hybrid   | Sports          | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
-| 10  | Hybrid   | Utilities       | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
+| 3   | Hybrid   | Developer Tools | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 4   | Hybrid   | Developer Tools | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 5   | Hybrid   | Education       | Lingo       | [Open][open-lingo]       | [Releases][releases-lingo]       |
+| 6   | Hybrid   | Sports          | Chess       | [Open][open-chess]       | [Releases][releases-chess]       |
+| 7   | Hybrid   | Sports          | Football    | [Open][open-football]    | [Releases][releases-football]    |
+| 8   | Hybrid   | Sports          | Tourney     | [Open][open-tourney]     | [Releases][releases-tourney]     |
+| 9   | Hybrid   | Utilities       | Docs        | [Open][open-docs]        | [Releases][releases-docs]        |
 
 ---
 
@@ -41,7 +40,6 @@ Topics: `github-pages`, `organization`, `monorepo`
 [open-football]: https://hieudoanm.github.io/open/football/
 [open-tourney]: https://hieudoanm.github.io/open/tourney/
 [open-docs]: https://hieudoanm.github.io/
-[open-browserverless]: https://hieudoanm.github.io/open/browserverless/
 
 <!-- Releases -->
 
@@ -52,6 +50,5 @@ Topics: `github-pages`, `organization`, `monorepo`
 [releases-football]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-football-latest
 [releases-tourney]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-tourney-latest
 [releases-docs]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-docs-latest
-[releases-browserverless]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
 [releases-dbml]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-dbml-latest
 [releases-cv]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-cv-latest
