@@ -1244,8 +1244,8 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
       solid-js:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.0.2
+        version: 2.0.2
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -2369,8 +2369,8 @@ packages:
   '@sinonjs/fake-timers@15.4.0':
     resolution: {integrity: sha512-DsG+8/LscQIQg68J6Ef3dv10u6nVyetYn923s3/sus5eaGfTo1of5WMZSLf0UJc9KDuKPilPH0UDJCjvNbDNCA==}
 
-  '@solidjs/signals@2.0.0':
-    resolution: {integrity: sha512-jrcT6XTVvsYRpesRp0At/mSUnsWr6jiprK8C93Oat56B8n7X9BMSe58Rxl6qSZUhBN0L+sxm8GzeO7HdhBXvDw==}
+  '@solidjs/signals@2.0.2':
+    resolution: {integrity: sha512-2fz61amXyilWDNfL7EPcJ6WfH0XXMjuqHMaNPnlKjJDqFOuvQBHBGxZVgF53lZdooZenJKgYp0AWdd/uvI9BMg==}
     engines: {node: '>=22.12.0'}
 
   '@swc/helpers@0.5.23':
@@ -5437,8 +5437,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  solid-js@2.0.0:
-    resolution: {integrity: sha512-9zN4uH2OQeQAYbF4BmIzoaa+L5Hb8Dp6kkP6ZXobHQ1FZVICdmzREPDVDBJY7umzdAE8D6zbFfWhxGtagkyslA==}
+  solid-js@2.0.2:
+    resolution: {integrity: sha512-0ubVj/v/uXsiA+Ia0I2ktn/nqUzgT29dvAt/pcvqXrVysTHJdG2vpcIEFcs3SqVb+Gr6O+e8dUyik4gBVZA7Pw==}
     engines: {node: '>=22.12.0'}
 
   source-map-js@1.2.2:
@@ -7073,7 +7073,7 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@solidjs/signals@2.0.0': {}
+  '@solidjs/signals@2.0.2': {}
 
   '@swc/helpers@0.5.23':
     dependencies:
@@ -10438,9 +10438,9 @@ snapshots:
 
   slash@3.0.0: {}
 
-  solid-js@2.0.0:
+  solid-js@2.0.2:
     dependencies:
-      '@solidjs/signals': 2.0.0
+      '@solidjs/signals': 2.0.2
       seroval: 1.8.1
       seroval-plugins: 1.8.0(seroval@1.8.1)
 
