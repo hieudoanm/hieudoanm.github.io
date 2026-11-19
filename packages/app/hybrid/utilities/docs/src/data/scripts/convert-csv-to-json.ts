@@ -1,7 +1,8 @@
 import { readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const DATA_DIR = join(__dirname, '..');
+const DATA_DIR = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CSV_DIR = join(DATA_DIR, 'csv');
 const JSON_PATH = join(DATA_DIR, 'downloads.json');
 const APPS_FILE = join(CSV_DIR, 'apps.csv');
@@ -51,6 +52,25 @@ type DownloadSection = {
   items: DownloadItem[];
 };
 
+// apps.csv has no header row; columns are positional:
+// sectionId, section, appId, app, primaryCategory, secondaryCategory, icon,
+// version, lastUpdated, fileSize, href, fallbackLabel, fallbackUrl
+const APPS_COLUMNS = [
+  'sectionId',
+  'section',
+  'appId',
+  'app',
+  'primaryCategory',
+  'secondaryCategory',
+  'icon',
+  'version',
+  'lastUpdated',
+  'fileSize',
+  'href',
+  'fallbackLabel',
+  'fallbackUrl',
+] as const;
+
 const parseCsvRows = (csv: string): string[][] => {
   const rows: string[][] = [];
   let row: string[] = [];
@@ -86,21 +106,25 @@ const parseCsvRows = (csv: string): string[][] => {
   return rows;
 };
 
-const readCsv = (file: string): Record<string, string>[] => {
+const readCsv = (
+  file: string,
+  hasHeader: boolean
+): Record<string, string>[] => {
   const csv = readFileSync(file, 'utf8')
     .replaceAll('\r\n', '\n')
     .replaceAll('\r', '');
-  const [header, ...body] = parseCsvRows(csv);
-  const rows: Record<string, string>[] = [];
+  const rows = parseCsvRows(csv);
+  const [header, ...body] = hasHeader ? rows : [APPS_COLUMNS, ...rows];
+  const result: Record<string, string>[] = [];
   for (const values of body) {
     if (!values.some((value) => value.trim() !== '')) continue;
-    const row: Record<string, string> = {};
+    const record: Record<string, string> = {};
     header.forEach((column, index) => {
-      row[column as string] = (values[index] ?? '').trim();
+      record[column as string] = (values[index] ?? '').trim();
     });
-    rows.push(row);
+    result.push(record);
   }
-  return rows;
+  return result;
 };
 
 const toJson = (
@@ -110,21 +134,20 @@ const toJson = (
   const byAppId = (appId: string) =>
     links.filter((link) => link.appId === appId && link.url !== '');
 
-  const toActions = (appId: string, releasesUrl: string): DownloadAction[] => {
-    const actions = byAppId(appId).map((link) => ({
-      label: LINK_LABELS[link.type] ?? link.type,
-      url: link.url,
-    }));
-    if (actions.length === 0 && releasesUrl !== '') {
-      actions.push({ label: 'View Releases', url: releasesUrl });
-    }
-    return actions;
-  };
-
   const sections: DownloadSection[] = [];
   for (const row of apps) {
     if (row.app === '') continue;
-    const section = sections.find((entry) => entry.id === row.sectionId);
+    const appLinks = byAppId(row.appId);
+    const actions: DownloadAction[] = appLinks.map((link) => ({
+      label: LINK_LABELS[link.type] ?? link.type,
+      url: link.url,
+    }));
+    if (actions.length === 0 && row.fallbackUrl !== '') {
+      actions.push({
+        label: row.fallbackLabel || 'View Releases',
+        url: row.fallbackUrl,
+      });
+    }
     const item: DownloadItem = {
       label: row.app,
       primaryCategory: row.primaryCategory,
@@ -134,8 +157,9 @@ const toJson = (
       version: row.version || '1.0.0',
       lastUpdated: row.lastUpdated || '',
       fileSize: row.fileSize || '',
-      actions: toActions(row.appId, row.releasesUrl),
+      actions,
     };
+    const section = sections.find((entry) => entry.id === row.sectionId);
     if (section) {
       section.items.push(item);
     } else {
@@ -152,8 +176,11 @@ const toJson = (
 export const main = (): void => {
   writeFileSync(
     JSON_PATH,
-    JSON.stringify(toJson(readCsv(APPS_FILE), readCsv(LINKS_FILE)), null, 2) +
-      '\n'
+    JSON.stringify(
+      toJson(readCsv(APPS_FILE, false), readCsv(LINKS_FILE, true)),
+      null,
+      2
+    ) + '\n'
   );
   console.log(`Wrote ${JSON_PATH}`);
 };
