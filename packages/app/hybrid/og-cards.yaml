@@ -11,23 +11,6 @@
 # with data-theme; kicker and tags describe what the app actually does. url is
 # the app's public address, as listed in packages/app/hybrid/README.md.
 cards:
-  - app: developer-tools/api
-    url: 'https://hieudoanm.github.io/open/api/'
-    name: API Client
-    kicker: 'Every protocol, one client'
-    title: 'Debug any API in the browser'
-    description: 'REST, GraphQL, gRPC, WebSocket and MQTT in one client, with collections and saved history.'
-    tags: ['REST & GraphQL', 'gRPC', 'WebSocket & MQTT', 'Collections']
-    theme:
-      base: '#ffffff'
-      content: '#1b1b1f'
-      primary: '#ff6c37'
-      secondary: '#7347c1'
-      info: '#2563eb'
-      warning: '#d97706'
-      success: '#16a34a'
-      error: '#dc2626'
-
   - app: developer-tools/boilerplate
     url: 'https://hieudoanm.github.io/open/boilerplate/'
     name: Boilerplate
