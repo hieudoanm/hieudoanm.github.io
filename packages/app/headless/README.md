@@ -2,10 +2,9 @@
 
 ## Projects
 
-| No  | Headless        |
-| --- | --------------- |
-| 1   | [CV](./cv)      |
-| 2   | [DBML](./dbml/) |
+| No  | Headless   |
+| --- | ---------- |
+| 1   | [CV](./cv) |
 
 ## Techstack
 
