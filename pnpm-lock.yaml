@@ -303,8 +303,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
       daisyui:
-        specifier: 5.8.1
-        version: 5.8.1
+        specifier: 5.8.2
+        version: 5.8.2
       eslint:
         specifier: 10.15.0
         version: 10.15.0(jiti@2.7.0)(supports-color@8.1.1)
@@ -430,8 +430,8 @@ importers:
         specifier: 0.187.0
         version: 0.187.0
       daisyui:
-        specifier: 5.8.1
-        version: 5.8.1
+        specifier: 5.8.2
+        version: 5.8.2
       eslint:
         specifier: 10.15.0
         version: 10.15.0(jiti@2.7.0)(supports-color@8.1.1)
@@ -560,8 +560,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
       daisyui:
-        specifier: 5.8.1
-        version: 5.8.1
+        specifier: 5.8.2
+        version: 5.8.2
       eslint:
         specifier: 10.15.0
         version: 10.15.0(jiti@2.7.0)(supports-color@8.1.1)
@@ -651,8 +651,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
       daisyui:
-        specifier: 5.8.1
-        version: 5.8.1
+        specifier: 5.8.2
+        version: 5.8.2
       eslint:
         specifier: 10.15.0
         version: 10.15.0(jiti@2.7.0)(supports-color@8.1.1)
@@ -745,8 +745,8 @@ importers:
         specifier: 1.16.0
         version: 1.16.0
       daisyui:
-        specifier: 5.8.1
-        version: 5.8.1
+        specifier: 5.8.2
+        version: 5.8.2
       eslint:
         specifier: 10.15.0
         version: 10.15.0(jiti@2.7.0)(supports-color@8.1.1)
@@ -836,8 +836,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       daisyui:
-        specifier: 5.8.1
-        version: 5.8.1
+        specifier: 5.8.2
+        version: 5.8.2
       eslint:
         specifier: 10.15.0
         version: 10.15.0(jiti@2.7.0)(supports-color@8.1.1)
@@ -3331,8 +3331,8 @@ packages:
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
-  daisyui@5.8.1:
-    resolution: {integrity: sha512-ptP4WHOJ6WltNnA5zwkg3GypOLhsyUM2FHuXCckWVEpWviioInFKsjnShCWYGYHsQ5P9bUCOH1tn45cKLeTUpg==}
+  daisyui@5.8.2:
+    resolution: {integrity: sha512-InScsDXX0pbfgvWyPQ8iTHV4rNMZdfbMo85KqlQUn62/PCIjwczViw5lbotzoXy/nPrn4qjDMmx/fspuUnjBtA==}
 
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -8069,7 +8069,7 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  daisyui@5.8.1: {}
+  daisyui@5.8.2: {}
 
   damerau-levenshtein@1.0.8: {}
 
