@@ -1,3 +1,4 @@
+import { Header } from '@hieudoanm.github.io/components/organisms/Header';
 import RootLayoutClient from '@hieudoanm.github.io/components/layout/RootLayoutClient';
 import '@hieudoanm.github.io/styles/globals.css';
 import { Metadata } from 'next';
@@ -49,7 +50,15 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <html lang="en" data-theme="nothing">
       <body className={beVietnamPro.className + ' antialiased'}>
-        <RootLayoutClient>{children}</RootLayoutClient>
+        <RootLayoutClient>
+          <div
+            id="store-root"
+            data-theme="store-dark"
+            className="bg-base-100 text-base-content flex w-full flex-1 flex-col font-mono">
+            <Header />
+            <div className="flex-1">{children}</div>
+          </div>
+        </RootLayoutClient>
       </body>
     </html>
   );

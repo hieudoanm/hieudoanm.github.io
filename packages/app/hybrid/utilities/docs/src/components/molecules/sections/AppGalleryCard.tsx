@@ -31,7 +31,7 @@ export const AppGalleryCard: FC<AppGalleryCardProps> = ({
   highlightQuery,
 }) => (
   <Link
-    href={`/store/app/${app.slug}/`}
+    href={`/app/${app.slug}/`}
     className="card bg-base-200 border-base-300 hover:bg-base-300 group block overflow-hidden border transition-colors duration-300">
     <div className="bg-base-100 aspect-video overflow-hidden">
       <img

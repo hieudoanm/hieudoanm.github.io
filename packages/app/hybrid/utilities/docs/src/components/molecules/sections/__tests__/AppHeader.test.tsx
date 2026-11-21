@@ -88,7 +88,7 @@ describe('AppHeader', () => {
     render(<AppHeader app={mockApp} />);
     await user.click(screen.getByTitle('Share'));
     expect(writeText).toHaveBeenCalledWith(
-      expect.stringContaining('/store/app/test-app/')
+      expect.stringContaining('/app/test-app/')
     );
   });
 

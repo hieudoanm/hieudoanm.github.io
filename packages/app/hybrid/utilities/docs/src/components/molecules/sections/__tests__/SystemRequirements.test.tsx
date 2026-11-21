@@ -9,7 +9,7 @@ const mockApp: AppData = {
   secondaryCategory: 'Board',
   section: 'hybrid',
   icon: 'PiPackage',
-  href: '/store/app/chess/',
+  href: '/app/chess/',
   platforms: ['macos', 'android'],
   downloads: [],
   version: '1.0.0',

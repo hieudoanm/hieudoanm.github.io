@@ -186,7 +186,7 @@ describe('recommendDownload', () => {
     secondaryCategory: 'General',
     section,
     icon: 'PiPackage',
-    href: '/store/app/demo/',
+    href: '/app/demo/',
     platforms: ['macos', 'windows'],
     downloads,
     version: '1.0.0',

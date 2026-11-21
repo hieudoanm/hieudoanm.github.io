@@ -85,7 +85,7 @@ export const HexagonGrid: FC<HexagonGridProps> = ({ apps }) => {
                   height: CELL_H,
                 }}>
                 <Link
-                  href={`/store/app/${app.slug}`}
+                  href={`/app/${app.slug}`}
                   aria-label={app.label}
                   className="block"
                   style={{ width: HEX_W, height: HEX_H }}>

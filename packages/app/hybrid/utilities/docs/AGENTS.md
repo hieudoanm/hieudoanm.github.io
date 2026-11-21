@@ -1,8 +1,8 @@
 # Docs
 
-Personal site for Hieu Doan: a resume page at `/` and the Apps Store at `/store`
-(migrated from `app/hybrid/shopping/store`). Developer tools that used to live
-here moved to the Omni monorepo (`omni/packages/web` `/apps`).
+Personal site for Hieu Doan: the Apps Store at `/` (migrated from
+`app/hybrid/shopping/store`, formerly under `/store`). Developer tools that used
+to live here moved to the Omni monorepo (`omni/packages/web` `/apps`).
 
 ## Build & Test
 
@@ -20,13 +20,10 @@ pnpm test:e2e               # Playwright (home.spec.ts only)
 ```text
 src/
   app/
-    page.tsx                # Resume (formerly the about page)
-    layout.tsx              # Root layout (data-theme="nothing")
-    store/
-      layout.tsx            # Store shell — #store-root data-theme="store-dark" + Header
-      page.tsx              # Store home — search, filters, app grid
-      app/[slug]/page.tsx   # App detail pages (19 apps, generateStaticParams)
-      about|downloads|version/  # Store info pages
+    page.tsx                # Store home — search, filters, app grid
+    layout.tsx              # Root layout — store shell (#store-root
+                            # data-theme="store-dark" + Header) inside RootLayoutClient
+    app/[slug]/page.tsx     # App detail pages (generateStaticParams)
   components/
     routes/resume/          # Resume sections, data, periods, projects
     organisms/
@@ -35,9 +32,8 @@ src/
       layout/               # Docs sidebar Breadcrumb
         Breadcrumb.tsx
     molecules/ + atoms/     # Store UI (StoreCard, SearchBar, sections/, ...)
-    templates/              # Store About/Downloads/Version/Error templates
+    templates/              # Store Error templates
     layout/RootLayoutClient.tsx
-  content/                  # Store static content (about, downloads, version)
   data/downloads.json       # Store app catalog (source: data/csv/*.csv)
   lib/                      # Store logic (os detect, downloads parser, screenshots)
   hooks/                    # useSWRegister + store hooks (useSearch, useFilters, ...)
@@ -53,10 +49,11 @@ e2e/home.spec.ts            # Only remaining Playwright spec — covers /
 
 ## Store specifics
 
-- All store routes live under `/store`; internal links are `/store`-prefixed.
+- Store routes live at `/` (home) and `/app/<slug>`; internal links are
+  root-relative (`/app/<slug>`).
 - Store theme is scoped: `data-theme="store-dark"` on `#store-root` in
-  `app/store/layout.tsx` — it does NOT leak into the resume page. The Header
-  theme toggle writes to `#store-root` (falls back to `documentElement`).
+  `app/layout.tsx`. The Header theme toggle writes to `#store-root` (falls back
+  to `documentElement`).
 - `lib/screenshots.ts` serves screenshots locally from `/store/screenshots`.
 - App catalog: edit `data/csv/*.csv`, regenerate `data/downloads.json` with
   `data/scripts/convert-csv-to-json.ts`.

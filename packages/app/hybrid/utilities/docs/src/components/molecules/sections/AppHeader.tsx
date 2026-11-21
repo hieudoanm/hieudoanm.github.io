@@ -11,7 +11,7 @@ interface AppHeaderProps {
 }
 
 const handleShare = (app: AppData) => {
-  const url = `${typeof window !== 'undefined' ? window.location.origin : ''}/store/app/${app.slug}/`;
+  const url = `${typeof window !== 'undefined' ? window.location.origin : ''}/app/${app.slug}/`;
   if (navigator.share) {
     navigator.share({ title: app.label, text: app.primaryCategory, url });
   } else {

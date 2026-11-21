@@ -33,7 +33,7 @@ export const RecentlyViewed: FC<RecentlyViewedProps> = ({
           {apps.map((app) => (
             <Link
               key={app.slug}
-              href={`/store/app/${app.slug}/`}
+              href={`/app/${app.slug}/`}
               className="card bg-base-200 border-base-300 hover:bg-base-300 group block overflow-hidden border transition-colors duration-300">
               <div className="bg-base-100 aspect-video overflow-hidden">
                 <img
@@ -65,7 +65,7 @@ export const RecentlyViewed: FC<RecentlyViewedProps> = ({
           {apps.map((app) => (
             <Link
               key={app.slug}
-              href={`/store/app/${app.slug}/`}
+              href={`/app/${app.slug}/`}
               className="card bg-base-200 border-base-300 hover:bg-base-300 flex flex-row items-center gap-3 border p-3 transition-colors">
               <span className="text-primary text-sm">
                 {isFavorite(app.slug) ? '\u2665' : '\u2661'}
@@ -86,7 +86,7 @@ export const RecentlyViewed: FC<RecentlyViewedProps> = ({
             return (
               <Link
                 key={app.slug}
-                href={`/store/app/${app.slug}/`}
+                href={`/app/${app.slug}/`}
                 className="card bg-base-200 border-base-300 hover:bg-base-300 border p-3 text-center transition-colors">
                 <Icon className="text-primary mx-auto mb-1 text-lg" />
                 <div className="truncate text-xs">{app.label}</div>

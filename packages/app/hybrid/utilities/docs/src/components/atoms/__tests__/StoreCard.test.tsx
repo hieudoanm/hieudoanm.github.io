@@ -58,7 +58,7 @@ describe('StoreCard', () => {
     render(<StoreCard app={mockApp} platform="unknown" />);
     const link = screen.getByRole('link', { name: 'View Details' });
     expect(link).toBeTruthy();
-    expect(link.getAttribute('href')).toBe('/store/app/test-app');
+    expect(link.getAttribute('href')).toBe('/app/test-app');
   });
 
   it('renders recommended download button when provided', () => {

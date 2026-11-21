@@ -35,26 +35,6 @@ describe('Header', () => {
     expect(screen.getByText('Store')).toBeTruthy();
   });
 
-  it('renders About link', () => {
-    render(<Header />);
-    expect(screen.getAllByText('About').length).toBeGreaterThanOrEqual(1);
-  });
-
-  it('renders Version link', () => {
-    render(<Header />);
-    expect(screen.getAllByText('Version').length).toBeGreaterThanOrEqual(1);
-  });
-
-  it('renders Downloads link', () => {
-    render(<Header />);
-    expect(
-      screen.getAllByRole('link', { name: 'Downloads' }).length
-    ).toBeGreaterThanOrEqual(1);
-    expect(
-      screen.getAllByRole('link', { name: 'Downloads' })[0]
-    ).toHaveAttribute('href', '/store/downloads');
-  });
-
   it('renders theme toggle button', () => {
     render(<Header />);
     expect(screen.getByTestId('theme-toggle')).toBeTruthy();
@@ -79,12 +59,5 @@ describe('Header', () => {
     expect(document.documentElement.getAttribute('data-theme')).toBe(
       'store-dark'
     );
-  });
-
-  it('renders navigation links in desktop and mobile dropdown', () => {
-    render(<Header />);
-    expect(screen.getAllByRole('link', { name: 'About' }).length).toBe(2);
-    expect(screen.getAllByRole('link', { name: 'Downloads' }).length).toBe(2);
-    expect(screen.getAllByRole('link', { name: 'Version' }).length).toBe(2);
   });
 });

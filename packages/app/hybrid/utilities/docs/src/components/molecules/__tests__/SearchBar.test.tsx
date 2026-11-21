@@ -10,7 +10,7 @@ const mockApps: AppData[] = [
     secondaryCategory: 'Tools',
     section: 'hybrid',
     icon: 'PiPackage',
-    href: '/store/app/test/',
+    href: '/app/test/',
     platforms: ['macos'],
     downloads: [],
     version: '1.0.0',

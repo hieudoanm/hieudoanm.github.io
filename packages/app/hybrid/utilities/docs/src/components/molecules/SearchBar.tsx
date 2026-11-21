@@ -68,7 +68,7 @@ export const SearchBar: FC<SearchBarProps> = ({
             {suggestions.map((s) => (
               <Link
                 key={s.slug}
-                href={`/store/app/${s.slug}/`}
+                href={`/app/${s.slug}/`}
                 className="hover:bg-base-300 block px-4 py-2 text-sm">
                 <Highlight text={s.label} query={query} />
                 <span className="text-base-content/40 ml-2 text-xs">

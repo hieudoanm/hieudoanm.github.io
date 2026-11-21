@@ -24,7 +24,7 @@ const mockApp: AppData = {
 
 jest.mock('next/navigation', () => ({
   useParams: () => ({ slug: 'test-app' }),
-  usePathname: () => '/store/app/test-app/',
+  usePathname: () => '/app/test-app/',
 }));
 
 describe('AppInfo', () => {
@@ -84,7 +84,7 @@ describe('AppInfo', () => {
     render(<AppInfo app={mockApp} />);
     const link = screen.getByRole('link', { name: /Back to Store/ });
     expect(link).toBeTruthy();
-    expect(link.getAttribute('href')).toBe('/store');
+    expect(link.getAttribute('href')).toBe('/');
   });
 
   it('renders unknown icon fallback', () => {

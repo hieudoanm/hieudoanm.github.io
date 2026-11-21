@@ -32,7 +32,7 @@ export const RelatedApps: FC<RelatedAppsProps> = ({ app, allApps }) => {
           return (
             <Link
               key={r.slug}
-              href={`/store/app/${r.slug}/`}
+              href={`/app/${r.slug}/`}
               className="card bg-base-200 border-base-300 hover:bg-base-300 border p-3 text-center transition-colors">
               <Icon className="text-primary mx-auto mb-1 text-lg" />
               <div className="truncate text-xs">{r.label}</div>

@@ -51,23 +51,6 @@ cards:
       success: '#58cc02'
       error: '#ff4b4b'
 
-  - app: sports/chess
-    url: 'https://hieudoanm.github.io/open/chess/'
-    name: Chess
-    kicker: 'A full chess toolbox'
-    title: 'Board, clock and analysis'
-    description: 'A minimal chess toolbox: play on a board, run a clock, track Elo, review games and study openings.'
-    tags: ['Board & clock', 'Elo tracker', 'Game review', 'Opening library']
-    theme:
-      base: '#f6f3eb'
-      content: '#241c10'
-      primary: '#1f513f'
-      secondary: '#9b7f3f'
-      info: '#2f6f9e'
-      warning: '#a16207'
-      success: '#1e8449'
-      error: '#b91c1c'
-
   - app: sports/football
     url: 'https://hieudoanm.github.io/open/football/'
     name: Football

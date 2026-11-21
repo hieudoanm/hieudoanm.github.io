@@ -25,7 +25,7 @@ const makeApp = (slug: string): AppData => ({
   secondaryCategory: 'Board',
   section: 'hybrid',
   icon: 'PiPackage',
-  href: `/store/app/${slug}/`,
+  href: `/app/${slug}/`,
   platforms: ['macos'],
   downloads: [
     { platform: 'macos', label: '.dmg', url: 'https://example.com/a.dmg' },
@@ -103,7 +103,7 @@ describe('Featured', () => {
     );
     expect(screen.getByRole('link', { name: /Chess/ })).toHaveAttribute(
       'href',
-      expect.stringContaining('/store/app/chess')
+      expect.stringContaining('/app/chess')
     );
   });
 

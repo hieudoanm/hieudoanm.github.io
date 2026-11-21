@@ -62,7 +62,7 @@ export const StoreCard: FC<StoreCardProps> = ({
             </button>
           )}
           <Link
-            href={`/store/app/${app.slug}/`}
+            href={`/app/${app.slug}/`}
             className="btn btn-ghost btn-xs w-full no-underline">
             View Details
           </Link>
