@@ -75,30 +75,6 @@ build_hybrid_apps() {
     verify_open
 }
 
-copy_landing_pages() {
-    local base_dir="$1"
-    local src_file slug dest_dir pub_dir
-
-    if [[ ! -d "$base_dir" ]]; then
-        echo "Skipping landing pages: $base_dir not found."
-        return
-    fi
-
-    for src_file in "$base_dir"/*/public/index.html; do
-        [[ -f "$src_file" ]] || continue
-        slug="${src_file%/public/index.html}"
-        slug="${slug##*/}"
-        pub_dir="$(dirname "$src_file")"
-        dest_dir="$DOCS_DIR/open/$slug"
-
-        echo "Copying $pub_dir -> $dest_dir"
-        rm -rf "$dest_dir"
-        mkdir -p "$dest_dir"
-        cp -R "$pub_dir"/. "$dest_dir"
-        touch "$dest_dir/.nojekyll"
-    done
-}
-
 copy_data_public() {
     local src_dir="$ROOT_DIR/packages/data/uob/research-project/projects/public"
     local dest_dir="$DOCS_DIR/uob/research-projects"
@@ -188,10 +164,6 @@ require pnpm
 build_workspace_deps
 
 build_hybrid_apps
-
-copy_landing_pages "$ROOT_DIR/packages/app/headless"
-copy_landing_pages "$ROOT_DIR/packages/app/native"
-copy_landing_pages "$ROOT_DIR/packages/extensions/browser"
 
 copy_data_public
 

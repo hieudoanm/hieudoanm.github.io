@@ -268,39 +268,5 @@
         ]
       }
     ]
-  },
-  {
-    "id": "headless",
-    "label": "Headless",
-    "items": [
-      {
-        "label": "CV",
-        "primaryCategory": "Developer Tools",
-        "secondaryCategory": "Productivity",
-        "icon": "PiFilePdf",
-        "href": "https://hieudoanm.github.io/open/cv",
-        "version": "latest",
-        "lastUpdated": "2026-10-13",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "macOS (Intel)",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-darwin-amd64"
-          },
-          {
-            "label": "macOS (Apple Silicon)",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-darwin-arm64"
-          },
-          {
-            "label": "Linux x64",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-linux-amd64"
-          },
-          {
-            "label": "Linux ARM64",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-linux-arm64"
-          }
-        ]
-      }
-    ]
   }
 ]

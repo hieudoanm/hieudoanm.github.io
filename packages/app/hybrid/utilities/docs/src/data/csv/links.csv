@@ -47,7 +47,3 @@ docs,deb,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-
 docs,rpm,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.rpm
 docs,msi,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.msi
 docs,exe,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.exe
-cv,darwin-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-darwin-amd64
-cv,darwin-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-darwin-arm64
-cv,linux-amd64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-linux-amd64
-cv,linux-arm64,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-cv-latest/app-headless-cv-cv-linux-arm64
