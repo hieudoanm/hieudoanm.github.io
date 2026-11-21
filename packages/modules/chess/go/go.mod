@@ -1,3 +1,0 @@
-module github.com/hieudoanm/chess
-
-go 1.27.2
