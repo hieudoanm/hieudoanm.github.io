@@ -40,7 +40,7 @@
     "@types/react-dom": "19.3.0",
     "docsify": "5.1.0",
     "husky": "9.1.7",
-    "lint-staged": "17.6.1",
+    "lint-staged": "17.6.2",
     "prettier": "3.10.1",
     "prettier-plugin-tailwindcss": "0.8.1",
     "turbo": "2.11.13"
