@@ -7,6 +7,7 @@ import { RecentlyViewed } from '@/components/molecules/RecentlyViewed';
 import { SearchBar } from '@/components/molecules/SearchBar';
 import { SortBar } from '@/components/molecules/SortBar';
 import { Featured } from '@/components/molecules/sections/Featured';
+import { Header } from '@/components/organisms/Header';
 import downloadsJson from '@/data/downloads.json';
 import { useArchitectureDetect } from '@/hooks/useArchitectureDetect';
 import { useBrowserDetect } from '@/hooks/useBrowserDetect';
@@ -122,6 +123,7 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col overflow-hidden">
+      <Header />
       <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
         <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
           {today}

@@ -22,10 +22,10 @@ pnpm test:e2e               # Playwright (home.spec.ts only)
 src/
   app/
     page.tsx                # Resume home — profile, experience, projects
-    open/page.tsx           # Store home — search, filters, app grid
-    layout.tsx              # Root layout — store shell (#store-root
-                            # + Header) inside RootLayoutClient
-    app/[slug]/page.tsx     # App detail pages (generateStaticParams)
+    open/page.tsx           # Store home — Header + search, filters, app grid
+    layout.tsx              # Root layout — #store-root shell inside
+                            # RootLayoutClient (no Header; pages opt in)
+    app/[slug]/page.tsx     # App detail pages (Header + generateStaticParams)
   components/
     routes/resume/          # Resume sections + data (ResumeView)
     organisms/

@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { parseDownloads, getReleasePageUrl } from '@/lib/downloads';
 import downloads from '@/data/downloads.json';
 import { AppPage } from '@/components/organisms/AppPage';
+import { Header } from '@/components/organisms/Header';
 
 const SCREENSHOT_BASE_URL =
   process.env.NODE_ENV === 'development'
@@ -50,10 +51,13 @@ const Page: NextPage<PageProps> = async ({ params }) => {
   const { slug } = await params;
   const app = ALL_APPS.find((a) => a.slug === slug);
   return (
-    <AppPage
-      screenshots={getScreenshots(slug)}
-      releaseUrl={app ? getReleasePageUrl(app) : ''}
-    />
+    <>
+      <Header />
+      <AppPage
+        screenshots={getScreenshots(slug)}
+        releaseUrl={app ? getReleasePageUrl(app) : ''}
+      />
+    </>
   );
 };
 

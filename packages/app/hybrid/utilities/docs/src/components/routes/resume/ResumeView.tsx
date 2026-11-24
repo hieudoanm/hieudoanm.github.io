@@ -36,7 +36,7 @@ export const ResumeView: FC = () => {
   return (
     <div className="mx-auto w-full max-w-4xl px-6 py-10">
       <section className="flex flex-col items-center py-14 text-center">
-        <span className="badge badge-neutral mb-6 rounded-full">
+        <span className="badge badge-primary mb-6 rounded-full">
           {RESUME_PROFILE.title}
         </span>
         <h1 className="mb-4 text-4xl md:text-5xl">{RESUME_PROFILE.name}</h1>
