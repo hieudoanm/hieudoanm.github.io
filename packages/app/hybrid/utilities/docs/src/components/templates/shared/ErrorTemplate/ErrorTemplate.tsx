@@ -80,7 +80,7 @@ export const ErrorTemplate: FC<{
 
         {/* CTA buttons — mirrors Hero button row */}
         <div className="mb-10 flex flex-wrap justify-center gap-3">
-          <Link href="/" className="btn btn-primary">
+          <Link href="/open" className="btn btn-primary">
             Go home
           </Link>
           <button

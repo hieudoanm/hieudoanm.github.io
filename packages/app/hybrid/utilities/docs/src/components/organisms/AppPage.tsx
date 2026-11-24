@@ -28,7 +28,7 @@ export const AppPage: FC<{
     return (
       <div className="flex flex-col items-center justify-center p-12">
         <h1 className="mb-4 text-2xl font-thin">App not found</h1>
-        <Link href="/" className="btn btn-primary btn-sm">
+        <Link href="/open" className="btn btn-primary btn-sm">
           Back to Store
         </Link>
       </div>

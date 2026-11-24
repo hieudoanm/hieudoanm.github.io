@@ -84,7 +84,7 @@ describe('AppInfo', () => {
     render(<AppInfo app={mockApp} />);
     const link = screen.getByRole('link', { name: /Back to Store/ });
     expect(link).toBeTruthy();
-    expect(link.getAttribute('href')).toBe('/');
+    expect(link.getAttribute('href')).toBe('/open');
   });
 
   it('renders unknown icon fallback', () => {

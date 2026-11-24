@@ -1,10 +1,14 @@
-import { FC } from 'react';
+'use client';
+
+import { useState } from 'react';
+import type { FC } from 'react';
 import {
   PiArrowDown,
-  PiArrowLeft,
   PiEnvelopeSimple,
+  PiGithubLogo,
   PiGlobe,
   PiMapPin,
+  PiPencilSimple,
 } from 'react-icons/pi';
 import {
   RESUME_EDUCATION,
@@ -20,7 +24,9 @@ import {
   SkillSection,
 } from './Sections';
 
-export const Resume: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const ResumeView: FC = () => {
+  const [showContact, setShowContact] = useState(false);
+
   const scrollToExperience = () => {
     document
       .getElementById('experience')
@@ -54,9 +60,28 @@ export const Resume: FC<{ onClose: () => void }> = ({ onClose }) => {
             rel="noreferrer"
             className="border-base-content/20 text-base-content/50 hover:border-primary/50 hover:text-primary flex items-center gap-2 rounded-full border px-4 py-2 transition-colors">
             <PiGlobe className="h-3.5 w-3.5" />
-            {RESUME_PROFILE.website}
+            {RESUME_PROFILE.website.replace('https://', '')}
           </a>
+          <a
+            href={RESUME_PROFILE.github}
+            target="_blank"
+            rel="noreferrer"
+            className="border-base-content/20 text-base-content/50 hover:border-primary/50 hover:text-primary flex items-center gap-2 rounded-full border px-4 py-2 transition-colors">
+            <PiGithubLogo className="h-3.5 w-3.5" />
+            GitHub
+          </a>
+          <button
+            type="button"
+            onClick={() => setShowContact((v) => !v)}
+            className="border-base-content/20 text-base-content/50 hover:border-primary/50 hover:text-primary flex items-center gap-2 rounded-full border px-4 py-2 transition-colors">
+            {showContact ? 'Hide contact' : 'Contact'}
+          </button>
         </div>
+        {showContact && (
+          <p className="text-base-content/60 -mt-6 mb-10 text-sm">
+            {RESUME_PROFILE.phone || 'Phone on request'} · Open to opportunities
+          </p>
+        )}
         <p className="text-base-content/60 mb-10 max-w-3xl text-sm leading-relaxed">
           {RESUME_PROFILE.summary}
         </p>
@@ -67,10 +92,14 @@ export const Resume: FC<{ onClose: () => void }> = ({ onClose }) => {
             onClick={scrollToExperience}>
             View experience <PiArrowDown className="h-4 w-4" />
           </button>
-          <button type="button" className="btn btn-ghost" onClick={onClose}>
-            <PiArrowLeft className="h-4 w-4" />
-            Back
-          </button>
+          <a
+            href="https://hieudoanm.github.io/resume/editor/"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-ghost">
+            <PiPencilSimple className="h-4 w-4" />
+            Edit resume
+          </a>
         </div>
       </section>
 
@@ -82,4 +111,4 @@ export const Resume: FC<{ onClose: () => void }> = ({ onClose }) => {
   );
 };
 
-Resume.displayName = 'Resume';
+ResumeView.displayName = 'ResumeView';

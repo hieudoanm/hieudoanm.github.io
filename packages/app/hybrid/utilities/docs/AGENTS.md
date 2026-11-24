@@ -1,8 +1,9 @@
 # Docs
 
-Personal site for Hieu Doan: the Apps Store at `/` (migrated from
-`app/hybrid/shopping/store`, formerly under `/store`). Developer tools that used
-to live here moved to the Omni monorepo (`omni/packages/web` `/apps`).
+Personal site for Hieu Doan: the resume at `/` and the Apps Store at `/open`
+(migrated from `app/hybrid/shopping/store`, formerly under `/store`). Developer
+tools that used to live here moved to the Omni monorepo (`omni/packages/web`
+`/apps`).
 
 ## Build & Test
 
@@ -20,12 +21,13 @@ pnpm test:e2e               # Playwright (home.spec.ts only)
 ```text
 src/
   app/
-    page.tsx                # Store home — search, filters, app grid
+    page.tsx                # Resume home — profile, experience, projects
+    open/page.tsx           # Store home — search, filters, app grid
     layout.tsx              # Root layout — store shell (#store-root
                             # data-theme="store-dark" + Header) inside RootLayoutClient
     app/[slug]/page.tsx     # App detail pages (generateStaticParams)
   components/
-    routes/resume/          # Resume sections, data, periods, projects
+    routes/resume/          # Resume sections + data (ResumeView)
     organisms/
       Header.tsx            # Store header (theme toggle scoped to #store-root)
       AppPage.tsx           # Store app detail wrapper
@@ -49,8 +51,8 @@ e2e/home.spec.ts            # Only remaining Playwright spec — covers /
 
 ## Store specifics
 
-- Store routes live at `/` (home) and `/app/<slug>`; internal links are
-  root-relative (`/app/<slug>`).
+- Store routes live at `/open` (home) and `/app/<slug>`; internal links are
+  root-relative (`/app/<slug>`), store-chrome links point at `/open`.
 - Store theme is scoped: `data-theme="store-dark"` on `#store-root` in
   `app/layout.tsx`. The Header theme toggle writes to `#store-root` (falls back
   to `documentElement`).

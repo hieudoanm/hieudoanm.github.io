@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const BackLink: FC = () => (
   <div className="border-base-300 mt-6 border-t pt-6 text-center">
     <Link
-      href="/"
+      href="/open"
       className="btn btn-ghost btn-sm font-mono text-xs tracking-widest uppercase">
       ← Back to Store
     </Link>
