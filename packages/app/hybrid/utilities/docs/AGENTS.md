@@ -24,12 +24,12 @@ src/
     page.tsx                # Resume home — profile, experience, projects
     open/page.tsx           # Store home — search, filters, app grid
     layout.tsx              # Root layout — store shell (#store-root
-                            # data-theme="store-dark" + Header) inside RootLayoutClient
+                            # + Header) inside RootLayoutClient
     app/[slug]/page.tsx     # App detail pages (generateStaticParams)
   components/
     routes/resume/          # Resume sections + data (ResumeView)
     organisms/
-      Header.tsx            # Store header (theme toggle scoped to #store-root)
+      Header.tsx            # Store header
       AppPage.tsx           # Store app detail wrapper
       layout/               # Docs sidebar Breadcrumb
         Breadcrumb.tsx
@@ -41,8 +41,8 @@ src/
   hooks/                    # useSWRegister + store hooks (useSearch, useFilters, ...)
   styles/
     globals.css             # Tailwind CSS 4 + DaisyUI 5
-    themes.css              # daisyUI themes: docs (nothing/light/dark/luxury)
-                            # + store (store-dark/store-light, scoped via data-theme)
+    themes.css              # single daisyUI `hieudoanm` light theme (teal brand)
+                            # + font tokens
 public/
   store/                    # Store assets: icons/, og/, screenshots/ (5.9MB)
 src-tauri/                  # Tauri 2 desktop config (frontendDist: ../out)
@@ -53,9 +53,8 @@ e2e/home.spec.ts            # Only remaining Playwright spec — covers /
 
 - Store routes live at `/open` (home) and `/app/<slug>`; internal links are
   root-relative (`/app/<slug>`), store-chrome links point at `/open`.
-- Store theme is scoped: `data-theme="store-dark"` on `#store-root` in
-  `app/layout.tsx`. The Header theme toggle writes to `#store-root` (falls back
-  to `documentElement`).
+- Single light theme: `data-theme="hieudoanm"` on `<html>` in `app/layout.tsx` —
+  standard DaisyUI theme block, teal brand.
 - `lib/screenshots.ts` serves screenshots locally from `/store/screenshots`.
 - App catalog: edit `data/csv/*.csv`, regenerate `data/downloads.json` with
   `data/scripts/convert-csv-to-json.ts`.

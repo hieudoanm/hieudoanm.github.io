@@ -48,12 +48,11 @@ export const metadata: Metadata = {
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <html lang="en" data-theme="nothing">
+    <html lang="en" data-theme="hieudoanm">
       <body className={beVietnamPro.className + ' antialiased'}>
         <RootLayoutClient>
           <div
             id="store-root"
-            data-theme="store-dark"
             className="bg-base-100 text-base-content flex w-full flex-1 flex-col font-mono">
             <Header />
             <div className="flex-1">{children}</div>

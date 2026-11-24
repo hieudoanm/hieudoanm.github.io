@@ -5,15 +5,13 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#ff0030",
+  "background_color": "#ffffff",
+  "theme_color": "#0f766e",
   "orientation": "any",
   "lang": "en",
   "dir": "ltr",
   "id": "/",
-  "categories": [
-    "utilities"
-  ],
+  "categories": ["utilities"],
   "iarc_rating_id": "",
   "prefer_related_applications": false,
   "related_applications": [],

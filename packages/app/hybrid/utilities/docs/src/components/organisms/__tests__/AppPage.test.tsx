@@ -40,9 +40,9 @@ import { AppPage } from '../AppPage';
 
 describe('AppPage', () => {
   it('renders app detail for valid slug', () => {
-    mockUseParams.mockReturnValue({ slug: 'chess' });
+    mockUseParams.mockReturnValue({ slug: 'lingo' });
     render(<AppPage />);
-    expect(screen.getByText('Chess')).toBeTruthy();
+    expect(screen.getByText('Lingo')).toBeTruthy();
   });
 
   it('renders not found for invalid slug', () => {

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { Header } from '../Header';
 
 jest.mock('next/navigation', () => ({
@@ -25,39 +24,8 @@ jest.mock('next/link', () => {
 });
 
 describe('Header', () => {
-  beforeEach(() => {
-    localStorage.clear();
-    document.documentElement.removeAttribute('data-theme');
-  });
-
   it('renders Store link', () => {
     render(<Header />);
     expect(screen.getByText('Store')).toBeTruthy();
-  });
-
-  it('renders theme toggle button', () => {
-    render(<Header />);
-    expect(screen.getByTestId('theme-toggle')).toBeTruthy();
-  });
-
-  it('toggles theme on click', async () => {
-    const user = userEvent.setup();
-    render(<Header />);
-    const toggle = screen.getByTestId('theme-toggle');
-    await user.click(toggle);
-    expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'store-light'
-    );
-  });
-
-  it('toggles back to dark theme', async () => {
-    const user = userEvent.setup();
-    render(<Header />);
-    const toggle = screen.getByTestId('theme-toggle');
-    await user.click(toggle);
-    await user.click(toggle);
-    expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'store-dark'
-    );
   });
 });
