@@ -68,8 +68,6 @@ cards:
       success: '#15803d'
       error: '#dc2626'
 
-  - app: sports/tourney
-    url: 'https://hieudoanm.github.io/open/tourney/'
     name: Tourney
     kicker: 'Brackets that fill themselves'
     title: 'Run a tournament'

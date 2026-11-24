@@ -16,5 +16,3 @@ start-football:
 start-lingo:
 	pnpm run dev --filter=@hieudoanm.github.io/lingo
 
-start-tourney:
-	pnpm run dev --filter=@hieudoanm.github.io/tourney
