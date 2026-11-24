@@ -19,13 +19,12 @@ export const metadata: Metadata = {
     siteName: 'Hieu Doan',
     url: 'https://hieudoanm.github.io/open/docs/',
     title: 'Hieu Doan',
-    description:
-      'A start page with a calculator, clocks, data converters, developer utilities and a writing space.',
+    description: 'Hieu Doan — resume and app store',
     images: [
       {
         url: '/og/og.png',
-        width: 1200,
-        height: 630,
+        width: 1280,
+        height: 640,
         alt: 'Hieu Doan',
       },
     ],
@@ -33,8 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Hieu Doan',
-    description:
-      'A start page with a calculator, clocks, data converters, developer utilities and a writing space.',
+    description: 'Hieu Doan — resume and app store',
     images: ['/og/og.png'],
   },
   manifest: '/manifest.json',
