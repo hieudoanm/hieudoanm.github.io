@@ -4,50 +4,6 @@
     "label": "Hybrid",
     "items": [
       {
-        "label": "Boilerplate",
-        "primaryCategory": "Developer Tools",
-        "secondaryCategory": "Productivity",
-        "icon": "PiFrameCorners",
-        "href": "https://hieudoanm.github.io/open/boilerplate",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.exe"
-          }
-        ]
-      },
-      {
         "label": "Lingo",
         "primaryCategory": "Education",
         "secondaryCategory": "Games",

@@ -1,12 +1,3 @@
-start-api:
-	pnpm run dev --filter=@hieudoanm.github.io/api
-
-start-boilerplate:
-	pnpm run dev --filter=@hieudoanm.github.io/boilerplate
-
-start-chess:
-	pnpm run dev --filter=@hieudoanm.github.io/chess
-
 start-docs:
 	pnpm run dev --filter=@hieudoanm.github.io/docs
 

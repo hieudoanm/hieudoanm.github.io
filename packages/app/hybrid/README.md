@@ -1,15 +1,11 @@
 # Hybrid
 
-| No  | ID          | App                        | Description                           | Back-end | Status | Primary Category | Secondary Category |
-| --- | ----------- | -------------------------- | ------------------------------------- | -------- | ------ | ---------------- | ------------------ |
-| 01  | boilerplate | [Boilerplate][boilerplate] | Nextjs + Tauri (Foundation)           | Optional | DONE   | Developer Tools  | Productivity       |
-| 02  | lingo       | [Lingo][lingo]             | Duolingo / Flashcards / Sign Language | No       | DONE   | Education        | Games              |
-| 03  | chess       | [Chess][chess]             | chess.com / lichess.org               | No       | DONE   | Sports           | Games              |
-| 04  | football    | [Football][football]       | Football Formation / Analysis         | No       | DONE   | Sports           | Games              |
-| 05  | docs        | [Docs][docs]               | TinyWow                               | No       | DONE   | Utilities        | Productivity       |
+| No  | ID       | App                  | Description                           | Back-end | Status | Primary Category | Secondary Category |
+| --- | -------- | -------------------- | ------------------------------------- | -------- | ------ | ---------------- | ------------------ |
+| 02  | lingo    | [Lingo][lingo]       | Duolingo / Flashcards / Sign Language | No       | DONE   | Education        | Games              |
+| 04  | football | [Football][football] | Football Formation / Analysis         | No       | DONE   | Sports           | Games              |
+| 05  | docs     | [Docs][docs]         | TinyWow                               | No       | DONE   | Utilities        | Productivity       |
 
-[boilerplate]: https://hieudoanm.github.io/open/boilerplate/
 [lingo]: https://hieudoanm.github.io/open/lingo/
-[chess]: https://hieudoanm.github.io/open/chess/
 [football]: https://hieudoanm.github.io/open/football/
 [docs]: https://hieudoanm.github.io/open/docs/
