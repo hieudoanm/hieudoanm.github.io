@@ -48,50 +48,6 @@
         ]
       },
       {
-        "label": "Football",
-        "primaryCategory": "Sports",
-        "secondaryCategory": "Games",
-        "icon": "PiSoccerBall",
-        "href": "https://hieudoanm.github.io/open/football",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.exe"
-          }
-        ]
-      },
-      {
         "label": "Docs",
         "primaryCategory": "Utilities",
         "secondaryCategory": "Productivity",

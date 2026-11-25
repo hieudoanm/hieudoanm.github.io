@@ -34,23 +34,6 @@
     success: '#58cc02'
     error: '#ff4b4b'
 
-- app: sports/football
-  url: 'https://hieudoanm.github.io/open/football/'
-  name: Football
-  kicker: 'Pick, place, plan'
-  title: 'Build a football squad'
-  description: 'Pick a formation, assign your squad, and manage your team through a season of tournaments.'
-  tags: ['Formations', 'Squad builder', 'Knock-out brackets', 'Match history']
-  theme:
-    base: '#f4fbf4'
-    content: '#0d2b12'
-    primary: '#16a34a'
-    secondary: '#f8fafc'
-    info: '#0284c7'
-    warning: '#d97706'
-    success: '#15803d'
-    error: '#dc2626'
-
 - app: utilities/docs
   url: 'https://hieudoanm.github.io/open/docs/'
   name: Hieu Doan
