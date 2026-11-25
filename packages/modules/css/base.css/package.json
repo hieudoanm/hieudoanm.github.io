@@ -30,7 +30,7 @@
     "examples": "ts-node ./scripts/examples.ts"
   },
   "devDependencies": {
-    "@types/node": "26.6.6",
+    "@types/node": "26.6.7",
     "prettier": "3.10.1",
     "rimraf": "6.1.4",
     "sass": "1.108.2",
