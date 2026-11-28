@@ -34,8 +34,8 @@
     "prepare": "husky || true"
   },
   "devDependencies": {
-    "@commitlint/cli": "21.2.4",
-    "@commitlint/config-conventional": "21.2.4",
+    "@commitlint/cli": "21.3.0",
+    "@commitlint/config-conventional": "21.3.0",
     "@types/react": "19.3.3",
     "@types/react-dom": "19.3.0",
     "docsify": "5.1.0",
